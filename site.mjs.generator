@@ -1,4 +1,5 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { MM_SHOT, MM_REF } from "./mm.mjs";
 const S = JSON.parse(await readFile("scenes2.json", "utf8"));
 
 const STYLE = "Rural central Myanmar, late 1990s. Cinematic photorealism, domestic Myanmar folk horror. "
@@ -58,6 +59,9 @@ for (const x of S) {
   }));
 }
 
+shots.forEach((s) => { s.mm = MM_SHOT[s.id] || ""; });
+CHARS.forEach((c) => { c.mm = MM_REF[c.name] || ""; });
+PROP.mm = MM_REF[PROP.name] || "";
 shots.forEach((s, i) => {
   s.prompt = `Shot ${i + 1} of ${shots.length} — scene ${s.id}, "${s.title}". A new and distinct frame `
     + `in an ongoing sequence; do not repeat, vary or re-render any previous image.\n\n`
@@ -82,6 +86,9 @@ await writeFile("/Users/puraidointern/ghost-prompts-site/index.html", `<!doctype
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 a{color:var(--accent)}
+.mmline{font-family:"Noto Sans Myanmar","Myanmar Text","Padauk","Myanmar MN",system-ui,sans-serif;
+  font-size:14px;line-height:2;color:#d9d2ea;background:#241d33;border:1px solid var(--edge);
+  border-left:3px solid var(--accent);border-radius:8px;padding:9px 12px;margin:8px 0}
 header{position:sticky;top:0;z-index:9;background:rgba(20,16,28,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--edge);padding:14px 20px}
 .wrap{max-width:960px;margin:0 auto}
 h1{margin:0;font-size:17px;letter-spacing:.02em}
@@ -119,7 +126,8 @@ summary{cursor:pointer;color:var(--mute);font-size:12px}
 </style></head><body>
 <header><div class="wrap">
   <h1>THE EXTRA BOWL — image prompts</h1>
-  <div class="sub">Copy a prompt, paste it into Google Flow, attach the characters listed on the card.</div>
+  <div class="sub">Copy a prompt, paste it into Google Flow, attach the characters listed on the card.
+  ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။</div>
   <div class="tools">
     <input type="search" id="q" placeholder="Search prompts, titles, scene numbers…">
     <span id="filters"></span>
@@ -168,6 +176,12 @@ function card(o, isRef) {
     if (o.who.length) o.who.forEach(w => { const s = document.createElement("span"); s.className = "tag"; s.textContent = w; tags.appendChild(s); });
     else tags.innerHTML = '<span class="tag none">no characters — object or place</span>';
     el.appendChild(tags);
+  }
+  if (o.mm) {
+    // Outside the <pre> on purpose: this is for the person, not for Flow, and
+    // must never end up inside what the copy button sends.
+    const mm = document.createElement("div"); mm.className = "mmline"; mm.textContent = o.mm;
+    el.appendChild(mm);
   }
   const pre = document.createElement("pre"); pre.textContent = o.prompt; el.appendChild(pre);
   const row = document.createElement("div"); row.className = "row";
