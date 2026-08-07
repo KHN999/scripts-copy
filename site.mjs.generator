@@ -1,0 +1,208 @@
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+const S = JSON.parse(await readFile("scenes2.json", "utf8"));
+
+const STYLE = "Rural central Myanmar, late 1990s. Cinematic photorealism, domestic Myanmar folk horror. "
+  + "Warm dim kerosene lamplight indoors, cold rain-blue darkness outside. 16:9, natural colour, "
+  + "shallow depth of field. No visible ghost or creature, no gore, no modern objects.";
+const PORTRAIT = "Plain dark wooden wall behind, warm kerosene lamp light from one side, waist-up "
+  + "three-quarter view, neutral expression, photorealistic, natural colour, late-1990s rural Myanmar.";
+
+const CHARS = [
+  ["Narrator", "Burmese man of 28, medium-slim build, short black hair, tired face with light stubble, plain white cotton shirt with the sleeves rolled to the elbow, dark near-black longyi, simple leather sandals."],
+  ["Kyaw Zin", "Burmese man of 22, slim, short black hair, smooth unlined face, faded grey short-sleeved shirt, green-and-black checked longyi, barefoot. Faint easy smile."],
+  ["Mother", "Burmese woman of 58, thin, tired lined face, dark hair pulled back into a low bun with grey at the temples, dark brown long-sleeved blouse, plain muted maroon longyi, no jewellery but a thin worn gold ring."],
+  ["Father", "Burmese farmer in his sixties, weathered sun-darkened face, close-cropped grey hair, deep lines, pale cream collarless shirt, faded brown checked longyi. Calm, alive, eyes open."],
+  ["Aunt Than", "Burmese woman of about 50, sturdy practical build, hair tied back tightly, dark navy blouse with the sleeves pushed up, plain dark longyi."],
+  ["Uncle Myint", "Burmese man in his sixties, stocky, thinning grey hair, traditional collarless white shirt slightly yellowed with age, dark blue checked longyi."],
+].map(([name, body]) => ({ name, prompt: `${body} ${PORTRAIT}` }));
+const PROP = { name: "The blue bowl", prompt:
+  "A traditional blue enamel rice bowl on a plain dark wooden surface in lamp light. Deep muted blue "
+  + "outside, white enamel inside, ONE large chip broken out of the rim, fine scratches from years of "
+  + "use, slightly worn base. Nothing else in frame. Photorealistic, natural colour." };
+
+const FIX = {
+  17: "Top-down on a bamboo tabletop: the chipped blue enamel bowl caught mid-spin, motion blur along its rim, an older man's elbow just withdrawing at the edge of frame, other hands frozen over their food. The damaged edge has not yet settled.",
+  19: "Kyaw Zin turning to look back at the dining table over a glass of tea, the narrator beside him in the dark kitchen doorway, bowls indistinct in the lamplight beyond.",
+  20: "Kyaw Zin counting bowls on his fingers across the bamboo table while the narrator reaches over to pull his hand down, rows of old blue enamel bowls behind them, one empty place setting.",
+  48: "Two hands lifting an old cloth-bound household ledger out of a wooden cabinet, dust in the daylight, folded clothes and tin boxes around it.",
+  49: "A ledger page held open in daylight: a short handwritten Burmese column of four names, and beneath them one further ruled line left completely blank.",
+  50: "Closer on the same ledger page, a single line of handwriting below the names, the narrator's thumb trembling at the edge of the paper.",
+  54: "Extreme macro on the very bottom line of the ledger page, the handwriting sharp and the rest of the page falling away out of focus.",
+};
+const SPLIT = {
+  5: ["An older Burmese farmer working alone in a dry-season paddy field under a white midday sky, seen from behind.",
+      "The same farmer eating rice alone at a bamboo table from a chipped blue enamel bowl, quiet house around him.",
+      "An empty chair at a bamboo table at dusk, a half-finished bowl in front of it, family members blurred and alarmed in the background. No body, no collapse."],
+  47: ["A quiet village morning one month later: Kyaw Zin walking out through the yard gate to work, ordinary and unremarkable, soft daylight.",
+       "The family eating an ordinary evening meal together at the bamboo table, three bowls, lamplight, no tension."],
+};
+const RE = { Narrator: /narrator/i, "Kyaw Zin": /kyaw ?zin/i,
+  Father: /father|farmer|deceased|covered body|funeral cloth|funeral body/i, Mother: /mother/i,
+  "Aunt Than": /aunt ?than/i, "Uncle Myint": /uncle ?myint|older man's elbow/i };
+const ACT = { 1:"The funeral rule",6:"The funeral house",10:"The rice grain",13:"Father's bowl",
+  18:"He counts",21:"The bowl eats",27:"Father outside",32:"The voice changes",
+  35:"What happened to father",37:"It comes inside",43:"Dawn",47:"One month later",54:"Final reveal" };
+
+const shots = []; let act = "";
+for (const x of S) {
+  if (ACT[x.n]) act = ACT[x.n];
+  const parts = SPLIT[x.n] ?? [FIX[x.n] ?? x.prompt];
+  parts.forEach((p, i) => shots.push({
+    id: parts.length > 1 ? `${x.n}${"abc"[i]}` : String(x.n),
+    title: x.title, act,
+    who: Object.entries(RE).filter(([, re]) => re.test(p)).map(([k]) => k),
+    prompt: `${p.trim()} ${STYLE}`,
+    lines: i === 0 ? x.lines : [],
+  }));
+}
+
+const DATA = JSON.stringify({ chars: CHARS, prop: PROP, shots });
+const esc = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+
+await mkdir(new URL("file:///Users/puraidointern/ghost-prompts-site/"), { recursive: true });
+await writeFile("/Users/puraidointern/ghost-prompts-site/index.html", `<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Extra Bowl — image prompts</title>
+<style>
+:root{--bg:#14101c;--panel:#1d1828;--edge:#332b45;--ink:#0f0c16;--text:#ece8f5;--mute:#9b93ae;--accent:#c9b6f0;--ok:#7ddba4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--accent)}
+header{position:sticky;top:0;z-index:9;background:rgba(20,16,28,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--edge);padding:14px 20px}
+.wrap{max-width:960px;margin:0 auto}
+h1{margin:0;font-size:17px;letter-spacing:.02em}
+.sub{color:var(--mute);font-size:12px;margin-top:2px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
+input[type=search]{flex:1;min-width:180px;background:var(--ink);border:1px solid var(--edge);color:var(--text);border-radius:7px;padding:7px 10px;font-size:13px;outline:none}
+input[type=search]:focus{border-color:var(--accent)}
+.chip{background:var(--ink);border:1px solid var(--edge);color:var(--mute);border-radius:999px;padding:4px 11px;font-size:12px;cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#1a1424;font-weight:650}
+.bar{height:4px;background:var(--ink);border-radius:99px;overflow:hidden;margin-top:9px}
+.bar>i{display:block;height:100%;background:var(--ok);width:0;transition:width .25s}
+main{max-width:960px;margin:0 auto;padding:20px}
+section>h2{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--mute);margin:26px 0 10px}
+.card{background:var(--panel);border:1px solid var(--edge);border-radius:11px;padding:14px;margin-bottom:10px}
+.card.done{opacity:.45}
+.top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.id{font-weight:800;color:var(--accent);font-size:13px;min-width:26px}
+.ttl{font-weight:650;font-size:14px;flex:1;min-width:120px}
+.act{color:var(--mute);font-size:11px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.tag{background:#2a2338;border:1px solid var(--edge);color:var(--accent);border-radius:5px;padding:2px 7px;font-size:11px;font-weight:600}
+.tag.none{color:var(--mute);font-weight:400;font-style:italic}
+pre{background:var(--ink);border:1px solid var(--edge);border-radius:8px;padding:11px;margin:0;
+  white-space:pre-wrap;word-break:break-word;font:12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#d7d1e6}
+.row{display:flex;gap:8px;margin-top:9px;align-items:center;flex-wrap:wrap}
+button{background:var(--accent);border:0;color:#1a1424;font-weight:700;border-radius:7px;padding:7px 14px;font-size:12.5px;cursor:pointer}
+button.ghost{background:transparent;border:1px solid var(--edge);color:var(--mute);font-weight:500}
+button.ghost.on{border-color:var(--ok);color:var(--ok)}
+details{margin-top:9px}
+summary{cursor:pointer;color:var(--mute);font-size:12px}
+.mm{font-size:14px;line-height:1.85;margin-top:7px;color:#cfc8de}
+.note{background:#231b33;border:1px solid var(--edge);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px;font-size:13px;color:#d5cee6}
+.empty{color:var(--mute);text-align:center;padding:40px 0}
+@media(max-width:560px){.tools{gap:6px}main{padding:14px}}
+</style></head><body>
+<header><div class="wrap">
+  <h1>THE EXTRA BOWL — image prompts</h1>
+  <div class="sub">Copy a prompt, paste it into Google Flow, attach the characters listed on the card.</div>
+  <div class="tools">
+    <input type="search" id="q" placeholder="Search prompts, titles, scene numbers…">
+    <span id="filters"></span>
+    <button class="ghost" id="reset">reset progress</button>
+  </div>
+  <div class="bar"><i id="pbar"></i></div>
+  <div class="sub" id="pcount"></div>
+</div></header>
+<main>
+  <div class="note"><b>Do this first.</b> Build the seven references below and approve each one before
+  starting the shot list. The blue bowl matters most — its chipped edge is what the story points with,
+  so if the chip changes between images the ending stops working.</div>
+  <section><h2>References — build these first</h2><div id="refs"></div></section>
+  <section><h2>Shots</h2><div id="shots"></div><div class="empty" id="none" hidden>Nothing matches that filter.</div></section>
+</main>
+<script>
+const DATA = ${DATA};
+const KEY = "extrabowl.done.v1";
+let done = new Set(JSON.parse(localStorage.getItem(KEY) || "[]"));
+let active = new Set();
+const save = () => localStorage.setItem(KEY, JSON.stringify([...done]));
+const ALL = [...new Set(DATA.shots.flatMap(s => s.who))];
+
+function copy(text, btn) {
+  const ok = () => { const t = btn.textContent; btn.textContent = "copied ✓"; setTimeout(() => btn.textContent = t, 1100); };
+  if (navigator.clipboard) navigator.clipboard.writeText(text).then(ok).catch(() => fallback(text, ok));
+  else fallback(text, ok);
+}
+function fallback(text, ok) {
+  const ta = document.createElement("textarea");
+  ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); ok(); } finally { ta.remove(); }
+}
+
+function card(o, isRef) {
+  const el = document.createElement("div");
+  el.className = "card" + (!isRef && done.has(o.id) ? " done" : "");
+  const head = document.createElement("div"); head.className = "top";
+  head.innerHTML = isRef
+    ? '<span class="ttl">' + o.name + '</span><span class="act">reference</span>'
+    : '<span class="id">' + o.id + '</span><span class="ttl">' + o.title + '</span><span class="act">' + o.act + '</span>';
+  el.appendChild(head);
+  if (!isRef) {
+    const tags = document.createElement("div"); tags.className = "tags";
+    if (o.who.length) o.who.forEach(w => { const s = document.createElement("span"); s.className = "tag"; s.textContent = w; tags.appendChild(s); });
+    else tags.innerHTML = '<span class="tag none">no characters — object or place</span>';
+    el.appendChild(tags);
+  }
+  const pre = document.createElement("pre"); pre.textContent = o.prompt; el.appendChild(pre);
+  const row = document.createElement("div"); row.className = "row";
+  const c = document.createElement("button"); c.textContent = "copy prompt";
+  c.onclick = () => copy(o.prompt, c); row.appendChild(c);
+  if (!isRef) {
+    const d = document.createElement("button");
+    d.className = "ghost" + (done.has(o.id) ? " on" : "");
+    d.textContent = done.has(o.id) ? "done ✓" : "mark done";
+    d.onclick = () => { done.has(o.id) ? done.delete(o.id) : done.add(o.id); save(); render(); };
+    row.appendChild(d);
+  }
+  el.appendChild(row);
+  if (!isRef && o.lines && o.lines.length) {
+    const det = document.createElement("details");
+    det.innerHTML = '<summary>narration over this shot</summary><div class="mm">' +
+      o.lines.map(l => l.replace(/[&<>]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[ch]))).join("<br>") + '</div>';
+    el.appendChild(det);
+  }
+  return el;
+}
+
+function render() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const list = DATA.shots.filter(s =>
+    (!active.size || s.who.some(w => active.has(w))) &&
+    (!q || (s.id + " " + s.title + " " + s.prompt + " " + s.act).toLowerCase().includes(q)));
+  const box = document.getElementById("shots"); box.textContent = "";
+  list.forEach(s => box.appendChild(card(s, false)));
+  document.getElementById("none").hidden = list.length > 0;
+  const n = DATA.shots.filter(s => done.has(s.id)).length;
+  document.getElementById("pbar").style.width = (n / DATA.shots.length * 100) + "%";
+  document.getElementById("pcount").textContent = n + " of " + DATA.shots.length + " shots done";
+  document.querySelectorAll("#filters .chip").forEach(c => c.classList.toggle("on", active.has(c.dataset.w)));
+}
+
+const refs = document.getElementById("refs");
+DATA.chars.forEach(c => refs.appendChild(card(c, true)));
+refs.appendChild(card(DATA.prop, true));
+const fbox = document.getElementById("filters");
+ALL.forEach(w => {
+  const b = document.createElement("span"); b.className = "chip"; b.dataset.w = w; b.textContent = w;
+  b.onclick = () => { active.has(w) ? active.delete(w) : active.add(w); render(); };
+  fbox.appendChild(b);
+});
+document.getElementById("q").oninput = render;
+document.getElementById("reset").onclick = () => { if (confirm("Clear all progress?")) { done = new Set(); save(); render(); } };
+render();
+</script></body></html>
+`);
+console.log(`  shots ${shots.length}  refs ${CHARS.length + 1}`);
