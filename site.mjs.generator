@@ -3,7 +3,8 @@ const S = JSON.parse(await readFile("scenes2.json", "utf8"));
 
 const STYLE = "Rural central Myanmar, late 1990s. Cinematic photorealism, domestic Myanmar folk horror. "
   + "Warm dim kerosene lamplight indoors, cold rain-blue darkness outside. 16:9, natural colour, "
-  + "shallow depth of field. No visible ghost or creature, no gore, no modern objects.";
+  + "shallow depth of field. No visible ghost or creature, no gore, no modern objects. "
+  + "No text, lettering, numbers, captions or watermarks anywhere in the image.";
 const PORTRAIT = "Plain dark wooden wall behind, warm kerosene lamp light from one side, waist-up "
   + "three-quarter view, neutral expression, photorealistic, natural colour, late-1990s rural Myanmar.";
 
@@ -51,11 +52,23 @@ for (const x of S) {
     id: parts.length > 1 ? `${x.n}${"abc"[i]}` : String(x.n),
     title: x.title, act,
     who: Object.entries(RE).filter(([, re]) => re.test(p)).map(([k]) => k),
-    prompt: `${p.trim()} ${STYLE}`,
+    prompt: "",   // filled once the running total is known
     lines: i === 0 ? x.lines : [],
+    raw: p,
   }));
 }
 
+shots.forEach((s, i) => {
+  s.prompt = `Shot ${i + 1} of ${shots.length} — scene ${s.id}, "${s.title}". A new and distinct frame `
+    + `in an ongoing sequence; do not repeat, vary or re-render any previous image.\n\n`
+    + `${s.raw.trim()}\n\n${STYLE}`;
+});
+CHARS.forEach((c, i) => {
+  c.prompt = `Character reference ${i + 1} of ${CHARS.length + 1} — ${c.name}. A new and distinct `
+    + `character; do not repeat or vary any previous reference.\n\n${c.prompt}`;
+});
+PROP.prompt = `Character reference ${CHARS.length + 1} of ${CHARS.length + 1} — the blue bowl. `
+  + `A new and distinct reference image.\n\n${PROP.prompt}`;
 const DATA = JSON.stringify({ chars: CHARS, prop: PROP, shots });
 const esc = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
 
