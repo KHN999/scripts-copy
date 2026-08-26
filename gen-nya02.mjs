@@ -46,6 +46,53 @@ const PROP = { name: "ထင်းစည်း", en: "The firewood bundle", prom
   + "dried grass rope. The cut ends are pale bone-white and smooth, clearly countable. The bark is grey "
   + "and dry. Nothing else in frame. Photorealistic, natural colour, overcast daylight." };
 
+/**
+ * LOCATION PLATES.
+ *
+ * Four places carry 23 of the 30 shots between them, so they drift the same way
+ * an unanchored face does — and the stair is the one that actually breaks the
+ * story if it moves. Shots 22, 27, 28 and 29 are four angles on ONE structure
+ * during the climax: looking down it, the lit top of it, the door at its foot,
+ * and the boy standing at the bottom. If the tread count or the handrail changes
+ * between them the geometry stops reading and the ending is just dark pictures.
+ *
+ * Each plate is deliberately empty and evenly lit — a reference has to describe
+ * the place, not a moment in it.
+ */
+const LOCS = [
+  ["ညောင်ပင်", "The banyan",
+   "An enormous old banyan tree standing alone at the edge of a rural Myanmar village, dozens of aerial "
+   + "roots hanging from its limbs all the way down to the ground like a ragged curtain, a broad low "
+   + "canopy. The bare earth directly beneath it is dry and pale while the ground all around it is soaked "
+   + "black mud. Seen from thirty feet away with the whole tree in frame, flat overcast daylight. Empty, "
+   + "no people."],
+  ["အိမ်တွင်းခန်း", "The house interior",
+   "The main room of a poor teak stilt house in rural Myanmar: dark plank walls and a floor worn smooth, "
+   + "a low doorway to one side, one shuttered window, woven reed mats laid on the floor, a single "
+   + "kerosene lamp standing on a low wooden stool throwing warm light from one corner and deep shadow "
+   + "everywhere else. Night. Empty, no people."],
+  ["လှေကား", "The stair",
+   "The stair of a Myanmar teak stilt house: steep and narrow, worn open treads, one plain wooden "
+   + "handrail, running from a small upper landing down to a plank door at ground level. Seen side-on so "
+   + "the whole run is visible from top to bottom. Warm kerosene lamp light at the top, deep darkness at "
+   + "the foot. Night. Empty, no people."],
+  ["အိမ်အပြင်", "The house outside",
+   "A small teak stilt house in a rural Myanmar village seen from the yard: raised on wooden posts about "
+   + "five feet above wet ground, thatch roof with deep overhanging eaves, the open space beneath the "
+   + "house holding a wooden firewood rack, a stair leading up to a plank door. Monsoon rain, soaked "
+   + "black earth, no other building close. Empty, no people."],
+].map(([name, en, prompt]) => ({ name, en, prompt: `${prompt} Photorealistic, natural colour.` }));
+
+/** Which location plate to attach, by what is actually in frame as a PLACE.
+ *  Scene 28 mentions banyan leaves but happens at the foot of the stair. */
+const WHERE = {
+  1: "ညောင်ပင်", 2: "ညောင်ပင်", 4: "အိမ်တွင်းခန်း", 5: "အိမ်တွင်းခန်း", 6: "အိမ်အပြင်",
+  7: "အိမ်တွင်းခန်း", 8: "ညောင်ပင်", 9: "ညောင်ပင်", 10: "ညောင်ပင်", 11: "ညောင်ပင်",
+  12: "ညောင်ပင်", 14: "ညောင်ပင်", 16: "အိမ်အပြင်", 17: "အိမ်တွင်းခန်း", 18: "အိမ်တွင်းခန်း",
+  22: "လှေကား", 23: "အိမ်တွင်းခန်း", 24: "အိမ်တွင်းခန်း", 25: "အိမ်အပြင်", 27: "လှေကား",
+  28: "လှေကား", 29: "လှေကား", 30: "ညောင်ပင်",
+};
+
 /** Which references to attach in Flow. Set per shot, not matched by regex — the
  *  prompts describe people generically ("a Burmese man"), so a regex over the
  *  text would tag almost nothing and silently drop the references that matter. */
@@ -81,6 +128,7 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: TITLES[r.idx], act,
     who: WHO[n] ?? [],
+    where: WHERE[n] ?? null,
     raw: r.image_prompt.replace(/^ANCHOR SHOT — /, ""),
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: MM_SHOT[String(n)] || "",
@@ -89,22 +137,29 @@ const shots = rows.map((r) => {
 
 // Numbering every prompt is what stops Flow re-rendering a variation of the
 // previous frame instead of a new one.
-const TOTAL = shots.length + CHARS.length + 1;
+const NREF = CHARS.length + 1 + LOCS.length;
+const TOTAL = shots.length + NREF;
 CHARS.forEach((c, i) => {
   c.mm = MM_REF[c.name] || "";
-  c.prompt = `Character reference ${i + 1} of ${CHARS.length + 1} — ${c.en} (${c.name}). `
+  c.prompt = `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). `
     + `A new and distinct character; do not repeat or vary any previous reference.\n\n${c.prompt}`;
 });
 PROP.mm = MM_REF[PROP.name] || "";
-PROP.prompt = `Character reference ${CHARS.length + 1} of ${CHARS.length + 1} — ${PROP.en}. `
+PROP.prompt = `Reference ${CHARS.length + 1} of ${NREF} — ${PROP.en}. `
   + `A new and distinct reference image.\n\n${PROP.prompt}`;
+LOCS.forEach((l, i) => {
+  l.mm = MM_REF[l.name] || "";
+  l.prompt = `Reference ${CHARS.length + 2 + i} of ${NREF} — ${l.en} (${l.name}), a LOCATION plate. `
+    + `A new and distinct place; do not repeat or vary any previous reference. Establish the place `
+    + `itself, empty of people and of incident.\n\n${l.prompt}`;
+});
 shots.forEach((s, i) => {
   s.prompt = `Shot ${i + 1} of ${shots.length} — scene ${s.id}, "${s.title}". A new and distinct frame `
     + `in an ongoing sequence; do not repeat, vary or re-render any previous image.\n\n`
     + `${s.raw.trim()}\n\n${STYLE}`;
 });
 
-const DATA = JSON.stringify({ chars: CHARS, prop: PROP, shots });
+const DATA = JSON.stringify({ chars: CHARS, prop: PROP, locs: LOCS, shots });
 
 await writeFile("/Users/puraidointern/ghost-prompts-site/index.html", `<!doctype html>
 <html lang="en"><head>
@@ -140,6 +195,7 @@ section>h2{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:va
 .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
 .tag{background:#2a2338;border:1px solid var(--edge);color:var(--accent);border-radius:5px;padding:2px 7px;font-size:11px;font-weight:600;font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
 .tag.none{color:var(--mute);font-weight:400;font-style:italic}
+.tag.loc{background:#1f2b2a;border-color:#33474a;color:#8fd6c4}
 pre{background:var(--ink);border:1px solid var(--edge);border-radius:8px;padding:11px;margin:0;
   white-space:pre-wrap;word-break:break-word;font:12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#d7d1e6}
 .row{display:flex;gap:8px;margin-top:9px;align-items:center;flex-wrap:wrap}
@@ -167,13 +223,19 @@ summary{cursor:pointer;color:var(--mute);font-size:12px}
   <div class="sub" id="pcount"></div>
 </div></header>
 <main>
-  <div class="note"><b>Do this first.</b> Build the four references below and approve each one before
-  starting the shot list. The firewood bundle matters most — the ending only works if you can count the
-  sticks, so the twelve pale cut ends have to stay identical from shot 13 through shot 30. Scene 7 is the
-  one frame with all three faces in it; if a face drifts later, come back and re-attach from there.
+  <div class="note"><b>Do this first.</b> Build all eight references below and approve each one before
+  starting the shot list. The firewood bundle matters most of the objects — the ending only works if you
+  can count the sticks, so the twelve pale cut ends have to stay identical from shot 13 through shot 30.
+  Scene 7 is the one frame with all three faces in it; if a face drifts later, come back and re-attach
+  from there.
+  <br><br><b>The stair is the one that breaks the story.</b> Shots 22, 27, 28 and 29 are four angles on
+  the same structure during the climax — looking down it, its lit top, the door at its foot, the boy
+  standing at the bottom. If the treads or the handrail change between them, the geometry stops reading
+  and the ending is just dark pictures. Attach လှေကား to all four.
   <br><br><b>Never show a complete ghost.</b> Suggestion only — no face, no full figure, in any shot.
   <br><br><span class="sub">The Extra Bowl sheet is still at <a href="/extra-bowl.html">/extra-bowl.html</a>.</span></div>
-  <section><h2>References — build these first</h2><div id="refs"></div></section>
+  <section><h2>Characters and the prop — build these first</h2><div id="refs"></div></section>
+  <section><h2>Locations — one plate per recurring background</h2><div id="locs"></div></section>
   <section><h2>Shots</h2><div id="shots"></div><div class="empty" id="none" hidden>Nothing matches that filter.</div></section>
 </main>
 <script>
@@ -183,6 +245,7 @@ let done = new Set(JSON.parse(localStorage.getItem(KEY) || "[]"));
 let active = new Set();
 const save = () => localStorage.setItem(KEY, JSON.stringify([...done]));
 const ALL = [...new Set(DATA.shots.flatMap(s => s.who))];
+const ALLOC = [...new Set(DATA.shots.map(s => s.where).filter(Boolean))];
 
 function copy(text, btn) {
   const ok = () => { const t = btn.textContent; btn.textContent = "copied ✓"; setTimeout(() => btn.textContent = t, 1100); };
@@ -213,8 +276,9 @@ function card(o, isRef) {
   el.appendChild(head);
   if (!isRef) {
     const tags = document.createElement("div"); tags.className = "tags";
-    if (o.who.length) o.who.forEach(w => { const s = document.createElement("span"); s.className = "tag"; s.textContent = w; tags.appendChild(s); });
-    else { const s = document.createElement("span"); s.className = "tag none"; s.textContent = "no references — object or place"; tags.appendChild(s); }
+    o.who.forEach(w => { const s = document.createElement("span"); s.className = "tag"; s.textContent = w; tags.appendChild(s); });
+    if (o.where) { const s = document.createElement("span"); s.className = "tag loc"; s.textContent = o.where; tags.appendChild(s); }
+    if (!o.who.length && !o.where) { const s = document.createElement("span"); s.className = "tag none"; s.textContent = "no references — close-up, attach nothing"; tags.appendChild(s); }
     el.appendChild(tags);
   }
   if (o.mm) {
@@ -249,7 +313,7 @@ function card(o, isRef) {
 function render() {
   const q = document.getElementById("q").value.trim().toLowerCase();
   const list = DATA.shots.filter(s =>
-    (!active.size || s.who.some(w => active.has(w))) &&
+    (!active.size || s.who.some(w => active.has(w)) || active.has(s.where)) &&
     (!q || (s.id + " " + s.title + " " + s.prompt + " " + s.act).toLowerCase().includes(q)));
   const box = document.getElementById("shots"); box.textContent = "";
   list.forEach(s => box.appendChild(card(s, false)));
@@ -263,8 +327,10 @@ function render() {
 const refs = document.getElementById("refs");
 DATA.chars.forEach(c => refs.appendChild(card(c, true)));
 refs.appendChild(card(DATA.prop, true));
+const locbox = document.getElementById("locs");
+DATA.locs.forEach(l => locbox.appendChild(card(l, true)));
 const fbox = document.getElementById("filters");
-ALL.forEach(w => {
+[...ALL, ...ALLOC].forEach(w => {
   const b = document.createElement("span"); b.className = "chip"; b.dataset.w = w; b.textContent = w;
   b.onclick = () => { active.has(w) ? active.delete(w) : active.add(w); render(); };
   fbox.appendChild(b);
@@ -275,6 +341,8 @@ render();
 </script></body></html>
 `);
 
-console.log(`shots ${shots.length}  refs ${CHARS.length + 1}  total numbered ${TOTAL}`);
+console.log(`shots ${shots.length}  refs ${NREF} (${CHARS.length} chars + 1 prop + ${LOCS.length} locations)  total numbered ${TOTAL}`);
+LOCS.forEach((l) => console.log(`  ${l.name} (${l.en}): ${shots.filter((s) => s.where === l.name).length} shots`));
+console.log(`  no location: ${shots.filter((s) => !s.where).map((s) => s.id).join(", ")}`);
 console.log(`shots with references: ${shots.filter((s) => s.who.length).length}`);
 console.log(`shots missing a Burmese gloss: ${shots.filter((s) => !s.mm).map((s) => s.id).join(", ") || "none"}`);
