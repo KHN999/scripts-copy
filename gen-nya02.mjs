@@ -13,6 +13,7 @@ import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { MM_SHOT, MM_REF } from "./mm-nya02.mjs";
 import { buildPage } from "./page.mjs";
+import { NAV } from "./nav.mjs";
 
 const PROJECT = "ksa4c7xxre6";
 const TITLE_MM = "သုံးခါခေါ်သံ";
@@ -160,9 +161,6 @@ shots.forEach((s, i) => {
     + `${s.raw.trim()}\n\n${STYLE}`;
 });
 
-const NAV = `<a href="/">အခန်း ၈၀၂ (current)</a><a href="/banyan.html">သုံးခါခေါ်သံ</a>`
-  + `<a href="/extra-bowl.html">The Extra Bowl</a>`;
-
 const NOTE = `<b>Do this first.</b> Build all eight references below and approve each one before
   starting the shot list. The firewood bundle matters most of the objects — the ending only works if you
   can count the sticks, so the twelve pale cut ends have to stay identical from shot 13 through shot 30.
@@ -179,7 +177,7 @@ await writeFile("/Users/puraidointern/ghost-prompts-site/banyan.html", buildPage
   subtitle: `THREE TIMES, YOUR NAME · ${shots.length} shots · 16:9 · Copy a prompt, paste it into Google `
     + `Flow, attach the references listed on the card. ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`,
   storageKey: "nya02.done.v1",
-  note: NOTE, nav: NAV,
+  note: NOTE, nav: NAV("banyan"),
   groups: [
     { heading: "Characters and the prop", items: [...CHARS, PROP] },
     { heading: "Locations — one plate per recurring background", items: LOCS },

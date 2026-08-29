@@ -10,6 +10,7 @@ import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { MM_SHOT, MM_REF } from "./mm-802.mjs";
 import { buildPage } from "./page.mjs";
+import { NAV } from "./nav.mjs";
 
 const PROJECT = "2puwkmg2krs";
 
@@ -142,9 +143,6 @@ shots.forEach((s, i) => {
     + `${s.raw.trim()}\n\n${STYLE}`;
 });
 
-const NAV = `<a href="/">အခန်း ၈၀၂ (current)</a><a href="/banyan.html">သုံးခါခေါ်သံ</a>`
-  + `<a href="/extra-bowl.html">The Extra Bowl</a>`;
-
 const NOTE = `<b>Do this first.</b> Build all ${NREF} references below and approve each one before
   starting the shot list — three subjects, then five location plates.
   <br><br><b>The face is the whole trick.</b> The second rider appears in only two shots (26 and 36)
@@ -163,7 +161,7 @@ await writeFile("/Users/puraidointern/ghost-prompts-site/index.html", buildPage(
   subtitle: `ROOM 802 · ${shots.length} shots · 16:9 · Copy a prompt, paste it into Google Flow, attach `
     + `the references listed on the card. ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`,
   storageKey: "room802.done.v1",
-  note: NOTE, nav: NAV,
+  note: NOTE, nav: NAV("802"),
   groups: [
     { heading: "Characters and prop — build these first", items: CAST },
     { heading: "Locations — one plate per recurring setup", items: LOCS },
