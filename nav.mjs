@@ -1,6 +1,7 @@
 /** One list of sheets, so adding a story does not mean editing every generator. */
 const SHEETS = [
   { key: "802", href: "/", label: "အခန်း ၈၀၂" },
+  { key: "sleep", href: "/sleep.html", label: "တစ်ယောက်တော့ နိုးနေပါ" },
   { key: "ward", href: "/ward.html", label: "ကျန်ရှိသေးသော အသက်" },
   { key: "shwezin", href: "/shwezin.html", label: "ဇာတ်ခုံအောက်" },
   { key: "zat", href: "/zat.html", label: "ပွဲမပြီးသေးဘူး" },
