@@ -176,7 +176,8 @@ await writeFile("/Users/puraidointern/ghost-prompts-site/banyan.html", buildPage
   title: "သုံးခါခေါ်သံ — image prompts",
   subtitle: `THREE TIMES, YOUR NAME · ${shots.length} shots · 16:9 · Copy a prompt, paste it into Google `
     + `Flow, attach the references listed on the card. ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`,
-  storageKey: "nya02.done.v1",
+  storageKey: "nya02.done.v1",   // unchanged — renaming it would drop existing progress
+  slug: "banyan",                // …but downloads should be named after the page
   note: NOTE, nav: NAV("banyan"),
   groups: [
     { heading: "Characters and the prop", items: [...CHARS, PROP] },

@@ -46,10 +46,21 @@ summary{cursor:pointer;color:var(--mute);font-size:12px}
 .mm{font-size:14px;line-height:1.95;margin-top:7px;color:#cfc8de;font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
 .note{background:#231b33;border:1px solid var(--edge);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px;font-size:13px;color:#d5cee6}
 .empty{color:var(--mute);text-align:center;padding:40px 0}
+.script{max-height:430px;overflow:auto;background:var(--ink);border:1px solid var(--edge);border-radius:8px;padding:12px 14px;margin-top:9px}
+.script p{margin:0 0 11px;font-size:14px;line-height:1.95;color:#d9d2ea;
+  font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
+.script p:last-child{margin-bottom:0}
+.script .sn{display:inline-block;min-width:30px;color:var(--accent);font-weight:800;font-size:11px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;vertical-align:2px;user-select:none}
+textarea{width:100%;min-height:230px;resize:vertical;margin-top:9px;background:var(--ink);
+  border:1px solid var(--edge);color:var(--text);border-radius:8px;padding:11px 13px;outline:none;
+  font:13.5px/1.75 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+textarea:focus{border-color:var(--accent)}
+.saved{color:var(--ok)}
 @media(max-width:560px){.tools{gap:6px}main{padding:14px}}
 </style></head><body>
 <header><div class="wrap">
-  <div class="nav"><a href="/">အခန်း ၈၀၂</a><a href="/thanmya.html">သူဌေးမကြီး</a><a href="/sleep.html">တစ်ယောက်တော့ နိုးနေပါ</a><a href="/ward.html">ကျန်ရှိသေးသော အသက်</a><a href="/shwezin.html">ဇာတ်ခုံအောက်</a><a href="/zat.html">ပွဲမပြီးသေးဘူး</a><a href="/memory.html">မှတ်မိခြင်း</a><a href="/house.html">မေ့နေတဲ့အိမ်</a><a href="/field.html">လယ်ကွင်းထဲက လူ</a><a href="/mother.html">နှစ်ခါပြန်လာတဲ့အမေ</a><a href="/school.html">သရဲအိမ်</a><a href="/register.html">ဧည့်စာရင်း</a><a href="/laundry.html">စက်နံပါတ် ၇</a><a href="/banyan.html">သုံးခါခေါ်သံ (current)</a><a href="/extra-bowl.html">The Extra Bowl</a></div>
+  <div class="nav"><a href="/">အခန်း ၈၀၂</a><a href="/thanmya.html">သူဌေးမကြီး</a><a href="/sleep.html">တစ်ယောက်တော့ နိုးနေပါ</a><a href="/ward.html">ကျန်ရှိသေးသော အသက်</a><a href="/shwezin.html">ဇာတ်ခုံအောက်</a><a href="/zat.html">ပွဲမပြီးသေးဘူး</a><a href="/memory.html">မှတ်မိခြင်း</a><a href="/house.html">မေ့နေတဲ့အိမ်</a><a href="/field.html">လယ်ကွင်းထဲက လူ</a><a href="/mother.html">နှစ်ခါပြန်လာတဲ့အမေ</a><a href="/school.html">သရဲအိမ်</a><a href="/register.html">ဧည့်စာရင်း</a><a href="/laundry.html">စက်နံပါတ် ၇</a><a href="/banyan.html">သုံးခါခေါ်သံ (current)</a><a href="/extra-bowl.html">The Extra Bowl</a><a href="/return.html">အိမ်ပြန်ရောက်ပြီးသားလူ</a></div>
   <h1>သုံးခါခေါ်သံ — image prompts</h1>
   <div class="sub">THREE TIMES, YOUR NAME · 30 shots · 16:9 · Copy a prompt, paste it into Google Flow, attach the references listed on the card. ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။</div>
   <div class="tools">
@@ -71,6 +82,36 @@ summary{cursor:pointer;color:var(--mute);font-size:12px}
   standing at the bottom. If the treads or the handrail change between them, the geometry stops reading
   and the ending is just dark pictures. Attach လှေကား to all four.
   <br><br><b>Never show a complete ghost.</b> Suggestion only — no face, no full figure, in any shot.</div>
+  <section>
+    <h2>Full script</h2>
+    <div class="card">
+      <div class="top">
+        <span class="ttl">The whole narration, in order</span>
+        <span class="act" id="scriptStats"></span>
+      </div>
+      <div class="row">
+        <button id="cpPlain">copy script</button>
+        <button class="ghost" id="cpMarked">copy with [shot] markers</button>
+        <button class="ghost" id="dlScript">download .txt</button>
+      </div>
+      <details id="scriptDet">
+        <summary>show the script</summary>
+        <div class="script" id="scriptBody"></div>
+      </details>
+    </div>
+    <div class="card">
+      <div class="top">
+        <span class="ttl">Translation workspace</span>
+        <span class="act" id="trSaved">saved in this browser only</span>
+      </div>
+      <textarea id="tr" placeholder="Paste the translation back here. It saves as you type, and downloads as a .txt you can hand straight to the build script."></textarea>
+      <div class="row">
+        <button id="dlTr">download translation</button>
+        <button class="ghost" id="clrTr">clear</button>
+        <span class="act" id="trStats"></span>
+      </div>
+    </div>
+  </section>
   <div id="groups"></div>
   <section><h2>Shots</h2><div id="shots"></div><div class="empty" id="none" hidden>Nothing matches that filter.</div></section>
 </main>
@@ -177,5 +218,92 @@ const fbox = document.getElementById("filters");
 });
 document.getElementById("q").oninput = render;
 document.getElementById("reset").onclick = () => { if (confirm("Clear all progress?")) { done = new Set(); save(); render(); } };
+
+/* ---- Full script and translation workspace --------------------------------
+ * Built from the same shot data the cards use, so the script shown here and the
+ * script the film narrates cannot drift apart.
+ *
+ * The [shot] marker form is the one that matters. Translators — human or model —
+ * merge short sentences into paragraphs, which is why mapping an English cut back
+ * onto its pictures has so far been hand work: 251 Burmese units came back as 154
+ * English lines on the last one. A translation that returns with [n] intact can be
+ * split back onto its shots mechanically instead.
+ */
+const SLUG = "banyan";
+const SCRIPT = DATA.shots.map(s => ({ id: s.id, lines: s.lines || [] })).filter(s => s.lines.length);
+const plainText = () => SCRIPT.map(s => s.lines.join("\n")).join("\n\n");
+const markedText = () => SCRIPT.map(s => "[" + s.id + "]\n" + s.lines.join("\n")).join("\n\n");
+
+function download(name, text) {
+  const url = URL.createObjectURL(new Blob([text], { type: "text/plain;charset=utf-8" }));
+  const a = document.createElement("a");
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+(function fullScript() {
+  const body = document.getElementById("scriptBody");
+  let lines = 0, chars = 0;
+  SCRIPT.forEach(s => {
+    const p = document.createElement("p");
+    const n = document.createElement("span");
+    n.className = "sn"; n.textContent = s.id;
+    p.appendChild(n);
+    s.lines.forEach((l, i) => {
+      if (i) p.appendChild(document.createElement("br"));
+      p.appendChild(document.createTextNode(l));
+      lines++; chars += [...l].length;
+    });
+    body.appendChild(p);
+  });
+  document.getElementById("scriptStats").textContent =
+    SCRIPT.length + " shots · " + lines + " lines · " + chars.toLocaleString() + " characters";
+  document.getElementById("scriptDet").ontoggle = function () {
+    this.querySelector("summary").textContent = this.open ? "hide the script" : "show the script";
+  };
+  document.getElementById("cpPlain").onclick = e => copy(plainText(), e.target);
+  document.getElementById("cpMarked").onclick = e => copy(markedText(), e.target);
+  document.getElementById("dlScript").onclick = () => download(SLUG + "-script.txt", markedText());
+})();
+
+(function workspace() {
+  const ta = document.getElementById("tr");
+  const TRKEY = KEY + ".translation";
+  const saved = document.getElementById("trSaved");
+  const stats = document.getElementById("trStats");
+  ta.value = localStorage.getItem(TRKEY) || "";
+
+  const count = () => {
+    const v = ta.value;
+    const marks = (v.match(/^\s*\[\d+\]\s*$/gm) || []).length;
+    stats.textContent = v.trim()
+      ? [...v].length.toLocaleString() + " characters"
+        + (marks ? " · " + marks + " of " + SCRIPT.length + " shot markers kept" : " · no shot markers")
+      : "";
+  };
+  let t = null;
+  ta.oninput = () => {
+    count();
+    clearTimeout(t);
+    saved.textContent = "saving…"; saved.className = "act";
+    t = setTimeout(() => {
+      localStorage.setItem(TRKEY, ta.value);
+      saved.textContent = "saved ✓"; saved.className = "act saved";
+      setTimeout(() => { saved.textContent = "saved in this browser only"; saved.className = "act"; }, 1600);
+    }, 400);
+  };
+  document.getElementById("dlTr").onclick = () => {
+    if (!ta.value.trim()) return alert("Nothing to download yet.");
+    download(SLUG + "-english.txt", ta.value);
+  };
+  document.getElementById("clrTr").onclick = () => {
+    if (!ta.value || confirm("Clear the translation? This cannot be undone.")) {
+      ta.value = ""; localStorage.removeItem(TRKEY); count();
+    }
+  };
+  count();
+})();
+
 render();
 </script></body></html>
