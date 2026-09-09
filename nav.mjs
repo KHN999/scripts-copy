@@ -15,6 +15,7 @@ const SHEETS = [
   { key: "laundry", href: "/laundry.html", label: "စက်နံပါတ် ၇" },
   { key: "banyan", href: "/banyan.html", label: "သုံးခါခေါ်သံ" },
   { key: "extrabowl", href: "/extra-bowl.html", label: "The Extra Bowl" },
+  { key: "return", href: "/return.html", label: "အိမ်ပြန်ရောက်ပြီးသားလူ" },
 ];
 
 export const NAV = (current) => SHEETS
