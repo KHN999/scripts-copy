@@ -46,17 +46,32 @@ summary{cursor:pointer;color:var(--mute);font-size:12px}
 .mm{font-size:14px;line-height:1.95;margin-top:7px;color:#cfc8de;font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
 .note{background:#231b33;border:1px solid var(--edge);border-left:3px solid var(--accent);border-radius:8px;padding:12px 14px;font-size:13px;color:#d5cee6}
 .empty{color:var(--mute);text-align:center;padding:40px 0}
-.script{max-height:430px;overflow:auto;background:var(--ink);border:1px solid var(--edge);border-radius:8px;padding:12px 14px;margin-top:9px}
-.script p{margin:0 0 11px;font-size:14px;line-height:1.95;color:#d9d2ea;
+.script{max-height:60vh;overflow:auto;background:var(--ink);border:1px solid var(--edge);border-radius:8px;padding:14px 18px;margin-top:9px}
+.script p{margin:0 0 13px;font-size:15px;line-height:2.05;color:#ddd7ec;
   font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
 .script p:last-child{margin-bottom:0}
-.script .sn{display:inline-block;min-width:30px;color:var(--accent);font-weight:800;font-size:11px;
+.script .sn{display:inline-block;min-width:32px;color:var(--accent);font-weight:800;font-size:11px;
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace;vertical-align:2px;user-select:none}
-textarea{width:100%;min-height:230px;resize:vertical;margin-top:9px;background:var(--ink);
-  border:1px solid var(--edge);color:var(--text);border-radius:8px;padding:11px 13px;outline:none;
-  font:13.5px/1.75 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+textarea{width:100%;min-height:300px;resize:vertical;margin-top:9px;background:var(--ink);
+  border:1px solid var(--edge);color:var(--text);border-radius:8px;padding:12px 14px;outline:none;
+  font:15px/2 "Noto Sans Myanmar","Myanmar Text","Padauk",ui-sans-serif,system-ui,sans-serif}
 textarea:focus{border-color:var(--accent)}
 .saved{color:var(--ok)}
+/* Reader — a full-page column for actually reading, rather than a scroll box. */
+.reader{position:fixed;inset:0;z-index:50;background:#0e0b15;overflow-y:auto;display:none}
+.reader.on{display:block}
+.rbar{position:sticky;top:0;background:rgba(14,11,21,.97);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--edge);padding:10px 16px;display:flex;gap:8px;align-items:center}
+.rbar .rtitle{flex:1;font-size:13px;color:var(--mute);font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
+.rbar button{padding:6px 11px;font-size:12px}
+.rwrap{max-width:740px;margin:0 auto;padding:26px 22px 120px}
+.rwrap p{margin:0 0 1.15em;color:#e6e1f2;line-height:2.1;
+  font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",ui-sans-serif,system-ui,sans-serif;
+  white-space:pre-wrap;word-break:break-word}
+.rwrap .sn{display:block;color:var(--accent);font-weight:800;font-size:11px;letter-spacing:.08em;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;margin:1.6em 0 .5em;user-select:none}
+.rwrap .sn:first-child{margin-top:0}
+body.locked{overflow:hidden}
 @media(max-width:560px){.tools{gap:6px}main{padding:14px}}
 </style></head><body>
 <header><div class="wrap">
@@ -81,12 +96,13 @@ textarea:focus{border-color:var(--accent)}
         <span class="act" id="scriptStats"></span>
       </div>
       <div class="row">
-        <button id="cpPlain">copy script</button>
+        <button id="readScript">read full screen</button>
+        <button class="ghost" id="cpPlain">copy script</button>
         <button class="ghost" id="cpMarked">copy with [shot] markers</button>
-        <button class="ghost" id="dlScript">download .txt</button>
+        <button class="ghost" id="dlScript">save as .txt file</button>
       </div>
-      <details id="scriptDet">
-        <summary>show the script</summary>
+      <details id="scriptDet" open>
+        <summary>hide the script</summary>
         <div class="script" id="scriptBody"></div>
       </details>
     </div>
@@ -95,14 +111,25 @@ textarea:focus{border-color:var(--accent)}
         <span class="ttl">Translation workspace</span>
         <span class="act" id="trSaved">saved in this browser only</span>
       </div>
-      <textarea id="tr" placeholder="Paste the translation back here. It saves as you type, and downloads as a .txt you can hand straight to the build script."></textarea>
+      <textarea id="tr" placeholder="Paste the translation back here. It saves as you type. Use “read full screen” to read it comfortably, and “save as .txt file” to get a file you can hand back."></textarea>
       <div class="row">
-        <button id="dlTr">download translation</button>
+        <button id="readTr">read full screen</button>
+        <button class="ghost" id="cpTr">copy</button>
+        <button class="ghost" id="dlTr">save as .txt file</button>
         <button class="ghost" id="clrTr">clear</button>
         <span class="act" id="trStats"></span>
       </div>
     </div>
   </section>
+  <div class="reader" id="reader" role="dialog" aria-modal="true">
+    <div class="rbar">
+      <span class="rtitle" id="rtitle"></span>
+      <button class="ghost" id="rSmaller" title="smaller text">A−</button>
+      <button class="ghost" id="rBigger" title="larger text">A+</button>
+      <button id="rClose">close</button>
+    </div>
+    <div class="rwrap" id="rwrap"></div>
+  </div>
   <div id="groups"></div>
   <section><h2>Shots</h2><div id="shots"></div><div class="empty" id="none" hidden>Nothing matches that filter.</div></section>
 </main>
@@ -258,6 +285,84 @@ function download(name, text) {
   document.getElementById("dlScript").onclick = () => download(SLUG + "-script.txt", markedText());
 })();
 
+/* ---- Reader ---------------------------------------------------------------
+ * Myanmar script is hard to read small, and a 430px scroll box inside a card was
+ * the wrong place to read fifteen thousand characters. This is a plain full-page
+ * column with adjustable type — no cards, no chrome, nothing else on screen.
+ */
+const reader = (function () {
+  const el = document.getElementById("reader");
+  const wrap = document.getElementById("rwrap");
+  const titleEl = document.getElementById("rtitle");
+  const SZKEY = "reader.size";
+  let size = Number(localStorage.getItem(SZKEY)) || 17;
+
+  const applySize = () => {
+    wrap.style.fontSize = size + "px";
+    localStorage.setItem(SZKEY, String(size));
+  };
+  const close = () => {
+    el.classList.remove("on");
+    document.body.classList.remove("locked");
+  };
+  const open = (title, build) => {
+    titleEl.textContent = title;
+    wrap.textContent = "";
+    build(wrap);
+    applySize();
+    el.classList.add("on");
+    document.body.classList.add("locked");
+    el.scrollTop = 0;
+  };
+
+  document.getElementById("rClose").onclick = close;
+  document.getElementById("rBigger").onclick = () => { size = Math.min(30, size + 1); applySize(); };
+  document.getElementById("rSmaller").onclick = () => { size = Math.max(12, size - 1); applySize(); };
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && el.classList.contains("on")) close(); });
+
+  return { open };
+})();
+
+document.getElementById("readScript").onclick = () =>
+  reader.open(document.title.split(" — ")[0] + " · full script", wrap => {
+    SCRIPT.forEach(s => {
+      const n = document.createElement("span");
+      n.className = "sn"; n.textContent = "SHOT " + s.id;
+      wrap.appendChild(n);
+      s.lines.forEach(l => {
+        const p = document.createElement("p"); p.textContent = l; wrap.appendChild(p);
+      });
+    });
+  });
+
+document.getElementById("readTr").onclick = () => {
+  const v = document.getElementById("tr").value;
+  reader.open("Translation", wrap => {
+    if (!v.trim()) {
+      const p = document.createElement("p");
+      p.style.color = "#9b93ae";
+      p.textContent = "Nothing in the workspace yet. Paste a translation into the box first.";
+      wrap.appendChild(p);
+      return;
+    }
+    // Blank-line-separated blocks become paragraphs; a lone [n] becomes a heading,
+    // so a marked translation reads the same way the script does.
+    v.split(/\n\s*\n/).forEach(block => {
+      const t = block.trim();
+      if (!t) return;
+      const m = /^\[(\d+)\]\s*([\s\S]*)$/.exec(t);
+      if (m) {
+        const n = document.createElement("span");
+        n.className = "sn"; n.textContent = "SHOT " + m[1];
+        wrap.appendChild(n);
+        if (m[2].trim()) { const p = document.createElement("p"); p.textContent = m[2].trim(); wrap.appendChild(p); }
+      } else {
+        const p = document.createElement("p"); p.textContent = t; wrap.appendChild(p);
+      }
+    });
+  });
+};
+
 (function workspace() {
   const ta = document.getElementById("tr");
   const TRKEY = KEY + ".translation";
@@ -284,8 +389,9 @@ function download(name, text) {
       setTimeout(() => { saved.textContent = "saved in this browser only"; saved.className = "act"; }, 1600);
     }, 400);
   };
+  document.getElementById("cpTr").onclick = e => copy(ta.value, e.target);
   document.getElementById("dlTr").onclick = () => {
-    if (!ta.value.trim()) return alert("Nothing to download yet.");
+    if (!ta.value.trim()) return alert("Nothing to save yet — the workspace is empty.");
     download(SLUG + "-english.txt", ta.value);
   };
   document.getElementById("clrTr").onclick = () => {
