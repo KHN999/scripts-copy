@@ -10,6 +10,7 @@
  * order as the board at localhost:3150. Newest first.
  */
 const SHEETS = [
+  { key: "seat",      href: "/seat.html",       created: "2026-09-11", shots:  72, label: "ခုံနံပါတ် ဆယ့်ခုနစ်" },
   { key: "hand",      href: "/hand.html",       created: "2026-09-11", shots:  64, label: "အလောင်းက ကလေးကို မလွှတ်ဘူး" },
   { key: "drown",     href: "/drown.html",      created: "2026-09-10", shots: 113, label: "ရေမရှိတဲ့ကန်ထဲမှာ ရေနစ်တဲ့လူ" },
   { key: "flower",    href: "/flower.html",     created: "2026-09-09", shots: 138, label: "ပန်းပွင့်တွေ မညှိုးတဲ့ ရွာ" },
