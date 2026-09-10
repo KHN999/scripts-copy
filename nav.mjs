@@ -17,6 +17,7 @@ const SHEETS = [
   { key: "extrabowl", href: "/extra-bowl.html", label: "The Extra Bowl" },
   { key: "return", href: "/return.html", label: "အိမ်ပြန်ရောက်ပြီးသားလူ" },
   { key: "flower", href: "/flower.html", label: "ပန်းပွင့်တွေ မညှိုးတဲ့ ရွာ" },
+  { key: "drown", href: "/drown.html", label: "ရေမရှိတဲ့ကန်ထဲမှာ ရေနစ်တဲ့လူ" },
 ];
 
 export const NAV = (current) => SHEETS
