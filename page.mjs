@@ -12,10 +12,12 @@
  *   shots  : { id, title, act, who[], where|null, prompt, mm, lines[] }
  *   slug   : filename stem for downloads; defaults to storageKey up to the first dot
  *
- * Every page also gets a Full script panel and a translation workspace, both
- * derived from shots[].lines — so a sheet gains them simply by being regenerated,
- * and no generator needs to know they exist.
+ * Every page also gets a Full script panel, a translation workspace and the
+ * story sidebar — all derived from what is already passed in, so a sheet gains
+ * them simply by being regenerated and no generator needs to know they exist.
  */
+import { SHEET_COUNT } from "./nav.mjs";
+
 export function buildPage({ title, subtitle, storageKey, note, groups, shots, nav = "",
                             slug = String(storageKey).split(".")[0] }) {
   const DATA = JSON.stringify({ groups, shots });
@@ -35,17 +37,40 @@ header{position:sticky;top:0;z-index:9;background:rgba(20,16,28,.96);backdrop-fi
 .wrap{max-width:960px;margin:0 auto}
 h1{margin:0;font-size:17px;letter-spacing:.02em;font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
 .sub{color:var(--mute);font-size:12px;margin-top:2px}
-/* Eighteen Burmese titles will not read as a wrapped row of 11.5px text links.
-   They are chips in one horizontally scrollable strip, current one highlighted. */
-.nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:7px;margin-bottom:8px;
-  scrollbar-width:thin;-webkit-overflow-scrolling:touch}
-.nav::-webkit-scrollbar{height:5px}
-.nav::-webkit-scrollbar-thumb{background:var(--edge);border-radius:99px}
-.nav a{flex:0 0 auto;background:var(--ink);border:1px solid var(--edge);color:var(--mute);
-  border-radius:999px;padding:4px 11px;font-size:12px;text-decoration:none;white-space:nowrap;
+/* ---- Sidebar -------------------------------------------------------------
+   Eighteen Burmese titles are a list, not a row of chips. Fixed rail on the
+   left at desktop widths, an off-canvas drawer below 1080px. */
+:root{--rail:248px}
+.rail{position:fixed;top:0;left:0;bottom:0;width:var(--rail);z-index:40;
+  background:#100d17;border-right:1px solid var(--edge);display:flex;flex-direction:column}
+.railhead{padding:15px 16px 11px;border-bottom:1px solid var(--edge)}
+.railhead b{display:block;font-size:12.5px;letter-spacing:.02em}
+.railhead span{display:block;margin-top:2px;font-size:10.5px;color:var(--mute)}
+.raillist{flex:1;overflow-y:auto;padding:8px;scrollbar-width:thin}
+.raillist::-webkit-scrollbar{width:6px}
+.raillist::-webkit-scrollbar-thumb{background:var(--edge);border-radius:99px}
+.navrow{display:block;padding:8px 10px;border-radius:8px;text-decoration:none;
+  border:1px solid transparent;margin-bottom:2px}
+.navrow:hover{background:var(--panel);border-color:var(--edge)}
+.navlabel{display:block;font-size:12.5px;line-height:1.5;color:var(--text);
   font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
-.nav a:hover{border-color:var(--accent);color:var(--text)}
-.nav a.on{background:var(--accent);border-color:var(--accent);color:#1a1424;font-weight:700}
+.navmeta{display:block;margin-top:1px;font-size:10px;color:var(--mute);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.navrow.on{background:var(--panel);border-color:var(--accent)}
+.navrow.on .navlabel{color:var(--accent);font-weight:700}
+.railtoggle{display:none;position:fixed;top:10px;left:10px;z-index:60;
+  background:var(--panel);border:1px solid var(--edge);color:var(--text);
+  border-radius:8px;padding:7px 11px;font-size:16px;line-height:1;cursor:pointer}
+.scrim{display:none;position:fixed;inset:0;z-index:35;background:rgba(0,0,0,.6)}
+body.railopen .scrim{display:block}
+.shell{margin-left:var(--rail)}
+@media(max-width:1080px){
+  .rail{transform:translateX(-100%);transition:transform .18s ease}
+  body.railopen .rail{transform:none}
+  .railtoggle{display:block}
+  .shell{margin-left:0}
+  header{padding-left:56px}
+}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
 input[type=search]{flex:1;min-width:180px;background:var(--ink);border:1px solid var(--edge);color:var(--text);border-radius:7px;padding:7px 10px;font-size:13px;outline:none}
 input[type=search]:focus{border-color:var(--accent)}
@@ -102,10 +127,18 @@ textarea:focus{border-color:var(--accent)}
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace;margin:1.6em 0 .5em;user-select:none}
 .rwrap .sn:first-child{margin-top:0}
 body.locked{overflow:hidden}
+/* The reader is full-screen; the drawer button must not float over it. */
+body.locked .railtoggle{display:none}
 @media(max-width:560px){.tools{gap:6px}main{padding:14px}}
 </style></head><body>
+${nav ? `<button class="railtoggle" id="railtoggle" aria-label="Stories">☰</button>
+<div class="scrim" id="scrim"></div>
+<nav class="rail" id="rail">
+  <div class="railhead"><b>ညနက်ပုံပြင်</b><span>${SHEET_COUNT} stories · newest first</span></div>
+  <div class="raillist">${nav}</div>
+</nav>` : ""}
+<div class="shell">
 <header><div class="wrap">
-  ${nav ? `<div class="nav">${nav}</div>` : ""}
   <h1>${title}</h1>
   <div class="sub">${subtitle}</div>
   <div class="tools">
@@ -163,6 +196,7 @@ body.locked{overflow:hidden}
   <div id="groups"></div>
   <section><h2>Shots</h2><div id="shots"></div><div class="empty" id="none" hidden>Nothing matches that filter.</div></section>
 </main>
+</div>
 <script>
 const DATA = ${DATA};
 const KEY = ${JSON.stringify(storageKey)};
@@ -267,12 +301,25 @@ const fbox = document.getElementById("filters");
 document.getElementById("q").oninput = render;
 document.getElementById("reset").onclick = () => { if (confirm("Clear all progress?")) { done = new Set(); save(); render(); } };
 
-// The nav strip scrolls, so the current sheet can start off-screen — put it in view.
+/* ---- Sidebar --------------------------------------------------------------
+ * Eighteen rows do not fit a short list, so scroll the current story into view.
+ * Below 1080px the rail is off-canvas and the ☰ button opens it; scrim, Escape
+ * and following a link all close it again.
+ */
 {
-  const cur = document.querySelector(".nav a.on");
-  if (cur) {
-    const strip = cur.parentElement;
-    strip.scrollLeft = cur.offsetLeft - strip.clientWidth / 2 + cur.clientWidth / 2;
+  const rail = document.getElementById("rail");
+  if (rail) {
+    const cur = rail.querySelector(".navrow.on");
+    if (cur) {
+      const list = cur.parentElement;
+      const off = cur.offsetTop - list.clientHeight / 2 + cur.clientHeight / 2;
+      list.scrollTop = Math.max(0, off);
+    }
+    const close = () => document.body.classList.remove("railopen");
+    document.getElementById("railtoggle").onclick = () => document.body.classList.toggle("railopen");
+    document.getElementById("scrim").onclick = close;
+    rail.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   }
 }
 

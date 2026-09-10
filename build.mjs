@@ -43,9 +43,8 @@ const pages = (await readdir(DIR)).filter((f) => f.endsWith(".html")).sort();
 const short = [];
 for (const p of pages) {
   const html = await readFile(`${DIR}/${p}`, "utf8");
-  const nav = /<div class="nav">([\s\S]*?)<\/div>/.exec(html)?.[1] ?? "";
-  const n = (nav.match(/<a /g) || []).length;
-  const cur = /aria-current="page"/.test(nav);
+  const n = (html.match(/class="navrow/g) || []).length;
+  const cur = /aria-current="page"/.test(html);
   if (n !== SHEET_COUNT || !cur) short.push(`${p} (${n} links${cur ? "" : ", no current"})`);
 }
 console.log(short.length
