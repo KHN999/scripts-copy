@@ -1,0 +1,564 @@
+/**
+ * အလောင်းက ကလေးကို မလွှတ်ဘူး — scene board.
+ *
+ *   t title · g Burmese gloss of the picture · p English prompt body
+ *   u narration units (verbatim, short lines merged) · c cues · w refs · l location
+ *
+ * TWO RULES THIS STORY NEEDS.
+ *
+ * 1. The dead woman is never frightening to look at. Her eyes stay closed in
+ *    every single shot — the script says so and it is the whole effect. No
+ *    milky eyes, no open mouth, no decay, no gore, no contortion. She looks
+ *    exactly like a woman asleep. What is uncanny is only ever the POSITION
+ *    she is in: a hand closed, a shoulder lifted, a head turned toward someone.
+ *
+ * 2. Cues are authored sparingly here. The last three boards came out at two
+ *    thirds scored and had to be thinned back. This story is a quiet one — a
+ *    child refusing to let go — so it gets about one cue every three shots and
+ *    almost all of them are small.
+ */
+
+export const CAST = [
+  { name: "ကျွန်တော်", en: "The narrator — her younger brother",
+    prompt: "A Burmese man of about thirty, ordinary build, short hair, a plain dark shirt worn "
+      + "creased from a long drive. Tired, steady, out of his depth but not panicking. The one adult "
+      + "in the house who is watching rather than reacting." },
+  { name: "စုစု", en: "Su Su — the daughter, seven years old",
+    prompt: "A Burmese girl of seven, small for her age, hair in a short ponytail, a plain cotton "
+      + "house dress. Calm rather than hysterical throughout — she does not cry. ⚠️ Her left wrist is "
+      + "always held in an adult woman's hand." },
+  { name: "ခင်နှင်း", en: "Khin Hnin — the sister, deceased",
+    prompt: "A Burmese woman of thirty-four laid out for a funeral in a plain white blouse, hair "
+      + "combed back, a white cloth folded under her chin. ⚠️ HER EYES ARE CLOSED IN EVERY IMAGE, "
+      + "without exception. She must look peacefully asleep and completely ordinary — no pallor beyond "
+      + "the natural, no sunken features, no decay, no open mouth, no gore, nothing monstrous. She is "
+      + "never frightening in herself; only her position is." },
+  { name: "ကိုဝင်းလှ", en: "Ko Win Hla — her husband",
+    prompt: "A Burmese man of about forty, heavier build, a checked shirt untucked, unshaven. He "
+      + "speaks with his hands and stands too close. Grief-shaped on the surface and something else "
+      + "underneath — never cartoonishly villainous." },
+];
+
+export const LOCS = [
+  { name: "အိမ်ထဲ", en: "The front room, laid out for the funeral",
+    prompt: "The front room of a modest single-storey Myanmar village house arranged for a wake: a "
+      + "plain wooden coffin on trestles in the middle of the floor, a small offering table with "
+      + "candles and flowers at its head, framed photographs on the wall, one bare bulb and a few "
+      + "candles. Bare board floor, shuttered windows, a wooden staircase visible at the back." },
+  { name: "မဏ္ဍပ်", en: "The awning outside the house",
+    prompt: "A funeral awning of tarpaulin and bamboo poles pitched over the yard in front of a "
+      + "village house at night: plastic stools, a low table with a card game and thermoses, a "
+      + "strip light hung from a pole, mourners sitting and dozing. Warm and ordinary." },
+  { name: "လှေကား", en: "The staircase she is said to have fallen from",
+    prompt: "A steep narrow wooden staircase inside a village house, worn treads, a plain handrail on "
+      + "one side, the bottom step meeting a bare board floor. Photographed plainly, nothing sinister "
+      + "about it." },
+  { name: "ဦးလေးအိမ်", en: "The narrator's flat in Mandalay",
+    prompt: "A small plain rented flat: a low bed against the wall, a mosquito net, a fan, a window "
+      + "with the city dark behind it. Sparse, a man's place with a child recently moved into it." },
+];
+
+export const STYLE =
+  "A village house in Upper Myanmar, present day, during a two-day funeral wake. Candlelight and one "
+  + "bare bulb indoors, a fluorescent strip under the awning outside, deep unlit corners. Cinematic "
+  + "photorealism, domestic Myanmar folk horror — a family home in mourning before it is anything "
+  + "else. Desaturated warm palette, 35mm film grain, shallow depth of field, 16:9. ⚠️ THE DEAD WOMAN "
+  + "IS NEVER SHOWN AS A HORROR IMAGE: her eyes are closed in every frame, she looks asleep, and there "
+  + "is no decay, no gore, no open mouth, no contorted limbs and nothing monstrous anywhere in this "
+  + "film. What unsettles is only ever her POSITION — a hand closed around a wrist, a shoulder raised, "
+  + "a face turned toward someone. No legible text, numbers, captions or watermarks in the image.";
+
+export const SCENES = [
+  { t: "Ten Minutes After We Laid Her In", l: "အိမ်ထဲ", w: ["ခင်နှင်း"],
+    g: "ခေါင်းထဲမှာ အစ်မ။ မျက်လုံးပိတ်ထား။ ငြိမ်နေတယ်။ ဖယောင်းတိုင်အလင်း။",
+    p: "A woman laid out in a plain wooden coffin in candlelight, eyes closed, hands folded on her "
+      + "chest, perfectly peaceful — an entirely ordinary funeral image.",
+    u: ["အစ်မရဲ့အလောင်းကို ခေါင်းထဲ ထည့်ပြီး ဆယ်မိနစ်လောက်အကြာမှာ သူ့လက်က ကလေးကို ဖမ်းလိုက်တယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "Su Su Is Seven", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "ကလေးမလေး ခုံငယ်ပေါ်တက်ရပ်ပြီး ခေါင်းထဲကို လှမ်းကြည့်နေတယ်။",
+    p: "A small girl standing on a low wooden stool to reach over the edge of a coffin, seen from "
+      + "behind and slightly to one side, candlelight on her face.",
+    u: ["စုစုက ခုနစ်နှစ်ပဲ ရှိသေးတယ်။",
+        "ခေါင်းဘေးမှာ ခုံငယ်တစ်လုံးပေါ် တက်ရပ်ပြီး အမေ့လက်ကို နောက်ဆုံးတစ်ခါ ကိုင်ကြည့်တာ။"] },
+
+  { t: "The Fingers Closed", l: "အိမ်ထဲ",
+    g: "အစ်မရဲ့လက်ချောင်းတွေက စုစုရဲ့လက်ကောက်ဝတ်ကို ဖြည်းဖြည်း ပိတ်ဆုပ်လိုက်တယ်။ အနီးကပ်။",
+    p: "Extreme close-up: an adult woman's fingers closed around a child's thin wrist, the grip "
+      + "unmistakable but gentle, both hands lit by a single candle.",
+    u: ["အစ်မရဲ့လက်ချောင်းတွေက စုစုရဲ့လက်ကောက်ဝတ်ကို ဖြည်းဖြည်း ပိတ်ဆုပ်လိုက်တယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "Don't Take It Off, Uncle", l: "အိမ်ထဲ", w: ["စုစု", "ကျွန်တော်"],
+    g: "အဒေါ်က အော်တယ်။ ကျွန်တော်က ကလေးကို ဆွဲထုတ်ဖို့ လုပ်တယ်။ စုစုက ခွင့်မပြုဘူး။",
+    p: "A man reaching in to lift a child away from a coffin while the child braces against him, "
+      + "another woman recoiling at the edge of frame, candles guttering.",
+    u: ["ဘေးမှာရပ်နေတဲ့ အဒေါ်က အော်တယ်။",
+        "ကျွန်တော်က ကလေးကို ဆွဲထုတ်ဖို့ လုပ်တယ်။",
+        "စုစုကတော့ “မဖြုတ်နဲ့ ဦးလေး” လို့ ပြောတယ်။"] },
+
+  { t: "She Did Not Cry", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "စုစုက မငိုဘူး။ အမေ့မျက်နှာကိုပဲ ကြည့်နေတယ်။",
+    p: "A child's face in profile looking down into a coffin, entirely calm, dry-eyed, absorbed "
+      + "rather than frightened.",
+    u: ["သူ မငိုဘူး။ အမေ့မျက်နှာကိုပဲ ကြည့်နေတယ်။",
+        "“ဒီအတိုင်းပဲ ထားပါ”"] },
+
+  { t: "Her Name Was Khin Hnin", l: null, w: ["ခင်နှင်း"],
+    g: "ဓာတ်ပုံဟောင်း — အသက်ရှင်တုန်းက အစ်မ။ ရိုးရိုးဓာတ်ပုံ။",
+    p: "An ordinary framed family photograph of a smiling woman in her thirties, taken years ago, "
+      + "propped on a shelf in daylight.",
+    u: ["ကျွန်တော့်အစ်မနာမည်က ခင်နှင်း။ အသက်သုံးဆယ့်လေးနှစ်။"] },
+
+  { t: "She Fell Down the Stairs", l: "လှေကား", w: ["ကိုဝင်းလှ"],
+    g: "အိမ်ထဲက လှေကားမတ်မတ်။ အောက်ခြေမှာ ဘာမှမရှိဘူး။",
+    p: "A steep narrow wooden staircase photographed straight on from the bottom, empty, worn "
+      + "treads, one dim bulb above it. Nothing marked, nothing sinister.",
+    u: ["မနေ့ညက အိမ်လှေကားပေါ်ကနေ ပြုတ်ကျပြီး ဆုံးတယ်လို့ ယောက်ဖ ကိုဝင်းလှက ပြောတယ်။"] },
+
+  { t: "I Drove Down From Mandalay", l: null, w: ["ကျွန်တော်"],
+    g: "ညဘက် ကားထဲ။ လမ်းမကြီး။ တစ်ယောက်တည်း။",
+    p: "A man alone in the back of a hired car at night on an empty highway, phone dark in his "
+      + "hand, headlights of oncoming traffic sliding across his face.",
+    u: ["ကျွန်တော်က မန္တလေးမှာ အလုပ်လုပ်နေတာ။ သတင်းကြားတာနဲ့ ကားငှားပြီး ပြန်လာခဲ့တယ်။"] },
+
+  { t: "Already Dressed in White", l: "အိမ်ထဲ", w: ["ခင်နှင်း"],
+    g: "အစ်မကို အဖြူရောင်အင်္ကျီ ဝတ်ပေးထားတယ်။ မေးစေ့အောက်မှာ အဖြူရောင်အဝတ်တစ်စ။",
+    p: "A woman laid out in a white blouse with a folded white cloth beneath her chin, eyes closed, "
+      + "hair neatly combed. Composed and dignified.",
+    u: ["ရောက်တော့ အစ်မကို အဖြူရောင်အင်္ကျီ ဝတ်ပေးထားပြီးပြီ။",
+        "မျက်လုံးတွေ ပိတ်ထားတယ်။ မေးစေ့အောက်မှာ အဖြူရောင်အဝတ်တစ်စ ခံထားတယ်။"] },
+
+  { t: "Stiller Than She Ever Was", l: "အိမ်ထဲ", w: ["ခင်နှင်း"],
+    g: "အစ်မရဲ့လက်နှစ်ဖက် ရင်ဘတ်ပေါ်မှာ အငြိမ်။ အနီးကပ်။",
+    p: "Close on a pair of folded hands resting on a chest, completely motionless, the fingers "
+      + "relaxed. Candlelight from one side.",
+    u: ["အသက်ရှင်တုန်းကထက်တောင် ပိုငြိမ်နေတယ်။",
+        "အစ်မက ငယ်ငယ်ကတည်းက လက်မငြိမ်တဲ့သူ။"] },
+
+  { t: "Her Hands Were Never Still", l: null, w: ["ခင်နှင်း"],
+    g: "အသက်ရှင်တုန်းက အစ်မ — ဆံပင်သပ်နေတာ၊ အဝတ်ခေါက်နေတာ။ နေ့ခင်းအလင်း။",
+    p: "A woman in ordinary daylight caught mid-gesture folding laundry, hands busy, a warm "
+      + "everyday domestic memory of her alive.",
+    u: ["စကားပြောရင်း ဆံပင်သပ်တယ်။ အဝတ်ခေါက်တယ်။ စားပွဲပေါ်က ဖုန်သုတ်တယ်။",
+        "ကျွန်တော် သူ့ကို ပြန်တွေ့တဲ့နေ့မှာတော့ သူ့လက်တွေက ရင်ဘတ်ပေါ်မှာ အငြိမ်။",
+        "စုစု လာကိုင်တဲ့အချိန်အထိ။"],
+    c: [[2, "stinger"]] },
+
+  { t: "Four People Tried", l: "အိမ်ထဲ",
+    g: "လူလေးယောက် ဝိုင်းပြီး လက်တစ်ချောင်းချင်း ဆွဲကြည့်နေကြတယ်။",
+    p: "Several pairs of adult hands working at a woman's closed fist around a child's wrist, "
+      + "crowded and awkward in candlelight, getting nowhere.",
+    u: ["လူလေးယောက် ဝိုင်းဖြုတ်ကြတယ်။",
+        "အစ်မရဲ့ လက်တစ်ချောင်းချင်းကို ဆွဲကြည့်ကြတယ်။ မရဘူး။"] },
+
+  { t: "Pulling Only Hurt the Child", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "ကလေးလက်ကို ဆွဲတော့ စုစု နာလို့ အော်တယ်။ အစ်မလက်က ပိုမတင်းဘူး။",
+    p: "A child wincing sharply as adults pull at her arm, her wrist reddening, the woman's hand "
+      + "around it entirely unchanged.",
+    u: ["ကလေးရဲ့လက်ကို ဆွဲတော့ စုစု နာလို့ အော်တယ်။",
+        "ဒါပေမယ့် အစ်မရဲ့လက်က ပိုတင်းလာတာ မဟုတ်ဘူး။",
+        "ဆွဲရင် မလွတ်တာပဲ။ မဆွဲဘဲထားရင် စုစုလက်က နည်းနည်း လှုပ်လို့ရတယ်။"],
+    c: [[2, "stinger"]] },
+
+  { t: "Call a Doctor", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "အဒေါ်က ဆရာဝန်ခေါ်ဖို့ ပြောတယ်။ ကိုဝင်းလှက ချက်ချင်း ဝင်ဖြတ်တယ်။",
+    p: "A heavyset man cutting across a conversation with one hand raised, an older woman stopped "
+      + "mid-sentence beside him, the coffin behind them both.",
+    u: ["အဒေါ်တစ်ယောက်က “သား၊ ဆရာဝန်ခေါ်လိုက်” လို့ ကျွန်တော့်ကို ပြောတယ်။",
+        "ကိုဝင်းလှက ချက်ချင်း ဝင်ပြောတယ်။",
+        "“ဘာဆရာဝန်လဲ။ သေပြီးသားလူကို ဘာလုပ်ပေးလို့ရမှာလဲ”"] },
+
+  { t: "The Child Flinched", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "သူ့အသံက ကျယ်တယ်။ စုစု ပခုံးတွန့်သွားတယ်။",
+    p: "A small girl's shoulders drawing up tight at a raised voice, her face turned away from the "
+      + "sound, still holding on.",
+    u: ["သူ့အသံက ကျယ်တယ်။ စုစု ပခုံးတွန့်သွားတယ်။"] },
+
+  { t: "One Finger Moved", l: "အိမ်ထဲ",
+    g: "အစ်မရဲ့လက်ညှိုးက စုစုရဲ့လက်ကောက်ဝတ်ကို တစ်ချက် ပွတ်ပေးသလို။ အနီးကပ်။",
+    p: "Extreme close-up of an index finger against a child's wrist, caught mid-stroke — the "
+      + "unmistakable small motion of comforting someone.",
+    u: ["အဲဒီအချိန် အစ်မရဲ့ လက်ညှိုးတစ်ချောင်း လှုပ်တယ်။",
+        "စုစုရဲ့ လက်ကောက်ဝတ်ကို တစ်ချက် ပွတ်ပေးသလို။",
+        "ကျွန်တော် မြင်လိုက်တယ်။ တခြားသူတွေတော့ မမြင်လိုက်ဘူးထင်တယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "A Taller Stool", l: "အိမ်ထဲ", w: ["ကျွန်တော်", "စုစု"],
+    g: "ကျွန်တော် စုစုအတွက် ခုံအမြင့်တစ်လုံး ယူလာပေးတယ်။ ထိုင်လို့ရအောင်။",
+    p: "A man setting a taller stool beside a coffin and easing a child onto it so she can sit "
+      + "instead of stand, her arm still stretched over the edge.",
+    u: ["ကျွန်တော်က လူတွေကို ခဏရပ်ခိုင်းပြီး စုစုအတွက် ခုံအမြင့်တစ်လုံး ယူလာပေးတယ်။",
+        "အမေ့လက်ကို ကိုင်ထားရင်း ထိုင်လို့ရအောင်။"] },
+
+  { t: "Does It Hurt", l: "အိမ်ထဲ", w: ["ကျွန်တော်", "စုစု"],
+    g: "ကျွန်တော် မေးတယ်။ ခေါင်းခါတယ်။ အေးလားလို့ မေးတော့ ခေါင်းညိတ်တယ်။",
+    p: "A man crouched to a seated child's eye level, speaking quietly, one hand on the stool "
+      + "beside her rather than on her.",
+    u: ["“နာလား” လို့ မေးတော့ သူ ခေါင်းခါတယ်။",
+        "“အေးလား” ခေါင်းညိတ်တယ်။"] },
+
+  { t: "She Looked at Her Father", l: "အိမ်ထဲ", w: ["စုစု", "ကိုဝင်းလှ"],
+    g: "ကြောက်လားလို့ မေးတော့ စုစုက အမေ့ကို မကြည့်ဘူး။ အဖေ့ကို ကြည့်တယ်။",
+    p: "A child's eyes moving past the coffin to a man standing further back in the room, and then "
+      + "dropping to the floor. He is out of focus behind her.",
+    u: ["“ကြောက်လား” စုစုက အမေ့ကို မကြည့်ဘူး။ သူ့အဖေကို ကြည့်တယ်။",
+        "ပြီးတော့ ခေါင်းငုံ့လိုက်တယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "The Wake Thinned Out", l: "မဏ္ဍပ်",
+    g: "ညနက်လာတယ်။ မဏ္ဍပ်မှာ လူတချို့ ဖဲကစားနေတယ်။ တချို့ အိပ်ပျော်နေတယ်။",
+    p: "Under a funeral awning late at night: a few older men playing cards at a low table, others "
+      + "asleep on mats, a strip light overhead, most stools empty.",
+    u: ["ညနက်လာတော့ အသုဘလာမေးတဲ့သူတွေ နည်းသွားတယ်။",
+        "ဆရာဝန်နဲ့ ဆက်သွယ်ထားတဲ့ အဒေါ်က လမ်းထိပ်ကို သွားကြိုတယ်။",
+        "အိမ်ရှေ့မဏ္ဍပ်မှာ လူကြီးတချို့ ဖဲကစားနေကြတယ်။ တချို့ အိပ်ပျော်နေကြပြီ။"] },
+
+  { t: "Four of Us Left", l: "အိမ်ထဲ",
+    g: "အိမ်ထဲမှာ ကျွန်တော်၊ စုစု၊ ကိုဝင်းလှနဲ့ အစ်မ။",
+    p: "A wide view of the front room at night: a coffin, a child seated beside it, two men at "
+      + "opposite edges of the room, one bulb and a few candles.",
+    u: ["အိမ်ထဲမှာတော့ ကျွန်တော်၊ စုစု၊ ကိုဝင်းလှနဲ့ အစ်မ။"] },
+
+  { t: "Two Mouthfuls", l: "အိမ်ထဲ", w: ["ကျွန်တော်", "စုစု"],
+    g: "ကျွန်တော် ထမင်းခွံ့ကျွေးတယ်။ သူ နှစ်လုတ်ပဲ စားတယ်။",
+    p: "A man feeding a seated child from a plate with a spoon, her free hand in her lap, the "
+      + "other arm still over the coffin edge.",
+    u: ["စုစုက အမေ့လက်ကို ကိုင်ထားရင်း မျက်လုံးမှေးလာတယ်။",
+        "ကျွန်တော် ထမင်းနည်းနည်း ခွံ့ကျွေးတယ်။ သူ နှစ်လုတ်ပဲ စားတယ်။"] },
+
+  { t: "Will You Close Your Eyes", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "စုစုက ထူးဆန်းတဲ့မေးခွန်းတစ်ခု မေးတယ်။",
+    p: "A child looking up at an adult with a question on her face, the room dim behind her, her "
+      + "expression serious rather than sleepy.",
+    u: ["“ဦးလေး” “အင်း”",
+        "“ညကျရင် ဦးလေး ဘယ်မှာအိပ်မှာလဲ” “ဒီမှာပဲ။ စုစုဘေးမှာ”",
+        "သူ ခဏစဉ်းစားတယ်။ “မျက်လုံးပိတ်မှာလား”"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "She Would Not Say Why", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "ကျွန်တော် ဘာလို့လဲလို့ မေးတယ်။ သူ မဖြေဘူး။ ပန်းကန်ကို တွန်းပေးတယ်။",
+    p: "A plate of rice pushed away by a small hand, barely touched, the child's face turned down "
+      + "and closed.",
+    u: ["ကျွန်တော် သူ့မျက်နှာကို ကြည့်လိုက်တယ်။ “ဘာလို့လဲ”",
+        "သူ မဖြေဘူး။ ထမင်းပန်းကန်ကို လက်နဲ့ တွန်းပေးတယ်။ “မစားတော့ဘူး”"] },
+
+  { t: "The Shears", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "ကိုဝင်းလှ လက်ထဲမှာ အဝတ်ညှပ်ကတ်ကြေးကြီးတစ်လက်နဲ့ ထွက်လာတယ်။",
+    p: "A man emerging from a back room holding a large pair of cloth shears down at his side, the "
+      + "blades catching the bulb light.",
+    u: ["ကိုဝင်းလှက အခန်းထဲကနေ ထွက်လာတယ်။",
+        "သူ့လက်ထဲမှာ ကတ်ကြေးကြီးတစ်လက်။ အဝတ်ညှပ်တဲ့ကတ်ကြေး။",
+        "“ဒီလို တစ်ညလုံး ထိုင်နေလို့ မဖြစ်ဘူး။ ကလေးကို အိပ်ခိုင်းရမယ်”"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Between the Fingers", l: "အိမ်ထဲ", w: ["ကျွန်တော်", "ကိုဝင်းလှ"],
+    g: "ကျွန်တော် ထလိုက်တယ်။ ဘာလုပ်မလို့လဲလို့ မေးတယ်။",
+    p: "Two men facing each other across a coffin, one standing up out of a crouch, the other "
+      + "holding shears, the child between them.",
+    u: ["ကျွန်တော် ထလိုက်တယ်။ “ကတ်ကြေးနဲ့ ဘာလုပ်မလို့လဲ”",
+        "“လက်ချောင်းတွေကြား ထိုးခွာမလို့”"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Don't Do That to My Mother", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "စုစုက လွတ်နေတဲ့လက်တစ်ဖက်နဲ့ ကျွန်တော့်အင်္ကျီကို ဆုပ်လိုက်တယ်။",
+    p: "A child's free hand fisted tight in the back of a man's shirt, her other arm still "
+      + "stretched into the coffin.",
+    u: ["စုစုက ကျွန်တော့်အင်္ကျီကို လွတ်နေတဲ့လက်တစ်ဖက်နဲ့ ဆုပ်လိုက်တယ်။",
+        "“အမေ့ကို မလုပ်နဲ့”"] },
+
+  { t: "You Be Quiet", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "ကိုဝင်းလှ မျက်နှာတင်းသွားတယ်။",
+    p: "Close on a man's face hardening, jaw set, looking down at a child rather than at the "
+      + "coffin.",
+    u: ["ကိုဝင်းလှ မျက်နှာတင်းသွားတယ်။ “နင် တိတ်တိတ်နေ”"] },
+
+  { t: "A Scratch From Inside", l: "အိမ်ထဲ",
+    g: "ခေါင်းထဲကနေ ခြစ်သံတစ်ချက်။ လက်သည်းနဲ့ သစ်သားကို ခြစ်တဲ့အသံ။",
+    p: "The outside of a plain wooden coffin in candlelight, held still and quiet — the frame "
+      + "waiting on a sound rather than showing anything.",
+    u: ["ခေါင်းထဲကနေ ခြစ်သံတစ်ချက် ထွက်လာတယ်။",
+        "လက်သည်းနဲ့ သစ်သားကို ခြစ်တဲ့အသံ။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "The Other Hand", l: "အိမ်ထဲ",
+    g: "စုစုကို ကိုင်ထားတဲ့လက်က မလှုပ်ဘူး။ ကျန်တစ်ဖက်ရဲ့ လက်သည်းတွေက ခေါင်းဘေးသားကို ထိနေပြီ။",
+    p: "Extreme close-up inside the coffin edge: fingertips of a second hand resting against the "
+      + "raw timber wall, the nails just touching it. No damage, no gouges — only contact.",
+    u: ["ကျွန်တော် အစ်မရဲ့လက်ကို ကြည့်လိုက်တယ်။ စုစုကို ကိုင်ထားတဲ့လက်က မလှုပ်ဘူး။",
+        "ရင်ဘတ်ပေါ်မှာ တင်ထားတဲ့ ကျန်လက်တစ်ဖက်ရဲ့ လက်သည်းတွေက ခေါင်းအတွင်းဘေးသားကို ထိနေပြီ။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "He Saw It Too", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "ကိုဝင်းလှလည်း မြင်လိုက်တယ်။ နောက်ကို နည်းနည်း ဆုတ်သွားတယ်။",
+    p: "A man taking a small involuntary step backward, shears lowering, his eyes fixed on the "
+      + "coffin.",
+    u: ["ကိုဝင်းလှလည်း မြင်လိုက်တယ်။",
+        "သူ နောက်ကို နည်းနည်း ဆုတ်သွားတယ်။ ပြီးတော့ ကျွန်တော့်ကို ကြည့်တယ်။"] },
+
+  { t: "What Has She Told You", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ", "ကျွန်တော်"],
+    g: "“မင်းကို သူ ဘာတွေပြောထားလဲ” လို့ မေးတယ်။ “ဘယ်သူလဲ” လို့ ပြန်မေးတယ်။",
+    p: "Two men looking at each other across a dim room, one asking a question that has given "
+      + "something away, the other very still.",
+    u: ["“မင်းကို သူ ဘာတွေပြောထားလဲ” “ဘယ်သူလဲ”",
+        "သူ စုစုကို ကြည့်တယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "The Fear Changed", l: "အိမ်ထဲ", w: ["ကျွန်တော်"],
+    g: "ကျွန်တော့်ရင်ထဲက ကြောက်စိတ်က ပြောင်းသွားတယ်။",
+    p: "Close on the narrator's face in candlelight as something reorganises behind his eyes — "
+      + "still afraid, but of a different thing now.",
+    u: ["အဲဒီမေးခွန်းကို ကြားလိုက်တဲ့အချိန်မှာ ကျွန်တော့်ရင်ထဲက ကြောက်စိတ်က ပြောင်းသွားတယ်။",
+        "အခုအထိ ကျွန်တော် ကြောက်နေတာက အစ်မရဲ့လက်။",
+        "အဲဒီနောက်မှာတော့ ကျွန်တော် ကိုဝင်းလှကို စောင့်ကြည့်နေမိတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "What Happened Last Night", l: "အိမ်ထဲ", w: ["ကျွန်တော်", "စုစု"],
+    g: "ကျွန်တော် တိုးတိုးမေးလိုက်တယ်။ သူ့အဖေက ဖြတ်ပြောတယ်။",
+    p: "A man leaning close to a child to ask something quietly, and a second man's hand entering "
+      + "frame to interrupt.",
+    u: ["“စုစု၊ မနေ့ညက ဘာဖြစ်တာလဲ” လို့ တိုးတိုးမေးလိုက်တယ်။",
+        "သူ့အဖေက “ကလေးကို မမေးနဲ့။ သူ မြင်လည်း မမြင်ဘူး” လို့ ဖြတ်ပြောတယ်။"] },
+
+  { t: "She Did Not Fall", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "စုစုက အမေ့လက်ကို ငုံ့ကြည့်ရင်း ပြောတယ်။",
+    p: "A child looking down at the hand holding her wrist, speaking without raising her head, "
+      + "everything else in the room out of focus.",
+    u: ["စုစုက အမေ့လက်ကို ငုံ့ကြည့်နေတယ်။",
+        "“အမေ လှေကားပေါ်က မကျဘူး”"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Someone Laughed Outside", l: "မဏ္ဍပ်",
+    g: "အိမ်ထဲ တိတ်သွားတယ်။ အပြင်က ဖဲဝိုင်းမှာ လူတစ်ယောက် ရယ်နေတယ်။",
+    p: "Seen from the dark doorway of the house: men under the awning laughing over cards, "
+      + "completely unaware, warm light on them.",
+    u: ["အိမ်ထဲမှာ တိတ်သွားတယ်။",
+        "အပြင်က ဖဲဝိုင်းမှာတော့ လူတစ်ယောက် ရယ်နေတယ်။ အဝေးက ခွေးတစ်ကောင် ဟောင်တယ်။"] },
+
+  { t: "Father Took Her", l: "အိမ်ထဲ", w: ["စုစု", "ကိုဝင်းလှ"],
+    g: "“အဖေက ခေါ်သွားတာ” ကိုဝင်းလှ ကတ်ကြေးကို ပိုတင်းတင်း ဆုပ်လိုက်တယ်။",
+    p: "A fist tightening around the handles of a pair of shears, knuckles pale, the man's face "
+      + "out of frame above.",
+    u: ["စုစုက ဆက်ပြောတယ်။ “အဖေက ခေါ်သွားတာ”",
+        "ကိုဝင်းလှ လက်ထဲက ကတ်ကြေးကို ပိုတင်းတင်း ဆုပ်လိုက်တယ်။",
+        "“နင် ဘာတွေပြောနေတာလဲ”"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "After She Stopped Moving", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "ကလေးက ခေါင်းမော့မကြည့်ဘူး။ ဆက်ပြောတယ်။",
+    p: "A child's face lowered, speaking evenly, not looking at anyone — the flatness of a fact "
+      + "rather than an accusation.",
+    u: ["ကလေးက ခေါင်းမော့မကြည့်ဘူး။",
+        "“အမေ မလှုပ်တော့မှ ခေါ်သွားတာ”"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "I Stood in Front of Her", l: "အိမ်ထဲ", w: ["ကျွန်တော်", "ကိုဝင်းလှ"],
+    g: "ကျွန်တော် စုစုရှေ့မှာ ဝင်ရပ်လိုက်တယ်။ ကိုဝင်းလှက ကတ်ကြေးကို ချမထားဘူး။",
+    p: "A man stepping bodily between a seated child and another man who has not put down the "
+      + "shears, the coffin to one side.",
+    u: ["ကျွန်တော် စုစုရှေ့မှာ ဝင်ရပ်လိုက်တယ်။",
+        "ကိုဝင်းလှက ကတ်ကြေးကို ချမထားဘူး။"] },
+
+  { t: "His Voice Got Quieter", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "သူ့အသံက တိုးလာတယ်။ ကျယ်ကျယ်အော်နေတုန်းကထက် ပိုကြောက်ဖို့ကောင်းတယ်။",
+    p: "Close on a man speaking very quietly, face composed, which is more frightening than the "
+      + "shouting was.",
+    u: ["“မင်းတို့က ငါ့ကို လူဆိုးလုပ်ချင်နေတာလား”",
+        "သူ့အသံက တိုးလာတယ်။ ကျယ်ကျယ်အော်နေတုန်းကထက် ပိုကြောက်ဖို့ကောင်းတယ်။",
+        "“ကလေးက ဘာသိလို့လဲ။ အိပ်ချင်မူးတူးနဲ့ မြင်ချင်တာ မြင်နေတာ”"],
+    c: [[1, "stinger"]] },
+
+  { t: "Come Inside, Please", l: "မဏ္ဍပ်", w: ["ကျွန်တော်"],
+    g: "ကျွန်တော် အပြင်ကို လှမ်းခေါ်တယ်။ ကိုဝင်းလှက တံခါးဘက်ကို ကြည့်တယ်။",
+    p: "A man at an open doorway calling out toward the awning, half-turned so he can still watch "
+      + "the room behind him.",
+    u: ["ကျွန်တော် အပြင်ကို လှမ်းခေါ်တယ်။ “ဦးလေးတို့! ခဏဝင်လာပါဦး!”",
+        "ကိုဝင်းလှက တံခါးဘက်ကို ကြည့်တယ်။"] },
+
+  { t: "He Grabbed for Her", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ", "စုစု"],
+    g: "ကိုဝင်းလှက စုစုကို လှမ်းဆွဲတယ်။ ကျွန်တော် သူ့လက်ကို ပုတ်ထုတ်လိုက်တယ်။",
+    p: "A grabbing hand knocked aside mid-reach, motion blur, a child recoiling on her stool "
+      + "between the two men.",
+    u: ["ပြီးတော့ စုစုကို လှမ်းဆွဲတယ်။",
+        "ကျွန်တော် သူ့လက်ကို ပုတ်ထုတ်လိုက်တယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "The Stool Went Over", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "စုစုထိုင်နေတဲ့ခုံ ယိုင်သွားတယ်။ ကျွန်တော် ကလေးကို ဖမ်းလိုက်ရတယ်။",
+    p: "A wooden stool tipping over sideways and a man catching a child under the arms, her other "
+      + "arm pulled taut toward the coffin.",
+    u: ["ရုန်းရင်းဆန်ခတ်ဖြစ်တော့ စုစုထိုင်နေတဲ့ခုံ ယိုင်သွားတယ်။",
+        "ကျွန်တော် ကလေးကို ဖမ်းလိုက်ရတယ်။"] },
+
+  { t: "The Hand Did Not Let Go", l: "အိမ်ထဲ",
+    g: "အစ်မရဲ့လက်က မလွတ်ဘူး။ စုစုက လေထဲမှာ ခဏ တွဲလောင်းဖြစ်သွားတယ်။",
+    p: "A child briefly suspended between a man's arms and the coffin, her wrist still held, her "
+      + "feet off the floor. Held one beat.",
+    u: ["အစ်မရဲ့လက်ကတော့ မလွတ်ဘူး။",
+        "စုစုက လေထဲမှာ ခဏ တွဲလောင်းဖြစ်သွားတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "A Shoulder Rose", l: "အိမ်ထဲ", w: ["ခင်နှင်း"],
+    g: "ခေါင်းထဲက အစ်မရဲ့ ပခုံးတစ်ဖက် မြောက်လာတယ်။ တစ်ကိုယ်လုံး တောင့်တောင့်ကြီးနဲ့။",
+    p: "A woman's shoulder and upper arm lifting from inside a coffin, the whole body rigid and "
+      + "level as it rises, eyes closed, face utterly calm.",
+    u: ["အဲဒီအချိန် ခေါင်းထဲက အစ်မရဲ့ ပခုံးတစ်ဖက် မြောက်လာတယ်။",
+        "တစ်ကိုယ်လုံး တောင့်တောင့်ကြီးနဲ့။",
+        "ကိုဝင်းလှ မလှုပ်တော့ဘူး။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "Her Face Turned Toward Him", l: "အိမ်ထဲ", w: ["ခင်နှင်း", "ကိုဝင်းလှ"],
+    g: "အစ်မရဲ့ခေါင်း ဖြည်းဖြည်း လှည့်လာတယ်။ မျက်လုံးတွေ ပိတ်ထားတုန်းပဲ။",
+    p: "A dead woman's head turned to face a man across the room, her eyes still closed, her "
+      + "expression completely serene. He is frozen in the foreground, out of focus.",
+    u: ["အစ်မရဲ့ခေါင်းက ဖြည်းဖြည်း လှည့်လာတယ်။",
+        "မျက်လုံးတွေ ပိတ်ထားတုန်းပဲ။ မျက်နှာကတော့ သူ့ယောက်ျားဘက်ကို တည့်တည့်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Don't Get Up", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "ကိုဝင်းလှက ပါးစပ်ဖွင့်တယ်။ ပထမတစ်ခါ အသံမထွက်ဘူး။",
+    p: "A man's mouth opening with no sound coming out, his whole face slack, backing into the "
+      + "wall behind him.",
+    u: ["ကိုဝင်းလှက ပါးစပ်ဖွင့်တယ်။ ပထမတစ်ခါ အသံမထွက်ဘူး။",
+        "ဒုတိယတစ်ခါမှ “နင်… နင် မထနဲ့” လို့ ပြောတယ်။",
+        "အစ်မက ဆက်ထလာတယ်။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "My Sister's Hand", l: "အိမ်ထဲ", w: ["ကျွန်တော်"],
+    g: "ကျွန်တော် စုစုကို ရင်ခွင်ထဲ ထိန်းရင်း အစ်မရဲ့လက်ကို ကိုင်လိုက်တယ်။",
+    p: "A man's hand closing over a dead woman's hand where it grips a child's wrist — three "
+      + "hands together in candlelight.",
+    u: ["ကျွန်တော် စုစုကို ရင်ခွင်ထဲမှာ ထိန်းထားရင်း အစ်မရဲ့လက်ကို ကိုင်လိုက်တယ်။",
+        "ကျွန်တော့်အစ်မရဲ့လက်။"] },
+
+  { t: "The Hand That Walked Me to School", l: null,
+    g: "ငယ်ငယ်တုန်းက အမှတ်တရ — အစ်မက ကလေးကို လက်ဆွဲပြီး လမ်းလျှောက်နေတယ်။ နေ့ခင်းအလင်း။",
+    p: "A warm daylight memory: a teenage girl leading a crying small boy by the hand along a "
+      + "village path to school, seen from behind.",
+    u: ["ငယ်ငယ်က ကျွန်တော် ကျောင်းမသွားချင်လို့ ငိုရင် လမ်းတစ်လျှောက် ဆွဲခေါ်ခဲ့တဲ့လက်။",
+        "အခု အေးစက်တောင့်တင်းနေတယ်။"] },
+
+  { t: "I Will Take Su Su", l: "အိမ်ထဲ", w: ["ကျွန်တော်"],
+    g: "ကျွန်တော် အသံတုန်တုန်နဲ့ ခေါ်လိုက်တယ်။",
+    p: "A man speaking directly to a dead woman's face at close range, his own face wet, not "
+      + "frightened of her.",
+    u: ["“မမ” ကျွန်တော် အသံတုန်တုန်နဲ့ ခေါ်လိုက်တယ်။",
+        "“စုစုကို ကျွန်တော် ယူမယ်”",
+        "လက်ချောင်းတွေ မလှုပ်ဘူး။",
+        "“ကျွန်တော်နဲ့ ခေါ်သွားမယ်။ ဒီအိမ်မှာ မထားခဲ့ဘူး”"] },
+
+  { t: "One Finger at a Time", l: "အိမ်ထဲ",
+    g: "အစ်မရဲ့လက်က တစ်ချောင်းချင်း ပြေလာတယ်။ လက်သန်း၊ လက်သူကြွယ်၊ နောက်ဆုံး လက်မ။",
+    p: "Extreme close-up of a hand releasing a child's wrist one finger at a time, the little "
+      + "finger already lifted, the thumb still down.",
+    u: ["စုစုက ကျွန်တော့်လည်ပင်းကို ဖက်လိုက်တယ်။",
+        "အဲဒီတော့မှ အစ်မရဲ့လက်က တစ်ချောင်းချင်း ပြေလာတယ်။",
+        "အရင်ဆုံး လက်သန်း။ ပြီးတော့ လက်သူကြွယ်။ နောက်ဆုံး လက်မ။",
+        "သူ့သမီးကို ကျွန်တော့်လက်ထဲ လွှတ်ပေးလိုက်တယ်။"],
+    c: [[3, "bigstinger"]] },
+
+  { t: "I Did Not Look Back", l: "အိမ်ထဲ", w: ["ကျွန်တော်", "စုစု"],
+    g: "ကျွန်တော် ကလေးကို ပိုက်ပြီး တံခါးဘက် ပြေးတယ်။",
+    p: "A man carrying a child toward a doorway with her head pressed into his shoulder, both "
+      + "seen from behind, the room behind them dark.",
+    u: ["ကျွန်တော် ကလေးကို ပိုက်ပြီး တံခါးဘက် ပြေးတယ်။",
+        "နောက်ကနေ ကိုဝင်းလှ အော်သံ ကြားရတယ်။ “နှင်း! လွှတ်!”",
+        "ကျွန်တော် မလှည့်ကြည့်ဘူး။ စုစုရဲ့ခေါင်းကို ကိုယ့်ပခုံးနဲ့ ဖိကပ်ထားလိုက်တယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Nobody Went In", l: "မဏ္ဍပ်",
+    g: "အပြင်ကလူတွေ ပြေးဝင်လာကြတယ်။ အိမ်ထဲရောက်တာနဲ့ ရပ်သွားကြတယ်။",
+    p: "Two or three men crowded in a doorway having just run in, all of them stopped dead on the "
+      + "threshold, looking into the room. We do not see what they see.",
+    u: ["အပြင်ကလူတွေ ပြေးဝင်လာကြတယ်။",
+        "ကျွန်တော်တို့ကို ဖြတ်ပြေးသွားတဲ့ လူတစ်ယောက်က အိမ်ထဲရောက်တာနဲ့ ရပ်သွားတယ်။",
+        "နောက်တစ်ယောက်လည်း ရပ်သွားတယ်။ ဘယ်သူမှ ချက်ချင်း ဝင်မကူရဲကြဘူး။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "He Was Kneeling", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "ကိုဝင်းလှက ခေါင်းဘေးမှာ ဒူးထောက်နေတယ်။ အစ်မရဲ့လက်နှစ်ဖက်က သူ့လက်ကောက်ဝတ်နှစ်ဖက်ကို ဆုပ်ထားတယ်။",
+    p: "A man on his knees beside a coffin with both his wrists held by a dead woman's hands, her "
+      + "face very close to his, her eyes closed.",
+    u: ["နောက်မှ ကျွန်တော် သိရတာက ကိုဝင်းလှက ခေါင်းဘေးမှာ ဒူးထောက်နေတယ်။",
+        "အစ်မရဲ့ လက်နှစ်ဖက်က သူ့လက်ကောက်ဝတ်နှစ်ဖက်ကို ဆုပ်ထားတယ်။",
+        "အစ်မရဲ့ မျက်နှာက သူ့မျက်နှာနဲ့ နီးနီးလေး။ မျက်လုံးတွေတော့ ပိတ်ထားတုန်းပဲ။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Whichever Way He Turned", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ", "ခင်နှင်း"],
+    g: "သူ ခေါင်းကို ဘယ်ညာ လှည့်နေရတယ်။ အစ်မရဲ့ခေါင်းကလည်း လိုက်လှည့်တယ်။",
+    p: "A man twisting his face away to one side, and the dead woman's head turned the same way, "
+      + "keeping level with his — her eyes closed throughout.",
+    u: ["ကိုဝင်းလှက သူ့မျက်နှာကို မကြည့်ရဲလို့ ခေါင်းကို ဘယ်ဘက်၊ ညာဘက် လှည့်နေရတယ်။",
+        "ဘယ်ဘက်လှည့်ရင် အစ်မရဲ့ခေါင်းကလည်း လိုက်လှည့်တယ်။ ညာဘက်လှည့်ရင်လည်း လိုက်လှည့်တယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "I Know. I Did It.", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "သူ့ပါးစပ်ကနေ စကားတွေ ထွက်နေတယ်။ တခြားဘယ်သူမှ အစ်မရဲ့အသံကို မကြားရဘူး။",
+    p: "Close on a man's face mid-confession, eyes shut, tears and spit, the dead woman's face "
+      + "just out of focus beside his.",
+    u: ["သူ့ပါးစပ်ကနေတော့ “မပြောနဲ့တော့… ငါသိတယ်… ငါလုပ်တာ…” ဆိုတဲ့စကားတွေ ထွက်နေတယ်။",
+        "အဲဒီအခန်းထဲမှာရှိတဲ့ တခြားဘယ်သူမှ အစ်မရဲ့အသံကို မကြားရဘူး။"],
+    c: [[1, "finalstinger"]] },
+
+  { t: "By Morning Her Hands Were Loose", l: "အိမ်ထဲ", w: ["ခင်နှင်း"],
+    g: "မနက်ရောက်တော့ အစ်မရဲ့လက်တွေ ပြန်ပြေလာတယ်။ ရင်ဘတ်ပေါ်မှာ ပြန်ငြိမ်နေတယ်။",
+    p: "Grey morning light through a shutter onto a woman's hands folded loosely on her chest "
+      + "again, entirely relaxed, as though nothing had happened.",
+    u: ["မနက်ရောက်တော့ အစ်မရဲ့လက်တွေ ပြန်ပြေလာတယ်။"] },
+
+  { t: "He Looked at His Wrists", l: "အိမ်ထဲ", w: ["ကိုဝင်းလှ"],
+    g: "ကိုဝင်းလှကို လူတွေ ဝိုင်းထိန်းထားတယ်။ သူ့လက်ကောက်ဝတ်တွေကိုပဲ ကြည့်နေတယ်။",
+    p: "A man held between two others, not resisting, staring down at his own wrists — where "
+      + "faint bands are visible.",
+    u: ["ကိုဝင်းလှကို လူတွေ ဝိုင်းထိန်းထားခဲ့ရတယ်။",
+        "ကျွန်တော်တို့ကို သူ နောက်တစ်ခါ မကြည့်တော့ဘူး။",
+        "သူ့လက်ကောက်ဝတ်တွေကိုပဲ ကြည့်နေတယ်။"],
+    c: [[2, "stinger"]] },
+
+  { t: "A Hair Tie on Her Chest", l: "အိမ်ထဲ", w: ["စုစု"],
+    g: "သင်္ဂြိုဟ်တဲ့နေ့။ စုစုက အမေ့ရင်ဘတ်ပေါ်မှာ ဆံပင်စည်းကြိုးလေး တင်ပေးတယ်။",
+    p: "A child's hand placing a small elastic hair tie on a dead woman's chest, daylight now, "
+      + "the room full of white-clad mourners out of focus behind.",
+    u: ["အစ်မကို သင်္ဂြိုဟ်တဲ့နေ့မှာ စုစု မငိုဘူး။",
+        "အမေ့ရင်ဘတ်ပေါ်မှာ သူ့ဆံပင်စည်းကြိုးလေး တင်ပေးတယ်။",
+        "ပြီးတော့ ကျွန်တော့်လက်ကို လာကိုင်တယ်။"] },
+
+  { t: "She Lives With Me Now", l: "ဦးလေးအိမ်", w: ["ကျွန်တော်", "စုစု"],
+    g: "မန္တလေးက အိမ်ခန်းလေး။ စုစုက ကျွန်တော်နဲ့ နေတယ်။",
+    p: "A small plain flat with a child's few belongings newly added to a man's sparse room — a "
+      + "school bag by the door, a folded blanket on the bed.",
+    u: ["အဲဒီနေ့ကစပြီး စုစုက ကျွန်တော်နဲ့ နေတယ်။",
+        "အစပိုင်းမှာ ညအိပ်ရင် ကျွန်တော့်လက်ကို အမြဲကိုင်ထားတယ်။"] },
+
+  { t: "My Hand Slipped Loose", l: "ဦးလေးအိမ်", w: ["စုစု"],
+    g: "တစ်ညမှာ လက်လွတ်သွားတယ်။ စုစု ချက်ချင်း နိုးလာတယ်။",
+    p: "A child sitting bolt upright in the dark of a small bedroom, one hand reaching into empty "
+      + "space beside her.",
+    u: ["တစ်ညတော့ ကျွန်တော် လက်ပြင်ရင်း မတော်တဆ လွတ်သွားတယ်။",
+        "စုစု ချက်ချင်း နိုးလာတယ်။ “ဦးလေး?”",
+        "“ရှိတယ်။ ဒီမှာပဲ” သူ့လက်ကို ပြန်ကိုင်ပေးလိုက်တယ်။"],
+    c: [[1, "stinger"]] },
+
+  { t: "Were You Afraid of Her", l: "ဦးလေးအိမ်", w: ["ကျွန်တော်", "စုစု"],
+    g: "စုစုက မေးတယ်။ ကျွန်တော် မလိမ်ချင်ဘူး။",
+    p: "Two people lying awake in the dark, only their profiles lit by a window, a child's "
+      + "question hanging between them.",
+    u: ["ခဏကြာတော့ သူက မေးတယ်။ “ဦးလေးက အဲဒီည အမေ့ကို ကြောက်သွားတာလား”",
+        "ကျွန်တော် မလိမ်ချင်ဘူး။ “နည်းနည်း”"] },
+
+  { t: "I Was Afraid Too", l: "ဦးလေးအိမ်", w: ["စုစု"],
+    g: "စုစုက ခေါင်းညိတ်တယ်။ နားလည်တဲ့ပုံစံနဲ့။ ပြီးတော့ မျက်လုံးမှိတ်လိုက်တယ်။",
+    p: "A child nodding once in the dark with the composure of someone much older, then closing "
+      + "her eyes.",
+    u: ["စုစုက ခေါင်းညိတ်တယ်။ နားလည်တဲ့ပုံစံနဲ့။",
+        "ပြီးတော့ မျက်လုံးမှိတ်လိုက်တယ်။ “သမီးလည်း ကြောက်တာပဲ”"] },
+
+  { t: "That They Would Manage to Pry It Off", l: "ဦးလေးအိမ်", w: ["စုစု", "ကျွန်တော်"],
+    g: "နောက်ဆုံးပုံ — ကလေးရဲ့လက်နဲ့ ဦးလေးရဲ့လက် တွဲထားတယ်။ မှောင်ထဲမှာ။",
+    p: "Final composition: a child's small hand and a man's hand held together on a blanket in "
+      + "near-darkness, fingers interlocked. Hold on the hands.",
+    u: ["ကျွန်တော် သူ့စောင်ကို ပြင်ပေးမလို့ လုပ်တယ်။ သူက ဆက်ပြောတယ်။",
+        "“အမေ့လက်ကို လူကြီးတွေ ဖြုတ်လို့ရသွားမှာကို။”"],
+    c: [[1, "finalstinger"]] },
+];
