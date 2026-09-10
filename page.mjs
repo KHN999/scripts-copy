@@ -35,8 +35,17 @@ header{position:sticky;top:0;z-index:9;background:rgba(20,16,28,.96);backdrop-fi
 .wrap{max-width:960px;margin:0 auto}
 h1{margin:0;font-size:17px;letter-spacing:.02em;font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
 .sub{color:var(--mute);font-size:12px;margin-top:2px}
-.nav{font-size:11.5px;color:var(--mute);margin-bottom:6px}
-.nav a{margin-right:12px}
+/* Eighteen Burmese titles will not read as a wrapped row of 11.5px text links.
+   They are chips in one horizontally scrollable strip, current one highlighted. */
+.nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:7px;margin-bottom:8px;
+  scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.nav::-webkit-scrollbar{height:5px}
+.nav::-webkit-scrollbar-thumb{background:var(--edge);border-radius:99px}
+.nav a{flex:0 0 auto;background:var(--ink);border:1px solid var(--edge);color:var(--mute);
+  border-radius:999px;padding:4px 11px;font-size:12px;text-decoration:none;white-space:nowrap;
+  font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif}
+.nav a:hover{border-color:var(--accent);color:var(--text)}
+.nav a.on{background:var(--accent);border-color:var(--accent);color:#1a1424;font-weight:700}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
 input[type=search]{flex:1;min-width:180px;background:var(--ink);border:1px solid var(--edge);color:var(--text);border-radius:7px;padding:7px 10px;font-size:13px;outline:none}
 input[type=search]:focus{border-color:var(--accent)}
@@ -257,6 +266,15 @@ const fbox = document.getElementById("filters");
 });
 document.getElementById("q").oninput = render;
 document.getElementById("reset").onclick = () => { if (confirm("Clear all progress?")) { done = new Set(); save(); render(); } };
+
+// The nav strip scrolls, so the current sheet can start off-screen — put it in view.
+{
+  const cur = document.querySelector(".nav a.on");
+  if (cur) {
+    const strip = cur.parentElement;
+    strip.scrollLeft = cur.offsetLeft - strip.clientWidth / 2 + cur.clientWidth / 2;
+  }
+}
 
 /* ---- Full script and translation workspace --------------------------------
  * Built from the same shot data the cards use, so the script shown here and the
