@@ -1,0 +1,833 @@
+/**
+ * ပြတင်းပေါက်အပြင်က မျက်လုံး — scene board.
+ *
+ *   t title · g Burmese gloss of the picture · p English prompt body
+ *   u narration units (verbatim, short lines merged) · c cues · w refs · l location
+ *
+ * FOUR RULES.
+ *
+ * 1. SCALE IS THE STORY. From the moment they are inside, the two of them are
+ *    four inches tall and EVERYTHING must sell it: wood grain reading as floor
+ *    planks, a Bluetooth speaker the size of an office block, a human hand
+ *    filling a room, dust motes the size of moths. Any shot where their scale is
+ *    ambiguous is a wasted shot.
+ *
+ * 2. THE DOLL IS A DOLL. Porcelain face, painted pink smile, ball joints at the
+ *    knees with visible seams, three moulded rings at each finger joint, pink
+ *    varnish on the nails, maker's marks stamped into the sole of one foot. She
+ *    is never flesh, never rotting, never gore. The horror is that a toy is
+ *    articulated and patient, not that it is decayed.
+ *
+ * 3. THE PEOPLE OUTSIDE ARE KIND. Outside-Ko Zin and Outside-May must be warm,
+ *    ordinary and completely unfrightening — they lift them out, lay them on
+ *    cloth, cry. Making them sinister destroys the ending, which lands precisely
+ *    because nobody has done anything wrong.
+ *
+ * 4. THE EYE IS AN EYE. Brown iris, visible capillaries in the white, ordinary
+ *    human eyelashes — pressed to a window that is four inches across. It is
+ *    frightening because of its size, not because anything is wrong with it.
+ */
+
+export const CAST = [
+  { name: "မေ", en: "May — the narrator, inside",
+    prompt: "A Burmese woman of about twenty-eight in a plain work shirt and jeans, hair worn loose "
+      + "with a habit of tucking the left side behind her ear. Practical, a restorer of furniture. "
+      + "Later: a cut on her right calf bound with a torn shirt sleeve." },
+  { name: "ကိုဇင်", en: "Ko Zin — her older brother, inside",
+    prompt: "A Burmese man of about thirty-three, solid, short hair, a short-sleeved shirt over a "
+      + "t-shirt. Steady, physical, the one who puts himself between things. ⚠️ From the escape "
+      + "onward his shirt is torn open across the back." },
+  { name: "အရုပ်", en: "The doll — red dress",
+    prompt: "A porcelain-headed doll in a red dress, scaled so she towers over adult characters. "
+      + "⚠️ SHE IS UNMISTAKABLY A TOY: glazed porcelain face with a small painted pink smile, glass "
+      + "eyes that do not move together, a neck permanently tilted a few degrees to one side, ball "
+      + "joints at the knees with visible moulded seams, three raised rings at every finger joint, "
+      + "pink varnish on the nails, and maker's marks stamped into the sole of one bare foot. No "
+      + "decay, no flesh, no gore, nothing wet. Never damaged except one chipped hand late on." },
+  { name: "အပြင်ကမေ", en: "Outside-May — full size",
+    prompt: "The same woman as May, at ordinary human scale, in the same clothes and with the same "
+      + "habit of tucking her hair behind her left ear. ⚠️ WARM AND KIND — worried, gentle, crying at "
+      + "one point. She must never look sinister or uncanny in any image." },
+  { name: "အပြင်ကကိုဇင်", en: "Outside-Ko Zin — full size",
+    prompt: "The same man as Ko Zin, at ordinary human scale, in the same clothes — ⚠️ but his shirt "
+      + "is NOT torn. Careful and gentle with his hands. Never menacing." },
+];
+
+export const LOCS = [
+  { name: "ဧည့်ခန်း", en: "The real living room, real scale",
+    prompt: "The crowded living room of a deceased woman's old house in daylight: dark wooden "
+      + "cabinets, framed paintings stacked against walls, brassware, dust sheets. In the middle of "
+      + "the floor a large table with a glass display case on it." },
+  { name: "အရုပ်အိမ်", en: "The dolls' house, seen from outside",
+    prompt: "A two-storey dolls' house about chest height under a glass case: a blue front door, "
+      + "white window frames, fully furnished rooms visible through the openings, everything "
+      + "miniature and beautifully made." },
+  { name: "အထဲ", en: "Inside the dolls' house",
+    prompt: "The interior of a dolls' house at human scale to its occupants: rooms of glued-down "
+      + "miniature furniture, floorboards whose grain reads a hundred times too large, windows of "
+      + "flat glass showing only featureless white light, paint-drawn handles that are not handles. "
+      + "⚠️ Everything is slightly too smooth, too matte, too perfect." },
+  { name: "နံရံကြား", en: "The gap between the walls",
+    prompt: "A narrow unfinished cavity between two walls of a dolls' house: raw unpainted timber, "
+      + "runs of dried glue like frozen streams, huge iron nails crossing the space, sawdust. Dark "
+      + "except for what light leaks in from the room outside." },
+  { name: "အပြင်", en: "The world outside, at their scale",
+    prompt: "The real living room photographed from four inches tall: a portable Bluetooth speaker "
+      + "standing like an office block, a drinking glass like a water tower, human figures beyond all "
+      + "of it, dust motes drifting past the size of moths." },
+];
+
+export const STYLE =
+  "A deceased woman's old house in Myanmar, present day, in flat afternoon daylight. Two restorers "
+  + "taking an inventory — and then the same room seen from four inches tall. Cinematic photorealism, "
+  + "domestic uncanny rather than gothic: nothing is rotten, bloody or monstrous, and the daylight "
+  + "never becomes night. 35mm film grain, shallow depth of field, 16:9. ⚠️ SCALE IS THE SUBJECT — "
+  + "once the characters are inside the dolls' house, every image must make their size unmistakable "
+  + "against ordinary objects. ⚠️ The doll is always visibly A TOY: porcelain, jointed, painted, "
+  + "never flesh and never decayed. ⚠️ The full-size people are kind and ordinary and must never be "
+  + "lit or framed as threatening. No gore. No legible text, numbers, captions or watermarks.";
+
+export const SCENES = [
+  { t: "An Eye Filled the Window", l: "အထဲ",
+    g: "ပြတင်းပေါက်တစ်ပေါက်လုံးကို မျက်လုံးတစ်လုံးက ဖုံးထားတယ်။ အညိုရောင်။",
+    p: "A small window entirely filled by a single human eye pressed against it from outside — brown "
+      + "iris, fine red capillaries in the white, ordinary lashes. The room inside is tiny.",
+    u: ["ပြတင်းပေါက်တစ်ပေါက်လုံးကို မျက်လုံးတစ်လုံးက ဖုံးသွားတဲ့အချိန်မှာ ကျွန်မတို့ အိမ်အပြင် မထွက်သင့်တော့ဘူးလို့ ထင်ခဲ့တယ်။",
+        "မျက်လုံးက အညိုရောင်။ မျက်ဆံဘေးမှာ သွေးကြောသေးသေးတွေ မြင်ရတယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "The Room Went Dark When It Blinked", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "မျက်တောင်ခတ်လိုက်တိုင်း အခန်းထဲ တစ်ချက် မှောင်သွားတယ်။ ကိုဇင်က နံရံအောက် ဆွဲချတယ်။",
+    p: "Two people flattened beneath a window sill in a tiny room, a man's hand over the woman's "
+      + "mouth, the light across them cut by a slow blink.",
+    u: ["မျက်တောင်ခတ်လိုက်တိုင်း ပြတင်းပေါက်က တစ်ချက် မှောင်သွားတယ်။",
+        "ကိုဇင်က ကျွန်မပါးစပ်ကို ဖိပိတ်ပြီး နံရံအောက် ဆွဲချလိုက်တယ်။"] },
+
+  { t: "It Was Looking For Us", l: "အထဲ",
+    g: "အပြင်ကအရာက အိမ်ထဲကို ကြည့်နေတယ်။ ကျွန်မတို့ကို ရှာနေတာ။",
+    p: "The eye at the window from inside the room, the pupil visibly moving as it searches the "
+      + "interior, the two of them out of its line of sight below.",
+    u: ["အပြင်ကအရာက အိမ်ထဲကို ကြည့်နေတယ်။ ကျွန်မတို့ကို ရှာနေတာ။",
+        "အဲဒီအချိန်က ကျွန်မတို့ မသိသေးဘူး။"] },
+
+  { t: "The Thing Inside Was Faster", l: "အထဲ",
+    g: "အပြင်ကမျက်လုံးက အန္တရာယ်အကြီးဆုံး မဟုတ်ဘူး။ အိမ်ထဲက ကျန်နေတဲ့အရာက ပိုမြန်တယ်။",
+    p: "A dolls'-house staircase seen from the bottom, empty, leading up into shadow — the frame "
+      + "held on it a beat too long.",
+    u: ["အပြင်ကမျက်လုံးက ကျွန်မတို့အတွက် အန္တရာယ်အကြီးဆုံးအရာ မဟုတ်ဘူး။",
+        "အိမ်ထဲမှာ ကျန်နေတဲ့အရာက ပိုမြန်တယ်။",
+        "ပြီးတော့ ကျွန်မတို့ ဘယ်နေရာမှာ ပုန်းနေလဲ သိတယ်။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "My Name Is May", l: "ဧည့်ခန်း", w: ["မေ"],
+    g: "ပရိဘောဂဟောင်း ပြန်ပြင်တဲ့အလုပ်။ လက်တွေက သစ်သားကို သုတ်နေတယ်။",
+    p: "Careful hands working beeswax into the carved arm of an antique chair in a workshop, tools "
+      + "and rags laid out, daylight from a window.",
+    u: ["ကျွန်မနာမည် မေ။",
+        "ပရိဘောဂဟောင်းနဲ့ အလှဆင်ပစ္စည်းတွေ ပြန်ပြင်တဲ့အလုပ် လုပ်တယ်။",
+        "ကိုဇင်က ကျွန်မအစ်ကို။"] },
+
+  { t: "Taking an Inventory", l: "ဧည့်ခန်း", w: ["မေ", "ကိုဇင်"],
+    g: "အိမ်ဟောင်းတစ်လုံးမှာ ပစ္စည်းစာရင်း သွားယူနေကြတယ်။",
+    p: "A brother and sister moving through a crowded old living room with a clipboard and a phone "
+      + "camera, dust sheets half pulled back off furniture.",
+    u: ["အဲဒီနေ့က အိမ်ဟောင်းတစ်လုံးမှာ ပစ္စည်းစာရင်းသွားယူကြတာ။",
+        "အိမ်ရှင်အဘွား ဆုံးသွားပြီ။ ကျန်တဲ့မိသားစုက ပစ္စည်းတွေထဲက တန်ဖိုးရှိတာကို ပြန်ပြင်ပြီး သိမ်းချင်တယ်။"] },
+
+  { t: "The Glass Case", l: "ဧည့်ခန်း",
+    g: "အခန်းအလယ်မှာ မှန်အုပ်ထားတဲ့ စားပွဲကြီးတစ်လုံး။",
+    p: "A large table in the centre of a cluttered room with a glass display case on it, the shape "
+      + "inside not yet clear through the reflections.",
+    u: ["ဧည့်ခန်းမှာ ဘီရိုဟောင်းတွေ၊ ပန်းချီကားတွေ၊ ကြေးပစ္စည်းတွေ အများကြီး။",
+        "အခန်းအလယ်မှာတော့ မှန်အုပ်ထားတဲ့ စားပွဲကြီးတစ်လုံး ရှိတယ်။"] },
+
+  { t: "A House Under Glass", l: "အရုပ်အိမ်",
+    g: "မှန်အောက်မှာ အရုပ်အိမ်တစ်လုံး။ ရင်ဘတ်လောက်အမြင့်။ နှစ်ထပ်။ အပြာရောင်တံခါး။",
+    p: "A beautifully made two-storey dolls' house under a glass case, chest height, with a blue "
+      + "front door and white window frames, fully furnished inside.",
+    u: ["မှန်အောက်မှာ အိမ်တစ်လုံး။ အရုပ်အိမ်။",
+        "ကျွန်မ ရင်ဘတ်လောက်အမြင့် ရှိတယ်။ နှစ်ထပ်။",
+        "အပြာရောင်တံခါး။ အဖြူရောင်ပြတင်းပေါက်တွေ။",
+        "အတွင်းက ပရိဘောဂတွေကိုပါ အသေးစိတ် လုပ်ထားတယ်။"] },
+
+  { t: "The Doll in the Front Room", l: "အရုပ်အိမ်", w: ["အရုပ်"],
+    g: "အိမ်ရှေ့ခန်းထဲမှာ ကလေးအရုပ်မတစ်ရုပ်။ အနီရောင်ဂါဝန်။ ကြွေသားမျက်နှာ။ လည်ပင်း စောင်းနေတယ်။",
+    p: "Looking into a dolls'-house front room through its window: a small porcelain-faced doll in a "
+      + "red dress standing in the middle of the floor, her head tilted a few degrees to one side.",
+    u: ["အိမ်ရှေ့ခန်းထဲမှာ ကလေးအရုပ်မတစ်ရုပ် ရှိတယ်။ အနီရောင်ဂါဝန်နဲ့။",
+        "မျက်နှာက ကြွေသား။ လည်ပင်းနည်းနည်း စောင်းနေတယ်။"],
+    c: [[1, "stinger"]] },
+
+  { t: "Is Anyone Home", l: "ဧည့်ခန်း", w: ["မေ", "ကိုဇင်"],
+    g: "ကိုဇင်က မှန်အဖုံးကို မတင်တယ်။ ကျွန်မက ကြေးတံခါးခေါက်တံလေးကို ထိလိုက်တယ်။",
+    p: "A glass case lifted aside and a woman's fingertip reaching toward a tiny brass door knocker "
+      + "on a blue miniature door, both of them smiling.",
+    u: ["ကိုဇင်က မှန်အဖုံးကို မတင်ကြည့်တယ်။ အရုပ်အိမ်ရဲ့ အပြာရောင်တံခါးက ပိတ်နေတယ်။",
+        "ကျွန်မက ခပ်သေးသေး ကြေးတံခါးခေါက်တံကို ထိလိုက်တယ်။",
+        "“အိမ်ရှင်ရှိလား” လို့ ရယ်ပြီး ပြောမိတယ်။ ကိုဇင်လည်း ရယ်တယ်။"] },
+
+  { t: "Far Too Loud", l: "ဧည့်ခန်း",
+    g: "တံခါးခေါက်တံက တောက်လို့ မြည်တယ်။ အရုပ်အိမ်ထဲမှာ မြည်သင့်တဲ့အသံထက် အများကြီး ကျယ်တယ်။",
+    p: "Extreme close-up of a tiny brass knocker falling against a miniature door, the whole frame "
+      + "on an object the size of a fingernail.",
+    u: ["တံခါးခေါက်တံက တောက်။ လို့ မြည်တယ်။",
+        "အဲဒီအသံက အရုပ်အိမ်ထဲမှာ မြည်သင့်တဲ့အသံထက် အများကြီး ကျယ်တယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "The Table Was Gone", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "မျက်တောင်ခတ်ပြီး ပြန်ကြည့်တော့ စားပွဲ မရှိတော့ဘူး။ မှန်အုပ်လည်း မရှိဘူး။",
+    p: "Two people standing in a small plain room, disoriented, no table or case anywhere — the "
+      + "proportions of the room subtly wrong, the floorboard grain far too wide.",
+    u: ["ကျွန်မ မျက်စိတစ်ချက် ပြာသွားတယ်။ ကိုဇင်က ကျွန်မလက်ကို ဖမ်းတယ်။ “မေ?”",
+        "ကျွန်မ မျက်တောင်ခတ်ပြီး ပြန်ကြည့်လိုက်တော့ ကျွန်မတို့ရှေ့က စားပွဲ မရှိတော့ဘူး။",
+        "မှန်အုပ်လည်း မရှိတော့ဘူး။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "The Blue Door Was Behind Us", l: "အထဲ",
+    g: "အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ ရောက်နေတယ်။ လူတစ်ယောက် ဝင်လို့ရတဲ့အရွယ်။",
+    p: "A blue-painted door at full human scale behind two figures, its paint thick and slightly "
+      + "uneven the way a hand-painted toy's is.",
+    u: ["အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ ရောက်နေတယ်။ လူတစ်ယောက် ဝင်လို့ရတဲ့အရွယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "We Tried to Believe Otherwise", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "အစမှာ အရင်အိမ်ရဲ့ တခြားအခန်းလို့ ထင်ခဲ့တယ်။ ကိုဇင်က တံခါးကို ဆွဲဖွင့်တယ်။ မရဘူး။",
+    p: "A man hauling at a door handle that turns freely while the door itself does not move at all, "
+      + "his shoulder braced against the frame.",
+    u: ["အစမှာ ကျွန်မတို့ အရင်အိမ်ရဲ့ တခြားအခန်းတစ်ခန်းထဲ ရောက်သွားတာလို့ ထင်မိတယ်။",
+        "ကိုယ့်ကိုယ်ကို အဲဒီလိုပဲ ယုံအောင် ကြိုးစားကြတာ။",
+        "ကိုဇင်က တံခါးကို ဆွဲဖွင့်တယ်။ မရဘူး။ လက်ကိုင်က လည်တယ်။ တံခါးက မပွင့်ဘူး။"] },
+
+  { t: "Only White Light Outside", l: "အထဲ", w: ["မေ"],
+    g: "ပြတင်းပေါက်အပြင်မှာ အဖြူရောင်အလင်းပဲ ရှိတယ်။ လမ်း၊ ခြံ၊ သစ်ပင် မမြင်ရဘူး။",
+    p: "A window from inside showing nothing beyond it but a flat featureless white glow — no sky, "
+      + "no ground, no depth at all.",
+    u: ["ကျွန်မက ပြတင်းပေါက်ကို သွားကြည့်တယ်။",
+        "အပြင်မှာ အဖြူရောင်အလင်းပဲ ရှိတယ်။ လမ်းမမြင်ရဘူး။ ခြံမမြင်ရဘူး။ သစ်ပင်မမြင်ရဘူး။"] },
+
+  { t: "The Handle Was Painted On", l: "အထဲ",
+    g: "ပြတင်းပေါက်အောက်ခြေက လက်ကိုင်က ဆေးနဲ့ ပုံဆွဲထားတာ။ ဖွင့်လို့မရဘူး။",
+    p: "Extreme close-up of a window catch that is not a catch — a handle shape painted flat onto "
+      + "the timber in thick brush strokes, brush hairs visible in the paint.",
+    u: ["ပြတင်းပေါက်အောက်ခြေကို လက်နဲ့ စမ်းကြည့်လိုက်တယ်။",
+        "သစ်သားပေါ်မှာ လက်ကိုင်ပုံဆွဲထားတာ။",
+        "ဖွင့်လို့ရတဲ့လက်ကိုင် မဟုတ်ဘူး။ ဆေးနဲ့ ပုံဖော်ထားတာ။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Something Knocked Back", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "ကိုဇင်က တံခါးကို ပခုံးနဲ့ ဆောင့်တယ်။ ဒုန်း။ အပေါ်ထပ်ကနေ ဒုန်းလို့ ပြန်မြည်လာတယ်။",
+    p: "A man mid-impact against a door, and above him a ceiling with dust jarred loose from it by "
+      + "something answering from the floor above.",
+    u: ["ကျွန်မ အစ်ကို့ကို လှည့်ကြည့်လိုက်တယ်။ သူက တံခါးကို ပခုံးနဲ့ ဆောင့်နေတယ်။ ဒုန်း။ ဒုန်း။",
+        "အပေါ်ထပ်ကနေ ဒုန်း။ လို့ ပြန်မြည်လာတယ်။",
+        "နှစ်ယောက်လုံး ရပ်လိုက်ကြတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Heavier Than a Person", l: "အထဲ",
+    g: "အပေါ်က ခြေသံနှစ်ချက်။ လူ့ခြေသံထက် လေးတယ်။ သစ်သားတုံးကို ကြမ်းပြင်ပေါ် ထောင်ချနေသလို။",
+    p: "A plain dolls'-house ceiling seen from below, dust sifting down through light in two "
+      + "separate falls where two impacts have landed.",
+    u: ["အပေါ်က ခြေသံနှစ်ချက် ထွက်လာတယ်။",
+        "လူ့ခြေသံထက် လေးတယ်။ သစ်သားတုံးတစ်တုံးကို ကြမ်းပြင်ပေါ် ထောင်ချနေသလို။"] },
+
+  { t: "Have You Come", l: "အထဲ",
+    g: "မိန်းကလေးအသံတစ်ခု။ စကားတစ်ပိုင်းချင်းကြားမှာ စက်လည်သံလေး ပါနေတယ်။",
+    p: "An empty dolls'-house stairwell from below, the top of it lost in shadow, nothing visible on "
+      + "the steps.",
+    u: ["ပြီးတော့ မိန်းကလေးအသံတစ်ခု ကြားရတယ်။ “ရောက်လာပြီလား…”",
+        "အသံက လူပြောသလို မဆက်ဘူး။ စကားတစ်ပိုင်းချင်းကြားမှာ စက်လည်သံလေး ပါနေတယ်။",
+        "ကြွိ။ “အိမ်ထဲမှာ…” ကြွိ။ “လူရှိရမယ်…”"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Under the Table", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "ကိုဇင်က ကျွန်မကို စားပွဲအောက် ဆွဲခေါ်တယ်။",
+    p: "Two people crammed under a miniature dining table seen at their scale, the underside of it "
+      + "showing crude glue joints and unfinished timber.",
+    u: ["ကိုဇင်က ကျွန်မကို စားပွဲအောက် ဆွဲခေါ်တယ်။"] },
+
+  { t: "A Red Hem on the Stairs", l: "အထဲ", w: ["အရုပ်"],
+    g: "လှေကားကနေ အရိပ်ကြီးတစ်ခု ဆင်းလာတယ်။ အရင်ဆုံး အနီရောင်ဂါဝန်အနားကို မြင်ရတယ်။",
+    p: "From under a table: the hem of an enormous red dress descending a staircase, only the fabric "
+      + "and the bottom steps in frame.",
+    u: ["လှေကားကနေ အရိပ်ကြီးတစ်ခု ဆင်းလာတယ်။",
+        "အရင်ဆုံး အနီရောင်ဂါဝန်အနားကို မြင်ရတယ်။ ပြီးတော့ ခြေထောက်တွေ။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Ball Joints at the Knees", l: "အထဲ", w: ["အရုပ်"],
+    g: "ခြေထောက်တွေ ဖြူဖွေးနေတယ်။ ဒူးတွေမှာ စက်ဝိုင်းပုံ အဆက်တွေ ရှိတယ်။",
+    p: "A doll's legs at enormous scale: smooth white porcelain with a clearly moulded spherical "
+      + "ball joint at each knee, the seam line around it visible.",
+    u: ["ဖြူဖွေးနေတယ်။ ဒူးတွေမှာ စက်ဝိုင်းပုံ အဆက်တွေ ရှိတယ်။"],
+    c: [[0, "stinger"]] },
+
+  { t: "She Did Not Bend Them", l: "အထဲ", w: ["အရုပ်"],
+    g: "လှေကားတစ်ထစ်ဆင်းတိုင်း ခြေထောက်တစ်ဖက်လုံးကို ကားမြှောက်ပြီး ချတယ်။",
+    p: "A doll descending a stair with one whole rigid leg swung out from the hip and set down flat, "
+      + "the knee joint not flexing at all.",
+    u: ["လှေကားတစ်ထစ် ဆင်းတိုင်း ခြေထောက်တစ်ဖက်လုံးကို ကားမြှောက်ပြီး ချတယ်။ ဒုန်း။ ဒုန်း။",
+        "ကျွန်မတို့ စားပွဲအောက်မှာ အသက်မရှူရဲဘူး။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "Marks Stamped in the Sole", l: "အထဲ",
+    g: "သူ့ခြေထောက်တစ်ဖက် စားပွဲနားမှာ ရပ်တယ်။ ဖိနပ်မပါဘူး။ ခြေဖဝါးအလယ်မှာ စာလုံးတချို့ ထုထားတယ်။",
+    p: "The sole of a huge bare porcelain foot beside a table leg, with maker's marks pressed into "
+      + "the glaze — shapes that read as stamped lettering but are not legible.",
+    u: ["သူ့ခြေထောက်တစ်ဖက်က စားပွဲနားမှာ လာရပ်တယ်။ ဖိနပ်မပါဘူး။",
+        "ခြေဖဝါးအလယ်မှာ စာလုံးတချို့ ထုထားတယ်။ ကျွန်မ သေချာမဖတ်နိုင်ဘူး။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "She Folded at the Waist", l: "အထဲ", w: ["အရုပ်"],
+    g: "ဒူးမကွေးဘဲ ခါးကနေ ရှေ့ကို ခေါက်ကျလာတယ်။ ကြွေမျက်နှာကြီးက စားပွဲအောက်ကို ဝင်လာတယ်။",
+    p: "A doll bent forward from the waist alone with both legs perfectly straight, her large "
+      + "porcelain face coming in under a table edge upside down.",
+    u: ["အဲဒီနောက် သူ ဒူးမကွေးဘဲ ခါးကနေ ရှေ့ကို ခေါက်ကျလာတယ်။",
+        "ကြွေမျက်နှာကြီးက စားပွဲအောက်ကို ဝင်လာတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "One Eye Followed Late", l: "အထဲ", w: ["အရုပ်"],
+    g: "မျက်လုံးနှစ်လုံးက တစ်ပြိုင်နက် မရွေ့ဘူး။ တစ်လုံးက အရင်၊ နောက်တစ်လုံးက နောက်ကျမှ လိုက်လာတယ်။",
+    p: "Extreme close-up of a doll's two glass eyes: one has swivelled toward camera, the other is "
+      + "still a fraction behind, not yet aligned.",
+    u: ["မျက်လုံးနှစ်လုံးက တစ်ပြိုင်နက် မရွေ့ဘူး။",
+        "တစ်လုံးက ကျွန်မကို ကြည့်တယ်။ နောက်တစ်လုံးက ခဏနောက်ကျပြီးမှ လိုက်လာတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Found You", l: "အထဲ", w: ["အရုပ်"],
+    g: "ပါးစပ်က ပန်းရောင်အပြုံးပုံ ဆွဲထားတာ။ အသံက လည်ပင်းစောင်းနေတဲ့အကြားကနေ ထွက်လာတယ်။",
+    p: "A doll's small painted pink smile at enormous scale, the brushwork of it visible, the mouth "
+      + "not moving at all.",
+    u: ["ပါးစပ်က ပန်းရောင်အပြုံးပုံ ဆွဲထားတာ။",
+        "အသံကတော့ လည်ပင်းစောင်းနေတဲ့အကြားကနေ ထွက်လာတယ်။ “တွေ့ပြီ…”"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "He Shoved the Table", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
+    g: "ကိုဇင်က စားပွဲကို အားကုန် တွန်းလိုက်တယ်။ အရုပ်ရဲ့မျက်နှာကို တိုက်မိတယ်။",
+    p: "A miniature table driven hard into a porcelain face, the doll rocking backward, motion blur "
+      + "on the table edge.",
+    u: ["ကိုဇင်က စားပွဲကို အားကုန် တွန်းလိုက်တယ်။",
+        "စားပွဲက အရုပ်ရဲ့မျက်နှာကို တိုက်မိတယ်။ ကြွေသံ ခပ်မာမာ ထွက်လာတယ်။"],
+    c: [[1, "stinger"]] },
+
+  { t: "The Gap Under the Stairs", l: "နံရံကြား", w: ["မေ", "ကိုဇင်"],
+    g: "လှေကားအောက်က အပေါက်ငယ်ထဲ ဝင်ပြေးတယ်။ သိုလှောင်ခန်းလို့ ထင်ခဲ့တာ။",
+    p: "Two figures squeezing through a small opening beneath a staircase into darkness.",
+    u: ["သူ နောက်ယိုင်သွားတုန်း ကျွန်မတို့ လှေကားအောက်က အပေါက်ငယ်ထဲ ဝင်ပြေးတယ်။",
+        "သိုလှောင်ခန်းလို့ ထင်ခဲ့တာ။"] },
+
+  { t: "Between the Walls", l: "နံရံကြား",
+    g: "အထဲမှာ အခန်းမရှိဘူး။ နံရံနှစ်ထပ်ကြားက ကျဉ်းကျဉ်းနေရာ။ ဆေးမသုတ်ထားဘူး။ ကော်ခြောက်တွေ။ သံချောင်းကြီးတွေ။",
+    p: "The cavity between two walls: raw unpainted timber, long runs of dried glue like frozen "
+      + "streams, enormous iron nail shafts crossing the space overhead.",
+    u: ["အထဲမှာ အခန်းမရှိဘူး။ အိမ်နံရံနှစ်ထပ်ကြားက ကျဉ်းကျဉ်းနေရာတစ်ခု။",
+        "နံရံနောက်မှာ ဆေးမသုတ်ထားဘူး။ သစ်သားကြမ်း။ ကော်ခြောက်တွေ။ သံချောင်းကြီးတွေ။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Three Rings at Each Joint", l: "နံရံကြား", w: ["အရုပ်"],
+    g: "လက်ချောင်းတစ်ချောင်း အပေါက်ထဲ ဝင်လာတယ်။ အဆစ်မှာ အရစ်သုံးရစ်။ လက်သည်းကို ပန်းရောင်ဆေး သုတ်ထားတယ်။",
+    p: "A huge porcelain finger pushed into a narrow wall cavity: three raised moulded rings at the "
+      + "joint, pink varnish neatly painted on the nail.",
+    u: ["အပြင်ဘက်မှာ အရုပ်က လက်နဲ့ စမ်းနေတယ်။ လက်ချောင်းတစ်ချောင်း အပေါက်ထဲ ဝင်လာတယ်။",
+        "အဆစ်မှာ အရစ်သုံးရစ်။ လက်သည်းကို ပန်းရောင်ဆေး သုတ်ထားတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "A Splinter in My Calf", l: "နံရံကြား", w: ["မေ", "ကိုဇင်"],
+    g: "ခြေသလုံးမှာ သစ်သားစ စိုက်မိထားတယ်။ သွေးထွက်နေတယ်။ ကိုဇင်က အင်္ကျီလက်စနဲ့ ပတ်ပေးတယ်။",
+    p: "A man tying a torn shirt sleeve around a woman's calf in a dark timber cavity, a long wood "
+      + "splinter on the ground beside them.",
+    u: ["ကိုဇင်က ကျွန်မကို အတွင်းဘက် ဆက်တွန်းတယ်။ ကျွန်မတို့ နှစ်ယောက်လုံး ဘေးတိုက်လျှောက်ရတယ်။",
+        "အရုပ်ရဲ့လက်က မမီတော့တဲ့နေရာ ရောက်မှ ကျွန်မ ထိုင်ကျသွားတယ်။",
+        "ခြေသလုံးမှာ သစ်သားစ စိုက်မိထားတယ်။ သွေးထွက်နေတယ်။",
+        "ကိုဇင်က အင်္ကျီလက်စနဲ့ ပတ်ပေးတယ်။ သူ့လက်တွေ တုန်နေတယ်။"] },
+
+  { t: "It's the Doll From the Case", l: "နံရံကြား", w: ["မေ", "ကိုဇင်"],
+    g: "မှန်အုပ်ထဲမှာ မြင်ခဲ့တဲ့ အနီရောင်ဂါဝန်အရုပ်။ အခု ကျွန်မတို့ထက် နှစ်ဆကျော် မြင့်နေတယ်။",
+    p: "Two people crouched in a wall cavity looking at each other, the realisation passing between "
+      + "them, a red shape moving in the light beyond the gap behind them.",
+    u: ["“ကိုဇင်” ကျွန်မ တိုးတိုးခေါ်တယ်။ “အပြင်ကအရုပ်က…” သူ ခေါင်းညိတ်တယ်။ “သိတယ်”",
+        "ကျွန်မတို့ အလုပ်လာစစ်တုန်းက မှန်အုပ်ထဲမှာ မြင်ခဲ့တဲ့ အနီရောင်ဂါဝန်အရုပ်။",
+        "အခု ကျွန်မတို့ထက် နှစ်ဆကျော် မြင့်နေတယ်။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Up Into the Bedroom", l: "အထဲ",
+    g: "နံရံကြားကနေ အပေါ်တက်တဲ့နေရာ။ အခန်းတစ်ခန်းမှာ ကလေးစားပွဲတစ်လုံး။",
+    p: "A small upstairs dolls'-house bedroom seen at human scale: a child's desk, a made bed, a "
+      + "wall clock — every object slightly too smooth.",
+    u: ["နံရံကြားကနေ လျှောက်လာတော့ အပေါ်ဘက်တက်တဲ့ နေရာတစ်ခု ရှိတယ်။",
+        "အဲဒီကနေ အိမ်အပေါ်ထပ်ကို တက်လို့ရတယ်။",
+        "အခန်းတစ်ခန်းမှာ ကလေးစားပွဲတစ်လုံး ရှိတယ်။"] },
+
+  { t: "The Hands Were Painted", l: "အထဲ", w: ["မေ"],
+    g: "နံရံပေါ်က နာရီက ဆယ်နာရီဆယ့်နှစ်မိနစ်မှာ ရပ်နေတယ်။ လက်တံတွေက ဆေးနဲ့ ဆွဲထားတာ။",
+    p: "A fingertip touching the face of a wall clock and finding the hands are brush strokes "
+      + "painted onto the dial, the paint slightly raised.",
+    u: ["နံရံပေါ်က နာရီက ဆယ်နာရီဆယ့်နှစ်မိနစ်မှာ ရပ်နေတယ်။",
+        "နာရီလက်တံတွေကို ကျွန်မ ထိကြည့်တယ်။ လက်တံတွေက ဆေးနဲ့ ဆွဲထားတာ။"],
+    c: [[1, "stinger"]] },
+
+  { t: "A Book With No Pages", l: "အထဲ",
+    g: "စားပွဲပေါ်က စာအုပ်ကို ဖွင့်ကြည့်တယ်။ အဖုံးပဲ ရှိတယ်။ အထဲမှာ စာရွက်မရှိဘူး။",
+    p: "A book opened to reveal it is a solid block of painted wood — a cover shape with no pages at "
+      + "all, the edges carved to suggest leaves.",
+    u: ["စားပွဲပေါ်က စာအုပ်ကို ဖွင့်ကြည့်တယ်။ အဖုံးပဲ ရှိတယ်။ အထဲမှာ စာရွက်မရှိဘူး။"],
+    c: [[0, "stinger"]] },
+
+  { t: "The Pillow Was Wood", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "ကိုဇင်က ခေါင်းအုံးကို ကောက်တယ်။ အောက်ခြေက ပြားပြား။ သစ်သား။",
+    p: "A pillow lifted from a bed showing its underside is flat sanded timber, the fabric only a "
+      + "painted skin over it.",
+    u: ["ကိုဇင်က အိပ်ရာပေါ်က ခေါင်းအုံးကို ကောက်တယ်။ အောက်ခြေက ပြားပြား။ သစ်သား။",
+        "ကျွန်မတို့ နှစ်ယောက် တစ်ယောက်ကိုတစ်ယောက် ကြည့်လိုက်ကြတယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "The Whole House Tilted", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "အိမ်တစ်လုံးလုံး စောင်းသွားတယ်။ ကြမ်းပြင်က ရွေ့တယ်။ စားပွဲတွေ၊ အိပ်ရာတွေက မရွေ့ဘူး။",
+    p: "A room tipped several degrees off level with two people sliding and grabbing at walls — "
+      + "while every piece of furniture in it stays exactly in place, glued down.",
+    u: ["အဲဒီအချိန် အိမ်တစ်လုံးလုံး စောင်းသွားတယ်။",
+        "ကြမ်းပြင်က ကျွန်မတို့ခြေအောက်မှာ ရွေ့တယ်။",
+        "စားပွဲတွေ၊ အိပ်ရာတွေက မရွေ့ဘူး။ ကြမ်းပြင်မှာ ကော်ကပ်ထားသလို။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Then the Eye", l: "အထဲ",
+    g: "ပြတင်းပေါက်အပြင်က အဖြူရောင်အလင်း ပျောက်သွားတယ်။ အသားရောင်အရာကြီးတစ်ခု။ နောက်တော့ မျက်လုံး။",
+    p: "A window losing its white glow as a mass of skin tone fills it, resolving into a single "
+      + "enormous human eye.",
+    u: ["ကိုဇင်က ကျွန်မကို ဖမ်းတယ်။",
+        "ပြတင်းပေါက်အပြင်က အဖြူရောင်အလင်း ပျောက်သွားတယ်။",
+        "အစားထိုးပြီး အသားရောင်အရာကြီးတစ်ခု ပေါ်လာတယ်။ နောက်တော့ မျက်လုံး။",
+        "ပြတင်းပေါက်တစ်ပေါက်လုံးကို ဖုံးသွားတဲ့ မျက်လုံး။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "It Did Not See Us", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "မျက်လုံးက အခန်းထဲကို ကြည့်နေတယ်။ ပုန်းနေတဲ့နေရာကို မမြင်ရဘူးထင်တယ်။ ခဏကြာတော့ ပြန်ခွာသွားတယ်။",
+    p: "Two people pressed flat under a window sill as the light above them returns — the eye "
+      + "withdrawn, the white glow back.",
+    u: ["ကိုဇင်က ကျွန်မကို နံရံအောက် ဆွဲချတယ်။ မျက်လုံးက အခန်းထဲကို ကြည့်နေတယ်။",
+        "ကျွန်မတို့ ပုန်းနေတဲ့နေရာကို မမြင်ရဘူးထင်တယ်။ ခဏကြာတော့ ပြန်ခွာသွားတယ်။"] },
+
+  { t: "A Voice Too Large to Parse", l: "အထဲ",
+    g: "အပြင်က အသံကြီးတစ်ခု။ နံရံတစ်ခုလုံး တုန်သွားသလို။ ထူးဆန်းစွာ ရင်းနှီးနေတယ်။",
+    p: "A dolls'-house wall with dust shaken off it in a fine sheet by a sound too low to be heard, "
+      + "only felt.",
+    u: ["အပြင်က အသံကြီးတစ်ခု ကြားရတယ်။ လူတစ်ယောက် စကားပြောသံ။",
+        "နံရံတစ်ခုလုံး တုန်သွားသလို ခံစားရတယ်။ “ဒီအထဲမှာ…”",
+        "ကျန်တဲ့စကားကို မကြားရဘူး။ နောက်တစ်သံက ပြန်ပြောတယ်။",
+        "အဲဒီအသံက ထူးဆန်းစွာ ရင်းနှီးနေတယ်။",
+        "ဒါပေမယ့် ကြီးလွန်း၊ နီးလွန်းလို့ စကားလုံးတွေကို ကျွန်မ မခွဲနိုင်ဘူး။"],
+    c: [[2, "stinger"]] },
+
+  { t: "Are They Big, Or Are We Small", l: "အထဲ", w: ["ကိုဇင်", "မေ"],
+    g: "ကိုဇင်က ကော်ခြောက်တွေကို လက်နဲ့ ပွတ်နေတယ်။ ပြီးတော့ အရမ်းတိုးတိုး မေးတယ်။",
+    p: "A man crouched with his palm flat on a run of dried glue beneath a window, looking up at his "
+      + "sister with the question already on his face.",
+    u: ["ကိုဇင်က ပြတင်းပေါက်အောက်က ကော်ခြောက်တွေကို လက်နဲ့ ပွတ်နေတယ်။",
+        "ပြီးတော့ အရမ်းတိုးတိုး ပြောတယ်။ “သူတို့က ကြီးနေတာလား…”",
+        "ကျွန်မ သူ့ကို ကြည့်တယ်။ “ဒါမှမဟုတ် ငါတို့က သေးနေတာလား”"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "A Dark Shape in the White", l: "အထဲ", w: ["မေ"],
+    g: "အဖြူရောင်နောက်ခံမှာ အနက်ရောင်ကြီးတစ်ခု။ ဘေးမှာ အရှည်လိုက်အပေါက်တွေ။ အောက်ခြေမှာ ကြိုးတစ်ချောင်း။",
+    p: "Through a tiny window: a huge dark rectangular mass standing in the white void, with long "
+      + "slotted perforations down its side and a cable coiled at its base.",
+    u: ["ကျွန်မ ပြတင်းပေါက်ဘောင်ကြားကနေ အပြင်ကို ထပ်ကြည့်တယ်။",
+        "ဒီတစ်ခါ အဖြူရောင်နောက်ခံကို သေချာကြည့်တယ်။",
+        "တစ်နေရာမှာ အနက်ရောင်ကြီးတစ်ခု ရှိတယ်။ ဘေးမှာ အရှည်လိုက်အပေါက်တွေ။ အောက်ခြေမှာ ကြိုးတစ်ချောင်း။"] },
+
+  { t: "His Bluetooth Speaker", l: "အပြင်",
+    g: "ကိုဇင်ရဲ့ အိတ်ဆောင်စပီကာ။ အခု အဆောက်အအုံတစ်လုံးလောက် ကြီးနေတယ်။",
+    p: "A portable Bluetooth speaker photographed from four inches tall so it stands like an office "
+      + "block against a white tabletop, its grille slots the size of doorways.",
+    u: ["ကိုဇင်ရဲ့ အိတ်ဆောင်စပီကာ။ မနက်က စားပွဲပေါ် တင်ထားခဲ့တာ။",
+        "အခု ကျွန်မတို့ မြင်နေရတဲ့အရွယ်က အဆောက်အအုံတစ်လုံးလောက်။",
+        "ကျွန်မ ပါးစပ်ထဲက လေတွေ ထွက်သွားတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "We Were Inside the Dolls' House", l: "အထဲ", w: ["မေ"],
+    g: "ကျွန်မတို့ ရောက်နေတဲ့နေရာက အရုပ်အိမ်အတွင်း။",
+    p: "Close on a woman's face as everything reorganises behind her eyes, the too-perfect room "
+      + "soft behind her.",
+    u: ["ကျွန်မတို့ ရောက်နေတဲ့နေရာက အရုပ်အိမ်အတွင်း။",
+        "အဲဒီအတွေးကို နားလည်လိုက်တာနဲ့ အရင်က မြင်ခဲ့သမျှ အဓိပ္ပာယ်ပြောင်းသွားတယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "Someone Had Simply Moved It", l: "အထဲ",
+    g: "ဖွင့်လို့မရတဲ့ပြတင်းပေါက်။ ဆေးနဲ့ဆွဲထားတဲ့နာရီ။ ကော်ကပ်ထားတဲ့ပရိဘောဂ။ အိမ်စောင်းသွားတာ — တစ်ယောက်ယောက်က ရွှေ့ကြည့်လိုက်တာ။",
+    p: "A dolls' house seen from outside at real scale, a pair of ordinary human hands turning it a "
+      + "few degrees on the table to look at another side.",
+    u: ["ဖွင့်လို့မရတဲ့ပြတင်းပေါက်။ ဆေးနဲ့ဆွဲထားတဲ့နာရီ။ ကော်ကပ်ထားတဲ့ပရိဘောဂတွေ။",
+        "အပေါ်က အိမ်တစ်လုံးလုံး စောင်းသွားတာ။",
+        "တစ်ယောက်ယောက်က အရုပ်အိမ်ကို မရွှေ့ကြည့်လိုက်တာ။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "She Found Us", l: "အထဲ", w: ["အရုပ်"],
+    g: "အောက်ထပ်မှာ ဒုန်းခနဲ အသံ။ အနီရောင်အရုပ်က ပုန်းနေတဲ့နေရာကို ရှာတွေ့သွားပြီ။",
+    p: "An enormous red hem and one rigid porcelain leg at the bottom of a staircase, beginning to "
+      + "climb, seen from the landing above.",
+    u: ["အောက်ထပ်မှာ ဒုန်းခနဲ အသံထွက်လာတယ်။",
+        "အနီရောင်အရုပ်က ကျွန်မတို့ ပုန်းနေတဲ့နေရာကို ရှာတွေ့သွားပြီ။",
+        "သူ လှေကားတက်လာတယ်။ တစ်ထစ်။ တစ်ထစ်။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "The Upstairs Was a Trap", l: "အထဲ",
+    g: "လွတ်လမ်းလို ထင်ခဲ့တဲ့ အပေါ်ထပ်အခန်းက ပိတ်မိမယ့်နေရာ ဖြစ်သွားပြီ။ ပြတင်းပေါက်က မှန်တစ်ထပ်။",
+    p: "A small upstairs room with one door and one sealed window, photographed to feel like a box.",
+    u: ["ကျွန်မတို့အတွက် အရင်က လွတ်လမ်းလို ထင်ခဲ့တဲ့ အပေါ်ထပ်အခန်းက ပိတ်မိမယ့်နေရာ ဖြစ်သွားပြီ။",
+        "ပြတင်းပေါက်က မှန်တစ်ထပ်။ အပြင်မှာလည်း မှန်အုပ် ရှိဦးမယ်။"] },
+
+  { t: "He Broke Off a Chair Leg", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "ကုလားထိုင်ကို ဖြုတ်လို့မရဘူး။ ခြေထောက်တစ်ချောင်းကို အားနဲ့ ချိုးလိုက်တယ်။",
+    p: "A man snapping one leg off a glued-down miniature chair, the break splintering raw pale wood.",
+    u: ["ကိုဇင်က ကုလားထိုင်ကို ဖြုတ်ယူဖို့ ဆွဲတယ်။ ကော်နဲ့ ကပ်ထားလို့ မရဘူး။",
+        "သူ ခြေထောက်တစ်ချောင်းကို အားနဲ့ ချိုးလိုက်တယ်။",
+        "ကျွန်မတို့အရွယ်နဲ့ဆို သစ်သားတုတ်တစ်ချောင်း။"] },
+
+  { t: "One Small Crack", l: "အထဲ",
+    g: "မှန်ကို ရိုက်တယ်။ မကွဲဘူး။ အက်ကြောင်းသေးသေးတစ်ခုပဲ ပေါ်လာတယ်။",
+    p: "A window pane struck hard by a wooden stick, producing a single short crack radiating from "
+      + "the point of impact and nothing more.",
+    u: ["သူက ပြတင်းပေါက်ကို ရိုက်တယ်။ မှန် မကွဲဘူး။",
+        "အက်ကြောင်းသေးသေးတစ်ခု ပေါ်လာတယ်။"] },
+
+  { t: "This Time I Did Not Hide", l: "အထဲ", w: ["မေ"],
+    g: "မျက်လုံး ပြန်ကပ်လာတယ်။ ဒီတစ်ခါ ကျွန်မ ပြတင်းပေါက်ရှေ့ ထွက်ရပ်ပြီး လက်နှစ်ဖက် မြှောက်ပြတယ်။",
+    p: "A woman standing square in front of a window that is entirely filled by a human eye, both "
+      + "arms raised over her head, waving.",
+    u: ["အပြင်က အလင်းအရိပ် ရွေ့သွားတယ်။ မျက်လုံး ပြန်ကပ်လာတယ်။",
+        "ဒီတစ်ခါ ကျွန်မ မပုန်းတော့ဘူး။",
+        "ပြတင်းပေါက်ရှေ့ကို ထွက်ရပ်ပြီး လက်နှစ်ဖက် မြှောက်ပြလိုက်တယ်။ “ကယ်ပါ!”"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "The Eye Flinched", l: "အထဲ",
+    g: "မျက်လုံးက တစ်ချက် တုန်သွားတယ်။ ပြီးတော့ ခွာသွားတယ်။",
+    p: "The enormous eye at the window caught mid-startle, the pupil contracted, beginning to pull "
+      + "back.",
+    u: ["မျက်လုံးက တစ်ချက် တုန်သွားတယ်။",
+        "ကျွန်မ ဆက်အော်တယ်။ “ဒီမှာ လူရှိတယ်!”",
+        "အပြင်ကမျက်လုံး ခွာသွားတယ်။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Something Touched the Roof", l: "အထဲ",
+    g: "အိမ်ခေါင်မိုးပေါ်မှာ တစ်ခုခု လာထိတယ်။ တစ်လုံးလုံး တုန်သွားတယ်။",
+    p: "A dolls'-house ceiling from inside with dust jarred from every joint at once, the whole room "
+      + "shuddering.",
+    u: ["ပြီးတော့ အိမ်ခေါင်မိုးပေါ်မှာ တစ်ခုခု လာထိတယ်။ တစ်လုံးလုံး တုန်သွားတယ်။"],
+    c: [[0, "stinger"]] },
+
+  { t: "Don't Open the Door", l: "အထဲ", w: ["အရုပ်"],
+    g: "အောက်ထပ်က အရုပ် ရုတ်တရက် ရပ်သွားတယ်။ လည်ပင်းထဲမှာ စက်လည်သံ။",
+    p: "A doll stopped mid-stride on a staircase, head tilted, the seam at her neck visible as "
+      + "something turns inside it.",
+    u: ["အောက်ထပ်က အရုပ်အမ ရုတ်တရက် ရပ်သွားတယ်။ သူ့လည်ပင်းထဲမှာ စက်လည်သံ ကြားရတယ်။",
+        "ကြွိ။ “တံခါး…” ကြွိ။ “မဖွင့်နဲ့…”"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "The Roof Lifted", l: "အထဲ",
+    g: "ခေါင်မိုးက အပေါ်ကို နည်းနည်း မြောက်လာတယ်။ အလင်းစင်းကြီးတစ်ခု ဝင်လာတယ်။",
+    p: "A widening blade of daylight entering a dolls'-house room as its roof panel is lifted away "
+      + "from above, dust swirling up into it.",
+    u: ["ခေါင်မိုးက အပေါ်ကို နည်းနည်း မြောက်လာတယ်။ အလင်းစင်းကြီးတစ်ခု ဝင်လာတယ်။",
+        "အပြင်က လူတစ်ယောက်က ဖွင့်ပေးနေတာ။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "He Lifted Me by the Waist", l: "အထဲ", w: ["ကိုဇင်", "မေ"],
+    g: "ကိုဇင်က ကျွန်မကို ခါးကနေ မတင်ပေးတယ်။ ကျွန်မ အပေါ်ဘောင်ကို ဖမ်းလိုက်တယ်။",
+    p: "A man boosting a woman upward toward an opening gap in a ceiling, her hands catching the "
+      + "edge of a timber wall top.",
+    u: ["ကိုဇင်က ကျွန်မကို ခါးကနေ မတင်ပေးတယ်။ ကျွန်မ အပေါ်ဘောင်ကို ဖမ်းလိုက်တယ်။",
+        "ခြေသလုံးက နာလွန်းလို့ မျက်ရည်ထွက်လာတယ်။"] },
+
+  { t: "Her Head Would Not Fit", l: "အထဲ", w: ["အရုပ်"],
+    g: "အရုပ်က အခန်းဝကို ရောက်လာတယ်။ ခေါင်းက တံခါးပေါင်ကို ထိနေတယ်။",
+    p: "An enormous doll filling a doorway, the crown of her head jammed hard against the lintel, "
+      + "unable to advance.",
+    u: ["အောက်မှာ အနီရောင်အရုပ် အခန်းဝကို ရောက်လာပြီ။",
+        "သူ့ခေါင်းက တံခါးပေါင်ကို ထိနေတယ်။"],
+    c: [[1, "stinger"]] },
+
+  { t: "So She Folded It Sideways", l: "အထဲ", w: ["အရုပ်"],
+    g: "ဝင်မရလို့ ခေါင်းကို ဘေးတစ်ဖက် ခေါက်ချလိုက်တယ်။ မျက်နှာက ကိုးဆယ်ဒီဂရီ စောင်းသွားတယ်။",
+    p: "A doll's head folded fully sideways onto her own shoulder at ninety degrees, the neck joint "
+      + "seam wide open, the painted smile now vertical. She fits through the door.",
+    u: ["ဝင်မရလို့ ခေါင်းကို ဘေးတစ်ဖက် ခေါက်ချလိုက်တယ်။",
+        "မျက်နှာက ကိုးဆယ်ဒီဂရီ စောင်းသွားတယ်။",
+        "အဲဒီအနေအထားနဲ့ ကျွန်မကို ကြည့်တယ်။ ပန်းရောင်အပြုံးကတော့ အရင်အတိုင်း။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "He Hit Her Hand", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
+    g: "အရုပ်က လက်လှမ်းတယ်။ ကိုဇင်က သစ်သားတုတ်နဲ့ ရိုက်တယ်။ နောက်တစ်ဖက်က ပခုံးကို ဖမ်းလိုက်တယ်။",
+    p: "A wooden stick striking a huge porcelain hand aside, while the doll's other hand closes "
+      + "around a man's shoulder from behind.",
+    u: ["သူ လက်လှမ်းတယ်။ ကိုဇင်က သူ့လက်ကို သစ်သားတုတ်နဲ့ ရိုက်တယ်။ လက်က နည်းနည်း ရပ်သွားတယ်။",
+        "နောက်တစ်ဖက်က ကိုဇင့်ပခုံးကို ဖမ်းလိုက်တယ်။ သူ့ကို နောက်ဆွဲတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Our Fingertips Touched", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "ကျွန်မ လက်တစ်ဖက်နဲ့ အစ်ကို့ကို လှမ်းဖမ်းလိုက်တယ်။ လက်ချောင်းထိပ်တွေ ထိတယ်။ မမီဘူး။",
+    p: "Two outstretched hands with the fingertips just brushing and no more, one hanging from a "
+      + "wall top, the other being pulled away.",
+    u: ["ကျွန်မ အပေါ်ဘောင်ကို လက်တစ်ဖက်နဲ့ ဖမ်းထားရင်း ကျန်လက်နဲ့ အစ်ကို့ကို လှမ်းဖမ်းလိုက်တယ်။",
+        "လက်ချောင်းထိပ်တွေ ထိတယ်။ မမီဘူး။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "May, Go", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "ကျွန်မ တစ်ယောက်တည်း တက်ထွက်သွားလို့ရတယ်။ ကိုဇင်က မော့ကြည့်ပြီး “မေ၊ သွား!” လို့ ပြောတယ်။",
+    p: "A man looking up from below, one arm pinned, shouting a single word — his face entirely "
+      + "certain.",
+    u: ["ကျွန်မ အပေါ်ကို တက်ထွက်သွားလို့ရတယ်။ တစ်ယောက်တည်း။",
+        "ကိုဇင်က ကျွန်မကို မော့ကြည့်တယ်။ “မေ၊ သွား!”"] },
+
+  { t: "I Let Go and Dropped Back", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "ကျွန်မ အပေါ်ဘောင်ကို လွှတ်ချပြီး သူ့အပေါ်ကို ပြန်ခုန်ချလိုက်တယ်။",
+    p: "A woman letting go of an edge and falling back down into a room, arms out, the lit gap above "
+      + "her receding.",
+    u: ["ကျွန်မ အပေါ်ဘောင်ကို လွှတ်ချလိုက်တယ်။ သူ့အပေါ်ကို ပြန်ခုန်ချလိုက်တယ်။",
+        "နှစ်ယောက်လုံး ကြမ်းပြင်ပေါ် လဲကျတယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "A Chip Came Off Her Hand", l: "အထဲ", w: ["အရုပ်"],
+    g: "အရုပ်ရဲ့ လက်တစ်ဖက်က နံရံကို တိုက်မိပြီး ကြွေကွဲသံ ထွက်လာတယ်။",
+    p: "A doll's hand struck against a wall with a shard of glazed porcelain breaking off it, "
+      + "revealing dull unglazed material beneath. No blood, no flesh.",
+    u: ["အရုပ်ရဲ့ လက်တစ်ဖက်က နံရံကို တိုက်မိပြီး ကြွေကွဲသံ ထွက်လာတယ်။",
+        "ကျွန်မတို့ကို ပြန်ဖမ်းဖို့ သူ ကိုယ်ကို ကွေးချလာတယ်။"],
+    c: [[0, "stinger"]] },
+
+  { t: "A Hand Came Down From Above", l: "အထဲ",
+    g: "အပေါ်ကနေ လက်ကြီးတစ်ဖက် ဆင်းလာတယ်။ လက်ညှိုးနဲ့ လက်မက အရုပ်ကို ဖမ်းလိုက်တယ်။",
+    p: "An enormous human thumb and forefinger descending into a dolls'-house room and closing "
+      + "around a doll's torso, lifting her.",
+    u: ["အဲဒီအချိန် အပေါ်ကနေ လက်ကြီးတစ်ဖက် ဆင်းလာတယ်။",
+        "လက်ညှိုးနဲ့ လက်မက အရုပ်ရဲ့ကိုယ်ကို ဖမ်းလိုက်တယ်။ အရုပ်အမ ရုန်းတယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "I Tore His Shirt Free", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "အရုပ်လက်တွေက ကိုဇင့်အင်္ကျီကို ဆွဲထားတုန်း။ ကျွန်မက အတင်းဆွဲဖြုတ်တယ်။ အင်္ကျီစ ပြဲသွားတယ်။",
+    p: "A shirt back tearing open as a woman rips it out of a porcelain grip, the fabric splitting "
+      + "along the seam.",
+    u: ["သူ့လက်တွေက ကိုဇင့်အင်္ကျီကို ဆွဲထားတုန်း။",
+        "ကျွန်မက အစ်ကို့အင်္ကျီကို အတင်းဆွဲဖြုတ်တယ်။ အင်္ကျီစ ပြဲသွားတယ်။",
+        "အရုပ်က ခေါင်မိုးပေါက်ကနေ အပေါ်ကို မြောက်သွားတယ်။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "There's No Room For You Out There", l: "အထဲ", w: ["အရုပ်"],
+    g: "မြောက်သွားတဲ့အချိန် လည်ပင်းက လှည့်လာတယ်။ ပထမဆုံးအကြိမ် စက်သံမပါဘဲ လူ့အသံနဲ့ ပြောတယ်။",
+    p: "A doll being carried upward out of frame, her head rotated fully back to look down, the "
+      + "painted smile unchanged.",
+    u: ["သူ မြောက်သွားတဲ့အချိန် လည်ပင်းက လှည့်လာတယ်။ ကျွန်မတို့ကို ကြည့်တယ်။",
+        "ပြီးတော့ ပထမဆုံးအကြိမ် စက်သံမပါဘဲ လူ့အသံနဲ့ ပြောတယ်။",
+        "“အပြင်မှာ မင်းတို့အတွက် နေရာမရှိဘူး”"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "A Palm Laid Open", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "အပေါ်က လက်ကြီး ပြန်ဆင်းလာတယ်။ ဒီတစ်ခါ လက်ဖဝါးကို လှန်ထားတယ်။ လမ်းတစ်ခု ချထားသလို။",
+    p: "An enormous open human palm lowered into a dolls'-house room, fingers relaxed, offered "
+      + "rather than grasping.",
+    u: ["အဲဒီစကားကို ကျွန်မ ကြောက်ဖို့တောင် အချိန်မရဘူး။",
+        "အပေါ်က လက်ကြီး ပြန်ဆင်းလာတယ်။",
+        "ဒီတစ်ခါ လက်ဖဝါးကို လှန်ထားတယ်။ ကျွန်မတို့ရှေ့မှာ လမ်းတစ်ခု ချထားသလို။"],
+    c: [[2, "stinger"]] },
+
+  { t: "Riding a Palm Upward", l: "အပြင်", w: ["မေ", "ကိုဇင်"],
+    g: "လက်ဖဝါးကြောင်းတစ်ကြောင်းချင်းက မြောင်းသေးသေးတွေလို။ အပေါ်ကို မြောက်လာတယ်။",
+    p: "Two tiny people seated on an open human palm, the lines of it running past them like "
+      + "channels, the room swinging by around them as the hand rises.",
+    u: ["ကိုဇင်က အရင်တက်တယ်။ ကျွန်မကို ဆွဲတင်တယ်။",
+        "ကျွန်မတို့ လက်ဖဝါးပေါ်မှာ ထိုင်လိုက်ကြတယ်။",
+        "လက်ဖဝါးကြောင်းတစ်ကြောင်းချင်းက မြောင်းသေးသေးတွေလို။",
+        "အပေါ်ကို မြောက်လာတယ်။ အိမ်ခေါင်မိုးအထက်ကို ရောက်တယ်။"] },
+
+  { t: "Ko Zin", l: "အပြင်", w: ["အပြင်ကကိုဇင်"],
+    g: "ကယ်နေတဲ့လူရဲ့မျက်နှာက — ကိုဇင်။ ပုံမှန်လူအရွယ်။ မျက်နှာဖြူနေတယ်။",
+    p: "Looking up from a palm at the face of an ordinary man staring down in disbelief — the same "
+      + "face as the man sitting beside the viewer, at normal human scale.",
+    u: ["ပြီးတော့ ကျွန်မတို့ကို ကယ်နေတဲ့လူရဲ့မျက်နှာကို မြင်လိုက်ရတယ်။ ကိုဇင်။",
+        "ကျွန်မဘေးမှာ ထိုင်နေတဲ့ ကိုဇင်ကလည်း အဲဒီမျက်နှာကို မော့ကြည့်နေတယ်။ သူ့ပါးစပ် ပွင့်နေတယ်။"],
+    c: [[0, "bigstinger"]] },
+
+  { t: "And a Woman With My Face", l: "အပြင်", w: ["အပြင်ကမေ"],
+    g: "သူ့နောက်မှာ အမျိုးသမီးတစ်ယောက်။ ကျွန်မမျက်နှာနဲ့။ ကျွန်မ ဝတ်လာတဲ့အင်္ကျီနဲ့။",
+    p: "A woman leaning into frame behind the man — the narrator's own face at full size, in the "
+      + "same shirt, warm and frightened for them.",
+    u: ["အပြင်က ကိုဇင်ကလည်း မျက်နှာဖြူနေတယ်။ အရွယ်ကြီးကြီး။ ပုံမှန်လူအရွယ်။",
+        "သူ့လက်ဖဝါးပေါ်မှာ ကျွန်မတို့နှစ်ယောက်။",
+        "သူ့နောက်မှာ အမျိုးသမီးတစ်ယောက် ရှိတယ်။ ကျွန်မမျက်နှာနဲ့။ ကျွန်မ ဝတ်လာခဲ့တဲ့ အင်္ကျီနဲ့။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Even the Hair Behind the Ear", l: "အပြင်", w: ["အပြင်ကမေ"],
+    g: "မျက်နှာဘယ်ဘက်က ဆံပင်တွေကို နားနောက်မှာ သိမ်းလိုက်တဲ့အကျင့်အထိ ကျွန်မပဲ။",
+    p: "A woman tucking the left side of her hair behind her ear — an ordinary unconscious gesture, "
+      + "shot so it reads as a signature.",
+    u: ["မျက်နှာဘယ်ဘက်က ဆံပင်တွေကို နားနောက်မှာ သိမ်းလိုက်တဲ့အကျင့်အထိ ကျွန်မပဲ။"],
+    c: [[0, "stinger"]] },
+
+  { t: "They Are Us", l: "အပြင်", w: ["အပြင်ကမေ"],
+    g: "အမျိုးသမီးက ငုံ့လာတယ်။ မျက်ရည်တွေ ဝဲနေတယ်။ ကျွန်မပြောနေကျအသံအတိုင်း ပြောတယ်။",
+    p: "A woman's face lowered close to the camera, eyes wet, speaking gently — kind, not "
+      + "frightening.",
+    u: ["အမျိုးသမီးက ကျွန်မတို့နားကို ငုံ့လာတယ်။ သူ့မျက်လုံးထဲမှာ မျက်ရည်တွေ ဝဲနေတယ်။",
+        "“ကိုဇင်…” သူ ပြောတယ်။ ကျွန်မပြောနေကျအသံအတိုင်း။",
+        "“သူတို့က ငါတို့ပဲ”"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Laid on a Piece of Cloth", l: "အပြင်", w: ["မေ", "ကိုဇင်"],
+    g: "စားပွဲပေါ်က အဝတ်ပျော့တစ်စပေါ် ချပေးတယ်။",
+    p: "Two tiny people set down on a folded soft cloth on a tabletop, the weave of it under them "
+      + "like heavy rope, an enormous careful hand withdrawing.",
+    u: ["ကျွန်မတို့ကို စားပွဲပေါ်က အဝတ်ပျော့တစ်စပေါ် ချပေးတယ်။"] },
+
+  { t: "Her Leg Was Not Cut", l: "အပြင်", w: ["မေ", "အပြင်ကမေ"],
+    g: "ကျွန်မခြေသလုံးက သွေးကို အပြင်က ကျွန်မက မြင်တယ်။ သူ့ခြေထောက်ကို ပြန်ကြည့်တယ်။ ဒဏ်ရာမရှိဘူး။",
+    p: "A full-size woman looking down at her own calf and finding it unmarked, while on the cloth "
+      + "beside her a tiny version of herself has a bound and bleeding leg.",
+    u: ["ကျွန်မ ခြေသလုံးက သွေးကို အပြင်က ကျွန်မက မြင်တယ်။",
+        "သူ့ခြေထောက်ကို ပြန်ကြည့်တယ်။ ဒဏ်ရာမရှိဘူး။",
+        "အပြင်က ကိုဇင့်အင်္ကျီက မပြဲဘူး။ ကျွန်မဘေးက ကိုဇင့်အင်္ကျီက ပြဲနေတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "What Did You Eat This Morning", l: "အပြင်", w: ["အပြင်ကမေ", "မေ"],
+    g: "အပြင်ကအမျိုးသမီးက မေးတယ်။ ကျွန်မ ပြန်ဖြေတယ်။ သူ့မျက်နှာမှာ အရောင်ပျောက်သွားတယ်။",
+    p: "A full-size woman's face draining of colour as she listens to an answer she already knew.",
+    u: ["နှစ်ယောက်စလုံး ကျွန်မနာမည်ကို ခေါ်တတ်တယ်။ နှစ်ယောက်စလုံး ကျွန်မတို့အမေ့နာမည် သိတယ်။",
+        "အပြင်ကအမျိုးသမီးက ကျွန်မကို မေးတယ်။ “နင်… ဒီမနက် ဘာစားခဲ့လဲ”",
+        "ကျွန်မ ပြန်ဖြေတယ်။ သူ့မျက်နှာမှာ အရောင်ပျောက်သွားတယ်။ တူတယ်။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "She Knew About the Medicine Money", l: "အပြင်",
+    g: "ကျွန်မ ဘယ်သူ့ကိုမှ မပြောဖူးတဲ့ အမေ့ဆေးဖိုးအကြောင်းအထိ သူ သိတယ်။",
+    p: "Two women's faces at wildly different scales in one frame, looking at each other with the "
+      + "same expression.",
+    u: ["မနက်က ကိုဇင်နဲ့ ဘာစကားများခဲ့လဲ။ အိမ်ကထွက်လာတုန်း ဘယ်သူ ဖုန်းဆက်ခဲ့လဲ။",
+        "ကျွန်မဘယ်သူ့ကိုမှ မပြောဖူးတဲ့ အမေ့ဆေးဖိုးအကြောင်း။ အကုန် သိတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "We Diverged at the Knock", l: "အရုပ်အိမ်",
+    g: "အရုပ်အိမ်တံခါးကို ခေါက်လိုက်တဲ့အချိန်အထိ မှတ်ဉာဏ်တွေ အတူတူ။ အဲဒီနောက် ကွဲသွားတာ။",
+    p: "The tiny brass knocker on the blue miniature door again, still, in flat daylight — the exact "
+      + "point everything forked.",
+    u: ["အဲဒီအရုပ်အိမ်တံခါးကို ခေါက်လိုက်တဲ့အချိန်အထိ ကျွန်မတို့နှစ်ယောက်ရဲ့ မှတ်ဉာဏ်တွေ အတူတူ။",
+        "အဲဒီနောက်ကစပြီး ကွဲသွားတာ။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "They Never Stopped Working", l: "ဧည့်ခန်း", w: ["အပြင်ကမေ", "အပြင်ကကိုဇင်"],
+    g: "အပြင်က ကျွန်မတို့နှစ်ယောက်က အရုပ်အိမ်ကို စစ်ပြီး နောက်အခန်းကို သွားခဲ့ကြတယ်။ ရေသောက်၊ ဖုန်းပြော၊ စာရင်းရေး။",
+    p: "Two people at ordinary scale moving calmly through an old house with a clipboard, one on the "
+      + "phone, one drinking water — an entirely unremarkable working afternoon.",
+    u: ["အပြင်က ကျွန်မတို့နှစ်ယောက်က အရုပ်အိမ်ကို စစ်ကြည့်ပြီး နောက်အခန်းကပစ္စည်းတွေ သွားကြည့်ခဲ့ကြတယ်။",
+        "ရေသောက်တယ်။ အလုပ်အကြောင်း ဖုန်းပြောတယ်။ ပစ္စည်းစာရင်း ရေးတယ်။"] },
+
+  { t: "While We Were Running", l: "အထဲ",
+    g: "အဲဒီအချိန်တစ်လျှောက်လုံး ကျွန်မတို့က အိမ်သေးသေးထဲမှာ ပြေးနေရတယ်။",
+    p: "A split-scale composition: the dolls' house sitting quietly on its table in a sunlit room, "
+      + "shot so the viewer knows what is happening inside it.",
+    u: ["အဲဒီအချိန်တစ်လျှောက်လုံး ကျွန်မတို့က အိမ်သေးသေးထဲမှာ ပြေးနေရတယ်။",
+        "အရုပ်တစ်ရုပ်ရဲ့လက်ထဲ မပါသွားအောင်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "The Table Never Vanished", l: "ဧည့်ခန်း",
+    g: "မနက်က ကျွန်မတို့ရှေ့က စားပွဲ ပျောက်သွားတာ မဟုတ်ဘူး။ ကျွန်မတို့က အဲဒီနေရာမှာ ဆက်ရှိနေခဲ့တယ်။",
+    p: "The table with the dolls' house on it, two people standing at it exactly as before, nothing "
+      + "out of the ordinary at all.",
+    u: ["မနက်က ကျွန်မတို့ရှေ့က စားပွဲ ပျောက်သွားတာ မဟုတ်ဘူး။",
+        "စားပွဲရှေ့မှာ ရပ်နေတဲ့ ကျွန်မတို့က အဲဒီနေရာမှာ ဆက်ရှိနေခဲ့တယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Another Two of Us Began", l: "အရုပ်အိမ်",
+    g: "အရုပ်အိမ်ထဲမှာ နောက်ထပ် ကျွန်မတို့နှစ်ယောက် စဖြစ်လာတာ။ မျက်နှာတွေ၊ အသံတွေ၊ အတိတ်တွေကို ယူပြီး။",
+    p: "The front room of the dolls' house through its window, empty of dolls — and two very small "
+      + "figures standing in it that were not there before.",
+    u: ["အရုပ်အိမ်ထဲမှာ နောက်ထပ် ကျွန်မတို့နှစ်ယောက် စဖြစ်လာတာ။",
+        "ကျွန်မတို့ရဲ့ မျက်နှာတွေ၊ အသံတွေ၊ အတိတ်တွေကို ယူပြီး။",
+        "အိမ်ထဲမှာ လူရှိနေဖို့။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Writing Under the Lintel", l: "အရုပ်အိမ်", w: ["အပြင်ကကိုဇင်"],
+    g: "အရုပ်အိမ်တံခါးပေါင်အောက်မှာ ခပ်ဟောင်းဟောင်း လက်ရေးနဲ့ စာသေးသေးတစ်ကြောင်း။",
+    p: "A magnifying glass held over the underside of a miniature door lintel, a line of very old "
+      + "faded handwriting visible on the wood. Deliberately not legible.",
+    u: ["အပြင်က ကိုဇင်က အရုပ်အိမ်တံခါးပေါင်အောက်မှာ စာသေးသေးတစ်ကြောင်း တွေ့တယ်။",
+        "ခပ်ဟောင်းဟောင်း လက်ရေးနဲ့။",
+        "“သမီး တစ်ယောက်တည်း မကစားရအောင်။”"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "The Old Woman as a Girl", l: "ဧည့်ခန်း",
+    g: "စာအုပ်ထဲက ဓာတ်ပုံဟောင်း။ ကလေးအရုပ်ကို ပိုက်ထားတဲ့ ကောင်မလေး။ အရုပ်လည်ပင်းက အဲဒီပုံထဲမှာလည်း စောင်းနေတယ်။",
+    p: "An old black-and-white photograph of a small girl holding a doll in a pale dress — and the "
+      + "doll's neck is already tilted at exactly the same angle.",
+    u: ["အိမ်ရှင်အဘွား ငယ်ငယ်ကပုံကိုလည်း စာအုပ်တစ်အုပ်ထဲမှာ တွေ့တယ်။",
+        "အနီရောင်ဂါဝန်နဲ့ ကလေးအရုပ်ကို ပိုက်ထားတဲ့ ကောင်မလေး။",
+        "အရုပ်ရဲ့ လည်ပင်းက အဲဒီဓာတ်ပုံထဲမှာလည်း နည်းနည်း စောင်းနေတယ်။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "A Box With a Lid", l: "ဧည့်ခန်း",
+    g: "အပြင်က ကိုဇင်က အရုပ်ကို သေတ္တာတစ်လုံးထဲ ထည့်ပိတ်ထားတယ်။ အတွင်းကနေ ကြွေသားနဲ့ သစ်သားထိသံ ခဏခဏ ကြားရတယ်။",
+    p: "A wooden crate closed and latched on a floor in daylight, ordinary and unremarkable, "
+      + "photographed dead-on and held.",
+    u: ["အပြင်က ကိုဇင်က အရုပ်ကို သေတ္တာတစ်လုံးထဲ ထည့်ပိတ်ထားတယ်။",
+        "အတွင်းကနေ ကြွေသားနဲ့ သစ်သားထိသံ ခဏခဏ ကြားရတယ်။",
+        "တစ်ခါတလေ “အိမ်ထဲမှာ လူရှိရမယ်” ဆိုတဲ့စကား ကြားရတယ်။",
+        "ကျွန်မတို့ကတော့ အဲဒီဘက်ကို မကြည့်တော့ဘူး။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "She Took Us Home", l: "အပြင်", w: ["အပြင်ကမေ", "မေ", "ကိုဇင်"],
+    g: "အပြင်က ကျွန်မက ကျွန်မတို့ကို ကားထဲမှာ လုံလုံခြုံခြုံ ထားပေးတယ်။ အဝတ်ပျော့ပျော့တွေ ခင်းပေးတယ်။",
+    p: "Two tiny people nested in folded cloth inside a shallow box on a car seat, a seatbelt drawn "
+      + "across the box, daylight through the window.",
+    u: ["အပြင်က ကျွန်မက ကျွန်မတို့ကို အိမ်ခေါ်သွားတယ်။",
+        "ကျွန်မတို့ကို ကားထဲမှာ လုံလုံခြုံခြုံ ထားပေးတယ်။ အဝတ်ပျော့ပျော့တွေ ခင်းပေးတယ်။",
+        "ရေကို အဖုံးသေးသေးတစ်ခုထဲ ထည့်ပေးတယ်။"] },
+
+  { t: "She Cries When I Hurt", l: "အပြင်", w: ["အပြင်ကမေ"],
+    g: "သူက ကျွန်မနာတဲ့အခါ မျက်ရည်ကျတယ်။ ကျွန်မလည်း သူ့ကို မုန်းလို့မရဘူး။",
+    p: "An enormous careful hand adjusting a dressing on a tiny leg with tweezers, the woman's face "
+      + "above it wet with tears.",
+    u: ["သူက ကျွန်မနာတဲ့အခါ မျက်ရည်ကျတယ်။ ကျွန်မလည်း သူ့ကို မုန်းလို့မရဘူး။",
+        "သူက ကျွန်မပဲ။ တစ်ချိန်တည်းမှာ ကျွန်မ မဟုတ်တော့ဘူး။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Mother Called Her Name", l: "အပြင်", w: ["မေ"],
+    g: "အိမ်ပြန်ရောက်တော့ အမေ့အသံ ကြားရတယ်။ “မေ၊ ပြန်လာပြီလား” ကျွန်မ ချက်ချင်း ထမိတယ်။",
+    p: "A tiny woman standing bolt upright in a box on a table, turned toward a doorway, one hand "
+      + "raised — utterly unheard.",
+    u: ["အိမ်ပြန်ရောက်တော့ အမေ့အသံ ကြားရတယ်။ “မေ၊ ပြန်လာပြီလား”",
+        "ကျွန်မ ချက်ချင်း ထမိတယ်။ “အမေ…” လို့ ပြန်ထူးမိတယ်။",
+        "ကျွန်မအသံကို အမေ မကြားဘူး။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "The Other One Answered", l: "အပြင်", w: ["အပြင်ကမေ"],
+    g: "အပြင်က ကျွန်မက “ပြန်လာပြီ အမေ” လို့ ဖြေတယ်။ ပြီးတော့ အမေ့ဆီ လျှောက်သွားတယ်။",
+    p: "From table height: a full-size woman walking away toward an older woman in a doorway, the "
+      + "two of them embracing, seen past the blurred edge of a box.",
+    u: ["အပြင်က ကျွန်မက “ပြန်လာပြီ အမေ” လို့ ဖြေတယ်။",
+        "ပြီးတော့ အမေ့ဆီ လျှောက်သွားတယ်။",
+        "အမေက သူ့လက်ထဲကအိတ်ကို ယူပေးတယ်။ နောက်ကျလို့ ပင်ပန်းနေပြီလားလို့ မေးတယ်။"],
+    c: [[1, "bigstinger"]] },
+
+  { t: "Nobody Had Lost Me", l: "အပြင်",
+    g: "ကျွန်မ ဘာမှမပြောနိုင်ဘူး။ ဘယ်သူမှ ကျွန်မကို မပျောက်ဘူး။ ဘယ်သူမှ လိုက်မရှာခဲ့ဘူး။",
+    p: "An ordinary warm family evening seen from a tabletop — small, distant, complete without the "
+      + "viewer.",
+    u: ["ကျွန်မ ဘာမှမပြောနိုင်ဘူး။",
+        "ကျွန်မတို့ ရုန်းကန်လွတ်မြောက်ခဲ့တဲ့ အပြင်လောကက ဒီအတိုင်းပဲ ဆက်လည်ပတ်နေတယ်။",
+        "ဘယ်သူမှ ကျွန်မကို မပျောက်ဘူး။ ဘယ်သူမှ ကျွန်မကို လိုက်မရှာခဲ့ဘူး။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Someone Is Already Holding Her", l: "အပြင်", w: ["မေ"],
+    g: "ကျွန်မ ပြန်သွားချင်ခဲ့တဲ့ အိမ်မှာ ကျွန်မ ရှိနေပြီးသား။ ဖက်ချင်ခဲ့တဲ့ အမေ့ကိုလည်း ကျွန်မတစ်ယောက်က ဖက်ထားပြီးသား။",
+    p: "A tiny figure at the edge of a table with one arm outstretched toward two women embracing "
+      + "across the room, far out of reach and out of focus.",
+    u: ["ကျွန်မ ပြန်သွားချင်ခဲ့တဲ့ အိမ်မှာ ကျွန်မ ရှိနေပြီးသား။",
+        "ကျွန်မဖက်ချင်ခဲ့တဲ့ အမေ့ကိုလည်း ကျွန်မတစ်ယောက်က ဖက်ထားပြီးသား။",
+        "စားပွဲပေါ်ကနေ ကျွန်မ အမေ့ကို လက်လှမ်းလိုက်မိတယ်။ လက်က မမီဘူး။"],
+    c: [[2, "bigstinger"]] },
+
+  { t: "Because We Are Already There", l: "အပြင်", w: ["မေ", "ကိုဇင်"],
+    g: "နောက်ဆုံးပုံ — ကိုဇင်က ကျွန်မလက်ကို ဖမ်းထားလိုက်တယ်။ စားပွဲစွန်းမှာ နှစ်ယောက်။",
+    p: "Final composition: two tiny people on a tabletop, one holding the other's outstretched hand "
+      + "and drawing it gently back, the warm lit room beyond them soft and enormous. Hold on the "
+      + "two of them.",
+    u: ["ဘေးမှာထိုင်နေတဲ့ ကိုဇင်က ကျွန်မလက်ကို ဖမ်းထားလိုက်တယ်။",
+        "အဲဒီအချိန်မှ အနီရောင်အရုပ် နောက်ဆုံးပြောခဲ့တဲ့စကားကို ကျွန်မ နားလည်သွားတယ်။",
+        "အပြင်မှာ ကျွန်မတို့အတွက် နေရာမရှိဘူး။",
+        "ကျွန်မတို့ နေရာတွေမှာ ကျွန်မတို့ ရှိနေပြီးသားမို့လို့။"],
+    c: [[3, "finalstinger"]] },
+];
