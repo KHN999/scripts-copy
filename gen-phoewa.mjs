@@ -1,7 +1,7 @@
 /**
- * Builds phoewa.html for ရေမရှိတဲ့ကန်ထဲမှာ ရေနစ်တဲ့လူ (The Man Who Drowned in an Empty Tank).
+ * Builds phoewa.html for ဖိုးဝရှေ့မှာ မလိမ်နဲ့.
  *
- *   node gen-drown.mjs
+ *   node gen-phoewa.mjs
  */
 import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
@@ -46,7 +46,7 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
-    prompt: r.image_prompt,
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.p}\n\n${s.d}\n\n${s.style}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
   };
@@ -72,27 +72,13 @@ const NOTE =
   + `မျက်နှာကို ပိုဒေါသထွက်အောင်၊ ပိုကြောက်စရာဖြစ်အောင် လုပ်လိုက်ရင် ဇာတ်လမ်း ပျက်သွားပြီ။`
   + `<br><br>⚠️ <b>နောက်ဖေးအလုပ်ခန်းထဲကို ဘယ်တော့မှ မပြရဘူး။</b> တံခါးက နှစ်ခါ လက်မလေးငါးလက်ပဲ ဟတယ် — `
   + `အဲဒီလောက်ပဲ။ <b>အလောင်း၊ သွေး၊ အရိပ်အမြွက် ဘာမှ မပါရဘူး။</b>`
-  + `<br><br>⚠️ <b>ကလေးက တိတ်ဆိတ်တယ်။</b> မအော်ဘူး၊ မရုန်းဘူး။ ငိုရင်တောင် အသံမထွက်အောင် ငိုတယ် — `
+  + `<br><br>⚠️ <b>ကလေးက အများအားဖြင့် တိတ်ဆိတ်တယ်။</b> အော်ခေါ်တဲ့ scene တွေမှာတော့ ဇာတ်ညွှန်းအတိုင်း ပြပါ။ ငိုရင် အသံမထွက်အောင် ထိန်းတတ်တယ် — `
   + `အဲဒီအကျင့်ကို ဘယ်လိုရလာလဲဆိုတာက ဇာတ်လမ်းရဲ့ အဖြေ။`
   + `<br><br>ရုပ်ပုံ ${shots.length} ပုံ။ Reference ${NREF} ခုကို အရင်ဆောက်ပါ။`;
 
 await writeFile("/Users/puraidointern/ghost-prompts-site/phoewa.html", buildPage({
   title: "ဖိုးဝရှေ့မှာ မလိမ်နဲ့ — image prompts",
-  subtitle: `DON'T LIE IN FRONT OF PHO WA · ${shots.length} shots · 16:9 · Copy a prompt, paste `
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `paste it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`,
+  subtitle: `DON'T LIE IN FRONT OF PHO WA · ${shots.length} shots · 16:9 · Copy a prompt, paste it into Google Flow, and attach the listed references. ဗမာလို ရှင်းလင်းချက်က copy ထဲ မပါပါ။`,
   storageKey: "phoewa.done.v1",
   slug: "phoewa",
   note: NOTE, nav: NAV("phoewa"),

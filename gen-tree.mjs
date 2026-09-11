@@ -1,7 +1,7 @@
 /**
- * Builds tree.html for ရေမရှိတဲ့ကန်ထဲမှာ ရေနစ်တဲ့လူ (The Man Who Drowned in an Empty Tank).
+ * Builds tree.html for သစ်ပင်တွေထက် အမြင့်မှာ.
  *
- *   node gen-drown.mjs
+ *   node gen-tree.mjs
  */
 import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
@@ -43,7 +43,7 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
-    prompt: r.image_prompt,
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.p}\n\n${s.d}\n\n${s.style}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
   };
@@ -71,15 +71,7 @@ const NOTE =
 
 await writeFile("/Users/puraidointern/ghost-prompts-site/tree.html", buildPage({
   title: "သစ်ပင်တွေထက် အမြင့်မှာ — image prompts",
-  subtitle: `HIGHER THAN THE TREES · ${shots.length} shots · 16:9 · Copy a prompt, paste `
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`,
+  subtitle: `ABOVE THE TREETOPS · ${shots.length} shots · 16:9 · Copy a prompt, paste it into Google Flow, and attach the listed references. ဗမာလို ရှင်းလင်းချက်က copy ထဲ မပါပါ။`,
   storageKey: "tree.done.v1",
   slug: "tree",
   note: NOTE, nav: NAV("tree"),

@@ -26,6 +26,7 @@
  * not to make a noise, and heartbeat carries that better than a stinger does.
  */
 
+import { reviewTree } from './review-tree.mjs';
 export const CAST = [
   { name: "ကျွန်တော်",
     pose: "The subject stands with his back three-quarters to the camera and his head turned back toward the lens, so that BOTH the face and the full width of the back are clearly visible in one frame, full figure, neutral expression", en: "The narrator — the driver",
@@ -707,3 +708,4 @@ export const SCENES = [
     u: ["လမ်းပေါ်က ဘီးအပိုကို လက်သည်းတစ်ချောင်းက တစ်ချက် တို့လိုက်တယ်။"],
     c: [[0, "finalstinger"]] },
 ];
+reviewTree(SCENES, CAST, LOCS);

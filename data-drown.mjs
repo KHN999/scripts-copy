@@ -11,6 +11,7 @@
  * says so and the shot prompts repeat it.
  */
 
+import { reviewDrown } from './review-drown.mjs';
 export const CAST = [
   { name: "ကျွန်တော်", en: "The narrator — pipe and pump repairman",
     prompt: "A Burmese man of about forty, solid build, short practical hair, a worn work shirt with "
@@ -988,3 +989,4 @@ export const SCENES = [
         "“အောက်မှာ လူတွေ ရှိသေးတယ်။”"],
     c: [[2, "finalstinger"]] },
 ];
+reviewDrown(SCENES, CAST, LOCS);

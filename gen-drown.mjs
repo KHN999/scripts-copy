@@ -42,7 +42,7 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
-    prompt: r.image_prompt,
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.p}\n\n${s.d}\n\n${s.style}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
   };

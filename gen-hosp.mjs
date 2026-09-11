@@ -1,7 +1,7 @@
 /**
- * Builds hosp.html for ရေမရှိတဲ့ကန်ထဲမှာ ရေနစ်တဲ့လူ (The Man Who Drowned in an Empty Tank).
+ * Builds hosp.html for ကုတင်အောက်က လူနာစောင့်.
  *
- *   node gen-drown.mjs
+ *   node gen-hosp.mjs
  */
 import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
@@ -50,7 +50,7 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
-    prompt: r.image_prompt,
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.p}\n\n${s.d}\n\n${s.style}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
   };
@@ -81,25 +81,9 @@ const NOTE =
   + `<b>ကျန်တဲ့ပုံအားလုံးမှာတော့ သာမန် ဆေးရုံကြမ်းပြင်ပဲ။</b>`
   + `<br><br>ရုပ်ပုံ ${shots.length} ပုံ။ Reference ${NREF} ခုကို အရင်ဆောက်ပါ။`;
 
-  + `<br><br>ရုပ်ပုံ ${shots.length} ပုံ။ Reference ${NREF} ခုကို အရင်ဆောက်ပါ။`;
-
 await writeFile("/Users/puraidointern/ghost-prompts-site/hosp.html", buildPage({
   title: "ကုတင်အောက်က လူနာစောင့် — image prompts",
-  subtitle: `THE CARETAKER UNDER THE BED · ${shots.length} shots · 16:9 · Copy a prompt, paste `
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `paste it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`,
+  subtitle: `THE CARETAKER UNDER THE BED · ${shots.length} shots · 16:9 · Copy a prompt, paste it into Google Flow, and attach the listed references. ဗမာလို ရှင်းလင်းချက်က copy ထဲ မပါပါ။`,
   storageKey: "hosp.done.v1",
   slug: "hosp",
   note: NOTE, nav: NAV("hosp"),

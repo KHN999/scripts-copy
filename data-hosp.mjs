@@ -27,6 +27,7 @@
  *    possible wall. Everywhere else it is an ordinary dusty hospital floor.
  */
 
+import { reviewHosp } from './review-hosp.mjs';
 export const CAST = [
   { name: "မင်းသူ", en: "Min Thu — the narrator, twenty-seven",
     prompt: "A Burmese man of twenty-seven, slim, a plain shirt and longyi, a dark wristwatch with a "
@@ -1110,3 +1111,4 @@ export const SCENES = [
         "“အမေ့ကို မှီလိုက်။”"],
     c: [[1, "finalstinger"]] },
 ];
+reviewHosp(SCENES, CAST, LOCS);

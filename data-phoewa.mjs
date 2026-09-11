@@ -28,6 +28,8 @@
  *    because he has learned to, and that detail is the whole indictment.
  */
 
+import { reviewPhoewa } from './review-phoewa.mjs';
+
 export const CAST = [
   { name: "မင်းသန့်", en: "Min Thant — the father, the narrator",
     prompt: "A Burmese man of about thirty-five, ordinary build, short hair, a plain shirt worn a day "
@@ -1469,3 +1471,5 @@ export const SCENES = [
         "ဖိုးဝရုပ်ကတော့ အရင်အတိုင်း ပြုံးနေတုန်းပဲ။"],
     c: [[1, "finalstinger"]] },
 ];
+
+reviewPhoewa(SCENES, CAST, LOCS);

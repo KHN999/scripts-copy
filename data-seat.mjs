@@ -19,6 +19,7 @@
  * That contrast is the first clue and it must be visible in every wide shot.
  */
 
+import { reviewSeat } from './review-seat.mjs';
 export const CAST = [
   { name: "ကျွန်တော်", en: "The narrator — projection and sound engineer",
     prompt: "A Burmese man of about thirty-five, practical build, short hair, a plain work shirt with "
@@ -634,3 +635,4 @@ export const SCENES = [
         "“ထိုင်နေရတာ အရမ်းသက်သာလာလို့။”"],
     c: [[2, "finalstinger"]] },
 ];
+reviewSeat(SCENES, CAST, LOCS);
