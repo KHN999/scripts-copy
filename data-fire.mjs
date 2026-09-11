@@ -29,29 +29,51 @@
 
 export const CAST = [
   { name: "ထက်နိုင်", en: "Htet Naing — the narrator, thirty-two",
-    prompt: "A Burmese man of thirty-two, working build, short hair, a plain work shirt and cargo "
-      + "trousers, a head torch pushed up on his forehead. ⚠️ A small dark mole just above the RIGHT "
-      + "eyebrow. Steady and practical." },
+    prompt: "Htet Naing, a Burmese man aged thirty-two, average height with a sturdy working build, "
+      + "warm medium-brown skin, rectangular face, dark-brown eyes, straight brows, broad nose and "
+      + "short practical black hair. ⚠️ One small round dark mole immediately above the RIGHT eyebrow. "
+      + "Faded slate-blue long-sleeved work shirt rolled to the forearms, charcoal cargo trousers, "
+      + "scuffed black work boots and a black head torch pushed above his forehead. Steady and practical." },
   { name: "အောင်ဖြိုး", en: "Aung Phyo — his young workmate, twenty-four",
-    prompt: "A Burmese man of twenty-four, wiry, quick, a t-shirt under an open work shirt, a canvas "
-      + "tool bag. Talkative and cheerful. ⚠️ Distinctive features that must recur on U Hla Myint: a "
-      + "strong straight brow, a dimple in the LEFT cheek only when he smiles, and a habit of biting "
-      + "his lower lip while talking." },
+    prompt: "Aung Phyo, a Burmese man aged twenty-four, average height, wiry and quick, warm medium-"
+      + "brown skin, long angular face, strong straight brows, dark-brown eyes, narrow nose and short "
+      + "untidy black hair. A one-sided dimple in the LEFT cheek only when smiling and a habit of biting "
+      + "the lower lip while thinking. Rust-orange T-shirt beneath an open faded olive work shirt, dark "
+      + "work trousers and brown boots. Base state before the fire: both knees move normally and both "
+      + "hands are unscarred. Talkative and cheerful." },
   { name: "ဦးလှမြင့်", en: "U Hla Myint — the client, fifties. ⚠️ The same man as Aung Phyo",
-    prompt: "A Burmese man in his early fifties, greying, heavier, a pressed shirt. ⚠️ HE MUST READ AS "
-      + "AUNG PHYO TWENTY-EIGHT YEARS OLDER — the same straight brow, the same left-cheek dimple, the "
-      + "same lower-lip habit. Two permanent marks: a pale smooth burn scar running from the base of "
-      + "the LEFT thumb to the wrist, and a stiff LEFT knee that makes him drag that leg when he walks." },
+    sameAs: 2,
+    prompt: "The exact same man as Aung Phyo in Reference 2 aged forward twenty-eight years to age "
+      + "fifty-two. Preserve the long angular face, straight brows, dark eyes, narrow nose, LEFT-cheek "
+      + "dimple and lower-lip habit; do not create a different man. Heavier through the torso, short "
+      + "black hair greying at temples, clean shaven, pale grey pressed shirt, dark charcoal longyi and "
+      + "black sandals. A pale smooth burn scar runs from the base of the LEFT thumb to the wrist, and "
+      + "the stiff LEFT knee carries his weight unevenly." },
   { name: "ကလေး", en: "The boy — the narrator at four",
-    prompt: "A Burmese boy of about four in a vest and shorts, soot smeared across his face, holding a "
-      + "blue plastic toy car with ONE FRONT WHEEL MISSING. ⚠️ A small dark mole just above the RIGHT "
-      + "eyebrow — the same mark the narrator has." },
+    sameAs: 1,
+    prompt: "Htet Naing in Reference 1 regressed to his four-year-old childhood identity: preserve the "
+      + "same rectangular facial structure, dark eyes, straight brows and the same small round dark mole "
+      + "immediately above the RIGHT eyebrow. Small child build, white cotton vest, faded navy shorts "
+      + "and bare feet. This identity plate is clean; soot belongs only to the 1998 fire scenes." },
   { name: "အမေ",
     pose: "⚠️ The subject is turned so that ONLY THE LEFT SIDE OF HER FACE IS VISIBLE — a left three-quarter view, the right side of the face angled away from the lens and fallen hair across it. Do not photograph her square on and do not resolve the right side of her face in this plate either, full figure, neutral expression", en: "The mother, 1998",
-    prompt: "A Burmese woman of about thirty in a house blouse, long hair loose and fallen forward. "
+    prompt: "A Burmese woman aged about thirty, slight build, warm medium-brown skin, an oval face and "
+      + "long straight black hair loose and fallen forward, wearing a muted rose house blouse and dark "
+      + "brown htamein. "
       + "⚠️ ONLY THE LEFT SIDE OF HER FACE IS EVER SHOWN, and it is completely ordinary and unhurt — "
       + "the face from a family photograph. The right side is always turned away, cropped by frame, "
       + "hidden behind hair or lost in smoke. Never show injury, burns or gore anywhere on her." },
+];
+
+export const PROPS = [
+  { name: "ကားလေး", en: "The blue toy car",
+    prompt: "A small late-1990s blue plastic toy sedan with rounded corners, surface scratches and one "
+      + "specific FRONT-LEFT wheel missing cleanly at the axle; the other three black wheels remain. "
+      + "No lettering, number, logo or modern styling. Object alone, three-quarter view, neutral light." },
+  { name: "ကိရိယာအိတ်", en: "Aung Phyo's tool bag",
+    prompt: "A worn olive-brown rectangular canvas electrician's tool bag with two short webbing handles, "
+      + "one darker repaired patch on the front-left corner and a partly open top showing pliers and a "
+      + "voltage tester without branding. Object alone, no person, text or logo." },
 ];
 
 export const LOCS = [
@@ -62,6 +84,11 @@ export const LOCS = [
   { name: "စင်္ကြံ", en: "The upstairs corridor, present day",
     prompt: "A dusty upstairs corridor in an empty building, daylight from one end, thick dust on the "
       + "boards, a big work lamp on a stand throwing hard light, a chalk arrow drawn on a door lintel." },
+  { name: "စင်္ကြံ၁၉၉၈", en: "The upstairs corridor during the 1998 fire",
+    prompt: "The exact same upstairs corridor in 1998 before decades of abandonment: clean floorboards "
+      + "without dust, no work lamp, no chalk arrow and no canvas tool bag, at night during a building "
+      + "fire. Dense smoke, intermittent orange firelight at the far end, doorways difficult to resolve. "
+      + "No full human figure, face, corpse, gore or modern fitting." },
   { name: "အခန်း", en: "The room — 1998, burning",
     prompt: "A lived-in 1990s Myanmar room at night with a fire taking hold elsewhere in the building: "
       + "a table, a blue enamel cup, a wooden wardrobe in the corner, a wall calendar. ⚠️ Everything in "
@@ -75,18 +102,42 @@ export const LOCS = [
       + "photographs, a low table, and a cardboard box of a child's old belongings opened on it." },
 ];
 
-export const STYLE =
-  "Yangon, Myanmar. Two time periods sharing one building: present day in flat dusty daylight, and the "
-  + "night of a 1998 house fire lit by flame-glow and torch beams through heavy smoke. Cinematic "
+export const PRESENT_STYLE =
+  "Yangon, Myanmar, present day in flat dusty daylight. Cinematic "
   + "photorealism, working-men's horror rather than gothic — two tradesmen stripping fittings out of an "
-  + "empty building. 35mm film grain, shallow depth of field, 16:9. ⚠️ NO GORE, NO BURNED BODIES, NO "
+  + "empty fire-damaged building. 35mm film grain, shallow depth of field, 16:9. No active fire, no "
+  + "smoke, no 1998 furnishings. ⚠️ NO GORE, NO BURNED BODIES, NO "
   + "CORPSES ANYWHERE. The dead of the fire appear only as hands beneath doors with smoke streaming "
   + "from the wrists, or a shape on all fours too far into the smoke to resolve — never a face, never "
   + "a whole figure. The mother's right side is never shown at all. No legible text, numbers, captions "
   + "or watermarks in the image.";
 
+export const FIRE_STYLE =
+  "Yangon, Myanmar, the night of a 1998 building fire: a lived-in room and corridor lit by orange "
+  + "fire-glow and handheld torch beams through dense smoke, surfaces clean and dustless because this "
+  + "is the past. Cinematic photorealism, urgent human rescue rather than gothic spectacle, 35mm film "
+  + "grain, shallow depth of field, 16:9. No present-day work lamp, chalk arrow, galvanised stair or "
+  + "motorbike. ⚠️ NO GORE, BURNED BODIES OR CORPSES. The other dead appear only as unresolved hands "
+  + "beneath doors or a distant shape in smoke—never a face or full figure. The mother's right side is "
+  + "never shown. No legible text, numbers, captions or watermarks.";
+
+export const CALENDAR_STYLE = FIRE_STYLE.replace(
+  "No legible text, numbers, captions or watermarks.",
+  "The printed calendar year 1998 is the ONLY legible text or number; no other legible text, captions or watermarks.");
+
+export const FATHER_STYLE =
+  "A modest older Myanmar family living room in present-day daylight, quiet and ordinary, with a "
+  + "glass-fronted cabinet, framed photographs and a low table. Cinematic photorealism, natural muted "
+  + "colour, 35mm grain, shallow depth of field, 16:9. No active fire, smoke, ghost, corpse, gore, "
+  + "legible text, numbers, captions or watermark.";
+
+export const STYLE = PRESENT_STYLE;
+export const styleForShot = (n) => n === 40 ? CALENDAR_STYLE
+  : n === 1 || (n >= 19 && n <= 56) || n === 76 || n === 77 ? FIRE_STYLE
+  : n === 2 || n === 3 || n >= 72 && n <= 75 || n >= 78 ? FATHER_STYLE : PRESENT_STYLE;
+
 export const SCENES = [
-  { t: "Someone Carried Me Out", l: "အခန်း",
+  { t: "Someone Carried Me Out", l: "အခန်း", w: ["အောင်ဖြိုး", "ကလေး"],
     g: "မီးလောင်နေတဲ့အိမ်ထဲကနေ ကလေးတစ်ယောက်ကို ချီထုတ်လာတဲ့ လူငယ်တစ်ယောက်။ မီးခိုးထူ။",
     p: "A young man carrying a small child out through a smoke-filled doorway at night, both seen "
       + "from behind against firelight, neither face visible.",
@@ -222,7 +273,7 @@ export const SCENES = [
     u: ["တံခါးကို တွန်းကြည့်တယ်။ အတွင်းက တစ်ခုခု ခံနေတယ်။",
         "အောင်ဖြိုးက ပခုံးနဲ့ တစ်ချက် ဆောင့်ပေးလိုက်တယ်။ တံခါး ပွင့်သွားတယ်။"] },
 
-  { t: "Hot Air and Smoke", l: "စင်္ကြံ",
+  { t: "Hot Air and Smoke", l: "စင်္ကြံ", w: ["ထက်နိုင်", "အောင်ဖြိုး"],
     g: "အတွင်းကနေ ပူတဲ့လေ ထွက်လာတယ်။ မီးခိုးနံ့။ နှစ်ယောက်လုံး နောက်ဆုတ်လိုက်ကြတယ်။",
     p: "Two men recoiling from an opened doorway as visible heat-shimmer and a wash of smoke rolls "
       + "out over them into a cold dusty corridor.",
@@ -253,28 +304,28 @@ export const SCENES = [
     u: ["အဲဒီအချိန် ဗီရိုထဲက ချောင်းဆိုးသံ ကြားရတယ်။ ကလေးအသံ။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "He Wedged the Door", l: "အခန်း", w: ["အောင်ဖြိုး"],
+  { t: "He Wedged the Door", l: "အခန်း", w: ["အောင်ဖြိုး", "ကိရိယာအိတ်"],
     g: "အောင်ဖြိုးက တံခါးပိတ်မသွားအောင် ကိရိယာအိတ်နဲ့ ခံထားခဲ့တယ်။",
     p: "A canvas tool bag kicked into a doorway to stop the door swinging shut, the corridor and its "
       + "work lamp visible beyond.",
     u: ["ကျွန်တော် အခန်းထဲ ဝင်လိုက်တယ်။ အောင်ဖြိုးလည်း လိုက်ဝင်တယ်။",
         "ကျွန်တော်တို့နောက်က တံခါးကို ပိတ်မသွားအောင် သူ ကိရိယာအိတ်နဲ့ ခံထားခဲ့တယ်။"] },
 
-  { t: "A Small Hand", l: "အခန်း",
+  { t: "A Small Hand", l: "အခန်း", w: ["ကလေး"],
     g: "ဗီရိုအောက်ကနေ လက်သေးသေးလေး ထွက်လာတယ်။ “အမေ…”",
     p: "A small child's hand reaching out from under the bottom edge of a wardrobe door, fingers "
       + "spread on the floorboards.",
     u: ["ဗီရိုနားရောက်တော့ အောက်ကနေ လက်သေးသေးလေး ထွက်လာတယ်။ “အမေ…”"],
     c: [[0, "stinger"]] },
 
-  { t: "The Boy", l: "အခန်း", w: ["ကလေး"],
+  { t: "The Boy", l: "အခန်း", w: ["ကလေး", "ကားလေး"],
     g: "ဗီရိုတံခါးဖွင့်လိုက်တော့ ကောင်လေးတစ်ယောက်။ အသက် ၃၊ ၄ နှစ်လောက်။ မျက်နှာမှာ မီးခိုးမည်း။",
     p: "A wardrobe door opened to reveal a small boy crouched inside, soot on his face, blinking into "
       + "the light.",
     u: ["ကျွန်တော် ဗီရိုတံခါးကို ဖွင့်လိုက်တယ်။ ကောင်လေးတစ်ယောက်။",
         "အသက်သုံးနှစ်၊ လေးနှစ်လောက်။ မျက်နှာမှာ မီးခိုးမည်းတွေ ပေနေတယ်။"] },
 
-  { t: "One Front Wheel Missing", l: "အခန်း",
+  { t: "One Front Wheel Missing", l: "အခန်း", w: ["ကားလေး"],
     g: "ကလေးလက်ထဲမှာ အပြာရောင်ပလတ်စတစ်ကားလေး။ ရှေ့ဘီးတစ်ဖက် မရှိဘူး။",
     p: "Extreme close-up of a small blue plastic toy car held in a child's hands, one front wheel "
       + "snapped off at the axle.",
@@ -283,7 +334,7 @@ export const SCENES = [
         "ရင်ထဲက မသက်မသာဖြစ်နေတဲ့ခံစားချက် ပိုပြင်းလာတယ်။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "Take My Mother Too", l: "အခန်း", w: ["ကလေး"],
+  { t: "Take My Mother Too", l: "အခန်း", w: ["ကလေး", "အောင်ဖြိုး"],
     g: "ကောင်လေးက ကျွန်တော့်နောက်ကို လက်ညှိုးထိုးတယ်။",
     p: "A small boy in a man's arms pointing past his shoulder at something behind him, his face "
       + "calm and certain.",
@@ -306,7 +357,7 @@ export const SCENES = [
         "တစ်ချက်။ ခဏနားတယ်။ နောက်တစ်ချက်။"],
     c: [[1, "knock"]] },
 
-  { t: "Take My Son", l: "အခန်း",
+  { t: "Take My Son", l: "အခန်း", w: ["အောင်ဖြိုး", "ကလေး"],
     g: "“သားကို… ခေါ်သွားပါ…” ကျွန်တော့်ဒူးတွေ အားပျော့သွားတယ်။",
     p: "Close on a man's face going slack with recognition, the child still in his arms, everything "
       + "behind him lost in smoke.",
@@ -351,7 +402,7 @@ export const SCENES = [
         "သူ့ညာဘက်မျက်ခုံးနားမှာ မှဲ့သေးသေးတစ်လုံး။ ကျွန်တော် နေ့တိုင်း မှန်ထဲမှာ မြင်နေရတဲ့နေရာအတိုင်း။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Outside It Was Night", l: "စင်္ကြံ",
+  { t: "Outside It Was Night", l: "စင်္ကြံ၁၉၉၈",
     g: "ဝင်လာခဲ့တဲ့တံခါးဆီ ရောက်တော့ အပြင်မှာ ညဖြစ်နေတယ်။ စင်္ကြံတစ်လျှောက် မီးခိုးတွေ။",
     p: "The same corridor as before but at night and full of smoke, the work lamp gone, firelight "
       + "somewhere at the far end.",
@@ -360,7 +411,7 @@ export const SCENES = [
         "ကျွန်တော်တို့ ဝင်လာခဲ့တဲ့တံခါးဆီ ရောက်တော့ အပြင်မှာ ညဖြစ်နေတယ်။ စင်္ကြံတစ်လျှောက် မီးခိုးတွေ။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "On All Fours", l: "စင်္ကြံ",
+  { t: "On All Fours", l: "စင်္ကြံ၁၉၉၈",
     g: "ကြမ်းပြင်ပေါ်မှာ လူတစ်ယောက် လေးဖက်ထောက်နေတယ်။ ကျောဘက် မီးလောင်နေတယ်။ ⚠️ ရှင်းရှင်း မပြရ။",
     p: "Far down a smoke-filled corridor, a human shape on hands and knees, its back alight — kept "
       + "deep in smoke and too distant to resolve. No features, no detail, no gore.",
@@ -368,7 +419,7 @@ export const SCENES = [
         "ကျွန်တော် အော်မလို့လုပ်တယ်။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "Smoke Out of the Mouth", l: "စင်္ကြံ",
+  { t: "Smoke Out of the Mouth", l: "စင်္ကြံ၁၉၉၈",
     g: "မျက်နှာမှာ မျက်လုံးပဲ ရှိတော့သလို။ ပါးစပ်ပေါက်ထဲကနေ မီးခိုးတွေ ထွက်နေတယ်။ ⚠️ ဝေးဝေးကနေပဲ။",
     p: "The same shape lifting its head, only two pale points where eyes would be and smoke streaming "
       + "steadily from where a mouth would be. Silhouette only — no face rendered.",
@@ -377,7 +428,7 @@ export const SCENES = [
         "သူက ကျွန်တော်တို့ဆီ လက်လှမ်းတယ်။ ကျွန်တော် နောက်ဆုတ်လိုက်တယ်။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "The Arrow Was Gone", l: "စင်္ကြံ", w: ["အောင်ဖြိုး"],
+  { t: "The Arrow Was Gone", l: "စင်္ကြံ၁၉၉၈", w: ["အောင်ဖြိုး", "ကိရိယာအိတ်"],
     g: "တံခါးပေါင်မှာ မြေဖြူမြား မရှိတော့ဘူး။ ကိရိယာအိတ်လည်း မရှိဘူး။",
     p: "A torch beam on a bare door lintel — no chalk, no mark, and the doorway below it empty of the "
       + "tool bag that was wedging it.",
@@ -422,7 +473,7 @@ export const SCENES = [
         "မီးတောက်အလင်း မဟုတ်ဘူး။ ကျွန်တော်တို့ ထောင်ထားခဲ့တဲ့ လက်ကိုင်မီးအလင်း။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Our Own Tool Bag, Through the Wall", l: "အခန်း",
+  { t: "Our Own Tool Bag, Through the Wall", l: "အခန်း", w: ["ကိရိယာအိတ်"],
     g: "အလင်းကြားထဲမှာ အောင်ဖြိုးရဲ့ ကိရိယာအိတ်လက်ကိုင်ကို မြင်ရတယ်။",
     p: "Through a narrow crack in brickwork: a sliver of a dusty daylit corridor beyond, and in it "
       + "the handle of a canvas tool bag lying on the boards.",
@@ -499,7 +550,7 @@ export const SCENES = [
     u: ["အောင်ဖြိုးက ကလေးကို ယူတယ်။ “ကိုထက်လည်း နောက်ကျမနေနဲ့”",
         "သူ ခြေတစ်ဖက် ဆွဲရင်း ထွက်သွားတယ်။"] },
 
-  { t: "My Own Face in His Arms", l: "အခန်း",
+  { t: "My Own Face in His Arms", l: "အခန်း", w: ["အောင်ဖြိုး", "ကလေး"],
     g: "နောက်ဆုံးမြင်လိုက်ရတာက အောင်ဖြိုးရဲ့ ရင်ခွင်ထဲမှာ ကျွန်တော် ငယ်ငယ်ကမျက်နှာ။",
     p: "Over a departing man's shoulder: the small boy's face looking back at camera, the mole above "
       + "his right eyebrow clearly visible, smoke closing between them.",
@@ -532,7 +583,7 @@ export const SCENES = [
         "သူ့နှုတ်ခမ်း လှုပ်သွားတယ်။ “ဒီတစ်ခါတော့ သားကိုယ်တိုင် ထွက်နိုင်တယ်မဟုတ်လား”"],
     c: [[3, "bigstinger"]] },
 
-  { t: "Something Pulled My Arm", l: "အခန်း",
+  { t: "Something Pulled My Arm", l: "အခန်း", w: ["ထက်နိုင်"],
     g: "အက်ကြောင်းထဲ တိုးဝင်တယ်။ လက်မောင်းကို တစ်ယောက်ယောက် နောက်ကနေ ဆွဲတယ်။ ပူတယ်။",
     p: "A man forcing his body into a narrow wall crack, shoulders scraping brick, and a dark hand "
       + "closed around his upper arm from behind in the smoke.",
@@ -548,7 +599,7 @@ export const SCENES = [
     u: ["နောက်တစ်ခါ လေကို ရှူလိုက်ရတဲ့အချိန်မှာ ဖုန်နံ့ပဲ ရတော့တယ်။ မီးခိုးနံ့ မရှိတော့ဘူး။",
         "နေ့လယ်နေရောင်။"] },
 
-  { t: "Everything Where We Left It", l: "စင်္ကြံ",
+  { t: "Everything Where We Left It", l: "စင်္ကြံ", w: ["ကိရိယာအိတ်"],
     g: "အောင်ဖြိုးဆွဲခဲ့တဲ့ မြေဖြူမြား။ ကိရိယာအိတ်။ အကုန် အရင်နေရာအတိုင်း။",
     p: "The chalk arrow on the lintel and the canvas tool bag on the floor exactly as they were, "
       + "undisturbed, in flat daylight.",
@@ -564,7 +615,7 @@ export const SCENES = [
         "ကျွန်တော် ရပ်သွားတယ်။ သူ့မျက်နှာကို ကြည့်နေတယ်။ “ခင်ဗျား ဘယ်လိုသိတာလဲ” သူ မဖြေဘူး။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "The Same Scar", l: "လမ်း", w: ["ဦးလှမြင့်"],
+  { t: "The Same Scar", l: "လမ်း", w: ["ဦးလှမြင့်", "ထက်နိုင်"],
     g: "ဦးလှမြင့်က ကျွန်တော့်လက်ကို သူ့ဘယ်လက်နဲ့ ကိုင်တယ်။ လက်မအရင်းကနေ လက်ကောက်ဝတ်အထိ အပူလောင်ဒဏ်ရာ။",
     p: "An older man's left hand closing over a younger man's wrist — and the pale burn scar on it "
       + "running exactly where the young man gripped a hot steel frame moments ago.",
@@ -590,7 +641,7 @@ export const SCENES = [
       + "entirely steady.",
     u: ["“ကျွန်တော် ပြန်တက်ဖို့ လုပ်ခဲ့ပါတယ်”"] },
 
-  { t: "The Newspaper Cutting", l: "လမ်း",
+  { t: "The Newspaper Cutting", l: "လမ်း", w: ["အောင်ဖြိုး", "ကလေး"],
     g: "သတင်းစာဖြတ်ပိုင်းဟောင်း။ မီးလောင်တဲ့တိုက်ရှေ့မှာ ကလေးတစ်ယောက်ကို ချီထားတဲ့ လူငယ်တစ်ယောက်။",
     p: "A yellowed newspaper photograph held in two hands: a young man carrying a small child away "
       + "from a burning building at night, his left hand wrapped in cloth, soot on his face.",
@@ -599,7 +650,7 @@ export const SCENES = [
         "လူငယ်ရဲ့ ဘယ်လက်ကို အဝတ်နဲ့ ပတ်ထားတယ်။ မျက်နှာမှာ မီးခိုးမည်းတွေ။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Aung Phyo. And Me.", l: "လမ်း",
+  { t: "Aung Phyo. And Me.", l: "လမ်း", w: ["အောင်ဖြိုး", "ကလေး"],
     g: "အောင်ဖြိုး။ သူ့ရင်ခွင်ထဲက ကလေးက ကျွန်တော်။ ပုံနောက်မှာ ရက်စွဲ — ၁၉၉၈။",
     p: "Extreme close-up into the same newspaper photograph: the child's face in the young man's "
       + "arms, and above its right eyebrow a small dark mark in the halftone dots.",
@@ -622,7 +673,7 @@ export const SCENES = [
         "ပြုံးရင် ပါးတစ်ဖက်မှာပဲ ချိုင့်တဲ့အကျင့်။ စကားပြောရင်း အောက်နှုတ်ခမ်းကို ကိုက်မိတဲ့အကျင့်။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Twenty-Eight Years", l: "လမ်း", w: ["ဦးလှမြင့်"],
+  { t: "Twenty-Eight Years", l: "လမ်း", w: ["ဦးလှမြင့်", "ထက်နိုင်"],
     g: "“ဒီဘက်ကို ပြန်ရောက်ဖို့… စောင့်ခဲ့ရတယ် ကိုထက်။ နှစ်ပေါင်းနှစ်ဆယ့်ရှစ်နှစ်”",
     p: "Two men standing in a bright ordinary lane, one older and one younger, the distance between "
       + "them suddenly very small.",
@@ -643,7 +694,7 @@ export const SCENES = [
     u: ["ဦးလှမြင့်—အောင်ဖြိုး—က သတင်းစာပုံကို ကြည့်တယ်။",
         "“ကျွန်တော်လည်း မသိဘူး ကိုထက်။ မင်းတို့မဝင်ရင် ဘာဖြစ်မလဲ မသိဘူး”"] },
 
-  { t: "Those Were My Hands", l: "လမ်း",
+  { t: "Those Were My Hands", l: "လမ်း", w: ["ဦးလှမြင့်"],
     g: "သူက ကျွန်တော့်ပုံသေးသေးကို လက်ညှိုးနဲ့ တို့လိုက်တယ်။",
     p: "A finger with a scarred hand touching the tiny printed image of a child in a newspaper "
       + "photograph.",
@@ -680,7 +731,7 @@ export const SCENES = [
       + "man's hands lifting things out of it.",
     u: ["ကျွန်တော် ငယ်ငယ်ကပစ္စည်းတွေထားတဲ့ သေတ္တာကို ဖွင့်ကြည့်တယ်။"] },
 
-  { t: "The Blue Car", l: "အဖေ့အိမ်",
+  { t: "The Blue Car", l: "အဖေ့အိမ်", w: ["ကားလေး"],
     g: "အပြာရောင်ကားလေး ရှိနေတယ်။ ရှေ့ဘီးတစ်ဖက် မရှိဘူး။",
     p: "The same small blue plastic toy car, now old and scuffed, held in an adult hand in daylight — "
       + "the same front wheel still missing.",
@@ -712,7 +763,7 @@ export const SCENES = [
     u: ["သူ့လက်ထဲမှာ ကိုင်ထားတဲ့ကလေးက သူ့အမေကို ဒုတိယအကြိမ် ဆုံးရှုံးရတော့မယ့် သူကိုယ်တိုင် ဖြစ်နေလို့။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "He Spent Twenty-Eight Years That Night", l: "အဖေ့အိမ်",
+  { t: "He Spent Twenty-Eight Years That Night", l: "အဖေ့အိမ်", w: ["ကားလေး"],
     g: "နောက်ဆုံးပုံ — လက်ထဲက အပြာရောင်ကားလေးနဲ့ သတင်းစာဖြတ်ပိုင်း ဘေးချင်းယှဉ်။",
     p: "Final composition: the scuffed blue toy car and the yellowed newspaper cutting lying side by "
       + "side on a table in daylight, a man's hands resting either side of them. Hold on the two "
@@ -720,3 +771,89 @@ export const SCENES = [
     u: ["ပြီးတော့ အဲဒီကလေး အသက်ရှင်ဖို့ သူ့သူငယ်ချင်းရဲ့ နောက်လာမယ့် နှစ်ပေါင်းနှစ်ဆယ့်ရှစ်နှစ်ကို အဲဒီညမှာပဲ သုံးလိုက်ရတော့မှာမို့လို့။"],
     c: [[0, "finalstinger"]] },
 ];
+
+export const DETAILS = [
+  /* 1 */ "Rear wide rescue silhouette in the 1998 corridor: twenty-four-year-old Aung Phyo carries four-year-old Htet Naing toward safety, child and missing-wheel car secured against his chest. Keep both identities readable through clothing and shape but faces unresolved; no bodies or gore.",
+  /* 2 */ "Overhead archival still life in the father's home with newspaper pages and hospital forms layered chronologically. Circle only an unreadable block; do not generate legible names, dates, headlines, modern devices or fire imagery.",
+  /* 3 */ "Macro of an adult fingertip indicating one deliberately blurred birth date on an official paper. The paradox comes from narration, so keep every character and number illegible and avoid calendars, clocks or supernatural glow.",
+  /* 4 */ "Low three-quarter work detail including Htet Naing's slate-blue sleeves, head-torch edge, boots and cable-stripping hands so the reference matters. Use present-day dust and real electrician tools; no sparks, fire, exposed injury or readable labels.",
+  /* 5 */ "Natural waist-up action portrait of Aung Phyo coiling cable, rust T-shirt and olive overshirt clear, laughing enough to reveal only the LEFT-cheek dimple. Both hands are unscarred and both knees normal; no older-man features.",
+  /* 6 */ "Full-body lane portrait of U Hla Myint waiting with weight shifted away from his stiff LEFT knee. Preserve Aung Phyo's exact aged face, grey shirt and charcoal longyi; scar may be subtle, never a separate unrelated man.",
+  /* 7 */ "Rear three-quarter walking frame showing U Hla Myint's LEFT leg dragged stiffly from the hip while the right steps normally. Keep gait physical and plausible, not monstrous, and make the bright steel stair visible ahead as context.",
+  /* 8 */ "Exact macro of U Hla Myint's LEFT palm-side hand: one smooth pale healed scar runs from thumb base to wrist. Correct hand orientation is essential; no fresh burn, redness, right hand, text or extra fingers.",
+  /* 9 */ "Balanced two-shot in flat daylight: U Hla Myint studies young Aung Phyo while Aung notices and gives a puzzled half-smile with LEFT dimple. Their shared brow and facial structure must be unmistakable across the age gap.",
+  /* 10 */ "Close portrait of U Hla Myint with the same straight brow and lower-lip habit, expression restrained between recognition and grief. No villain smile, ghostly pallor, firelight or exaggerated old age.",
+  /* 11 */ "Wide daylight elevation of the rear wall with old scorch plumes, bricked openings and repainted front edge establishing past fire damage. No active flame, smoke, people, readable signs or ruin fantasy.",
+  /* 12 */ "Low wide architectural frame of the new galvanised stair against aged brick, clearly contemporary and structurally intact. Show no one on it, no fire, impossible floating steps or old wooden stair.",
+  /* 13 */ "Downward point-of-view from halfway up the steel stair toward U Hla Myint below, his serious face raised and stiff LEFT stance visible. He gestures back toward the new construction, not toward a ghost or old doorway.",
+  /* 14 */ "Present-day corridor master with work lamp at one end, thick dust, footprints and hard raking beam. Establish door positions for later temporal matching; no smoke, flame, 1998 furniture or people required.",
+  /* 15 */ "Medium upward-angle shot of Aung Phyo drawing one simple non-legible chalk arrow on the lintel, tool bag at his feet. Preserve unscarred LEFT hand and easy smile; no branded tools or supernatural mark.",
+  /* 16 */ "Centered door study showing black char above and flakes of pale blue paint below in present-day dust. Maintain the same geometry for the 1998 door; no active heat, handprint, face or legible marking.",
+  /* 17 */ "Tight Htet Naing reaction portrait with mole above RIGHT eyebrow sharp as déjà vu arrives. Dusty daylight and head torch remain present; no child double, flashback overlay, smoke or melodramatic fear.",
+  /* 18 */ "Side action shot of Aung Phyo bracing shoulder against the stuck blue-charred door, canvas tool bag behind as anchor. Dust jumps from lintel but his knees and hands remain uninjured; no flame yet.",
+  /* 19 */ "Wide threshold frame with both workers recoiling as hot smoke crosses from spotless 1998 room into the cold dusty present corridor. Keep the spatial boundary visible—dust on near side, clean boards beyond—and no monster or burn injury.",
+  /* 20 */ "Locked doorway comparison: deep present-day dust stops exactly at the threshold while the 1998 table, cup and wardrobe beyond are spotless and lived-in. No workers, corpse or ambiguous blended room.",
+  /* 21 */ "True macro of the same blue enamel cup with one thin steam thread, clean table surface and orange fire glow distant. No logo, readable decoration, dust, modern mug or ghost reflection.",
+  /* 22 */ "Centered low shot on the closed wardrobe with one dark gap beneath and faint smoke in the room. Suggest coughing through tension only; no visible child, moving door, text, face or horror eyes.",
+  /* 23 */ "Floor-level action insert of Aung Phyo wedging the specific patched canvas tool bag into the doorway, present work lamp visible across the temporal threshold. Bag handles and repaired corner must match its plate; no duplicate bag.",
+  /* 24 */ "Low macro as four-year-old Htet Naing's small soot-smudged hand reaches beneath the wardrobe door. Include white vest cuff for identity; no adult hand, injury, claw shape, extra fingers or visible face.",
+  /* 25 */ "Eye-level reveal into the wardrobe: soot-smudged four-year-old Htet Naing crouches with RIGHT-eyebrow mole and blue missing-front-left-wheel car visible together. He is frightened and coughing, not ghostly or injured.",
+  /* 26 */ "Exact product macro of the blue toy sedan in the child's hands, FRONT-LEFT wheel absent at the axle and other three wheels intact. Preserve scratches and 1990s form; no text, wrong wheel or second car.",
+  /* 27 */ "Medium two-shot with Aung Phyo holding the soot-covered boy securely while the boy points behind him toward the unseen interior door. Keep toy car in the child's other hand, Aung's LEFT hand unscarred and no mother visible yet.",
+  /* 28 */ "Wide room view showing a second door newly present on the previously blank wall, dense smoke issuing only beneath it. Keep table, cup and wardrobe fixed for continuity; no apparition, hands or modern corridor visible.",
+  /* 29 */ "Low centered door frame with one weak hand-shaped pressure subtly deforming or shadowing the lower panel from the far side. Keep door closed and person unresolved; no readable knocks, face, full body or gore.",
+  /* 30 */ "Tight Aung Phyo portrait holding the child as recognition of the mother's plea empties his face. Child and toy remain partly visible; no mother, older U Hla double, written dialogue or open door.",
+  /* 31 */ "Close action detail of Aung Phyo snatching his LEFT hand from the hot metal handle, early redness only across palm. Preserve no permanent scar yet and avoid blister, gore, right-hand substitution or melting metal.",
+  /* 32 */ "Smoke-layered left-side view of Mother kneeling at the doorway with one hand braced and one extended. Hair and smoke fully hide the RIGHT face; visible left side remains ordinary and uninjured, with no burns anywhere.",
+  /* 33 */ "Closer LEFT three-quarter portrait as Mother raises her head, normal left eye and cheek matching the reference. Crop and hair completely conceal the right half with no silhouette of damage; no gore or monster treatment.",
+  /* 34 */ "Extreme close-up of the boy's soot-smudged face, small mole immediately above RIGHT eyebrow crisp beside firelit skin. Keep natural child proportions, toy-car edge optional, no adult features or duplicated mole.",
+  /* 35 */ "Re-establish the same corridor in 1998: clean boards, no dust, work lamp, arrow or tool bag, night smoke and far orange light. Geometry matches shot 14 exactly; no resolved person.",
+  /* 36 */ "Very long shot down the smoky 1998 corridor: one human-scale shape crawls on all fours with back edge caught by firelight, too distant and obscured to resolve. Never show clothing, skin detail, face, corpse or gore.",
+  /* 37 */ "Same distant silhouette slightly raised, with two tiny pale light points and smoke issuing where a mouth might be, still completely unresolved. No anatomical face, teeth, burned skin, close-up or full body detail.",
+  /* 38 */ "Aung Phyo's torch illuminates the once-marked lintel: clean wood has no chalk arrow, and the doorway has no wedging tool bag. Show his puzzled profile and unscarred hand; no magical erasure effect.",
+  /* 39 */ "High window point-of-view with Aung Phyo looking down at the 1998 lane: fire-engine lights and crowd below, bare side brick where modern steel stair should be. No present-day motorbikes or readable vehicle markings.",
+  /* 40 */ "Medium insert of the cheap wall calendar through smoke with ONLY the year 1998 legible; all other dates and words blurred. Keep it physically printed and period-correct, without modern typography or extra readable text.",
+  /* 41 */ "Medium emotional two-shot: adult Htet Naing holds his soot-covered four-year-old self, pats his back and turns his own mole-bearing face away. The identical RIGHT-eyebrow mark links them; no merged bodies or uncanny clone effect.",
+  /* 42 */ "Macro of a hairline wall crack emitting cold electric-white present-day work-lamp light against orange fire smoke. Aung Phyo examines it with unscarred hand nearby; no magical beam, wide hole or exterior daylight.",
+  /* 43 */ "Through the narrow brick crack, show only a precise sliver of dusty present corridor and the repaired handle of their canvas tool bag. Past-side brick stays clean and smoky; no person, duplicate bag or expanded portal.",
+  /* 44 */ "Side action frame of Aung Phyo levering blackened 1998 wall crust away to expose clean modern galvanised framing beneath. Keep the temporal layers distinct, tool use plausible, LEFT hand still unscarred and no gore.",
+  /* 45 */ "Freeze a burning joist striking Aung Phyo's shoulder and forcing his LEFT knee down, sparks controlled and clothing not aflame. No open wound, broken bone, gore or strike to Htet Naing or child.",
+  /* 46 */ "Exact close-up of Aung Phyo clamping his LEFT hand onto superheated steel to brace himself, contact line running thumb base to wrist. Show heat and pain without blister or wound; this is the future scar's precise geometry.",
+  /* 47 */ "Floor-level wide macro of several ordinary-sized dark hands reaching beneath the closed door, each wrist ending only in dense smoke. Hands remain separated and anatomically normal; no arms, faces, bodies, burns, blood or claws.",
+  /* 48 */ "Closer continuation on one spread hand pressing for traction while smoke streams from its wrist into the room. Preserve same door and other hands soft behind; no full figure, gore, text or supernatural glow.",
+  /* 49 */ "Clear spatial decision frame: wall crack is child-width only, while the smoky corridor and stair route can take an adult. Htet Naing and injured Aung Phyo assess opposite exits without blocking them; no impossible wide portal.",
+  /* 50 */ "Tight child close-up against an adult shoulder, soot at nose and mouth, eyelids heavy and breathing visibly labored but alive. RIGHT-eyebrow mole stays clear; no blue lips, injury, death or horror makeup.",
+  /* 51 */ "Full action two-shot as newly injured Aung Phyo takes the boy and turns toward the smoky corridor, dragging his damaged LEFT leg. LEFT hand is reddened at future scar line, child and toy secure; no older U Hla visible.",
+  /* 52 */ "Over Aung Phyo's departing shoulder, the child looks back through closing smoke with RIGHT-eyebrow mole and toy car visible. Preserve Aung's olive shirt and injured LEFT-side gait; no resolved corridor dead.",
+  /* 53 */ "Medium-wide of Htet Naing alone levering desperately at the wall crack and calling toward the corridor. Head torch and mole identify him, smoke thickens but present-day white light persists; no child or Aung duplicate.",
+  /* 54 */ "Wide room geometry shot with orange firelight advancing from every edge, leaving one shrinking unlit island around Htet Naing. Walls and furniture stay fixed; no magical moving architecture, bodies or gore.",
+  /* 55 */ "Mother stands in the smoky doorway seen ONLY from her left and points Htet Naing toward the escape crack. Her right face and body side remain outside frame, left face ordinary and sorrowful; no burns or menace.",
+  /* 56 */ "Side action frame as Htet Naing forces shoulders into the narrow crack while one unresolved dark hand grips his upper arm from smoke behind. Show no owner beyond smoke, no claw, injury or extra arm; present light pulls forward.",
+  /* 57 */ "Present-day reveal: Htet Naing emerges half-through the broken wall into the dusty corridor, coughing in clean daylight. Dust, work lamp and head torch return instantly; no smoke, flame, child or ghost remains.",
+  /* 58 */ "Locked continuity insert of chalk arrow and repaired canvas tool bag exactly where left in thick dust. Match shot 15 and 23 object geometry; no disturbance, duplicate bag, footprint change or smoke.",
+  /* 59 */ "Long two-shot at the steel stair foot: U Hla Myint looks up at filthy Htet Naing descending, braced for news. Their faces are clear, U Hla's stiff LEFT stance visible, and Aung Phyo remains absent.",
+  /* 60 */ "Tight two-hand comparison: U Hla Myint's scarred LEFT hand closes around Htet Naing's unscarred wrist, pale line exactly matching shot 46 contact path. Correct ownership and hand orientation; no fresh wound or fused fingers.",
+  /* 61 */ "Full-body U Hla Myint steps back with unmistakable stiff LEFT-leg drag while calling to Htet Naing. His aged Aung face and lip-biting habit remain clear; no young Aung beside him.",
+  /* 62 */ "Close portrait of U Hla Myint speaking steadily through wet eyes, same straight brow and LEFT dimple structure visible without smiling. Grief, not supernatural knowledge or villainy.",
+  /* 63 */ "Fill frame with the yellowed newspaper photograph: young Aung Phyo carries four-year-old Htet Naing from the burning building, LEFT hand wrapped and both identities recognizable through halftone. Printed words remain illegible.",
+  /* 64 */ "Macro deeper into the same physical clipping, centering child Htet's RIGHT-eyebrow mole and young Aung's partial face above. Preserve halftone and paper grain; no modern color, new photograph or readable caption.",
+  /* 65 */ "Medium portrait of U Hla Myint looking past camera toward the modern steel stair while rubbing his scarred LEFT hand. His weight avoids the stiff LEFT knee; no flashback overlay or active fire.",
+  /* 66 */ "Recognition close-up as U Hla Myint gives a small half-smile revealing only the LEFT-cheek dimple and same straight brow as Aung. Keep natural age and grief; no face morph, split screen or young double.",
+  /* 67 */ "Ordinary daylight two-shot of U Hla Myint and Htet Naing facing each other in the lane, emotional distance compressed but age and identities distinct. U Hla's posture carries the injured LEFT knee; no Aung figure.",
+  /* 68 */ "Tight Htet Naing portrait with RIGHT-eyebrow mole visible as anger, fear and gratitude collide. Keep work dirt and human restraint; no shouting text, child overlay or supernatural eyes.",
+  /* 69 */ "Medium U Hla Myint looking down at the clipping in scarred hands rather than meeting Htet's gaze. Preserve aged Aung identity and quiet uncertainty; no smile, ghost image or readable print.",
+  /* 70 */ "Macro of U Hla Myint's scarred LEFT index finger touching the tiny printed child in the newspaper photo. Keep scar, halftone child and paper edge sharp; no wrong hand, living miniature or legible caption.",
+  /* 71 */ "Wide lonely portrait of U Hla Myint small in the lane against the old building, stiff LEFT leg and folded clipping visible. Daylight remains ordinary; no ghost, fire, dramatic halo or Aung beside him.",
+  /* 72 */ "Interior medium shot at father's home: elderly father accepts the clipping with both hands and recognizes the rescuer immediately. Keep his face warm and astonished, Htet Naing at frame edge, and print unreadable.",
+  /* 73 */ "Close reflective portrait of the elderly father with gaze unfocused toward memory, clipping lowered in hand. No literal year, flashback overlay, ghost or dementia caricature.",
+  /* 74 */ "Over-table frame of Htet Naing opening the old cardboard box and lifting childhood objects, slate-blue sleeve and mole profile identifying him. Family cabinet remains behind; no smoke, fire or modern phone.",
+  /* 75 */ "Exact product close-up of the same blue toy sedan now more scuffed in Htet's adult hand, FRONT-LEFT wheel still missing and other three intact. No replacement wheel, logo, second car or text.",
+  /* 76 */ "Four-year-old viewpoint from inside the wardrobe: Aung Phyo's head and shoulders lean into firelight but remain shadowed and unresolved, olive shirt recognizable. No frightening face, corpse, mother or adult Htet visible.",
+  /* 77 */ "Closer continuation from child viewpoint: firelight reveals tears on Aung Phyo's cheeks but facial features remain soft and incomplete. He is grieving, not burned or monstrous; no right-side mother reveal.",
+  /* 78 */ "Quiet daylight medium-wide of Htet Naing alone in father's living room holding the broken blue car, finally understanding Aung's tears. Keep mole and adult identity clear; no fire overlay, apparition or melodrama.",
+  /* 79 */ "Final overhead still life: exact scuffed missing-FRONT-LEFT-wheel blue car beside the same yellowed clipping, Htet Naing's hands resting apart around them. Objects do not overlap, print stays unreadable, daylight ordinary and no supernatural effect.",
+];
+
+if (DETAILS.length !== SCENES.length)
+  throw new Error(`fire detail count ${DETAILS.length} does not match scene count ${SCENES.length}`);
+SCENES.forEach((scene, i) => { scene.d = `Detailed scene direction: ${DETAILS[i]}`; });

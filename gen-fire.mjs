@@ -1,11 +1,11 @@
 /**
- * Builds fire.html for ရေမရှိတဲ့ကန်ထဲမှာ ရေနစ်တဲ့လူ (The Man Who Drowned in an Empty Tank).
+ * Builds fire.html for ကျွန်တော့်ကို ကယ်ခဲ့တဲ့လူက မမွေးသေးဘူး (The Man Who Saved Me Wasn't Born Yet).
  *
- *   node gen-drown.mjs
+ *   node gen-fire.mjs
  */
 import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
-import { SCENES, CAST, LOCS } from "./data-fire.mjs";
+import { SCENES, CAST, PROPS, LOCS, styleForShot } from "./data-fire.mjs";
 import { MM_REF } from "./mm-fire.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
@@ -43,18 +43,24 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
-    prompt: r.image_prompt,
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}". A new and distinct frame in an ongoing sequence; `
+      + `do not repeat, vary or re-render any previous image.\n\n${s.p}\n\n${s.d}\n\n${styleForShot(n)}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
   };
 });
 
-const NREF = CAST.length + LOCS.length;
-const refs = [...CAST, ...LOCS].map((c, i) => ({
+const NREF = CAST.length + PROPS.length + LOCS.length;
+const refs = [...CAST, ...PROPS, ...LOCS].map((c, i) => ({
   ...c,
   mm: (MM_REF[c.name] || "") + (i < CAST.length ? PLATE_MM : ""),
-  prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). A new and distinct subject; do not `
-    + `repeat or vary any previous reference.\n\n${c.prompt}`
+  prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). `
+    + (c.sameAs
+      ? `A continuity age variant of Reference ${c.sameAs}; attach that reference and preserve the exact identity. `
+        + `Do not create a new or merely similar person.\n\n`
+      : `A new and distinct ${i < CAST.length ? "subject" : i < CAST.length + PROPS.length ? "object" : "place"}; `
+        + `do not repeat or vary any previous reference.\n\n`)
+    + `${c.prompt}`
     + (i < CAST.length ? plate(c.pose) : ""),
 }));
 
@@ -75,22 +81,15 @@ const NOTE =
 await writeFile("/Users/puraidointern/ghost-prompts-site/fire.html", buildPage({
   title: "ကျွန်တော့်ကို ကယ်ခဲ့တဲ့လူက မမွေးသေးဘူး — image prompts",
   subtitle: `THE MAN WHO SAVED ME WASN'T BORN YET · ${shots.length} shots · 16:9 · Copy a prompt, `
-    + `paste it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
+    + `paste it into Google Flow, and attach the references listed on the card. `
     + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`,
   storageKey: "fire.done.v1",
   slug: "fire",
   note: NOTE, nav: NAV("fire"),
   groups: [
     { heading: "People — build these first", items: refs.slice(0, CAST.length) },
-    { heading: "Locations — one plate per recurring setting", items: refs.slice(CAST.length) },
+    { heading: "Objects — build these after the people", items: refs.slice(CAST.length, CAST.length + PROPS.length) },
+    { heading: "Locations — one plate per recurring setting", items: refs.slice(CAST.length + PROPS.length) },
   ],
   shots,
 }));
