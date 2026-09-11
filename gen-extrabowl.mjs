@@ -16,6 +16,20 @@ import { writeFile } from "node:fs/promises";
 import { ITEMS, SHOTS } from "./data-extrabowl.mjs";
 import { buildPage } from "./page.mjs";
 import { NAV } from "./nav.mjs";
+import { PLATE, PLATE_MM } from "./plate.mjs";
+
+// The baked-in ITEM prompts specify their own backgrounds and a three-quarter
+// view. Strip that and append the plate clause so these match every other sheet.
+const PLATED = ITEMS.map((it) => ({
+  ...it,
+  // Strip only the staging — the wall, the lamp, the three-quarter framing and
+  // the expression. The period and film-stock words after it describe the
+  // PERSON and are kept.
+  prompt: it.prompt.replace(
+    /Plain dark wooden wall behind, warm kerosene lamp light from one side, /i, "")
+    .replace(/waist-up three-quarter view, neutral expression, /i, "") + PLATE,
+  mm: (it.mm || "") + PLATE_MM,
+}));
 
 const NOTE =
   `ရုပ်ပုံ ${SHOTS.length} ပုံ။ Reference ${ITEMS.length} ခုကို အရင်ဆောက်ပါ။`
@@ -31,7 +45,7 @@ await writeFile("/Users/puraidointern/ghost-prompts-site/extra-bowl.html", build
   storageKey: "extrabowl.done.v1",
   slug: "extra-bowl",
   note: NOTE, nav: NAV("extrabowl"),
-  groups: [{ heading: "People and the bowl — build these first", items: ITEMS }],
+  groups: [{ heading: "People and the bowl — build these first", items: PLATED }],
   shots: SHOTS,
 }));
 

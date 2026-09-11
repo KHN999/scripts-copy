@@ -10,6 +10,7 @@ import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { MM_SHOT, MM_REF } from "./mm-802.mjs";
 import { buildPage } from "./page.mjs";
+import { PLATE, PLATE_MM } from "./plate.mjs";
 import { NAV } from "./nav.mjs";
 
 const PROJECT = "2puwkmg2krs";
@@ -127,9 +128,10 @@ const shots = rows.map((r) => {
 const refs = [...CAST, ...LOCS];
 const NREF = refs.length;
 CAST.forEach((c, i) => {
-  c.mm = MM_REF[c.name] || "";
+  c.mm = (MM_REF[c.name] || "") + PLATE_MM;
   c.prompt = `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). A new and distinct subject; do not `
-    + `repeat or vary any previous reference.\n\n${c.prompt}`;
+    + `repeat or vary any previous reference.\n\n${c.prompt}`
+    + PLATE;
 });
 LOCS.forEach((l, i) => {
   l.mm = MM_REF[l.name] || "";
