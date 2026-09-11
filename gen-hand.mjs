@@ -1,11 +1,11 @@
 /**
- * Builds hand.html for ရေမရှိတဲ့ကန်ထဲမှာ ရေနစ်တဲ့လူ (The Man Who Drowned in an Empty Tank).
+ * Builds hand.html for အလောင်းက ကလေးကို မလွှတ်ဘူး (The Body Would Not Let Go).
  *
- *   node gen-drown.mjs
+ *   node gen-hand.mjs
  */
 import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
-import { SCENES, CAST, LOCS } from "./data-hand.mjs";
+import { SCENES, CAST, LOCS, styleForShot } from "./data-hand.mjs";
 import { MM_REF } from "./mm-hand.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
@@ -41,7 +41,8 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
-    prompt: r.image_prompt,
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}". A new and distinct frame in an ongoing sequence; `
+      + `do not repeat, vary or re-render any previous image.\n\n${s.p}\n\n${s.d}\n\n${styleForShot(n)}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
   };
@@ -51,13 +52,17 @@ const NREF = CAST.length + LOCS.length;
 const refs = [...CAST, ...LOCS].map((c, i) => ({
   ...c,
   mm: (MM_REF[c.name] || "") + (i < CAST.length ? PLATE_MM : ""),
-  prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). A new and distinct subject; do not `
-    + `repeat or vary any previous reference.\n\n${c.prompt}`
+  prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). `
+    + (c.sameAs
+      ? `A continuity variant of Reference ${c.sameAs}; attach that reference and preserve the exact identity. `
+        + `Do not create a new or merely similar person.\n\n`
+      : `A new and distinct subject; do not repeat or vary any previous reference.\n\n`)
+    + `${c.prompt}`
     + (i < CAST.length ? plate(c.pose) : ""),
 }));
 
 const NOTE =
-  `⚠️ <b>အရေးအကြီးဆုံး — အစ်မကို ကြောက်စရာပုံ မလုပ်ရဘူး။</b> ပုံတိုင်းမှာ <b>မျက်လုံးပိတ်ထားရမယ်</b>၊ `
+  `⚠️ <b>အရေးအကြီးဆုံး — သေဆုံးပြီးနောက် အစ်မကို ကြောက်စရာပုံ မလုပ်ရဘူး။</b> နာရေးမြင်ကွင်းတိုင်းမှာ <b>မျက်လုံးပိတ်ထားရမယ်</b>၊ `
   + `အိပ်ပျော်နေတဲ့ သာမန်လူတစ်ယောက်လိုပဲ ဖြစ်ရမယ်။ သွေး၊ ပုပ်ပွနေတာ၊ ပါးစပ်ဟနေတာ၊ လက်ခြေကွေးကောက်နေတာ `
   + `<b>လုံးဝ မပါရဘူး</b>။ ကြောက်စရာက သူ့မျက်နှာ မဟုတ်ဘူး — <b>သူ့ရဲ့ နေရာထားပုံ</b> ပဲ။ `
   + `လက်တစ်ဖက် ဆုပ်ထားတာ၊ ပခုံးမြောက်လာတာ၊ ခေါင်း တစ်ယောက်ယောက်ဘက် လှည့်နေတာ။`
@@ -68,9 +73,7 @@ const NOTE =
 await writeFile("/Users/puraidointern/ghost-prompts-site/hand.html", buildPage({
   title: "အလောင်းက ကလေးကို မလွှတ်ဘူး — image prompts",
   subtitle: `THE BODY WOULD NOT LET GO · ${shots.length} shots · 16:9 · Copy a prompt, paste `
-    + `it into Google Flow, attach the references listed on the card. `
-    + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`
-    + `it into Google Flow, attach the references listed on the card. `
+    + `it into Google Flow, and attach the references listed on the card. `
     + `ဗမာလိုရေးထားတဲ့ ရှင်းလင်းချက်က ဘာပုံလဲဆိုတာ ပြတာပါ — copy လုပ်တဲ့ထဲ မပါဝင်ပါဘူး။`,
   storageKey: "hand.done.v1",
   slug: "hand",
