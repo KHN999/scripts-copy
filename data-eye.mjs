@@ -33,7 +33,8 @@ export const CAST = [
     prompt: "A Burmese woman of about twenty-eight in a plain work shirt and jeans, hair worn loose "
       + "with a habit of tucking the left side behind her ear. Practical, a restorer of furniture. "
       + "Later: a cut on her right calf bound with a torn shirt sleeve." },
-  { name: "ကိုဇင်", en: "Ko Zin — her older brother, inside",
+  { name: "ကိုဇင်",
+    pose: "The subject stands with his back three-quarters to the camera and his head turned back toward the lens, so that BOTH the face and the full width of the back are clearly visible in one frame, full figure, neutral expression", en: "Ko Zin — her older brother, inside",
     prompt: "A Burmese man of about thirty-three, solid, short hair, a short-sleeved shirt over a "
       + "t-shirt. Steady, physical, the one who puts himself between things. ⚠️ From the escape "
       + "onward his shirt is torn open across the back." },

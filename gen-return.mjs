@@ -11,7 +11,7 @@ import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3
 import { SCENES, CAST, LOCS } from "./data-return.mjs";
 import { MM_REF } from "./mm-return.mjs";
 import { buildPage } from "./page.mjs";
-import { PLATE, PLATE_MM } from "./plate.mjs";
+import { plate, PLATE_MM } from "./plate.mjs";
 import { NAV } from "./nav.mjs";
 
 const PROJECT = "1wr7eppn6x1";
@@ -52,7 +52,7 @@ const refs = [...CAST, ...LOCS].map((c, i) => ({
   mm: (MM_REF[c.name] || "") + (i < CAST.length ? PLATE_MM : ""),
   prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). A new and distinct subject; do not `
     + `repeat or vary any previous reference.\n\n${c.prompt}`
-    + (i < CAST.length ? PLATE : ""),
+    + (i < CAST.length ? plate(c.pose) : ""),
 }));
 
 const NOTE =

@@ -13,7 +13,7 @@ import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { MM_SHOT, MM_REF } from "./mm-nya02.mjs";
 import { buildPage } from "./page.mjs";
-import { PLATE, PLATE_MM } from "./plate.mjs";
+import { plate, PLATE_MM } from "./plate.mjs";
 import { NAV } from "./nav.mjs";
 
 const PROJECT = "ksa4c7xxre6";
@@ -146,12 +146,12 @@ CHARS.forEach((c, i) => {
   c.mm = (MM_REF[c.name] || "") + PLATE_MM;
   c.prompt = `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). `
     + `A new and distinct character; do not repeat or vary any previous reference.\n\n${c.prompt}`
-    + PLATE;
+    + plate(c.pose);
 });
 PROP.mm = (MM_REF[PROP.name] || "") + PLATE_MM;
 PROP.prompt = `Reference ${CHARS.length + 1} of ${NREF} — ${PROP.en}. `
   + `A new and distinct reference image.\n\n${PROP.prompt}`
-  + PLATE;
+  + plate(PROP.pose);
 LOCS.forEach((l, i) => {
   l.mm = MM_REF[l.name] || "";
   l.prompt = `Reference ${CHARS.length + 2 + i} of ${NREF} — ${l.en} (${l.name}), a LOCATION plate. `

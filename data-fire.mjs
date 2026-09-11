@@ -46,7 +46,8 @@ export const CAST = [
     prompt: "A Burmese boy of about four in a vest and shorts, soot smeared across his face, holding a "
       + "blue plastic toy car with ONE FRONT WHEEL MISSING. ⚠️ A small dark mole just above the RIGHT "
       + "eyebrow — the same mark the narrator has." },
-  { name: "အမေ", en: "The mother, 1998",
+  { name: "အမေ",
+    pose: "⚠️ The subject is turned so that ONLY THE LEFT SIDE OF HER FACE IS VISIBLE — a left three-quarter view, the right side of the face angled away from the lens and fallen hair across it. Do not photograph her square on and do not resolve the right side of her face in this plate either, full figure, neutral expression", en: "The mother, 1998",
     prompt: "A Burmese woman of about thirty in a house blouse, long hair loose and fallen forward. "
       + "⚠️ ONLY THE LEFT SIDE OF HER FACE IS EVER SHOWN, and it is completely ordinary and unhurt — "
       + "the face from a family photograph. The right side is always turned away, cropped by frame, "

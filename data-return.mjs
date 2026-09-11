@@ -20,7 +20,8 @@
  */
 
 export const CAST = [
-  { name: "ကိုခန့်", en: "Ko Khant — the narrator",
+  { name: "ကိုခန့်",
+    pose: "The subject stands in a three-quarter view turned slightly to his right so the LEFT SIDE OF HIS NECK AND THE SMALL DARK MOLE BELOW THE LEFT EAR are clearly visible, face still readable, full figure, neutral expression", en: "Ko Khant — the narrator",
     prompt: "A Burmese man of twenty-nine, slim build, short neat black hair, an ordinary open "
       + "face, a small dark mole low on the neck just below the left ear. A plain white "
       + "short-sleeved office shirt and dark trousers, the shirt soaked through at the shoulders "
@@ -30,7 +31,8 @@ export const CAST = [
       + "lined face, small build. A simple pale house blouse and a dark patterned htamein. Barefoot "
       + "indoors. Warm and ordinary, never frightening in herself — the fear is always around her, "
       + "never in her face." },
-  { name: "သူ", en: "The double — NEVER fully shown",
+  { name: "သူ",
+    pose: "⚠️ The subject is seen FROM BEHIND, standing, full figure, the face not visible at all. Do not turn him toward the lens and do not resolve his face in this plate — it is never legibly resolved anywhere in the film. What this plate records is his build, his soaked white shirt, the water running from the cuffs and the shoes worn indoors", en: "The double — NEVER fully shown",
     prompt: "A man of the same height and build as Ko Khant in the same soaked white office shirt, "
       + "water running from the cuffs and fingertips. ALWAYS obscured: seen from behind, in silhouette "
       + "against a lit doorway, cropped at the jaw, reflected, or thrown far out of focus. The face is "

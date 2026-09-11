@@ -27,7 +27,8 @@
  */
 
 export const CAST = [
-  { name: "ကျွန်တော်", en: "The narrator — the driver",
+  { name: "ကျွန်တော်",
+    pose: "The subject stands with his back three-quarters to the camera and his head turned back toward the lens, so that BOTH the face and the full width of the back are clearly visible in one frame, full figure, neutral expression", en: "The narrator — the driver",
     prompt: "A Burmese man of about thirty-two, work shirt and trousers, a headlamp he is not "
       + "wearing, a torch in his hand. Practical, watchful. Later: filthy with dry earth, shirt "
       + "shredded across the back, face grazed." },

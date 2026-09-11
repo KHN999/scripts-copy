@@ -21,7 +21,8 @@ export const CAST = [
     prompt: "A Burmese man of about sixty in a white traditional jacket and white longyi, neatly "
       + "dressed, prosperous by village standards. A warm public smile that never quite reaches the "
       + "eyes. He habitually touches the arm of whoever he is speaking to." },
-  { name: "နန္ဒာ", en: "Nanda — the previous keeper",
+  { name: "နန္ဒာ",
+    pose: "The subject stands in a gentle three-quarter view so that the SINGLE RED FLOWER TUCKED BEHIND HER EAR is clearly visible, face still readable, full figure, not smiling", en: "Nanda — the previous keeper",
     prompt: "A Burmese woman of about twenty-three in a plain white blouse, dark hair gathered behind "
       + "the ears, a single RED flower tucked behind one ear — the only red anywhere in this village. "
       + "⚠️ She must look completely, unremarkably ALIVE: normal skin, normal shadow, feet flat on the "

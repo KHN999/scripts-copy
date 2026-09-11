@@ -16,7 +16,7 @@ import { writeFile } from "node:fs/promises";
 import { ITEMS, SHOTS } from "./data-extrabowl.mjs";
 import { buildPage } from "./page.mjs";
 import { NAV } from "./nav.mjs";
-import { PLATE, PLATE_MM } from "./plate.mjs";
+import { plate, PLATE_MM } from "./plate.mjs";
 
 // The baked-in ITEM prompts specify their own backgrounds and a three-quarter
 // view. Strip that and append the plate clause so these match every other sheet.
@@ -27,7 +27,7 @@ const PLATED = ITEMS.map((it) => ({
   // PERSON and are kept.
   prompt: it.prompt.replace(
     /Plain dark wooden wall behind, warm kerosene lamp light from one side, /i, "")
-    .replace(/waist-up three-quarter view, neutral expression, /i, "") + PLATE,
+    .replace(/waist-up three-quarter view, neutral expression, /i, "") + plate(it.pose),
   mm: (it.mm || "") + PLATE_MM,
 }));
 
