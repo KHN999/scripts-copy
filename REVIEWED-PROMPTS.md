@@ -60,7 +60,7 @@ regenerating the established photograph. Prompts cannot guarantee exact typograp
 Narration is unchanged. The source calls October 18 the disappearance date in
 shot 21 but calls October 17 the disappearance anniversary in the ending.
 The review preserves each specified on-screen date rather than silently rewriting
-the script. Thun's black phone is taped from shot 62; her friend's untaped grey
+the script. Pan Ei's black phone is taped from shot 62; her friend's untaped grey
 phone supplies CCTV, video calls and the later live camera view.
 
 The existing board places the empty-room forecast in shot 58 and the missing-person

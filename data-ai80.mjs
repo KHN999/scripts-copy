@@ -6,7 +6,7 @@
  * per-shot prompt corrections, photo masters, text scopes and continuity rules.
  * Its overrides take precedence over baseline p/g/w/l values below.
  *
- * Thun and Ma Khin San share one exact face, distinguished by period clothing/hair.
+ * Pan Ei and Ma Khin San share one exact face, distinguished by period clothing/hair.
  * Vintage grain belongs only to the 1987 image, not the device or surrounding room.
  * Reuse PHOTO A/B/C for matching portraits, print scans and clue close-ups.
  * The father is recognizable as a living man in PHOTO B; later supernatural views
@@ -20,13 +20,13 @@ import { reviewAI80, PROPS } from './review-ai80.mjs';
 export { PROPS };
 
 export const CAST = [
-  { name: "သွန်း", en: "Thun — twenty-five, Yangon, 2026",
+  { name: "ပန်းအိ", en: "Pan Ei — twenty-five, Yangon, 2026",
     prompt: "A Burmese woman of twenty-five with an open, ordinary face, hair worn long and loose, a "
       + "plain modern t-shirt or blouse and jeans, a phone almost always in her hand. ⚠️ SHE SHARES "
       + "HER FACE EXACTLY WITH MA KHIN SAN and they are not related — modern clothes, modern loose "
       + "hair and clean digital photography are the only things that tell them apart." },
   { name: "မခင်စန်း", en: "Ma Khin San — the same face, 1987",
-    prompt: "A Burmese woman of about twenty-six with the SAME FACE as Thun, in 1987: a Burmese "
+    prompt: "A Burmese woman of about twenty-six with the SAME FACE as Pan Ei, in 1987: a Burmese "
       + "blouse and htamein of the period, hair pinned back neatly, no makeup. ⚠️ She appears ONLY in "
       + "the faded-film AI register, never in clean modern photography. Frightened in the early "
       + "images; in the late ones she is WARNING — pointing, shaking her head, steering. Never "
@@ -46,7 +46,7 @@ export const CAST = [
 ];
 
 export const LOCS = [
-  { name: "သွန်းအခန်း", en: "Thun's apartment",
+  { name: "ပန်းအိအခန်း", en: "Pan Ei's apartment",
     prompt: "A small modern Yangon apartment bedroom: a bed, a laptop on a low desk, a mirror, a "
       + "window with the city outside, clothes over a chair, a ceiling light and the blue wash of a "
       + "phone screen at night. Ordinary, lived-in, entirely of 2026." },
@@ -69,7 +69,7 @@ export const STYLE =
   + "photography, neutral colour, natural light, ordinary apartments and streets. THE AI IMAGES "
   + "(1987): faded 1980s film stock, heavy grain, yellow-shifted colour, soft focus, vignetting, and "
   + "a small burned-in orange date stamp in the lower right corner. Cinematic photorealism, shallow "
-  + "depth of field, 16:9. ⚠️ Thun and Ma Khin San SHARE ONE FACE and are unrelated — period clothing, "
+  + "depth of field, 16:9. ⚠️ Pan Ei and Ma Khin San SHARE ONE FACE and are unrelated — period clothing, "
   + "pinned hair and the film register are what separate them. ⚠️ The man from 1987 is NEVER "
   + "resolved: silhouette, shadow or phone-screen only, never a legible face. ⚠️ NO TEXT ANYWHERE "
   + "EXCEPT the date stamps and labels a shot explicitly names — no captions, no watermarks, no "
@@ -77,11 +77,11 @@ export const STYLE =
   + "body, nothing monstrous.";
 
 export const SCENES = [
-  { t: "The Trend", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "ရန်ကုန်မှာနေတဲ့ အသက် ၂၅ နှစ်အရွယ် သွန်း။ Social Media ကို နေ့တိုင်းသုံးတဲ့ သာမန်မိန်းကလေး။",
+  { t: "The Trend", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ရန်ကုန်မှာနေတဲ့ အသက် ၂၅ နှစ်အရွယ် ပန်းအိ။ Social Media ကို နေ့တိုင်းသုံးတဲ့ သာမန်မိန်းကလေး။",
     p: "A young Burmese woman lying on her bed at night scrolling a phone, the screen lighting her "
       + "face, an ordinary modern bedroom around her.",
-    u: ["ရန်ကုန်မှာနေတဲ့ အသက် ၂၅ နှစ်အရွယ် သွန်း ဟာ Social Media ကို နေ့တိုင်းသုံးတဲ့ သာမန်မိန်းကလေးတစ်ယောက်။",
+    u: ["ရန်ကုန်မှာနေတဲ့ အသက် ၂၅ နှစ်အရွယ် ပန်းအိ ဟာ Social Media ကို နေ့တိုင်းသုံးတဲ့ သာမန်မိန်းကလေးတစ်ယောက်။",
         "တစ်ညမှာ Facebook နဲ့ TikTok တစ်ခုလုံးမှာ Trend တစ်ခု တက်လာတယ်။"] },
 
   { t: "If I Had Lived in the 1980s", l: "ဖုန်းဖန်သား",
@@ -92,55 +92,55 @@ export const SCENES = [
         "သူငယ်ချင်းတွေကလည်း Group Chat ထဲမှာ တစ်ယောက်ပြီးတစ်ယောက် ပုံတွေ ပို့နေကြတယ်။"] },
 
   { t: "You Do It Too", l: "ဖုန်းဖန်သား",
-    g: "“သွန်း နင်လည်းလုပ်လေ” “နင့်မျက်နှာက 80s actress vibe ရတယ်”",
+    g: "“ပန်းအိ နင်လည်းလုပ်လေ” “နင့်မျက်နှာက 80s actress vibe ရတယ်”",
     p: "A phone screen full of chat bubbles rendered as coloured shapes only, no readable words, a "
       + "laughing emoji among them, held in a dim bedroom.",
-    u: ["“သွန်း နင်လည်းလုပ်လေ”",
+    u: ["“ပန်းအိ နင်လည်းလုပ်လေ”",
         "“နင့်မျက်နှာက 80s actress vibe ရတယ် 😂”"] },
 
-  { t: "She Uploaded a Selfie", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်းလည်း အပျော်သဘောနဲ့ Selfie တစ်ပုံ Upload လုပ်လိုက်တယ်။ AI က ပုံလေးပုံ ထုတ်ပေးတယ်။",
+  { t: "She Uploaded a Selfie", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိလည်း အပျော်သဘောနဲ့ Selfie တစ်ပုံ Upload လုပ်လိုက်တယ်။ AI က ပုံလေးပုံ ထုတ်ပေးတယ်။",
     p: "A young woman holding her phone up at arm's length taking a selfie in her bedroom, "
       + "half-smiling, entirely casual.",
-    u: ["သွန်းလည်း အပျော်သဘောနဲ့ Selfie တစ်ပုံ Upload လုပ်လိုက်တယ်။",
+    u: ["ပန်းအိလည်း အပျော်သဘောနဲ့ Selfie တစ်ပုံ Upload လုပ်လိုက်တယ်။",
         "AI က ပုံလေးပုံ ထုတ်ပေးတယ်။"] },
 
-  { t: "First Image — A 1980 Street", l: "၁၉၈၇လမ်း", w: ["သွန်း"],
-    g: "ပထမပုံ — ၁၉၈၀ ခေတ် ရန်ကုန်လမ်းပေါ်မှာ သွန်း။",
-    p: "⚠️ AI REGISTER. A woman with Thun's face standing on a 1980s Yangon street in period Burmese "
+  { t: "First Image — A 1980 Street", l: "၁၉၈၇လမ်း", w: ["ပန်းအိ"],
+    g: "ပထမပုံ — ၁၉၈၀ ခေတ် ရန်ကုန်လမ်းပေါ်မှာ ပန်းအိ။",
+    p: "⚠️ AI REGISTER. A woman with Pan Ei's face standing on a 1980s Yangon street in period Burmese "
       + "dress, hair pinned, faded film stock, heavy grain, yellowed colour, small orange date stamp "
       + "in the lower right.",
     u: ["ပထမပုံ—",
-        "၁၉၈၀ ခေတ် ရန်ကုန်လမ်းပေါ်မှာ သွန်း။"] },
+        "၁၉၈၀ ခေတ် ရန်ကုန်လမ်းပေါ်မှာ ပန်းအိ။"] },
 
-  { t: "Second Image — The Teashop", l: "၁၉၈၇လမ်း", w: ["သွန်း"],
-    g: "ဒုတိယပုံ — အဟောင်းစား လက်ဖက်ရည်ဆိုင်ရှေ့မှာ သွန်း။",
+  { t: "Second Image — The Teashop", l: "၁၉၈၇လမ်း", w: ["ပန်းအိ"],
+    g: "ဒုတိယပုံ — အဟောင်းစား လက်ဖက်ရည်ဆိုင်ရှေ့မှာ ပန်းအိ။",
     p: "⚠️ AI REGISTER. The same woman standing outside an old Yangon teashop with low stools and "
       + "kettles, 1980s film grain, warm yellow cast.",
     u: ["ဒုတိယပုံ—",
-        "အဟောင်းစား လက်ဖက်ရည်ဆိုင်ရှေ့မှာ သွန်း။"] },
+        "အဟောင်းစား လက်ဖက်ရည်ဆိုင်ရှေ့မှာ ပန်းအိ။"] },
 
-  { t: "Third Image — Studio Portrait", l: null, w: ["သွန်း"],
-    g: "တတိယပုံ — မြန်မာဝတ်စုံနဲ့ Studio Portrait။ သွန်း သဘောကျသွားတယ်။",
+  { t: "Third Image — Studio Portrait", l: null, w: ["ပန်းအိ"],
+    g: "တတိယပုံ — မြန်မာဝတ်စုံနဲ့ Studio Portrait။ ပန်းအိ သဘောကျသွားတယ်။",
     p: "⚠️ AI REGISTER. A formal 1980s Burmese studio portrait: the same woman in traditional dress "
       + "against a painted backdrop, stiff posed lighting, faded colour, rounded corners.",
     u: ["တတိယပုံ—",
-        "မြန်မာဝတ်စုံနဲ့ Studio Portrait။ သွန်း သဘောကျသွားတယ်။"] },
+        "မြန်မာဝတ်စုံနဲ့ Studio Portrait။ ပန်းအိ သဘောကျသွားတယ်။"] },
 
-  { t: "But the Fourth Was Wrong", l: null, w: ["သွန်း"],
-    g: "ဒါပေမယ့် စတုတ္ထပုံက ထူးဆန်းနေတယ်။ အဲဒီပုံထဲမှာ သွန်းက မပြုံးဘူး။ ကင်မရာကို တည့်တည့်ကြည့်နေတယ်။",
+  { t: "But the Fourth Was Wrong", l: null, w: ["ပန်းအိ"],
+    g: "ဒါပေမယ့် စတုတ္ထပုံက ထူးဆန်းနေတယ်။ အဲဒီပုံထဲမှာ ပန်းအိက မပြုံးဘူး။ ကင်မရာကို တည့်တည့်ကြည့်နေတယ်။",
     p: "⚠️ AI REGISTER. The same face, but NOT smiling — looking directly into the lens, expression "
       + "flat and afraid, faded 1980s film, grain heavy.",
     u: ["ဒါပေမယ့်—",
         "စတုတ္ထပုံက ထူးဆန်းနေတယ်။",
-        "အဲဒီပုံထဲမှာ သွန်းက မပြုံးဘူး။ ကင်မရာကို တည့်တည့်ကြည့်နေတယ်။"],
+        "အဲဒီပုံထဲမှာ ပန်းအိက မပြုံးဘူး။ ကင်မရာကို တည့်တည့်ကြည့်နေတယ်။"],
     c: [[2, "bigstinger"]] },
 
   { t: "Her Eyes Looked Frightened", l: null, w: ["မခင်စန်း"],
-    g: "မျက်နှာကတော့ သွန်းမျက်နှာပဲ။ ဒါပေမယ့် သူ့မျက်လုံးတွေက ကြောက်နေသလိုပဲ။",
+    g: "မျက်နှာကတော့ ပန်းအိမျက်နှာပဲ။ ဒါပေမယ့် သူ့မျက်လုံးတွေက ကြောက်နေသလိုပဲ။",
     p: "⚠️ AI REGISTER. Extreme close-up of the woman's eyes in the faded photograph — the face is "
-      + "Thun's exactly, but the fear in the eyes belongs to someone else.",
-    u: ["မျက်နှာကတော့ သွန်းမျက်နှာပဲ။",
+      + "Pan Ei's exactly, but the fear in the eyes belongs to someone else.",
+    u: ["မျက်နှာကတော့ ပန်းအိမျက်နှာပဲ။",
         "ဒါပေမယ့် သူ့မျက်လုံးတွေက—",
         "ကြောက်နေသလိုပဲ။"],
     c: [[2, "bigstinger"]] },
@@ -154,10 +154,10 @@ export const SCENES = [
         "17 OCT 1987"],
     c: [[1, "bigstinger"]] },
 
-  { t: "She Laughed and Posted It", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်း ရယ်လိုက်တယ်။ “AI က detail တောင် ထည့်ပေးထားတာ…” ပုံကို Facebook တင်လိုက်တယ်။",
+  { t: "She Laughed and Posted It", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိ ရယ်လိုက်တယ်။ “AI က detail တောင် ထည့်ပေးထားတာ…” ပုံကို Facebook တင်လိုက်တယ်။",
     p: "A young woman laughing at her phone in bed, thumb moving, entirely unbothered.",
-    u: ["သွန်း ရယ်လိုက်တယ်။ “AI က detail တောင် ထည့်ပေးထားတာ…”",
+    u: ["ပန်းအိ ရယ်လိုက်တယ်။ “AI က detail တောင် ထည့်ပေးထားတာ…”",
         "ပုံကို Facebook တင်လိုက်တယ်။ Caption—",
         "“ငါ 1987 မှာ မွေးခဲ့ရင် 😂”"] },
 
@@ -167,7 +167,7 @@ export const SCENES = [
       + "blocks and avatars, no readable words.",
     u: ["တစ်နာရီလောက်ကြာတော့ Likes တွေ၊ Comments တွေ တက်လာတယ်။",
         "ဒါပေမယ့် Comment တစ်ခုမှာ—",
-        "သွန်း ရပ်သွားတယ်။"],
+        "ပန်းအိ ရပ်သွားတယ်။"],
     c: [[2, "stinger"]] },
 
   { t: "Delete This Photo", l: "ဖုန်းဖန်သား",
@@ -178,10 +178,10 @@ export const SCENES = [
         "“ဒီပုံကို ဖျက်လိုက်ပါ။”"],
     c: [[1, "bigstinger"]] },
 
-  { t: "I Have Seen This Photo", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်းက 😂 React ပေးလိုက်တယ်။ Reply က “မနောက်ပါဘူး။ ဒီပုံကို ကျွန်တော် မြင်ဖူးတယ်။”",
+  { t: "I Have Seen This Photo", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိက 😂 React ပေးလိုက်တယ်။ Reply က “မနောက်ပါဘူး။ ဒီပုံကို ကျွန်တော် မြင်ဖူးတယ်။”",
     p: "A woman's face lit by a phone in the dark, the amusement gone out of it.",
-    u: ["သွန်းက 😂 React ပေးလိုက်တယ်။",
+    u: ["ပန်းအိက 😂 React ပေးလိုက်တယ်။",
         "ခဏကြာတော့ အဲဒီ Account က Reply ပြန်လာတယ်။",
         "“မနောက်ပါဘူး။ ဒီပုံကို ကျွန်တော် မြင်ဖူးတယ်။”"],
     c: [[2, "bigstinger"]] },
@@ -190,14 +190,14 @@ export const SCENES = [
     g: "Messenger Notification ဝင်လာတယ်။ Unknown Account က ဓာတ်ပုံတစ်ပုံ ပို့ထားတယ်။",
     p: "A phone screen at night with a message thread open and a single image attachment loading in "
       + "it, the picture still a grey block.",
-    u: ["သွန်း စိတ်ဝင်စားသွားတယ်။ “ဘယ်မှာလဲ?”",
+    u: ["ပန်းအိ စိတ်ဝင်စားသွားတယ်။ “ဘယ်မှာလဲ?”",
         "Messenger Notification ဝင်လာတယ်။",
         "Unknown Account က ဓာတ်ပုံတစ်ပုံ ပို့ထားတယ်။"] },
 
-  { t: "She Forgot to Breathe", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်း ဖွင့်ကြည့်လိုက်တယ်။ ပြီးတော့ အသက်ရှူဖို့တောင် မေ့သွားတယ်။",
+  { t: "She Forgot to Breathe", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိ ဖွင့်ကြည့်လိုက်တယ်။ ပြီးတော့ အသက်ရှူဖို့တောင် မေ့သွားတယ်။",
     p: "Close on a young woman's face in phone-light, absolutely still, lips parted, not breathing.",
-    u: ["သွန်း ဖွင့်ကြည့်လိုက်တယ်။",
+    u: ["ပန်းအိ ဖွင့်ကြည့်လိုက်တယ်။",
         "ပြီးတော့—",
         "အသက်ရှူဖို့တောင် မေ့သွားတယ်။"],
     c: [[2, "bigstinger"]] },
@@ -211,7 +211,7 @@ export const SCENES = [
         "မိန်းကလေးတစ်ယောက်။ မြန်မာဝတ်စုံ။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Identical in Every Detail", l: null, w: ["သွန်း", "မခင်စန်း"],
+  { t: "Identical in Every Detail", l: null, w: ["ပန်းအိ", "မခင်စန်း"],
     g: "ဆံပင်ပုံစံ။ နောက်ခံ။ မျက်နှာ။ အားလုံး AI ဖန်တီးပေးထားတဲ့ ပုံနဲ့ တစ်ပုံစံတည်း။",
     p: "Two images side by side in one frame: the old physical print and the AI image on a phone "
       + "screen beside it — the same pose, the same background, the same face, indistinguishable.",
@@ -233,7 +233,7 @@ export const SCENES = [
     g: "“ဒါ ဘယ်သူလဲ?” Reply က — “ကျွန်တော့်အမေပါ။” “သူ့နာမည် မခင်စန်း။”",
     p: "A phone screen with a short message thread, the incoming bubbles rendered as shape only, the "
       + "room dark around the glow.",
-    u: ["သွန်း ချက်ချင်း Message ပို့တယ်။ “ဒါ ဘယ်သူလဲ?”",
+    u: ["ပန်းအိ ချက်ချင်း Message ပို့တယ်။ “ဒါ ဘယ်သူလဲ?”",
         "Reply က— “ကျွန်တော့်အမေပါ။”",
         "နောက် Message တစ်ခု။ “သူ့နာမည် မခင်စန်း။”"],
     c: [[2, "bigstinger"]] },
@@ -246,33 +246,33 @@ export const SCENES = [
         "“1987 October 18 ရက်နေ့မှာ ပျောက်သွားခဲ့တာပါ။”"],
     c: [[1, "bigstinger"]] },
 
-  { t: "One Day Before", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်း ပုံပေါ်က Date ကို ပြန်ကြည့်လိုက်တယ် — 17 OCT 1987။ သူမပျောက်ခင် တစ်ရက်အလို။",
+  { t: "One Day Before", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိ ပုံပေါ်က Date ကို ပြန်ကြည့်လိုက်တယ် — 17 OCT 1987။ သူမပျောက်ခင် တစ်ရက်အလို။",
     p: "A young woman sitting bolt upright in a dark bedroom, phone in both hands, the blood gone "
       + "out of her face.",
-    u: ["သွန်း ပုံပေါ်က Date ကို ပြန်ကြည့်လိုက်တယ်။ 17 OCT 1987",
+    u: ["ပန်းအိ ပုံပေါ်က Date ကို ပြန်ကြည့်လိုက်တယ်။ 17 OCT 1987",
         "သူမပျောက်ခင်—",
         "တစ်ရက်အလို။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "She Could Not Sleep", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်း အိပ်မပျော်တော့ဘူး။ ဒါဟာ Coincidence ဖြစ်နိုင်တယ်။",
+  { t: "She Could Not Sleep", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိ အိပ်မပျော်တော့ဘူး။ ဒါဟာ Coincidence ဖြစ်နိုင်တယ်။",
     p: "A woman lying awake on her side in the small hours, eyes open, the phone face-down beside "
       + "her head.",
-    u: ["သွန်း အိပ်မပျော်တော့ဘူး။",
+    u: ["ပန်းအိ အိပ်မပျော်တော့ဘူး။",
         "ဒါဟာ Coincidence ဖြစ်နိုင်တယ်။",
         "AI တွေဟာ Internet ပေါ်က ပုံတွေကို လေ့လာထားတာပဲ။ တစ်နေရာရာက ပုံဟောင်းကို မှတ်မိပြီး ပြန်ဖန်တီးတာ ဖြစ်နိုင်တယ်။"] },
 
-  { t: "No Results", l: "သွန်းအခန်း", w: ["သွန်း"],
+  { t: "No Results", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
     g: "Google Lens နဲ့ ပုံကိုရှာတယ်။ Result မရှိဘူး။",
     p: "A laptop screen showing an image search that has returned an empty result area, a woman's "
       + "face lit by it in a dark room.",
-    u: ["သွန်း Google Lens နဲ့ ပုံကိုရှာတယ်။ Result မရှိဘူး။",
+    u: ["ပန်းအိ Google Lens နဲ့ ပုံကိုရှာတယ်။ Result မရှိဘူး။",
         "Facebook ရှာတယ်။ Google ရှာတယ်။",
         "မခင်စန်းဆိုတဲ့နာမည်နဲ့ ပျောက်ဆုံးမှုသတင်း ရှာတယ်။ ဘာမှမရှိဘူး။"],
     c: [[2, "stinger"]] },
 
-  { t: "She Asked the AI Again", l: "သွန်းအခန်း", w: ["သွန်း"],
+  { t: "She Asked the AI Again", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
     g: "ဒါနဲ့ AI ကို နောက်တစ်ခါ စမ်းတယ် — “Same woman, October 18, 1987.” Generate.",
     p: "A close shot of a laptop with a generator interface open, a prompt field filled with a short "
       + "line of unreadable text, a cursor hovering over the generate control.",
@@ -282,10 +282,10 @@ export const SCENES = [
     c: [[2, "stinger"]] },
 
   { t: "She Was Running", l: "၁၉၈၇လမ်း", w: ["မခင်စန်း"],
-    g: "ပုံထွက်လာတယ်။ သွန်းရဲ့မျက်နှာနဲ့ မခင်စန်း။ ညဘက်။ သူမက ပြေးနေတယ်။",
+    g: "ပုံထွက်လာတယ်။ ပန်းအိရဲ့မျက်နှာနဲ့ မခင်စန်း။ ညဘက်။ သူမက ပြေးနေတယ်။",
     p: "⚠️ AI REGISTER. A woman in 1987 Burmese dress running down a night street in old Yangon, "
       + "caught mid-stride, looking back over her shoulder. Faded film, heavy grain, motion blur.",
-    u: ["ပုံထွက်လာတယ်။ သွန်းရဲ့မျက်နှာနဲ့ မခင်စန်း။",
+    u: ["ပုံထွက်လာတယ်။ ပန်းအိရဲ့မျက်နှာနဲ့ မခင်စန်း။",
         "ညဘက်။ ရန်ကုန်မြို့က လမ်းဟောင်းတစ်ခု။",
         "သူမက ပြေးနေတယ်။ နောက်ကို လှည့်ကြည့်နေတယ်။"],
     c: [[2, "bigstinger"]] },
@@ -302,7 +302,7 @@ export const SCENES = [
     g: "“What happened next?” ပုံထွက်လာတယ်။ အိမ်အဟောင်းတစ်လုံး။ မခင်စန်း တံခါးရှေ့မှာ ခေါက်နေတယ်။",
     p: "⚠️ AI REGISTER. A woman standing at the front door of an old Yangon townhouse at night, one "
       + "hand raised mid-knock. Faded film, grain, yellow streetlight.",
-    u: ["သွန်း နောက်တစ်ပုံ Generate လုပ်တယ်။ “What happened next?”",
+    u: ["ပန်းအိ နောက်တစ်ပုံ Generate လုပ်တယ်။ “What happened next?”",
         "ပုံထွက်လာတယ်။ အိမ်အဟောင်းတစ်လုံး။",
         "မခင်စန်း တံခါးရှေ့မှာရပ်နေတယ်။ သူ့လက်တစ်ဖက်က တံခါးကို ခေါက်နေတယ်။"] },
 
@@ -324,18 +324,18 @@ export const SCENES = [
     c: [[1, "bigstinger"]] },
 
   { t: "Number 42", l: "အိမ် ၄၂",
-    g: "သွန်း Zoom ဆွဲကြည့်တယ်။ အိမ်နံပါတ် — ၄၂။",
+    g: "ပန်းအိ Zoom ဆွဲကြည့်တယ်။ အိမ်နံပါတ် — ၄၂။",
     p: "⚠️ AI REGISTER, TEXT PERMITTED. A pixelated zoom into the enamel number plate beside the "
       + "door, reading exactly \"42\". That numeral is the only text in the image.",
-    u: ["သွန်း Zoom ဆွဲကြည့်တယ်။ အိမ်နံပါတ်—",
+    u: ["ပန်းအိ Zoom ဆွဲကြည့်တယ်။ အိမ်နံပါတ်—",
         "၄၂။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "A Video Call", l: "သွန်းအခန်း", w: ["သွန်း", "ကိုဇော်လင်း"],
-    g: "နောက်နေ့မှာ Unknown Account ပိုင်ရှင်နဲ့ သွန်း Video Call ပြောတယ်။ သူ့နာမည် ကိုဇော်လင်း။",
+  { t: "A Video Call", l: "ပန်းအိအခန်း", w: ["ပန်းအိ", "ကိုဇော်လင်း"],
+    g: "နောက်နေ့မှာ Unknown Account ပိုင်ရှင်နဲ့ ပန်းအိ Video Call ပြောတယ်။ သူ့နာမည် ကိုဇော်လင်း။",
     p: "A laptop screen showing a video call: a tired Burmese man of about forty in a plain room, "
       + "and a young woman's face reflected faintly in the dark edge of the screen.",
-    u: ["နောက်နေ့မှာ Unknown Account ပိုင်ရှင်နဲ့ သွန်း Video Call ပြောတယ်။",
+    u: ["နောက်နေ့မှာ Unknown Account ပိုင်ရှင်နဲ့ ပန်းအိ Video Call ပြောတယ်။",
         "သူ့နာမည် ကိုဇော်လင်း။ အသက် ၄၀ နီးပါး။",
         "မခင်စန်း ပျောက်သွားတဲ့အချိန်မှာ သူက ကလေးလေးပဲရှိသေးတယ်။"] },
 
@@ -344,11 +344,11 @@ export const SCENES = [
     p: "Close on the man's face on the call, speaking, thirty years of it in his expression.",
     u: ["“အမေ့ကို ရှာခဲ့တာ နှစ်တွေအများကြီးပဲ။ ဘာမှမတွေ့ဘူး။”"] },
 
-  { t: "I Know This House", l: "သွန်းအခန်း", w: ["ကိုဇော်လင်း"],
-    g: "သွန်း AI ပုံထဲက အိမ်ကို ပြတယ်။ ကိုဇော်လင်း မျက်နှာပျက်သွားတယ်။ “ဒီအိမ်ကို ကျွန်တော်သိတယ်။”",
+  { t: "I Know This House", l: "ပန်းအိအခန်း", w: ["ကိုဇော်လင်း"],
+    g: "ပန်းအိ AI ပုံထဲက အိမ်ကို ပြတယ်။ ကိုဇော်လင်း မျက်နှာပျက်သွားတယ်။ “ဒီအိမ်ကို ကျွန်တော်သိတယ်။”",
     p: "A phone held up to a laptop camera showing the AI house image, and on the call the man's "
       + "face changing as he sees it.",
-    u: ["သွန်း AI ပုံထဲက အိမ်ကို ပြတယ်။",
+    u: ["ပန်းအိ AI ပုံထဲက အိမ်ကို ပြတယ်။",
         "ကိုဇော်လင်း မျက်နှာပျက်သွားတယ်။ “ဒီအိမ်ကို ကျွန်တော်သိတယ်။”"],
     c: [[1, "bigstinger"]] },
 
@@ -360,11 +360,11 @@ export const SCENES = [
         "အဲဒီလူက အခုမရှိတော့ဘူး။ အိမ်လည်း နှစ်ပေါင်းများစွာ ပိတ်ထားတယ်။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "They Went to the House", l: "အိမ် ၄၂", w: ["သွန်း", "ကိုဇော်လင်း"],
-    g: "သွန်းနဲ့ ကိုဇော်လင်း အိမ်ကို သွားကြတယ်။ ဖုန်းနဲ့ Video ရိုက်ရင်း ဝင်ကြတယ်။",
+  { t: "They Went to the House", l: "အိမ် ၄၂", w: ["ပန်းအိ", "ကိုဇော်လင်း"],
+    g: "ပန်းအိနဲ့ ကိုဇော်လင်း အိမ်ကို သွားကြတယ်။ ဖုန်းနဲ့ Video ရိုက်ရင်း ဝင်ကြတယ်။",
     p: "A young woman and an older man standing in daylight in front of a shut-up old Yangon "
       + "townhouse, she filming on a phone held at chest height.",
-    u: ["သွန်းနဲ့ ကိုဇော်လင်း အိမ်ကို သွားကြတယ်။",
+    u: ["ပန်းအိနဲ့ ကိုဇော်လင်း အိမ်ကို သွားကြတယ်။",
         "ဖုန်းနဲ့ Video ရိုက်ရင်း ဝင်ကြတယ်။"] },
 
   { t: "Matching It Frame by Frame", l: "အိမ် ၄၂",
@@ -376,22 +376,22 @@ export const SCENES = [
         "အားလုံး တူနေတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "63% to 8%", l: "အိမ် ၄၂", w: ["သွန်း"],
-    g: "အပေါ်ထပ်ရောက်တော့ သွန်းဖုန်း Battery 63% ကနေ ရုတ်တရက် 8% ဖြစ်သွားတယ်။",
+  { t: "63% to 8%", l: "အိမ် ၄၂", w: ["ပန်းအိ"],
+    g: "အပေါ်ထပ်ရောက်တော့ ပန်းအိဖုန်း Battery 63% ကနေ ရုတ်တရက် 8% ဖြစ်သွားတယ်။",
     p: "A phone screen at the top of a dark staircase with its battery indicator shown as a nearly "
       + "empty red sliver, the camera app closing itself.",
     u: ["အပေါ်ထပ်ရောက်တော့—",
-        "သွန်းဖုန်း Battery 63% ကနေ ရုတ်တရက် 8% ဖြစ်သွားတယ်။",
+        "ပန်းအိဖုန်း Battery 63% ကနေ ရုတ်တရက် 8% ဖြစ်သွားတယ်။",
         "Camera App ပိတ်သွားတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "It Opened Itself", l: "အိမ် ၄၂", w: ["သွန်း"],
-    g: "ပြီးတော့ AI App က သူ့ဘာသာ ပွင့်လာတယ် — Generating image… သွန်း ဘာမှမနှိပ်ထားဘူး။",
+  { t: "It Opened Itself", l: "အိမ် ၄၂", w: ["ပန်းအိ"],
+    g: "ပြီးတော့ AI App က သူ့ဘာသာ ပွင့်လာတယ် — Generating image… ပန်းအိ ဘာမှမနှိပ်ထားဘူး။",
     p: "A phone screen showing a generator interface open by itself with a progress spinner turning, "
       + "and both of the woman's hands visible well away from the glass.",
     u: ["ပြီးတော့ AI App က သူ့ဘာသာ ပွင့်လာတယ်။",
         "Generating image…",
-        "သွန်း ဘာမှမနှိပ်ထားဘူး။"],
+        "ပန်းအိ ဘာမှမနှိပ်ထားဘူး။"],
     c: [[2, "bigstinger"]] },
 
   { t: "She Is Pointing at the Floor", l: "အိမ် ၄၂", w: ["မခင်စန်း"],
@@ -404,11 +404,11 @@ export const SCENES = [
         "သူမက ကြမ်းပြင်ကို လက်ညှိုးထိုးနေတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "They Lifted the Boards", l: "အိမ် ၄၂", w: ["သွန်း", "ကိုဇော်လင်း"],
+  { t: "They Lifted the Boards", l: "အိမ် ၄၂", w: ["ပန်းအိ", "ကိုဇော်လင်း"],
     g: "တစ်ယောက်ကိုတစ်ယောက် ကြည့်လိုက်ကြတယ်။ ကြမ်းပြင်ဟောင်းကို ဖွင့်ကြည့်တော့ — အောက်မှာ အလောင်းမရှိဘူး။",
     p: "Two people crouched over a lifted floorboard in a dusty upstairs room, torchlight into the "
       + "cavity. ⚠️ NO BODY, NO REMAINS — the space below holds only dust and one small object.",
-    u: ["သွန်းနဲ့ ကိုဇော်လင်း တစ်ယောက်ကိုတစ်ယောက် ကြည့်လိုက်ကြတယ်။",
+    u: ["ပန်းအိနဲ့ ကိုဇော်လင်း တစ်ယောက်ကိုတစ်ယောက် ကြည့်လိုက်ကြတယ်။",
         "ကြမ်းပြင်ဟောင်းကို ဖွင့်ကြည့်တော့—",
         "အောက်မှာ အလောင်းမရှိဘူး။"],
     c: [[2, "bigstinger"]] },
@@ -428,7 +428,7 @@ export const SCENES = [
       + "away and shadowed, and the man's own face above it draining.",
     u: ["ပုံထဲမှာ မခင်စန်းနဲ့ လူတစ်ယောက်။",
         "ကိုဇော်လင်း ပုံကိုမြင်တာနဲ့— “ဒီလူ မဟုတ်ဘူး…”",
-        "သွန်း ကြည့်လိုက်တယ်။ “ဘာကိုပြောတာလဲ?”"],
+        "ပန်းအိ ကြည့်လိုက်တယ်။ “ဘာကိုပြောတာလဲ?”"],
     c: [[1, "bigstinger"]] },
 
   { t: "That Is My Father", l: "အိမ် ၄၂", w: ["ကိုဇော်လင်း"],
@@ -448,14 +448,14 @@ export const SCENES = [
         "အဖေကလည်း အမေ့ကို ရှာနေခဲ့တယ်လို့ပဲ ယုံခဲ့တာ။"],
     c: [[2, "stinger"]] },
 
-  { t: "The Tape", l: "သွန်းအခန်း",
+  { t: "The Tape", l: "ပန်းအိအခန်း",
     g: "Cassette ကို ပြန်ဖွင့်ဖို့ Device ရှာကြတယ်။ အသံက ပျက်နေတယ်။",
     p: "An old cassette player on a table with the tape loaded and turning, its reels visible, a "
       + "single lamp beside it.",
     u: ["Cassette ကို ပြန်ဖွင့်ဖို့ Device ရှာကြတယ်။",
         "အသံက ပျက်နေတယ်။"] },
 
-  { t: "Her Voice, Arguing", l: "သွန်းအခန်း", w: ["ကိုဇော်လင်း"],
+  { t: "Her Voice, Arguing", l: "ပန်းအိအခန်း", w: ["ကိုဇော်လင်း"],
     g: "မခင်စန်းရဲ့အသံကို ကြားရတယ်။ သူမက တစ်ယောက်ယောက်နဲ့ ငြင်းခုံနေတယ်။ ပြီးတော့ အမျိုးသားအသံတစ်ခု။",
     p: "Close on the turning cassette reels, and out of focus behind them a man's face listening "
       + "with his eyes shut.",
@@ -464,7 +464,7 @@ export const SCENES = [
         "ပြီးတော့ အမျိုးသားအသံတစ်ခု။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "He Knew That Voice", l: "သွန်းအခန်း", w: ["ကိုဇော်လင်း"],
+  { t: "He Knew That Voice", l: "ပန်းအိအခန်း", w: ["ကိုဇော်လင်း"],
     g: "ကိုဇော်လင်း နားထောင်ပြီး မျက်ရည်ဝဲလာတယ်။ သူ့အဖေရဲ့အသံ။",
     p: "A man's face in lamplight with tears standing in his eyes, recognising something he has "
       + "heard all his life.",
@@ -489,7 +489,7 @@ export const SCENES = [
         "ဒါကို အဖေက လက်မခံခဲ့ဘူး။"],
     c: [[1, "stinger"]] },
 
-  { t: "Don't Touch My Son", l: "သွန်းအခန်း",
+  { t: "Don't Touch My Son", l: "ပန်းအိအခန်း",
     g: "နောက်ဆုံးမှာ မခင်စန်းရဲ့အသံတစ်ခုပဲ — “ငါ့သားကို မထိနဲ့…” ပြီးတော့ Tape ပြတ်သွားတယ်။",
     p: "Extreme close-up of the cassette as the tape snaps and the reels spin free, loose ribbon "
       + "slack inside the window.",
@@ -499,7 +499,7 @@ export const SCENES = [
         "ပြီးတော့ Tape ပြတ်သွားတယ်။"],
     c: [[3, "bigstinger"]] },
 
-  { t: "She Did Not Abandon Him", l: "သွန်းအခန်း", w: ["ကိုဇော်လင်း"],
+  { t: "She Did Not Abandon Him", l: "ပန်းအိအခန်း", w: ["ကိုဇော်လင်း"],
     g: "“မင်းအမေ ငါတို့ကို စွန့်ပစ်သွားတာ” လို့ သူ့အဖေပြောခဲ့တာကို ဘဝတစ်လျှောက် ယုံခဲ့တယ်။",
     p: "A man sitting down heavily on the floor with his back against a wall, hands over his face.",
     u: ["ကိုဇော်လင်း ထိုင်ချလိုက်တယ်။",
@@ -508,89 +508,89 @@ export const SCENES = [
         "သူ့သားကို ကယ်ဖို့ ထွက်ပြေးခဲ့တာ။"],
     c: [[3, "bigstinger"]] },
 
-  { t: "One Question Left", l: "သွန်းအခန်း", w: ["သွန်း"],
+  { t: "One Question Left", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
     g: "“မခင်စန်းနဲ့ ကျွန်မ ဘာလို့ အရမ်းတူနေတာလဲ?” ကိုဇော်လင်းလည်း မသိဘူး။ သူတို့အမျိုးမဟုတ်ဘူး။",
     p: "A young woman holding the old photograph up beside her own face in a mirror — two identical "
       + "faces, forty years apart.",
-    u: ["အမှုရဲ့အမှန်တရား နီးပါးပေါ်လာပြီ။ ဒါပေမယ့် သွန်းမှာ မေးခွန်းတစ်ခု ကျန်နေသေးတယ်။",
+    u: ["အမှုရဲ့အမှန်တရား နီးပါးပေါ်လာပြီ။ ဒါပေမယ့် ပန်းအိမှာ မေးခွန်းတစ်ခု ကျန်နေသေးတယ်။",
         "“မခင်စန်းနဲ့ ကျွန်မ ဘာလို့ အရမ်းတူနေတာလဲ?”",
         "ကိုဇော်လင်းလည်း မသိဘူး။ သူတို့အမျိုးမဟုတ်ဘူး။ မိသားစုဆက်နွယ်မှု မရှိဘူး။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Why Do I Look Like Her", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "အဲဒီည သွန်း အိမ်ပြန်ရောက်တယ်။ နောက်ဆုံးမေးခွန်း ရိုက်ထည့်လိုက်တယ် — “Why do I look like her?”",
+  { t: "Why Do I Look Like Her", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "အဲဒီည ပန်းအိ အိမ်ပြန်ရောက်တယ်။ နောက်ဆုံးမေးခွန်း ရိုက်ထည့်လိုက်တယ် — “Why do I look like her?”",
     p: "A woman alone at her laptop at night, typing a short line into a prompt field, her face lit "
       + "from below by the screen.",
-    u: ["အဲဒီည သွန်း အိမ်ပြန်ရောက်တယ်။ AI App ကိုဖွင့်တယ်။",
+    u: ["အဲဒီည ပန်းအိ အိမ်ပြန်ရောက်တယ်။ AI App ကိုဖွင့်တယ်။",
         "နောက်ဆုံးမေးခွန်း ရိုက်ထည့်လိုက်တယ်။",
         "“Why do I look like her?” Generate."],
     c: [[2, "bigstinger"]] },
 
-  { t: "This Is Not 1980", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "ပုံတစ်ပုံပေါ်လာတယ်။ သွန်းရဲ့လက်ရှိအခန်း။ လက်ရှိအဝတ်အစားနဲ့ သွန်း။ Laptop ရှေ့မှာ ထိုင်နေတယ်။",
+  { t: "This Is Not 1980", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပုံတစ်ပုံပေါ်လာတယ်။ ပန်းအိရဲ့လက်ရှိအခန်း။ လက်ရှိအဝတ်အစားနဲ့ ပန်းအိ။ Laptop ရှေ့မှာ ထိုင်နေတယ်။",
     p: "⚠️ MODERN REGISTER INSIDE A SCREEN — no film grain, no date stamp. The generated image shows "
       + "THIS room, THIS woman, in the clothes she is wearing right now, seated at the laptop, shot "
       + "from behind and slightly above.",
-    u: ["ပုံတစ်ပုံပေါ်လာတယ်။ သွန်းရဲ့လက်ရှိအခန်း။",
-        "လက်ရှိအဝတ်အစားနဲ့ သွန်း။ Laptop ရှေ့မှာ ထိုင်နေတယ်။",
+    u: ["ပုံတစ်ပုံပေါ်လာတယ်။ ပန်းအိရဲ့လက်ရှိအခန်း။",
+        "လက်ရှိအဝတ်အစားနဲ့ ပန်းအိ။ Laptop ရှေ့မှာ ထိုင်နေတယ်။",
         "ဒီပုံက ၁၉၈၀ မဟုတ်ဘူး။",
         "အခု။"],
     c: [[3, "bigstinger"]] },
 
-  { t: "The Camera Had No Permission", l: "သွန်းအခန်း", w: ["သွန်း"],
+  { t: "The Camera Had No Permission", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
     g: "AI က Camera permission မရှိဘူး။ ဒါပေမယ့် ပုံထဲမှာ သူ အခုထိုင်နေတဲ့ပုံ အတိအကျ။",
     p: "A laptop with a strip of tape over its camera, and on the screen beside it the image that "
       + "could only have been taken from exactly there.",
-    u: ["သွန်း ရင်တုန်သွားတယ်။",
+    u: ["ပန်းအိ ရင်တုန်သွားတယ်။",
         "AI က Camera permission မရှိဘူး။",
         "ဒါပေမယ့် ပုံထဲမှာ— သူ အခုထိုင်နေတဲ့ပုံ အတိအကျ။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "14 SEP 2026 — Tomorrow", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "နောက်တစ်ပုံ Auto Generate ဖြစ်လာတယ်။ သွန်း အိပ်ရာပေါ်မှာ အိပ်နေတယ်။ အောက်မှာ Date — 14 SEP 2026။ မနက်ဖြန်။",
+  { t: "14 SEP 2026 — Tomorrow", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "နောက်တစ်ပုံ Auto Generate ဖြစ်လာတယ်။ ပန်းအိ အိပ်ရာပေါ်မှာ အိပ်နေတယ်။ အောက်မှာ Date — 14 SEP 2026။ မနက်ဖြန်။",
     p: "⚠️ TEXT PERMITTED. A generated image of the woman asleep in her own bed seen from above, with "
       + "a small burned-in date stamp in the lower right reading exactly \"14 SEP 2026\". That string "
       + "is the only text.",
     u: ["နောက်တစ်ပုံ Auto Generate ဖြစ်လာတယ်။",
-        "သွန်း အိပ်ရာပေါ်မှာ အိပ်နေတယ်။ အောက်မှာ Date— 14 SEP 2026",
+        "ပန်းအိ အိပ်ရာပေါ်မှာ အိပ်နေတယ်။ အောက်မှာ Date— 14 SEP 2026",
         "မနက်ဖြန်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "15 SEP 2026 — The Room Is Empty", l: "သွန်းအခန်း",
-    g: "နောက်တစ်ပုံ — 15 SEP 2026။ အခန်းထဲမှာ သွန်း မရှိတော့ဘူး။",
+  { t: "15 SEP 2026 — The Room Is Empty", l: "ပန်းအိအခန်း",
+    g: "နောက်တစ်ပုံ — 15 SEP 2026။ အခန်းထဲမှာ ပန်းအိ မရှိတော့ဘူး။",
     p: "⚠️ TEXT PERMITTED. The same bedroom from the same angle, the bed unmade and empty, nobody in "
       + "the room. Date stamp lower right reading exactly \"15 SEP 2026\".",
-    u: ["သွန်း မျက်နှာပျက်သွားတယ်။ နောက်တစ်ပုံ။",
+    u: ["ပန်းအိ မျက်နှာပျက်သွားတယ်။ နောက်တစ်ပုံ။",
         "15 SEP 2026",
-        "အခန်းထဲမှာ သွန်း မရှိတော့ဘူး။"],
+        "အခန်းထဲမှာ ပန်းအိ မရှိတော့ဘူး။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "16 SEP 2026 — Missing Person", l: "ဖုန်းဖန်သား", w: ["သွန်း"],
-    g: "နောက်တစ်ပုံ — 16 SEP 2026။ Facebook ပေါ်မှာ သွန်းရဲ့ပုံ။ အောက်မှာ — MISSING PERSON — PLEASE SHARE",
+  { t: "16 SEP 2026 — Missing Person", l: "ဖုန်းဖန်သား", w: ["ပန်းအိ"],
+    g: "နောက်တစ်ပုံ — 16 SEP 2026။ Facebook ပေါ်မှာ ပန်းအိရဲ့ပုံ။ အောက်မှာ — MISSING PERSON — PLEASE SHARE",
     p: "⚠️ TEXT PERMITTED. A generated image of a social media post: the woman's own selfie with a "
       + "banner beneath it reading exactly \"MISSING PERSON — PLEASE SHARE\", and a date stamp "
       + "reading \"16 SEP 2026\". Those two strings are the only text in the image.",
     u: ["နောက်တစ်ပုံ။ 16 SEP 2026",
-        "Facebook ပေါ်မှာ သွန်းရဲ့ပုံ။ အောက်မှာ စာတွေ။",
+        "Facebook ပေါ်မှာ ပန်းအိရဲ့ပုံ။ အောက်မှာ စာတွေ။",
         "“MISSING PERSON — PLEASE SHARE”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "It Was Showing Her Future", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "AI က မခင်စန်းရဲ့အတိတ်ကိုပဲ ပြနေတာ မဟုတ်ဘူး။ သွန်းရဲ့ အနာဂတ်ကိုလည်း ပြနေပြီ။",
+  { t: "It Was Showing Her Future", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "AI က မခင်စန်းရဲ့အတိတ်ကိုပဲ ပြနေတာ မဟုတ်ဘူး။ ပန်းအိရဲ့ အနာဂတ်ကိုလည်း ပြနေပြီ။",
     p: "A phone dropped onto a bed, still lit, and a woman backed away from it against the wall.",
-    u: ["သွန်း ဖုန်းကို လွှတ်ချလိုက်တယ်။",
+    u: ["ပန်းအိ ဖုန်းကို လွှတ်ချလိုက်တယ်။",
         "AI က မခင်စန်းရဲ့အတိတ်ကိုပဲ ပြနေတာ မဟုတ်ဘူး။",
-        "သွန်းရဲ့ အနာဂတ်ကိုလည်း ပြနေပြီ။"],
+        "ပန်းအိရဲ့ အနာဂတ်ကိုလည်း ပြနေပြီ။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "She Did Everything Right", l: "သွန်းအခန်း", w: ["သွန်း", "သူငယ်ချင်း"],
-    g: "သွန်း တစ်ယောက်တည်း မနေတော့ဘူး။ သူငယ်ချင်းကိုခေါ်တယ်။ Location Sharing ဖွင့်ထားတယ်။",
+  { t: "She Did Everything Right", l: "ပန်းအိအခန်း", w: ["ပန်းအိ", "သူငယ်ချင်း"],
+    g: "ပန်းအိ တစ်ယောက်တည်း မနေတော့ဘူး။ သူငယ်ချင်းကိုခေါ်တယ်။ Location Sharing ဖွင့်ထားတယ်။",
     p: "Two young women in a small apartment in daylight, one showing the other a phone with a "
       + "location-sharing map open on it.",
-    u: ["သွန်း အဲဒီညကတည်းက တစ်ယောက်တည်း မနေတော့ဘူး။ သူငယ်ချင်းကိုခေါ်တယ်။",
+    u: ["ပန်းအိ အဲဒီညကတည်းက တစ်ယောက်တည်း မနေတော့ဘူး။ သူငယ်ချင်းကိုခေါ်တယ်။",
         "Location Sharing ဖွင့်ထားတယ်။ Cloud Backup ဖွင့်ထားတယ်။"] },
 
-  { t: "Tape Over the Cameras", l: "သွန်းအခန်း", w: ["သွန်း"],
+  { t: "Tape Over the Cameras", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
     g: "အိမ်တံခါး Lock လုပ်တယ်။ ဖုန်း Camera တွေကို Tape ကပ်ထားတယ်။ AI App ကို Delete လုပ်တယ်။",
     p: "Close on a phone with small squares of black tape pressed over both camera lenses, a hand "
       + "smoothing one down.",
@@ -599,7 +599,7 @@ export const SCENES = [
         "AI App ကို Delete လုပ်တယ်။"],
     c: [[2, "stinger"]] },
 
-  { t: "Nothing Happened", l: "သွန်းအခန်း", w: ["သွန်း", "သူငယ်ချင်း"],
+  { t: "Nothing Happened", l: "ပန်းအိအခန်း", w: ["ပန်းအိ", "သူငယ်ချင်း"],
     g: "မနက် ၁၂ နာရီကျော်။ ဘာမှမဖြစ်ဘူး။ ၁ နာရီ။ ဘာမှမဖြစ်ဘူး။",
     p: "Two women sitting on a bed with the curtains open and daylight in the room, both a little "
       + "bored, one checking the time.",
@@ -615,21 +615,21 @@ export const SCENES = [
         "Your image is ready."],
     c: [[2, "bigstinger"]] },
 
-  { t: "Open It and See", l: "သွန်းအခန်း", w: ["သွန်း", "သူငယ်ချင်း"],
-    g: "သွန်း မဖွင့်ရဲဘူး။ ဒါပေမယ့် သူ့သူငယ်ချင်းက “ကြည့်လိုက်။ ကြိုသိရင် ရှောင်လို့ရတာပေါ့”",
+  { t: "Open It and See", l: "ပန်းအိအခန်း", w: ["ပန်းအိ", "သူငယ်ချင်း"],
+    g: "ပန်းအိ မဖွင့်ရဲဘူး။ ဒါပေမယ့် သူ့သူငယ်ချင်းက “ကြည့်လိုက်။ ကြိုသိရင် ရှောင်လို့ရတာပေါ့”",
     p: "One woman reaching for the phone while the other pulls back from it, both hands in frame "
       + "over the lit screen.",
-    u: ["သွန်း မဖွင့်ရဲဘူး။",
+    u: ["ပန်းအိ မဖွင့်ရဲဘူး။",
         "ဒါပေမယ့် သူ့သူငယ်ချင်းက— “ကြည့်လိုက်။ ကြိုသိရင် ရှောင်လို့ရတာပေါ့”",
         "ပုံကိုဖွင့်လိုက်ကြတယ်။"],
     c: [[2, "stinger"]] },
 
-  { t: "Thun at the Door", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "ပုံထဲမှာ သွန်း။ အခန်းတံခါးနားမှာ ရပ်နေတယ်။ တံခါးအပြင်ဘက်မှာ — မခင်စန်း။",
+  { t: "Pan Ei at the Door", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပုံထဲမှာ ပန်းအိ။ အခန်းတံခါးနားမှာ ရပ်နေတယ်။ တံခါးအပြင်ဘက်မှာ — မခင်စန်း။",
     p: "A generated image showing the woman standing just inside her own front door — and beyond it, "
       + "in the faded 1987 register, the other woman standing in the corridor. ⚠️ TWO REGISTERS IN "
       + "ONE FRAME, divided exactly by the door line: modern and clean inside, faded film outside.",
-    u: ["ပုံထဲမှာ သွန်း။ အခန်းတံခါးနားမှာ ရပ်နေတယ်။",
+    u: ["ပုံထဲမှာ ပန်းအိ။ အခန်းတံခါးနားမှာ ရပ်နေတယ်။",
         "တံခါးအပြင်ဘက်မှာ—",
         "မခင်စန်း။"],
     c: [[2, "bigstinger"]] },
@@ -643,7 +643,7 @@ export const SCENES = [
         "မဖွင့်နဲ့ ဆိုတဲ့ပုံစံနဲ့ ခေါင်းခါနေတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Knock. Knock. Knock.", l: "သွန်းအခန်း",
+  { t: "Knock. Knock. Knock.", l: "ပန်းအိအခန်း",
     g: "အဲဒီအချိန် — တံခါးခေါက်သံ။",
     p: "A closed apartment door seen from inside, the light gap beneath it unbroken, the two women "
       + "frozen in the foreground out of focus.",
@@ -651,7 +651,7 @@ export const SCENES = [
         "တံခါးခေါက်သံ။"],
     c: [[1, "knock"]] },
 
-  { t: "Nobody on the Camera", l: "သွန်းအခန်း", w: ["သူငယ်ချင်း"],
+  { t: "Nobody on the Camera", l: "ပန်းအိအခန်း", w: ["သူငယ်ချင်း"],
     g: "သူငယ်ချင်းက CCTV ကြည့်တယ်။ ဘယ်သူမှမရှိဘူး။",
     p: "A phone showing a CCTV feed of an empty corridor outside a door — grainy, wide-angle, "
       + "completely empty.",
@@ -659,50 +659,50 @@ export const SCENES = [
         "ဘယ်သူမှမရှိဘူး။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Thun, Open the Door", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "ပြီးတော့ အပြင်က အသံတစ်ခု။ မိန်းမအသံ — “သွန်း… တံခါးဖွင့်ပါ…”",
+  { t: "Pan Ei, Open the Door", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပြီးတော့ အပြင်က အသံတစ်ခု။ မိန်းမအသံ — “ပန်းအိ… တံခါးဖွင့်ပါ…”",
     p: "Close on a woman's face turned toward a closed door, listening to something on the other "
       + "side of it, the colour gone out of her.",
     u: ["Knock. Knock. Knock.",
         "ပြီးတော့ အပြင်က အသံတစ်ခု။ မိန်းမအသံ။",
-        "“သွန်း… တံခါးဖွင့်ပါ…”"],
+        "“ပန်းအိ… တံခါးဖွင့်ပါ…”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "It Was Her Mother's Voice", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်းရဲ့မျက်နှာ ဖြူသွားတယ်။ အသံက — သူ့အမေရဲ့အသံ။ ဒါပေမယ့် သူ့အမေက အဲဒီည မန္တလေးမှာ။",
+  { t: "It Was Her Mother's Voice", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိရဲ့မျက်နှာ ဖြူသွားတယ်။ အသံက — သူ့အမေရဲ့အသံ။ ဒါပေမယ့် သူ့အမေက အဲဒီည မန္တလေးမှာ။",
     p: "A woman's face going white, one hand over her own mouth, staring at a closed door.",
-    u: ["သွန်းရဲ့မျက်နှာ ဖြူသွားတယ်။ အသံက—",
+    u: ["ပန်းအိရဲ့မျက်နှာ ဖြူသွားတယ်။ အသံက—",
         "သူ့အမေရဲ့အသံ။",
         "ဒါပေမယ့် သူ့အမေက အဲဒီည မန္တလေးမှာ။"],
     c: [[1, "bigstinger"]] },
 
   { t: "Her Mother Picked Up", l: "ဖုန်းဖန်သား",
-    g: "သွန်း Video Call ခေါ်လိုက်တယ်။ အမေ ကိုင်တယ်။ မန္တလေး Hotel Room ထဲမှာ။ ဒါဆို အပြင်မှာ ဘယ်သူလဲ?",
+    g: "ပန်းအိ Video Call ခေါ်လိုက်တယ်။ အမေ ကိုင်တယ်။ မန္တလေး Hotel Room ထဲမှာ။ ဒါဆို အပြင်မှာ ဘယ်သူလဲ?",
     p: "A phone screen showing a video call with an older Burmese woman in a bright hotel room, "
       + "utterly ordinary — and the dark apartment visible around the edges of the phone.",
-    u: ["သွန်း Video Call ခေါ်လိုက်တယ်။ အမေ ကိုင်တယ်။ မန္တလေး Hotel Room ထဲမှာ။",
+    u: ["ပန်းအိ Video Call ခေါ်လိုက်တယ်။ အမေ ကိုင်တယ်။ မန္တလေး Hotel Room ထဲမှာ။",
         "ဒါဆို အပြင်မှာ ဘယ်သူလဲ?"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Everything Went Quiet", l: "သွန်းအခန်း",
+  { t: "Everything Went Quiet", l: "ပန်းအိအခန်း",
     g: "တံခါးခေါက်သံ ရပ်သွားတယ်။ အရာအားလုံး တိတ်သွားတယ်။",
     p: "The closed door again, still, the corridor light unbroken beneath it. Held one beat too "
       + "long.",
     u: ["တံခါးခေါက်သံ ရပ်သွားတယ်။",
         "အရာအားလုံး တိတ်သွားတယ်။"] },
 
-  { t: "Someone Behind Them", l: "သွန်းအခန်း", w: ["သွန်း", "သူငယ်ချင်း", "အဖေ"],
-    g: "အခုအခန်းရဲ့ပုံ။ သွန်းနဲ့ သူ့သူငယ်ချင်း။ ပြီးတော့ — သူတို့နှစ်ယောက်ရဲ့ အနောက်မှာ လူတစ်ယောက်။",
+  { t: "Someone Behind Them", l: "ပန်းအိအခန်း", w: ["ပန်းအိ", "သူငယ်ချင်း", "အဖေ"],
+    g: "အခုအခန်းရဲ့ပုံ။ ပန်းအိနဲ့ သူ့သူငယ်ချင်း။ ပြီးတော့ — သူတို့နှစ်ယောက်ရဲ့ အနောက်မှာ လူတစ်ယောက်။",
     p: "A generated image of this room, right now: the two women in the foreground looking at a "
       + "phone — and standing behind them, ⚠️ AN UNRESOLVED DARK FIGURE, no face, no detail, simply "
       + "present.",
-    u: ["သွန်း အသက်ရှူချလိုက်တဲ့အချိန်— သူ့ဖုန်းမှာ ပုံအသစ် Auto Generate ဖြစ်လာတယ်။",
-        "အခုအခန်းရဲ့ပုံ။ သွန်းနဲ့ သူ့သူငယ်ချင်း။",
+    u: ["ပန်းအိ အသက်ရှူချလိုက်တဲ့အချိန်— သူ့ဖုန်းမှာ ပုံအသစ် Auto Generate ဖြစ်လာတယ်။",
+        "အခုအခန်းရဲ့ပုံ။ ပန်းအိနဲ့ သူ့သူငယ်ချင်း။",
         "ပြီးတော့—",
         "သူတို့နှစ်ယောက်ရဲ့ အနောက်မှာ လူတစ်ယောက်။"],
     c: [[3, "bigstinger"]] },
 
-  { t: "It Never Needed the Door", l: "သွန်းအခန်း",
+  { t: "It Never Needed the Door", l: "ပန်းအိအခန်း",
     g: "တံခါးအပြင်က အရာက — ဝင်ဖို့ တံခါးဖွင့်စရာ မလိုခဲ့ဘူး။",
     p: "The same room photographed for real, empty behind the two women — the space where the figure "
       + "stood in the generated image, containing nothing.",
@@ -710,7 +710,7 @@ export const SCENES = [
         "ဝင်ဖို့ တံခါးဖွင့်စရာ မလိုခဲ့ဘူး။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "The Lights Went Out", l: "သွန်းအခန်း", w: ["သွန်း"],
+  { t: "The Lights Went Out", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
     g: "မီးတွေ ငြိမ်းသွားတယ်။ ဖုန်း Flashlight တစ်ခုပဲ ကျန်တယ်။",
     p: "A dark apartment lit only by a single phone torch, its beam narrow and hard, everything "
       + "outside it black.",
@@ -718,7 +718,7 @@ export const SCENES = [
         "ဖုန်း Flashlight တစ်ခုပဲ ကျန်တယ်။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Something Moved in the Mirror", l: "သွန်းအခန်း",
+  { t: "Something Moved in the Mirror", l: "ပန်းအိအခန်း",
     g: "အခန်းထဲက မှန်ပေါ်မှာ လူရိပ်တစ်ခု လှုပ်သွားတယ်။",
     p: "A bedroom mirror caught in torchlight with a shape just leaving its edge — a blur, never "
       + "resolved, gone before it can be read.",
@@ -729,19 +729,19 @@ export const SCENES = [
     g: "Screen ပေါ်မှာ မခင်စန်းရဲ့ပုံ ထပ်ပေါ်လာတယ်။ သူမက အခန်းရဲ့ ထောင့်တစ်နေရာကို လက်ညှိုးထိုးနေတယ်။",
     p: "⚠️ AI REGISTER inside a phone screen. The 1987 woman pointing off to one side, her arm and "
       + "finger clearly directing the viewer to a specific corner of the room.",
-    u: ["သွန်း ဖုန်းကိုင်ပြီး အပြင်ပြေးမယ်လုပ်တော့—",
+    u: ["ပန်းအိ ဖုန်းကိုင်ပြီး အပြင်ပြေးမယ်လုပ်တော့—",
         "Screen ပေါ်မှာ မခင်စန်းရဲ့ပုံ ထပ်ပေါ်လာတယ်။",
         "သူမက အခန်းရဲ့ ထောင့်တစ်နေရာကို လက်ညှိုးထိုးနေတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Nothing There", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်း အဲဒီဘက်ကို Flashlight ထိုးလိုက်တယ်။ ဘာမှမရှိဘူး။",
+  { t: "Nothing There", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိ အဲဒီဘက်ကို Flashlight ထိုးလိုက်တယ်။ ဘာမှမရှိဘူး။",
     p: "A torch beam thrown into an empty corner of a dark room — bare wall, bare floor, nothing at "
       + "all.",
-    u: ["သွန်း အဲဒီဘက်ကို Flashlight ထိုးလိုက်တယ်။",
+    u: ["ပန်းအိ အဲဒီဘက်ကို Flashlight ထိုးလိုက်တယ်။",
         "ဘာမှမရှိဘူး။"] },
 
-  { t: "But Through the Camera", l: "သွန်းအခန်း", w: ["အဖေ"],
+  { t: "But Through the Camera", l: "ပန်းအိအခန်း", w: ["အဖေ"],
     g: "ဒါပေမယ့် Phone Camera နဲ့ ကြည့်လိုက်တဲ့အခါ — လူတစ်ယောက်။ ၁၉၈၇ ခုနှစ်က ကိုဇော်လင်းရဲ့အဖေ။",
     p: "A phone held up with its live camera view filling the screen: in the same corner the naked "
       + "eye found empty, ⚠️ A MAN IN 1987 CLOTHES, standing, HIS FACE UNRESOLVED — grain, shadow, "
@@ -751,19 +751,19 @@ export const SCENES = [
         "၁၉၈၇ ခုနှစ်က ကိုဇော်လင်းရဲ့အဖေ။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "He Followed Her the Same Way", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သူဟာ မခင်စန်းနောက်ကို လိုက်ခဲ့တဲ့အတိုင်း — အခု သွန်းနောက်ကို လိုက်နေတယ်။",
+  { t: "He Followed Her the Same Way", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "သူဟာ မခင်စန်းနောက်ကို လိုက်ခဲ့တဲ့အတိုင်း — အခု ပန်းအိနောက်ကို လိုက်နေတယ်။",
     p: "A woman backing toward a doorway holding a phone up in front of her like a mirror, watching "
       + "the corner through it rather than with her eyes.",
     u: ["သူဟာ မခင်စန်းနောက်ကို လိုက်ခဲ့တဲ့အတိုင်း—",
-        "အခု သွန်းနောက်ကို လိုက်နေတယ်။"],
+        "အခု ပန်းအိနောက်ကို လိုက်နေတယ်။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "It Was Never a Mistake", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "AI က သွန်းကို မခင်စန်းနဲ့ တူအောင် ဖန်တီးခဲ့တာ မဟုတ်ဘူး။ မှားသိနေခဲ့တာလည်း မဟုတ်ဘူး။",
+  { t: "It Was Never a Mistake", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "AI က ပန်းအိကို မခင်စန်းနဲ့ တူအောင် ဖန်တီးခဲ့တာ မဟုတ်ဘူး။ မှားသိနေခဲ့တာလည်း မဟုတ်ဘူး။",
     p: "Close on the woman's face as she works it out, the phone light under her chin.",
-    u: ["အဲဒီအချိန်မှာ သွန်း နားလည်သွားတယ်။",
-        "AI က သွန်းကို မခင်စန်းနဲ့ တူအောင် ဖန်တီးခဲ့တာ မဟုတ်ဘူး။",
+    u: ["အဲဒီအချိန်မှာ ပန်းအိ နားလည်သွားတယ်။",
+        "AI က ပန်းအိကို မခင်စန်းနဲ့ တူအောင် ဖန်တီးခဲ့တာ မဟုတ်ဘူး။",
         "AI က သူ့ကို မခင်စန်းအဖြစ် မှားသိနေခဲ့တာလည်း မဟုတ်ဘူး။"],
     c: [[2, "bigstinger"]] },
 
@@ -776,23 +776,23 @@ export const SCENES = [
     c: [[1, "bigstinger"]] },
 
   { t: "This Time She Wanted Her to Get Out", l: "ဖုန်းဖန်သား", w: ["မခင်စန်း"],
-    g: "အဲဒီည မခင်စန်း မလွတ်မြောက်ခဲ့ဘူး။ ဒီတစ်ကြိမ်တော့ — သူ သွန်းကို လွတ်မြောက်စေချင်တာ။",
+    g: "အဲဒီည မခင်စန်း မလွတ်မြောက်ခဲ့ဘူး။ ဒီတစ်ကြိမ်တော့ — သူ ပန်းအိကို လွတ်မြောက်စေချင်တာ။",
     p: "⚠️ AI REGISTER inside a phone screen. The 1987 woman, calm now, one arm extended to point "
       + "down a staircase — directing, not pleading.",
     u: ["အဲဒီည မခင်စန်း မလွတ်မြောက်ခဲ့ဘူး။",
         "ဒီတစ်ကြိမ်တော့—",
-        "သူ သွန်းကို လွတ်မြောက်စေချင်တာ။"],
+        "သူ ပန်းအိကို လွတ်မြောက်စေချင်တာ။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "She Ran the Route", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်းက AI ပြထားတဲ့ လမ်းကြောင်းအတိုင်း ပြေးထွက်တယ်။ လှေကား။ အောက်ထပ်။ လမ်းမ။",
+  { t: "She Ran the Route", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိက AI ပြထားတဲ့ လမ်းကြောင်းအတိုင်း ပြေးထွက်တယ်။ လှေကား။ အောက်ထပ်။ လမ်းမ။",
     p: "A woman running down an apartment stairwell at night with a phone held out in front of her, "
       + "motion blur, the stair light strobing past.",
-    u: ["သွန်းက AI ပြထားတဲ့ လမ်းကြောင်းအတိုင်း ပြေးထွက်တယ်။",
+    u: ["ပန်းအိက AI ပြထားတဲ့ လမ်းကြောင်းအတိုင်း ပြေးထွက်တယ်။",
         "လှေကား။ အောက်ထပ်။ လမ်းမ။"],
     c: [[1, "heartbeat"]] },
 
-  { t: "The Place Where She Stood", l: null, w: ["သွန်း"],
+  { t: "The Place Where She Stood", l: null, w: ["ပန်းအိ"],
     g: "နောက်ဆုံးပုံမှာ မခင်စန်း ရပ်နေတဲ့နေရာအထိ။ အဲဒီနေရာရောက်တာနဲ့ — ဖုန်း Screen ဖြူသွားတယ်။",
     p: "A young woman stopping on an empty night street at a specific spot on the pavement, phone "
       + "in her hand, its screen blown out to pure white.",
@@ -816,11 +816,11 @@ export const SCENES = [
         "“အမေက ကျွန်တော့်ကို စွန့်ပစ်ခဲ့တာ မဟုတ်ပါဘူး။ ကျွန်တော့်ကို ကယ်ခဲ့တာပါ။”"],
     c: [[1, "bigstinger"]] },
 
-  { t: "She Never Did the Trend Again", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်းကတော့ AI 1980 Trend ကို လုံးဝ မလုပ်တော့ဘူး။ ထူးဆန်းတဲ့ပုံလည်း မထွက်တော့ဘူး။",
+  { t: "She Never Did the Trend Again", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိကတော့ AI 1980 Trend ကို လုံးဝ မလုပ်တော့ဘူး။ ထူးဆန်းတဲ့ပုံလည်း မထွက်တော့ဘူး။",
     p: "A woman sitting by a window in daylight with her phone face-down on the sill beside her, "
       + "looking out instead.",
-    u: ["သွန်းကတော့ AI 1980 Trend ကို လုံးဝ မလုပ်တော့ဘူး။",
+    u: ["ပန်းအိကတော့ AI 1980 Trend ကို လုံးဝ မလုပ်တော့ဘူး။",
         "အဲဒီညကတည်းက ထူးဆန်းတဲ့ပုံလည်း မထွက်တော့ဘူး။"] },
 
   { t: "A New Trend", l: "ဖုန်းဖန်သား",
@@ -831,14 +831,14 @@ export const SCENES = [
         "Trend အသစ်တစ်ခု ထပ်ပေါ်လာတယ်။",
         "“AI နဲ့ ကိုယ်အသက် ၈၀ ရောက်ရင် ဘယ်လိုပုံစံဖြစ်မလဲ?”"] },
 
-  { t: "No Thanks", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "တစ်ယောက်က သွန်းကို Tag လုပ်တယ် — “နင်လည်းလုပ် 😂” သွန်း ရယ်ပြီး “တော်ပြီဟာ”",
+  { t: "No Thanks", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "တစ်ယောက်က ပန်းအိကို Tag လုပ်တယ် — “နင်လည်းလုပ် 😂” ပန်းအိ ရယ်ပြီး “တော်ပြီဟာ”",
     p: "A woman smiling faintly at her phone and typing a two-word reply, relaxed, in daylight.",
-    u: ["သူငယ်ချင်းတွေ Group Chat ထဲမှာ ပုံတွေ ပို့နေကြတယ်။ တစ်ယောက်က သွန်းကို Tag လုပ်တယ်။",
+    u: ["သူငယ်ချင်းတွေ Group Chat ထဲမှာ ပုံတွေ ပို့နေကြတယ်။ တစ်ယောက်က ပန်းအိကို Tag လုပ်တယ်။",
         "“နင်လည်းလုပ် 😂”",
-        "သွန်း ရယ်ပြီး— “တော်ပြီဟာ” လို့ Reply လုပ်လိုက်တယ်။"] },
+        "ပန်းအိ ရယ်ပြီး— “တော်ပြီဟာ” လို့ Reply လုပ်လိုက်တယ်။"] },
 
-  { t: "It Arrived Anyway", l: "ဖုန်းဖန်သား", w: ["သွန်း"],
+  { t: "It Arrived Anyway", l: "ဖုန်းဖန်သား", w: ["ပန်းအိ"],
     g: "ဒါပေမယ့် သူ ဘာမှ Generate မလုပ်ရသေးခင် — ဖုန်း Gallery ထဲကို ပုံတစ်ပုံ ဝင်လာတယ်။",
     p: "A phone gallery with a single new image appearing at the top of the grid on its own, "
       + "unprompted, a thumb frozen mid-scroll.",
@@ -847,17 +847,17 @@ export const SCENES = [
         "ဖုန်း Gallery ထဲကို ပုံတစ်ပုံ ဝင်လာတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Eighty Years Old, Smiling", l: null, w: ["သွန်း"],
-    g: "အသက် ၈၀ အရွယ် သွန်း။ ဆံပင်ဖြူဖြူ။ မျက်နှာမှာ အရေးအကြောင်းတွေ။ ပြုံးနေတယ်။",
+  { t: "Eighty Years Old, Smiling", l: null, w: ["ပန်းအိ"],
+    g: "အသက် ၈၀ အရွယ် ပန်းအိ။ ဆံပင်ဖြူဖြူ။ မျက်နှာမှာ အရေးအကြောင်းတွေ။ ပြုံးနေတယ်။",
     p: "An AI-aged portrait of the same woman at eighty: white hair, deeply lined face, a warm "
       + "genuine smile. Modern clean rendering, no film grain — it looks kind.",
-    u: ["အသက် ၈၀ အရွယ် သွန်း။ ဆံပင်ဖြူဖြူ။",
+    u: ["အသက် ၈၀ အရွယ် ပန်းအိ။ ဆံပင်ဖြူဖြူ။",
         "မျက်နှာမှာ အရေးအကြောင်းတွေ။ ပြုံးနေတယ်။"] },
 
-  { t: "A Good Picture, She Thought", l: "သွန်းအခန်း", w: ["သွန်း"],
-    g: "သွန်း အကြာကြီးကြည့်ပြီး သက်ပြင်းချလိုက်တယ်။ ဒီတစ်ခါတော့ ကောင်းတဲ့ပုံလို့ ထင်လိုက်တယ်။",
+  { t: "A Good Picture, She Thought", l: "ပန်းအိအခန်း", w: ["ပန်းအိ"],
+    g: "ပန်းအိ အကြာကြီးကြည့်ပြီး သက်ပြင်းချလိုက်တယ်။ ဒီတစ်ခါတော့ ကောင်းတဲ့ပုံလို့ ထင်လိုက်တယ်။",
     p: "A woman looking at her phone with something like relief on her face, letting out a breath.",
-    u: ["သွန်း အကြာကြီးကြည့်ပြီး— သက်ပြင်းချလိုက်တယ်။",
+    u: ["ပန်းအိ အကြာကြီးကြည့်ပြီး— သက်ပြင်းချလိုက်တယ်။",
         "ဒီတစ်ခါတော့ ကောင်းတဲ့ပုံလို့ ထင်လိုက်တယ်။"] },
 
   { t: "A Calendar on the Wall", l: null,
@@ -865,7 +865,7 @@ export const SCENES = [
     p: "⚠️ TEXT PERMITTED. A pixelated zoom into the wall behind the aged woman: a paper calendar "
       + "whose year reads exactly \"2027\". That numeral is the only text in the image.",
     u: ["ဒါပေမယ့် ပုံကို Zoom ဆွဲကြည့်လိုက်တဲ့အခါ—",
-        "အသက်ကြီးနေတဲ့ သွန်းရဲ့နောက်က နံရံပေါ်မှာ—",
+        "အသက်ကြီးနေတဲ့ ပန်းအိရဲ့နောက်က နံရံပေါ်မှာ—",
         "Calendar တစ်ခုရှိနေတယ်။ 2027"],
     c: [[2, "bigstinger"]] },
 
@@ -878,11 +878,11 @@ export const SCENES = [
         "“AGE: 26”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "A Hospital Band", l: null, w: ["သွန်း"],
+  { t: "A Hospital Band", l: null, w: ["ပန်းအိ"],
     g: "အဘွားအိုရဲ့ လက်တစ်ဖက်မှာ — ဆေးရုံလက်ပတ်တစ်ခု။",
     p: "Close on the aged woman's wrist in the generated portrait: a white plastic hospital "
       + "identification band around it, previously unnoticed at the edge of frame.",
-    u: ["သွန်းရဲ့အပြုံး ပျောက်သွားတယ်။",
+    u: ["ပန်းအိရဲ့အပြုံး ပျောက်သွားတယ်။",
         "ပုံထဲက အသက် ၈၀ အရွယ် သူ့ကိုယ်သူကို ပြန်ကြည့်လိုက်တယ်။ ဒီတစ်ခါမှ သတိထားမိတယ်။",
         "အဘွားအိုရဲ့ လက်တစ်ဖက်မှာ— ဆေးရုံလက်ပတ်တစ်ခု။"],
     c: [[2, "bigstinger"]] },
@@ -896,7 +896,7 @@ export const SCENES = [
         "မခင်စန်း ပျောက်သွားခဲ့တဲ့— အောက်တိုဘာ ၁၇ ရက်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Generating Your Next Memory", l: "ဖုန်းဖန်သား", w: ["သွန်း"],
+  { t: "Generating Your Next Memory", l: "ဖုန်းဖန်သား", w: ["ပန်းအိ"],
     g: "နောက်ဆုံးပုံ — ဖုန်းက သူ့ဘာသာ နောက်ပုံတစ်ပုံ Generate လုပ်လာတယ်။ Generating your next memory…",
     p: "⚠️ TEXT PERMITTED. Final composition: a phone held in a woman's hand, the screen showing a "
       + "progress spinner with the line \"Generating your next memory…\" beneath it and nothing else. "
