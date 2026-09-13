@@ -1,15 +1,15 @@
 // Explicitly sync a reviewed board without changing narration, audio or generated images.
 // Usage: node sync-reviewed-prompts.mjs phoewa
 import Database from '/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js';
-const projects = {phoewa:'6xgwglt20ja',seat:'8aoa3ikurwm',tree:'65poyp3y6t7',hosp:'5gnacd16p4h',drown:'oyqaecgczep'};
+const projects = {phoewa:'6xgwglt20ja',seat:'8aoa3ikurwm',tree:'65poyp3y6t7',hosp:'5gnacd16p4h',drown:'oyqaecgczep',ai80:'qa4p319rrcb'};
 const slug=process.argv[2];
 if(!projects[slug]) throw new Error('Specify a supported reviewed story: '+Object.keys(projects).join(', '));
-const {SCENES,CAST,LOCS}=await import(`./data-${slug}.mjs`);
+const {SCENES,CAST,LOCS,PROPS=[]}=await import(`./data-${slug}.mjs`);
 const db=new Database('/Users/puraidointern/video-lab/data/lab.db');
 try {
   const rows=db.prepare('SELECT * FROM scenes WHERE project_id=? ORDER BY idx').all(projects[slug]);
   if(rows.length!==SCENES.length) throw new Error('Scene count mismatch');
-  const refs=new Set([...CAST,...LOCS].map(r=>r.name));
+  const refs=new Set([...CAST,...PROPS,...LOCS].map(r=>r.name));
   const normal=s=>s.replace(/\s/g,'');
   rows.forEach((r,i)=>{
     const s=SCENES[i];

@@ -1,11 +1,11 @@
 /**
- * Builds ai80.html for ကုတင်အောက်က လူနာစောင့်.
+ * Builds ai80.html for ၁၉၈၀ ပုံထဲက ကျွန်မက… ကျွန်မမဟုတ်ဘူး.
  *
  *   node gen-ai80.mjs
  */
 import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
-import { SCENES, CAST, LOCS } from "./data-ai80.mjs";
+import { SCENES, CAST, PROPS, LOCS } from "./data-ai80.mjs";
 import { MM_REF } from "./mm-ai80.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
@@ -53,47 +53,44 @@ const shots = rows.map((r) => {
   };
 });
 
-const NREF = CAST.length + LOCS.length;
-const refs = [...CAST, ...LOCS].map((c, i) => ({
-  ...c,
-  mm: (MM_REF[c.name] || "") + (i < CAST.length ? PLATE_MM : ""),
-  prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). A new and distinct subject; do not `
-    + `repeat or vary any previous reference.\n\n${c.prompt}`
-    + (i < CAST.length ? plate(c.pose) : ""),
-}));
+const sources = [...CAST, ...PROPS, ...LOCS];
+const NREF = sources.length;
+const refs = sources.map((c, i) => {
+  const dependencies = c.sameAs ? [sources[c.sameAs - 1].name] : (c.requires || []);
+  const attach = dependencies.map(name => {
+    const index = sources.findIndex(r => r.name === name);
+    if (index < 0 || index >= i) throw new Error(`Invalid reference dependency: ${c.name} -> ${name}`);
+    return `Reference ${index + 1} — ${name}`;
+  });
+  return {
+    ...c,
+    mm: (MM_REF[c.name] || "") + (attach.length ? ` Attach: ${attach.join('; ')}.` : '')
+      + (i < CAST.length ? PLATE_MM : ""),
+    prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}).\n\n`
+      + (attach.length ? `Attach ${attach.join('; ')}. Preserve the specified identity or architecture from these references; do not invent a replacement.\n\n` : '')
+      + c.prompt + (i < CAST.length ? plate(c.pose) : ""),
+  };
+});
 
 const NOTE =
-  `⚠️ <b>မျက်နှာတစ်ခုတည်း၊ မိန်းကလေးနှစ်ယောက်။</b> သွန်း (၂၀၂၆) နဲ့ မခင်စန်း (၁၉၈၇) ဟာ `
-  + `<b>မျက်နှာအတိအကျ တူတယ်</b> — ဆွေမျိုးတော်တာ မဟုတ်ဘူး။ ကျန်တာအားလုံးက သူတို့ကို ခွဲခြားပေးရမယ် — `
-  + `သွန်းက ခေတ်ပေါ်အဝတ်နဲ့ ဆံပင်ချထား၊ မခင်စန်းက ၁၉၈၇ မြန်မာဝတ်စုံနဲ့ ဆံထုံး။ `
-  + `<b>အဝတ်အစားနဲ့ ဖလင်ပုံစံကြည့်ရုံနဲ့ ဘယ်သူလဲ မခွဲနိုင်ရင် အဲဒီပုံ ကျရှုံးပြီ။</b>`
-  + `<br><br>⚠️ <b>ပုံစံနှစ်မျိုး — ဘယ်တော့မှ မရောရဘူး။</b> <b>အစစ် (၂၀၂၆)</b> — သန့်ရှင်းတဲ့ ခေတ်ပေါ် `
-  + `digital ဓာတ်ပုံ၊ သဘာဝအရောင်။ <b>AI ပုံ (၁၉၈၇)</b> — အရောင်ဖျော့ ၈၀ ခေတ်ဖလင်၊ အစက်ကြမ်း၊ `
-  + `အဝါဖန်၊ focus ပျော့၊ ညာဘက်အောက်ထောင့်မှာ <b>လိမ္မော်ရောင် date stamp</b>။ `
-  + `ပုံတစ်ပုံဟာ တစ်မျိုးတည်းပဲ ဖြစ်ရမယ်။ ကြောက်စရာက အဲဒီအဆက်မှာ ရှိတယ်။`
-  + `<br><br>⚠️ <b>ဒီဇာတ်လမ်းမှာတော့ စာလုံးတွေ ခွင့်ပြုထားတယ် — ဒါပေမယ့် ရက်စွဲတွေအတွက်ပဲ။</b> `
-  + `တခြားဇာတ်လမ်းတွေမှာ စာလုံး လုံးဝပိတ်ထားပေမယ့် ဒီမှာ <b>date stamp က ဇာတ်လမ်းကိုယ်တိုင်</b> — `
-  + `17 OCT 1987၊ 16 SEP 2026၊ 2027၊ AGE: 26၊ 17 OCT 2027။ အဲဒီပုံတွေမှာ `
-  + `<b>ရိုက်ရမယ့် စာလုံးအတိအကျကို prompt ထဲမှာ ရေးပေးထားတယ် — အဲဒါတစ်ခုတည်းပဲ ပါရမယ်</b>။ `
-  + `ကျန်တဲ့ပုံတွေမှာတော့ စာလုံး မပါရဘူး၊ ဖုန်း UI ကို ပုံသဏ္ဌာန်နဲ့ အလင်းရောင်အဖြစ်ပဲ ပြပါ။`
-  + `<br><br>⚠️ <b>အဖေ့မျက်နှာ ဘယ်တော့မှ မပေါ်ရဘူး။</b> တံခါးဝက အမည်းရောင်အရိပ်၊ `
-  + `ဒါမှမဟုတ် မျက်စိနဲ့မမြင်ရဘဲ ဖုန်း camera ထဲမှာပဲ မြင်ရတဲ့ပုံသဏ္ဌာန်။ `
-  + `<b>ကြမ်းပြင်အောက်မှာ အလောင်းမရှိဘူး — အိတ်တစ်လုံးပဲ ရှိတယ်။</b>`
-  + `<br><br>⚠️ <b>မခင်စန်းက လူဆိုး မဟုတ်ဘူး။</b> အစပိုင်းမှာ ကြောက်နေတယ်၊ နောက်ပိုင်းမှာ `
-  + `<b>သတိပေးနေတာ</b> — လက်ညှိုးထိုး၊ ခေါင်းခါ၊ သွန်းကို အပြင်ထွက်အောင် လမ်းညွှန်တာ။`
-  + `<br><br>ရုပ်ပုံ ${shots.length} ပုံ။ Reference ${NREF} ခုကို အရင်ဆောက်ပါ။`;
-
-  + `<br><br>ရုပ်ပုံ ${shots.length} ပုံ။ Reference ${NREF} ခုကို အရင်ဆောက်ပါ။`;
+  `⚠️ <b>မျက်နှာတစ်ခုတည်း၊ မိန်းကလေးနှစ်ယောက်။</b> သွန်းနဲ့ မခင်စန်းက ဆွေမျိုးမဟုတ်၊ မျက်နှာအတိအကျတူရမယ်။ မခင်စန်းနဲ့ သွန်းအိုမင်း reference ဆောက်တဲ့အခါ Reference 1 ကို attach လုပ်ပါ။ ဝတ်စုံနဲ့ဆံပင်ကို သတ်မှတ်ထားတဲ့အတိုင်း ဆက်သုံးပါ။`
+  + `<br><br><b>ဓာတ်ပုံသုံးပုံကို အရင်ဆောက်ပါ။</b> PHOTO A = စတုတ္ထပုံနဲ့ ဓာတ်ပုံ scan၊ PHOTO B = မခင်စန်းနဲ့အဖေ့ပုံ၊ PHOTO C = သွန်းအိုမင်းပုံ။ နောက် close-up၊ zoom၊ comparison တွေမှာ မူရင်းပုံကို attach လုပ်ပြီး crop/reframe လုပ်ပါ။ မျက်နှာနဲ့နောက်ခံအသစ် မဖန်တီးရ။ Screen ထဲကပုံကို အခန်းထဲကလူအဖြစ် မပြရ။`
+  + `<br><br><b>ပုံအဟောင်းနဲ့ အပြင်ကမြင်ကွင်းကို ခွဲထားပါ။</b> ၁၉၈၇ ပုံမှာပဲ ဖလင်အရောင်ဖျော့နဲ့ grain ပါမယ်။ ဖုန်း၊ လက်၊ ၂၀၂၆ အခန်း၊ ခေတ်ပေါ် AI ပုံနဲ့ Video Call က သန့်ရှင်းတဲ့ digital ပုံစံ။ မူရင်း photo master တွေက 3:2၊ နောက်ဆုံး scene က 16:9။`
+  + `<br><br><b>စာသားက shot တစ်ခုချင်း သတ်မှတ်ထားတာပဲ။</b> ရက်စွဲ၊ ၄၂၊ AGE: 26 နဲ့ notification စာသားကို သက်ဆိုင်ရာ close-up မှာပဲ ရေးပါ။ ကျန်နေရာမှာ စာသားပိတ်ထားပါ။ Flow က စာသားမှားရင် တူညီတဲ့ပုံကို ထိန်းပြီး ရက်စွဲကို နောက်ဆုံး edit မှာ တိတိကျကျပြင်ပါ။`
+  + `<br><br><b>ညပိုင်း continuity။</b> သွန်းဖုန်းအမည်းမှာ Shot 62 ကစပြီး ရှေ့နောက်ကင်မရာကို tape ပိတ်ထား၊ flashlight မပိတ်ရ။ သူငယ်ချင်းဖုန်း မီးခိုးဖျော့ကို CCTV၊ Video Call နဲ့ live camera အတွက်သုံးပါ။ ထွက်ပြေးချိန် နှစ်ယောက်လုံးအတူရှိမယ်။`
+  + `<br><br><b>PHOTO B မှာ အဖေ့လူသားမျက်နှာ မှတ်မိရမယ်။</b> နောက်သဘာဝလွန်မြင်ကွင်းတွေမှာ ပခုံးနဲ့မျက်နှာအစွန်းပဲ မထင်မရှားပေါ်မယ်။ Shot 29 တံခါးနောက်ကလူကို အဖေလို့ မသတ်မှတ်သေးရ။ ကြမ်းပြင်အောက်မှာ အိတ်ပဲရှိ၊ အလောင်းမရှိ။ မခင်စန်းက ခြိမ်းခြောက်သူမဟုတ်၊ သွန်းကို သတိပေးကယ်တင်သူ။`
+  + `<br><br>ရုပ်ပုံ ${shots.length} ပုံ။ Reference ${NREF} ခုကို အစဉ်လိုက်ဆောက်ပါ။`;
 
 await writeFile("/Users/puraidointern/ghost-prompts-site/ai80.html", buildPage({
   title: "၁၉၈၀ ပုံထဲက ကျွန်မက… ကျွန်မမဟုတ်ဘူး — image prompts",
-  subtitle: `THE CARETAKER UNDER THE BED · ${shots.length} shots · 16:9 · Copy a prompt, paste it into Google Flow, and attach the listed references. ဗမာလို ရှင်းလင်းချက်က copy ထဲ မပါပါ။`,
+  subtitle: `THE WOMAN IN MY 1980s PHOTO · ${shots.length} shots · 16:9 · Copy a prompt, paste it into Google Flow, and attach the listed references. ဗမာလို ရှင်းလင်းချက်က copy ထဲ မပါပါ။`,
   storageKey: "ai80.done.v1",
   slug: "ai80",
   note: NOTE, nav: NAV("ai80"),
   groups: [
     { heading: "People — build these first", items: refs.slice(0, CAST.length) },
-    { heading: "Locations — one plate per recurring setting", items: refs.slice(CAST.length) },
+    { heading: "Photo and object masters — reuse for every matching insert", items: refs.slice(CAST.length, CAST.length + PROPS.length) },
+    { heading: "Locations and device — keep recurring geometry", items: refs.slice(CAST.length + PROPS.length) },
   ],
   shots,
 }));

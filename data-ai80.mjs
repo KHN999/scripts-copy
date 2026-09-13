@@ -1,41 +1,23 @@
 /**
  * ၁၉၈၀ ပုံထဲက ကျွန်မက… ကျွန်မမဟုတ်ဘူး — scene board.
+ * t title · g Burmese gloss · p base prompt · u narration · c cues · w/l references.
  *
- *   t title · g Burmese gloss of the picture · p English prompt body
- *   u narration units (verbatim, short lines merged) · c cues · w refs · l location
+ * review-ai80.mjs supplies final character descriptions, camera directions,
+ * per-shot prompt corrections, photo masters, text scopes and continuity rules.
+ * Its overrides take precedence over baseline p/g/w/l values below.
  *
- * FIVE RULES. The first two are the whole film.
- *
- * 1. ONE FACE, TWO WOMEN. Thun (2026) and Ma Khin San (1987) have the SAME FACE
- *    and are not related. Everything else separates them — Thun has modern
- *    clothes and loose modern hair, Ma Khin San wears 1987 Burmese dress with her
- *    hair pinned. If a viewer cannot tell which woman they are looking at from
- *    the clothes and the film stock alone, the shot has failed.
- *
- * 2. TWO VISUAL REGISTERS, NEVER MIXED.
- *      REAL   — clean modern digital photography, 2026 Yangon, neutral colour.
- *      AI/1987 — what the app returns: faded 1980s film, heavy grain, colour
- *               shifted warm-yellow, soft focus, and a burned-in orange date
- *               stamp in the lower right. Most are seen ON A PHONE SCREEN, held
- *               in frame, with the room reflected faintly in the glass.
- *    A shot is one register or the other. The horror lives in the seam.
- *
- * 3. ⚠️ THIS BOARD DELIBERATELY BREAKS THE NO-TEXT RULE — but only for dates.
- *    Every other film in this set forbids legible text because generators produce
- *    garbage lettering. Here the date stamp IS the plot: 17 OCT 1987 is the day
- *    before she vanished, and 17 OCT 2027 is on a hospital band at the end. Those
- *    shots name the exact string to render and nothing else. Everywhere else text
- *    is still banned, and UI is described as shape and glow, never as words.
- *
- * 4. THE FATHER IS NEVER RESOLVED. The man from 1987 is the threat and his face
- *    is never legible — in a doorway as a black silhouette, or visible only as a
- *    shape through a phone camera that the naked eye cannot see. No gore, no
- *    body: the floor under the boards holds a bag, not a corpse.
- *
- * 5. MA KHIN SAN IS NOT THE MONSTER. She is frightened in the early images and
- *    WARNING in the late ones. By the end she is pointing, shaking her head,
- *    steering Thun out of the building. Never menacing, never decayed.
+ * Thun and Ma Khin San share one exact face, distinguished by period clothing/hair.
+ * Vintage grain belongs only to the 1987 image, not the device or surrounding room.
+ * Reuse PHOTO A/B/C for matching portraits, print scans and clue close-ups.
+ * The father is recognizable as a living man in PHOTO B; later supernatural views
+ * are cropped fragments. The man behind the door in shot 29 is not identified.
+ * Ma Khin San warns and protects; the floor cavity contains a bag, never a body.
+ * Only strings whitelisted per scene may be legible. Never add default date stamps.
+ * Existing narration/cues and scene order remain unchanged.
  */
+
+import { reviewAI80, PROPS } from './review-ai80.mjs';
+export { PROPS };
 
 export const CAST = [
   { name: "သွန်း", en: "Thun — twenty-five, Yangon, 2026",
@@ -923,3 +905,5 @@ export const SCENES = [
         "Generating your next memory…"],
     c: [[1, "finalstinger"]] },
 ];
+
+reviewAI80(SCENES, CAST, LOCS);
