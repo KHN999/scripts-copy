@@ -10,6 +10,7 @@
  * order as the board at localhost:3150. Newest first.
  */
 const SHEETS = [
+  { key: "ai80",      href: "/ai80.html",       created: "2026-09-13", shots: 99, label: "၁၉၈၀ ပုံထဲက ကျွန်မက… ကျွန်မမဟုတ်ဘူး" },
   { key: "hosp",      href: "/hosp.html",       created: "2026-09-11", shots: 129, label: "ကုတင်အောက်က လူနာစောင့်" },
   { key: "phoewa",    href: "/phoewa.html",     created: "2026-09-11", shots: 175, label: "ဖိုးဝရှေ့မှာ မလိမ်နဲ့" },
   { key: "eye",       href: "/eye.html",        created: "2026-09-11", shots:  91, label: "ပြတင်းပေါက်အပြင်က မျက်လုံး" },
