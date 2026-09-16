@@ -85,9 +85,16 @@ section>h2{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:va
 /* A shot whose prompt was rewritten after the board was first built. The
    accent survives the .done fade so a revised shot stays findable even
    after it has been ticked off. */
-.card.rev{border-left:3px solid var(--color-accent,#7dd3fc)}
-.revtag{margin-left:auto;font-size:11px;letter-spacing:.02em;padding:2px 7px;border-radius:999px;
-  background:var(--color-accent,#7dd3fc);color:#04141c;font-weight:600;white-space:nowrap}
+/* A shot may be revised more than once, for different reasons, so each pass gets
+   its own colour and a shot can carry several badges at a time. The left accent
+   takes the colour of the most recent pass. */
+.card.rev{border-left:3px solid var(--revc,#7dd3fc)}
+.revtag{margin-left:6px;font-size:11px;letter-spacing:.02em;padding:2px 7px;border-radius:999px;
+  color:#04141c;font-weight:600;white-space:nowrap;background:#7dd3fc}
+.revtag:first-of-type{margin-left:auto}
+.revtag.r1{background:#7dd3fc}   /* pass 1 — scale */
+.revtag.r2{background:#fbbf24}   /* pass 2 — direction */
+.revtag.r3{background:#a78bfa}
 .top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
 .id{font-weight:800;color:var(--accent);font-size:13px;min-width:26px}
 .ttl{font-weight:650;font-size:14px;flex:1;min-width:120px;font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",ui-sans-serif,system-ui,sans-serif}
@@ -238,10 +245,19 @@ function card(o, isRef) {
     const t = document.createElement("span"); t.className = "ttl"; t.textContent = o.title;
     const a = document.createElement("span"); a.className = "act"; a.textContent = o.act || "";
     head.append(i, t, a);
-    if (o.rev) {
+    // rev is a label or a list of them, newest last. No backticks in this file:
+    // the page script is itself a template literal.
+    const revs = o.rev ? (Array.isArray(o.rev) ? o.rev : [o.rev]) : [];
+    if (revs.length) {
       el.classList.add("rev");
-      const r = document.createElement("span"); r.className = "revtag"; r.textContent = o.rev;
-      head.appendChild(r);
+      const colours = ["#7dd3fc", "#fbbf24", "#a78bfa"];
+      revs.forEach((label, i) => {
+        const r = document.createElement("span");
+        r.className = "revtag r" + Math.min(i + 1, 3);
+        r.textContent = label;
+        head.appendChild(r);
+      });
+      el.style.setProperty("--revc", colours[Math.min(revs.length - 1, 2)]);
     }
   }
   el.appendChild(head);

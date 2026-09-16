@@ -111,8 +111,9 @@ export const STYLE =
   + "The house, its doors, its stairs and every piece of furniture are built to the DOLL's "
   + "proportions and she uses them comfortably. May and Ko Zin are less than half her height, so "
   + "the whole interior is oversized to them: THEY ARE TO THIS HOUSE WHAT A TWO-YEAR-OLD IS TO AN "
-  + "ADULT'S KITCHEN. They can just touch a door handle at full stretch but cannot turn it with "
-  + "force, cannot shift furniture, and climb one stair tread at a time with effort. Every "
+  + "ADULT'S KITCHEN. A door handle sits at about the top of their heads: they can reach it at full "
+  + "stretch but cannot close a hand around it or turn it. They cannot shift furniture, and they climb "
+  + "one stair tread at a time with effort. Every "
   + "interior image must make that unmistakable. ⚠️ The doll is always visibly A TOY: porcelain, jointed, painted, "
   + "never flesh and never decayed. ⚠️ The full-size people are kind and ordinary and must never be "
   + "lit or framed as threatening. No gore. No legible text, numbers, captions or watermarks.";
@@ -142,15 +143,14 @@ export const HOME_STYLE =
 export const styleForShot = (n) => n === 5 ? WORKSHOP_STYLE : n === 85 ? CAR_STYLE : n >= 86 ? HOME_STYLE : STYLE;
 
 export const SCENES = [
-  { t: "An Eye Filled the Window", l: "အထဲ",
+  { rev: ["direction fixed"], t: "An Eye Filled the Window", l: "အထဲ",
     g: "ပြတင်းပေါက်တစ်ပေါက်လုံးကို မျက်လုံးတစ်လုံးက ဖုံးထားတယ်။ အညိုရောင်။",
-    p: "A small window entirely filled by a single human eye pressed against it from outside — brown "
-      + "iris, fine red capillaries in the white, ordinary lashes. The room inside is tiny.",
+    p: "A single small windowpane, about an inch across, entirely filled by one human eye pressed against it from outside — brown iris, fine red capillaries in the white, ordinary lashes. The rest of the toy window frame and the tiny room are visible around it.",
     u: ["ပြတင်းပေါက်တစ်ပေါက်လုံးကို မျက်လုံးတစ်လုံးက ဖုံးသွားတဲ့အချိန်မှာ ကျွန်မတို့ အိမ်အပြင် မထွက်သင့်တော့ဘူးလို့ ထင်ခဲ့တယ်။",
         "မျက်လုံးက အညိုရောင်။ မျက်ဆံဘေးမှာ သွေးကြောသေးသေးတွေ မြင်ရတယ်။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "The Room Went Dark When It Blinked", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+  { rev: ["direction fixed"], t: "The Room Went Dark When It Blinked", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
     g: "မျက်တောင်ခတ်လိုက်တိုင်း အခန်းထဲ တစ်ချက် မှောင်သွားတယ်။ ကိုဇင်က နံရံအောက် ဆွဲချတယ်။",
     p: "Two people flattened beneath a window sill in a tiny room, a man's hand over the woman's "
       + "mouth, the light across them cut by a slow blink.",
@@ -237,20 +237,21 @@ export const SCENES = [
         "မှန်အုပ်လည်း မရှိတော့ဘူး။"],
     c: [[2, "bigstinger"]] },
 
-  { rev: "scale revised", t: "The Blue Door Was Behind Us", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
-    g: "အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ။ ကျွန်မတို့ထက် အများကြီး မြင့်တယ်။ လက်ကိုင်က ခေါင်းထက် အများကြီး အထက်မှာ။",
+  { rev: ["scale revised", "direction fixed"], t: "The Blue Door Was Behind Us", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ။ ကျွန်မတို့ထက် အများကြီး မြင့်တယ်။ လက်ကိုင်က ခေါင်းထိပ်လောက်မှာ။ လှမ်းထိလို့ရပေမယ့် ဆုပ်ကိုင်လို့ မရဘူး။",
     p: "Low-angle wide shot inside the dolls' house: four-inch-tall May and Ko Zin stand full-body "
-      + "in the foreground and the blue-painted door behind them TOWERS over them — its handle is far "
-      + "above their heads and plainly out of reach. Thick brush strokes, rounded toy edges and "
+      + "in the foreground and the blue-painted door behind them TOWERS over them — its handle sits "
+      + "at about the top of their heads, touchable at full stretch and far too thick to grip. "
+      + "Thick brush strokes, rounded toy edges and "
       + "oversized wood grain expose it as a handmade miniature.",
-    u: ["အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ ရောက်နေတယ်။ ကျွန်မတို့ထက် အဆများစွာ မြင့်နေတယ်။"],
+    u: ["အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ ရောက်နေတယ်။ ကျွန်မတို့ထက် အဆများစွာ မြင့်နေတယ်။ လက်ကိုင်က ခေါင်းထိပ်လောက်မှာ။"],
     c: [[0, "bigstinger"]] },
 
-  { rev: "scale revised", t: "We Tried to Believe Otherwise", l: "အထဲ", w: ["ကိုဇင်"],
-    g: "အစမှာ အရင်အိမ်ရဲ့ တခြားအခန်းလို့ ထင်ခဲ့တယ်။ လက်ကိုင်က မမီဘူး။ ကိုဇင်က တံခါးအောက်ပိုင်းကို တွန်းတယ်။ မရဘူး။",
+  { rev: ["scale revised", "direction fixed"], t: "We Tried to Believe Otherwise", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "အစမှာ အရင်အိမ်ရဲ့ တခြားအခန်းလို့ ထင်ခဲ့တယ်။ လက်ကိုင်က ဆုပ်ကိုင်လို့ မရဘူး။ ကိုဇင်က တံခါးအောက်ပိုင်းကို တွန်းတယ်။ မရဘူး။",
     p: "A four-inch-tall man with both hands flat on the lower panel of a door many times his height, "
-      + "shoving with his whole body. ⚠️ THE HANDLE IS FAR ABOVE HIM AND HE NEVER TOUCHES IT — it "
-      + "is visible near the top of the frame, unreachable.",
+      + "shoving with his whole body. ⚠️ THE HANDLE IS LEVEL WITH THE TOP OF HIS HEAD — he has already "
+      + "stretched to it and could not close a hand around it, so he is using the panel instead.",
     u: ["အစမှာ ကျွန်မတို့ အရင်အိမ်ရဲ့ တခြားအခန်းတစ်ခန်းထဲ ရောက်သွားတာလို့ ထင်မိတယ်။",
         "ကိုယ့်ကိုယ်ကို အဲဒီလိုပဲ ယုံအောင် ကြိုးစားကြတာ။",
         "ကိုဇင်က လက်ကိုင်ကို လှမ်းကိုင်ဖို့ ကြိုးစားတယ်။ မရဘူး။ လက်ကိုင်က ခေါင်းထက် အများကြီး အထက်မှာ။ တံခါးအောက်ပိုင်းကို တွန်းကြည့်တယ်။"] },
@@ -271,7 +272,7 @@ export const SCENES = [
         "ဖွင့်လို့ရတဲ့လက်ကိုင် မဟုတ်ဘူး။ ဆေးနဲ့ ပုံဖော်ထားတာ။"],
     c: [[2, "bigstinger"]] },
 
-  { rev: "scale revised", t: "Something Knocked Back", l: "အထဲ", w: ["ကိုဇင်"],
+  { rev: ["scale revised", "direction fixed"], t: "Something Knocked Back", l: "အထဲ", w: ["ကိုဇင်"],
     g: "ကိုဇင်က တံခါးအောက်ခြေကို ပခုံးနဲ့ ဆောင့်တယ်။ ဒုန်း။ အပေါ်ထပ်ကနေ ဒုန်းလို့ ပြန်မြည်လာတယ်။",
     p: "A four-inch-tall man mid-impact with his shoulder against the very bottom of an enormous door, "
       + "and far above him a ceiling with dust jarred loose from it by "
@@ -311,7 +312,7 @@ export const SCENES = [
         "အရင်ဆုံး အနီရောင်ဂါဝန်အနားကို မြင်ရတယ်။ ပြီးတော့ ခြေထောက်တွေ။"],
     c: [[1, "bigstinger"]] },
 
-  { rev: "scale revised", t: "Ball Joints at the Knees", l: "အထဲ", w: ["အရုပ်"],
+  { rev: ["scale revised", "direction fixed"], t: "Ball Joints at the Knees", l: "အထဲ", w: ["အရုပ်"],
     g: "ခြေထောက်တွေ ဖြူဖွေးနေတယ်။ ဒူးတွေမှာ စက်ဝိုင်းပုံ အဆက်တွေ ရှိတယ်။ လှေကားက သူ့အရွယ်နဲ့ ကိုက်တယ် — ဒူးတွေက မကွေးလို့ ခြေကို ခါးကနေ ကားချရတာ။",
     p: "⚠️ HER STIFFNESS IS HER JOINTS, NOT THE STAIRS — the treads fit her perfectly and she still "
       + "swings each leg from the hip because the knees do not bend. A doll's legs at enormous "
@@ -360,7 +361,7 @@ export const SCENES = [
         "အသံကတော့ လည်ပင်းစောင်းနေတဲ့အကြားကနေ ထွက်လာတယ်။ “တွေ့ပြီ…”"],
     c: [[1, "bigstinger"]] },
 
-  { rev: "scale revised", t: "He Shoved the Table", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
+  { rev: ["scale revised", "direction fixed"], t: "The Table Would Not Move", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
     g: "စားပွဲက ကြီးလွန်းလို့ မရွေ့ဘူး။ ကိုဇင်က ကျွန်မလက်ကို ဆွဲပြီး စားပွဲခြေကြားကနေ ထွက်ပြေးတယ်။",
     p: "⚠️ HE CANNOT MOVE THE TABLE — it is far too big for him. Four-inch-tall Ko Zin hauls May by the "
       + "wrist between two massive table legs and out the far side at a run, the doll's huge "
@@ -375,7 +376,7 @@ export const SCENES = [
     u: ["သူ နောက်ယိုင်သွားတုန်း ကျွန်မတို့ လှေကားအောက်က အပေါက်ငယ်ထဲ ဝင်ပြေးတယ်။",
         "သိုလှောင်ခန်းလို့ ထင်ခဲ့တာ။"] },
 
-  { t: "Between the Walls", l: "နံရံကြား",
+  { rev: ["direction fixed"], t: "Between the Walls", l: "နံရံကြား",
     g: "အထဲမှာ အခန်းမရှိဘူး။ နံရံနှစ်ထပ်ကြားက ကျဉ်းကျဉ်းနေရာ။ ဆေးမသုတ်ထားဘူး။ ကော်ခြောက်တွေ။ သံချောင်းကြီးတွေ။",
     p: "The cavity between two walls: raw unpainted timber, long runs of dried glue like frozen "
       + "streams, enormous iron nail shafts crossing the space overhead.",
@@ -391,7 +392,7 @@ export const SCENES = [
         "အဆစ်မှာ အရစ်သုံးရစ်။ လက်သည်းကို ပန်းရောင်ဆေး သုတ်ထားတယ်။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "A Splinter in My Calf", l: "နံရံကြား", w: ["မေ", "ကိုဇင်"],
+  { rev: ["direction fixed"], t: "A Splinter in My Calf", l: "နံရံကြား", w: ["မေ", "ကိုဇင်"],
     g: "ခြေသလုံးမှာ သစ်သားစ စိုက်မိထားတယ်။ သွေးထွက်နေတယ်။ ကိုဇင်က အင်္ကျီလက်စနဲ့ ပတ်ပေးတယ်။",
     p: "A man tying a torn shirt sleeve around a woman's calf in a dark timber cavity, a long wood "
       + "splinter on the ground beside them.",
@@ -410,7 +411,7 @@ export const SCENES = [
         "အခု ကျွန်မတို့ထက် နှစ်ဆကျော် မြင့်နေတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { rev: "scale revised", t: "Up Into the Bedroom", l: "အထဲ",
+  { rev: ["scale revised", "direction fixed"], t: "Up Into the Bedroom", l: "အထဲ",
     g: "နံရံကြားက သစ်သားဘောင်တွေကို တွယ်တက်ပြီး အပေါ်ထပ်ကို ရောက်လာတယ်။ အခန်းထဲက ပစ္စည်းတွေက ကျွန်မတို့အတွက် ကြီးလွန်းတယ်။",
     p: "Four-inch-tall May and Ko Zin hauling themselves over the top edge of a wall frame into an "
       + "upstairs room, having climbed the raw timber studs inside the cavity. The desk, the bed "
@@ -420,7 +421,7 @@ export const SCENES = [
         "အဲဒီကနေ အိမ်အပေါ်ထပ်ကို တက်လို့ရတယ်။",
         "အခန်းတစ်ခန်းမှာ ကလေးစားပွဲတစ်လုံး ရှိတယ်။"] },
 
-  { rev: "scale revised", t: "The Hands Were Painted", l: "အထဲ", w: ["မေ"],
+  { rev: ["scale revised", "direction fixed"], t: "The Hands Were Painted", l: "အထဲ", w: ["မေ"],
     g: "စားပွဲပေါ်တက်ပြီး ခြေဖျားထောက်မှ နာရီကို မီတယ်။ လက်တံတွေက ဆေးနဲ့ ဆွဲထားတာ။",
     p: "A four-inch-tall woman standing on a desktop and stretching up on her toes to a wall clock "
       + "taller than she is, one fingertip on its face finding the hands are brush strokes "
@@ -429,7 +430,7 @@ export const SCENES = [
         "နာရီလက်တံတွေကို ကျွန်မ ထိကြည့်တယ်။ လက်တံတွေက ဆေးနဲ့ ဆွဲထားတာ။"],
     c: [[1, "stinger"]] },
 
-  { rev: "scale revised", t: "A Book With No Pages", l: "အထဲ",
+  { rev: ["scale revised", "direction fixed"], t: "A Book With No Pages", l: "အထဲ",
     g: "စာအုပ်က ကိုဇင်ထက် မြင့်တယ်။ ဖွင့်လို့မရဘူး။ အနားကို ကြည့်မှ သစ်သားတုံးတစ်တုံးဆိုတာ သိရတယ်။",
     p: "A book standing on a desk taller than the four-inch man beside it, seen from its cut edge: a "
       + "solid block of painted wood with no pages at all, the edge merely carved to suggest "
@@ -437,7 +438,7 @@ export const SCENES = [
     u: ["စားပွဲပေါ်က စာအုပ်က ကိုဇင်ထက် မြင့်တယ်။ ဖွင့်လို့မရဘူး။ အနားကို ကြည့်မှ သိရတယ်။ အဖုံးပဲ ရှိတယ်။ အထဲမှာ စာရွက်မရှိဘူး။"],
     c: [[0, "stinger"]] },
 
-  { rev: "scale revised", t: "The Pillow Was Wood", l: "အထဲ", w: ["ကိုဇင်"],
+  { rev: ["scale revised", "direction fixed"], t: "The Pillow Was Wood", l: "အထဲ", w: ["ကိုဇင်"],
     g: "ခေါင်းအုံးက မကောက်နိုင်ဘူး။ အနားကနေ ကြည့်လိုက်တော့ အောက်ခြေက ပြားပြား။ သစ်သား။",
     p: "⚠️ THEY CANNOT LIFT IT. Two four-inch figures at the edge of an enormous bed looking along the "
       + "cut edge of a pillow, where sanded timber shows beneath and the fabric is revealed as a "
@@ -492,7 +493,7 @@ export const SCENES = [
         "ကျွန်မ သူ့ကို ကြည့်တယ်။ “ဒါမှမဟုတ် ငါတို့က သေးနေတာလား”"],
     c: [[2, "bigstinger"]] },
 
-  { rev: "scale revised", t: "A Dark Shape in the White", l: "အထဲ", w: ["မေ"],
+  { rev: ["scale revised", "direction fixed"], t: "A Dark Shape in the White", l: "အထဲ", w: ["မေ"],
     g: "ပြတင်းပေါက်ဘောင်ပေါ် တက်ပြီး အပြင်ကို ကြည့်တယ်။ အဖြူရောင်နောက်ခံမှာ အနက်ရောင်ကြီးတစ်ခု။ ဘေးမှာ အရှည်လိုက်အပေါက်တွေ။",
     p: "A four-inch-tall woman balanced on a windowsill she has had to climb to reach, looking out "
       + "through the glass at a huge dark rectangular mass standing in the white void, with long "
@@ -501,10 +502,11 @@ export const SCENES = [
         "ဒီတစ်ခါ အဖြူရောင်နောက်ခံကို သေချာကြည့်တယ်။",
         "တစ်နေရာမှာ အနက်ရောင်ကြီးတစ်ခု ရှိတယ်။ ဘေးမှာ အရှည်လိုက်အပေါက်တွေ။ အောက်ခြေမှာ ကြိုးတစ်ချောင်း။"] },
 
-  { t: "His Bluetooth Speaker", l: "အပြင်",
+  { rev: ["direction fixed"], t: "His Bluetooth Speaker", l: "အပြင်",
     g: "ကိုဇင်ရဲ့ အိတ်ဆောင်စပီကာ။ အခု အဆောက်အအုံတစ်လုံးလောက် ကြီးနေတယ်။",
-    p: "A portable Bluetooth speaker photographed from four inches tall so it stands like an office "
-      + "block against a white tabletop, its grille slots the size of doorways.",
+    p: "A portable Bluetooth speaker photographed from four inches tall so it rises like a two-storey "
+      + "building against a white tabletop — roughly twice their height, its grille openings about "
+      + "chest-high to them and its cable as thick as a fallen branch.",
     u: ["ကိုဇင်ရဲ့ အိတ်ဆောင်စပီကာ။ မနက်က စားပွဲပေါ် တင်ထားခဲ့တာ။",
         "အခု ကျွန်မတို့ မြင်နေရတဲ့အရွယ်က အဆောက်အအုံတစ်လုံးလောက်။",
         "ကျွန်မ ပါးစပ်ထဲက လေတွေ ထွက်သွားတယ်။"],
@@ -542,7 +544,7 @@ export const SCENES = [
     u: ["ကျွန်မတို့အတွက် အရင်က လွတ်လမ်းလို ထင်ခဲ့တဲ့ အပေါ်ထပ်အခန်းက ပိတ်မိမယ့်နေရာ ဖြစ်သွားပြီ။",
         "ပြတင်းပေါက်က မှန်တစ်ထပ်။ အပြင်မှာလည်း မှန်အုပ် ရှိဦးမယ်။"] },
 
-  { rev: "scale revised", t: "He Broke Off a Chair Leg", l: "အထဲ", w: ["ကိုဇင်"],
+  { rev: ["scale revised", "direction fixed"], t: "He Went Back for the Splinter", l: "အထဲ", w: ["ကိုဇင်"],
     g: "ကိုဇင်က နံရံကြားမှာ တွေ့ခဲ့တဲ့ သစ်သားစကို ယူလာတယ် — ကျွန်မခြေသလုံးကို စိုက်မိခဲ့တဲ့ အဲဒီအစ။",
     p: "A four-inch-tall man hefting the long raw timber splinter from the wall cavity — the same "
       + "splinter that cut May's calf — holding it two-handed like a staff nearly his own height.",
@@ -550,7 +552,7 @@ export const SCENES = [
         "သူ နံရံကြားကို ပြန်ဝင်ပြီး ကျွန်မခြေသလုံးကို စိုက်မိခဲ့တဲ့ သစ်သားစကို ဆွဲယူလာတယ်။",
         "ကျွန်မတို့အရွယ်နဲ့ဆို သူ့အရပ်လောက် ရှိတဲ့ သစ်သားတုတ်တစ်ချောင်း။"] },
 
-  { rev: "scale revised", t: "One Small Crack", l: "အထဲ",
+  { rev: ["scale revised", "direction fixed"], t: "One Small Crack", l: "အထဲ",
     g: "သစ်သားစနဲ့ မှန်ကို နှစ်ဖက်ကိုင်ရိုက်တယ်။ မကွဲဘူး။ အက်ကြောင်းသေးသေးတစ်ခုပဲ ပေါ်လာတယ်။",
     p: "A window pane struck two-handed with a raw timber splinter, producing a single short crack "
       + "radiating from "
@@ -558,7 +560,7 @@ export const SCENES = [
     u: ["သူက ပြတင်းပေါက်ကို ရိုက်တယ်။ မှန် မကွဲဘူး။",
         "အက်ကြောင်းသေးသေးတစ်ခု ပေါ်လာတယ်။"] },
 
-  { rev: "scale revised", t: "This Time I Did Not Hide", l: "အထဲ", w: ["မေ"],
+  { rev: ["scale revised", "direction fixed"], t: "This Time I Did Not Hide", l: "အထဲ", w: ["မေ"],
     g: "မျက်လုံး ပြန်ကပ်လာတယ်။ ဒီတစ်ခါ ကျွန်မ ပြတင်းပေါက်ဘောင်ပေါ် တက်ရပ်ပြီး လက်နှစ်ဖက် မြှောက်ပြတယ်။",
     p: "A four-inch-tall woman standing on the windowsill she has climbed to, square in front of a "
       + "window entirely filled by a human eye, both "
@@ -600,7 +602,7 @@ export const SCENES = [
         "အပြင်က လူတစ်ယောက်က ဖွင့်ပေးနေတာ။"],
     c: [[0, "bigstinger"]] },
 
-  { rev: "scale revised", t: "He Lifted Me by the Waist", l: "အထဲ", w: ["ကိုဇင်", "မေ"],
+  { rev: ["scale revised", "direction fixed"], t: "The Last Step Up", l: "အထဲ", w: ["ကိုဇင်", "မေ"],
     g: "နှစ်ယောက်လုံး နံရံဘောင်တွေပေါ် အရင်တက်တယ်။ ပြီးမှ ကိုဇင်က ကျွန်မကို နောက်ဆုံးတစ်ဆင့် တွန်းတင်ပေးတယ်။",
     p: "Two four-inch figures already high on the raw timber studs of a wall cavity, the man braced on "
       + "a cross-piece and pushing the woman up the last short step with both hands, her hands "
@@ -608,7 +610,7 @@ export const SCENES = [
     u: ["နှစ်ယောက်လုံး နံရံဘောင်တွေပေါ် တွယ်တက်ပြီး ကိုဇင်က နောက်ဆုံးတစ်ဆင့် တွန်းတင်ပေးတယ်။ ကျွန်မ အပေါ်ဘောင်ကို ဖမ်းလိုက်တယ်။",
         "ခြေသလုံးက နာလွန်းလို့ မျက်ရည်ထွက်လာတယ်။"] },
 
-  { rev: "scale revised", t: "Her Head Would Not Fit", l: "အထဲ", w: ["အရုပ်"],
+  { rev: ["scale revised", "direction fixed"], t: "She Walked Straight Through", l: "အထဲ", w: ["အရုပ်"],
     g: "အရုပ်က အခန်းဝကို ရောက်လာတယ်။ ငုံ့စရာမလိုဘဲ ပုံမှန်အတိုင်း ဝင်လာတယ်။ ဒီအိမ်က သူ့အိမ်။",
     p: "⚠️ SHE FITS — THE HOUSE IS HERS. The doll walking through the doorway upright and unhurried "
       + "with clear headroom above her, "
@@ -617,7 +619,7 @@ export const SCENES = [
         "ငုံ့စရာမလိုဘူး။ ပုံမှန်အတိုင်း ဝင်လာတယ်။"],
     c: [[1, "stinger"]] },
 
-  { rev: "scale revised", t: "So She Folded It Sideways", l: "အထဲ", w: ["အရုပ်"],
+  { rev: ["scale revised", "direction fixed"], t: "So She Folded It Sideways", l: "အထဲ", w: ["အရုပ်"],
     g: "ဘာမှ မတားထားဘူး။ ဒါပေမယ့် သူ ခေါင်းကို ဘေးတစ်ဖက် ခေါက်ချလိုက်တယ်။ မျက်နှာက ကိုးဆယ်ဒီဂရီ စောင်းသွားတယ် — အောက်ကို ကြည့်ဖို့။",
     p: "⚠️ NOTHING IS FORCING HER TO DO THIS. Standing clear in the middle of a room with space all "
       + "around her, the doll folds her head fully sideways onto her own shoulder at ninety "
@@ -628,7 +630,7 @@ export const SCENES = [
         "အဲဒီအနေအထားနဲ့ ကျွန်မကို ကြည့်တယ်။ ပန်းရောင်အပြုံးကတော့ အရင်အတိုင်း။"],
     c: [[1, "bigstinger"]] },
 
-  { rev: "scale revised", t: "He Hit Her Hand", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
+  { rev: ["scale revised", "direction fixed"], t: "He Hit Her Hand", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
     g: "အရုပ်က လက်လှမ်းတယ်။ ကိုဇင်က သစ်သားစနဲ့ ရိုက်တယ်။ နောက်တစ်ဖက်က ပခုံးကို ဖမ်းလိုက်တယ်။",
     p: "A raw timber splinter swung two-handed into a huge porcelain hand, knocking it aside, while "
       + "the doll's other hand closes "
@@ -652,7 +654,7 @@ export const SCENES = [
     u: ["ကျွန်မ အပေါ်ကို တက်ထွက်သွားလို့ရတယ်။ တစ်ယောက်တည်း။",
         "ကိုဇင်က ကျွန်မကို မော့ကြည့်တယ်။ “မေ၊ သွား!”"] },
 
-  { rev: "scale revised", t: "I Let Go and Dropped Back", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+  { rev: ["scale revised", "direction fixed"], t: "I Let Go and Dropped Back", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
     g: "ကျွန်မ အပေါ်ဘောင်ကို လွှတ်ချပြီး အောက်က သစ်သားဘောင်ပေါ်ကို ပြန်ဆင်းလိုက်တယ်။",
     p: "A four-inch-tall woman letting go of a wall top and dropping a short way back onto the timber "
       + "studs below, arms out, the lit gap above "
@@ -705,7 +707,7 @@ export const SCENES = [
         "ဒီတစ်ခါ လက်ဖဝါးကို လှန်ထားတယ်။ ကျွန်မတို့ရှေ့မှာ လမ်းတစ်ခု ချထားသလို။"],
     c: [[2, "stinger"]] },
 
-  { t: "Riding a Palm Upward", l: "အပြင်", w: ["မေ", "ကိုဇင်"],
+  { rev: ["direction fixed"], t: "Riding a Palm Upward", l: "အပြင်", w: ["မေ", "ကိုဇင်"],
     g: "လက်ဖဝါးကြောင်းတစ်ကြောင်းချင်းက မြောင်းသေးသေးတွေလို။ အပေါ်ကို မြောက်လာတယ်။",
     p: "Two tiny people seated on an open human palm, the lines of it running past them like "
       + "channels, the room swinging by around them as the hand rises.",
@@ -748,10 +750,10 @@ export const SCENES = [
         "“သူတို့က ငါတို့ပဲ”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Laid on a Piece of Cloth", l: "အပြင်", w: ["မေ", "ကိုဇင်"],
+  { rev: ["direction fixed"], t: "Laid on a Piece of Cloth", l: "အပြင်", w: ["မေ", "ကိုဇင်"],
     g: "စားပွဲပေါ်က အဝတ်ပျော့တစ်စပေါ် ချပေးတယ်။",
     p: "Two tiny people set down on a folded soft cloth on a tabletop, the weave of it under them "
-      + "like heavy rope, an enormous careful hand withdrawing.",
+      + "like thin cord, an enormous careful hand withdrawing.",
     u: ["ကျွန်မတို့ကို စားပွဲပေါ်က အဝတ်ပျော့တစ်စပေါ် ချပေးတယ်။"] },
 
   { t: "Her Leg Was Not Cut", l: "အပြင်", w: ["မေ", "အပြင်ကမေ"],
@@ -794,11 +796,9 @@ export const SCENES = [
     u: ["အပြင်က ကျွန်မတို့နှစ်ယောက်က အရုပ်အိမ်ကို စစ်ကြည့်ပြီး နောက်အခန်းကပစ္စည်းတွေ သွားကြည့်ခဲ့ကြတယ်။",
         "ရေသောက်တယ်။ အလုပ်အကြောင်း ဖုန်းပြောတယ်။ ပစ္စည်းစာရင်း ရေးတယ်။"] },
 
-  { t: "While We Were Running", l: "အရုပ်အိမ်", w: ["မေ", "ကိုဇင်", "အရုပ်"],
+  { rev: ["direction fixed"], t: "While We Were Running", l: "အရုပ်အိမ်", w: ["မေ", "ကိုဇင်", "အရုပ်"],
     g: "အဲဒီအချိန်တစ်လျှောက်လုံး ကျွန်မတို့က အိမ်သေးသေးထဲမှာ ပြေးနေရတယ်။",
-    p: "Wide real-scale view of the quiet dolls' house on its table in the sunlit living room. Through "
-      + "one open wall and window, tiny May and Ko Zin are visibly fleeing through a miniature room as "
-      + "the towering red-dress doll follows them; the surrounding full-size room remains calm.",
+    p: "Wide real-scale view of the quiet dolls' house on its table in the sunlit living room. Through one lit upstairs WINDOW, tiny May and Ko Zin are visible mid-flight across a miniature room while the full-size pair go about their inventory elsewhere in the room, entirely unaware.",
     u: ["အဲဒီအချိန်တစ်လျှောက်လုံး ကျွန်မတို့က အိမ်သေးသေးထဲမှာ ပြေးနေရတယ်။",
         "အရုပ်တစ်ရုပ်ရဲ့လက်ထဲ မပါသွားအောင်။"],
     c: [[1, "bigstinger"]] },
@@ -858,11 +858,9 @@ export const SCENES = [
         "ကျွန်မတို့ကို ကားထဲမှာ လုံလုံခြုံခြုံ ထားပေးတယ်။ အဝတ်ပျော့ပျော့တွေ ခင်းပေးတယ်။",
         "ရေကို အဖုံးသေးသေးတစ်ခုထဲ ထည့်ပေးတယ်။"] },
 
-  { t: "She Cries When I Hurt", l: "မေ့အိမ်", w: ["အပြင်ကမေ", "မေ"],
+  { rev: ["direction fixed"], t: "She Cries When I Hurt", l: "မေ့အိမ်", w: ["အပြင်ကမေ", "မေ"],
     g: "သူက ကျွန်မနာတဲ့အခါ မျက်ရည်ကျတယ်။ ကျွန်မလည်း သူ့ကို မုန်းလို့မရဘူး။",
-    p: "At tabletop height in May's family home, full-size May bends close with tears on her kind face "
-      + "while carefully adjusting the cloth dressing on tiny May's right calf with tweezers. Tiny May "
-      + "is fully visible on soft cloth; both women have exactly the same face and clothes.",
+    p: "Inside a parked car at tabletop height on the passenger seat: full-size May bends close with tears on her kind face while carefully adjusting the cloth dressing on tiny May's right calf. Tiny May lies on folded soft cloth with a bottle cap of water beside her.",
     u: ["သူက ကျွန်မနာတဲ့အခါ မျက်ရည်ကျတယ်။ ကျွန်မလည်း သူ့ကို မုန်းလို့မရဘူး။",
         "သူက ကျွန်မပဲ။ တစ်ချိန်တည်းမှာ ကျွန်မ မဟုတ်တော့ဘူး။"],
     c: [[1, "bigstinger"]] },
@@ -876,7 +874,7 @@ export const SCENES = [
         "ကျွန်မအသံကို အမေ မကြားဘူး။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "The Other One Answered", l: "မေ့အိမ်", w: ["အပြင်ကမေ"],
+  { rev: ["direction fixed"], t: "The Other One Answered", l: "မေ့အိမ်", w: ["အပြင်ကမေ"],
     g: "အပြင်က ကျွန်မက “ပြန်လာပြီ အမေ” လို့ ဖြေတယ်။ ပြီးတော့ အမေ့ဆီ လျှောက်သွားတယ်။",
     p: "From table height: a full-size woman walking away toward an older woman in a doorway, the "
       + "two of them embracing, seen past the blurred edge of a box.",
@@ -919,8 +917,8 @@ export const SCENES = [
 // generator publishes both, so every Flow prompt carries an explicit composition, continuity and
 // failure-prevention instruction rather than relying on the model to infer those from narration.
 export const DETAILS = [
-  /* 1 */ "Extreme interior close-up with the four-inch-wide window filling most of the frame; show one ordinary brown human eye edge-to-edge behind the glass, not a monster eye. Keep the miniature room edge visible as the scale anchor.",
-  /* 2 */ "Floor-level medium-wide frame beneath the sill. May and Ko Zin are both four inches tall and pressed flat to the oversized wall; an eyelid crossing the window above creates one hard band of shadow. Ko Zin is protective, not violent, and both are uninjured with intact clothing.",
+  /* 1 */ "Extreme interior close-up on ONE SMALL PANE about an inch wide, filled edge to edge by an ordinary brown human eye behind the glass — not a monster eye, and not a four-inch opening no real eye could cover. Keep the surrounding window bars and the miniature room edge visible as the scale anchor.",
+  /* 2 */ "Floor-level medium-wide frame beneath the sill. May and Ko Zin are both four inches tall and pressed flat to the oversized wall; an eyelid crossing the pane above throws one hard band of shadow. CONTINUITY: this moment falls late in the story, so May's right calf is already bandaged with torn shirt cloth while Ko Zin's overshirt is still intact. He is protective, not violent.",
   /* 3 */ "Compose from inside toward the window with the pupil angled downward as if searching. Keep May and Ko Zin fully concealed below the sill rather than showing anonymous extra people; communicate searching through gaze direction, not motion blur.",
   /* 4 */ "Static low-angle view up the empty toy staircase, with huge wood grain, crude glue seams and an upper landing hidden by the turn. Use negative space and compressed framing for threat; no doll, person, night lighting or written text.",
   /* 5 */ "Three-quarter medium shot in May's practical furniture workshop, not the deceased woman's living room. Show May's recognizable face and uninjured full figure beside the chair, with wax cloth and hand tools secondary; her sage shirt and jeans remain clean and intact.",
@@ -931,82 +929,82 @@ export const DETAILS = [
   /* 10 */ "Medium-wide over-table composition: Ko Zin has already placed the glass cover safely aside while May leans in and touches the tiny brass knocker with one fingertip. Both recognizable faces share a relaxed smile; keep the blue miniature door and size difference clearly readable.",
   /* 11 */ "True macro frame of brass knocker against blue painted wood, with fingertip-sized scale shown by thick paint and shallow focus. Freeze it at contact; do not attempt to visualize sound waves, vibration text or onomatopoeia.",
   /* 12 */ "Wide full-body two-shot immediately after transformation. May and Ko Zin are exactly four inches tall, dwarfed by floorboard grain as wide as paving slabs and toy furniture looming around them; both are uninjured and Ko Zin's shirt is intact. The missing real table and glass case must leave obvious empty space.",
-  /* 13 */ "Keep both characters full-body and small in the lower third while the blue door dominates the frame. May and Ko Zin are uninjured with intact clothes; no full-size humans, doll, glass case or ordinary-sized modern door.",
-  /* 14 */ "Side-angle medium full-body shot of intact-shirt Ko Zin bracing one foot and shoulder as he pulls the oversized handle. The handle has rotated but the blue toy door remains perfectly flush; oversized brush texture and floor grain preserve four-inch scale.",
+  /* 13 */ "Extreme low angle. Keep both characters full-body and small in the lower third while the blue toy door dominates the frame; its handle sits at about the top of their heads, reachable at full stretch but far too big to grip. May and Ko Zin have intact clothes and May's right calf is unhurt at this point; no full-size humans, doll, glass case or ordinary-sized modern door.",
+  /* 14 */ "Side-angle medium full-body shot of intact-shirt Ko Zin with both palms flat on the lower panel of the toy door, shoulder and one braced foot behind the shove. He has ALREADY tried the handle and failed: it is level with the top of his head, far too thick for his hand to close around, and it does not turn. The blue door stays perfectly flush. Oversized brush texture and floor grain preserve four-inch scale.",
   /* 15 */ "Over-May's-shoulder view toward the sealed miniature window. Her uninjured silhouette occupies one edge while perfectly flat white light fills the glass with no horizon, scenery or eye; the painted toy frame and giant grain remain sharp.",
   /* 16 */ "Extreme macro of the false catch with raking daylight revealing raised brush strokes and trapped brush hairs. It must be a flat painted illusion with no projecting metal hardware, hand, text or readable symbol.",
-  /* 17 */ "Low three-quarter action frame of intact-shirt Ko Zin striking the door as two separate puffs of oversized dust fall from the ceiling behind him. Freeze the impact cleanly; no visible upstairs figure, doll or supernatural glow.",
+  /* 17 */ "Low three-quarter action frame of intact-shirt Ko Zin driving his shoulder into the very bottom of the enormous door as two separate puffs of oversized dust fall from the ceiling far above him. Freeze the impact cleanly; no visible upstairs figure, doll or supernatural glow.",
   /* 18 */ "Upward-looking ceiling close-up with two distinct dust falls landing in sequence across different joints. Use scale through coarse timber and large dust particles; show no feet, creature, text or night darkness.",
   /* 19 */ "Centered view up the empty staircase with the top landing occluded, not black. Preserve flat afternoon spill light below and let the unanswered empty space carry the voice; no doll hem or person yet.",
   /* 20 */ "Ground-level wide shot beneath a dolls'-house dining table that now looms like full-sized furniture over four-inch May and Ko Zin. Show both crouched close together, uninjured, beneath crude giant glue joints; never describe or render the table as tiny relative to them.",
   /* 21 */ "May-and-Ko-Zin viewpoint from under the table: only the enormous crimson hem, bare porcelain foot and lower rigid leg descend into view. Keep the hidden people off-camera, the doll visibly toy-made and undamaged, and the scale at more than twice their height.",
-  /* 22 */ "Clinical side macro on both porcelain knees, with spherical joints and mould seams in crisp focus and red skirt hem above. No flesh, skin pores, wounds, blood or human kneecaps.",
+  /* 22 */ "Clinical side macro on both porcelain knees, spherical joints and mould seams in crisp focus, red skirt hem above. IMPORTANT: the stair treads fit her perfectly — her stiffness is the joint, not the staircase, so show a comfortable tread under a straight rigid leg. No flesh, skin pores, wounds, blood or human kneecaps.",
   /* 23 */ "Profile full-leg action frame: the doll advances by swinging one rigid leg from the hip while the spherical knee remains locked straight. Keep porcelain seams and toy stiffness obvious; no natural human walking pose.",
   /* 24 */ "Under-table close-up with the huge porcelain sole stopped beside an oversized table leg. Angle the foot so pressed maker's marks are visible as abstract indentations but impossible to read; preserve the same doll's red hem and undamaged toy material.",
   /* 25 */ "Low point-of-view from the hiding place as the doll hinges only at the waist and places her upside-down porcelain face beneath the table edge. Both legs remain ruler-straight; no flexible spine, hair obscuring the toy face, flesh or gore.",
   /* 26 */ "Symmetrical macro of the doll's glazed face with both glass eyes visible; one eye aims toward camera while the other remains slightly misaligned. The painted smile and neck tilt stay unchanged; no living pupils, wet tissue or facial expression change.",
   /* 27 */ "Extreme macro on the small painted pink smile with visible brush edges and glazed porcelain surrounding it. The mouth remains a flat closed paint mark, never opening, speaking, bleeding or becoming human.",
-  /* 28 */ "Dynamic side frame at four-inch scale: intact-shirt Ko Zin drives the heavy dolls'-house table edge into the towering doll's porcelain cheek. Show the table as massive relative to him, the doll rocking back but still undamaged, and no miniature-looking adult furniture.",
+  /* 28 */ "Dynamic low frame at four-inch scale: intact-shirt Ko Zin hauls May by the wrist at a run BETWEEN two massive table legs and out the far side. The table is immovably heavy at his scale and he never touches it with his shoulder. Behind them the towering doll's porcelain hand sweeps into the gap and closes on nothing. The doll is undamaged; no miniature-looking adult furniture.",
   /* 29 */ "Rear three-quarter wide shot of uninjured May and intact-shirt Ko Zin turning sideways to squeeze through the narrow raw opening beneath the staircase. The finished painted room remains behind them while unfinished timber darkness begins ahead.",
-  /* 30 */ "Wide establishing frame inside the wall cavity with human-height May-and-Ko-Zin viewpoint but no people required. Enormous nail shafts, frozen glue streams, sawdust boulders and raw timber must prove their four-inch scale without gothic decay.",
+  /* 30 */ "Wide establishing frame inside the wall cavity at their eye height; no people required. Nail shafts cross overhead like roof beams and dried glue runs like frozen streams, but keep the scale honest: at four inches tall SAWDUST READS AS COARSE GRAVEL UNDERFOOT, not boulders. Raw timber, no gothic decay.",
   /* 31 */ "Macro of the same doll's undamaged porcelain finger forcing into the cavity, with exactly three moulded rings at the joint and neat pink nail varnish. Surround it with splintered timber for scale; no flesh, blood or extra fingers.",
-  /* 32 */ "Tight two-shot in the cavity: Ko Zin kneels and binds May's fresh right-calf cut using a strip torn from a shirt sleeve while a long splinter lies nearby. Keep blood minimal and localized, May's face visible, and Ko Zin's main tan overshirt intact across the back.",
+  /* 32 */ "Tight two-shot in the cavity: Ko Zin kneels and binds May's fresh right-calf cut with a strip torn from a shirt sleeve. CONTINUITY: the long timber splinter lies clearly in shot beside them and STAYS THERE — he comes back for it much later. Keep blood minimal and localised, May's face visible, and Ko Zin's tan overshirt intact across the back.",
   /* 33 */ "Keep all three scale relationships legible in one deep-focus frame: injured May and intact-shirt Ko Zin small in the cavity foreground, doll more than twice their height in the lit room beyond. The doll remains intact and unmistakably porcelain.",
-  /* 34 */ "Wide establishing view of the upstairs bedroom from their four-inch eye height. Child's desk, bed and clock appear human-sized but betray themselves through giant grain, rounded toy edges and glued feet; no people or doll.",
-  /* 35 */ "Over-shoulder macro of injured May touching the clock face with one fingertip. Painted hands remain flat under her finger and the raised brush texture is visible; no moving hands, readable numerals or real clock mechanism.",
-  /* 36 */ "Tabletop macro of the opened wooden book block, with carved false page lines and one continuous solid interior. Use a hand or giant wood grain only as scale context; no real paper, printed text or readable marks.",
-  /* 37 */ "Medium close-up of intact-shirt Ko Zin lifting the rigid wooden pillow with both hands, exposing its flat sanded underside and painted fabric texture. May's calf is already bandaged if she appears; no soft stuffing or real cloth pillow.",
+  /* 34 */ "Wide frame of the upstairs bedroom in which BOTH TINY PEOPLE ARE PRESENT, hauling themselves over the top edge of a raw wall frame at the left of shot, having climbed the timber studs inside the cavity. Desk, bed and clock are enormous at their scale and betray themselves through giant grain, rounded toy edges and glued feet. May's right calf is bandaged; Ko Zin's shirt is intact. No doll and no full-size person.",
+  /* 35 */ "Over-shoulder macro of injured May standing on the desktop and reaching up on her toes to a wall clock taller than she is, one fingertip on the dial. The painted hands stay flat under her finger and the raised brush texture is visible; no moving hands, readable numerals or real clock mechanism.",
+  /* 36 */ "Tabletop frame of a CLOSED wooden book block standing taller than four-inch Ko Zin beside it, seen from its cut edge so the carved false page lines and the one continuous solid interior are both readable. It is never opened and could not be. No real paper, printed text or readable marks.",
+  /* 37 */ "Medium shot of both four-inch figures standing on an enormous bed at the edge of a rigid wooden pillow they plainly cannot lift, looking along its cut edge where the flat sanded underside and the painted fabric skin meet. Nobody picks it up. May's right calf is bandaged; no soft stuffing or real cloth pillow.",
   /* 38 */ "Dutch-angle wide shot as injured May and intact-shirt Ko Zin slide across the tilted room and grab fixed walls. Every chair, desk and bed remains perfectly glued in place despite the tilt; avoid floating objects or a collapsing house.",
   /* 39 */ "Window-facing close-up timed to the reveal: ordinary skin and eyelashes press behind the small glass until one brown eye fills it. Keep the eye anatomically normal and the surrounding toy frame visible; no monster distortion.",
   /* 40 */ "Floor-level two-shot below the sill after the eye withdraws. Injured May and intact-shirt Ko Zin remain frozen against the oversized wall while featureless white light returns above; no eye remains in the window.",
   /* 41 */ "Side-lit wall close-up showing a fine sheet of oversized dust shaken loose simultaneously across joints. Convey low-frequency vibration through dust and subtle blur only; no visible sound waves, lettering or speaker yet.",
   /* 42 */ "Medium two-shot beneath the window: intact-shirt Ko Zin presses his palm against a huge dried-glue ridge while looking to injured May for confirmation. Include both faces and broad toy construction cues; the realization should be quiet, not theatrical.",
-  /* 43 */ "Injured May's viewpoint through the tiny window toward a dark speaker silhouette in the white-lit real room. Make the grille slots and cable recognizable as clues without showing a brand, controls, text or full-size person.",
-  /* 44 */ "Extreme low-angle exterior shot from four inches above the tabletop. The portable speaker towers like an office block, with grille openings like doors and its cable like a thick hose; no tiny characters are necessary and no brand text is visible.",
+  /* 43 */ "Injured May balanced on the windowsill she has had to climb to reach, looking out through the tiny pane toward a dark speaker silhouette in the white-lit real room. Make the grille slots and cable recognisable as clues without showing a brand, controls, text or full-size person.",
+  /* 44 */ "Extreme low-angle exterior shot from four inches above the tabletop. The portable speaker rises like a two-storey building — roughly twice their height, NOT a skyscraper — its grille openings about chest-high to them and its cable as thick as a fallen branch. No tiny characters necessary and no brand text visible.",
   /* 45 */ "Tight portrait of injured May in the dolls'-house room, her eyes widened in precise stunned recognition rather than generic fear. Keep huge grain and the flat white window soft behind her, with no double exposure or literal thought imagery.",
   /* 46 */ "Real-scale overhead three-quarter view of the complete dolls' house on its table as anonymous ordinary hands rotate it slightly. Show the house moving as one rigid object; no giant interior room reference, supernatural force or visible duplicate faces.",
   /* 47 */ "View downward from the upper landing as the intact red-dress doll begins climbing from below, one rigid porcelain leg and enormous hem entering first. Injured May and intact-shirt Ko Zin remain off-camera; doll hand still unchipped.",
   /* 48 */ "Wide symmetrical shot of the upstairs room shaped like a sealed box: one door behind, one white window ahead and no alternate opening. Oversized grain and glued furniture prove scale; keep daylight flat rather than turning the room dark.",
-  /* 49 */ "Medium action frame of intact-shirt Ko Zin wrenching a leg from a glued chair, raw pale splinters breaking at the joint. He remains four inches tall and the chair reads as toy construction at his scale; no doll in frame.",
-  /* 50 */ "Impact macro on the toy window as the wooden chair leg creates one short clean crack. Show the stick and Ko Zin's hands only if needed; no shattered pane, explosive glass, text or multiple cracks.",
-  /* 51 */ "Frontal medium-wide shot of injured May standing fully exposed at the window, waving both arms above her head as an ordinary giant brown eye fills the glass. Her scale and bandaged right calf are visible; she is determined, not screaming.",
+  /* 49 */ "Medium action frame of intact-shirt Ko Zin hefting the long raw timber splinter recovered from the wall cavity — the same splinter that cut May's calf — holding it two-handed like a staff nearly his own height. He is NOT breaking furniture: the glued chair stands untouched behind him. He remains four inches tall; no doll in frame.",
+  /* 50 */ "Impact macro on the toy window as the raw timber splinter, swung two-handed, produces one short clean crack. Show the splinter and Ko Zin's hands only if needed; no chair leg, no shattered pane, no explosive glass, text or multiple cracks.",
+  /* 51 */ "Frontal medium-wide shot of injured May standing fully exposed ON THE WINDOWSILL she has climbed to, waving both arms above her head as an ordinary giant brown eye fills the pane. Her scale and bandaged right calf are visible; she is determined, not screaming.",
   /* 52 */ "Macro on the ordinary eye recoiling from the window, iris shifted and upper lid raised in surprise. Preserve normal anatomy and capillaries; communicate recoil with framing, not grotesque distortion or motion trails.",
   /* 53 */ "Upward interior view as all roof joints release dust at once under a gentle external touch. Keep the room intact, afternoon light constant and no visible hand yet; no collapse, night or magical glow.",
   /* 54 */ "Full-body doll on the staircase frozen mid-step, intact hand lowered and tilted head listening upward. Emphasize the fixed painted smile and neck seam; no changed facial expression, flesh or chipped hand yet.",
   /* 55 */ "Wide interior frame as the roof panel lifts and a clean blade of real afternoon daylight widens overhead. Injured May and intact-shirt Ko Zin are small below only if composition allows; no night sky, explosion or broken roof debris.",
-  /* 56 */ "Low-angle action two-shot: intact-shirt Ko Zin braces and boosts injured May by the waist toward the widening roof gap. Her hands catch the raw wall top and her right-calf bandage remains visible; preserve their four-inch scale against giant fingers outside.",
-  /* 57 */ "Frontal doorway shot of the intact doll forcing forward while her porcelain crown jams under the lintel. Her full rigid body and straight knees show why she cannot fit; do not enlarge the doorway or make her flesh.",
-  /* 58 */ "Three-quarter medium shot after the mechanical fold: the doll's porcelain head lies exactly sideways on one shoulder, painted smile vertical and neck-joint seam open as a dry toy gap. No broken flesh, exposed organs, gore or rubber neck.",
-  /* 59 */ "Layered action frame: intact-shirt Ko Zin strikes the doll's huge unchipped hand aside with the chair leg while her other porcelain hand closes on his shoulder from behind. Keep injured May near the escape edge and avoid extra arms or ambiguous ownership.",
+  /* 56 */ "Low-angle action two-shot inside the wall cavity: BOTH figures are already high on the raw timber studs, Ko Zin braced on a cross-piece and pushing injured May up the last short step with both hands while her hands catch the open top edge of the wall. Establish the ledge clearly — it is the route out. Her right-calf bandage remains visible; preserve four-inch scale against the giant fingers outside.",
+  /* 57 */ "Frontal doorway shot of the intact doll walking through the opening UPRIGHT AND UNHURRIED with clear headroom above her crown — the house was built for her and she fits it comfortably. Her full rigid body and straight knees are visible. Do not jam her against the lintel and do not make her flesh.",
+  /* 58 */ "Three-quarter medium shot with the doll standing CLEAR IN THE MIDDLE OF A ROOM, space on every side and nothing touching her, as she folds her porcelain head exactly sideways onto one shoulder to look at something low down. Nothing is forcing the movement — it is a choice. Painted smile vertical, neck-joint seam open as a dry toy gap. No broken flesh, exposed organs, gore or rubber neck.",
+  /* 59 */ "Layered action frame: intact-shirt Ko Zin swings the raw timber splinter two-handed into the doll's huge unchipped hand, knocking it aside, while her other porcelain hand closes on his shoulder from behind. No chair leg. Keep injured May near the escape edge and avoid extra arms or ambiguous ownership.",
   /* 60 */ "Tight horizontal composition on injured May hanging from the wall top and intact-shirt Ko Zin being pulled away below; their fingertips make one final light contact at frame center. Show the spatial separation clearly with no fused or extra fingers.",
   /* 61 */ "Upward portrait of intact-shirt Ko Zin pinned by a porcelain hand, looking directly toward injured May above with calm certainty. His mouth is open in one urgent command, but include no written word, subtitle or speech bubble.",
-  /* 62 */ "Wide vertical action within the 16:9 frame: injured May releases the wall top and falls back toward Ko Zin while the bright opening recedes above. Her body is fully visible and controlled, not tumbling grotesquely; maintain the right-calf bandage.",
+  /* 62 */ "Action frame inside the cavity: injured May releases the wall top and drops a SHORT way back onto the timber studs below, arms out and controlled, the bright roof opening receding above her. The fall is one body-length, not a plunge; maintain the right-calf bandage.",
   /* 63 */ "Macro at the moment the doll's hand hits the wall: one small glazed shard separates, revealing dry matte ceramic beneath. The damage is limited to one hand; absolutely no blood, flesh, wetness or damage elsewhere.",
   /* 64 */ "High-angle action frame from inside: an ordinary giant thumb and forefinger gently but firmly close around the same doll's rigid torso and lift her. Show her red dress, porcelain body and newly chipped hand; the human hand is kind, clean and not crushing her.",
   /* 65 */ "Close action shot of injured May pulling Ko Zin's tan overshirt out of the doll's chipped porcelain grip. The back seam tears open in this exact frame while his skin remains uninjured; no blood, missing limb or already-detached clothing.",
   /* 66 */ "Low-angle view of the doll rising toward the roof opening in giant fingers, chipped hand visible, head mechanically rotated backward to stare down. Her painted smile never changes and the spoken line must not appear as text.",
   /* 67 */ "Keep injured May and torn-shirt Ko Zin small but clearly visible before the offered palm. The palm's relaxed posture and clean afternoon light must communicate rescue, with no grabbing fingers, menace or doll.",
-  /* 68 */ "Macro-wide shot on the rising palm: injured May and torn-shirt Ko Zin sit together between enormous skin creases like drainage channels. Show the dolls' house roof dropping away beneath them and avoid revealing the rescuer's face yet.",
+  /* 68 */ "Macro-wide shot on the rising palm: injured May and torn-shirt Ko Zin sit together between deep skin creases that read as ankle-deep grooves at their size, not canyons. Show the dolls'-house roof dropping away beneath them and keep the rescuer's face out of frame.",
   /* 69 */ "Use forced scale in one frame: tiny torn-shirt Ko Zin on the palm at lower edge and the identical full-size intact-shirt Ko Zin filling the upper background. Their matching facial structure is essential; both are shocked, neither is sinister.",
   /* 70 */ "Tiny-May point of view from the palm as full-size May leans gently into frame behind full-size Ko Zin. Her exact matching face, sage shirt and left hair tuck are readable; tiny May stays off-camera so the reveal remains subjective.",
   /* 71 */ "Medium close-up of full-size May making the unconscious left-side hair tuck. Keep her face warm, ordinary and unchanged from both May references; use the giant scale only through the low palm-height camera, not distorted anatomy.",
   /* 72 */ "Close palm-height portrait of full-size May lowering her face and speaking softly with wet worried eyes. Natural household kindness is the point; no horror lighting, predatory smile, extreme lens distortion or uncanny duplicate effect.",
-  /* 73 */ "Wide tabletop frame as a giant careful hand finishes placing injured May and torn-shirt Ko Zin on folded cloth. The cloth weave is rope-thick beneath them, both tiny people are fully visible, and the hand withdraws open and gentle.",
+  /* 73 */ "Wide tabletop frame as a giant careful hand finishes placing injured May and torn-shirt Ko Zin on folded cloth. The weave reads as thin cord beneath them — proportionate to four inches, not ship's rope. Both tiny people fully visible; the hand withdraws open and gentle.",
   /* 74 */ "Split-depth comparison in one frame: full-size May checks her clean uninjured right calf while tiny May sits on the cloth with the same calf wrapped in a lightly blood-stained bandage. Show matching faces and clothes; no exposed wound or gore.",
   /* 75 */ "Over-tiny-May's-shoulder shot toward full-size May as recognition drains the color from her face. Include enough of tiny May's matching profile and giant cloth weave to establish the two scales; expressions should mirror rather than become theatrical.",
   /* 76 */ "Balanced profile two-shot with tiny injured May on the cloth facing full-size uninjured May at eye level across the scale gap. Their faces and expressions must be identical, with the private shared memory conveyed through recognition only; no text or medicine imagery.",
   /* 77 */ "Macro callback to the same brass knocker and blue miniature door in flat daylight. Keep it perfectly still and visually identical to shot 11, but without a fingertip; no split screen, timeline graphic, text or supernatural glow.",
   /* 78 */ "Natural observational wide shot of full-size May and full-size Ko Zin continuing inventory work in another part of the old house. Both clothes are intact, they act calm and ordinary, and no tiny people or doll are visible.",
-  /* 79 */ "Use a physically plausible open-front dolls'-house view rather than an abstract split screen. The surrounding room is tranquil while, inside one clearly visible miniature room, injured May and torn-shirt Ko Zin flee the chipped-hand doll; keep all figures readable but small.",
+  /* 79 */ "Keep the dolls' house CLOSED — read the interior through a window, never through a removed wall, or the audience will ask why they do not climb out of the opening. The surrounding room is tranquil. CONTINUITY: this summarises the whole ordeal rather than its last seconds, so Ko Zin's shirt is still INTACT and the doll's hand is still UNCHIPPED; only May's calf is bandaged. Keep all figures readable but small.",
   /* 80 */ "Recreate the pre-transformation table composition at real scale with full-size uninjured May and intact-shirt Ko Zin standing normally beside the dolls' house. Everything is ordinary and continuous; no tiny originals are visible outside the house.",
   /* 81 */ "Frame through the dolls'-house window at real scale, with the newly formed tiny copies centered and recognizable as uninjured May and intact-shirt Ko Zin. They should look newly present and still, not translucent, ghostly, doll-like or wounded.",
   /* 82 */ "True macro under the blue door lintel: full-size Ko Zin's careful fingers hold a magnifying glass over one faded handwritten line. Keep the writing visibly old but deliberately unreadable and omit invented Burmese letters, captions or translation.",
   /* 83 */ "Make the physical aged photograph the entire composition, with worn paper edges and monochrome grain. Preserve the doll's exact porcelain face, collar, dress silhouette and neck tilt while rendering the red fabric as a dark gray tone; no modern color except outside the photo edge.",
   /* 84 */ "Dead-center locked composition of a plain wooden crate with lid fully closed and metal latch secured in the old living room. Keep it inert in daylight; no doll part, movement line, face, text, blood or ominous supernatural glow.",
   /* 85 */ "Car-seat-level medium-wide shot. Injured May and torn-shirt Ko Zin are exactly four inches tall, safely nested in cloth inside the shallow box; giant seat upholstery, belt buckle and bottle-cap-sized water dish prove scale. No old-house objects or full-size person in frame.",
-  /* 86 */ "Focus on the two identical May faces at radically different scales, with the tweezers and right-calf dressing secondary. Full-size May is openly compassionate, tiny May is exhausted but receptive, and the home remains warm rather than frightening.",
+  /* 86 */ "Set this IN THE CAR, not at the house — it happens on the drive home, before the mother is heard. Focus on the two identical May faces at radically different scales, with the dressing and the bottle-cap water secondary. Full-size May is openly compassionate, tiny May exhausted but receptive, the interior warm rather than frightening.",
   /* 87 */ "Low tabletop medium shot of tiny injured May springing upright in the box and reaching toward the enormous home doorway. Her mouth is open in reply and the distant older woman remains only a soft silhouette; no one turns toward tiny May.",
-  /* 88 */ "From the same low tabletop axis, show full-size May walking to her ordinary older mother and accepting the bag before a warm embrace. The blurred box edge anchors tiny May's viewpoint; both women are natural and unaware, never sinister.",
+  /* 88 */ "From the same low tabletop axis, show full-size May walking to her ordinary older mother, who TAKES THE BAG OUT OF HER HAND before a warm embrace — the older woman is the one doing the carrying. The blurred box edge anchors tiny May's viewpoint; both women are natural and unaware, never sinister.",
   /* 89 */ "Use deep spatial separation: tiny injured May isolated at the near table edge while full-size May participates in the family group far across the warm room. The family is not cruel; their normal ease and failure to search create the tragedy.",
   /* 90 */ "Tight foreground on tiny injured May reaching from the table edge, with her small hand sharp and the distant embrace between full-size May and her mother recognizable but soft. Maintain the exact duplicate face and sage shirt; no impossible stretched arm or eye contact.",
   /* 91 */ "Final low tabletop wide shot: torn-shirt Ko Zin sits beside injured May and gently draws her reaching hand back into his. Keep both tiny figures sharp against the immense warm family room fading softly behind them; quiet resignation, no doll, no full-size duplicate foreground and no horror effect.",
