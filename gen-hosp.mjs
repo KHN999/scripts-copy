@@ -53,6 +53,7 @@ const shots = rows.map((r) => {
     prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.p}\n\n${s.d}\n\n${s.style}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
+    rev: s.rev || null,
   };
 });
 

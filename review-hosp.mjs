@@ -104,18 +104,18 @@ Son pinches his own forearm on stool beside sleeping mother. Mild pressure only,
 Sleeping mother’s LEFT hand hangs outside bed rail toward floor. Loose fingers, gown sleeve, no old hand already attached.
 Three sourced hands: mother’s LEFT descends, old man's RIGHT rises, son's LEFT enters to protect. Keep their sleeves and ages distinct.
 Old man near-upright only here under frame, head slightly tilted in impossible clearance. Normal human proportions, no stretched neck.
-Unique deep reveal: old man near foreground, iron bed legs recede beyond possible ward length. No faces, bodies or repeated old men.
+Unique deep reveal: the old man IS present in the near foreground — he is the anchor for the impossible depth behind him. What is forbidden is ANY ADDITIONAL figure in that darkness: no second face, no further bodies, no repeated old men receding with the bed legs.
 Old man watches mother’s hanging hand rather than son. No contact yet; his reaching arm remains connected to his body.
 Mother’s hand is safely back above. Son’s LEFT watch-bearing hand grips old man's RIGHT wrist below, no third hand in contact.
 Same grip in natural light, son's tense fingers start loosening. Heat loss is reaction only, no ice, frost, smoke or skin blanching.
 Reverse grip: old man's RIGHT hand encloses son's LEFT wrist. Watch remains on young wrist; two arms, no knotted fingers.
 Old man's eyes fill with tears, apologetic lip tremor. Exhaustion and guilt, not aggression or triumphant smile.
 Old man speaks softly with grip still held. No renewed mother contact or duplicated wrist appearing beneath.
-Son's cheek now on terrazzo at floor height. No impact injury; ward seems distant through framing and focus.
+Son's cheek now on terrazzo at floor height. CONTINUITY: from here until shot 83 his physical body lies ON THE FLOOR beside the bed, never on the mattress. No impact injury; ward seems distant through framing and focus.
 From under bed, son attempts an answer toward opaque frame overhead. No visible sound or mother seen through mattress.
-Trapped low POV among ordinary finite bed legs. No second endless tunnel; obstruction comes from tight close framing.
+Trapped low POV among ordinary finite bed legs. ⚠️ THE LEGS ARE NOT A CAGE — there is plainly room to crawl between them, so compose the gaps as open rather than barred. What holds him is not an obstacle. No second endless tunnel; the sense of entrapment comes from tight close framing.
 Feet hurry toward bed, nurse’s recognizable white shoes among ordinary sandals. Crop above knees, no full standing view.
-Son's hand reaches toward mother's bare ankles without contact. Gap remains physically small; do not elongate his arm.
+Son's hand reaches toward mother's bare ankles without contact across barely two feet of COMPLETELY OPEN floor — ⚠️ nothing physical is in the way, and the emptiness between them is the point. The distance simply refuses to close. Gap remains physically small; do not elongate his arm.
 Floor-height view of son calling toward unreceptive feet. Human opaque face, no ghost glow or audible text.
 Low view of helpers lifting physical Min Thu, only hanging LEFT arm initially revealed. Living unconscious body, no corpse treatment.
 Watch insert on hanging LEFT wrist: black rectangle, same upper-right glass chip, unreadable face. No second watch.
@@ -125,14 +125,14 @@ Low distant view past bed legs toward green curtain beginning to move. No jump t
 From floor sightline, old man sits up in corner bed after long sleep. No under-bed old man remains simultaneously.
 Same old face now relieved in same singlet and longyi. Visible through bed-edge gap, never a new young version of him.
 Old man inspects his hands and touches face, seen from low distance. Choose hand-to-cheek instant, not multiple gesture copies.
-Old man leans down from corner bed and meets floor camera’s eyeline. Son's reaching hand foreground if needed, no standing son.
-Blanket lowered into low sightline blocks old man from view. Camera outside opaque cloth, no transparent fabric.
-Daylight stripe across ordinary under-bed terrazzo. Single instant, no clock, time-lapse panels or infinite floor.
+⚠️ DISTANCE MATTERS: the old man is in the GREEN-CURTAINED CORNER BED far down the ward, while the camera lies under the mother's bed. He leans out and looks ACROSS the aisle at that distant gap, and his eyeline still lands exactly on the lens. Keep the long stretch of floor and the rows of bed legs between them clearly visible. Son's reaching hand may enter the near foreground; no standing son.
+The old man lies back and PULLS THE GREEN CURTAIN closed around the corner bed — a blanket over a bed edge could not hide him from this distance, the curtain can. Camera stays on the floor outside the opaque cloth; no transparent fabric.
+Daylight stripe across ordinary under-bed terrazzo. CONTINUITY: his physical body was carried out at shot 83, treated, and returned to this same bed during this gap — from here on it lies on the mattress above him. Single instant, no clock, time-lapse panels or infinite floor.
 Night from floor: anonymous caretaker hands spread mats, bags serve as pillows. No old man reappears among them.
 Min Thu’s eyes closed but strained face on floor, unable to sleep. Same young features, heavy sleepless eye shadows.
 Low ward fragments of shoes and trolley wheel passing near frame. One coherent still, no visual sound words.
 Son's open hand near bed leg ignored by passing feet. No trampling injury, translucent arm or limb disappearing through feet.
-Low oblique sightline beyond mattress edge shows unconscious physical son above. Do not reveal body through opaque mattress.
+Low oblique sightline past the mattress edge. PREFER THE HAND: his limp LEFT arm and chipped watch hanging over the bed rail read the moment reliably, where a face seen past a mattress from floor height usually does not. Show at most the far edge of the jaw. Never reveal the body through the opaque mattress.
 Mother now recovered in lavender blouse and plum htamein, seated by son's bed. Floor-height view through bed-edge opening.
 Same plastic stool and son's cloth bag beneath, mother seated now. Do not duplicate mother in patient gown elsewhere.
 Daylight low oblique view, mother holds unconscious son's hand at bed edge. No standing conscious son or ghost overlay.
@@ -142,7 +142,7 @@ Mother lying on mat looks upward toward physical son before sleeping. She wears 
 One instant of mother reopening her eyes at mat level. Avoid multi-exposure cycle or duplicated eyes.
 Repeat tight eye motif from 24 and 59 on mother's own fifty-five-year-old face. Exhausted lids and shadows, never old man's identity.
 Rainy night window seen from floor past bed edge, loose green shutter. Weather insert only; no mother under window or new location.
-Mirror shot 3 geometry with mother and conscious son replacing earlier pair. Same bed leg separation, no old man present.
+Mirror shot 3 but with the POSITIONS SWAPPED: mother takes the beside-the-bed mat Min Thu used to have, and Min Thu now occupies the under-the-bed place that was the old man's. Same bed leg separation, same head levels, no old man present.
 Mother's eyes focus directly toward son at mat height for first time. Natural recognition, no glowing pupils.
 Mother quietly puzzled on side, face tired and ordinary. No suspicion or monstrous grimace.
 Son cries silently, tears run sideways across nose while lying down. Mother may blur opposite, no standing face portrait.
@@ -150,7 +150,7 @@ Mother's RIGHT hand opens toward son across mat. Wrist bare; no watch and no wri
 Mother's RIGHT hand and son's LEFT watch-bearing hand inches apart. The gap dominates; no contact or third hand.
 Close son's floor-level expression as he understands transfer. Old man absent; no flashback overlay or aged transformation.
 Only fingertips touch lightly, mother's RIGHT and son's LEFT. Warm light natural, no magical energy glow or full grip.
-Single low composition connects near conscious LEFT hand with physical LEFT hand at mattress edge. Deliberate same-person duality, no split panels.
+⚠️ EXACTLY TWO HANDS IN FRAME AND BOTH ARE HIS: the conscious LEFT hand in the near foreground on the floor, and the physical LEFT hand at the mattress edge above. The mother's hand belongs to shot 112 and must NOT appear here — a third hand is the most likely failure of this image. Deliberate same-person duality, one continuous composition, no split panels.
 Mother's eyelids begin sinking as fingertip contact continues. Retain her face and clothes; no collapse injury or instant corpse.
 Son withdraws LEFT hand, mother startles awake. Choose visible reopened gap; no sustained grip or completed transfer.
 From floor, mother grasps unconscious son's hand above mattress edge and calls nurse. Below hand stays withdrawn; hope in posture.
@@ -159,7 +159,7 @@ Mother reaches with RIGHT hand; son holds both hands under his chest beyond reac
 Mother cries in near mat plane, son shakes head in deeper finite shadow. No duplicate face, motion trails or ghost effect.
 Mother reaches farther with bare RIGHT wrist, face kind behind. Watch never migrates from son's LEFT wrist.
 Son watches her offered hand from darkness, longing without touching. Keep recognizable young face and extreme fatigue.
-Low oblique view of physical son's face and watch at mattress edge, everything else occluded. No transparent bed or X-ray body outline.
+Low oblique view in which the LEFT WRIST AND CHIPPED WATCH over the bed rail are the subject and the face is only a sliver of jaw at the mattress edge, everything else occluded by opaque mattress and iron frame. No transparent bed or X-ray body outline.
 Conscious son on floor, hands over ears, eyes open. Ordinary ward environment, no noise diagram or spectral hands.
 Close conscious son's exhausted face, fear of his own choice. Preserve age twenty-seven; never replace face with old man.
 Mother reaches again from same mat, more tired. Her identity, blouse and hair remain consistent through later nights.

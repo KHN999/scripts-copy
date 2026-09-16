@@ -306,10 +306,10 @@ export const SCENES = [
     u: ["ပုဆိုးကို ဒူးအထိ ဆွဲခြုံထားတယ်။",
         "ကျွန်တော့်ဘက် မျက်နှာမူထားတယ်။ မျက်လုံးတွေ ပိတ်ထားတယ်။"] },
 
-  { t: "One Bed Leg Between Us", l: "ကုတင်အောက်", w: ["မင်းသူ", "အဖိုးကြီး"],
+  { rev: ["geography fixed"], t: "One Bed Leg Between Us", l: "ကုတင်အောက်", w: ["မင်းသူ", "အဖိုးကြီး"],
     g: "ကျွန်တော်လည်း ကိုယ့်ဖျာကို ဖြန့်လိုက်တယ်။ ကြားမှာ သံကုတင်ခြေတစ်ချောင်းပဲ ခြားတယ်။",
-    p: "Two mats under a bed with a single iron bed leg standing between them, two people lying head "
-      + "to head either side of it.",
+    p: "⚠️ MIN THU'S MAT IS BESIDE THE BED against the wall and the old man's is UNDER the frame. One "
+      + "iron bed leg stands between them; the two heads are level and face one another across it.",
     u: ["ကျွန်တော်လည်း ကိုယ့်ဖျာကို ဖြန့်လိုက်တယ်။ အမေ့ကုတင်ဘေး၊ နံရံနဲ့ နီးတဲ့နေရာမှာ။",
         "အဖိုးကြီးနဲ့ ကျွန်တော့်ကြားမှာ သံကုတင်ခြေတစ်ချောင်းပဲ ခြားတယ်။",
         "ခေါင်းအုံးပေါ် ခေါင်းချပြီး မျက်လုံးမှိတ်လိုက်တယ်။"] },
@@ -591,7 +591,7 @@ export const SCENES = [
         "ဒါပေမယ့် သူက ထိုင်နေတာ။ ခေါင်းကို နည်းနည်းစောင်းထားတယ်။"],
     c: [[3, "bigstinger"]] },
 
-  { t: "The Dark Behind Him", l: "ကုတင်အောက်",
+  { rev: ["direction fixed"], t: "The Dark Behind Him", l: "ကုတင်အောက်",
     g: "⚠️ သူ့နောက်က အမှောင်က ကုတင်တစ်လုံးအောက်စာ မဟုတ်ဘူး။ သံကုတင်ခြေတွေ တစ်တန်းပြီးတစ်တန်း။",
     p: "⚠️ THE DEEP SHOT — the only one. Beyond the old man the dark under the bed continues far past "
       + "any possible wall, rows of iron bed legs receding into it in perfect lines, further than the "
@@ -651,7 +651,7 @@ export const SCENES = [
         "“ငါ မစောင့်နိုင်တော့လို့ပါ။”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "My Head Touched the Floor", l: "ကုတင်အောက်", w: ["မင်းသူ"],
+  { rev: ["continuity fixed"], t: "My Head Touched the Floor", l: "ကုတင်အောက်", w: ["မင်းသူ"],
     g: "ကျွန်တော့်ခေါင်းက ကြမ်းပြင်နဲ့ ထိသွားတယ်။ ထိတဲ့အသံကို မကြားရဘူး။",
     p: "A young man's cheek against terrazzo beneath a bed, seen at floor level, the ward beyond "
       + "receding out of focus.",
@@ -668,7 +668,7 @@ export const SCENES = [
         "အမေ ထပ်ခေါ်တယ်။ ဒီတစ်ခါ ပိုကျယ်တယ်။ “မင်းသူ။”"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Bed Legs in Every Direction", l: "ကုတင်အောက်", w: ["မင်းသူ"],
+  { rev: ["direction fixed"], t: "Bed Legs in Every Direction", l: "ကုတင်အောက်", w: ["မင်းသူ"],
     g: "ထဖို့ ကြိုးစားတယ်။ ခေါင်းက သံစင်နဲ့ ထိနေတယ်။ ဘေးကို ရွှေ့တယ် — ကုတင်ခြေတွေ။ ရှေ့ကို တိုးတယ် — နောက်ထပ် ကုတင်ခြေတွေ။",
     p: "A trapped point of view beneath a bed: iron legs in every direction, the underside of the "
       + "frame pressing close overhead.",
@@ -684,7 +684,7 @@ export const SCENES = [
     u: ["အပေါ်မှာ လူတွေ ပြေးလာကြတယ်။ ဖိနပ်တွေကို မြင်ရတယ်။",
         "မခင်စန်းရဲ့ ဖိနပ်ဖြူ။ တခြားလူတွေရဲ့ ဖိနပ်တွေ။"] },
 
-  { t: "I Could Not Reach Her Ankle", l: "ကုတင်အောက်", w: ["အမေ", "မင်းသူ"],
+  { rev: ["direction fixed"], t: "I Could Not Reach Her Ankle", l: "ကုတင်အောက်", w: ["အမေ", "မင်းသူ"],
     g: "အမေ့ခြေထောက်တွေက ကုတင်ပေါ်ကနေ ဆင်းလာတယ်။ ကျွန်တော် လှမ်းဖမ်းဖို့ ကြိုးစားတယ်။ မမှီဘူး။",
     p: "A hand stretched across a floor toward a pair of bare feet that are barely two feet away, "
       + "the distance visibly uncrossable.",
@@ -702,7 +702,7 @@ export const SCENES = [
         "သူ မကြားဘူး။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "They Lifted Someone", l: "ကုတင်အောက်",
+  { rev: ["continuity fixed"], t: "They Lifted Someone", l: "ကုတင်အောက်",
     g: "လူနှစ်ယောက်က ကြမ်းပြင်ပေါ်က တစ်ယောက်ကို ဆွဲမလိုက်ကြတယ်။ လက်တစ်ဖက် တွဲလောင်းကျလာတယ်။",
     p: "From floor level: two people lifting a limp body up off the floor beside the bed, one arm "
       + "swinging down into frame.",
@@ -710,7 +710,7 @@ export const SCENES = [
         "လက်တစ်ဖက် တွဲလောင်းကျလာတယ်။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "The Chipped Watch", l: "ကုတင်အောက်",
+  { rev: ["continuity fixed"], t: "The Chipped Watch", l: "ကုတင်အောက်",
     g: "လက်ကောက်ဝတ်မှာ နာရီနက်နက်တစ်လုံး။ မှန်ထောင့်က နည်းနည်းပဲ့နေတယ်။ ကျွန်တော့်နာရီ။",
     p: "Extreme close-up of a dark wristwatch on a hanging wrist, a small chip missing from one "
       + "corner of the glass.",
@@ -718,7 +718,7 @@ export const SCENES = [
         "ကျွန်တော့်နာရီ။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "It Was Me", l: "ကုတင်အောက်", w: ["မင်းသူ"],
+  { rev: ["continuity fixed"], t: "It Was Me", l: "ကုတင်အောက်", w: ["မင်းသူ"],
     g: "လူတွေကြားကနေ အဲဒီလူရဲ့ မျက်နှာကို မြင်လိုက်ရတယ်။ မျက်လုံးပိတ်ထားတယ်။ ကျွန်တော်။",
     p: "Between moving legs: the face of the man being lifted, eyes closed, mouth slightly open — "
       + "the narrator's own face.",
@@ -727,7 +727,7 @@ export const SCENES = [
         "မျက်လုံးတွေ ပိတ်ထားတယ်။ ပါးစပ်က နည်းနည်းဟနေတယ်။ ကျွန်တော်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "She Followed Them Out", l: "ကုတင်အောက်", w: ["အမေ"],
+  { rev: ["continuity fixed"], t: "She Followed Them Out", l: "ကုတင်အောက်", w: ["အမေ"],
     g: "သူတို့ သယ်သွားတဲ့လူက ကျွန်တော်ပဲ။ အမေက နောက်ကနေ လိုက်သွားတယ်။",
     p: "Floor level: a group of feet moving away down the ward aisle, and one pair of slower feet "
       + "following them, everything else still.",
@@ -768,7 +768,7 @@ export const SCENES = [
         "ပြီးတော့ သူ့မျက်နှာကို သူ့လက်နဲ့ ထိကြည့်တယ်။ ငိုနေတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "He Saw Me", l: "ကုတင်အောက်", w: ["အဖိုးကြီး", "မင်းသူ"],
+  { rev: ["geography fixed"], t: "He Saw Me", l: "ကုတင်အောက်", w: ["အဖိုးကြီး", "မင်းသူ"],
     g: "အဲဒီနောက်မှ ကုတင်အောက်ကို ငုံ့ကြည့်တယ်။ ကျွန်တော့်ကို မြင်တယ်။ သေချာသိတယ်။",
     p: "An old man leaning down from a bed to look under it, his eyes finding the camera exactly — "
       + "unmistakably seeing.",
@@ -777,17 +777,18 @@ export const SCENES = [
         "ကျွန်တော် သူ့ဆီ လက်လှမ်းလိုက်တယ်။ “အဖိုး။”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "He Pulled the Blanket Down", l: "အဆောင်", w: ["အဖိုးကြီး"],
+  { rev: ["geography fixed"], t: "He Pulled the Blanket Down", l: "အဆောင်", w: ["အဖိုးကြီး"],
     g: "သူ ခေါင်းခါတယ်။ နောက်ကို ဆုတ်တယ်။ ပြီးတော့ စောင်အစွန်းကို ဆွဲချလိုက်တယ်။",
-    p: "A blanket edge pulled down over the side of a bed, closing off the gap between the bed and "
-      + "the floor, seen from underneath.",
+    p: "Seen from the floor along the length of the ward: the old man lies back on the distant "
+      + "green-curtained corner bed and draws the curtain closed around it, shutting himself off "
+      + "from view. The long run of iron bed legs between the camera and the curtain stays visible.",
     u: ["သူ ခေါင်းခါတယ်။ နောက်ကို ဆုတ်တယ်။",
-        "ပြီးတော့ သူ့စောင်အစွန်းကို ဆွဲချလိုက်တယ်။ ကျွန်တော်နဲ့ သူ့ကြားကို ဖုံးသွားအောင်။",
+        "ပြီးတော့ သူ့ကုတင်က အစိမ်းရောင်ပိတ်စကာကို ဆွဲပိတ်လိုက်တယ်။ ကျွန်တော်နဲ့ သူ့ကြားကို ဖုံးသွားအောင်။",
         "ကျွန်တော့်ကို မမြင်ချင်တော့လို့။",
         "ဒါမှမဟုတ် ကျွန်တော် လက်လှမ်းနေတာကို ထပ်ပြီး မကြည့်ရဲတော့လို့။"],
     c: [[3, "bigstinger"]] },
 
-  { t: "I Cannot Count the Days", l: "ကုတင်အောက်",
+  { rev: ["continuity fixed"], t: "I Cannot Count the Days", l: "ကုတင်အောက်",
     g: "ဘယ်နှရက်ကြာသွားပြီလဲ မသိတော့ဘူး။ မနက်နဲ့ညကိုတော့ ခွဲလို့ရတယ်။",
     p: "A band of daylight from a tall window crossing a terrazzo floor beneath a bed, moving.",
     u: ["ဘယ်နှရက်ကြာသွားပြီလဲဆိုတာ အခု ကျွန်တော် မသိတော့ဘူး။",
@@ -826,7 +827,7 @@ export const SCENES = [
         "သူတို့က ကြမ်းခင်းနားက ကျွန်တော့်လက်ကို ဖြတ်ပြီး လျှောက်သွားကြတယ်။ ဘယ်သူမှ မငုံ့ကြည့်ဘူး။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "The Me They Know Is on the Bed", l: "အဆောင်", w: ["မင်းသူ"],
+  { rev: ["geography fixed"], t: "The Me They Know Is on the Bed", l: "အဆောင်", w: ["မင်းသူ"],
     g: "ကျွန်တော့်ကို အိပ်နေတဲ့သူလို့ပဲ သိကြတယ်။ သူတို့ပြောတဲ့ ကျွန်တော်က ကုတင်ပေါ်မှာ ရှိတယ်။",
     p: "A young man lying unconscious in a hospital bed with a drip, seen from the floor below and "
       + "beside — his own body from the outside.",
@@ -906,10 +907,11 @@ export const SCENES = [
     u: ["အမေ ကျွန်တော့်ကို ပထမဆုံး မြင်တဲ့ညက မိုးရွာနေတယ်။",
         "အဆောင်အပြင်က သစ်ပင်တွေ လေတိုက်လို့ လှုပ်နေတယ်။ သစ်သားပြတင်းပေါက်တစ်ချပ်က နံရံကို တခေါက်ခေါက် ထိနေတယ်။"] },
 
-  { t: "Face to Face", l: "ကုတင်အောက်", w: ["အမေ", "မင်းသူ"],
+  { rev: ["geography fixed"], t: "Face to Face", l: "ကုတင်အောက်", w: ["အမေ", "မင်းသူ"],
     g: "အမေက ဖျာပေါ်မှာ တစ်ဖက်စောင်းအိပ်နေတယ်။ ကျွန်တော့်ဘက်ကို မျက်နှာမူထားတယ်။",
-    p: "Two faces on mats under a bed, level and close, one asleep and one not — the exact "
-      + "composition of the film's third shot, with different people in it.",
+    p: "⚠️ SHOT 3 MIRRORED AND REVERSED: the MOTHER now has the beside-the-bed mat against the wall "
+      + "that used to be Min Thu's, and MIN THU is the one UNDER the frame where the old man lay. "
+      + "Same bed leg between them, same level heads — one asleep and one not.",
     u: ["အမေက ဖျာပေါ်မှာ တစ်ဖက်စောင်းအိပ်နေတယ်။ ကျွန်တော့်ဘက်ကို မျက်နှာမူထားတယ်။",
         "သူ အိပ်တော့မယ်လို့ ထင်ခဲ့တယ်။"],
     c: [[1, "bigstinger"]] },
@@ -973,7 +975,7 @@ export const SCENES = [
         "ရက်ပေါင်းများစွာအတွင်း ကျွန်တော် ပထမဆုံး ပြန်ခံစားရတဲ့ အပူ။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Both Hands Moved", l: "အဆောင်",
+  { rev: ["geography fixed"], t: "Both Hands Moved", l: "အဆောင်",
     g: "ကျွန်တော့်လက်က သူ့လက်ကို ပြန်ဆုပ်ဖို့ လှုပ်သွားတယ်။ အပေါ်ကုတင်က ကျွန်တော့်လက်ချောင်းတွေလည်း လှုပ်သွားတယ်။",
     p: "A split composition: fingers twitching on a floor below, and the same fingers twitching on a "
       + "blanket on the bed above, at the same instant.",
@@ -1046,7 +1048,7 @@ export const SCENES = [
         "အခုလည်း ကိုင်ချင်နေတုန်းပဲ။"],
     c: [[1, "heartbeat"]] },
 
-  { t: "I Watch Myself Sleeping", l: "အဆောင်", w: ["မင်းသူ"],
+  { rev: ["geography fixed"], t: "I Watch Myself Sleeping", l: "အဆောင်", w: ["မင်းသူ"],
     g: "အပေါ်က ကုတင်ပေါ်မှာ ကျွန်တော် အိပ်နေတာကို မြင်နေရတယ်။ တစ်ခါလောက်ပဲ အဲဒီမျက်လုံးတွေထဲ ပြန်ဝင်ပြီး နိုးလိုက်ချင်တယ်။",
     p: "From beneath the bed, the underside of the mattress and the shape of a body in it — the "
       + "narrator looking up at himself.",
@@ -1102,13 +1104,29 @@ export const SCENES = [
         "တိုးတိုးလေး ခေါ်တယ်။ “သား…”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Lean on Mother", l: "ကုတင်အောက်", w: ["အမေ", "မင်းသူ"],
+  { rev: ["continuity fixed"], t: "Lean on Mother", l: "ကုတင်အောက်", w: ["အမေ", "မင်းသူ"],
     g: "နောက်ဆုံးပုံ — ဆေးရုံစရောက်တဲ့နေ့က ကျွန်တော် ပြောခဲ့တဲ့စကားကို အမေက ပြန်ပြောတယ်။ “အမေ့ကို မှီလိုက်။”",
     p: "Final composition: a woman's outstretched hand on a mat with her exhausted face behind it, "
-      + "and at the very edge of frame in the dark, the narrator's fingers — closer than they have "
-      + "ever been. Hold on the gap between the two hands.",
+      + "and at the very edge of frame in the dark, the narrator's fingers — a single finger's width "
+      + "short of hers and not touching. They have touched once already, at shot 112; this is the "
+      + "nearest he has come since. Hold on the gap between the two hands.",
     u: ["ပြီးတော့ ဆေးရုံစရောက်တဲ့နေ့က ကျွန်တော် သူ့ကို ပြောခဲ့တဲ့စကားကို ပြန်ပြောတယ်။",
         "“အမေ့ကို မှီလိုက်။”"],
     c: [[1, "finalstinger"]] },
 ];
 reviewHosp(SCENES, CAST, LOCS);
+
+/**
+ * The shared style block pins the ward's furniture — bed, stool, cloth bag,
+ * mats, green-curtained corner bed — so those positions stay put across a
+ * hundred-odd shots of the same room. On a shot that is NOT in that room it is
+ * an invitation to paint ward furniture into a brick wall or a washroom, so it
+ * is removed from the nine shots set elsewhere.
+ */
+const WARD_FURNITURE = "Maintain the same bed, stool, cloth bag, reed mats and "
+  + "green-curtained corner bed positions. ";
+const WARD_LOCS = new Set(["\u1021\u1006\u1031\u102c\u1004\u103a", "\u1000\u102f\u1010\u1004\u103a\u1021\u1031\u102c\u1000\u103a"]);
+SCENES.forEach((sc) => {
+  if (sc.l && !WARD_LOCS.has(sc.l) && sc.style) sc.style = sc.style.replace(WARD_FURNITURE, "");
+});
+
