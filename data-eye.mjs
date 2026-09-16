@@ -243,7 +243,7 @@ export const SCENES = [
       + "in the foreground and the blue-painted door behind them TOWERS over them — its handle is far "
       + "above their heads and plainly out of reach. Thick brush strokes, rounded toy edges and "
       + "oversized wood grain expose it as a handmade miniature.",
-    u: ["အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ ရောက်နေတယ်။ လူတစ်ယောက် ဝင်လို့ရတဲ့အရွယ်။"],
+    u: ["အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ ရောက်နေတယ်။ ကျွန်မတို့ထက် အဆများစွာ မြင့်နေတယ်။"],
     c: [[0, "bigstinger"]] },
 
   { rev: "scale revised", t: "We Tried to Believe Otherwise", l: "အထဲ", w: ["ကိုဇင်"],
@@ -253,7 +253,7 @@ export const SCENES = [
       + "is visible near the top of the frame, unreachable.",
     u: ["အစမှာ ကျွန်မတို့ အရင်အိမ်ရဲ့ တခြားအခန်းတစ်ခန်းထဲ ရောက်သွားတာလို့ ထင်မိတယ်။",
         "ကိုယ့်ကိုယ်ကို အဲဒီလိုပဲ ယုံအောင် ကြိုးစားကြတာ။",
-        "ကိုဇင်က တံခါးကို ဆွဲဖွင့်တယ်။ မရဘူး။ လက်ကိုင်က လည်တယ်။ တံခါးက မပွင့်ဘူး။"] },
+        "ကိုဇင်က လက်ကိုင်ကို လှမ်းကိုင်ဖို့ ကြိုးစားတယ်။ မရဘူး။ လက်ကိုင်က ခေါင်းထက် အများကြီး အထက်မှာ။ တံခါးအောက်ပိုင်းကို တွန်းကြည့်တယ်။"] },
 
   { t: "Only White Light Outside", l: "အထဲ", w: ["မေ"],
     g: "ပြတင်းပေါက်အပြင်မှာ အဖြူရောင်အလင်းပဲ ရှိတယ်။ လမ်း၊ ခြံ၊ သစ်ပင် မမြင်ရဘူး။",
@@ -365,8 +365,8 @@ export const SCENES = [
     p: "⚠️ HE CANNOT MOVE THE TABLE — it is far too big for him. Four-inch-tall Ko Zin hauls May by the "
       + "wrist between two massive table legs and out the far side at a run, the doll's huge "
       + "porcelain hand sweeping into the gap behind them and closing on nothing.",
-    u: ["ကိုဇင်က စားပွဲကို အားကုန် တွန်းလိုက်တယ်။",
-        "စားပွဲက အရုပ်ရဲ့မျက်နှာကို တိုက်မိတယ်။ ကြွေသံ ခပ်မာမာ ထွက်လာတယ်။"],
+    u: ["ကိုဇင်က စားပွဲကို တွန်းကြည့်တယ်။ ကြီးလွန်းလို့ တစ်လက်မတောင် မရွေ့ဘူး။",
+        "သူ ကျွန်မလက်ကို ဆွဲပြီး စားပွဲခြေကြားကနေ ထွက်ပြေးတယ်။ ကြွေသံ ခပ်မာမာ ထွက်လာတယ်။"],
     c: [[1, "stinger"]] },
 
   { t: "The Gap Under the Stairs", l: "နံရံကြား", w: ["မေ", "ကိုဇင်"],
@@ -434,7 +434,7 @@ export const SCENES = [
     p: "A book standing on a desk taller than the four-inch man beside it, seen from its cut edge: a "
       + "solid block of painted wood with no pages at all, the edge merely carved to suggest "
       + "leaves. ⚠️ He does not open it — it could not be opened.",
-    u: ["စားပွဲပေါ်က စာအုပ်ကို ဖွင့်ကြည့်တယ်။ အဖုံးပဲ ရှိတယ်။ အထဲမှာ စာရွက်မရှိဘူး။"],
+    u: ["စားပွဲပေါ်က စာအုပ်က ကိုဇင်ထက် မြင့်တယ်။ ဖွင့်လို့မရဘူး။ အနားကို ကြည့်မှ သိရတယ်။ အဖုံးပဲ ရှိတယ်။ အထဲမှာ စာရွက်မရှိဘူး။"],
     c: [[0, "stinger"]] },
 
   { rev: "scale revised", t: "The Pillow Was Wood", l: "အထဲ", w: ["ကိုဇင်"],
@@ -442,7 +442,7 @@ export const SCENES = [
     p: "⚠️ THEY CANNOT LIFT IT. Two four-inch figures at the edge of an enormous bed looking along the "
       + "cut edge of a pillow, where sanded timber shows beneath and the fabric is revealed as a "
       + "painted skin over solid wood.",
-    u: ["ကိုဇင်က အိပ်ရာပေါ်က ခေါင်းအုံးကို ကောက်တယ်။ အောက်ခြေက ပြားပြား။ သစ်သား။",
+    u: ["ခေါင်းအုံးက မကောက်နိုင်ဘူး။ အနားကနေ ကြည့်လိုက်တယ်။ အောက်ခြေက ပြားပြား။ သစ်သား။",
         "ကျွန်မတို့ နှစ်ယောက် တစ်ယောက်ကိုတစ်ယောက် ကြည့်လိုက်ကြတယ်။"],
     c: [[0, "bigstinger"]] },
 
@@ -546,9 +546,9 @@ export const SCENES = [
     g: "ကိုဇင်က နံရံကြားမှာ တွေ့ခဲ့တဲ့ သစ်သားစကို ယူလာတယ် — ကျွန်မခြေသလုံးကို စိုက်မိခဲ့တဲ့ အဲဒီအစ။",
     p: "A four-inch-tall man hefting the long raw timber splinter from the wall cavity — the same "
       + "splinter that cut May's calf — holding it two-handed like a staff nearly his own height.",
-    u: ["ကိုဇင်က ကုလားထိုင်ကို ဖြုတ်ယူဖို့ ဆွဲတယ်။ ကော်နဲ့ ကပ်ထားလို့ မရဘူး။",
-        "သူ ခြေထောက်တစ်ချောင်းကို အားနဲ့ ချိုးလိုက်တယ်။",
-        "ကျွန်မတို့အရွယ်နဲ့ဆို သစ်သားတုတ်တစ်ချောင်း။"] },
+    u: ["ကိုဇင်က ပရိဘောဂတွေကို ဆွဲကြည့်တယ်။ ကော်နဲ့ ကပ်ထားလို့ တစ်ခုမှ မလှုပ်ဘူး။",
+        "သူ နံရံကြားကို ပြန်ဝင်ပြီး ကျွန်မခြေသလုံးကို စိုက်မိခဲ့တဲ့ သစ်သားစကို ဆွဲယူလာတယ်။",
+        "ကျွန်မတို့အရွယ်နဲ့ဆို သူ့အရပ်လောက် ရှိတဲ့ သစ်သားတုတ်တစ်ချောင်း။"] },
 
   { rev: "scale revised", t: "One Small Crack", l: "အထဲ",
     g: "သစ်သားစနဲ့ မှန်ကို နှစ်ဖက်ကိုင်ရိုက်တယ်။ မကွဲဘူး။ အက်ကြောင်းသေးသေးတစ်ခုပဲ ပေါ်လာတယ်။",
@@ -605,7 +605,7 @@ export const SCENES = [
     p: "Two four-inch figures already high on the raw timber studs of a wall cavity, the man braced on "
       + "a cross-piece and pushing the woman up the last short step with both hands, her hands "
       + "catching the edge of the wall top.",
-    u: ["ကိုဇင်က ကျွန်မကို ခါးကနေ မတင်ပေးတယ်။ ကျွန်မ အပေါ်ဘောင်ကို ဖမ်းလိုက်တယ်။",
+    u: ["နှစ်ယောက်လုံး နံရံဘောင်တွေပေါ် တွယ်တက်ပြီး ကိုဇင်က နောက်ဆုံးတစ်ဆင့် တွန်းတင်ပေးတယ်။ ကျွန်မ အပေါ်ဘောင်ကို ဖမ်းလိုက်တယ်။",
         "ခြေသလုံးက နာလွန်းလို့ မျက်ရည်ထွက်လာတယ်။"] },
 
   { rev: "scale revised", t: "Her Head Would Not Fit", l: "အထဲ", w: ["အရုပ်"],
@@ -614,7 +614,7 @@ export const SCENES = [
       + "with clear headroom above her, "
       + "unable to advance.",
     u: ["အောက်မှာ အနီရောင်အရုပ် အခန်းဝကို ရောက်လာပြီ။",
-        "သူ့ခေါင်းက တံခါးပေါင်ကို ထိနေတယ်။"],
+        "ငုံ့စရာမလိုဘူး။ ပုံမှန်အတိုင်း ဝင်လာတယ်။"],
     c: [[1, "stinger"]] },
 
   { rev: "scale revised", t: "So She Folded It Sideways", l: "အထဲ", w: ["အရုပ်"],
@@ -623,7 +623,7 @@ export const SCENES = [
       + "around her, the doll folds her head fully sideways onto her own shoulder at ninety "
       + "degrees to look at something low down — the neck joint seam wide open, the painted smile "
       + "now vertical.",
-    u: ["ဝင်မရလို့ ခေါင်းကို ဘေးတစ်ဖက် ခေါက်ချလိုက်တယ်။",
+    u: ["ဘာမှ မတားထားဘူး။ ဒါပေမယ့် ခေါင်းကို ဘေးတစ်ဖက် ခေါက်ချလိုက်တယ်။",
         "မျက်နှာက ကိုးဆယ်ဒီဂရီ စောင်းသွားတယ်။",
         "အဲဒီအနေအထားနဲ့ ကျွန်မကို ကြည့်တယ်။ ပန်းရောင်အပြုံးကတော့ အရင်အတိုင်း။"],
     c: [[1, "bigstinger"]] },
@@ -633,7 +633,7 @@ export const SCENES = [
     p: "A raw timber splinter swung two-handed into a huge porcelain hand, knocking it aside, while "
       + "the doll's other hand closes "
       + "around a man's shoulder from behind.",
-    u: ["သူ လက်လှမ်းတယ်။ ကိုဇင်က သူ့လက်ကို သစ်သားတုတ်နဲ့ ရိုက်တယ်။ လက်က နည်းနည်း ရပ်သွားတယ်။",
+    u: ["သူ လက်လှမ်းတယ်။ ကိုဇင်က သူ့လက်ကို သစ်သားစနဲ့ နှစ်ဖက်ကိုင်ရိုက်တယ်။ လက်က နည်းနည်း ရပ်သွားတယ်။",
         "နောက်တစ်ဖက်က ကိုဇင့်ပခုံးကို ဖမ်းလိုက်တယ်။ သူ့ကို နောက်ဆွဲတယ်။"],
     c: [[1, "bigstinger"]] },
 
