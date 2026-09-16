@@ -538,9 +538,13 @@ export const SCENES = [
         "သူ လှေကားတက်လာတယ်။ တစ်ထစ်။ တစ်ထစ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "The Upstairs Was a Trap", l: "အထဲ",
+  { rev: ["direction fixed"], t: "The Upstairs Was a Trap", l: "အထဲ",
     g: "လွတ်လမ်းလို ထင်ခဲ့တဲ့ အပေါ်ထပ်အခန်းက ပိတ်မိမယ့်နေရာ ဖြစ်သွားပြီ။ ပြတင်းပေါက်က မှန်တစ်ထပ်။",
-    p: "A small upstairs room with one door and one sealed window, photographed to feel like a box.",
+    p: "A small upstairs room photographed to feel like a box: the only door behind them, and ahead one "
+      + "window of flat toy glass with the featureless white void beyond it. ⚠️ Somewhere out in that "
+      + "whiteness a SECOND pane is faintly suggested — one more reflective plane she cannot judge "
+      + "the distance of. At the left edge, the open top of the wall frame they climbed in through, "
+      + "which leads back DOWN toward the stairs.",
     u: ["ကျွန်မတို့အတွက် အရင်က လွတ်လမ်းလို ထင်ခဲ့တဲ့ အပေါ်ထပ်အခန်းက ပိတ်မိမယ့်နေရာ ဖြစ်သွားပြီ။",
         "ပြတင်းပေါက်က မှန်တစ်ထပ်။ အပြင်မှာလည်း မှန်အုပ် ရှိဦးမယ်။"] },
 
@@ -964,7 +968,7 @@ export const DETAILS = [
   /* 45 */ "Tight portrait of injured May in the dolls'-house room, her eyes widened in precise stunned recognition rather than generic fear. Keep huge grain and the flat white window soft behind her, with no double exposure or literal thought imagery.",
   /* 46 */ "Real-scale overhead three-quarter view of the complete dolls' house on its table as anonymous ordinary hands rotate it slightly. Show the house moving as one rigid object; no giant interior room reference, supernatural force or visible duplicate faces.",
   /* 47 */ "View downward from the upper landing as the intact red-dress doll begins climbing from below, one rigid porcelain leg and enormous hem entering first. Injured May and intact-shirt Ko Zin remain off-camera; doll hand still unchipped.",
-  /* 48 */ "Wide symmetrical shot of the upstairs room shaped like a sealed box: one door behind, one white window ahead and no alternate opening. Oversized grain and glued furniture prove scale; keep daylight flat rather than turning the room dark.",
+  /* 48 */ "Wide symmetrical shot of the upstairs room composed as a box. ⚠️ DO NOT seal it: the open top of the wall frame is visible at the left edge — it is how they got in and it is where they will leave from — but it drops back down toward the staircase the doll is climbing, so it is not a way out right now. The trap is the geometry, not the absence of holes. Beyond the window keep the white void flat, with the faintest hint of a second glass plane somewhere in it — she is REASONING that the display case is still there, not seeing it clearly. Oversized grain and glued furniture prove scale; keep daylight flat rather than turning the room dark.",
   /* 49 */ "Medium action frame of intact-shirt Ko Zin hefting the long raw timber splinter recovered from the wall cavity — the same splinter that cut May's calf — holding it two-handed like a staff nearly his own height. He is NOT breaking furniture: the glued chair stands untouched behind him. He remains four inches tall; no doll in frame.",
   /* 50 */ "Impact macro on the toy window as the raw timber splinter, swung two-handed, produces one short clean crack. Show the splinter and Ko Zin's hands only if needed; no chair leg, no shattered pane, no explosive glass, text or multiple cracks.",
   /* 51 */ "Frontal medium-wide shot of injured May standing fully exposed ON THE WINDOWSILL she has climbed to, waving both arms above her head as an ordinary giant brown eye fills the pane. Her scale and bandaged right calf are visible; she is determined, not screaming.",
