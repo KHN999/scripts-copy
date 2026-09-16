@@ -59,6 +59,12 @@ main{max-width:960px;margin:0 auto;padding:20px}
 section>h2{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--mute);margin:26px 0 10px}
 .card{background:var(--panel);border:1px solid var(--edge);border-radius:11px;padding:14px;margin-bottom:10px}
 .card.done{opacity:.45}
+/* A shot whose prompt was rewritten after the board was first built. The
+   accent survives the .done fade so a revised shot stays findable even
+   after it has been ticked off. */
+.card.rev{border-left:3px solid var(--color-accent,#7dd3fc)}
+.revtag{margin-left:auto;font-size:11px;letter-spacing:.02em;padding:2px 7px;border-radius:999px;
+  background:var(--color-accent,#7dd3fc);color:#04141c;font-weight:600;white-space:nowrap}
 .top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
 .id{font-weight:800;color:var(--accent);font-size:13px;min-width:26px}
 .ttl{font-weight:650;font-size:14px;flex:1;min-width:120px;font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",ui-sans-serif,system-ui,sans-serif}
@@ -228,6 +234,11 @@ function card(o, isRef) {
     const t = document.createElement("span"); t.className = "ttl"; t.textContent = o.title;
     const a = document.createElement("span"); a.className = "act"; a.textContent = o.act || "";
     head.append(i, t, a);
+    if (o.rev) {
+      el.classList.add("rev");
+      const r = document.createElement("span"); r.className = "revtag"; r.textContent = o.rev;
+      head.appendChild(r);
+    }
   }
   el.appendChild(head);
   if (!isRef) {

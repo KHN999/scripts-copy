@@ -47,6 +47,7 @@ const shots = rows.map((r) => {
       + `do not repeat, vary or re-render any previous image.\n\n${s.p}\n\n${s.d}\n\n${styleForShot(n)}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
+    rev: s.rev || null,
   };
 });
 

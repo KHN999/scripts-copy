@@ -53,7 +53,11 @@ export const CAST = [
       + "eyes that do not move together, a neck permanently tilted a few degrees to one side, ball "
       + "joints at the knees with visible moulded seams, three raised rings at every finger joint, "
       + "pink varnish on the nails, and maker's marks stamped into the sole of one bare foot. No "
-      + "decay, no flesh, no gore, nothing wet. Never damaged except one chipped hand late on." },
+      + "decay, no flesh, no gore, nothing wet. Never damaged except one chipped hand late on. "
+      + "⚠️ SHE FITS THIS HOUSE — it was built for her. She walks through its doors and climbs "
+      + "its stairs without stooping and sits in its chairs. When she folds her head ninety "
+      + "degrees onto her shoulder it is NEVER to fit through anything — it is a choice, to look "
+      + "at something sideways." },
   { name: "အပြင်ကမေ", en: "Outside-May — full size",
     sameAs: 1,
     prompt: "A continuity duplicate of May in Reference 1: preserve EXACTLY the same face, skin tone, "
@@ -78,7 +82,8 @@ export const LOCS = [
       + "white window frames, fully furnished rooms visible through the openings, everything "
       + "miniature and beautifully made." },
   { name: "အထဲ", en: "Inside the dolls' house",
-    prompt: "The interior of a dolls' house at human scale to its occupants: rooms of glued-down "
+    prompt: "The interior of a dolls' house built to the DOLL's scale, so every object in it towers over "
+      + "May and Ko Zin: rooms of glued-down "
       + "miniature furniture, floorboards whose grain reads a hundred times too large, windows of "
       + "flat glass showing only featureless white light, paint-drawn handles that are not handles. "
       + "⚠️ Everything is slightly too smooth, too matte, too perfect." },
@@ -102,9 +107,13 @@ export const STYLE =
   "A deceased woman's old house in Myanmar, present day, in flat afternoon daylight. Two restorers "
   + "taking an inventory — and then the same room seen from four inches tall. Cinematic photorealism, "
   + "domestic uncanny rather than gothic: nothing is rotten, bloody or monstrous, and the daylight "
-  + "never becomes night. 35mm film grain, shallow depth of field, 16:9. ⚠️ SCALE IS THE SUBJECT — "
-  + "once the characters are inside the dolls' house, every image must make their size unmistakable "
-  + "against ordinary objects. ⚠️ The doll is always visibly A TOY: porcelain, jointed, painted, "
+  + "never becomes night. 35mm film grain, shallow depth of field, 16:9. ⚠️ SCALE IS THE SUBJECT, AND THE HOUSE BELONGS TO THE DOLL. "
+  + "The house, its doors, its stairs and every piece of furniture are built to the DOLL's "
+  + "proportions and she uses them comfortably. May and Ko Zin are less than half her height, so "
+  + "the whole interior is oversized to them: THEY ARE TO THIS HOUSE WHAT A TWO-YEAR-OLD IS TO AN "
+  + "ADULT'S KITCHEN. They can just touch a door handle at full stretch but cannot turn it with "
+  + "force, cannot shift furniture, and climb one stair tread at a time with effort. Every "
+  + "interior image must make that unmistakable. ⚠️ The doll is always visibly A TOY: porcelain, jointed, painted, "
   + "never flesh and never decayed. ⚠️ The full-size people are kind and ordinary and must never be "
   + "lit or framed as threatening. No gore. No legible text, numbers, captions or watermarks.";
 
@@ -228,19 +237,20 @@ export const SCENES = [
         "မှန်အုပ်လည်း မရှိတော့ဘူး။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "The Blue Door Was Behind Us", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
-    g: "အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ ရောက်နေတယ်။ လူတစ်ယောက် ဝင်လို့ရတဲ့အရွယ်။",
+  { rev: "scale revised", t: "The Blue Door Was Behind Us", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ။ ကျွန်မတို့ထက် အများကြီး မြင့်တယ်။ လက်ကိုင်က ခေါင်းထက် အများကြီး အထက်မှာ။",
     p: "Low-angle wide shot inside the dolls' house: four-inch-tall May and Ko Zin stand full-body "
-      + "in the foreground, visibly dwarfed by the blue-painted door behind them. It is human-sized "
-      + "relative to them, but thick brush strokes, rounded toy edges and oversized wood grain expose "
-      + "it as a handmade miniature.",
+      + "in the foreground and the blue-painted door behind them TOWERS over them — its handle is far "
+      + "above their heads and plainly out of reach. Thick brush strokes, rounded toy edges and "
+      + "oversized wood grain expose it as a handmade miniature.",
     u: ["အပြာရောင်တံခါးက ကျွန်မတို့နောက်မှာ ရောက်နေတယ်။ လူတစ်ယောက် ဝင်လို့ရတဲ့အရွယ်။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "We Tried to Believe Otherwise", l: "အထဲ", w: ["ကိုဇင်"],
-    g: "အစမှာ အရင်အိမ်ရဲ့ တခြားအခန်းလို့ ထင်ခဲ့တယ်။ ကိုဇင်က တံခါးကို ဆွဲဖွင့်တယ်။ မရဘူး။",
-    p: "A man hauling at a door handle that turns freely while the door itself does not move at all, "
-      + "his shoulder braced against the frame.",
+  { rev: "scale revised", t: "We Tried to Believe Otherwise", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "အစမှာ အရင်အိမ်ရဲ့ တခြားအခန်းလို့ ထင်ခဲ့တယ်။ လက်ကိုင်က မမီဘူး။ ကိုဇင်က တံခါးအောက်ပိုင်းကို တွန်းတယ်။ မရဘူး။",
+    p: "A four-inch-tall man with both hands flat on the lower panel of a door many times his height, "
+      + "shoving with his whole body. ⚠️ THE HANDLE IS FAR ABOVE HIM AND HE NEVER TOUCHES IT — it "
+      + "is visible near the top of the frame, unreachable.",
     u: ["အစမှာ ကျွန်မတို့ အရင်အိမ်ရဲ့ တခြားအခန်းတစ်ခန်းထဲ ရောက်သွားတာလို့ ထင်မိတယ်။",
         "ကိုယ့်ကိုယ်ကို အဲဒီလိုပဲ ယုံအောင် ကြိုးစားကြတာ။",
         "ကိုဇင်က တံခါးကို ဆွဲဖွင့်တယ်။ မရဘူး။ လက်ကိုင်က လည်တယ်။ တံခါးက မပွင့်ဘူး။"] },
@@ -261,9 +271,10 @@ export const SCENES = [
         "ဖွင့်လို့ရတဲ့လက်ကိုင် မဟုတ်ဘူး။ ဆေးနဲ့ ပုံဖော်ထားတာ။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Something Knocked Back", l: "အထဲ", w: ["ကိုဇင်"],
-    g: "ကိုဇင်က တံခါးကို ပခုံးနဲ့ ဆောင့်တယ်။ ဒုန်း။ အပေါ်ထပ်ကနေ ဒုန်းလို့ ပြန်မြည်လာတယ်။",
-    p: "A man mid-impact against a door, and above him a ceiling with dust jarred loose from it by "
+  { rev: "scale revised", t: "Something Knocked Back", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "ကိုဇင်က တံခါးအောက်ခြေကို ပခုံးနဲ့ ဆောင့်တယ်။ ဒုန်း။ အပေါ်ထပ်ကနေ ဒုန်းလို့ ပြန်မြည်လာတယ်။",
+    p: "A four-inch-tall man mid-impact with his shoulder against the very bottom of an enormous door, "
+      + "and far above him a ceiling with dust jarred loose from it by "
       + "something answering from the floor above.",
     u: ["ကျွန်မ အစ်ကို့ကို လှည့်ကြည့်လိုက်တယ်။ သူက တံခါးကို ပခုံးနဲ့ ဆောင့်နေတယ်။ ဒုန်း။ ဒုန်း။",
         "အပေါ်ထပ်ကနေ ဒုန်း။ လို့ ပြန်မြည်လာတယ်။",
@@ -300,9 +311,11 @@ export const SCENES = [
         "အရင်ဆုံး အနီရောင်ဂါဝန်အနားကို မြင်ရတယ်။ ပြီးတော့ ခြေထောက်တွေ။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Ball Joints at the Knees", l: "အထဲ", w: ["အရုပ်"],
-    g: "ခြေထောက်တွေ ဖြူဖွေးနေတယ်။ ဒူးတွေမှာ စက်ဝိုင်းပုံ အဆက်တွေ ရှိတယ်။",
-    p: "A doll's legs at enormous scale: smooth white porcelain with a clearly moulded spherical "
+  { rev: "scale revised", t: "Ball Joints at the Knees", l: "အထဲ", w: ["အရုပ်"],
+    g: "ခြေထောက်တွေ ဖြူဖွေးနေတယ်။ ဒူးတွေမှာ စက်ဝိုင်းပုံ အဆက်တွေ ရှိတယ်။ လှေကားက သူ့အရွယ်နဲ့ ကိုက်တယ် — ဒူးတွေက မကွေးလို့ ခြေကို ခါးကနေ ကားချရတာ။",
+    p: "⚠️ HER STIFFNESS IS HER JOINTS, NOT THE STAIRS — the treads fit her perfectly and she still "
+      + "swings each leg from the hip because the knees do not bend. A doll's legs at enormous "
+      + "scale: smooth white porcelain with a clearly moulded spherical "
       + "ball joint at each knee, the seam line around it visible.",
     u: ["ဖြူဖွေးနေတယ်။ ဒူးတွေမှာ စက်ဝိုင်းပုံ အဆက်တွေ ရှိတယ်။"],
     c: [[0, "stinger"]] },
@@ -347,10 +360,11 @@ export const SCENES = [
         "အသံကတော့ လည်ပင်းစောင်းနေတဲ့အကြားကနေ ထွက်လာတယ်။ “တွေ့ပြီ…”"],
     c: [[1, "bigstinger"]] },
 
-  { t: "He Shoved the Table", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
-    g: "ကိုဇင်က စားပွဲကို အားကုန် တွန်းလိုက်တယ်။ အရုပ်ရဲ့မျက်နှာကို တိုက်မိတယ်။",
-    p: "Four-inch-tall Ko Zin drives a heavy dolls'-house table that is massive at his scale into the "
-      + "towering doll's porcelain face, rocking her backward with slight motion blur on the table edge.",
+  { rev: "scale revised", t: "He Shoved the Table", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
+    g: "စားပွဲက ကြီးလွန်းလို့ မရွေ့ဘူး။ ကိုဇင်က ကျွန်မလက်ကို ဆွဲပြီး စားပွဲခြေကြားကနေ ထွက်ပြေးတယ်။",
+    p: "⚠️ HE CANNOT MOVE THE TABLE — it is far too big for him. Four-inch-tall Ko Zin hauls May by the "
+      + "wrist between two massive table legs and out the far side at a run, the doll's huge "
+      + "porcelain hand sweeping into the gap behind them and closing on nothing.",
     u: ["ကိုဇင်က စားပွဲကို အားကုန် တွန်းလိုက်တယ်။",
         "စားပွဲက အရုပ်ရဲ့မျက်နှာကို တိုက်မိတယ်။ ကြွေသံ ခပ်မာမာ ထွက်လာတယ်။"],
     c: [[1, "stinger"]] },
@@ -396,33 +410,38 @@ export const SCENES = [
         "အခု ကျွန်မတို့ထက် နှစ်ဆကျော် မြင့်နေတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Up Into the Bedroom", l: "အထဲ",
-    g: "နံရံကြားကနေ အပေါ်တက်တဲ့နေရာ။ အခန်းတစ်ခန်းမှာ ကလေးစားပွဲတစ်လုံး။",
-    p: "A small upstairs dolls'-house bedroom seen at human scale: a child's desk, a made bed, a "
-      + "wall clock — every object slightly too smooth.",
+  { rev: "scale revised", t: "Up Into the Bedroom", l: "အထဲ",
+    g: "နံရံကြားက သစ်သားဘောင်တွေကို တွယ်တက်ပြီး အပေါ်ထပ်ကို ရောက်လာတယ်။ အခန်းထဲက ပစ္စည်းတွေက ကျွန်မတို့အတွက် ကြီးလွန်းတယ်။",
+    p: "Four-inch-tall May and Ko Zin hauling themselves over the top edge of a wall frame into an "
+      + "upstairs room, having climbed the raw timber studs inside the cavity. The desk, the bed "
+      + "and the wall clock beyond them are ENORMOUS at their scale, and every object is slightly "
+      + "too smooth.",
     u: ["နံရံကြားကနေ လျှောက်လာတော့ အပေါ်ဘက်တက်တဲ့ နေရာတစ်ခု ရှိတယ်။",
         "အဲဒီကနေ အိမ်အပေါ်ထပ်ကို တက်လို့ရတယ်။",
         "အခန်းတစ်ခန်းမှာ ကလေးစားပွဲတစ်လုံး ရှိတယ်။"] },
 
-  { t: "The Hands Were Painted", l: "အထဲ", w: ["မေ"],
-    g: "နံရံပေါ်က နာရီက ဆယ်နာရီဆယ့်နှစ်မိနစ်မှာ ရပ်နေတယ်။ လက်တံတွေက ဆေးနဲ့ ဆွဲထားတာ။",
-    p: "A fingertip touching the face of a wall clock and finding the hands are brush strokes "
+  { rev: "scale revised", t: "The Hands Were Painted", l: "အထဲ", w: ["မေ"],
+    g: "စားပွဲပေါ်တက်ပြီး ခြေဖျားထောက်မှ နာရီကို မီတယ်။ လက်တံတွေက ဆေးနဲ့ ဆွဲထားတာ။",
+    p: "A four-inch-tall woman standing on a desktop and stretching up on her toes to a wall clock "
+      + "taller than she is, one fingertip on its face finding the hands are brush strokes "
       + "painted onto the dial, the paint slightly raised.",
     u: ["နံရံပေါ်က နာရီက ဆယ်နာရီဆယ့်နှစ်မိနစ်မှာ ရပ်နေတယ်။",
         "နာရီလက်တံတွေကို ကျွန်မ ထိကြည့်တယ်။ လက်တံတွေက ဆေးနဲ့ ဆွဲထားတာ။"],
     c: [[1, "stinger"]] },
 
-  { t: "A Book With No Pages", l: "အထဲ",
-    g: "စားပွဲပေါ်က စာအုပ်ကို ဖွင့်ကြည့်တယ်။ အဖုံးပဲ ရှိတယ်။ အထဲမှာ စာရွက်မရှိဘူး။",
-    p: "A book opened to reveal it is a solid block of painted wood — a cover shape with no pages at "
-      + "all, the edges carved to suggest leaves.",
+  { rev: "scale revised", t: "A Book With No Pages", l: "အထဲ",
+    g: "စာအုပ်က ကိုဇင်ထက် မြင့်တယ်။ ဖွင့်လို့မရဘူး။ အနားကို ကြည့်မှ သစ်သားတုံးတစ်တုံးဆိုတာ သိရတယ်။",
+    p: "A book standing on a desk taller than the four-inch man beside it, seen from its cut edge: a "
+      + "solid block of painted wood with no pages at all, the edge merely carved to suggest "
+      + "leaves. ⚠️ He does not open it — it could not be opened.",
     u: ["စားပွဲပေါ်က စာအုပ်ကို ဖွင့်ကြည့်တယ်။ အဖုံးပဲ ရှိတယ်။ အထဲမှာ စာရွက်မရှိဘူး။"],
     c: [[0, "stinger"]] },
 
-  { t: "The Pillow Was Wood", l: "အထဲ", w: ["ကိုဇင်"],
-    g: "ကိုဇင်က ခေါင်းအုံးကို ကောက်တယ်။ အောက်ခြေက ပြားပြား။ သစ်သား။",
-    p: "A pillow lifted from a bed showing its underside is flat sanded timber, the fabric only a "
-      + "painted skin over it.",
+  { rev: "scale revised", t: "The Pillow Was Wood", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "ခေါင်းအုံးက မကောက်နိုင်ဘူး။ အနားကနေ ကြည့်လိုက်တော့ အောက်ခြေက ပြားပြား။ သစ်သား။",
+    p: "⚠️ THEY CANNOT LIFT IT. Two four-inch figures at the edge of an enormous bed looking along the "
+      + "cut edge of a pillow, where sanded timber shows beneath and the fabric is revealed as a "
+      + "painted skin over solid wood.",
     u: ["ကိုဇင်က အိပ်ရာပေါ်က ခေါင်းအုံးကို ကောက်တယ်။ အောက်ခြေက ပြားပြား။ သစ်သား။",
         "ကျွန်မတို့ နှစ်ယောက် တစ်ယောက်ကိုတစ်ယောက် ကြည့်လိုက်ကြတယ်။"],
     c: [[0, "bigstinger"]] },
@@ -473,9 +492,10 @@ export const SCENES = [
         "ကျွန်မ သူ့ကို ကြည့်တယ်။ “ဒါမှမဟုတ် ငါတို့က သေးနေတာလား”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "A Dark Shape in the White", l: "အထဲ", w: ["မေ"],
-    g: "အဖြူရောင်နောက်ခံမှာ အနက်ရောင်ကြီးတစ်ခု။ ဘေးမှာ အရှည်လိုက်အပေါက်တွေ။ အောက်ခြေမှာ ကြိုးတစ်ချောင်း။",
-    p: "Through a tiny window: a huge dark rectangular mass standing in the white void, with long "
+  { rev: "scale revised", t: "A Dark Shape in the White", l: "အထဲ", w: ["မေ"],
+    g: "ပြတင်းပေါက်ဘောင်ပေါ် တက်ပြီး အပြင်ကို ကြည့်တယ်။ အဖြူရောင်နောက်ခံမှာ အနက်ရောင်ကြီးတစ်ခု။ ဘေးမှာ အရှည်လိုက်အပေါက်တွေ။",
+    p: "A four-inch-tall woman balanced on a windowsill she has had to climb to reach, looking out "
+      + "through the glass at a huge dark rectangular mass standing in the white void, with long "
       + "slotted perforations down its side and a cable coiled at its base.",
     u: ["ကျွန်မ ပြတင်းပေါက်ဘောင်ကြားကနေ အပြင်ကို ထပ်ကြည့်တယ်။",
         "ဒီတစ်ခါ အဖြူရောင်နောက်ခံကို သေချာကြည့်တယ်။",
@@ -522,23 +542,26 @@ export const SCENES = [
     u: ["ကျွန်မတို့အတွက် အရင်က လွတ်လမ်းလို ထင်ခဲ့တဲ့ အပေါ်ထပ်အခန်းက ပိတ်မိမယ့်နေရာ ဖြစ်သွားပြီ။",
         "ပြတင်းပေါက်က မှန်တစ်ထပ်။ အပြင်မှာလည်း မှန်အုပ် ရှိဦးမယ်။"] },
 
-  { t: "He Broke Off a Chair Leg", l: "အထဲ", w: ["ကိုဇင်"],
-    g: "ကုလားထိုင်ကို ဖြုတ်လို့မရဘူး။ ခြေထောက်တစ်ချောင်းကို အားနဲ့ ချိုးလိုက်တယ်။",
-    p: "A man snapping one leg off a glued-down miniature chair, the break splintering raw pale wood.",
+  { rev: "scale revised", t: "He Broke Off a Chair Leg", l: "အထဲ", w: ["ကိုဇင်"],
+    g: "ကိုဇင်က နံရံကြားမှာ တွေ့ခဲ့တဲ့ သစ်သားစကို ယူလာတယ် — ကျွန်မခြေသလုံးကို စိုက်မိခဲ့တဲ့ အဲဒီအစ။",
+    p: "A four-inch-tall man hefting the long raw timber splinter from the wall cavity — the same "
+      + "splinter that cut May's calf — holding it two-handed like a staff nearly his own height.",
     u: ["ကိုဇင်က ကုလားထိုင်ကို ဖြုတ်ယူဖို့ ဆွဲတယ်။ ကော်နဲ့ ကပ်ထားလို့ မရဘူး။",
         "သူ ခြေထောက်တစ်ချောင်းကို အားနဲ့ ချိုးလိုက်တယ်။",
         "ကျွန်မတို့အရွယ်နဲ့ဆို သစ်သားတုတ်တစ်ချောင်း။"] },
 
-  { t: "One Small Crack", l: "အထဲ",
-    g: "မှန်ကို ရိုက်တယ်။ မကွဲဘူး။ အက်ကြောင်းသေးသေးတစ်ခုပဲ ပေါ်လာတယ်။",
-    p: "A window pane struck hard by a wooden stick, producing a single short crack radiating from "
+  { rev: "scale revised", t: "One Small Crack", l: "အထဲ",
+    g: "သစ်သားစနဲ့ မှန်ကို နှစ်ဖက်ကိုင်ရိုက်တယ်။ မကွဲဘူး။ အက်ကြောင်းသေးသေးတစ်ခုပဲ ပေါ်လာတယ်။",
+    p: "A window pane struck two-handed with a raw timber splinter, producing a single short crack "
+      + "radiating from "
       + "the point of impact and nothing more.",
     u: ["သူက ပြတင်းပေါက်ကို ရိုက်တယ်။ မှန် မကွဲဘူး။",
         "အက်ကြောင်းသေးသေးတစ်ခု ပေါ်လာတယ်။"] },
 
-  { t: "This Time I Did Not Hide", l: "အထဲ", w: ["မေ"],
-    g: "မျက်လုံး ပြန်ကပ်လာတယ်။ ဒီတစ်ခါ ကျွန်မ ပြတင်းပေါက်ရှေ့ ထွက်ရပ်ပြီး လက်နှစ်ဖက် မြှောက်ပြတယ်။",
-    p: "A woman standing square in front of a window that is entirely filled by a human eye, both "
+  { rev: "scale revised", t: "This Time I Did Not Hide", l: "အထဲ", w: ["မေ"],
+    g: "မျက်လုံး ပြန်ကပ်လာတယ်။ ဒီတစ်ခါ ကျွန်မ ပြတင်းပေါက်ဘောင်ပေါ် တက်ရပ်ပြီး လက်နှစ်ဖက် မြှောက်ပြတယ်။",
+    p: "A four-inch-tall woman standing on the windowsill she has climbed to, square in front of a "
+      + "window entirely filled by a human eye, both "
       + "arms raised over her head, waving.",
     u: ["အပြင်က အလင်းအရိပ် ရွေ့သွားတယ်။ မျက်လုံး ပြန်ကပ်လာတယ်။",
         "ဒီတစ်ခါ ကျွန်မ မပုန်းတော့ဘူး။",
@@ -577,33 +600,38 @@ export const SCENES = [
         "အပြင်က လူတစ်ယောက်က ဖွင့်ပေးနေတာ။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "He Lifted Me by the Waist", l: "အထဲ", w: ["ကိုဇင်", "မေ"],
-    g: "ကိုဇင်က ကျွန်မကို ခါးကနေ မတင်ပေးတယ်။ ကျွန်မ အပေါ်ဘောင်ကို ဖမ်းလိုက်တယ်။",
-    p: "A man boosting a woman upward toward an opening gap in a ceiling, her hands catching the "
-      + "edge of a timber wall top.",
+  { rev: "scale revised", t: "He Lifted Me by the Waist", l: "အထဲ", w: ["ကိုဇင်", "မေ"],
+    g: "နှစ်ယောက်လုံး နံရံဘောင်တွေပေါ် အရင်တက်တယ်။ ပြီးမှ ကိုဇင်က ကျွန်မကို နောက်ဆုံးတစ်ဆင့် တွန်းတင်ပေးတယ်။",
+    p: "Two four-inch figures already high on the raw timber studs of a wall cavity, the man braced on "
+      + "a cross-piece and pushing the woman up the last short step with both hands, her hands "
+      + "catching the edge of the wall top.",
     u: ["ကိုဇင်က ကျွန်မကို ခါးကနေ မတင်ပေးတယ်။ ကျွန်မ အပေါ်ဘောင်ကို ဖမ်းလိုက်တယ်။",
         "ခြေသလုံးက နာလွန်းလို့ မျက်ရည်ထွက်လာတယ်။"] },
 
-  { t: "Her Head Would Not Fit", l: "အထဲ", w: ["အရုပ်"],
-    g: "အရုပ်က အခန်းဝကို ရောက်လာတယ်။ ခေါင်းက တံခါးပေါင်ကို ထိနေတယ်။",
-    p: "An enormous doll filling a doorway, the crown of her head jammed hard against the lintel, "
+  { rev: "scale revised", t: "Her Head Would Not Fit", l: "အထဲ", w: ["အရုပ်"],
+    g: "အရုပ်က အခန်းဝကို ရောက်လာတယ်။ ငုံ့စရာမလိုဘဲ ပုံမှန်အတိုင်း ဝင်လာတယ်။ ဒီအိမ်က သူ့အိမ်။",
+    p: "⚠️ SHE FITS — THE HOUSE IS HERS. The doll walking through the doorway upright and unhurried "
+      + "with clear headroom above her, "
       + "unable to advance.",
     u: ["အောက်မှာ အနီရောင်အရုပ် အခန်းဝကို ရောက်လာပြီ။",
         "သူ့ခေါင်းက တံခါးပေါင်ကို ထိနေတယ်။"],
     c: [[1, "stinger"]] },
 
-  { t: "So She Folded It Sideways", l: "အထဲ", w: ["အရုပ်"],
-    g: "ဝင်မရလို့ ခေါင်းကို ဘေးတစ်ဖက် ခေါက်ချလိုက်တယ်။ မျက်နှာက ကိုးဆယ်ဒီဂရီ စောင်းသွားတယ်။",
-    p: "A doll's head folded fully sideways onto her own shoulder at ninety degrees, the neck joint "
-      + "seam wide open, the painted smile now vertical. She fits through the door.",
+  { rev: "scale revised", t: "So She Folded It Sideways", l: "အထဲ", w: ["အရုပ်"],
+    g: "ဘာမှ မတားထားဘူး။ ဒါပေမယ့် သူ ခေါင်းကို ဘေးတစ်ဖက် ခေါက်ချလိုက်တယ်။ မျက်နှာက ကိုးဆယ်ဒီဂရီ စောင်းသွားတယ် — အောက်ကို ကြည့်ဖို့။",
+    p: "⚠️ NOTHING IS FORCING HER TO DO THIS. Standing clear in the middle of a room with space all "
+      + "around her, the doll folds her head fully sideways onto her own shoulder at ninety "
+      + "degrees to look at something low down — the neck joint seam wide open, the painted smile "
+      + "now vertical.",
     u: ["ဝင်မရလို့ ခေါင်းကို ဘေးတစ်ဖက် ခေါက်ချလိုက်တယ်။",
         "မျက်နှာက ကိုးဆယ်ဒီဂရီ စောင်းသွားတယ်။",
         "အဲဒီအနေအထားနဲ့ ကျွန်မကို ကြည့်တယ်။ ပန်းရောင်အပြုံးကတော့ အရင်အတိုင်း။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "He Hit Her Hand", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
-    g: "အရုပ်က လက်လှမ်းတယ်။ ကိုဇင်က သစ်သားတုတ်နဲ့ ရိုက်တယ်။ နောက်တစ်ဖက်က ပခုံးကို ဖမ်းလိုက်တယ်။",
-    p: "A wooden stick striking a huge porcelain hand aside, while the doll's other hand closes "
+  { rev: "scale revised", t: "He Hit Her Hand", l: "အထဲ", w: ["ကိုဇင်", "အရုပ်"],
+    g: "အရုပ်က လက်လှမ်းတယ်။ ကိုဇင်က သစ်သားစနဲ့ ရိုက်တယ်။ နောက်တစ်ဖက်က ပခုံးကို ဖမ်းလိုက်တယ်။",
+    p: "A raw timber splinter swung two-handed into a huge porcelain hand, knocking it aside, while "
+      + "the doll's other hand closes "
       + "around a man's shoulder from behind.",
     u: ["သူ လက်လှမ်းတယ်။ ကိုဇင်က သူ့လက်ကို သစ်သားတုတ်နဲ့ ရိုက်တယ်။ လက်က နည်းနည်း ရပ်သွားတယ်။",
         "နောက်တစ်ဖက်က ကိုဇင့်ပခုံးကို ဖမ်းလိုက်တယ်။ သူ့ကို နောက်ဆွဲတယ်။"],
@@ -624,9 +652,10 @@ export const SCENES = [
     u: ["ကျွန်မ အပေါ်ကို တက်ထွက်သွားလို့ရတယ်။ တစ်ယောက်တည်း။",
         "ကိုဇင်က ကျွန်မကို မော့ကြည့်တယ်။ “မေ၊ သွား!”"] },
 
-  { t: "I Let Go and Dropped Back", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
-    g: "ကျွန်မ အပေါ်ဘောင်ကို လွှတ်ချပြီး သူ့အပေါ်ကို ပြန်ခုန်ချလိုက်တယ်။",
-    p: "A woman letting go of an edge and falling back down into a room, arms out, the lit gap above "
+  { rev: "scale revised", t: "I Let Go and Dropped Back", l: "အထဲ", w: ["မေ", "ကိုဇင်"],
+    g: "ကျွန်မ အပေါ်ဘောင်ကို လွှတ်ချပြီး အောက်က သစ်သားဘောင်ပေါ်ကို ပြန်ဆင်းလိုက်တယ်။",
+    p: "A four-inch-tall woman letting go of a wall top and dropping a short way back onto the timber "
+      + "studs below, arms out, the lit gap above "
       + "her receding.",
     u: ["ကျွန်မ အပေါ်ဘောင်ကို လွှတ်ချလိုက်တယ်။ သူ့အပေါ်ကို ပြန်ခုန်ချလိုက်တယ်။",
         "နှစ်ယောက်လုံး ကြမ်းပြင်ပေါ် လဲကျတယ်။"],
@@ -884,8 +913,7 @@ export const SCENES = [
         "အဲဒီအချိန်မှ အနီရောင်အရုပ် နောက်ဆုံးပြောခဲ့တဲ့စကားကို ကျွန်မ နားလည်သွားတယ်။",
         "အပြင်မှာ ကျွန်မတို့အတွက် နေရာမရှိဘူး။",
         "ကျွန်မတို့ နေရာတွေမှာ ကျွန်မတို့ ရှိနေပြီးသားမို့လို့။"],
-    c: [[3, "finalstinger"]] },
-];
+    c: [[3, "finalstinger"]] }];
 
 // Shot-specific direction is deliberately separate from the short visual premise above.  The
 // generator publishes both, so every Flow prompt carries an explicit composition, continuity and
