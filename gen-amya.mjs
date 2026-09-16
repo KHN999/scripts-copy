@@ -5,7 +5,7 @@
  */
 import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
-import { SCENES, CAST, LOCS } from "./data-amya.mjs";
+import { SCENES, CAST, LOCS, STYLE } from "./data-amya.mjs";
 import { MM_REF } from "./mm-amya.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
@@ -51,7 +51,9 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
-    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.p}\n\n${s.d}\n\n${s.style}`,
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}". A new and distinct frame in an ongoing `
+      + `sequence; do not repeat, vary or re-render any previous image.`
+      + `\n\n${s.p}\n\n${STYLE}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
   };
