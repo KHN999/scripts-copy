@@ -94,10 +94,14 @@ export const SCENES = [
       + "the iron beds — completely ordinary.",
     u: ["ဆေးရုံဆိုတော့ လူနာစောင့်တွေ ကုတင်အောက်မှာ ဖျာခင်းအိပ်ကြတာပဲ။ အိပ်စရာနေရာ ကျဉ်းလို့ တခြားကုတင်က လူနာစောင့်တစ်ယောက် ကျွန်တော်တို့ဘက် လာအိပ်တာလို့ ထင်ခဲ့တယ်။"] },
 
-  { t: "Head to Head", l: "ကုတင်အောက်",
-    g: "သူ့ဖျာက ကျွန်တော့်ဖျာနဲ့ ကပ်နေတယ်။ ခေါင်းချင်းတစ်တန်းတည်း။ မျက်နှာချင်းဆိုင်။",
-    p: "Two mats laid edge to edge under a bed with two heads level and facing each other, only "
-      + "inches apart, one asleep and one not.",
+  { t: "Level With Mine", l: "ကုတင်အောက်", rev: "geometry fixed",
+    g: "သူ့ဖျာက ကျွန်တော့်ဖျာနဲ့ ကပ်နေတယ်။ ကျွန်တော်က နံရံဘက်၊ သူက ကုတင်အောက်။ ကြားမှာ ကုတင်ခြေတစ်ချောင်း။ "
+      + "ခေါင်းချင်းတစ်တန်းတည်း၊ မျက်နှာချင်းဆိုင်။",
+    p: "Two men at floor level on reed mats laid edge to edge, lying PARALLEL with both heads at the "
+      + "same end, so their faces are side by side at the same height and only inches apart, each "
+      + "turned toward the other. Min Thu’s mat is beside the bed against the wall; the old "
+      + "man’s is under the iron frame; one bed leg stands in the gap between their faces. Min "
+      + "Thu’s eyes are shut, the old man’s are open and on him.",
     u: ["ဒါပေမယ့် သူ အိပ်တဲ့ဖျာက ကျွန်တော့်ဖျာနဲ့ ကပ်နေတယ်။",
         "သူ့ခေါင်းက ကျွန်တော့်ခေါင်းနဲ့ တစ်တန်းတည်း။ မျက်နှာချင်းဆိုင်။"],
     c: [[1, "bigstinger"]] },
@@ -309,7 +313,9 @@ export const SCENES = [
   { rev: ["geography fixed"], t: "One Bed Leg Between Us", l: "ကုတင်အောက်", w: ["မင်းသူ", "အဖိုးကြီး"],
     g: "ကျွန်တော်လည်း ကိုယ့်ဖျာကို ဖြန့်လိုက်တယ်။ ကြားမှာ သံကုတင်ခြေတစ်ချောင်းပဲ ခြားတယ်။",
     p: "⚠️ MIN THU'S MAT IS BESIDE THE BED against the wall and the old man's is UNDER the frame. One "
-      + "iron bed leg stands between them; the two heads are level and face one another across it.",
+      + "iron bed leg stands between them. Both lie PARALLEL with their heads at the same end, so "
+      + "the two faces are side by side at the same height and turned toward one another across "
+      + "the leg — not crown to crown.",
     u: ["ကျွန်တော်လည်း ကိုယ့်ဖျာကို ဖြန့်လိုက်တယ်။ အမေ့ကုတင်ဘေး၊ နံရံနဲ့ နီးတဲ့နေရာမှာ။",
         "အဖိုးကြီးနဲ့ ကျွန်တော့်ကြားမှာ သံကုတင်ခြေတစ်ချောင်းပဲ ခြားတယ်။",
         "ခေါင်းအုံးပေါ် ခေါင်းချပြီး မျက်လုံးမှိတ်လိုက်တယ်။"] },
@@ -911,7 +917,9 @@ export const SCENES = [
     g: "အမေက ဖျာပေါ်မှာ တစ်ဖက်စောင်းအိပ်နေတယ်။ ကျွန်တော့်ဘက်ကို မျက်နှာမူထားတယ်။",
     p: "⚠️ SHOT 3 MIRRORED AND REVERSED: the MOTHER now has the beside-the-bed mat against the wall "
       + "that used to be Min Thu's, and MIN THU is the one UNDER the frame where the old man lay. "
-      + "Same bed leg between them, same level heads — one asleep and one not.",
+      + "Same bed leg between them. Both lie PARALLEL with their heads at the same end, faces side "
+      + "by side at the same height and turned toward one another — not crown to crown. One asleep "
+      + "and one not.",
     u: ["အမေက ဖျာပေါ်မှာ တစ်ဖက်စောင်းအိပ်နေတယ်။ ကျွန်တော့်ဘက်ကို မျက်နှာမူထားတယ်။",
         "သူ အိပ်တော့မယ်လို့ ထင်ခဲ့တယ်။"],
     c: [[1, "bigstinger"]] },

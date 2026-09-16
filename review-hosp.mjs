@@ -6,7 +6,7 @@ export function reviewHosp(SCENES, CAST, LOCS) {
   LOCS.find(l=>l.name==='စင်္ကြံ').prompt='A wide old Yangon hospital corridor beside a broad staircase and trolley ramp, pale green lower walls and cream upper walls, worn terrazzo, strip lights, a few neatly rolled reed mats, thermoses and plain plastic baskets along wall. Empty of people and incident for this location reference; no readable signs.';
   LOCS.find(l=>l.name==='ကုတင်အောက်').prompt='Ordinary shallow space under a chipped white iron hospital bed, viewed at reed-mat height. Worn terrazzo with fixed black shoe scuffs, one dark cloth bag near wall, four iron bed legs and opaque frame overhead. No people or mats in this neutral geometry plate; scene instructions add mats and people when appropriate. Finite depth, ward spill from aisle side, no tunnel or readable markings.';
   const S=n=>SCENES[n-1];
-  S(3).p='Two men lie on adjacent mats at floor level beside and under the same bed, faces level and facing one another. Min Thu has his eyes shut while the old man watches, one iron bed leg separating their positions.';
+  S(3).p='Two men at floor level on reed mats laid edge to edge, lying PARALLEL with both heads at the same end, so their faces are side by side at the same height and only inches apart, each turned toward the other. Min Thu’s mat is beside the bed against the wall; the old man’s is under the iron frame; one bed leg stands in the gap between their faces. Min Thu’s eyes are shut, the old man’s are open and on him.';
   S(36).p='Min Thu stands at a hospital counter holding forms and one plastic supply bag in daylight; a single moment of ordinary errands, documents turned away.';
   S(22).p='Old man sits low and slightly hunched on his mat beside the bed edge, looking up toward Min Thu’s knees and plastic stool. Normal cramped clearance, no impossible posture at this early moment.';
   S(50).p='Ma Khin San quietly tells Min Thu about the earlier caretaker who could not be awakened. Stay in the present ward on her worried expression; do not invent an identity for that earlier patient.';
@@ -40,7 +40,7 @@ export function reviewHosp(SCENES, CAST, LOCS) {
 const DIRECTIONS=`
 Night mat-height view of old man on side beneath mother’s bed, awake. No floating figure or second old man above him.
 Wide ordinary night ward, separate caretakers on mats and patients above. Sleeping people are alive; no crowd of identical faces.
-Establish adjacent head-to-head mat geometry, Min Thu nearest wall, old man under frame, one bed leg between. Repeat with mother later.
+Establish the mat geometry two later shots mirror. Bodies lie PARALLEL with both heads at the same end — never crown to crown, never a T or a V. Level heads means side by side at the same height, faces turned toward one another and at most a forearm apart. Camera on the floor at mat height from the open aisle side, both faces at the same height in frame, so the levelness is something the picture shows rather than claims. Min Thu nearest the wall, old man under the frame, one bed leg standing in the gap. The mats touch along their long edges; the closeness is the whole point of the shot. Repeat with mother later.
 Close old man’s open eyes at mat level. Small natural reflection of ward light, no glowing pupils or monstrous features.
 Rainy daytime admission, Min Thu supports mother from car beside brick wall. Her arrival clothes are lavender blouse and plum htamein.
 Wet brick-base insert and green algae, entrance ramp implied nearby. No hospital signage or horror symbols.
