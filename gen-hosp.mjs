@@ -50,7 +50,17 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
-    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.p}\n\n${s.d}\n\n${s.style}`,
+    /**
+     * Order matters as much as wording. The camera goes first because it is
+     * the one decision that makes the rest of the sentences satisfiable or
+     * not, then what this frame contains, then how to play it. Continuity and
+     * style are last and deliberately short: they used to run to six sentences
+     * on every shot, and that bulk pushed the shot-specific opening out of the
+     * model's attention — the picture came back generically correct and
+     * specifically wrong.
+     */
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.cam}\n\n${s.p}\n\n${s.d}\n\n`
+      + `${s.cont}\n\n${s.style}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
     rev: s.rev || null,

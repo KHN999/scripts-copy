@@ -4,9 +4,9 @@ export function reviewHosp(SCENES, CAST, LOCS) {
   CAST[2].prompt='Burmese man aged sixty-five, thin frame, medium-brown skin, hollow long cheeks, narrow nose, dark-brown eyes, sparse grey-black hair and patchy white stubble around mouth. Worn off-white sleeveless singlet, plain brown longyi, barefoot. Dark under-eye shadows, swollen lids and red-threaded whites from extreme sleeplessness. Fully ordinary opaque human skin, no glowing eyes, rot, wounds or corpse pallor. Same face after waking in corner bed, with relief rather than exhaustion.';
   CAST[3].prompt='Ma Khin San, Burmese night nurse aged thirty-five, average build, medium-brown skin, rounded oval face, dark-brown eyes, neat brows, black hair in a tight low bun. Plain white short-sleeved nurse uniform, white practical shoes and pale grey cardigan at night, no readable badge or insignia. Competent kind ordinary woman, not sinister. Chart only in scene instructions, no props in identity plate.';
   LOCS.find(l=>l.name==='စင်္ကြံ').prompt='A wide old Yangon hospital corridor beside a broad staircase and trolley ramp, pale green lower walls and cream upper walls, worn terrazzo, strip lights, a few neatly rolled reed mats, thermoses and plain plastic baskets along wall. Empty of people and incident for this location reference; no readable signs.';
-  LOCS.find(l=>l.name==='ကုတင်အောက်').prompt='Ordinary shallow space under a chipped white iron hospital bed, viewed at reed-mat height. Worn terrazzo with fixed black shoe scuffs, one dark cloth bag near wall, four iron bed legs and opaque frame overhead. No people or mats in this neutral geometry plate; scene instructions add mats and people when appropriate. Finite depth, ward spill from aisle side, no tunnel or readable markings.';
+  LOCS.find(l=>l.name==='ကုတင်အောက်').prompt='THE MASTER GEOMETRY PLATE FOR THIS FILM. Every under-bed and floor-level shot uses this layout, so establish it once and clearly. Camera on the terrazzo at the HEAD END of one chipped white iron hospital bed, 3-5 inches above the floor, framed wide enough to show the whole arrangement at once. LEFT OF FRAME: the ward wall, and the narrow strip of floor between the wall and the bed — wide enough for exactly one reed mat. CENTRE: the bed, four iron legs, the opaque underside of its frame overhead, and the ordinary shallow space beneath it, in which the floor and the rear wall clearly terminate within normal bed depth. RIGHT OF FRAME: the open central aisle, with a plastic stool and a dark cloth bag standing beside the bed on that side. FAR BACKGROUND, down the aisle: a corner bed screened by a green cloth curtain on a rail. The near edge of frame is the bed’s HEAD END; its foot end is the far end. Worn terrazzo with fixed black shoe scuffs. No people and no mats in this plate — the shots add those. Ordinary ward daylight, finite depth, no tunnel, no readable markings.';
   const S=n=>SCENES[n-1];
-  S(3).p='Two men at floor level on reed mats laid edge to edge, lying PARALLEL with both heads at the same end, so their faces are side by side at the same height and only inches apart, each turned toward the other. Min Thu’s mat is beside the bed against the wall; the old man’s is under the iron frame; one bed leg stands in the gap between their faces. Min Thu’s eyes are shut, the old man’s are open and on him.';
+  S(3).p='Two men lie on reed mats laid edge to edge on the terrazzo. MIN THU IS ON THE LEFT OF FRAME, THE OLD MAN ON THE RIGHT. Both heads are at the near edge of frame at the same height; both bodies extend directly away from the camera. Min Thu faces RIGHT, toward the old man; the old man faces LEFT, toward Min Thu. Their faces are about eight inches apart. One iron bed leg stands upright in the gap between the two heads, at the centre of frame. Min Thu’s mat is the strip between the bed and the wall, so the wall is behind him on the left; the old man’s mat is under the bed, so the underside of the frame is above him on the right. Min Thu’s eyes are closed. The old man’s are open and directed at Min Thu’s face.';
   S(36).p='Min Thu stands at a hospital counter holding forms and one plastic supply bag in daylight; a single moment of ordinary errands, documents turned away.';
   S(22).p='Old man sits low and slightly hunched on his mat beside the bed edge, looking up toward Min Thu’s knees and plastic stool. Normal cramped clearance, no impossible posture at this early moment.';
   S(50).p='Ma Khin San quietly tells Min Thu about the earlier caretaker who could not be awakened. Stay in the present ward on her worried expression; do not invent an identity for that earlier patient.';
@@ -25,22 +25,166 @@ export function reviewHosp(SCENES, CAST, LOCS) {
   S(70).g='အဖိုးလက်ကောက်ဝတ်ကို ကိုင်ထားတဲ့ မင်းသူ့လက်။ အပူထွက်သွားသလို ခံစားရတာကို တုံ့ပြန်ပုံနဲ့ပြ၊ ရေခဲနဲ့အငွေ့မထည့်ရ။';
   S(113).g='ဖရိမ်တစ်ခုတည်းမှာ အောက်ကမင်းသူ့လက်ဖျားနဲ့ အပေါ်ကုတင်အစွန်းက ကိုယ်ခန္ဓာရဲ့လက်ဖျား လှုပ်သွားတာ။ ပုံနှစ်ပုံမခွဲရ။';
   if(DIRECTIONS.length!==SCENES.length) throw new Error('Hospital review count mismatch');
+  if(CAMERA.length!==SCENES.length) throw new Error(`camera plan covers ${CAMERA.length} of ${SCENES.length} shots`);
   SCENES.forEach((s,i)=>{
-    const n=i+1;
-    let state='Ordinary opaque living people, never a full ghost, skeletal face, glowing eyes or decay. Exhaustion is reddened eye whites, swollen lids and dark under-eye shadows while keeping each individual’s face.';
-    if(n>=74) state+=' Camera remains at mat/floor height near the bed edge, looking through real gaps; never an overhead view, transparent mattress or standing narrator. Physical Min Thu above is unconscious; conscious Min Thu below is the same identity and clothes. Show both only where explicitly called for.';
-    if(n!==67) state+=' Under-bed space has normal shallow depth and finite bed legs; no endless tunnel.';
-    if((s.w||[]).includes('အမေ')) state+=n<=8||n>=96?' Mother wears dusty lavender blouse and dark plum htamein, not the patient gown.':' Mother wears pale-mint patient gown.';
-    if((s.w||[]).includes('မင်းသူ')) state+=' Min Thu keeps pale-blue shirt, green checked longyi, LEFT-wrist black rectangular watch with upper-right glass chip; do not transfer watch to mother or old man.';
-    if(n>=85&&n<=89) state+=' Old man has recovered in corner bed, same identity and clothes, relieved and tearful; no second old man beneath a bed.';
-    s.d=`Detailed scene direction: ${DIRECTIONS[i]} ${state}`;
-    s.style='Old Yangon government hospital, institutional cinematic photorealism, high ceilings, green shutters, white iron beds, 35mm grain, 16:9. Use the daylight or night stated in the shot, ordinary ward spill under beds and natural skin. Maintain the same bed, stool, cloth bag, reed mats and green-curtained corner bed positions. One still instant, no montage or visible sound effects. Only shot 67 has impossibly deep under-bed space. No gore, corpse, legible writing, watch digits, labels, logo or watermark.';
+    const n=i+1, who=s.w||[];
+    const under=UNDER_BED_SHOTS.has(n);
+
+    // ── 1. CAMERA, first and alone ───────────────────────────────────────
+    // One composition per shot. Several prompts used to name a height, a side
+    // and a required sightline at once — floor level AND aisle side AND both
+    // faces level — which are not jointly satisfiable, so the generator picked
+    // one at random and the geometry moved between shots of the same room.
+    let cam=CAM[CAMERA[i]];
+    // The motif carries its own complete camera specification — an 85mm crop
+    // from forehead to lip. Prefixing that with "seen from floor height through
+    // bed legs" would put two incompatible framings in one prompt, which is the
+    // failure this whole restructure exists to remove. The motif wins.
+    if(n>=SWAP&&CAMERA[i]!=='motif') cam=`POST-SWAP CAMERA RULE — Min Thu is now on the floor and is only ever seen from floor height, through bed legs and people’s legs. Never an overhead view, never a standing narrator, never a transparent mattress. ${cam}`;
+    s.cam=cam;
+
+    // ── 2. EYES, named per person ────────────────────────────────────────
+    // "Red eyes" alone reads as supernatural, so the sclera is described
+    // anatomically and assigned to a NAMED person. Whoever is not sleepless in
+    // this shot gets an explicit healthy description rather than a negation —
+    // "not red" still puts red in the prompt.
+    const eyes=[];
+    if(who.includes(OLD)) eyes.push(n>=85&&n<=89
+      ?`The old man has slept: lids no longer swollen, whites clearing, ${EYES_CLEAR}.`
+      :`ONLY the old man is sleepless here — ${EYES_TIRED}.`);
+    if(who.includes(SON)) eyes.push(n<TIRED_SON
+      ?`Min Thu is not yet sleepless: ${EYES_CLEAR}, lids normal.`
+      :`Min Thu is now sleepless too — ${EYES_TIRED}.`);
+    if(who.includes(MUM)) eyes.push(n<TIRED_MUM
+      ?`The mother is ill but sleeping: ${EYES_CLEAR}, tired from illness rather than from sleeplessness.`
+      :`The mother is now the sleepless one — ${EYES_TIRED}.`);
+
+    // ── 3. CONTINUITY, short and only what applies ───────────────────────
+    // This block used to run to six sentences on every one of the 129 shots,
+    // including under-bed depth rules on a shot filmed outdoors in the rain.
+    // Bulk at the tail pushes the shot-specific opening out of the model's
+    // effective attention, so each clause now has to earn its place.
+    const cont=['Continuity: ordinary living people photographed straight — no full ghost, skeletal face, glowing eyes, rot or corpse pallor.'];
+    if(under) cont.push(n===67
+      ?'⚠️ THE ONE EXCEPTION IN THE FILM: here the space under the bed continues far past any possible wall.'
+      :'The floor and rear wall under the bed clearly terminate within normal bed depth — ordinary finite hospital floor, four bed legs, no tunnel.');
+    if(who.includes(MUM)) cont.push(n<=8||n>=96
+      ?'Mother in dusty lavender blouse and dark plum htamein, not the gown.'
+      :'Mother in the pale-mint patient gown.');
+    if(who.includes(SON)) cont.push('Min Thu in pale-blue shirt and green checked longyi, black rectangular watch on the LEFT wrist with a chip at the upper-right of the glass; the watch never moves to anyone else.');
+    if(n>=SWAP&&who.includes(SON)) cont.push('His physical body above is unconscious; the conscious Min Thu below is the same man in the same clothes.');
+    if(n>=85&&n<=89) cont.push('The old man is awake in the corner bed and nowhere else — no second old man under any bed.');
+    s.cont=cont.join(' ');
+
+    s.d=`Detailed scene direction: ${DIRECTIONS[i]}${eyes.length?' '+eyes.join(' '):''}`;
+    s.style=STYLE+(WARD_LOCS.has(s.l)?' '+WARD_FURNITURE:'');
   });
 }
+
+/** Whoever appears in a shot, by the Burmese names the board uses for them. */
+const SON='မင်းသူ', MUM='အမေ', OLD='အဖိုးကြီး';
+
+/**
+ * Shot 74 is where Min Thu's head reaches the floor and never leaves it.
+ * Everything from here is filmed from down there, so the rule is stated at the
+ * TOP of the prompt rather than buried behind two paragraphs of continuity.
+ */
+const SWAP=74;
+
+/** The mother first remarks on his eyes at 37; she takes the mat herself at 100. */
+const TIRED_SON=37, TIRED_MUM=100;
+
+const EYES_TIRED='visible blood vessels in the whites of the eyes, bloodshot sclera, natural dark brown irises and normal black pupils, no glow and no colour change';
+const EYES_CLEAR='clear white sclera, natural dark brown irises, ordinary healthy eyes';
+
+/**
+ * The exhausted face is the film's one repeated image: the old man at 24, Min
+ * Thu's reflection at 59, the mother at 103. It only works as a rhyme if the
+ * three are the same photograph with a different person in it, so the lens,
+ * crop, head angle, eye line and light direction are specified identically
+ * rather than left to three separate descriptions of tiredness.
+ */
+const MOTIF='THE EXHAUSTED-FACE MOTIF. This framing occurs three times in the film — shots 24, 59 and 103 — and must be reproduced EXACTLY each time, changing only the person in it. 85mm-equivalent lens. Extreme close-up cropped from mid-forehead to the top of the upper lip. Face square to the lens and level with it, head upright with no tilt, eyes open and looking straight down the barrel. One soft light source from camera LEFT at 45 degrees; the right side of the face falls into soft shadow; no fill. Swollen upper and lower lids, deep shadow in the under-eye hollows. Where the subject is lying on a mat, ROLL THE CAMERA so the face still reads upright in the finished image — the crop is tight enough that nothing outside the face reveals the roll.';
+
+const CAM={
+  wide:'EYE-LEVEL WARD VIEW. Camera at standing eye height in the central aisle.',
+  eye:'EYE-LEVEL. Camera at standing eye height.',
+  eyeclose:'EYE-LEVEL CLOSE. Camera at standing eye height, head-and-shoulders crop.',
+  bedside:'EYE-LEVEL BEDSIDE. Camera at seated-visitor height beside the bed.',
+  stool:'STOOL-HEIGHT DOWNWARD VIEW. Camera at plastic-stool height beside the bed, angled down into the gap under the frame.',
+  mat:'MAT-HEIGHT SIDE VIEW. Camera on the floor beside the bed at reed-mat height, looking in under the frame from the aisle side.',
+  matclose:'MAT-HEIGHT CLOSE. Camera on the floor at reed-mat height, head-and-shoulders crop.',
+  matup:'MAT-HEIGHT LOW ANGLE. Camera on the floor at reed-mat height, tilted upward.',
+  headend:'HEAD-END SYMMETRICAL TWO-SHOT. Camera on the terrazzo at the HEAD END of both mats, 3-5 inches above the floor, looking down the length of the two bodies so that both faces sit side by side in frame.',
+  under:'UNDER-BED POV. Camera underneath the hospital bed, 3-5 inches above the floor.',
+  underclose:'UNDER-BED POV, CLOSE. Camera underneath the hospital bed, 3-5 inches above the floor, head-and-shoulders crop.',
+  floor:'FLOOR-LEVEL. Camera on the terrazzo beside the bed, 3-5 inches above the floor.',
+  floorclose:'FLOOR-LEVEL CLOSE. Camera on the terrazzo, 3-5 inches above the floor, head-and-shoulders crop.',
+  aisle:'FLOOR-LEVEL AISLE VIEW. Camera on the terrazzo, 3-5 inches above the floor, looking along the ward aisle past rows of bed legs.',
+  oblique:'FLOOR-LEVEL OBLIQUE UP. Camera on the terrazzo beside the bed, 3-5 inches above the floor, angled up past the open edge of the mattress.',
+  insert:'TIGHT INSERT. One macro subject filling the frame.',
+  floorinsert:'TIGHT INSERT AT FLOOR LEVEL. Camera on the terrazzo, 3-5 inches above the floor, one macro subject filling the frame.',
+  macro:'MACRO. Single subject filling the frame, shallow focus.',
+  motif:MOTIF,
+};
+
+/**
+ * One composition per shot, and the sequence of them is the story told without
+ * narration: ordinary hospital coverage at standing height while this is still
+ * a normal ward, sinking to stool and mat height as Min Thu is drawn downward,
+ * and locked to the floor from 74 on. The mother's mat shots at the end return
+ * to the old man's early compositions on purpose.
+ */
+const CAMERA=[
+  'mat','wide','headend','matclose',                                   //   1-4
+  'eye','insert','eye','floor','wide','floor','eyeclose',              //   5-11
+  'wide','eye','matup','mat','bedside','wide','wide',                  //  12-18
+  'stool','stool','matclose','matup','matup','motif',                  //  19-24
+  'eye','eye','insert','matclose','bedside','mat','headend',           //  25-31
+  'insert','matclose','mat','mat',                                     //  32-35
+  'eye','bedside','bedside','stool','bedside','stool','bedside',       //  36-42
+  'eyeclose','stool','aisle','eye','eyeclose','eye','eyeclose',        //  43-49
+  'eyeclose','eye','bedside','bedside','insert','mat','eyeclose',      //  50-56
+  'bedside','macro','motif',                                           //  57-59
+  'wide','wide','eye','insert','matup',                                //  60-64
+  'mat','mat','under','mat','insert','insert','insert','matclose',     //  65-72
+  'matclose',                                                          //  73
+  'under','under','under','aisle','floor','floorclose','floor',        //  74-80
+  'floorinsert','floor','aisle',                                       //  81-83
+  'aisle','aisle','aisle','aisle','aisle','aisle',                     //  84-89
+  'under','aisle','floorclose','aisle','floorinsert',                  //  90-94
+  'oblique','oblique','floorinsert','oblique','floorclose',            //  95-99
+  'floor','under','underclose','motif','under',                        // 100-104
+  'headend','underclose','underclose','underclose','floorinsert',      // 105-109
+  'floorinsert','underclose',                                          // 110-111
+  'macro','oblique','underclose','floorinsert','oblique',              // 112-116
+  'under','under','under','under','underclose',                        // 117-121
+  'oblique','underclose','underclose',                                 // 122-124
+  'under','macro','macro','under','under',                             // 125-129
+];
+
+/**
+ * The ward's own furniture. Worth pinning across a hundred shots of one room,
+ * and an invitation to paint hospital beds into a brick wall or a washroom on
+ * the nine shots set elsewhere.
+ */
+const WARD_FURNITURE='Keep the bed, stool, cloth bag, reed mats and green-curtained corner bed in their established positions.';
+const WARD_LOCS=new Set(['အဆောင်','ကုတင်အောက်']);
+
+/**
+ * A real government ward, not a horror set. The old man is frightening because
+ * he is awake, and every atmospheric shortcut — a green grade, fog, decay —
+ * spends that on cheap dread and tells the audience he is a monster, which the
+ * story then has to spend shots undoing.
+ */
+const STYLE='Old Yangon government hospital, 16:9, 35mm grain, institutional photorealism. ORDINARY HOSPITAL LIGHT: daylight through tall green shutters by day; plain white fluorescent strips, one warm lamp at the nurses’ table, and ordinary spill reaching under the beds by night. This is a working ward, NOT a horror set — no green or teal grade, no fog, haze or smoke, no abandonment, no rot or grime, no blood, no heavy vignette, no desaturated horror palette. Unease comes from composition alone. One still instant, no montage or visible sound effects. No gore, legible writing, watch digits, labels, logo or watermark.';
+
+/** Shots under or beside the bed, where finite depth has to be stated. */
+const UNDER_BED_SHOTS=new Set([1,3,4,15,19,20,21,22,23,24,27,28,30,31,32,33,34,35,39,41,44,45,55,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129]);
 const DIRECTIONS=`
 Night mat-height view of old man on side beneath mother’s bed, awake. No floating figure or second old man above him.
 Wide ordinary night ward, separate caretakers on mats and patients above. Sleeping people are alive; no crowd of identical faces.
-Establish the mat geometry two later shots mirror. Bodies lie PARALLEL with both heads at the same end — never crown to crown, never a T or a V. Level heads means side by side at the same height, faces turned toward one another and at most a forearm apart. Camera on the floor at mat height from the open aisle side, both faces at the same height in frame, so the levelness is something the picture shows rather than claims. Min Thu nearest the wall, old man under the frame, one bed leg standing in the gap. The mats touch along their long edges; the closeness is the whole point of the shot. Repeat with mother later.
+Establishes the arrangement that shots 31 and 105 repeat exactly. The two bodies are PARALLEL with both heads at the same end — never crown to crown, never a T or an L. The mats touch along their long edges with no floor showing between them. Shoot 31 and 105 from this same position.
 Close old man’s open eyes at mat level. Small natural reflection of ward light, no glowing pupils or monstrous features.
 Rainy daytime admission, Min Thu supports mother from car beside brick wall. Her arrival clothes are lavender blouse and plum htamein.
 Wet brick-base insert and green algae, entrance ramp implied nearby. No hospital signage or horror symbols.
@@ -61,14 +205,14 @@ Min Thu’s downward view of old man arranging mat. Body fits the cramped space 
 Close ordinary old face, sparse white stubble, off-white singlet, brown longyi. No supernatural skin colour or menacing grin.
 Old man speaks upward from low mat position, Min Thu’s knees and stool above. Avoid impossible full-height seating here.
 Old man glances upward kindly through exhaustion. No contact with mother, no grasping hand or hovering body.
-Lock tight eye-and-upper-cheek framing for motif: red whites, swollen lids, dark shadows. Reuse crop and side light at 59 and 103.
+The first appearance of the motif. Min Thu is observing it on somebody else, and it should read as sympathy rather than threat.
 Old man's hand points toward green-curtained corner bed. Keep separate from mother’s bed and never show a duplicated full old man.
 Corner-bed patient mostly screened, unidentifiable face, ordinary sleeping shape. No visitors or ominous body bag.
 Old man's hands smooth same mat edge. Focus on repetitive ordinary gesture, not changing mat pattern or supernatural hands.
 Tired mouth raises slightly while eyes stay fixed upward. No teeth-baring or malicious smile, watch time stays offscreen.
 Midnight mother drinks from plain cup held by son, his other hand supports her. No old man helping above the bed.
 Old man on his side with eyes closed briefly and longyi to knees. Apparent rest is allowed, no open-eye global override.
-Min Thu lies on mat near wall, old man beyond one bed leg. Match shot 3 head levels and bed orientation.
+Repeat shot 3 exactly — same camera position, same left-right assignment, same bed leg at centre. Only the night has changed.
 Close old man's still chest and shoulder on mat. Suggest absence of audible breath without corpse colouring or graphic anatomy.
 Old man's eyes now fully open toward camera. Preserve the same side-lying pose and ordinary ward reflection.
 Min Thu turns his back in foreground, old man blurred behind. Both still on separate adjacent mats, no standing speaker.
@@ -93,10 +237,10 @@ Second-night stool vigil, son holds mother's hand, his mat remains rolled. Old m
 Mother wakes briefly after two, sees tired son; patient gown, same bed. No readable clock necessary.
 Mother's hand relaxes inside son's grip as she sleeps again. LEFT wristwatch belongs only to son, no third hand.
 Empty dark under-bed shot for voice. Do not show speaker, ghost or extra mat merely because he is heard.
-Son looks rigidly ahead, refuses to glance down. Sweat and tired eyes, no vision reflected in his eyes.
+Son looks rigidly ahead and refuses to glance down. Sweat at the hairline. Nothing is reflected in his eyes.
 Third-day son dozes upright, spoon on tray after slipping. Mother observes from bed; no duplicated falling spoon.
 Macro of Min Thu’s eyelids briefly closed in ward light. Sounds of mats do not generate an actual mat near his face.
-Washroom mirror reflection matches old man's eye crop but retains Min Thu’s young face. One coherent reflection, no old man in glass.
+The motif has arrived on the narrator. Identical framing to shot 24, but the face in it is unmistakably his own twenty-seven-year-old one.
 Third-night son stands at ward end looking toward nurse desk. Exhaustion now strong, no recovery of fresh base-reference eyes.
 Busy night ward, Ma Khin San moves around two trolleys and families shifting mats. Normal staff, no identical cloned nurses.
 Son hesitates at busy desk, choose the moment he turns away. One body and one instant, no before/after panel.
@@ -113,9 +257,9 @@ Old man's eyes fill with tears, apologetic lip tremor. Exhaustion and guilt, not
 Old man speaks softly with grip still held. No renewed mother contact or duplicated wrist appearing beneath.
 Son's cheek now on terrazzo at floor height. CONTINUITY: from here until shot 83 his physical body lies ON THE FLOOR beside the bed, never on the mattress. No impact injury; ward seems distant through framing and focus.
 From under bed, son attempts an answer toward opaque frame overhead. No visible sound or mother seen through mattress.
-Trapped low POV among ordinary finite bed legs. ⚠️ THE LEGS ARE NOT A CAGE — there is plainly room to crawl between them, so compose the gaps as open rather than barred. What holds him is not an obstacle. No second endless tunnel; the sense of entrapment comes from tight close framing.
+⚠️ THE LEGS ARE NOT A CAGE. The gaps between them are wide and clearly passable; compose them as open floor, never as bars. Nothing physical is blocking him. Confinement comes from the tightness of the crop, not from the furniture.
 Feet hurry toward bed, nurse’s recognizable white shoes among ordinary sandals. Crop above knees, no full standing view.
-Son's hand reaches toward mother's bare ankles without contact across barely two feet of COMPLETELY OPEN floor — ⚠️ nothing physical is in the way, and the emptiness between them is the point. The distance simply refuses to close. Gap remains physically small; do not elongate his arm.
+Son’s LEFT hand reaches toward the mother’s bare ankles across barely two feet of completely open terrazzo. ⚠️ Nothing physical is in the way and no contact is made. Keep the gap physically small and the floor between them clear; do not elongate his arm.
 Floor-height view of son calling toward unreceptive feet. Human opaque face, no ghost glow or audible text.
 Low view of helpers lifting physical Min Thu, only hanging LEFT arm initially revealed. Living unconscious body, no corpse treatment.
 Watch insert on hanging LEFT wrist: black rectangle, same upper-right glass chip, unreadable face. No second watch.
@@ -140,9 +284,9 @@ Conscious son's mouth forms words below bed, mother’s ankles nearby unresponsi
 Night mother unrolls mat in son's earlier position, cloth bag pillow. Ordinary depth and same single iron leg between heads.
 Mother lying on mat looks upward toward physical son before sleeping. She wears caretaker clothes, no hospital-gown reset.
 One instant of mother reopening her eyes at mat level. Avoid multi-exposure cycle or duplicated eyes.
-Repeat tight eye motif from 24 and 59 on mother's own fifty-five-year-old face. Exhausted lids and shadows, never old man's identity.
+The motif completes on the mother, which is the whole reason it was established twice. Her own fifty-five-year-old face, never the old man’s and never Min Thu’s.
 Rainy night window seen from floor past bed edge, loose green shutter. Weather insert only; no mother under window or new location.
-Mirror shot 3 but with the POSITIONS SWAPPED: mother takes the beside-the-bed mat Min Thu used to have, and Min Thu now occupies the under-the-bed place that was the old man's. Same bed leg separation, same head levels, no old man present.
+The composition of shot 3 returns here for the first time, which is how the audience understands the swap without being told. Same camera, same left-right structure; only the two people are different. No old man anywhere in frame.
 Mother's eyes focus directly toward son at mat height for first time. Natural recognition, no glowing pupils.
 Mother quietly puzzled on side, face tired and ordinary. No suspicion or monstrous grimace.
 Son cries silently, tears run sideways across nose while lying down. Mother may blur opposite, no standing face portrait.
@@ -166,5 +310,5 @@ Mother reaches again from same mat, more tired. Her identity, blouse and hair re
 Barely one finger-width separates mother's RIGHT fingertips and son's LEFT fingertips. Do not let hands overlap or imply touching.
 Son's watch-bearing hand retreats slightly. Visible air gap, natural wrist position, no stretched fingers.
 Mother already side-lying and drowsy, RIGHT arm toward dark bed space. Floor camera and same pillow bag.
-Final gap between her open RIGHT hand and his LEFT fingertips, exhausted mother behind. Leave contact unresolved; no completed swap.
+Final shot of the film. They made contact once, at shot 112; this is the nearest he has come since. Leave it unresolved — no completed clasp and no transfer.
 `.trim().split('\n');

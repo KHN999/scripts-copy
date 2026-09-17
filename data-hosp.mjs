@@ -108,8 +108,8 @@ export const SCENES = [
 
   { t: "He Is Never Asleep", l: "ကုတင်အောက်", w: ["အဖိုးကြီး"],
     g: "ညတိုင်း မျက်လုံးဖွင့်ကြည့်မိရင် သူက အိပ်မနေဘူး။ ကျွန်တော့်ကို ကြည့်နေတယ်။",
-    p: "Extreme close-up of an old man's open eyes on a mat in near darkness, catching a little light "
-      + "from the ward, entirely awake.",
+    p: "Extreme close-up of the old man’s open eyes at mat height, lit only by ordinary ward spill "
+      + "from the aisle. Wide awake, looking steadily at the camera.",
     u: ["ညတိုင်း ကျွန်တော် မျက်လုံးဖွင့်ကြည့်မိရင် သူက အိပ်မနေဘူး။",
         "ကျွန်တော့်ကို ကြည့်နေတယ်။"],
     c: [[1, "bigstinger"]] },
@@ -207,8 +207,9 @@ export const SCENES = [
 
   { t: "The Lights Stay Half On", l: "အဆောင်",
     g: "အဆောင်မီးတွေ အကုန်မပိတ်ဘူး။ အလယ်က မီးချောင်းတချို့နဲ့ သူနာပြုစားပွဲနားက မီးတွေ လင်းနေတယ်။",
-    p: "A ward at night with only some of the strip lights on, a pool of lamplight at the nurses' "
-      + "table at the far end, everything else in green-grey shadow.",
+    p: "A ward at night with only some of the fluorescent strips left on and a pool of warm lamplight "
+      + "at the nurses’ table at the far end. The unlit stretches are simply dim — neutral grey "
+      + "shadow with the shapes of the beds still readable in it.",
     u: ["အဆောင်မီးတွေ အကုန်မပိတ်ဘူး။",
         "အလယ်က မီးချောင်းတချို့နဲ့ သူနာပြုစားပွဲနားက မီးတွေ လင်းနေတယ်။"] },
 
@@ -257,8 +258,10 @@ export const SCENES = [
 
   { t: "He Looked Worse Than I Did", l: "ကုတင်အောက်", w: ["အဖိုးကြီး"],
     g: "မျက်လုံးအောက်တွေ မည်းနေတယ်။ မျက်ခွံတွေက ဖောင်းနေတယ်။ တစ်ညနှစ်ညလောက် မဟုတ်သလိုပဲ။",
-    p: "⚠️ THE EXHAUSTED FACE — extreme close-up of the old man's eyes: black beneath them, lids "
-      + "swollen, whites threaded red. Frame this composition exactly; it recurs three more times.",
+    p: "OCCURRENCE 1 OF 3 OF THE MOTIF. The subject is the old man, sixty-five, lying on his mat "
+      + "under the bed. Everything else about this image — lens, crop, head angle, eye line, light "
+      + "direction — is fixed by the framing specified above and must be identical at shots 59 and "
+      + "103. This is the first time the audience sees it.",
     u: ["သူ့ပုံစံက ကျွန်တော့်ထက်တောင် ပိုပင်ပန်းနေသေးတာ။",
         "မျက်လုံးအောက်တွေ မည်းနေတယ်။ မျက်ခွံတွေက ဖောင်းနေတယ်။",
         "အိပ်ရေးပျက်တာ တစ်ညနှစ်ညလောက် မဟုတ်သလိုပဲ။"],
@@ -312,10 +315,12 @@ export const SCENES = [
 
   { rev: ["geography fixed"], t: "One Bed Leg Between Us", l: "ကုတင်အောက်", w: ["မင်းသူ", "အဖိုးကြီး"],
     g: "ကျွန်တော်လည်း ကိုယ့်ဖျာကို ဖြန့်လိုက်တယ်။ ကြားမှာ သံကုတင်ခြေတစ်ချောင်းပဲ ခြားတယ်။",
-    p: "⚠️ MIN THU'S MAT IS BESIDE THE BED against the wall and the old man's is UNDER the frame. One "
-      + "iron bed leg stands between them. Both lie PARALLEL with their heads at the same end, so "
-      + "the two faces are side by side at the same height and turned toward one another across "
-      + "the leg — not crown to crown.",
+    p: "THE SAME ARRANGEMENT AND THE SAME CAMERA POSITION AS SHOT 3. MIN THU ON THE LEFT OF FRAME, "
+      + "on the mat in the strip between the bed and the wall; THE OLD MAN ON THE RIGHT, on the mat "
+      + "under the bed frame. Both heads at the near edge of frame at the same height, both bodies "
+      + "extending directly away from the camera. Min Thu faces RIGHT, the old man faces LEFT. One "
+      + "iron bed leg stands upright between the two heads at the centre of frame. Second night, so "
+      + "both men are further worn than at shot 3.",
     u: ["ကျွန်တော်လည်း ကိုယ့်ဖျာကို ဖြန့်လိုက်တယ်။ အမေ့ကုတင်ဘေး၊ နံရံနဲ့ နီးတဲ့နေရာမှာ။",
         "အဖိုးကြီးနဲ့ ကျွန်တော့်ကြားမှာ သံကုတင်ခြေတစ်ချောင်းပဲ ခြားတယ်။",
         "ခေါင်းအုံးပေါ် ခေါင်းချပြီး မျက်လုံးမှိတ်လိုက်တယ်။"] },
@@ -532,8 +537,11 @@ export const SCENES = [
 
   { t: "My Own Face in the Mirror", l: "ရေဆေးခန်း", w: ["မင်းသူ"],
     g: "မှန်အဟောင်းထဲမှာ ကိုယ့်မျက်နှာကို ကြည့်လိုက်တော့ အဖိုးကြီးရဲ့ မျက်လုံးတွေကို သတိရသွားတယ်။",
-    p: "⚠️ THE EXHAUSTED FACE, SECOND OF THREE — a young man's reflection in a cracked washroom mirror: "
-      + "black under the eyes, swollen lids, red whites. Frame it exactly as the old man's was.",
+    p: "OCCURRENCE 2 OF 3 OF THE MOTIF. The subject is Min Thu’s own reflection in the washroom "
+      + "mirror, twenty-seven, standing upright at the basin. One coherent reflection of his own "
+      + "young face — never the old man in the glass. The mirror is an ordinary washroom mirror in "
+      + "one clean piece. Everything else about this image is fixed by the framing above and "
+      + "must be identical to shots 24 and 103.",
     u: ["ရေဆေးတဲ့နေရာသွားပြီး မျက်နှာသစ်တယ်။",
         "မှန်အဟောင်းထဲမှာ ကိုယ့်မျက်နှာကို ကြည့်လိုက်တော့ အဖိုးကြီးရဲ့ မျက်လုံးတွေကို သတိရသွားတယ်။",
         "အိပ်ချင်လွန်းလို့ မျက်ခွံတွေတောင် နာနေတဲ့မျက်လုံးတွေ။"],
@@ -898,8 +906,11 @@ export const SCENES = [
 
   { t: "The Same Face, On Her", l: "ကုတင်အောက်", w: ["အမေ"],
     g: "⚠️ အမေ့မျက်လုံးတွေလည်း နီလာတယ်။ မျက်ခွံတွေ ဖောင်းလာတယ်။ အိပ်ချင်လွန်းတဲ့လူတစ်ယောက်ရဲ့ မျက်နှာ။",
-    p: "⚠️ THE EXHAUSTED FACE, THIRD AND LAST — now on the mother. Black beneath the eyes, "
-      + "swollen lids, red whites. Frame it exactly as the old man's and the mirror's were.",
+    p: "OCCURRENCE 3 OF 3 OF THE MOTIF, AND THE POINT OF IT. The subject is the mother, "
+      + "fifty-five, lying on her mat under the bed. Her own face and her own identity — never the "
+      + "old man’s, never Min Thu’s. Everything else about this image is fixed by the framing "
+      + "specified above and must be identical to shots 24 and 59, so the audience recognises "
+      + "where it has arrived without being told.",
     u: ["အဲဒီလိုနဲ့ အမေ့မျက်လုံးတွေလည်း နီလာတယ်။ မျက်ခွံတွေ ဖောင်းလာတယ်။",
         "အမေ့မျက်နှာမှာ ကျွန်တော် မြင်ဖူးပြီးသား အရာတစ်ခု ပေါ်လာတယ်။",
         "အဖိုးကြီးဆီမှာ မြင်ခဲ့ဖူးတယ်။ မှန်ထဲက ကိုယ့်မျက်နှာမှာလည်း မြင်ခဲ့ဖူးတယ်။",
@@ -915,11 +926,13 @@ export const SCENES = [
 
   { rev: ["geography fixed"], t: "Face to Face", l: "ကုတင်အောက်", w: ["အမေ", "မင်းသူ"],
     g: "အမေက ဖျာပေါ်မှာ တစ်ဖက်စောင်းအိပ်နေတယ်။ ကျွန်တော့်ဘက်ကို မျက်နှာမူထားတယ်။",
-    p: "⚠️ SHOT 3 MIRRORED AND REVERSED: the MOTHER now has the beside-the-bed mat against the wall "
-      + "that used to be Min Thu's, and MIN THU is the one UNDER the frame where the old man lay. "
-      + "Same bed leg between them. Both lie PARALLEL with their heads at the same end, faces side "
-      + "by side at the same height and turned toward one another — not crown to crown. One asleep "
-      + "and one not.",
+    p: "SHOT 3 AGAIN, WITH THE PEOPLE REPLACED. THE MOTHER IS ON THE LEFT OF FRAME, on the mat in "
+      + "the strip between the bed and the wall — the place that was Min Thu’s. MIN THU IS ON THE "
+      + "RIGHT, on the mat under the bed frame, where the old man used to lie. Both heads at the "
+      + "near edge of frame at the same height, both bodies extending directly away from the "
+      + "camera. The mother faces RIGHT, Min Thu faces LEFT. The same single iron bed leg stands "
+      + "upright between their heads at the centre of frame. Identical camera position and framing "
+      + "to shot 3. The mother’s eyes are closed; Min Thu’s are open.",
     u: ["အမေက ဖျာပေါ်မှာ တစ်ဖက်စောင်းအိပ်နေတယ်။ ကျွန်တော့်ဘက်ကို မျက်နှာမူထားတယ်။",
         "သူ အိပ်တော့မယ်လို့ ထင်ခဲ့တယ်။"],
     c: [[1, "bigstinger"]] },
@@ -1114,27 +1127,16 @@ export const SCENES = [
 
   { rev: ["continuity fixed"], t: "Lean on Mother", l: "ကုတင်အောက်", w: ["အမေ", "မင်းသူ"],
     g: "နောက်ဆုံးပုံ — ဆေးရုံစရောက်တဲ့နေ့က ကျွန်တော် ပြောခဲ့တဲ့စကားကို အမေက ပြန်ပြောတယ်။ “အမေ့ကို မှီလိုက်။”",
-    p: "Final composition: a woman's outstretched hand on a mat with her exhausted face behind it, "
-      + "and at the very edge of frame in the dark, the narrator's fingers — a single finger's width "
-      + "short of hers and not touching. They have touched once already, at shot 112; this is the "
-      + "nearest he has come since. Hold on the gap between the two hands.",
+    p: "The mother’s open RIGHT hand lies palm-up on the mat, her exhausted face behind it and "
+      + "slightly out of focus. At the very edge of frame, in the dark under the bed, Min Thu’s "
+      + "LEFT fingertips — one finger’s width short of hers, not touching. The gap between the two "
+      + "hands sits at the centre of the frame and is the only thing in sharp focus.",
     u: ["ပြီးတော့ ဆေးရုံစရောက်တဲ့နေ့က ကျွန်တော် သူ့ကို ပြောခဲ့တဲ့စကားကို ပြန်ပြောတယ်။",
         "“အမေ့ကို မှီလိုက်။”"],
     c: [[1, "finalstinger"]] },
 ];
 reviewHosp(SCENES, CAST, LOCS);
 
-/**
- * The shared style block pins the ward's furniture — bed, stool, cloth bag,
- * mats, green-curtained corner bed — so those positions stay put across a
- * hundred-odd shots of the same room. On a shot that is NOT in that room it is
- * an invitation to paint ward furniture into a brick wall or a washroom, so it
- * is removed from the nine shots set elsewhere.
- */
-const WARD_FURNITURE = "Maintain the same bed, stool, cloth bag, reed mats and "
-  + "green-curtained corner bed positions. ";
-const WARD_LOCS = new Set(["\u1021\u1006\u1031\u102c\u1004\u103a", "\u1000\u102f\u1010\u1004\u103a\u1021\u1031\u102c\u1000\u103a"]);
-SCENES.forEach((sc) => {
-  if (sc.l && !WARD_LOCS.has(sc.l) && sc.style) sc.style = sc.style.replace(WARD_FURNITURE, "");
-});
-
+// Camera plan, eye descriptions, continuity and style all come from the review
+// layer. The ward-furniture clause used to be stripped back off afterwards for
+// the nine shots set elsewhere; it is now only added to shots in the ward.
