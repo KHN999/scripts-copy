@@ -6,7 +6,7 @@ export function reviewHosp(SCENES, CAST, LOCS) {
   LOCS.find(l=>l.name==='စင်္ကြံ').prompt='A wide old Yangon hospital corridor beside a broad staircase and trolley ramp, pale green lower walls and cream upper walls, worn terrazzo, strip lights, a few neatly rolled reed mats, thermoses and plain plastic baskets along wall. Empty of people and incident for this location reference; no readable signs.';
   LOCS.find(l=>l.name==='ကုတင်အောက်').prompt='THE MASTER GEOMETRY PLATE FOR THIS FILM. Every under-bed and floor-level shot uses this layout, so establish it once and clearly. Camera on the terrazzo at the HEAD END of one chipped white iron hospital bed, 3-5 inches above the floor, framed wide enough to show the whole arrangement at once. LEFT OF FRAME: the ward wall, and the narrow strip of floor between the wall and the bed — wide enough for exactly one reed mat. CENTRE: the bed, four iron legs, the opaque underside of its frame overhead, and the ordinary shallow space beneath it, in which the floor and the rear wall clearly terminate within normal bed depth. RIGHT OF FRAME: the open central aisle, with a plastic stool and a dark cloth bag standing beside the bed on that side. FAR BACKGROUND, down the aisle: a corner bed screened by a green cloth curtain on a rail. The near edge of frame is the bed’s HEAD END; its foot end is the far end. Worn terrazzo with fixed black shoe scuffs. No people and no mats in this plate — the shots add those. Ordinary ward daylight, finite depth, no tunnel, no readable markings.';
   const S=n=>SCENES[n-1];
-  S(3).p='Two men lie on reed mats laid edge to edge on the terrazzo. MIN THU IS ON THE LEFT OF FRAME, THE OLD MAN ON THE RIGHT. Both heads are at the near edge of frame at the same height; both bodies extend directly away from the camera. Min Thu faces RIGHT, toward the old man; the old man faces LEFT, toward Min Thu. Their faces are about eight inches apart. One iron bed leg stands upright in the gap between the two heads, at the centre of frame. Min Thu’s mat is the strip between the bed and the wall, so the wall is behind him on the left; the old man’s mat is under the bed, so the underside of the frame is above him on the right. Min Thu’s eyes are closed. The old man’s are open and directed at Min Thu’s face.';
+  S(3).p='Two men lie on reed mats laid edge to edge on the terrazzo. MIN THU IS ON THE LEFT OF FRAME, THE OLD MAN ON THE RIGHT. Both heads are at the near edge of frame at the same height; both bodies extend directly away from the camera. Min Thu faces RIGHT, toward the old man; the old man faces LEFT, toward Min Thu. Their faces are about eight inches apart. One iron bed leg stands upright in the gap between the two heads, at the centre of frame. Min Thu’s mat is the strip between the bed and the wall, so the wall is behind him on the left; the old man’s mat is under the bed, so the underside of the frame is above him on the right. Both lie ON THEIR SIDES facing one another, so both heads are in profile to the camera. Min Thu’s eyes are closed. The old man’s are open and directed at Min Thu’s face.';
   S(36).p='Min Thu stands at a hospital counter holding forms and one plastic supply bag in daylight; a single moment of ordinary errands, documents turned away.';
   S(22).p='Old man sits low and slightly hunched on his mat beside the bed edge, looking up toward Min Thu’s knees and plastic stool. Normal cramped clearance, no impossible posture at this early moment.';
   S(50).p='Ma Khin San quietly tells Min Thu about the earlier caretaker who could not be awakened. Stay in the present ward on her worried expression; do not invent an identity for that earlier patient.';
@@ -48,16 +48,19 @@ export function reviewHosp(SCENES, CAST, LOCS) {
     // anatomically and assigned to a NAMED person. Whoever is not sleepless in
     // this shot gets an explicit healthy description rather than a negation —
     // "not red" still puts red in the prompt.
+    // Grouped by STATE rather than listed per person. Listing per person meant
+    // any shot holding two sleepless people carried the same forty-word
+    // sentence twice, word for word — eighteen shots did.
+    const tired=[], rested=[];
+    const oldRecovered=who.includes(OLD)&&n>=85&&n<=89;
+    if(who.includes(OLD)&&!oldRecovered) tired.push('the old man');
+    if(who.includes(SON)) (n<TIRED_SON?rested:tired).push('Min Thu');
+    if(who.includes(MUM)) (n<TIRED_MUM?rested:tired).push('the mother');
+    const and=(a)=>a.length<3?a.join(' and '):a.slice(0,-1).join(', ')+' and '+a[a.length-1];
     const eyes=[];
-    if(who.includes(OLD)) eyes.push(n>=85&&n<=89
-      ?`The old man has slept: lids no longer swollen, whites clearing, ${EYES_CLEAR}.`
-      :`ONLY the old man is sleepless here — ${EYES_TIRED}.`);
-    if(who.includes(SON)) eyes.push(n<TIRED_SON
-      ?`Min Thu is not yet sleepless: ${EYES_CLEAR}, lids normal.`
-      :`Min Thu is now sleepless too — ${EYES_TIRED}.`);
-    if(who.includes(MUM)) eyes.push(n<TIRED_MUM
-      ?`The mother is ill but sleeping: ${EYES_CLEAR}, tired from illness rather than from sleeplessness.`
-      :`The mother is now the sleepless one — ${EYES_TIRED}.`);
+    if(tired.length) eyes.push(`SLEEPLESS IN THIS SHOT: ${and(tired)} — ${EYES_TIRED}.`);
+    if(rested.length) eyes.push(`NOT SLEEPLESS: ${and(rested)} — ${EYES_CLEAR}, lids normal.`);
+    if(oldRecovered) eyes.push(`The old man has slept at last: lids no longer swollen, whites clearing, ${EYES_CLEAR}.`);
 
     // ── 3. CONTINUITY, short and only what applies ───────────────────────
     // This block used to run to six sentences on every one of the 129 shots,
@@ -115,7 +118,7 @@ const CAM={
   mat:'MAT-HEIGHT SIDE VIEW. Camera on the floor beside the bed at reed-mat height, looking in under the frame from the aisle side.',
   matclose:'MAT-HEIGHT CLOSE. Camera on the floor at reed-mat height, head-and-shoulders crop.',
   matup:'MAT-HEIGHT LOW ANGLE. Camera on the floor at reed-mat height, tilted upward.',
-  headend:'HEAD-END SYMMETRICAL TWO-SHOT. Camera on the terrazzo at the HEAD END of both mats, 3-5 inches above the floor, looking down the length of the two bodies so that both faces sit side by side in frame.',
+  headend:'HEAD-END SYMMETRICAL TWO-SHOT. Camera on the terrazzo at the HEAD END of both mats, 3-5 inches above the floor, looking down the length of the two bodies. ⚠️ BOTH SUBJECTS LIE ON THEIR SIDES FACING ONE ANOTHER, so each head is seen in PROFILE from this position — one profile facing right, one facing left, level with each other, with the gap between the two faces at the centre of frame. Neither face is turned toward the lens.',
   under:'UNDER-BED POV. Camera underneath the hospital bed, 3-5 inches above the floor.',
   underclose:'UNDER-BED POV, CLOSE. Camera underneath the hospital bed, 3-5 inches above the floor, head-and-shoulders crop.',
   floor:'FLOOR-LEVEL. Camera on the terrazzo beside the bed, 3-5 inches above the floor.',
@@ -283,11 +286,11 @@ Daylight low oblique view, mother holds unconscious son's hand at bed edge. No s
 Conscious son's mouth forms words below bed, mother’s ankles nearby unresponsive. Show no second mouth detached in darkness.
 Night mother unrolls mat in son's earlier position, cloth bag pillow. Ordinary depth and same single iron leg between heads.
 Mother lying on mat looks upward toward physical son before sleeping. She wears caretaker clothes, no hospital-gown reset.
-One instant of mother reopening her eyes at mat level. Avoid multi-exposure cycle or duplicated eyes.
+She has woken again a few minutes after shot 101 and is checking upward for the same reason she checked last time. Play it as routine rather than alarmed — this is the fourth or fifth time tonight.
 The motif completes on the mother, which is the whole reason it was established twice. Her own fifty-five-year-old face, never the old man’s and never Min Thu’s.
 Rainy night window seen from floor past bed edge, loose green shutter. Weather insert only; no mother under window or new location.
 The composition of shot 3 returns here for the first time, which is how the audience understands the swap without being told. Same camera, same left-right structure; only the two people are different. No old man anywhere in frame.
-Mother's eyes focus directly toward son at mat height for first time. Natural recognition, no glowing pupils.
+The first time in the film that anyone at floor level is actually seen. Everything rests on where her eyes are pointed, so keep the focus of the gaze unambiguous. No glow, no widening into horror — she is looking at her son.
 Mother quietly puzzled on side, face tired and ordinary. No suspicion or monstrous grimace.
 Son cries silently, tears run sideways across nose while lying down. Mother may blur opposite, no standing face portrait.
 Mother's RIGHT hand opens toward son across mat. Wrist bare; no watch and no wrist grab yet.

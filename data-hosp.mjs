@@ -319,7 +319,8 @@ export const SCENES = [
       + "on the mat in the strip between the bed and the wall; THE OLD MAN ON THE RIGHT, on the mat "
       + "under the bed frame. Both heads at the near edge of frame at the same height, both bodies "
       + "extending directly away from the camera. Min Thu faces RIGHT, the old man faces LEFT. One "
-      + "iron bed leg stands upright between the two heads at the centre of frame. Second night, so "
+      + "iron bed leg stands upright between the two heads at the centre of frame. Both lie ON THEIR "
+      + "SIDES facing one another, so both heads are in profile to the camera. Second night, so "
       + "both men are further worn than at shot 3.",
     u: ["ကျွန်တော်လည်း ကိုယ့်ဖျာကို ဖြန့်လိုက်တယ်။ အမေ့ကုတင်ဘေး၊ နံရံနဲ့ နီးတဲ့နေရာမှာ။",
         "အဖိုးကြီးနဲ့ ကျွန်တော့်ကြားမှာ သံကုတင်ခြေတစ်ချောင်းပဲ ခြားတယ်။",
@@ -899,7 +900,12 @@ export const SCENES = [
 
   { t: "She Keeps Waking", l: "ကုတင်အောက်", w: ["အမေ"],
     g: "ဒါပေမယ့် ခဏလေးနဲ့ ပြန်နိုးတယ်။ ကျွန်တော် လှုပ်လာသလားဆိုပြီး။",
-    p: "A woman's eyes snapping open on a mat, checking upward, then closing again — caught mid-cycle.",
+    p: "From Min Thu’s eyeline under the bed: the mother on her mat an arm’s length away, her head "
+      + "on the folded cloth bag, her eyes wide open and directed UPWARD past the camera at the "
+      + "underside of the mattress above. ⚠️ SHE IS CHECKING THE BODY ON THE BED, NOT LOOKING AT "
+      + "HIM — her eyeline goes over him, and he is not in frame. ⚠️ ONE INSTANT ONLY: her eyes "
+      + "are open and stay open in this image. No sequence of opening and closing, no repeated or "
+      + "doubled eyes, no motion blur of a blink.",
     u: ["ဒါပေမယ့် ခဏလေးနဲ့ ပြန်နိုးတယ်။",
         "ကျွန်တော် လှုပ်လာသလားဆိုပြီး။"],
     c: [[1, "stinger"]] },
@@ -931,15 +937,20 @@ export const SCENES = [
       + "RIGHT, on the mat under the bed frame, where the old man used to lie. Both heads at the "
       + "near edge of frame at the same height, both bodies extending directly away from the "
       + "camera. The mother faces RIGHT, Min Thu faces LEFT. The same single iron bed leg stands "
-      + "upright between their heads at the centre of frame. Identical camera position and framing "
-      + "to shot 3. The mother’s eyes are closed; Min Thu’s are open.",
+      + "upright between their heads at the centre of frame. Both lie ON THEIR SIDES facing one "
+      + "another, so both heads are in profile to the camera. Identical camera position and "
+      + "framing to shot 3. The mother’s eyes are closed; Min Thu’s are open.",
     u: ["အမေက ဖျာပေါ်မှာ တစ်ဖက်စောင်းအိပ်နေတယ်။ ကျွန်တော့်ဘက်ကို မျက်နှာမူထားတယ်။",
         "သူ အိပ်တော့မယ်လို့ ထင်ခဲ့တယ်။"],
     c: [[1, "bigstinger"]] },
 
   { t: "She Was Really Looking at Me", l: "ကုတင်အောက်", w: ["အမေ"],
     g: "ရုတ်တရက် မျက်လုံးဖွင့်လာတယ်။ ပထမဆုံးအကြိမ် သူ့မျက်လုံးတွေက ကျွန်တော့်ကို တကယ်ကြည့်နေတယ်။",
-    p: "A woman's eyes opening on a mat and focusing — actually focusing — on the camera.",
+    p: "THE SAME ARRANGEMENT AS SHOT 105, NOW FROM MIN THU’S OWN EYELINE. The mother on her mat an "
+      + "arm’s length away, her head still on the cloth bag exactly where it was, her face turned "
+      + "toward the camera. Her eyes have just opened. ⚠️ HER GAZE IS FOCUSED ON THE LENS — not "
+      + "through it, not past it, and not upward at the mattress the way it went in shot 102. Her "
+      + "lips are parted on the beginning of a word. Ordinary recognition on an exhausted face.",
     u: ["ဒါပေမယ့် ရုတ်တရက် မျက်လုံးဖွင့်လာတယ်။ ကျွန်တော်နဲ့ မျက်နှာချင်းဆိုင်။",
         "ပထမဆုံးအကြိမ် သူ့မျက်လုံးတွေက ကျွန်တော့်ကို တကယ်ကြည့်နေတယ်။",
         "“သား…” ကျွန်တော် မလှုပ်ရဲဘူး။"],
