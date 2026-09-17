@@ -571,11 +571,32 @@ const STYLE = "Modern Yangon condominium, 16:9, contemporary photorealism. ORDIN
 /** Shots presented as security footage rather than as photography. */
 const CCTV = new Set(["monitor", "screen"]);
 
+/**
+ * Time of day. A night-shift story that happens almost entirely between one and
+ * three in the morning. The lift and the basement have no windows, so night is
+ * carried by the deserted building, the night lighting beyond the lift doors
+ * and the timestamp — never by a view of the sky, because there isn't one.
+ */
+const TIME_NIGHT = "TIME: NIGHT, around two in the morning. The building is asleep: no daylight "
+  + "anywhere, nobody else about, lobbies and lift lit only by their own fluorescents, the "
+  + "security room dark except for the monitors. ⚠️ There are no windows in the lift or the "
+  + "basement, so the hour is carried by the emptiness of the building and by the timestamp on "
+  + "the footage — never by a view of the sky.";
+
+const TIME_DAY = {
+  "They Reviewed the Tape": "TIME: DAYTIME, working hours. The security room’s ceiling tube is "
+    + "on and the door to the basement lobby stands open. Ordinary daytime — this is the one "
+    + "scene in the film where the building is busy.",
+  "His Phone and His Shoes": "TIME: MORNING. Overhead lights on, the door open, daytime activity "
+    + "in the basement beyond it. Ordinary morning.",
+};
+
 SCENES.forEach((s, i) => {
   const n = i + 1, who = s.w || [];
   s.n = n;
   s.cam = CAM[s.k];
   if (!s.cam) throw new Error(`shot ${n} "${s.t}" has no camera key`);
+  s.time = TIME_DAY[s.t] || TIME_NIGHT;
 
   const cont = ["Continuity: ordinary living people photographed straight."];
 

@@ -899,11 +899,39 @@ const FIGURE_SHOTS = new Set(["Click", "Someone Is Standing There", "Another of 
 /** Before this shot May Myat is a neighbour; after it she is evidence. */
 const AFTER_RELEASE = 26;
 
+/**
+ * Time of day. Almost the whole film is one man on a balcony after midnight, so
+ * night is the default and the eight daylight shots are named individually.
+ */
+const TIME_NIGHT = "TIME: NIGHT, well after midnight. Monsoon rain still falling. The only light "
+  + "is the bare bulb over the landing doors, the lit windows of the block opposite, and a "
+  + "streetlight three floors below — everything outside those sources falls away into ordinary "
+  + "darkness. No daylight anywhere in frame, no sky, no sun.";
+
+const TIME_DAY = {
+  "On the Stairs": "TIME: EARLY MORNING. Flat grey monsoon daylight through the open stairwell "
+    + "window, overcast and shadowless. Ordinary daytime.",
+  "Moved Away, They Said": "TIME: DAY. Flat grey monsoon daylight in the corridor, overcast and "
+    + "shadowless. Ordinary daytime.",
+  "Gone by Morning": "TIME: EARLY MORNING, just after first light. Flat grey overcast daylight, "
+    + "the rain eased to drizzle. Ordinary daytime.",
+  "He Is Not Dead": "TIME: DAY. Flat grey monsoon daylight on the stairs. Ordinary daytime.",
+  "He Slipped on the Stairs": "TIME: MORNING. Flat grey daylight through the stairwell window. "
+    + "Ordinary daytime.",
+  "He Called the Police": "TIME: DAY. Flat grey monsoon daylight in the stairwell. Ordinary "
+    + "daytime.",
+  "By Morning the Dress Was Gone": "TIME: EARLY MORNING. Flat grey overcast daylight, the rain "
+    + "stopped. Ordinary daytime.",
+  "A Week. Two. A Month.": "TIME: AFTERNOON. Ordinary daylight coming in through the open balcony "
+    + "door, the room bright. This is the one shot in the film that looks like a normal life.",
+};
+
 SCENES.forEach((s, i) => {
   const n = i + 1, who = s.w || [];
   s.n = n;
   s.cam = CAM[s.k];
   if (!s.cam) throw new Error(`shot ${n} "${s.t}" has no camera key`);
+  s.time = TIME_DAY[s.t] || TIME_NIGHT;
 
   const cont = ["Continuity: ordinary living people photographed straight."];
 

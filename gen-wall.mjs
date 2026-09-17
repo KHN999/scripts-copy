@@ -53,7 +53,7 @@ const shots = rows.map((r) => {
      * only thing the model reliably reads, so it holds the one decision that
      * makes every later sentence satisfiable or not.
      */
-    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.cam}\n\n${s.p}\n\n`
+    prompt: `Shot ${n} of ${rows.length} — "${s.t}".\n\n${s.cam}\n\n${s.time}\n\n${s.p}\n\n`
       + `${s.cont}\n\n${s.style}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",

@@ -527,11 +527,39 @@ const DARK_SHOTS = new Set(["From Deep Inside"]);
 /** From here he has stopped sleeping, and it shows in his lids and nowhere else. */
 const SLEEPLESS = 9;
 
+/**
+ * Time of day. The nights are night; the discovery act is the morning after,
+ * because the script puts it there ("မနက်ကျတော့"). A daylit room is also the
+ * harder place to be frightened, which is the point of that half of the film.
+ */
+const TIME_NIGHT = "TIME: NIGHT, between one and two in the morning. The room is lit only by "
+  + "streetlight coming through the thin curtain and whatever spills under the door. No lamp is "
+  + "on. No daylight anywhere in frame, no sky, no sun.";
+
+const DAYTIME = "TIME: DAY. Flat grey monsoon daylight through the barred window, overcast and "
+  + "shadowless, the ceiling bulb off. Ordinary daytime — everything in the room is plainly "
+  + "visible.";
+
+const TIME_DAY = Object.fromEntries([
+  "Probably the Pipes", "Auntie, What Is In This Wall", "No. That Side Is Outside.",
+  "A Line Under the Picture", "He Cut the Paper", "It Was Not a Wall",
+  "Don't Open It", "Why", "The Girl Who Was Here Before", "A Small Storage",
+  "He Did Not Wait", "Too Narrow to Stand In", "A Pink Blouse",
+  "No Battery", "The Door Has Closed", "Auntie. Can You Hear Me.",
+  "I Didn't Know", "I Didn't Know She Was Inside", "I Closed the Storage",
+  "Don't Close It", "Hammering", "The Builders Did It",
+  "Then Why Did Nobody Look", "The Recording Stopped",
+  "From Deep Inside", "They Both Stepped Back", "There Is Nowhere to Walk",
+  "She Ran", "Thank You", "The Blouse Moved",
+  "They Broke the Wall Open", "He Thought It Was Finished",
+].map((k) => [k, DAYTIME]));
+
 SCENES.forEach((s, i) => {
   const n = i + 1, who = s.w || [];
   s.n = n;
   s.cam = CAM[s.k];
   if (!s.cam) throw new Error(`shot ${n} "${s.t}" has no camera key`);
+  s.time = TIME_DAY[s.t] || TIME_NIGHT;
 
   const cont = ["Continuity: ordinary living people photographed straight."];
 
