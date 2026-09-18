@@ -722,17 +722,28 @@ export const SCENES = [
 
   { t: "Ko Zin", l: "အပြင်", w: ["အပြင်ကကိုဇင်", "ကိုဇင်"],
     g: "ကယ်နေတဲ့လူရဲ့မျက်နှာက — ကိုဇင်။ ပုံမှန်လူအရွယ်။ မျက်နှာဖြူနေတယ်။",
-    p: "From the surface of a giant palm, tiny Ko Zin sits in the near foreground with his torn-backed "
-      + "shirt visible while an ordinary full-size Ko Zin stares down at him in disbelief. Both faces "
-      + "must be recognizably identical; the full-size man's shirt remains completely intact.",
+    p: "⚠️ TINY MAY’S OWN EYELINE from the surface of the palm — she is never in frame. Beside her "
+      + "and slightly ahead of her, tiny Ko Zin sits in the near foreground turned THREE-QUARTERS "
+      + "AWAY FROM THE CAMERA, so the long tear across the BACK of his tan overshirt is squarely "
+      + "presented to the lens and his upturned face is seen from behind and to one side. Filling "
+      + "the upper frame beyond him, an ordinary full-size Ko Zin looks down at the palm in "
+      + "disbelief. ⚠️ THE TWO ARE RECOGNISABLY THE SAME MAN — same face, same build, same cropped "
+      + "hair, same charcoal T-shirt and tan overshirt. THE ONLY DIFFERENCE IS THE SHIRT: the tiny "
+      + "one’s is torn open across the back, the full-size one’s is completely intact. That tear is "
+      + "damage added on top of his reference plate, which shows the shirt before it was torn.",
     u: ["ပြီးတော့ ကျွန်မတို့ကို ကယ်နေတဲ့လူရဲ့မျက်နှာကို မြင်လိုက်ရတယ်။ ကိုဇင်။",
         "ကျွန်မဘေးမှာ ထိုင်နေတဲ့ ကိုဇင်ကလည်း အဲဒီမျက်နှာကို မော့ကြည့်နေတယ်။ သူ့ပါးစပ် ပွင့်နေတယ်။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "And a Woman With My Face", l: "အပြင်", w: ["အပြင်ကမေ"],
+  { t: "And a Woman With My Face", l: "အပြင်", w: ["အပြင်ကမေ", "အပြင်ကကိုဇင်"],
     g: "သူ့နောက်မှာ အမျိုးသမီးတစ်ယောက်။ ကျွန်မမျက်နှာနဲ့။ ကျွန်မ ဝတ်လာတဲ့အင်္ကျီနဲ့။",
-    p: "A woman leaning into frame behind the man — the narrator's own face at full size, in the "
-      + "same shirt, warm and frightened for them.",
+    p: "THE SAME CAMERA POSITION AS SHOT 69, one beat later, still tiny May’s own eyeline from the "
+      + "palm — she is never in frame. Full-size Ko Zin still fills the upper frame looking down, "
+      + "unchanged and with his tan overshirt still completely intact, and a full-size woman has "
+      + "leaned in from behind his shoulder to look down as well. ⚠️ HER FACE IS THE NARRATOR’S "
+      + "OWN at ordinary human scale, in the same sage-green work shirt she is wearing, with the "
+      + "same left-side hair tuck. Warm and frightened for them — never uncanny, never "
+      + "threatening. Both full-size faces must match their references exactly.",
     u: ["အပြင်က ကိုဇင်ကလည်း မျက်နှာဖြူနေတယ်။ အရွယ်ကြီးကြီး။ ပုံမှန်လူအရွယ်။",
         "သူ့လက်ဖဝါးပေါ်မှာ ကျွန်မတို့နှစ်ယောက်။",
         "သူ့နောက်မှာ အမျိုးသမီးတစ်ယောက် ရှိတယ်။ ကျွန်မမျက်နှာနဲ့။ ကျွန်မ ဝတ်လာခဲ့တဲ့ အင်္ကျီနဲ့။"],
@@ -989,8 +1000,8 @@ export const DETAILS = [
   /* 66 */ "Low-angle view of the doll rising toward the roof opening in giant fingers, chipped hand visible, head mechanically rotated backward to stare down. Her painted smile never changes and the spoken line must not appear as text.",
   /* 67 */ "Keep injured May and torn-shirt Ko Zin small but clearly visible before the offered palm. The palm's relaxed posture and clean afternoon light must communicate rescue, with no grabbing fingers, menace or doll.",
   /* 68 */ "Macro-wide shot on the rising palm: injured May and torn-shirt Ko Zin sit together between deep skin creases that read as ankle-deep grooves at their size, not canyons. Show the dolls'-house roof dropping away beneath them and keep the rescuer's face out of frame.",
-  /* 69 */ "Use forced scale in one frame: tiny torn-shirt Ko Zin on the palm at lower edge and the identical full-size intact-shirt Ko Zin filling the upper background. Their matching facial structure is essential; both are shocked, neither is sinister.",
-  /* 70 */ "Tiny-May point of view from the palm as full-size May leans gently into frame behind full-size Ko Zin. Her exact matching face, sage shirt and left hair tuck are readable; tiny May stays off-camera so the reveal remains subjective.",
+  /* 69 */ "Forced perspective in one frame: the tiny figure close to the lens at the lower edge and the full-size one far enough back that both heads read at a comparable size. Both men are shocked and neither is sinister. This shot and shot 70 are the same setup one beat apart, so hold the camera position across the pair.",
+  /* 70 */ "The reveal completes here, so both full-size faces are in one frame and both have to be the right people. Her matching face, sage shirt and left hair tuck must be readable. Tiny May stays off-camera; the recognition is hers and the audience gets it through her eyes.",
   /* 71 */ "Medium close-up of full-size May making the unconscious left-side hair tuck. Keep her face warm, ordinary and unchanged from both May references; use the giant scale only through the low palm-height camera, not distorted anatomy.",
   /* 72 */ "Close palm-height portrait of full-size May lowering her face and speaking softly with wet worried eyes. Natural household kindness is the point; no horror lighting, predatory smile, extreme lens distortion or uncanny duplicate effect.",
   /* 73 */ "Wide tabletop frame as a giant careful hand finishes placing injured May and torn-shirt Ko Zin on folded cloth. The weave reads as thin cord beneath them — proportionate to four inches, not ship's rope. Both tiny people fully visible; the hand withdraws open and gentle.",
