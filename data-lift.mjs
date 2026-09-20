@@ -58,7 +58,8 @@ export const LOCS = [
       + "wide lens, looking down and back across the whole car — the standard security-camera "
       + "position. FAR WALL of the car: a large mirror panel. SIDE WALLS: brushed stainless steel. "
       + "FLOOR: polished grey stone tile. DOORS at the bottom of frame, closed. ON THE RIGHT-HAND "
-      + "WALL beside the doors: a vertical brushed-steel button panel. Fluorescent ceiling panel, "
+      + "WALL beside the doors: a vertical brushed-steel button panel whose floor numbers are "
+      + "WESTERN ARABIC NUMERALS, never Burmese. Fluorescent ceiling panel, "
       + "clean and bright, everything working. Empty of people for this plate. ⚠️ An ordinary "
       + "well-maintained lift — no flicker, no grime, no rust, no horror dressing." },
   { name: "ခလုတ်တန်း", en: "The button panel",
@@ -66,7 +67,9 @@ export const LOCS = [
       + "illuminated buttons in a single column. ⚠️ THE NUMBERING IS THE WHOLE POINT: the column "
       + "runs upward from B and G through the floors to 12, and 12 IS THE TOP BUTTON. There is no "
       + "13 and no space left for one. Below the column, an alarm button and a door-open symbol. "
-      + "The numerals are Burmese digits, embossed, unlit in this plate. Brushed metal, clean, "
+      + "⚠️ ALL FLOOR NUMBERS ARE WESTERN ARABIC NUMERALS — 7, 6, 5, 4, 3, 2, 1, B1, B2 … B13 — "
+      + "embossed, and unlit in this plate. No Burmese numerals anywhere on the panel. Brushed "
+      + "metal, clean, "
       + "ordinary, slightly worn around the most-used buttons." },
   { name: "စောင့်ခန်း", en: "The security room, basement level",
     prompt: "A small windowless security room in a condominium basement. A desk with a bank of six "
@@ -86,14 +89,14 @@ export const LOCS = [
 const CAM = {
   monitor: 'THE CAR ON THE MONITOR. The fixed security view of the lift interior — ceiling corner above the doors, wide lens, looking down and back across the car as in the master plate — presented as CCTV: slightly soft, mild wide-angle distortion, low contrast, a small burned-in timestamp in one corner, monochrome or heavily desaturated. ⚠️ This framing NEVER changes anywhere in the film. Reproduce it exactly.',
   screen: 'THE MONITOR ITSELF. Camera in the security room at seated eye height, framed on the monitor as a physical object — the bezel visible, the room reflected faintly in the glass, Ko Naing’s shoulder or the desk edge in frame.',
-  panel: 'THE BUTTON PANEL. Insert square on to the panel at close range, the column of buttons filling the frame. Reproduce this framing identically every time it recurs.',
+  panel: 'THE BUTTON PANEL. Insert square on to the panel at close range, the column of buttons filling the frame. ⚠️ ALL FLOOR NUMBERS ARE WESTERN ARABIC NUMERALS — 7, 6, 5, 4, 3, 2, 1, B1, B2 … B13 — never Burmese numerals. Reproduce this framing identically every time it recurs.',
   guard: 'IN THE SECURITY ROOM. Camera at seated eye height beside the desk, the bank of monitors as the main light source on his face.',
   guardwide: 'THE SECURITY ROOM WIDE. Camera at standing height by the door, the desk and the whole bank of monitors in frame.',
   face: 'CLOSE ON THE FACE. Camera at eye height, head-and-shoulders crop, natural light from whatever is really in the room.',
   lobby: 'IN THE LIFT LOBBY. Camera at standing height facing the lift doors.',
   car: 'INSIDE THE CAR, DIRECT. Camera at chest height inside the lift itself — NOT the security view. Used only where the story is physically in there.',
   insert: 'TIGHT INSERT. One subject filling the frame, shallow focus.',
-  floorlamp: 'THE FLOOR INDICATOR. Insert on the illuminated floor-number display above the lift doors, the numerals filling the frame.',
+  floorlamp: 'THE FLOOR INDICATOR. Insert on the illuminated floor-number display above the lift doors, the numerals filling the frame. ⚠️ WESTERN ARABIC NUMERALS on an ordinary segmented display, never Burmese.',
 };
 
 export const SCENES = [
@@ -138,7 +141,8 @@ export const SCENES = [
     g: "⚠️ ခလုတ်တန်းပုံစံ ဒုတိယအကြိမ် — **၁၃** မီးလင်းလာတယ်။ ဒီအဆောက်အဦမှာ ၁၃ ထပ် မရှိဘူး။",
     p: "OCCURRENCE 2 OF 4. The identical panel insert — and now there is a lit button ABOVE the 12, "
       + "in the place where the first occurrence showed bare metal. It is glowing exactly like a "
-      + "real button, numbered 13 in Burmese digits, and it looks as though it has always been "
+      + "real button, numbered 13 in WESTERN ARABIC NUMERALS like every other button on the panel, "
+      + "and it looks as though it has always been "
       + "there. Nothing else on the panel is lit.",
     u: ["ကိုနိုင် မျက်နှာပြင်ကို စိုက်ကြည့်နေတယ်။",
         "ခလုတ်တန်းမှာ— **၁၃** မီးလင်းလာတယ်။",
@@ -565,8 +569,10 @@ const STYLE = "Modern Yangon condominium, 16:9, contemporary photorealism. ORDIN
   + "security room, recessed downlights on the residential floors. Everything works. This is a "
   + "clean well-maintained building, NOT a haunted set — no flicker, no grime, no rust, no damp, "
   + "no fog or haze, no green or teal grade, no blood, no heavy vignette. One still instant, no "
-  + "montage or visible sound effects. No gore, no legible writing, floor signage, labels, logo "
-  + "or watermark.";
+  + "montage or visible sound effects. No gore, and no legible writing, signage, labels, logo "
+  + "or watermark — EXCEPT the three things the shots ask for by name: the Western floor "
+  + "numbers on the button panel and indicator, the burned-in timestamp on the CCTV, and the "
+  + "name plate at the end. Those must be readable.";
 
 /** Shots presented as security footage rather than as photography. */
 const CCTV = new Set(["monitor", "screen"]);
@@ -621,7 +627,9 @@ SCENES.forEach((s, i) => {
     + "still creased from new, reading glasses on a cord.");
 
   cont.push("The lift keeps the geometry of the master plate: mirrored back wall, steel side "
-    + "walls, button panel on the right beside the doors, camera in the ceiling corner.");
+    + "walls, button panel on the right beside the doors, camera in the ceiling corner. ⚠️ Every "
+    + "floor number in this film — on the panel and on the indicator — is a WESTERN ARABIC "
+    + "numeral, never a Burmese one, including where the panel is only incidentally in frame.");
 
   s.cont = cont.join(" ");
   s.style = STYLE;
