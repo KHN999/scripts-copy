@@ -446,12 +446,26 @@ export const SCENES = [
     u: ["“ကျွန်တော် အပြစ်ဝန်ခံမယ်။ အားလုံးကို ပြောမယ်။” “ဘယ်သူ့ကို ပြောမှာလဲ။”",
         "“ရဲကို။ မိသားစုကို။ အားလုံးကို။”"] },
 
-  { t: "She Pointed at the Clock", l: "ဆေးရုံအခန်း", k: "clock",
+  /**
+   * The clock hangs on the LIFT wall here, not back in the ward.
+   *
+   * This shot sits between two others that are inside the car, so sending it to
+   * the hospital room teleported both of them out and back inside one
+   * continuous scene. Moving the clock instead of the people is also the film's
+   * own grammar: at occurrence 4 the same clock stands at a roadside in the
+   * rain with "no wall, no building, no explanation". It is the one object that
+   * follows him down, and putting it in the lift makes that a pattern rather
+   * than a lapse.
+   */
+  { t: "She Pointed at the Clock", l: "ဓာတ်လှေကား", k: "clock",
     rev: "clock 2 of 4",
-    g: "⚠️ ရပ်နေတဲ့နာရီ ဒုတိယအကြိမ် — ည ၁၁ နာရီ ၄၇ မိနစ်။ ကားမတော်တဆဖြစ်ခဲ့တဲ့အချိန်။",
-    p: "OCCURRENCE 2 OF 4. The identical clock framing — same distance, same angle, same hands at "
-      + "eleven forty-seven — with a woman’s index finger entering the frame from one side and "
-      + "held just short of the glass. Nothing else has changed.",
+    g: "⚠️ ရပ်နေတဲ့နာရီ ဒုတိယအကြိမ် — ဒီတစ်ခါ **ဓာတ်လှေကားနံရံပေါ်မှာ**။ ည ၁၁ နာရီ ၄၇ မိနစ်။",
+    p: "OCCURRENCE 2 OF 4. The identical clock framing — same distance, same square-on angle, same "
+      + "hands at eleven forty-seven, same stopped second hand — with a woman’s index finger "
+      + "entering frame from one side and held just short of the glass. ⚠️ BUT IT IS HANGING ON "
+      + "THE BRUSHED STEEL WALL OF THE LIFT. It is the same clock that was on the ward wall, in a "
+      + "car that has no clock in it, and neither of them remarks on that. Steel either side of "
+      + "it, no plaster, no ward, no explanation.",
     u: ["မနွယ်နွယ်က ရပ်နေတဲ့နာရီကို လက်ညှိုးထိုးပြတယ်။",
         "ည ၁၁ နာရီ ၄၇ မိနစ်။ ကျွန်တော် ကားမတော်တဆဖြစ်ခဲ့တဲ့အချိန်။",
         "“ရှင် အခု ပြန်သွားလို့မရတော့ဘူး။” “ဘာလို့လဲ။”"] },
@@ -477,10 +491,12 @@ export const SCENES = [
   { t: "Time of Death", c: [[2, "bigstinger"]], l: "အရေးပေါ်ခန်း", k: "insert",
     rev: "clock 3 of 4",
     g: "⚠️ ရပ်နေတဲ့နာရီ တတိယအကြိမ် — စက်ပေါ်က မျဉ်း တန်းသွားတယ်။ “သေဆုံးချိန် ည ၁၁ နာရီ ၄၇ မိနစ်။”",
-    p: "OCCURRENCE 3 OF 4, TRANSPOSED. Insert on a patient monitor screen in the emergency bay, "
-      + "the trace running flat across it. ⚠️ Beside it, a wall clock in the same square-on "
-      + "framing as the other occurrences, reading eleven forty-seven — but THIS ONE IS RUNNING, "
-      + "second hand mid-sweep. It is the only difference between the two clocks in the film.",
+    p: "OCCURRENCE 3 OF 4, TRANSPOSED. ⚠️ STILL WHAT THE MIRROR IS SHOWING — he has not left the "
+      + "lift and neither has she; this is the same vision as the shot before, closer. Insert on a "
+      + "patient monitor screen in the emergency bay, the trace running flat across it. ⚠️ Beside "
+      + "it, a wall clock in the same square-on framing as the other occurrences, reading eleven "
+      + "forty-seven — but THIS ONE IS RUNNING, second hand mid-sweep. It is the only difference "
+      + "between the two clocks in the film.",
     u: ["စက်ပေါ်က နှလုံးခုန်မျဉ်းက တန်းသွားတယ်။",
         "ဆရာဝန်တစ်ယောက် နာရီကိုကြည့်ပြီး ပြောတယ်။ “သေဆုံးချိန် ည ၁၁ နာရီ ၄၇ မိနစ်။”",
         "ကျွန်တော် သေပြီးနေပြီ။"] },
