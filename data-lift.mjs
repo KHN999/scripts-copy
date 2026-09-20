@@ -52,16 +52,24 @@ export const CAST = [
 
 export const LOCS = [
   { name: "ဓာတ်လှေကားအတွင်း", en: "Inside the lift car — master geometry plate",
-    prompt: "THE MASTER GEOMETRY PLATE FOR THIS FILM. Most of the story happens inside this one "
-      + "lift car and is seen from one fixed camera, so establish both at once. The interior of an "
-      + "ordinary modern condominium lift, photographed from the CEILING CORNER above the doors, "
-      + "wide lens, looking down and back across the whole car — the standard security-camera "
-      + "position. FAR WALL of the car: a large mirror panel. SIDE WALLS: brushed stainless steel. "
-      + "FLOOR: polished grey stone tile. DOORS at the bottom of frame, closed. ON THE RIGHT-HAND "
-      + "WALL beside the doors: a vertical brushed-steel button panel whose floor numbers are "
-      + "WESTERN ARABIC NUMERALS, never Burmese. Fluorescent ceiling panel, "
-      + "clean and bright, everything working. Empty of people for this plate. ⚠️ An ordinary "
-      + "well-maintained lift — no flicker, no grime, no rust, no horror dressing." },
+    prompt: "⚠️ THIS PLATE IS THE SHOT. Twenty-two images in this film are this exact frame with "
+      + "people added, so build it as the security picture itself, not as a photograph of a lift. "
+      + "CAMERA: fixed in the ceiling corner at the BACK of the car, above head height, on the "
+      + "LEFT as you face the doors, looking FORWARD and DOWN the length of the car toward them. "
+      + "It never moves, zooms or re-angles. WHAT IS IN FRAME AND WHERE: the two DOORS fill the "
+      + "far end of the image, closed, dead centre. Immediately to the RIGHT of the doors, on the "
+      + "side wall, the BUTTON PANEL — one vertical brushed-steel strip running from about waist "
+      + "height to shoulder height. The LEFT and RIGHT side walls run away from the lens down "
+      + "either edge of frame, a handrail crossing each at waist height. The FLOOR fills the lower "
+      + "half. ⚠️ WHAT IS NOT IN FRAME: the rear wall and its mirror are BEHIND the camera and "
+      + "never appear — do not put a mirror, a reflection or a back wall anywhere in this image. "
+      + "MATERIALS: brushed stainless steel walls, polished grey stone floor tile, a flush "
+      + "fluorescent ceiling panel behind a yellowed diffuser. Clean, dull, slightly worn — a lift "
+      + "that works. TREATMENT: this is security footage. Soft focus, mild barrel distortion from "
+      + "the wide lens, flat low contrast, DESATURATED COLOUR — not monochrome, not black and "
+      + "white. A small burned-in timestamp in the upper right corner. Sensor grain in the "
+      + "shadows. No cinematic lighting, no vignette, no colour grade. Empty of people for this "
+      + "plate." },
   { name: "ခလုတ်တန်း", en: "The button panel",
     prompt: "A vertical stainless-steel lift button panel photographed square on and close. Round "
       + "illuminated buttons in a single column. ⚠️ THE NUMBERING IS THE WHOLE POINT: the column "
@@ -87,8 +95,8 @@ export const LOCS = [
 
 /** Composition vocabulary. One per shot, stated first and alone. */
 const CAM = {
-  monitor: 'THE CAR ON THE MONITOR. The fixed security view of the lift interior — ceiling corner above the doors, wide lens, looking down and back across the car as in the master plate — presented as CCTV: slightly soft, mild wide-angle distortion, low contrast, a small burned-in timestamp in one corner, monochrome or heavily desaturated. ⚠️ This framing NEVER changes anywhere in the film. Reproduce it exactly.',
-  screen: 'THE MONITOR ITSELF. Camera in the security room at seated eye height, framed on the monitor as a physical object — the bezel visible, the room reflected faintly in the glass, Ko Naing’s shoulder or the desk edge in frame.',
+  monitor: '⚠️ THE CAR ON THE MONITOR — IDENTICAL TO THE LIFT REFERENCE PLATE IN EVERY RESPECT. Same fixed camera in the rear ceiling corner looking forward at the doors, same lens, same height, same angle, same exposure, same desaturated colour, same timestamp position. Do not re-imagine the lift: the plate is the frame, and this shot only adds the people named below. ⚠️ TREAT EVERY MONITOR SHOT IN THIS FILM AS A STILL LIFTED FROM ONE UNBROKEN RECORDING BY ONE BOLTED-DOWN CAMERA. Nothing about the car, the walls, the floor, the panel position or the picture quality changes between them — only who is standing in it.',
+  screen: 'THE MONITOR ITSELF. Camera in the security room at seated eye height, framed on the monitor as a physical object — the bezel visible, the room reflected faintly in the glass, the desk edge along the bottom of frame.',
   panel: 'THE BUTTON PANEL. Insert square on to the panel at close range, the column of buttons filling the frame. ⚠️ ALL FLOOR NUMBERS ARE WESTERN ARABIC NUMERALS — 7, 6, 5, 4, 3, 2, 1, B1, B2 … B13 — never Burmese numerals. Reproduce this framing identically every time it recurs.',
   guard: 'IN THE SECURITY ROOM. Camera at seated eye height beside the desk, the bank of monitors as the main light source on his face.',
   guardwide: 'THE SECURITY ROOM WIDE. Camera at standing height by the door, the desk and the whole bank of monitors in frame.',
@@ -170,8 +178,8 @@ export const SCENES = [
   { t: "Nobody Was In It", c: [[1, "stinger"]], l: "ဓာတ်လှေကားအတွင်း", k: "monitor",
     g: "ခဏကြာတော့ ပြန်မြင်ရတယ်။ ဓာတ်လှေကားထဲမှာ ဘယ်သူမှ မရှိတော့ဘူး။",
     p: "The identical CCTV framing restored and clean. The car is completely empty — doors closed, "
-      + "floor bare, mirror showing nothing but the far wall. It is the same picture as the "
-      + "master plate, and that is what is wrong with it.",
+      + "floor bare, nobody anywhere in it. ⚠️ It is pixel for pixel the reference plate, and that "
+      + "is precisely what is wrong with it.",
     u: ["ခဏကြာတော့— ပြန်မြင်ရတယ်။",
         "ဓာတ်လှေကားထဲမှာ— ဘယ်သူမှ မရှိတော့ဘူး။"] },
 
@@ -253,7 +261,7 @@ export const SCENES = [
     g: "မိန်းကလေး ထွက်သွားတယ်။ လူငယ်က မထွက်ဘူး။",
     p: "The identical CCTV framing. The woman is halfway through the open doors, already partly "
       + "swallowed by the black beyond them, unhurried. The young man is pressed into the far "
-      + "corner of the car with both hands flat against the mirror behind him.",
+      + "corner the camera — with both hands flat against the wall behind him.",
     u: ["မိန်းကလေး ထွက်သွားတယ်။",
         "လူငယ်က မထွက်ဘူး။"] },
 
@@ -526,9 +534,9 @@ export const SCENES = [
   { t: "Someone Behind Her", l: "ဓာတ်လှေကားအတွင်း", k: "monitor", w: ["မိန်းကလေး"], rev: "monitor 3 of 3",
     g: "⚠️ မော်နီတာပုံစံ တတိယအကြိမ် — မိန်းကလေး၊ သူ့နောက်မှာ ညစောင့်ဝတ်စုံနဲ့ လူတစ်ယောက် ခေါင်းငုံ့ထားတယ်။",
     p: "OCCURRENCE 3 OF 3. The identical CCTV framing. The woman stands in her usual place — and "
-      + "BEHIND HER, deeper into the car near the mirrored wall, a second figure in a security "
-      + "uniform is standing with his head lowered so the face is not visible. Same pale blue "
-      + "shirt, same navy trousers.",
+      + "BEHIND HER, nearer the camera at the back of the car, a second figure in a security "
+      + "uniform is standing with his head lowered so the face is not visible. ⚠️ He is closer to "
+      + "the lens than she is. Same pale blue shirt, same navy trousers.",
     u: ["စောင့်ကြည့်မျက်နှာပြင်မှာ— အဖြူရောင်ဝတ်စုံနဲ့ မိန်းကလေး ဓာတ်လှေကားထဲ ပေါ်လာတယ်။",
         "သူ့နောက်မှာ— လူတစ်ယောက် ရပ်နေတယ်။ ညစောင့်ဝတ်စုံ။ ခေါင်းငုံ့ထားတယ်။"] },
 
@@ -583,11 +591,9 @@ const CCTV = new Set(["monitor", "screen"]);
  * carried by the deserted building, the night lighting beyond the lift doors
  * and the timestamp — never by a view of the sky, because there isn't one.
  */
-const TIME_NIGHT = "TIME: NIGHT, around two in the morning. The building is asleep: no daylight "
-  + "anywhere, nobody else about, lobbies and lift lit only by their own fluorescents, the "
-  + "security room dark except for the monitors. ⚠️ There are no windows in the lift or the "
-  + "basement, so the hour is carried by the emptiness of the building and by the timestamp on "
-  + "the footage — never by a view of the sky.";
+const TIME_NIGHT = "TIME: NIGHT, around two in the morning. No daylight anywhere and nobody "
+  + "else about. The lift and the basement have no windows, so the hour is carried by the "
+  + "emptiness of the building and the timestamp — never by a view of the sky.";
 
 const TIME_DAY = {
   "They Reviewed the Tape": "TIME: DAYTIME, working hours. The security room’s ceiling tube is "
@@ -606,11 +612,15 @@ SCENES.forEach((s, i) => {
 
   const cont = ["Continuity: ordinary living people photographed straight."];
 
-  // The whole film turns on the audience believing a security camera. The moment
-  // the footage looks authored, the two shots where it lies stop mattering.
-  if (CCTV.has(s.k)) cont.push("⚠️ THIS IS SECURITY FOOTAGE: fixed, unlovely, correctly exposed for "
-    + "the lit car, with a burned-in timestamp and no camera movement of any kind. Never a "
-    + "cinematic angle, never a push in, never a rack focus.");
+  /**
+   * The security-footage rule used to be repeated here as well as in the camera
+   * line. Two statements of one instruction, six hundred characters apart, is
+   * how a prompt ends up arguing with itself — and the tail is the half that
+   * gets skimmed. The camera line owns it now; this only covers the case the
+   * camera line cannot see, which is the monitor filmed as an object.
+   */
+  if (s.k === "screen") cont.push("⚠️ What is ON the monitor is security footage of the same car "
+    + "from the same fixed ceiling camera as the lift reference plate.");
 
   if (who.includes("မိန်းကလေး")) cont.push("The woman is an ordinary young woman in a plain white "
     + "dress — healthy skin, clear white sclera, natural dark brown irises, neat dry hair, no "
@@ -626,10 +636,24 @@ SCENES.forEach((s, i) => {
   if (who.includes("ညစောင့်အသစ်")) cont.push("The new guard in the same uniform as Ko Naing’s, "
     + "still creased from new, reading glasses on a cord.");
 
-  cont.push("The lift keeps the geometry of the master plate: mirrored back wall, steel side "
-    + "walls, button panel on the right beside the doors, camera in the ceiling corner. ⚠️ Every "
-    + "floor number in this film — on the panel and on the indicator — is a WESTERN ARABIC "
-    + "numeral, never a Burmese one, including where the panel is only incidentally in frame.");
+  /**
+   * The plate is now the security frame itself, which means it deliberately
+   * excludes the rear wall — it is behind that camera. So "identical to the
+   * plate" is the right instruction for shots taken from that camera and the
+   * WRONG one for the handful shot from inside the car, one of which needs the
+   * mirrored back wall as its whole subject. Same room, two different truths
+   * about what is visible.
+   */
+  cont.push(s.k === "monitor"
+    ? "⚠️ THE FRAME IS IDENTICAL TO THE LIFT REFERENCE PLATE IN EVERY DETAIL — same car, same "
+      + "camera, same wall materials, same floor, same panel in the same place beside the doors, "
+      + "same picture quality. Change nothing about the room; this shot only changes who is "
+      + "standing in it."
+    : "⚠️ SAME CAR AS THE REFERENCE PLATE — same steel walls, same grey stone floor, same panel "
+      + "beside the doors — but photographed from inside rather than from the ceiling camera, so "
+      + "the mirrored rear wall the plate leaves out may appear here.");
+  cont.push("⚠️ Every floor number in this film, on the panel and on the indicator, is a WESTERN "
+    + "ARABIC numeral — 7, 6, 5, 4, 3, 2, 1, B1, B2, B13 — and never a Burmese one.");
 
   s.cont = cont.join(" ");
   s.style = STYLE;
