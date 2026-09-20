@@ -33,7 +33,7 @@ export const CAST = [
       + "black hair worn loose past her shoulders. A plain white long-sleeved dress to mid-calf "
       + "and flat white shoes. ⚠️ SHE IS NOT A VISIBLE GHOST AND MUST NOT BE MADE TO LOOK LIKE "
       + "ONE: ordinary healthy skin tone, clear white sclera, natural dark brown irises with "
-      + "normal black pupils, dry neat hair, no wounds, nothing transparent, no floating, no "
+      + "normal black pupils, dry neat hair, smooth unmarked skin, nothing transparent, no floating, no "
       + "obscured face. She is noticeably pretty and completely unremarkable. The only thing "
       + "wrong with her is her smile, and it is only shown once, at the end.",
     pose: "The subject stands facing the camera square on, full figure in frame, arms relaxed at "
@@ -462,7 +462,7 @@ export const SCENES = [
     g: "⚠️ ဒီတစ်ပုံမှာပဲ အပြုံးကို ပြရမယ် — မျက်နှာက လှတယ်၊ သာမန်ပဲ။ ဒါပေမယ့် အပြုံးက မသဘာဝကျဘူး။",
     p: "Close on the woman’s face in the lift’s own bright light, seen plainly for the first and "
       + "only time. ⚠️ SHE IS ENTIRELY ORDINARY AND GENUINELY PRETTY — healthy skin, clear eyes, "
-      + "neat dry hair, no wounds, nothing distorted. THE ONLY THING WRONG IS THE SMILE: it is a "
+      + "neat dry hair, smooth unmarked skin, nothing distorted. THE ONLY THING WRONG IS THE SMILE: it is a "
       + "fraction too wide and held a fraction too long, and it does not reach her eyes, which "
       + "stay flat and attentive. Nothing else in the image is exaggerated.",
     u: ["ဒီတစ်ခါ— သူ့မျက်နှာကို ရှင်းရှင်းမြင်ရတယ်။",
@@ -576,8 +576,10 @@ const STYLE = "Modern Yangon condominium, 16:9, contemporary photorealism. ORDIN
   + "ONLY: fluorescent ceiling panels in the lift and lobbies, a bank of monitors in the dark "
   + "security room, recessed downlights on the residential floors. Everything works. This is a "
   + "clean well-maintained building, NOT a haunted set — no flicker, no grime, no rust, no damp, "
-  + "no fog or haze, no green or teal grade, no blood, no heavy vignette. One still instant, no "
-  + "montage or visible sound effects. No gore, and no legible writing, signage, labels, logo "
+  + "no fog or haze, no green or teal grade, no heavy vignette. Every surface is clean and "
+  + "undamaged. One still instant, no "
+  + "montage or visible sound effects. Everyone in frame is physically unharmed and every "
+  + "surface is intact. No legible writing, signage, labels, logo "
   + "or watermark — EXCEPT the three things the shots ask for by name: the Western floor "
   + "numbers on the button panel and indicator, the burned-in timestamp on the CCTV, and the "
   + "name plate at the end. Those must be readable.";
@@ -624,7 +626,7 @@ SCENES.forEach((s, i) => {
 
   if (who.includes("မိန်းကလေး")) cont.push("The woman is an ordinary young woman in a plain white "
     + "dress — healthy skin, clear white sclera, natural dark brown irises, neat dry hair, no "
-    + "wounds, nothing transparent, no floating, face never obscured."
+    + "smooth unmarked skin, nothing transparent, no floating, face never obscured."
     + (s.t === "The Smile Was Wrong" ? "" : " Her expression is neutral and pleasant; the smile "
       + "belongs to one shot only and must not appear here."));
   if (who.includes("ကိုနိုင်")) cont.push("Ko Naing in the pale blue security shirt, navy trousers "
