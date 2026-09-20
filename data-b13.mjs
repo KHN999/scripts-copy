@@ -68,7 +68,7 @@ export const LOCS = [
       + "THE RIGHT-HAND WALL beside the doors: a tall vertical button panel. Above the doors: a "
       + "small illuminated floor indicator. ⚠️ Everything works and everything is ordinary — a "
       + "working hospital lift, clean, dull, slightly worn. No flicker, no rust, no grime, no "
-      + "horror dressing. Empty of people." },
+      + "horror dressing. ⚠️ THERE IS NO CLOCK IN THIS CAR. Empty of people." },
   { name: "ခလုတ်တန်း", en: "The lift button panel",
     prompt: "A tall stainless-steel lift button panel photographed square on and close, round "
       + "illuminated buttons in a single column. ⚠️ THE NUMBERING IS THE POINT AND IT IS WRONG: "
@@ -116,6 +116,7 @@ const CAM = {
   doors: 'THE DOORS OPENING ON A MEMORY. Camera at chest height inside the lift against the back wall, square on to the open doors, framed so the doorway itself is a hard rectangle in the middle of the image and what lies beyond it fills that rectangle. Reproduce this framing identically every time it recurs.',
   panel: 'THE BUTTON PANEL. Insert square on to the panel at close range, the column of buttons filling the frame. Reproduce this framing identically every time it recurs.',
   indicator: 'THE FLOOR INDICATOR. Insert on the small illuminated display above the lift doors, the characters filling the frame.',
+  watch: 'THE STOPPED WRISTWATCH. Insert square on to a man’s wristwatch on his wrist, the small round face filling the frame, the hands at eleven forty-seven.',
   clock: 'THE STOPPED CLOCK. Insert square on to a plain round institutional clock face filling the frame, the hands at eleven forty-seven. Reproduce this framing identically every time it recurs.',
   ye: 'CLOSE ON YE MIN. Camera at his eye height, head-and-shoulders crop.',
   nurse: 'CLOSE ON MA NWE NWE. Camera at her eye height, head-and-shoulders crop.',
@@ -151,7 +152,7 @@ export const SCENES = [
     p: "OCCURRENCE 1 OF 4 OF THE CLOCK. A plain round institutional wall clock filling the frame, "
       + "hands at eleven forty-seven, second hand stopped mid-sweep. ⚠️ Everything about this "
       + "framing is fixed here — same distance, same square-on angle, same clock — and must be "
-      + "identical at its three returns. Nothing about it looks broken.",
+      + "identical at the two later shots that show a wall clock. Nothing about it looks broken.",
     u: ["နံရံက နာရီတောင် ရပ်နေတယ်။"] },
 
   { t: "The Nurse Beside the Bed", c: [[1, "bigstinger"]], l: "ဆေးရုံအခန်း", k: "nurse", w: ["မနွယ်နွယ်"],
@@ -447,25 +448,24 @@ export const SCENES = [
         "“ရဲကို။ မိသားစုကို။ အားလုံးကို။”"] },
 
   /**
-   * The clock hangs on the LIFT wall here, not back in the ward.
+   * SHE POINTS AT THE WATCH ON HIS WRIST. There is no clock in the lift.
    *
-   * This shot sits between two others that are inside the car, so sending it to
-   * the hospital room teleported both of them out and back inside one
-   * continuous scene. Moving the clock instead of the people is also the film's
-   * own grammar: at occurrence 4 the same clock stands at a roadside in the
-   * rain with "no wall, no building, no explanation". It is the one object that
-   * follows him down, and putting it in the lift makes that a pattern rather
-   * than a lapse.
+   * နာရီ means both clock and watch. The script writes "နံရံက နာရီ" — the WALL
+   * clock — at the ward, and plain "ရပ်နေတဲ့နာရီ" here. It never asked for a
+   * clock in the car, and the car has never had one: not in the master plate,
+   * not in the button-panel plate, not in any image already generated from this
+   * board. He has worn a watch since his cast plate. His own watch stopping at
+   * the moment he did is also a harder image than a clock on a wall.
    */
-  { t: "She Pointed at the Clock", l: "ဓာတ်လှေကား", k: "clock",
-    rev: "clock 2 of 4",
-    g: "⚠️ ရပ်နေတဲ့နာရီ ဒုတိယအကြိမ် — ဒီတစ်ခါ **ဓာတ်လှေကားနံရံပေါ်မှာ**။ ည ၁၁ နာရီ ၄၇ မိနစ်။",
-    p: "OCCURRENCE 2 OF 4. The identical clock framing — same distance, same square-on angle, same "
-      + "hands at eleven forty-seven, same stopped second hand — with a woman’s index finger "
-      + "entering frame from one side and held just short of the glass. ⚠️ BUT IT IS HANGING ON "
-      + "THE BRUSHED STEEL WALL OF THE LIFT. It is the same clock that was on the ward wall, in a "
-      + "car that has no clock in it, and neither of them remarks on that. Steel either side of "
-      + "it, no plaster, no ward, no explanation.",
+  { t: "She Pointed at the Clock", l: "ဓာတ်လှေကား", k: "watch", w: ["ကိုရဲမင်း"],
+    rev: "11:47, 2 of 4",
+    g: "⚠️ ၁၁:၄၇ ဒုတိယအကြိမ် — ဒီတစ်ခါ **သူ့ကိုယ်ပိုင်လက်ပတ်နာရီ**။ ဓာတ်လှေကားထဲမှာ နာရီ မရှိဘူး။",
+    p: "OCCURRENCE 2 OF 4 OF THE 11:47 MOTIF — ON HIS OWN WRIST, NOT ON ANY WALL. Ko Ye Min’s "
+      + "left forearm held out in the lift with his shirt cuff turned back, and Ma Nwe Nwe’s index "
+      + "finger entering frame from one side and held just short of the watch glass. ⚠️ THE WATCH "
+      + "FACE READS ELEVEN FORTY-SEVEN AND THE SECOND HAND IS STOPPED — the same reading as the "
+      + "ward clock, on a different object. ⚠️ THERE IS NO CLOCK IN THIS FRAME AND NONE IN THE "
+      + "LIFT: brushed steel behind the wrist and nothing else on it.",
     u: ["မနွယ်နွယ်က ရပ်နေတဲ့နာရီကို လက်ညှိုးထိုးပြတယ်။",
         "ည ၁၁ နာရီ ၄၇ မိနစ်။ ကျွန်တော် ကားမတော်တဆဖြစ်ခဲ့တဲ့အချိန်။",
         "“ရှင် အခု ပြန်သွားလို့မရတော့ဘူး။” “ဘာလို့လဲ။”"] },
@@ -495,8 +495,8 @@ export const SCENES = [
       + "lift and neither has she; this is the same vision as the shot before, closer. Insert on a "
       + "patient monitor screen in the emergency bay, the trace running flat across it. ⚠️ Beside "
       + "it, a wall clock in the same square-on framing as the other occurrences, reading eleven "
-      + "forty-seven — but THIS ONE IS RUNNING, second hand mid-sweep. It is the only difference "
-      + "between the two clocks in the film.",
+      + "forty-seven — but THIS ONE IS RUNNING, second hand mid-sweep. Every other timepiece in the "
+      + "film is stopped at this reading; this is the one that is still going.",
     u: ["စက်ပေါ်က နှလုံးခုန်မျဉ်းက တန်းသွားတယ်။",
         "ဆရာဝန်တစ်ယောက် နာရီကိုကြည့်ပြီး ပြောတယ်။ “သေဆုံးချိန် ည ၁၁ နာရီ ၄၇ မိနစ်။”",
         "ကျွန်တော် သေပြီးနေပြီ။"] },
@@ -663,7 +663,8 @@ const STYLE = "Contemporary Myanmar, 16:9, 35mm grain, photorealism. ORDINARY LI
   + "on Ma Nwe Nwe’s face, and no legible writing except where a shot calls for it.";
 
 const TIME_NIGHT = "TIME: NIGHT. Every location in this film is at night, and the hospital and the "
-  + "lift have no windows and no clue to the hour except a clock that has stopped. Ordinary "
+  + "lift have no windows. ⚠️ THERE IS NO CLOCK ANYWHERE INSIDE THE LIFT — no wall clock, no "
+  + "digital readout of the time, nothing in the car that shows an hour. Ordinary "
   + "night: no moonlight, no sky, nothing atmospheric.";
 
 /** Shots where a character has to be readable as unharmed. */
