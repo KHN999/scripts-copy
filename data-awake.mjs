@@ -80,15 +80,44 @@ export const LOCS = [
 ];
 
 export const STYLE =
-  "A night coach journey through rural Myanmar, present day, in heavy intermittent rain. Almost all "
-  + "of it happens inside one dark minibus. Cinematic photorealism, 35mm grain, shallow depth of "
-  + "field, 16:9, a cold desaturated palette lit by one dim aisle strip light, dashboard glow and "
-  + "headlight spill. ⚠️ THE DRIVER MUST READ AS KIND AND ORDINARY until the film says otherwise — "
+  "Rural Myanmar, present day. Cinematic photorealism, 35mm grain, shallow depth of field, 16:9, a "
+  + "cold desaturated palette. ⚠️ THE SETTING OF EACH SHOT IS THE ONE STATED AT THE TOP OF THIS "
+  + "PROMPT and the story moves between several — take the place and the light from there, not from "
+  + "any other shot. ⚠️ THE DRIVER MUST READ AS KIND AND ORDINARY until the film says otherwise — "
   + "never lit or framed as a threat in the early shots. ⚠️ THE WOMAN OUTSIDE IS NOT FRIGHTENING: "
   + "wet, muddy and WORRIED, never angry, never decayed, never glowing, and SEEN ONLY THROUGH GLASS "
-  + "OR THROUGH RAIN. She never touches anyone. ⚠️ Nothing violent is shown — no blood, no body, no "
-  + "wound anywhere in the film. ⚠️ No text of any kind except where a shot explicitly names it; "
-  + "phone screens are shape and glow, never readable words.";
+  + "OR THROUGH RAIN. She never touches anyone. ⚠️ Everyone in frame is physically whole and "
+  + "unmarked, and every surface is intact; the collision itself is never depicted. ⚠️ No text of "
+  + "any kind except where a shot explicitly names it; phone screens are shape and glow, never "
+  + "readable words.";
+
+/**
+ * The place, stated FIRST and alone, one clause per location.
+ *
+ * Only the two bus settings carry night, rain and vehicle light — those are
+ * uniform across the journey. The roadside deliberately states no hour: those
+ * twenty-six shots run from warm evening boarding through night rain to grey
+ * daylight, and each one already fixes its own light in the shot body.
+ */
+export const SET = {
+  "ကားထဲ":
+    "SETTING: INSIDE THE NIGHT MINIBUS. The cabin of an old fourteen-seat long-distance minibus on "
+    + "a rural road at night in heavy intermittent rain, lit only by one dim aisle strip light, "
+    + "dashboard glow, and headlight spill through the windscreen.",
+  "မှန်ပြင်":
+    "SETTING: AT A MINIBUS WINDOW, FROM INSIDE THE CABIN. The same dark minibus at night, framed on "
+    + "one rain-covered passenger window with the glass held between the camera and everything "
+    + "beyond it. Dim aisle strip light inside, rain-scattered headlight spill outside.",
+  "လမ်းဘေး":
+    "SETTING: OUTDOORS AT THE ROADSIDE. A wet rural road and its verge, open sky overhead. The hour "
+    + "and the light are whatever this particular shot states below.",
+  "ဆေးရုံ":
+    "SETTING: INSIDE A HOSPITAL WARD, DAYS AFTER THE JOURNEY. ⚠️ THIS IS A ROOM IN A BUILDING, NOT "
+    + "A VEHICLE. An ordinary Myanmar hospital ward: pale painted plaster walls, a tiled floor, "
+    + "metal-framed beds with white sheets, a plastic visitor’s chair, and a tall window with plain "
+    + "flat DAYLIGHT coming through it as the only light in the room. The weather outside is dry "
+    + "and the sky is bright. Calm, clean and entirely un-frightening.",
+};
 
 export const SCENES = [
   { t: "He Turned the Lights Off", l: "ကားထဲ", w: ["ယာဉ်မောင်း"],
@@ -777,7 +806,7 @@ export const SCENES = [
         "ရက်အနည်းငယ်အကြာမှာ လမ်းဘေးရေနုတ်မြောင်းနားမှာ တွေ့ခဲ့ကြတယ်။ ပြန်မလာနိုင်တော့ဘူး။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "No Bag, No Phone", l: null,
+  { t: "No Bag, No Phone", set: "SETTING: INSIDE A POLICE STATION, IN FLAT INDOOR DAYLIGHT.", l: null,
     g: "အိတ်နဲ့ ဖုန်းလည်း မရှိဘူး။ ဘယ်ကားစီးခဲ့သလဲ မသိခဲ့ကြဘူး။",
     p: "A police evidence table in flat light with a few recovered items laid out on it, deliberately "
       + "sparse — and a visible empty space where a bag and a phone would be.",
@@ -785,7 +814,7 @@ export const SCENES = [
         "ဘယ်ကားစီးခဲ့သလဲ မသိခဲ့ကြဘူး။"],
     c: [[1, "stinger"]] },
 
-  { t: "Don't Put That Woman in Front of Me", l: null, w: ["ယာဉ်မောင်း"],
+  { t: "Don't Put That Woman in Front of Me", set: "SETTING: AN INTERVIEW ROOM INSIDE A POLICE STATION, IN FLAT INDOOR DAYLIGHT.", l: null, w: ["ယာဉ်မောင်း"],
     g: "သူ့ကို ရွှေရည်အမေရဲ့ ဓာတ်ပုံ ပြကြတယ်။ သူ မကြည့်ဘူး။ မျက်လုံးတွေ တင်းတင်းမှိတ်ထားတယ်။",
     p: "A man at an interview table with his face turned hard away and both eyes screwed shut, a "
       + "photograph face-up on the table in front of him that he will not look at.",
@@ -804,8 +833,9 @@ export const SCENES = [
 
   { t: "She Really Came, Didn't She", l: "ဆေးရုံ", w: ["ရွှေရည်"],
     g: "“အစ်ကို… အမေ တကယ်လာခဲ့တာနော်။” ကျွန်တော် ခေါင်းညိတ်တယ်။",
-    p: "A young woman in a hospital bed asking a question she needs a particular answer to, tears "
-      + "starting.",
+    p: "Shwe Yee sitting up in the hospital bed in flat daylight, asking a question she needs a "
+      + "particular answer to, tears starting. Pale ward wall behind her, metal bed frame, white "
+      + "sheet, the bright window off to one side.",
     u: ["အကြာကြီး စကားမပြောဖြစ်ကြဘူး။ နောက်တော့ သူ မေးတယ်။",
         "“အစ်ကို… အမေ တကယ်လာခဲ့တာနော်။”",
         "ကျွန်တော် ခေါင်းညိတ်တယ်။ သူ မျက်ရည်ကျလာတယ်။"],
@@ -828,37 +858,47 @@ export const SCENES = [
 
   { t: "She Always Asked for the Plate Number", l: "ဆေးရုံ", w: ["ရွှေရည်"],
     g: "“အမေက ကျွန်မ တစ်ယောက်တည်း ခရီးသွားရင် အမြဲဖုန်းဆက်တယ်။ ကားနံပါတ်မေးတယ်။”",
-    p: "Close on a young woman's face remembering something small and ordinary that has become "
-      + "unbearable.",
+    p: "Close on Shwe Yee’s face in the hospital bed, remembering something small and ordinary that "
+      + "has become unbearable. Pale ward wall and flat daylight from the window behind her, the "
+      + "white bed sheet at the bottom of frame.",
     u: ["“အမေက ကျွန်မ တစ်ယောက်တည်း ခရီးသွားရင် အမြဲဖုန်းဆက်တယ်။ ကားနံပါတ်မေးတယ်။ ဘယ်နေရာရောက်ပြီလဲ မေးတယ်။”",
         "သူ နှုတ်ခမ်းကို ကိုက်လိုက်တယ်။"] },
 
   { t: "I Used to Tell Her to Go to Sleep", l: "ဆေးရုံ", w: ["ရွှေရည်"],
     g: "“ကျွန်မက စိတ်ရှုပ်တတ်တယ်။ အမေ့ကို အိပ်တော့လို့ပဲ ပြောနေတတ်တာ။”",
-    p: "A young woman looking down at a phone in her lap, unable to look up.",
+    p: "Shwe Yee sitting up in the hospital bed in daylight, looking down at a phone in her lap, "
+      + "unable to look up. White sheet across her legs, pale ward wall and the bright window "
+      + "behind her, the plastic visitor’s chair at the edge of frame.",
     u: ["“ကျွန်မက စိတ်ရှုပ်တတ်တယ်။ အမေ့ကို အိပ်တော့လို့ပဲ ပြောနေတတ်တာ။”",
         "ကျွန်တော် ဘာမှမပြောနိုင်ဘူး။"],
     c: [[1, "bigstinger"]] },
 
   { t: "Hold Your Bag Tightly", l: "ဆေးရုံ",
     g: "သူ့ဖုန်းထဲမှာ အမေပို့ထားတဲ့ စာဟောင်းတွေ ရှိသေးတယ်။ တစ်ကြောင်းကို သူ ပြတယ်။",
-    p: "⚠️ TEXT PERMITTED. A phone screen showing one old received message reading exactly \"ကားပေါ်မှာ "
-      + "အိပ်ပျော်သွားရင် အိတ်ကို သေချာဖက်ထားနော်။\" and nothing else. That sentence is the only text.",
+    p: "⚠️ TEXT PERMITTED. A phone held in two hands above a white hospital bed sheet in flat "
+      + "daylight, the screen filling most of the frame and showing one old received message "
+      + "reading exactly \"ကားပေါ်မှာ အိပ်ပျော်သွားရင် အိတ်ကို သေချာဖက်ထားနော်။\" and nothing else. That "
+      + "sentence is the only text. ⚠️ The message TALKS about a bus; the picture is of a phone in "
+      + "a hospital ward — pale wall and bright window soft behind the hands.",
     u: ["သူ့ဖုန်းထဲမှာ အမေပို့ထားတဲ့ စာဟောင်းတွေ ရှိသေးတယ်။ တစ်ကြောင်းကို သူ ပြတယ်။",
         "ကားပေါ်မှာ အိပ်ပျော်သွားရင် အိတ်ကို သေချာဖက်ထားနော်။"],
     c: [[1, "bigstinger"]] },
 
   { t: "Call Me When You Arrive", l: "ဆေးရုံ",
     g: "နောက်တစ်ကြောင်း — ရောက်ရင် အမေ့ကို ဖုန်းဆက်။ အမေ စောင့်နေမယ်။",
-    p: "⚠️ TEXT PERMITTED. The same phone screen scrolled to one more message reading exactly "
-      + "\"ရောက်ရင် အမေ့ကို ဖုန်းဆက်။ အမေ စောင့်နေမယ်။\" That sentence is the only text.",
+    p: "⚠️ TEXT PERMITTED. The same phone in the same two hands over the same white hospital bed "
+      + "sheet in flat daylight, scrolled to one more message reading exactly \"ရောက်ရင် အမေ့ကို "
+      + "ဖုန်းဆက်။ အမေ စောင့်နေမယ်။\" That sentence is the only text. Identical framing to the shot "
+      + "before — pale ward wall and bright window soft behind the hands.",
     u: ["နောက်တစ်ကြောင်း။",
         "ရောက်ရင် အမေ့ကို ဖုန်းဆက်။ အမေ စောင့်နေမယ်။"],
     c: [[1, "bigstinger"]] },
 
   { t: "What Did She Say Outside", l: "ဆေးရုံ", w: ["ရွှေရည်", "မင်းခန့်"],
     g: "ရွှေရည်က အဲဒီစာကို အကြာကြီး ကြည့်နေတယ်။ ပြီးတော့ မေးတယ် — “အမေက အပြင်ကနေ ဘာပြောခဲ့တာလဲ၊ အစ်ကို။”",
-    p: "A young woman looking up from a phone to the man beside her bed and asking him something.",
+    p: "Shwe Yee in the hospital bed looking up from the phone to Min Khant in the plastic chair "
+      + "beside her and asking him something. Pale ward wall, metal bed frame, flat daylight from "
+      + "the window.",
     u: ["ရွှေရည်က အဲဒီစာကို အကြာကြီး ကြည့်နေတယ်။",
         "ပြီးတော့ ကျွန်တော့်ကို မေးတယ်။",
         "“အမေက အပြင်ကနေ ဘာပြောခဲ့တာလဲ၊ အစ်ကို။”"] },
@@ -896,7 +936,7 @@ export const SCENES = [
         "ပြတင်းပေါက်တစ်ချပ် အပြင်ကနေ သူ့သမီးကို နှိုးဖို့ ကြိုးစားနေခဲ့တယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "The House She Never Reached", l: null, w: ["ရွှေရည်"],
+  { t: "The House She Never Reached", set: "SETTING: OUTDOORS ON A QUIET VILLAGE LANE AT DUSK, DRY WEATHER, OPEN SKY.", l: null, w: ["ရွှေရည်"],
     g: "နောက်ဆုံးပုံ — သူ ကိုယ်တိုင် ပြန်မရောက်နိုင်ခဲ့တဲ့အိမ်ကို ဒီတစ်ခါ သမီးကိုတော့ ပြန်ရောက်စေချင်လို့။",
     p: "Final composition: a small ordinary Myanmar house at dusk with its light on and its door "
       + "open, and a young woman walking up to it alone from the road. Nobody is following her and "

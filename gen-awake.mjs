@@ -5,7 +5,7 @@
  */
 import { writeFile } from "node:fs/promises";
 import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
-import { SCENES, CAST, LOCS, STYLE } from "./data-awake.mjs";
+import { SCENES, CAST, LOCS, STYLE, SET } from "./data-awake.mjs";
 import { MM_REF } from "./mm-awake.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
@@ -36,6 +36,19 @@ const ACT = {
   97: "XX · The danger was driving",
 };
 
+/**
+ * Every shot must state where it is, and state it before anything else.
+ *
+ * Ten shots move to a hospital ward days after the journey and three more sit
+ * in a police station and a village lane. A shot that names no place inherits
+ * whatever the rest of the prompt implies, which on this board was a minibus.
+ */
+const setting = (s) => {
+  const v = s.set ?? SET[s.l];
+  if (!v) throw new Error(`shot "${s.t}" has neither a known location nor a set: override`);
+  return v;
+};
+
 const db = new Database("/Users/puraidointern/video-lab/data/lab.db");
 const rows = db.prepare(
   "SELECT idx, units, image_prompt FROM scenes WHERE project_id=? ORDER BY idx").all(PROJECT);
@@ -51,9 +64,16 @@ const shots = rows.map((r) => {
   return {
     id: String(n), title: s.t, act,
     who: s.w ?? [], where: s.l ?? null,
+    /**
+     * The place goes FIRST, before the shot body. The head of a prompt is the
+     * part the model reliably reads; the tail is where instructions go to be
+     * outvoted. "Almost all of it happens inside one dark minibus" used to sit
+     * in the STYLE tail on all hundred shots and kept putting the daylit ward
+     * back inside the bus.
+     */
     prompt: `Shot ${n} of ${rows.length} — "${s.t}". A new and distinct frame in an ongoing `
       + `sequence; do not repeat, vary or re-render any previous image.`
-      + `\n\n${s.p}\n\n${STYLE}`,
+      + `\n\n${setting(s)}\n\n${s.p}\n\n${STYLE}`,
     lines: JSON.parse(r.units).map((u) => u.text),
     mm: s.g || "",
   };
