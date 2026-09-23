@@ -3,14 +3,21 @@
  *
  * Board for theydontlookme.txt.
  *
- *   1. ⚠️ THE DAMAGED FACE IS NEVER SHOWN. It is the engine of the whole story
- *      and it must stay off screen. Thun Nadi wears her LIVING face — unmarked,
- *      beautiful, exactly her reference plate — in every single frame of this
- *      film. What the other characters see appears twice only, both times as a
- *      small dark unresolved shape on a screen, too little and too low-contrast
- *      to read as anatomy. The script names split lips and a deformed cheekbone;
- *      no prompt on this board ever does. The horror is carried by REACTIONS —
- *      people turning away, a child running, a mother who will not look up.
+ *   1. ⚠️ THE DEAD FACE IS SEEN TWICE. THE INJURY IS NEVER SEEN AT ALL.
+ *      Thun Nadi wears her LIVING face in every frame except two — the phone
+ *      camera at 78 and the black screen at 97 — and in those two the face on
+ *      the screen is plainly that of a dead woman: skin drained to flat grey,
+ *      hair soaked, eyes open and fixed, mouth slack. That is the payoff of the
+ *      film and it has to be LEGIBLE. The first pass told those two shots the
+ *      face "must stay unreadable" with "no detail, no anatomy"; the generator
+ *      obeyed and returned a curtain of hair, which is a missing shot rather
+ *      than restraint. Gory and dead are different problems — gory is wounds
+ *      and blood, which we never draw; dead is colour, focus and muscle tone,
+ *      which photographs fine. The ROAD DAMAGE stays unseen by turning one half
+ *      of the face away into shadow, so the viewer finishes it. The script
+ *      names split lips and a deformed cheekbone; no prompt here ever does.
+ *      Everywhere else the horror is carried by REACTIONS — people turning
+ *      away, a child running, a mother who will not look up.
  *   2. THE MIRROR IS THE MOTIF. Six times she looks into the same bathroom
  *      mirror in the same framing and the same beautiful face looks back. The
  *      seventh time the reflection stops copying her, smiles, turns, and walks
@@ -872,15 +879,20 @@ export const SCENES = [
 
   { t: "The Mirror and the Lens", c: [[2, "bigstinger"]], l: "ရေချိုးခန်း", k: "screen",
     rev: "the only look at the other face",
-    g: "⚠️ မှန်ထဲမှာတော့ လှပတဲ့ ကျွန်မ။ ဖုန်း Camera ထဲမှာတော့—",
-    p: "⚠️ THE ONLY GLIMPSE OF THE OTHER FACE IN THE ENTIRE FILM, AND IT MUST STAY UNREADABLE. "
-      + "The phone screen held small in the centre of a wide dim frame, tilted well off "
-      + "perpendicular so the image on it is skewed, dim and low contrast. On that screen: a "
-      + "human shape with long dark wet hair fallen forward and hanging flat across where a face "
-      + "would be, so that no features at all are resolvable. ⚠️ NO DETAIL, NO ANATOMY, NO "
-      + "COLOUR, NO CLOSE-UP — it is a dark silhouette behind hair, the size of a thumbnail, and "
-      + "it is deliberately impossible to make out. The lit bathroom and the mirror are soft in "
-      + "the background.",
+    g: "⚠️ မှန်ထဲမှာ လှပတဲ့ ကျွန်မ။ ဖုန်းကင်မရာထဲမှာတော့ — **သေနေတဲ့မျက်နှာ**။ "
+      + "⚠️ Screen ပေါ်က မျက်နှာကို **သေချာမြင်ရရမယ်** (ဒဏ်ရာတော့ မပြရဘူး — တစ်ခြမ်းက အရိပ်ထဲ)။",
+    p: "⚠️ THE PAYOFF OF THE WHOLE FILM. THE FACE ON THE SCREEN MUST BE CLEARLY VISIBLE AND "
+      + "CLEARLY DEAD. Insert on the phone screen held square on and close so the screen fills "
+      + "most of the frame, its image sharp and properly exposed. On that screen, photographed "
+      + "head-on in the lit bathroom: ⚠️ A WOMAN WHO IS PLAINLY DEAD. Her skin is a flat drained "
+      + "grey-white with no warmth left in it. Her long black hair is soaked through and "
+      + "plastered down over her skull and one cheek, pushed back clear of the rest of her face. "
+      + "Her eyes are open, dull and fixed on nothing, focused past the camera rather than at "
+      + "it. Her mouth hangs slightly open and every muscle in her face is slack — no "
+      + "expression, no tension, nobody home. ⚠️ THE LIT HALF OF HER FACE IS SMOOTH AND WHOLE; "
+      + "THE OTHER HALF IS TURNED AWAY INTO DEEP SHADOW and stays unreadable there. Behind her "
+      + "in the same screen image the bathroom mirror is visible, and the reflection in it is "
+      + "warm, living and beautiful — both faces in one frame.",
     u: ["မှန်ထဲမှာတော့ လှပတဲ့ ကျွန်မ။",
         "ဖုန်း Camera ထဲမှာတော့ ဆံပင်တွေ စိုပြီး မျက်နှာပေါ် ကပ်နေတယ်။",
         "လမ်းပေါ်မှာ သေခဲ့တဲ့ညက အလောင်းရဲ့မျက်နှာအတိုင်း။"] },
@@ -1071,12 +1083,15 @@ export const SCENES = [
 
   { t: "In the Black Screen", c: [[1, "bigstinger"]], l: "သွန်းနဒီအခန်း", k: "screen",
     rev: "the last glimpse",
-    g: "⚠️ ဒါပေမယ့် ဖုန်းအဟောင်းရဲ့ Screen အမည်းထဲမှာ မျက်နှာပျက်နေတဲ့ မိန်းမတစ်ယောက်ရဲ့အရိပ် ပေါ်နေတယ်။ အဲဒါ ကျွန်မပဲ။",
-    p: "⚠️ THE SECOND AND LAST GLIMPSE, AND IT IS EVEN LESS THAN THE FIRST. Insert on a dead "
-      + "black phone screen lying on the floor in near darkness. Reflected dimly in that black "
-      + "glass: the outline of a seated woman with long hair hanging forward over where a face "
-      + "would be. ⚠️ IT IS A REFLECTION IN A DARK SURFACE — a silhouette and nothing more. No "
-      + "features, no detail, no anatomy, barely brighter than the glass itself.",
+    g: "⚠️ ဖုန်းအဟောင်းရဲ့ Screen အမည်းထဲမှာ **သေနေတဲ့မျက်နှာ** ပြန်ပေါ်နေတယ်။ အဲဒါ ကျွန်မပဲ။ "
+      + "⚠️ ၇၈ ကအတိုင်းပဲ — မျက်နှာကို မြင်ရရမယ်၊ ဒါပေမယ့် မှိန်မှိန်။",
+    p: "⚠️ THE SAME DEAD FACE AS SHOT 78, RETURNING ONE LAST TIME AND DIMMER. Insert on an unlit "
+      + "black phone screen lying on the floor in near darkness. Held in that black glass is a "
+      + "reflection of the woman sitting above it: ⚠️ THE SAME DEAD FACE — flat grey skin, soaked "
+      + "hair plastered down and pushed back clear of the features, eyes open and fixed, mouth "
+      + "slack. It is a reflection in dark glass, so it is faint and low in contrast and the "
+      + "colour is almost gone — but ⚠️ THE FACE IS LEGIBLE. One side of it falls away into the "
+      + "black of the screen and stays unreadable there.",
     u: ["ဒါပေမယ့် ဖုန်းအဟောင်းရဲ့ Screen အမည်းထဲမှာ—",
         "မျက်နှာပျက်နေတဲ့ မိန်းမတစ်ယောက်ရဲ့အရိပ် ပေါ်နေတယ်။",
         "အဲဒါ ကျွန်မပဲ။"] },
@@ -1130,6 +1145,25 @@ const STYLE =
   + "behaviour is strange. One still instant. Surfaces are blank of writing except where a shot "
   + "names it.";
 
+/**
+ * The two shots the universal rule cannot apply to.
+ *
+ * CONT tells all ninety-nine shots that she keeps her living face in natural
+ * healthy colour. On 78 and 97 that sits in the same prompt as an instruction
+ * to show a drained grey dead face, and a prompt that contradicts itself gets
+ * resolved by whichever half the model likes better — which is exactly how the
+ * first version came back as a curtain of hair. These two get their own block.
+ */
+const SCREEN_FACE = new Set(["The Mirror and the Lens", "In the Black Screen"]);
+
+const CONT_SCREEN =
+  "Continuity: ⚠️ THIS SHOT IS THE EXCEPTION TO THE FILM'S RULE. Everywhere else Thun Nadi wears "
+  + "her living face; here the face carried on the screen is the dead one and it must read that "
+  + "way — drained grey skin, soaked flattened hair, open fixed eyes, a slack mouth. The living "
+  + "face still appears in this frame wherever a mirror or a reflection shows it. Her hair length, "
+  + "her features and the thin gold chain at her throat stay the same on both faces so they are "
+  + "recognisably one woman. No wounds are drawn on either of them.";
+
 const TIME = {
   day: "TIME: DAYTIME. Flat ordinary daylight, dry weather, bright sky outside.",
   evening: "TIME: EARLY EVENING. Warm indoor lamp light, the last of the daylight outside.",
@@ -1180,7 +1214,8 @@ SCENES.forEach((s) => {
    * not a safeguard — it is noise competing with the sentence that describes
    * the actual frame.
    */
-  s.cont = CONT + (s.l === "လမ်းမ" ? ROAD_CLAUSE : "");
+  s.cont = SCREEN_FACE.has(s.t) ? CONT_SCREEN
+    : CONT + (s.l === "လမ်းမ" ? ROAD_CLAUSE : "");
   s.style = STYLE;
 });
 
