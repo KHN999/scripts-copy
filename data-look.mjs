@@ -40,8 +40,8 @@ export const CAST = [
       + "IS UNHARMED AND BEAUTIFUL IN EVERY SHOT OF THIS FILM — clear even skin, both eyes open "
       + "and matching, nothing marked, nothing wet, nothing changed, at every point in the story "
       + "including the very last shot. ⚠️ SHE IS NEVER A GHOST: fully solid and opaque, feet on "
-      + "the floor, ordinary shadow, natural colour, no pallor and no glow. She looks like a "
-      + "healthy young woman having an ordinary day." },
+      + "the floor, ordinary shadow, healthy warm skin tone lit by whatever light the room has. "
+      + "She looks like a healthy young woman having an ordinary day." },
   { name: "အမေ", en: "The mother — about fifty",
     prompt: "A Burmese woman of about fifty, a soft lined kind face, medium-brown skin, greying "
       + "black hair pinned back in a low bun. A plain house htamein and a simple blouse, small "
@@ -113,9 +113,9 @@ export const LOCS = [
   { name: "လမ်းမ", en: "The road at night in rain",
     prompt: "An ordinary Yangon side road at night in heavy rain: wet black tarmac throwing back "
       + "streetlight, a kerb, a row of shuttered shopfronts, telephone wires overhead. Rain "
-      + "falling hard and visible. ⚠️ THE ROAD IS COMPLETELY EMPTY — no people, no vehicles, no "
-      + "objects on the tarmac, nothing has happened here. Ordinary wet night, no fog, no glow. "
-      + "Empty for this plate." },
+      + "falling hard and visible. ⚠️ THE ROAD IS COMPLETELY EMPTY — bare clean tarmac from kerb "
+      + "to kerb, the whole surface unobstructed. Clear night air, ordinary streetlight. Empty "
+      + "for this plate." },
   { name: "လမ်းထိပ်", en: "The street outside the house, daytime",
     prompt: "An ordinary Yangon residential lane in flat daylight: low houses behind short "
       + "concrete walls, a few parked motorbikes, a tea shop awning, potted plants, cables "
@@ -576,11 +576,11 @@ export const SCENES = [
   { t: "My Hand Went Through It", c: [[2, "bigstinger"]], l: "ထမင်းစားခန်း", k: "insert",
     w: ["သွန်းနဒီ"],
     g: "⚠️ ဖန်ခွက်ကို ကျွန်မလက်နဲ့ မထိခဲ့ဘူး။ လက်က ဖန်ခွက်ကို ဖြတ်သွားတာ။",
-    p: "⚠️ THE ONE IMPOSSIBLE IMAGE IN THE FILM SO FAR, and it is small and quiet. Insert on Thun "
-      + "Nadi's hand resting in the same space as the fallen glass on the table: the glass is "
-      + "fully visible and fully in focus THROUGH her fingers, its edges continuing unbroken "
-      + "across the back of her hand. Her hand is otherwise completely solid and normal. No glow, "
-      + "no blur, no effect — the two objects simply occupy the same place.",
+    p: "A CLEAN DOUBLE EXPOSURE, small and quiet. Insert on the fallen drinking glass lying on the "
+      + "wooden table with Thun Nadi's hand closed in the same place. The glass is sharp, solid "
+      + "and fully opaque. Her hand is solid at the wrist and fades to about half opacity where "
+      + "it overlaps the glass, so the glass reads clearly on top of it. Warm bulb light, "
+      + "ordinary table, nothing else in frame.",
     u: ["ကျွန်မကတော့ တစ်ခုခု သတိထားမိသွားတယ်။",
         "ဖန်ခွက်ကို ကျွန်မလက်နဲ့ မထိခဲ့ဘူး။",
         "လက်က ဖန်ခွက်ကို ဖြတ်သွားတာ။"] },
@@ -610,17 +610,17 @@ export const SCENES = [
   { t: "My Phone Would Not Turn On", l: "သွန်းနဒီအခန်း", k: "screen", w: ["သွန်းနဒီ"],
     g: "အဲဒီညကစပြီး ကျွန်မ စုံစမ်းတော့တယ်။ ကျွန်မဖုန်းကို ဖွင့်လို့မရဘူး။ Screen က အမြဲအမည်းပဲ။",
     p: "Insert square on to a phone held in Thun Nadi's two hands, her thumb pressing the side "
-      + "button. ⚠️ THE SCREEN IS COMPLETELY BLACK AND DEAD — no icons, no clock, no glow, no "
-      + "text of any kind. Ordinary bedroom light on the back of her hands.",
+      + "button. ⚠️ THE SCREEN IS AN UNLIT BLACK SLAB OF GLASS — a dark inert rectangle showing "
+      + "only a dim reflection of the ceiling. Ordinary bedroom light on the back of her hands.",
     u: ["အဲဒီညကစပြီး ကျွန်မ စုံစမ်းတော့တယ်။ ထူးဆန်းတာတွေ အများကြီး တွေ့လာတယ်။",
         "ကျွန်မဖုန်းကို ဖွင့်လို့မရဘူး။ Screen က အမြဲအမည်းပဲ။"] },
 
   { t: "Sometimes My Hand Passed Through", l: "သွန်းနဒီအခန်း", k: "insert", w: ["သွန်းနဒီ"],
     g: "TV ကြည့်ချင်ရင် Remote ကို တစ်ခါတလေ ကိုင်လို့ရတယ်။ တစ်ခါတလေ လက်က ဖြတ်သွားတယ်။",
-    p: "Insert on a television remote lying on a low table with Thun Nadi's hand closed around "
-      + "the place where it is — and ⚠️ THE REMOTE IS FULLY VISIBLE THROUGH HER FINGERS, in "
-      + "focus, its buttons legible across the inside of her hand. Her hand is solid and normal "
-      + "in every other respect.",
+    p: "THE SAME DOUBLE EXPOSURE AS THE GLASS. Insert on a television remote on a low table with "
+      + "Thun Nadi's hand closed in the same place. The remote is sharp and fully opaque; her "
+      + "hand is solid at the wrist and about half opacity where it overlaps, so the remote reads "
+      + "clearly on top of it. Ordinary daylight.",
     u: ["TV ကြည့်ချင်ရင် Remote ကို တစ်ခါတလေ ကိုင်လို့ရတယ်။",
         "တစ်ခါတလေ လက်က ဖြတ်သွားတယ်။"] },
 
@@ -665,10 +665,11 @@ export const SCENES = [
   { t: "This Time I Did Not Knock", c: [[2, "bigstinger"]], l: "ဧကရီတိုက်ခန်း",
     k: "flatdoor", w: ["သွန်းနဒီ"],
     g: "⚠️ ဒီတစ်ခါ တံခါးမခေါက်တော့ဘူး။ တံခါးကို ဖြတ်ပြီး အထဲဝင်လို့ရသွားတယ်။",
-    p: "Thun Nadi standing in the apartment corridor with her forearm and shoulder ⚠️ ALREADY "
-      + "INSIDE THE CLOSED FLAT DOOR — the painted door surface continuing unbroken across her "
-      + "arm, the rest of her still out in the corridor, her own face turned to look at it in "
-      + "plain astonishment. The door is whole and shut. No glow, no effect, no damage.",
+    p: "THE SAME DOUBLE EXPOSURE, NOW AT BODY SCALE. Thun Nadi standing square to a closed "
+      + "painted flat door in the corridor, her near arm and shoulder overlapping it. The door is "
+      + "sharp, whole and fully opaque; her arm and shoulder fade to about half opacity where "
+      + "they overlap it, so the door reads clearly on top of them. The rest of her is solid. Her "
+      + "face is turned down to her own arm in plain astonishment. Flat corridor daylight.",
     u: ["နောက်နေ့မှာ ကျွန်မ ပန်းဧကရီဆီ ပြန်သွားတယ်။ ဒီတစ်ခါ တံခါးမခေါက်တော့ဘူး။",
         "ထူးဆန်းစွာပဲ တံခါးကို ဖြတ်ပြီး အထဲဝင်လို့ရသွားတယ်။",
         "ကျွန်မကိုယ်တိုင်တောင် လန့်သွားတယ်။"] },
@@ -922,10 +923,11 @@ export const SCENES = [
   { t: "My Hands Went Through Her", c: [[2, "bigstinger"]], l: "ရေချိုးခန်း", k: "insert",
     w: ["သွန်းနဒီ", "အမေ"],
     g: "⚠️ အမေ့ကို ဖက်ဖို့ ကြိုးစားလိုက်တယ်။ ကျွန်မလက်တွေ အမေ့ကိုယ်ကို ဖြတ်သွားတယ်။",
-    p: "⚠️ THE SADDEST IMAGE IN THE FILM. Insert on Thun Nadi's arms closed around her mother's "
-      + "shoulders from behind — and ⚠️ THE MOTHER'S SHOULDER AND BLOUSE ARE FULLY VISIBLE AND "
-      + "IN FOCUS THROUGH HER DAUGHTER'S FOREARMS, the fabric continuing unbroken across them. "
-      + "The mother has not felt anything and has not moved. No glow, no blur, no effect.",
+    p: "THE SAME DOUBLE EXPOSURE, AND THE SADDEST USE OF IT. Insert from behind on the mother's "
+      + "shoulders and back with Thun Nadi's arms closed around them. The mother, her blouse and "
+      + "her hair are sharp and fully opaque; her daughter's forearms fade to about half opacity "
+      + "where they overlap her, so the blouse reads clearly on top of them. The mother sits "
+      + "still and has not reacted. Warm bulb light.",
     u: ["ကျွန်မလည်း ငိုချင်တယ်။ ဒါပေမယ့် မျက်ရည်မထွက်ဘူး။",
         "အမေ့ကို ဖက်ဖို့ ကြိုးစားလိုက်တယ်။",
         "ကျွန်မလက်တွေ အမေ့ကိုယ်ကို ဖြတ်သွားတယ်။"] },
@@ -993,12 +995,12 @@ export const SCENES = [
   { t: "The Reflection Stopped Copying Me", c: [[1, "bigstinger"]], l: "ရေချိုးခန်း",
     k: "mirror", w: ["သွန်းနဒီ"], rev: "mirror 7 of 7 — the one that moves",
     g: "⚠️ မှန် သတ္တမအကြိမ် — ကျွန်မလှုပ်သလို လိုက်မလှုပ်တော့ဘူး။ သူက ကျွန်မကိုပဲ ကြည့်နေတယ်။ ဖြည်းဖြည်း ပြုံးပြတယ်။",
-    p: "⚠️ THE ONLY SHOT IN THE FILM WHERE SOMETHING MOVES BY ITSELF. OCCURRENCE 7 OF 7, the same "
-      + "framing exactly. Thun Nadi has raised her hand to touch the glass — but ⚠️ THE "
-      + "REFLECTION HAS NOT RAISED ITS HAND. It stands squarely, arms down, looking directly out "
-      + "of the mirror at her, and it is SMILING gently and kindly. The real Thun Nadi's face is "
-      + "open with shock. ⚠️ The reflection is beautiful, warm and not sinister; everything about "
-      + "the glass and the light is still ordinary.",
+    p: "OCCURRENCE 7 OF 7, the same framing exactly, and the two halves of the image show "
+      + "DIFFERENT POSES OF THE SAME WOMAN. ⚠️ IN THE ROOM: Thun Nadi stands at the basin with "
+      + "one hand lifted towards the glass and her mouth open in shock. ⚠️ IN THE MIRROR: the "
+      + "same woman stands squarely with both arms down at her sides, chin level, looking "
+      + "straight out of the glass, smiling gently and warmly. Ordinary bathroom, ordinary warm "
+      + "bulb, clean undamaged glass.",
     u: ["ကျွန်မ မှန်ကို လက်နဲ့ထိလိုက်တယ်။ “ငါ ဒီလိုပဲ မှတ်ထားချင်တယ်…”",
         "ဒါပေမယ့် မှန်ထဲက သွန်းနဒီက ကျွန်မလှုပ်သလို လိုက်မလှုပ်တော့ဘူး။",
         "သူက ကျွန်မကိုပဲ ကြည့်နေတယ်။ ပြီးတော့ ဖြည်းဖြည်း ပြုံးပြတယ်။"] },
@@ -1006,11 +1008,11 @@ export const SCENES = [
   { t: "She Walked Away Into the Dark", c: [[2, "bigstinger"]], l: "ရေချိုးခန်း", k: "mirror",
     w: ["သွန်းနဒီ"],
     g: "⚠️ မှန်ထဲက လှပတဲ့ သွန်းနဒီက တဖြည်းဖြည်း နောက်ကို လှည့်တယ်။ အမှောင်ထဲကို လျှောက်သွားတယ်။",
-    p: "The same mirror framing again. ⚠️ INSIDE THE GLASS the beautiful reflection has TURNED "
-      + "AROUND and is walking away from us into a soft darkness that has opened behind it, seen "
-      + "from behind, her long hair swinging, already small. ⚠️ OUTSIDE the glass Thun Nadi is "
-      + "still standing at the basin with her hand out. The bathroom around her is unchanged and "
-      + "normally lit. No glow, no portal, no effect — just depth where there should be tiles.",
+    p: "The same mirror framing, and again the two halves differ. ⚠️ IN THE MIRROR: the same "
+      + "woman seen FROM BEHIND, walking away down a long dim corridor that recedes into "
+      + "darkness, her long black hair down her back, already small and far off. ⚠️ IN THE ROOM: "
+      + "Thun Nadi stands at the basin facing the glass with her hand still out. Ordinary "
+      + "bathroom, ordinary warm bulb.",
     u: ["ကျွန်မ နောက်ဆုတ်လိုက်တယ်။",
         "မှန်ထဲက လှပတဲ့ သွန်းနဒီက တဖြည်းဖြည်း နောက်ကို လှည့်တယ်။",
         "အမှောင်ထဲကို လျှောက်သွားတယ်။ ပြီးတော့ ပျောက်သွားတယ်။"] },
@@ -1018,10 +1020,10 @@ export const SCENES = [
   { t: "I Can No Longer See My Own Face", l: "ရေချိုးခန်း",
     k: "mirror", w: ["သွန်းနဒီ"],
     g: "⚠️ မှန်ထဲမှာ ဘာမှမကျန်တော့ဘူး။ ကျွန်မ ကိုယ့်မျက်နှာကို မမြင်ရတော့ဘူး။",
-    p: "The same mirror framing one last time. Thun Nadi stands directly in front of the glass — "
-      + "and ⚠️ THE MIRROR REFLECTS ONLY THE EMPTY BATHROOM BEHIND HER: the tiles, the doorway, "
-      + "the bulb, accurately and ordinarily. The place where her reflection should be is simply "
-      + "more room. She is solid and fully present outside the glass.",
+    p: "The same mirror framing one last time. ⚠️ THE MIRROR SHOWS AN EMPTY ROOM: pale blue wall "
+      + "tiles, the open doorway and the bare bulb, reflected accurately and ordinarily, with "
+      + "nobody in it. Thun Nadi stands solid and fully lit in front of the glass with her back "
+      + "to camera. Ordinary bathroom, clean undamaged mirror.",
     u: ["မှန်ထဲမှာ ဘာမှမကျန်တော့ဘူး။",
         "ကျွန်မ ကိုယ့်မျက်နှာကို မမြင်ရတော့ဘူး။",
         "အဲဒီအချိန်မှာပဲ ကျွန်မ နားလည်လိုက်တယ်။ အသက်ရှင်တုန်းက သွန်းနဒီ တကယ်မရှိတော့ဘူး။"] },
@@ -1111,29 +1113,27 @@ export const SCENES = [
  * refused outright.
  */
 const CONT =
-  "Continuity: ⚠️ THUN NADI'S FACE IS ALWAYS HER OWN LIVING FACE — smooth even fair skin, both "
-  + "eyes open and matching, the long black hair, the thin gold chain at her throat — in every "
-  + "shot of this film without exception, including the last. She is fully solid and opaque, "
-  + "stands on the floor, casts an ordinary shadow and has natural colour: no pallor, no "
-  + "transparency, no floating, no glow, no cold cast. ⚠️ Everyone in this film is physically "
-  + "whole and unmarked and every surface is intact; the collision is never depicted and nobody "
-  + "is ever shown lying on the road. ⚠️ The other face exists only as a small dark unresolved "
-  + "shape on a screen in the two shots that say so.";
+  "Continuity: Thun Nadi keeps her own living face throughout — smooth fair skin, both eyes open, "
+  + "long black hair, a thin gold chain at her throat. She is solid and opaque, stands on the "
+  + "floor and casts an ordinary shadow, in natural healthy colour. Everyone in frame is whole "
+  + "and unharmed.";
+
+/** Only the six road shots need the road kept bare. */
+const ROAD_CLAUSE =
+  " The tarmac is bare and clean from edge to edge and the only things in shot are the ones "
+  + "named above.";
 
 const STYLE =
-  "Contemporary Yangon, present day, 16:9, 35mm grain, photorealism. ORDINARY LIGHT ONLY: shop "
-  + "spotlights, a kitchen bulb, daylight through a curtain, a streetlight in rain, the pale wash "
-  + "of a screen. Every location is a working, lived-in, ordinary place. ⚠️ NOT A HORROR SET — no "
-  + "green or teal grade, no fog or haze, no smoke, no glow, no decay, no heavy vignette, no rays "
-  + "of light, no dutch angles. The world looks completely normal and only the people's behaviour "
-  + "is strange. One still instant, no montage or visible sound effects. ⚠️ No legible writing, "
-  + "signage, labels, logos or numerals anywhere except in the two shots that explicitly permit "
-  + "text.";
+  "Contemporary Yangon, present day. Photorealism, 16:9, 35mm grain, level camera, natural "
+  + "depth of field. Clean neutral colour and plain available light. Every location is a working, "
+  + "lived-in place that looks completely normal — the world is ordinary and only the people's "
+  + "behaviour is strange. One still instant. Surfaces are blank of writing except where a shot "
+  + "names it.";
 
 const TIME = {
   day: "TIME: DAYTIME. Flat ordinary daylight, dry weather, bright sky outside.",
   evening: "TIME: EARLY EVENING. Warm indoor lamp light, the last of the daylight outside.",
-  night: "TIME: NIGHT INDOORS. One ordinary warm bulb, the windows dark. No moonlight, nothing atmospheric.",
+  night: "TIME: NIGHT INDOORS. One ordinary warm bulb is the whole of the light; the windows are flat black.",
   rain: "TIME: NIGHT, HEAVY RAIN. Wet black tarmac throwing back streetlight, rain falling hard and visible.",
 };
 
@@ -1171,7 +1171,16 @@ SCENES.forEach((s) => {
     : AT.night.has(s.t) ? TIME.night
     : AT.evening.has(s.t) ? TIME.evening
     : TIME.day;
-  s.cont = CONT;
+  /**
+   * The road rule rides on the six road shots and nowhere else.
+   *
+   * It used to sit in the universal block, so every shot in a cosmetics shop
+   * and every shot in a bathroom also carried an instruction about what must
+   * not be lying on a road. Boilerplate irrelevant to nine tenths of a board is
+   * not a safeguard — it is noise competing with the sentence that describes
+   * the actual frame.
+   */
+  s.cont = CONT + (s.l === "လမ်းမ" ? ROAD_CLAUSE : "");
   s.style = STYLE;
 });
 
