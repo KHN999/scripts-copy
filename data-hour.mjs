@@ -147,6 +147,7 @@ const CAM = {
   inside: 'FROM INSIDE THE COFFIN. Camera lying on its back on the lining where Ne Lin’s head is, looking straight up, so the frame holds the ceiling, the bare bulb, the rim of the coffin at the edges, and whatever leans in over the opening. ⚠️ Reproduce this framing identically every time it recurs.',
   thread: 'THE RED THREAD. Tight insert filling the frame with the thread and whatever it is tied to or running across. ⚠️ Reproduce this framing identically every time it recurs.',
   clock: 'THE WALL CLOCK. Insert square on to a plain round wall clock, the face filling the frame. ⚠️ Reproduce this framing identically every time it recurs.',
+  rim: 'OVER THE COFFIN RIM. Camera low at the head end of the near coffin, barely above the level of its wooden edge, so ⚠️ NE LIN’S FACE LIES FLAT IN THE NEAR FOREGROUND along the bottom of frame and the length of the room runs away beyond him, past the rim and out into the space between the two boxes. Roughly what he can see when he rolls his head.',
   two: 'THE TWO COFFINS. Camera at chest height at the foot of the two trestled coffins, both in frame side by side as in the master plate.',
   table: 'THE TABLE. Camera looking down at a table top, the surface filling the frame.',
   ne: 'CLOSE ON NE LIN, ON HIS FEET. Camera at his eye height, head-and-shoulders crop.',
@@ -476,13 +477,15 @@ export const SCENES = [
         "ကျွန်တော့်ဘေးမှာ လူတစ်ယောက် လဲလျောင်းပြီး ပြောနေသလို။",
         "ဦးတင်မောင်ရဲ့ ငိုသံ ကြားလာတယ်။ “အေး… အဖေ ဒီမှာရှိတယ်။”"] },
 
-  { t: "There Was No Filming", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "wide",
-    w: ["ဦးတင်မောင်"],
+  { t: "There Was No Filming", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "rim",
+    w: ["ဦးတင်မောင်", "နေလင်း"],
     g: "⚠️ ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။ အခန်းထဲမှာ သူတစ်ယောက်ပဲ ရပ်နေတယ်။ ရိုက်ကူးရေးလုပ်နေတဲ့ပုံ မရှိဘူး။",
-    p: "Wide on the whole back room. ⚠️ THERE IS NO CREW AND NO EQUIPMENT — no lights, no boom, "
-      + "no cables, no chairs, nobody behind the camera. One old man stands alone in the gap "
-      + "between two coffins with both hands over his mouth, crying. The tripod camera points at "
-      + "nothing. The bulb and the wall clock are the only other things in the room.",
+    p: "Ne Lin’s face lies flat along the bottom of frame with his eyes open, and past the rim "
+      + "the room opens out behind him. ⚠️ THE ROOM HOLDS EXACTLY WHAT THE MASTER PLATE HOLDS AND "
+      + "NOTHING ELSE: the two coffins on their trestles, the bare bulb, the wall clock, the "
+      + "table of envelopes, the tripod standing by itself facing nobody, bare plaster and bare "
+      + "concrete. ⚠️ ONE OLD MAN IS THE ONLY PERSON ON HIS FEET IN IT, standing in the gap "
+      + "between the two boxes with both hands over his mouth, crying. Every surface is empty.",
     u: ["ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။",
         "အခန်းထဲမှာ သူတစ်ယောက်ပဲ ရပ်နေတယ်။ ရိုက်ကူးရေးလုပ်နေတဲ့ပုံ မရှိဘူး။",
         "ကင်မရာနောက်မှာလည်း မရှိဘူး။"] },
@@ -498,9 +501,11 @@ export const SCENES = [
   { t: "I Never Recorded That Line", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "neflat",
     w: ["နေလင်း"],
     g: "⚠️ အဲဒီစကားကို ဘေးကလူက ကျွန်တော့်အသံနဲ့ ပြန်ပြောတယ် — “ဦး… ခဏရပ်ဦး။” ဒီစကားကို အသံသွင်းမပို့ထားဘူး။ အခုမှ ပြောလိုက်တာ။",
-    p: "Close on Ne Lin, ⚠️ AND THIS IS THE FRAME WHERE HE UNDERSTANDS — the face going rigid, the "
-      + "eyes widening and locking, all the confusion resolving at once into pure fear. He has "
-      + "stopped straining and gone completely still. Bulb light from above.",
+    p: "Looking straight down at Ne Lin lying flat in the coffin, ⚠️ AND THIS IS THE FRAME WHERE "
+      + "HE UNDERSTANDS — the face going rigid, the eyes widening and locking, all the confusion "
+      + "resolving at once into pure fear. ⚠️ HE HAS STOPPED STRAINING AND GONE COMPLETELY STILL, "
+      + "his head square on the lining now rather than rolled aside. Bulb light falling on him "
+      + "from above and behind camera.",
     u: ["ကျွန်တော် တောင့်သွားတယ်။",
         "ဒီစကားကို အသံသွင်းမပို့ထားဘူး။ အခုမှ ပြောလိုက်တာ။",
         "ဘေးက အသံက ဆက်လာတယ်။ “ကျွန်တော် အသက်ရှူမဝဘူး။”"] },
@@ -519,11 +524,14 @@ export const SCENES = [
   { t: "One Single Thread", c: [[3, "bigstinger"]], l: "နောက်ခန်း", k: "thread",
     w: ["သား"], rev: "thread 3 of 10",
     g: "⚠️ ချည်နီ တတိယအကြိမ် — အသားဖြူဖျော့နေတဲ့လက်။ လက်ကောက်ဝတ်မှာ ချည်နီတစ်ချောင်း။ ကျွန်တော့်လက်ကောက်ဝတ်ကနေ ထွက်သွားတဲ့ တစ်ချောင်းတည်းသောချည်။",
-    p: "OCCURRENCE 3 OF 10, AND THE ONE THAT EXPLAINS THE FILM. The same tight framing, pulled "
-      + "just wide enough to hold both ends at once: ⚠️ ONE CONTINUOUS RED THREAD running from a "
-      + "warm-skinned wrist at one edge of frame, across the gap, to a ⚠️ FLAT GREY-WHITE WRIST "
-      + "with darkened nails and a soaked cuff at the other edge. One thread, two wrists, nothing "
-      + "else in shot.",
+    p: "OCCURRENCE 3 OF 10, AND THE ONE THAT EXPLAINS THE FILM. ⚠️ THE WIDEST OF THE THREAD "
+      + "INSERTS — pulled back just far enough to hold both ends at once, and the only one in the "
+      + "series that is not tight. In the near half of frame: ⚠️ A FLAT GREY-WHITE HAND WITH "
+      + "DARKENED NAILS AND A SOAKED CUFF, risen and closed hard over the wooden rim of the far "
+      + "coffin, the red thread knotted at its wrist. From there ⚠️ ONE CONTINUOUS RED THREAD runs "
+      + "across the dark gap between the two boxes, over the rim of the near one, and down to a "
+      + "warm-skinned wrist lying flat at the far edge of frame. ⚠️ ONE THREAD, TWO WRISTS, "
+      + "UNBROKEN END TO END. Bare wood and shadow, nothing else in shot.",
     u: ["ဘေးကခေါင်းတလားအနားကိုတော့ လက်တစ်ဖက်က လှမ်းကိုင်လိုက်တယ်။",
         "အသားဖြူဖျော့နေတဲ့လက်။ လက်ကောက်ဝတ်မှာ ချည်နီတစ်ချောင်း။",
         "ကျွန်တော့်လက်ကောက်ဝတ်ကနေ ထွက်သွားတဲ့ တစ်ချောင်းတည်းသောချည်။"] },
