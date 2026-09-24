@@ -149,7 +149,9 @@ const CAM = {
   clock: 'THE WALL CLOCK. Insert square on to a plain round wall clock, the face filling the frame. ⚠️ Reproduce this framing identically every time it recurs.',
   two: 'THE TWO COFFINS. Camera at chest height at the foot of the two trestled coffins, both in frame side by side as in the master plate.',
   table: 'THE TABLE. Camera looking down at a table top, the surface filling the frame.',
-  ne: 'CLOSE ON NE LIN. Camera at his eye height, head-and-shoulders crop.',
+  ne: 'CLOSE ON NE LIN, ON HIS FEET. Camera at his eye height, head-and-shoulders crop.',
+  neflat: 'CLOSE ON NE LIN, FLAT ON HIS BACK INSIDE THE COFFIN. ⚠️ HE IS LYING DOWN AND CANNOT SIT UP OR LIFT HIS HEAD — his shoulders and the back of his skull stay pressed against the lining throughout. Camera directly ABOVE his face looking straight DOWN at it, so his face fills the frame lying horizontally, the pale coffin lining spread behind his head and hair, and the wooden rim of the box running along one edge of the image.',
+  nefloor: 'CLOSE ON NE LIN, DOWN ON THE CONCRETE FLOOR. ⚠️ HE IS LYING ON THE GROUND AND IS NOT STANDING. Camera low and close beside his head, only a few inches above the floor, so his cheek is near the concrete and the floor runs away out of focus behind him.',
   tin: 'CLOSE ON U TIN MAUNG. Camera at his eye height, head-and-shoulders crop.',
   son: 'THE SON, PARTIALLY. Camera at chest height framed so only part of him is in shot — a hand, a foot, a shoulder, the back of a head — never a clean full view.',
   sonface: 'THE SON’S FACE. Camera at his eye height, head-and-shoulders crop, his face fully in frame.',
@@ -417,7 +419,7 @@ export const SCENES = [
         "ပြီးတော့ အနံ့တစ်မျိုး ရလာတယ်။",
         "ရေစိုအဝတ်တွေကို အလုံပိတ်ထားလို့ ထွက်လာတဲ့အနံ့လိုမျိုး။"] },
 
-  { t: "This One Is Quiet", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
+  { t: "This One Is Quiet", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "neflat", w: ["နေလင်း"],
     g: "⚠️ ဦးတင်မောင်က တိုးတိုးပြောတယ် — “ဒီတစ်ယောက်က ငြိမ်တယ်။ အရင်ကလူတွေလို မဟုတ်ဘူး။”",
     p: "Close on Ne Lin lying in the coffin with his eyes shut, his nose and upper lip wrinkling "
       + "against a smell — ⚠️ AND HIS EYEBROWS HAVE JUST DRAWN TOGETHER at something he has "
@@ -462,12 +464,14 @@ export const SCENES = [
         "“အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။”",
         "မနေ့က ကျွန်တော် ပို့ထားတဲ့အသံဖိုင်။ အသံဖွင့်ပြနေတာ ဖြစ်မှာပေါ့။"] },
 
-  { t: "Not From a Speaker", l: "နောက်ခန်း", k: "ne",
+  { t: "Not From a Speaker", l: "နောက်ခန်း", k: "neflat",
     w: ["နေလင်း"],
     g: "⚠️ ဒါပေမယ့် အသံက စပီကာတစ်လုံးက ထွက်လာသလို မဟုတ်ဘူး။ ကျွန်တော့်ဘေးမှာ လူတစ်ယောက် လဲလျောင်းပြီး ပြောနေသလို။",
-    p: "Close on Ne Lin's face in the coffin, eyes open, ⚠️ HIS HEAD TURNED AS FAR TO ONE SIDE AS "
-      + "IT WILL GO, straining towards the sound. Every muscle in his neck is engaged and he has "
-      + "moved almost nothing. Bulb light from above.",
+    p: "Looking straight down at Ne Lin's face as he lies flat in the coffin, eyes open. ⚠️ HIS "
+      + "HEAD IS ROLLED AS FAR TO ONE SIDE AS IT WILL GO ON THE LINING, one ear pressed into it, "
+      + "straining towards a sound coming from beyond the rim. Every cord in his neck is standing "
+      + "out and he has lifted nothing — ⚠️ HIS SHOULDERS AND THE BACK OF HIS HEAD STAY FLAT "
+      + "AGAINST THE LINING. Bulb light falling on him from above camera.",
     u: ["ဒါပေမယ့် အသံက စပီကာတစ်လုံးက ထွက်လာသလို မဟုတ်ဘူး။",
         "ကျွန်တော့်ဘေးမှာ လူတစ်ယောက် လဲလျောင်းပြီး ပြောနေသလို။",
         "ဦးတင်မောင်ရဲ့ ငိုသံ ကြားလာတယ်။ “အေး… အဖေ ဒီမှာရှိတယ်။”"] },
@@ -483,7 +487,7 @@ export const SCENES = [
         "အခန်းထဲမှာ သူတစ်ယောက်ပဲ ရပ်နေတယ်။ ရိုက်ကူးရေးလုပ်နေတဲ့ပုံ မရှိဘူး။",
         "ကင်မရာနောက်မှာလည်း မရှိဘူး။"] },
 
-  { t: "Stop, I Cannot Breathe", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
+  { t: "Stop, I Cannot Breathe", l: "နောက်ခန်း", k: "neflat", w: ["နေလင်း"],
     g: "“ဦး… ခဏရပ်ဦး။ ကျွန်တော် အသက်ရှူမဝဘူး။” သူ ကျွန်တော့်ဘက် မလှည့်ဘူး။",
     p: "Close on Ne Lin's face in the coffin speaking, his mouth open on a word and his eyes fixed "
       + "off to one side, ⚠️ HIS EXPRESSION STILL MORE CONFUSED THAN TERRIFIED. Bulb light from "
@@ -491,7 +495,7 @@ export const SCENES = [
     u: ["“ဦး… ခဏရပ်ဦး။ ကျွန်တော် အသက်ရှူမဝဘူး။”",
         "သူ ကျွန်တော့်ဘက် မလှည့်ဘူး။"] },
 
-  { t: "I Never Recorded That Line", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "ne",
+  { t: "I Never Recorded That Line", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "neflat",
     w: ["နေလင်း"],
     g: "⚠️ အဲဒီစကားကို ဘေးကလူက ကျွန်တော့်အသံနဲ့ ပြန်ပြောတယ် — “ဦး… ခဏရပ်ဦး။” ဒီစကားကို အသံသွင်းမပို့ထားဘူး။ အခုမှ ပြောလိုက်တာ။",
     p: "Close on Ne Lin, ⚠️ AND THIS IS THE FRAME WHERE HE UNDERSTANDS — the face going rigid, the "
@@ -577,7 +581,7 @@ export const SCENES = [
         "သူက ကျွန်တော့်ကို အပြစ်တောင်းပန်သလို ကြည့်တယ်။",
         "“မင်း အိပ်ပျော်သွားသလိုပဲ ဖြစ်မှာပါ နေလင်း။”"] },
 
-  { t: "Nothing Came Out", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
+  { t: "Nothing Came Out", l: "နောက်ခန်း", k: "neflat", w: ["နေလင်း"],
     g: "ကျွန်တော် ပါးစပ်လှုပ်တယ်။ သူ့ကို ဆဲချင်တယ်။ အော်ချင်တယ်။ တောင်းပန်ချင်တယ်။ ဘာအသံမှ မထွက်ဘူး။",
     p: "Close on Ne Lin's face in the coffin, his mouth working hard and producing plainly nothing "
       + "at all, tears running sideways from the corners of both eyes towards his ears. Bulb light "
@@ -607,7 +611,7 @@ export const SCENES = [
         "အခန်းအလင်းရောင်နဲ့ မျက်စိကျင့်သားရလာတော့မှ ရှင်းရှင်းမြင်ရတယ်။",
         "ကင်မရာမှန်ဘီလူးမှာ — အဖုံးတပ်ထားတုန်းပဲ။"] },
 
-  { t: "I Was Not an Actor", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
+  { t: "I Was Not an Actor", l: "နောက်ခန်း", k: "neflat", w: ["နေလင်း"],
     g: "အစကတည်းက ဘာမှ မရိုက်ခဲ့ဘူး။ ရိုက်ကူးရေး မရှိဘူး။ ကျွန်တော်ကလည်း သရုပ်ဆောင်မဟုတ်ဘူး။ သူတို့လိုနေတဲ့ ပစ္စည်းတစ်ခု။",
     p: "Close on Ne Lin's face in the coffin looking up at the ceiling, ⚠️ HIS EXPRESSION GONE "
       + "COMPLETELY FLAT — past fear and into understanding. The tears have stopped. Bulb light "
@@ -697,7 +701,7 @@ export const SCENES = [
         "တချို့နေရာမှာ လက်သည်းနဲ့ ခြစ်ထားသလို လိုင်းသေးသေးတွေ အထပ်ထပ်။",
         "ကျွန်တော် အသက်ကို မေ့ပြီး အဲဒီရာတွေကိုပဲ ကြည့်နေမိတယ်။"] },
 
-  { t: "This Coffin Was Not New", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "ne",
+  { t: "This Coffin Was Not New", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "neflat",
     w: ["နေလင်း"],
     g: "⚠️ ဒီခေါင်းတလားကို ကျွန်တော့်အတွက် အသစ်လုပ်ထားတာ မဟုတ်ဘူး။ အရင်က ဝင်လှဲဖူးတဲ့လူတွေ ရှိတယ်။",
     p: "Close on Ne Lin's face lit from one side by the narrowing gap above him, ⚠️ HIS EYES MOVING "
@@ -729,7 +733,7 @@ export const SCENES = [
     u: ["ဦးတင်မောင်က အဖုံးကို ခဏပြန်ကြွတယ်။",
         "ချည်ကို သေချာလွတ်အောင် ဆွဲထုတ်ပေးတယ်။"] },
 
-  { t: "Now I Knew What to Do", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "ne",
+  { t: "Now I Knew What to Do", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "neflat",
     w: ["နေလင်း"],
     g: "⚠️ သူတို့အတွက် အရေးကြီးတာ ကျွန်တော် ငြိမ်နေတာတင် မဟုတ်ဘူး။ ဒီချည် မပြတ်ဖို့လည်း လိုတယ်။",
     p: "Close on Ne Lin's face in the narrowing gap, ⚠️ AND SOMETHING HAS SWITCHED ON BEHIND HIS "
@@ -823,7 +827,7 @@ export const SCENES = [
         "ချည်ပြတ်သွားတယ်။",
         "ကျွန်တော် လေကို အားကုန်ရှူမိတယ်။"] },
 
-  { t: "My Breathing Filled the Room", c: [[1, "stinger"]], l: "နောက်ခန်း", k: "ne",
+  { t: "My Breathing Filled the Room", c: [[1, "stinger"]], l: "နောက်ခန်း", k: "nefloor",
     w: ["နေလင်း"],
     g: "⚠️ တစ်ခန်းလုံးမှာ ကျွန်တော့်အသက်ရှူသံ ကြီးကြီးပေါ်လာတယ်။ ဘေးကလူရဲ့ရင်ဘတ်ကတော့ ရပ်သွားတယ်။",
     p: "Close on Ne Lin's face on the concrete floor, ⚠️ HIS MOUTH WIDE OPEN AND HIS WHOLE CHEST "
@@ -872,7 +876,7 @@ export const SCENES = [
         "“တစ်ခဏပဲ နေလင်း! တစ်ခဏပဲ!”",
         "ကျွန်တော် သူ့ကို ခြေထောက်နဲ့ ကန်ဖယ်တယ်။ သူ မလွှတ်ဘူး။"] },
 
-  { t: "I Had My Voice Back", l: "နောက်ခန်း", k: "ne",
+  { t: "I Had My Voice Back", l: "နောက်ခန်း", k: "nefloor",
     w: ["နေလင်း"],
     g: "⚠️ ကျွန်တော် အခု အသံပြန်ထွက်လာပြီဆိုတာ သတိရတယ် — “ကယ်ကြပါဦး! လူသတ်နေတယ်!”",
     p: "Close on Ne Lin's face turned towards the doorway on the concrete floor, ⚠️ MOUTH WIDE OPEN "
