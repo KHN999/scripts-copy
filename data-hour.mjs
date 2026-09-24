@@ -796,11 +796,17 @@ export const SCENES = [
 
   // ── XII · GETTING OUT ─────────────────────────────────────────────────────
   { t: "The Coffin Rocked", l: "နောက်ခန်း", k: "wide",
-    w: ["နေလင်း", "ဦးတင်မောင်"],
+    w: ["နေလင်း", "ဦးတင်မောင်", "သား"],
     g: "ကျွန်တော် ကိုယ်ကို တစ်ဖက်စောင်းလိုက်တယ်။ ခေါင်းတလား လှုပ်သွားတယ်။ ဦးတင်မောင် လှည့်ကြည့်တယ်။",
-    p: "Wide on the room: the near coffin tilted over at an angle on its trestles with the lid "
-      + "sliding, and ⚠️ U TIN MAUNG HALF TURNED BACK TOWARDS IT with his son's arm still over his "
-      + "shoulders, caught between the two. His face is alarmed rather than angry.",
+    p: "Wide on the room, three figures and each one doing something different. ⚠️ NE LIN IS "
+      + "STILL FLAT ON HIS BACK IN THE NEAR COFFIN and does not stand or sit up at any point — "
+      + "the box has tipped over to one side on its trestles with the loose lid sliding off it, "
+      + "and he is lying inside it as it goes. ⚠️ U TIN MAUNG IS ON HIS FEET AND HAS TWISTED "
+      + "ROUND TO LOOK STRAIGHT AT NE LIN IN THE COFFIN — head and eyes both turned to him, "
+      + "alarmed rather than angry. ⚠️ THE DEAD SON HANGS OFF THE OLD MAN AS DEAD WEIGHT, one "
+      + "limp grey arm draped across the back of the father's neck and shoulders and the father's "
+      + "arm around his waist holding him up, his head down and his face away from camera. ⚠️ "
+      + "NOBODY IS LOOKING AT THE CAMERA AND NOBODY IS HOLDING HANDS.",
     u: ["ကျွန်တော် ကိုယ်ကို တစ်ဖက်စောင်းလိုက်တယ်။ ခေါင်းတလား လှုပ်သွားတယ်။",
         "ဦးတင်မောင် လှည့်ကြည့်တယ်။",
         "ကျွန်တော် နောက်တစ်ကြိမ် အားကုန်လှိမ့်တယ်။"] },
