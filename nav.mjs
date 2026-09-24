@@ -10,7 +10,7 @@
  * order as the board at localhost:3150. Newest first.
  */
 const SHEETS = [
-  { key: "hour",      href: "/hour.html",       created: "2026-09-24", shots:  76, label: "တစ်နာရီစာ လူသေ" },
+  { key: "hour",      href: "/hour.html",       created: "2026-09-24", shots:  92, label: "တစ်နာရီစာ လူသေ" },
   { key: "look",      href: "/look.html",       created: "2026-09-23", shots:  99, label: "ဘယ်သူမှ ကျွန်မကို မကြည့်ကြဘူး" },
   { key: "b13",       href: "/b13.html",        created: "2026-09-20", shots:  56, label: "အောက်ဆုံးထပ်" },
   { key: "thread",    href: "/thread.html",     created: "2026-09-20", shots:  66, label: "အမေ အိပ်သွားပြီလား" },

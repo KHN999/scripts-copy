@@ -14,16 +14,19 @@ import { NAV } from "./nav.mjs";
 const PROJECT = "wtkiowwapl0";
 
 const ACT = {
-  1: "I · The job",
-  8: "II · The back room",
-  15: "III · Into the coffin",
-  21: "IV · The lid next door",
-  29: "V · The hand",
-  35: "VI · My voice",
-  40: "VII · I am sorry, Ne Lin",
-  44: "VIII · The thread",
-  50: "IX · The struggle",
-  69: "X · After",
+  1: "I · The audio file",
+  5: "II · Ne Lin",
+  7: "III · The shop",
+  11: "IV · Two coffins",
+  16: "V · The envelopes",
+  23: "VI · Start",
+  32: "VII · My voice",
+  38: "VIII · His face",
+  46: "IX · The lens cap",
+  51: "X · The scratches",
+  57: "XI · What they need",
+  64: "XII · Getting out",
+  76: "XIII · Exactly one hour",
 };
 
 const db = new Database("/Users/puraidointern/video-lab/data/lab.db");
@@ -90,4 +93,6 @@ Object.entries(ACT).forEach(([n, label]) =>
 LOCS.forEach((l) => console.log(`  ${l.name.padEnd(14)} ${shots.filter((s) => s.where === l.name).length} shots`));
 console.log(`  from inside the coffin: ${SCENES.filter((s) => s.k === "inside").length} shots`);
 console.log(`  the red thread        : ${shots.filter((s) => s.rev?.startsWith("thread")).length} shots`);
+console.log(`  the wall clock        : ${shots.filter((s) => s.rev?.startsWith("clock")).length} shots`);
+console.log(`  the envelopes         : ${shots.filter((s) => s.rev?.startsWith("envelopes")).length} shots`);
 console.log(`  missing gloss         : ${shots.filter((s) => !s.mm).map((s) => s.id).join(", ") || "none"}`);

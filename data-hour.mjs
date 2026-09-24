@@ -1,81 +1,109 @@
 /**
  * တစ်နာရီစာ လူသေ — A CORPSE FOR ONE HOUR
  *
- * Board for rentbody.txt.
+ * Board for rentbodyv2.txt.
  *
- *   1. THE ROOM IS THE FILM. Sixty of the seventy-eight shots happen in one
- *      back room with two coffins on trestles, a bulb and a tripod. The master
- *      geometry plate is therefore load-bearing: fix which coffin is which and
- *      where the camera stands, or every shot is a different room.
- *   2. FROM INSIDE THE COFFIN is the spine. Ne Lin is paralysed and flat on his
- *      back for most of the story, so the film is largely one framing — lying on
- *      the lining looking straight up at a bulb and at whatever leans in over
- *      the opening. It recurs nine times and the lid closes across it twice.
- *   3. ⚠️ THE RED THREAD IS THE STORY. Tied to his wrist, dropped over the side
- *      to a wrist he cannot see, drawn taut, wound one turn at a time, pinned
- *      under the fallen coffin, snapped, and left in his fist in the daylight.
- *      Eleven occurrences in one fixed insert framing. If the thread reads, the
+ *   1. THE ROOM IS THE FILM. Seventy of the hundred shots happen in one back
+ *      room with two coffins on trestles, a bulb, a wall clock and a tripod. The
+ *      master geometry plate is load-bearing: fix which coffin is open and where
+ *      the clock hangs, or every shot is a different room.
+ *   2. FROM INSIDE THE COFFIN is the spine — Ne Lin spends most of the story
+ *      flat on his back unable to move, so one fixed framing recurs eight times
+ *      and the lid closes across it twice.
+ *   3. ⚠️ THE RED THREAD IS THE MECHANISM, AND THE FILM TURNS ON ONE DETAIL:
+ *      when it snags under the lid, U Tin Maung LIFTS THE LID TO FREE IT. That
+ *      is how Ne Lin works out they need it unbroken, which is how he gets out.
+ *      Ten occurrences in one fixed insert framing. If the thread reads, the
  *      film reads.
- *   4. THE LENS CAP IS ON. The camera stands in the background of six early
- *      shots with its cap plainly in place and nobody remarks on it, so that
- *      the insert at shot 62 is a thing the audience could have caught. Never
- *      draw attention to it before then.
- *   5. THE SON IS DEAD, NOT DAMAGED. A month drowned, and he reads that way
- *      through colour and water alone: flat grey skin, hair soaked and
- *      plastered, lips the same grey as the rest of him, darkened nails, dull
- *      open eyes, damp clothes. ⚠️ NOTHING ON HIM IS DECAYED OR BROKEN — his
- *      skin is whole and smooth everywhere. He is also never shown in a clean
- *      full portrait; we get a hand, the back of a head, a profile, a mouth.
- *   6. U TIN MAUNG IS NOT A VILLAIN UNTIL THE LAST SHOT. He is a neat, quiet,
- *      courteous man who cries while he does this. The ending only works if he
- *      has been sympathetic throughout.
+ *   4. ⚠️ THE OTHERS ARE EVERYWHERE BEFORE WE KNOW THEY EXIST. A row of
+ *      envelopes with men's names on the table, a plural pronoun, scratches
+ *      layered inside the lid, and finally a notebook of three one-hour spans.
+ *      Every one is planted plainly and never pointed at.
+ *   5. THE SON IS DEAD, NOT DAMAGED. A month drowned, and it shows through
+ *      colour and water alone: flat grey skin, soaked flattened hair, grey lips,
+ *      darkened under the eyes, dull open eyes. ⚠️ NOTHING ON HIM IS DECAYED OR
+ *      BROKEN — his skin is whole and smooth everywhere. He must also be plainly
+ *      the same face as the graduation photograph, because Ne Lin recognises him
+ *      from it.
+ *   6. U TIN MAUNG IS COURTEOUS THROUGHOUT AND NEVER STOPS CRYING. He is not a
+ *      man who lost his mind — he worked out the price years ago and paid it
+ *      three times. The last shot only lands if he has been gentle all film.
+ *   7. THE CLOCK IS THE ENDING. Five identical inserts on a plain numberless
+ *      face. The first two are just a room detail; the last three are what the
+ *      whole story turns out to have been about.
  */
 
 export const CAST = [
   { name: "နေလင်း", en: "Ne Lin — the narrator, about twenty-eight",
     prompt: "A Burmese man of about twenty-eight, lean and ordinary, medium-brown skin, a narrow "
-      + "face, short black hair, clean-shaven. A plain dark t-shirt and jeans, cheap trainers, a "
-      + "canvas shoulder bag. He looks like someone who takes whatever work comes — unremarkable, "
-      + "healthy, a little tired. ⚠️ HE IS PHYSICALLY UNHARMED IN EVERY SHOT of this film, "
-      + "including the last: clear skin, both eyes bright, ordinary warm colour. What happens to "
-      + "him is paralysis and fear, and it shows only in his face." },
+      + "face, short black hair, clean-shaven. A plain dark shirt and jeans, cheap trainers. He "
+      + "looks like someone who takes whatever work comes — unremarkable, healthy, a little "
+      + "tired. ⚠️ HE IS PHYSICALLY UNHARMED IN EVERY SHOT of this film: clear skin, both eyes "
+      + "bright, ordinary warm colour. What happens to him is paralysis and suffocation, and it "
+      + "shows only in his face and the tendons of his neck and hands." },
   { name: "ဦးတင်မောင်", en: "U Tin Maung — the father, about sixty",
-    prompt: "A Burmese man of about sixty, upright and tidy, medium-brown skin, close-cropped "
-      + "grey hair, reading glasses folded in a shirt pocket. A pressed pale short-sleeved shirt "
-      + "tucked into dark trousers, a leather belt, polished shoes. ⚠️ HE IS GENTLE, CALM AND "
-      + "COURTEOUS and must read that way in every shot until the film says otherwise — a "
-      + "soft-spoken older man who is unfailingly polite. Not menacing, not wild-eyed, not "
-      + "sinister. His eyes are often wet." },
+    prompt: "A Burmese man of about sixty, upright and very tidy, medium-brown skin, close-cropped "
+      + "grey hair. ⚠️ HE WEARS A PRESSED LONG-SLEEVED SHIRT AND A MYANMAR PASO (men's longyi), "
+      + "neatly tied, with sandals. ⚠️ HE IS GENTLE, SOFT-SPOKEN AND COURTEOUS and must read that "
+      + "way in every single shot of this film — including the ones where he is holding a man "
+      + "down. Not menacing, not wild, not sinister. His eyes are wet in most of the film and he "
+      + "stays polite even while he is doing this." },
   { name: "သား", en: "The son — about twenty-eight, a month drowned",
-    prompt: "A Burmese man of about twenty-eight, the same height and build as Ne Lin. ⚠️ HE IS "
-      + "PLAINLY DEAD AND IT SHOWS ENTIRELY IN COLOUR AND WATER: his skin is a flat drained "
-      + "grey-white with no warmth in it anywhere, his black hair is soaked through and plastered "
-      + "flat to his skull and forehead, his lips are the same grey as the rest of his face, his "
-      + "fingernails are darkened, and his eyes are open, dull and unfocused. He wears an "
-      + "ordinary damp collared shirt and trousers, dark with water stains and clinging to him. "
-      + "⚠️ HIS SKIN IS WHOLE AND SMOOTH EVERYWHERE — unbroken, unmarked, nothing decayed and "
-      + "nothing damaged. He is a drowned man, kept cold, and nothing worse than that.",
+    prompt: "A Burmese man of about twenty-eight, slim, the same height as Ne Lin, with a "
+      + "distinctive open face — a wide forehead, a small mole near one eyebrow, slightly "
+      + "prominent front teeth. ⚠️ HE IS PLAINLY DEAD AND IT SHOWS ENTIRELY IN COLOUR AND WATER: "
+      + "his skin is a flat drained grey-white with no warmth in it, his black hair is soaked and "
+      + "plastered flat to his skull and forehead, his lips are the same grey as the rest of his "
+      + "face, the skin beneath both eyes is darkened to a bruise-blue shadow, and his eyes are "
+      + "open, dull and unfocused. A damp collared shirt and trousers, dark with water and "
+      + "clinging to him. ⚠️ HIS SKIN IS WHOLE AND SMOOTH EVERYWHERE — unbroken, unmarked, "
+      + "nothing decayed and nothing damaged. He is a drowned man kept cold and nothing worse. "
+      + "⚠️ HIS FACE MUST BE RECOGNISABLY THE SAME MAN AS IN THE GRADUATION PHOTOGRAPH.",
     pose: "The subject stands facing the camera square on, full figure in frame, arms hanging at "
       + "his sides, head straight, expression blank and slack" },
   { name: "ရဲသား", en: "The police officer — about forty",
     prompt: "A Burmese police officer of about forty, medium build, medium-brown skin, short "
       + "black hair, in a plain dark-blue Myanmar police uniform shirt with shoulder boards and "
-      + "dark trousers. Ordinary, businesslike, unremarkable. ⚠️ Whole and unharmed." },
+      + "dark trousers. Ordinary and businesslike. ⚠️ Whole and unharmed." },
 ];
 
 export const PROPS = [
-  { name: "ချည်နီ", en: "The red thread — the object the whole film turns on",
+  { name: "ချည်နီ", en: "The red thread — the mechanism",
     prompt: "A single length of thin RED cotton thread, the kind tied at a Myanmar ceremony — "
-      + "matte, slightly fuzzy, hand-spun rather than glossy, about the thickness of kitchen "
-      + "string, a strong plain red. Photographed lying loosely coiled. ⚠️ THE COLOUR AND "
-      + "THICKNESS MUST BE IDENTICAL EVERY TIME IT APPEARS; it is the one object the audience "
-      + "has to track through the whole film." },
-  { name: "ကင်မရာ", en: "The camera on the tripod — with its lens cap on",
-    prompt: "An older black digital video camera on a black three-legged tripod, at chest height, "
+      + "matte and slightly fuzzy rather than glossy, about the thickness of kitchen string, a "
+      + "strong plain red. Photographed lying loosely coiled on a plain surface. ⚠️ THE COLOUR "
+      + "AND THICKNESS MUST BE IDENTICAL EVERY TIME IT APPEARS; the audience has to track this "
+      + "one object through the whole film." },
+  { name: "ကင်မရာ", en: "The camera on its tripod — lens cap fitted",
+    prompt: "An older black digital video camera on a black three-legged tripod at chest height, "
       + "photographed from the front at close range. ⚠️ A ROUND BLACK LENS CAP IS FITTED OVER THE "
       + "LENS, plainly seated and covering the glass completely, with a short black cord running "
-      + "from it to the camera body. Everything else about the rig looks ready to shoot. Ordinary, "
-      + "slightly dated, well kept." },
+      + "from it to the camera body. Everything else about the rig looks ready to shoot. "
+      + "Ordinary, slightly dated, well kept." },
+  { name: "စာအိတ်တွေ", en: "The row of envelopes on the table",
+    prompt: "Four plain brown paper envelopes, A5 size and fat with contents, standing in a neat "
+      + "row on a wooden table top, photographed from slightly above. ⚠️ EACH ENVELOPE HAS A "
+      + "MAN'S NAME HANDWRITTEN ON IT IN BURMESE in blue ballpoint, in the same tidy older "
+      + "person's hand. ⚠️ THE NAMES ARE THE ONLY TEXT IN THE IMAGE. Three are worn at the "
+      + "corners and have plainly been sitting there a long while; one looks newer." },
+  { name: "မှတ်စုစာအုပ်", en: "The notebook of times",
+    prompt: "A small cheap lined exercise book lying open on a table, photographed square on from "
+      + "above so the pages fill the frame. ⚠️ ONE PAGE CARRIES A SHORT HANDWRITTEN LIST IN "
+      + "BURMESE BALLPOINT: a man's name, then a pair of times joined by a dash, then the next "
+      + "name and pair, and so on down the page. Tidy, cramped, practical handwriting. Nothing "
+      + "else is written anywhere on the pages and nothing is printed on them." },
+  { name: "နံရံနာရီ", en: "The wall clock",
+    prompt: "A plain round white plastic wall clock with black hands and a red second hand, the "
+      + "cheap kind sold everywhere, hanging on a bare plaster wall and photographed square on so "
+      + "the face fills the frame. ⚠️ THE FACE CARRIES ONLY PLAIN TICK MARKS AND NO NUMERALS OR "
+      + "BRANDING AT ALL. It is working and completely unremarkable." },
+  { name: "ဘွဲ့ယူပုံ", en: "The graduation photograph in its frame",
+    prompt: "A framed colour graduation photograph standing upright on a table: a Burmese man of "
+      + "about twenty-seven in an academic gown and cap holding a rolled certificate, ⚠️ SMILING "
+      + "BROADLY, WARM-SKINNED, HEALTHY AND VERY MUCH ALIVE — a wide forehead, a small mole near "
+      + "one eyebrow, slightly prominent front teeth. Beside him an older man in a pressed shirt "
+      + "with one arm around his shoulders, beaming. ⚠️ THIS IS A HAPPY ORDINARY PHOTOGRAPH and "
+      + "there is nothing wrong with it. Simple wooden frame, glass slightly dusty." },
 ];
 
 export const LOCS = [
@@ -83,813 +111,989 @@ export const LOCS = [
     prompt: "THE MASTER GEOMETRY PLATE FOR THIS FILM. Almost the whole story happens in this one "
       + "room, so fix it once. The windowless back room of an old photo studio, photographed from "
       + "the doorway at chest height looking in. ⚠️ TWO PLAIN WOODEN COFFINS STAND SIDE BY SIDE IN "
-      + "THE MIDDLE OF THE ROOM, each resting across two low wooden trestles at hip height, about "
-      + "a metre apart and both running left to right across the frame. ⚠️ THE NEARER COFFIN HAS "
-      + "ITS LID OFF and is lined with clean white cloth. ⚠️ THE FURTHER COFFIN IS CLOSED, its lid "
-      + "seated flat. One bare bulb hangs from the ceiling directly above the gap between them. A "
-      + "black video camera on a tripod stands facing them from the far end. The windows are "
-      + "covered over with black cloth. Bare plaster walls, a concrete floor. ⚠️ THE ROOM IS "
-      + "ORDINARY AND TIDY — clean walls, swept floor, a working bulb. Empty of people for this "
-      + "plate." },
+      + "THE MIDDLE OF THE ROOM, each resting across two low wooden trestles at hip height, with "
+      + "only enough space between them for one person to walk, both running left to right across "
+      + "the frame. ⚠️ THE NEARER COFFIN HAS ITS LID OFF. ⚠️ THE FURTHER COFFIN IS CLOSED, its lid "
+      + "seated flat. One bare bulb hangs from the ceiling above the gap between them. ⚠️ A PLAIN "
+      + "ROUND WHITE WALL CLOCK HANGS ON THE BACK WALL. A black video camera on a tripod stands "
+      + "facing the coffins from the near end, and a wooden table against one wall carries a row "
+      + "of brown envelopes. Bare plaster walls, a concrete floor, no windows. ⚠️ THE ROOM IS "
+      + "ORDINARY, CLEAN AND TIDY. Empty of people for this plate." },
   { name: "ဆိုင်ရှေ့", en: "The front of the old photo studio",
     prompt: "The front room of a long-closed suburban Myanmar photo studio in daylight: a glass "
       + "shopfront, and on the walls rows of framed display portraits — family groups, graduation "
-      + "photographs, wedding pictures — all of them under a visible layer of dust. A counter with "
-      + "nothing on it. ⚠️ THE PORTRAITS ARE ORDINARY, SMILING AND UNREMARKABLE; the only thing "
-      + "wrong with the room is that it has obviously not opened in a long time. Empty of people "
-      + "for this plate." },
+      + "photographs, wedding pictures — all under a visible layer of dust. A bare counter. ⚠️ THE "
+      + "PORTRAITS ARE ORDINARY, SMILING AND UNREMARKABLE; the only thing wrong with the room is "
+      + "that it has obviously not opened in a long time. Empty of people for this plate." },
+  { name: "ဆေးရုံ", en: "The hospital room",
+    prompt: "An ordinary small Myanmar hospital room in flat daylight: one iron bed with white "
+      + "sheets, a bedside locker, a window with a thin curtain, pale green walls, a terrazzo "
+      + "floor. Clean, bright and entirely unfrightening. Empty of people for this plate." },
   { name: "ရဲစခန်း", en: "The police station",
     prompt: "The front office of an ordinary Myanmar police station in daylight: a wooden counter, "
       + "a ceiling fan, a noticeboard, plastic chairs against one wall, a barred window. Plain, "
-      + "bright, businesslike and entirely unfrightening. Empty of people for this plate." },
+      + "bright and businesslike. Empty of people for this plate." },
 ];
 
 /**
  * One composition per shot, stated first and alone.
  *
- * Two of these are the film. `inside` is where Ne Lin spends most of the story
- * and it recurs nine times; `thread` recurs eleven. Both are fixed here once so
- * that the moment the lid starts closing across `inside`, and the moment the
- * thread goes taut in `thread`, land on a frame the audience already knows.
+ * `inside`, `thread` and `clock` are the film. All three are fixed here once so
+ * that the moments everything depends on — the lid closing across `inside`, the
+ * lid being LIFTED to free the thread, and the clock turning out to have been
+ * the subject all along — land on frames the audience already knows by heart.
  */
 const CAM = {
-  inside: 'FROM INSIDE THE COFFIN. Camera lying on its back on the white lining where Ne Lin’s head is, looking straight up, so the frame holds the ceiling, the bare bulb, the rim of the coffin at the edges, and whatever leans in over the opening. ⚠️ Reproduce this framing identically every time it recurs.',
+  inside: 'FROM INSIDE THE COFFIN. Camera lying on its back on the lining where Ne Lin’s head is, looking straight up, so the frame holds the ceiling, the bare bulb, the rim of the coffin at the edges, and whatever leans in over the opening. ⚠️ Reproduce this framing identically every time it recurs.',
   thread: 'THE RED THREAD. Tight insert filling the frame with the thread and whatever it is tied to or running across. ⚠️ Reproduce this framing identically every time it recurs.',
-  two: 'THE TWO COFFINS. Camera at chest height at the foot of the two trestled coffins, both of them in frame side by side as in the master plate.',
-  room: 'IN THE BACK ROOM. Camera at chest height as in the master plate, the doorway behind camera.',
+  clock: 'THE WALL CLOCK. Insert square on to a plain round wall clock, the face filling the frame. ⚠️ Reproduce this framing identically every time it recurs.',
+  two: 'THE TWO COFFINS. Camera at chest height at the foot of the two trestled coffins, both in frame side by side as in the master plate.',
+  table: 'THE TABLE. Camera looking down at a table top, the surface filling the frame.',
   ne: 'CLOSE ON NE LIN. Camera at his eye height, head-and-shoulders crop.',
   tin: 'CLOSE ON U TIN MAUNG. Camera at his eye height, head-and-shoulders crop.',
-  son: 'THE SON, PARTIALLY. Camera at chest height framed so only part of him is in shot — a hand, a shoulder, the back of his head, a profile — never a clean full view of him.',
+  son: 'THE SON, PARTIALLY. Camera at chest height framed so only part of him is in shot — a hand, a foot, a shoulder, the back of a head — never a clean full view.',
+  sonface: 'THE SON’S FACE. Camera at his eye height, head-and-shoulders crop, his face fully in frame.',
   floor: 'LOW ON THE FLOOR. Camera on the concrete floor itself, a few inches above it.',
   front: 'IN THE FRONT OF THE SHOP. Camera at chest height among the dusty display portraits.',
+  ward: 'IN THE HOSPITAL ROOM. Camera at chest height beside the bed.',
   station: 'IN THE POLICE STATION. Camera at chest height across the counter.',
   insert: 'TIGHT INSERT. One subject filling the frame, shallow focus.',
   wide: 'WIDE. Camera at chest height far enough back to hold the whole room.',
 };
 
 export const SCENES = [
-  // ── I · THE JOB ───────────────────────────────────────────────────────────
-  { t: "Five Lakhs to Play a Corpse", l: "ဆိုင်ရှေ့", k: "ne", w: ["နေလင်း"],
-    g: "လူသေဟန်ဆောင်ပေးရင် ငွေငါးသိန်းပေးမယ်တဲ့။ လုပ်ရမှာက ခေါင်းတလားထဲမှာ မျက်လုံးမှိတ်ပြီး လှဲနေပေးရုံပဲ။",
-    p: "Ne Lin standing in the dusty front room of the closed photo studio in daylight, bag over "
-      + "one shoulder, looking off at something with the mild interest of a man being offered "
-      + "easy work. Rows of dusty framed portraits behind him.",
-    u: ["လူသေဟန်ဆောင်ပေးရင် ငွေငါးသိန်းပေးမယ်တဲ့။",
-        "လုပ်ရမှာက ခေါင်းတလားထဲမှာ မျက်လုံးမှိတ်ပြီး လှဲနေပေးရုံပဲ။",
-        "အလုပ်ကို ကျွန်တော် လက်ခံလိုက်တယ်။"] },
+  // ── I · THE AUDIO FILE ────────────────────────────────────────────────────
+  { t: "He Did Not Ask for a Photograph", l: "ဆိုင်ရှေ့", k: "ne", w: ["နေလင်း"],
+    g: "လူသေဟန်ဆောင်ဖို့ အလုပ်အပ်တဲ့လူက ကျွန်တော့်ဓာတ်ပုံကို မတောင်းဘူး။ အသံဖိုင်တစ်ခု ပို့ခိုင်းတယ်။",
+    p: "Ne Lin sitting on the edge of a bed in an ordinary room in daylight, a phone held close to "
+      + "his mouth in both hands, recording. Plain, domestic and unremarkable — a man doing "
+      + "something small for money.",
+    u: ["လူသေဟန်ဆောင်ဖို့ အလုပ်အပ်တဲ့လူက ကျွန်တော့်ဓာတ်ပုံကို မတောင်းဘူး။",
+        "အသံဖိုင်တစ်ခု ပို့ခိုင်းတယ်။"] },
 
-  { t: "Ten Minutes In, He Breathed", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "two",
-    g: "⚠️ ရိုက်ကူးရေးစပြီး ဆယ်မိနစ်လောက်အကြာမှာ ဘေးက ခေါင်းတလားထဲကလူ အသက်ပြန်ရှူလာတယ်။",
-    p: "The two trestled coffins side by side under the bare bulb, the near one open and lined "
-      + "white, the far one closed. ⚠️ NOBODY IS IN SHOT. Still, cold, ordinary — a room waiting.",
-    u: ["ဒါပေမယ့် ရိုက်ကူးရေးစပြီး ဆယ်မိနစ်လောက်အကြာမှာ—",
-        "ကျွန်တော့်ဘေးက ခေါင်းတလားထဲကလူက အသက်ပြန်ရှူလာတယ်။",
-        "အဲဒီအချိန်ကစပြီး ကျွန်တော်ကတော့ အသက်ရှူရ ပိုခက်လာတယ်။"] },
+  { t: "Father, I Have Come Back", c: [[1, "bigstinger"]], l: "ဆိုင်ရှေ့", k: "insert",
+    g: "⚠️ ပြောရမယ့်စကားက — “အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။”",
+    p: "⚠️ TEXT PERMITTED. Insert square on to a phone screen held in one hand, showing a voice "
+      + "recorder mid-recording: a waveform running across the screen and above it one line of "
+      + "Burmese reading exactly \"အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။\" and nothing else. That sentence "
+      + "is the only text in the image.",
+    u: ["ပြောရမယ့်စကားက—",
+        "“အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။”",
+        "ကျွန်တော် အသံသွင်းပို့လိုက်တယ်။"] },
 
+  { t: "He Chose You", c: [[3, "bigstinger"]], l: "ဆိုင်ရှေ့", k: "ne", w: ["နေလင်း"],
+    g: "⚠️ “အသံ အဆင်ပြေလို့လား ဦး။” “အေး။ သူက မင်းကို ရွေးလိုက်ပြီ။”",
+    p: "Close on Ne Lin holding the phone to his ear in daylight, listening — ⚠️ AND THE EASY "
+      + "EXPRESSION HAS JUST GONE OUT OF HIS FACE, replaced by a small puzzled stillness. He is "
+      + "not frightened; he has simply heard a word that did not fit.",
+    u: ["ခဏကြာတော့ သူ ပြန်ဆက်တယ်။ “မင်းပဲ လာခဲ့တော့။”",
+        "“အသံ အဆင်ပြေလို့လား ဦး။” သူက ခဏတိတ်ပြီးမှ ပြန်ဖြေတယ်။",
+        "“အေး။ သူက မင်းကို ရွေးလိုက်ပြီ။”"] },
+
+  { t: "I Never Asked Who", l: "ဆိုင်ရှေ့", k: "ne", w: ["နေလင်း"],
+    g: "ဘယ်သူရွေးတာလဲလို့ ကျွန်တော် မမေးဖြစ်ခဲ့ဘူး။ တစ်နာရီအလုပ်အတွက် ငွေငါးသိန်းရမယ်ဆိုတာကိုပဲ စဉ်းစားနေမိတာ။",
+    p: "Close on Ne Lin lowering the phone from his ear in daylight, already half smiling again, "
+      + "the frown gone. ⚠️ HE HAS LET IT GO — the face of a man who has decided not to think "
+      + "about something because the money is good.",
+    u: ["ဘယ်သူရွေးတာလဲလို့ ကျွန်တော် မမေးဖြစ်ခဲ့ဘူး။",
+        "တစ်နာရီအလုပ်အတွက် ငွေငါးသိန်းရမယ်ဆိုတာကိုပဲ စဉ်းစားနေမိတာ။"] },
+
+  // ── II · NE LIN ───────────────────────────────────────────────────────────
   { t: "My Name Is Ne Lin", l: "ဆိုင်ရှေ့", k: "ne", w: ["နေလင်း"],
-    g: "ကျွန်တော့်နာမည် နေလင်း။ ရုပ်ရှင်ရိုက်ကွင်းတွေမှာ လူပိုလိုရင် ဝင်လုပ်တယ်။",
-    p: "Ne Lin in daylight, half turned to camera, entirely ordinary — a working man in a plain "
-      + "t-shirt with a canvas bag. Dusty portraits soft behind him.",
+    g: "ကျွန်တော့်နာမည် နေလင်း။ ရိုက်ကွင်းတွေမှာ လူပိုလိုရင် ဝင်လုပ်တယ်။",
+    p: "Ne Lin walking along an ordinary Yangon street in daylight with a bag over one shoulder, "
+      + "half turned to camera. Entirely unremarkable.",
     u: ["ကျွန်တော့်နာမည် နေလင်း။",
-        "ရုပ်ရှင်ရိုက်ကွင်းတွေမှာ လူပိုလိုရင် ဝင်လုပ်တယ်။",
-        "တစ်ခါတလေ ကြော်ငြာတိုလေးတွေလည်း သရုပ်ဆောင်ရတယ်။"] },
+        "ရိုက်ကွင်းတွေမှာ လူပိုလိုရင် ဝင်လုပ်တယ်။ ကြော်ငြာတိုတွေမှာလည်း သရုပ်ဆောင်ဖူးတယ်။"] },
 
-  { t: "U Tin Maung", l: "ဆိုင်ရှေ့", k: "tin", w: ["ဦးတင်မောင်"],
-    g: "အလုပ်လာအပ်တဲ့လူက ဦးတင်မောင်။ အသက်ခြောက်ဆယ်ဝန်းကျင်။ အဝတ်အစားသပ်သပ်ရပ်ရပ်နဲ့ စကားပြောအေးတဲ့လူ။",
-    p: "Close on U Tin Maung in daylight, neat and composed, looking directly at camera with a "
-      + "small courteous expression. ⚠️ HE MUST READ AS A KIND, ORDINARY OLDER MAN — pressed "
-      + "shirt, tidy grey hair, nothing at all wrong with him.",
-    u: ["အဲဒီအလုပ်လာအပ်တဲ့လူက ဦးတင်မောင်။",
-        "အသက်ခြောက်ဆယ်ဝန်းကျင်။",
-        "အဝတ်အစားသပ်သပ်ရပ်ရပ်နဲ့ စကားပြောအေးတဲ့လူ။"] },
+  { t: "Not the First Time", l: "ဆိုင်ရှေ့", k: "insert",
+    g: "လူသေဟန်ဆောင်ရတာလည်း ပထမဆုံးမဟုတ်ဘူး။ အရင်တစ်ခါက လမ်းဘေးမှာ လှဲနေရတာ။",
+    p: "⚠️ AN ORDINARY FILM SET IN BRIGHT SUNLIGHT. A young man lying still on the tarmac at a "
+      + "roadside playing dead while a small crew stands around him — a boom operator, someone "
+      + "with a clapperboard, a camera on a shoulder rig, a reflector, cables. ⚠️ THIS IS "
+      + "CHEERFUL, BUSY AND COMPLETELY MUNDANE.",
+    u: ["လူသေဟန်ဆောင်ရတာလည်း ပထမဆုံးမဟုတ်ဘူး။",
+        "အရင်တစ်ခါက လမ်းဘေးမှာ လှဲနေရတာ။ နေပူထဲမှာ နာရီဝက်လောက် မလှုပ်ဘဲနေရလို့ ခက်ခဲ့တယ်။",
+        "ဒီတစ်ခါတော့ အခန်းထဲမှာပဲတဲ့။"] },
 
-  { t: "Only Someone to Lie There", l: "ဆိုင်ရှေ့", k: "front", w: ["ဦးတင်မောင်", "နေလင်း"],
-    g: "“အဓိကသရုပ်ဆောင် မလိုသေးဘူး။ လူသေပုံစံ လှဲနေပေးမယ့်သူပဲ လိုတာ။ မင်းအရပ်နဲ့ဆို အဆင်ပြေတယ်။”",
-    p: "The two men talking in the dusty front room in daylight, U Tin Maung explaining with one "
-      + "hand open, Ne Lin listening with his thumbs in his bag strap. ⚠️ U TIN MAUNG IS LOOKING "
-      + "AT NE LIN'S BODY rather than his face — at his height and his shoulders — while he "
-      + "talks. Ordinary, friendly, unhurried.",
-    u: ["သူက သရဲကားတိုတစ်ကား အစမ်းရိုက်ချင်တယ်လို့ ပြောတယ်။",
-        "“အဓိကသရုပ်ဆောင် မလိုသေးဘူး။ လူသေပုံစံ လှဲနေပေးမယ့်သူပဲ လိုတာ။”",
-        "“မင်းအရပ်နဲ့ဆို အဆင်ပြေတယ်။”"] },
+  // ── III · THE SHOP ────────────────────────────────────────────────────────
+  { t: "We Preserve Memories", c: [[2, "stinger"]], l: "ဆိုင်ရှေ့", k: "insert",
+    g: "⚠️ တံခါးတစ်ဖက်မှာ ဖုန်တက်နေတဲ့ စာတန်းတစ်ခု — “အမှတ်တရများကို ထိန်းသိမ်းပေးပါသည်။”",
+    p: "⚠️ TEXT PERMITTED. Insert on a small dusty painted sign beside the glass door of the "
+      + "closed photo studio, reading exactly \"အမှတ်တရများကို ထိန်းသိမ်းပေးပါသည်။\" in faded "
+      + "shop lettering and nothing else. That sentence is the only text in the image. Flat "
+      + "daylight, dust across the paint.",
+    u: ["သွားရတဲ့နေရာက မြို့စွန်က ဓာတ်ပုံဆိုင်ဟောင်းတစ်ဆိုင်။",
+        "တံခါးတစ်ဖက်မှာတော့ ဖုန်တက်နေတဲ့ စာတန်းတစ်ခု။",
+        "“အမှတ်တရများကို ထိန်းသိမ်းပေးပါသည်။”"] },
 
-  { t: "I Had Done It Before", l: "ဆိုင်ရှေ့", k: "front",
-    g: "အရင်ကလည်း လူသေဟန်ဆောင်ဖူးတော့ ကျွန်တော် မထူးဆန်းဘူးလို့ ထင်ခဲ့တယ်။",
-    p: "The dusty front room of the old studio in daylight: rows of framed family portraits, "
-      + "graduation photographs and wedding pictures under a layer of dust, a bare counter. "
-      + "⚠️ NOBODY IN SHOT. Ordinary, closed-up, unremarkable.",
-    u: ["အရင်ကလည်း လူသေဟန်ဆောင်ဖူးတော့ ကျွန်တော် မထူးဆန်းဘူးလို့ ထင်ခဲ့တယ်။",
-        "အလုပ်နေရာက မြို့စွန်က ဓာတ်ပုံဆိုင်ဟောင်းတစ်ဆိုင်။"] },
+  { t: "He Was Waiting at the Door", l: "ဆိုင်ရှေ့", k: "tin", w: ["ဦးတင်မောင်"],
+    g: "ကျွန်တော် ရောက်သွားတော့ ဦးတင်မောင်က တံခါးမှာ စောင့်နေတယ်။ အင်္ကျီလက်ရှည်နဲ့ ပုဆိုး သပ်သပ်ရပ်ရပ်။",
+    p: "Close on U Tin Maung standing in the doorway of the studio in daylight, hands folded in "
+      + "front of him, waiting. ⚠️ NEAT, COURTEOUS AND ENTIRELY ORDINARY — pressed long-sleeved "
+      + "shirt, paso neatly tied, a mild welcoming expression.",
+    u: ["ကျွန်တော် ရောက်သွားတော့ ဦးတင်မောင်က တံခါးမှာ စောင့်နေတယ်။",
+        "အသက်ခြောက်ဆယ်ဝန်းကျင်။ အင်္ကျီလက်ရှည်နဲ့ ပုဆိုး သပ်သပ်ရပ်ရပ် ဝတ်ထားတယ်။"] },
 
-  { t: "A Shop That Had Not Opened in a Long Time", l: "ဆိုင်ရှေ့", k: "insert",
-    g: "ဆိုင်ရှေ့မှာ မိသားစုပုံတွေ ချိတ်ထားတုန်းပဲ။ ဒါပေမယ့် ဖုန်တက်နေတာကြည့်ရင် ပုံမှန်မဖွင့်တော့တဲ့ဆိုင်မှန်း သိသာတယ်။",
-    p: "Tight insert on two or three framed portraits on the wall — a smiling family group, a "
-      + "graduate in a gown — with a clear film of dust across the glass and a dust line along "
-      + "the top of each frame. Ordinary daylight.",
-    u: ["ဆိုင်ရှေ့မှာ မိသားစုပုံတွေ၊ ဘွဲ့ယူပုံတွေ ချိတ်ထားတုန်းပဲ။",
-        "ဒါပေမယ့် ဖုန်တက်နေတာကြည့်ရင် ပုံမှန်မဖွင့်တော့တဲ့ဆိုင်မှန်း သိသာတယ်။"] },
-
-  // ── II · THE BACK ROOM ────────────────────────────────────────────────────
-  { t: "He Took Me Into the Back Room", l: "နောက်ခန်း", k: "room",
+  { t: "He Looked Me Up and Down", l: "ဆိုင်ရှေ့", k: "front",
     w: ["ဦးတင်မောင်", "နေလင်း"],
-    g: "ဦးတင်မောင်က ကျွန်တော့်ကို ဆိုင်နောက်ခန်းထဲ ခေါ်သွားတယ်။ အခန်းထဲမှာ မီးလုံးတစ်လုံး။",
-    p: "From the doorway: U Tin Maung leading Ne Lin into the windowless back room, both seen "
-      + "from behind, the single bare bulb ahead of them and the shapes of the two trestled "
-      + "coffins beyond. ⚠️ The camera on its tripod stands at the far end of the room, "
-      + "unremarked.",
-    u: ["ဦးတင်မောင်က ကျွန်တော့်ကို ဆိုင်နောက်ခန်းထဲ ခေါ်သွားတယ်။",
-        "အခန်းထဲမှာ မီးလုံးတစ်လုံး။",
-        "ခြေထောက်သုံးချောင်းထောက်ထားတဲ့ ကင်မရာတစ်လုံး။"] },
+    g: "သူက ကျွန်တော့်ကို ခေါင်းအစခြေအဆုံး ကြည့်တယ်။",
+    p: "The two men in the dusty front room in daylight, ⚠️ U TIN MAUNG'S EYES TRAVELLING DOWN "
+      + "NE LIN'S BODY from his shoulders to his feet rather than meeting his face, unhurried and "
+      + "assessing. Ne Lin is smiling politely and has not noticed.",
+    u: ["သူက ကျွန်တော့်ကို ခေါင်းအစခြေအဆုံး ကြည့်တယ်။",
+        "ပြီးတော့ လက်ဆွဲနှုတ်ဆက်တယ်။"] },
 
-  { t: "Two Wooden Coffins", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "two",
-    g: "⚠️ ပြီးတော့ — သစ်သားခေါင်းတလားနှစ်လုံး။",
-    p: "The master geometry, established: two plain wooden coffins side by side on trestles under "
-      + "the bare bulb. ⚠️ THE NEAR ONE HAS NO LID AND IS LINED WITH CLEAN WHITE CLOTH; THE FAR "
-      + "ONE IS CLOSED with its lid seated flat. Black cloth over the windows behind them. The "
-      + "tripod camera stands at the far end of the room, in shot and unremarked.",
-    u: ["ပြီးတော့ သစ်သားခေါင်းတလားနှစ်လုံး။",
-        "တစ်လုံးက အဖုံးဖွင့်ထားတယ်။ အတွင်းမှာ အဖြူရောင်အခင်းခင်းထားတယ်။",
-        "နောက်တစ်လုံးက အဖုံးပိတ်ထားတယ်။"] },
+  { t: "His Thumb Was on My Pulse", c: [[2, "bigstinger"]], l: "ဆိုင်ရှေ့", k: "insert",
+    g: "⚠️ သူ့လက်မက ကျွန်တော့်လက်ကောက်ဝတ်ပေါ်မှာ ဖိထားတယ်။ သွေးခုန်တာကို စမ်းနေသလို။",
+    p: "Tight insert on a handshake held too long: an older hand gripping a younger one, and "
+      + "⚠️ THE OLDER MAN'S THUMB HAS SLID UP OFF THE HAND AND IS PRESSED FLAT AGAINST THE INSIDE "
+      + "OF THE YOUNGER MAN'S WRIST, exactly where a pulse is taken. Flat daylight.",
+    u: ["ပုံမှန်နှုတ်ဆက်တာထက် နည်းနည်းကြာတယ်။",
+        "သူ့လက်မက ကျွန်တော့်လက်ကောက်ဝတ်ပေါ်မှာ ဖိထားတယ်။ သွေးခုန်တာကို စမ်းနေသလို။",
+        "“လမ်းမှာ ပင်ပန်းလာလား။” “မပင်ပန်းပါဘူး။” “ကောင်းတယ်။ ကျန်းကျန်းမာမာ ရှိဖို့လိုတယ်။”"] },
 
-  { t: "One Is Already Here", c: [[3, "stinger"]], l: "နောက်ခန်း", k: "tin",
+  // ── IV · TWO COFFINS ──────────────────────────────────────────────────────
+  { t: "Two Coffins", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "two",
+    g: "⚠️ သူ ဆိုင်နောက်ခန်းထဲ ခေါ်သွားတယ်။ အဲဒီမှာ ခေါင်းတလားနှစ်လုံး ရှိနေတယ်။",
+    p: "The master geometry, established. Two plain wooden coffins side by side on trestles under "
+      + "a bare bulb. ⚠️ THE NEAR ONE HAS NO LID; THE FAR ONE IS CLOSED with its lid seated flat. "
+      + "⚠️ THERE IS ONLY ENOUGH ROOM BETWEEN THEM FOR ONE PERSON TO WALK. A round white wall "
+      + "clock on the back wall, a tripod camera at the near end, a table of brown envelopes "
+      + "against one wall. Bare plaster, concrete floor.",
+    u: ["သူ ဆိုင်နောက်ခန်းထဲ ခေါ်သွားတယ်။ အဲဒီမှာ ခေါင်းတလားနှစ်လုံး ရှိနေတယ်။",
+        "တစ်လုံးက အဖုံးဖွင့်ထားတယ်။ နောက်တစ်လုံးက အဖုံးပိတ်ထားတယ်။",
+        "နှစ်လုံးကြားမှာ လူတစ်ယောက် ဖြတ်လျှောက်လို့ရရုံပဲ နေရာလွတ်တယ်။"] },
+
+  { t: "The Clock on the Wall", l: "နောက်ခန်း", k: "clock", rev: "clock 1 of 5",
+    g: "ရှေ့မှာ ကင်မရာတစ်လုံး။ အပေါ်မှာ မီးလုံးတစ်လုံး။ နံရံက နာရီသံက အခန်းတစ်ခုလုံးမှာ ရှင်းရှင်းကြားနေရတယ်။",
+    p: "OCCURRENCE 1 OF 5 OF THE CLOCK. Establish it precisely. Insert square on to a plain round "
+      + "white wall clock on bare plaster, the face filling the frame, ⚠️ ITS FACE CARRYING ONLY "
+      + "TICK MARKS AND NO NUMERALS AT ALL. The red second hand is mid-sweep. Ordinary, cheap and "
+      + "working. ⚠️ Nothing about this image is frightening.",
+    u: ["ရှေ့မှာ ကင်မရာတစ်လုံး။ အပေါ်မှာ မီးလုံးတစ်လုံး။",
+        "နံရံက နာရီသံက အခန်းတစ်ခုလုံးမှာ ရှင်းရှင်းကြားနေရတယ်။",
+        "တစ်ချက်။ တစ်ချက်။ တစ်ချက်။"] },
+
+  { t: "One Is Already Here", l: "နောက်ခန်း", k: "tin",
     w: ["ဦးတင်မောင်"],
-    g: "⚠️ “တခြားသူတွေရော မလာသေးဘူးလား။” ဦးတင်မောင်က ပိတ်ထားတဲ့ခေါင်းတလားကို ကြည့်တယ်။ “တစ်ယောက်က ရောက်ပြီးပြီ။”",
+    g: "“တခြားသူတွေရော မလာသေးဘူးလား ဦး။” ဦးတင်မောင်က ပိတ်ထားတဲ့ခေါင်းတလားကို ကြည့်တယ်။ “တစ်ယောက်က ရောက်ပြီးပြီ။”",
     p: "Close on U Tin Maung under the bulb, his face turned to look steadily at something off to "
-      + "one side, his expression mild and matter-of-fact. ⚠️ HE IS NOT SMILING AND NOT JOKING.",
-    u: ["“တခြားသူတွေရော မလာသေးဘူးလား။”",
+      + "one side, his expression mild and matter-of-fact. ⚠️ HE IS NOT JOKING.",
+    u: ["“တခြားသူတွေရော မလာသေးဘူးလား ဦး။”",
         "ဦးတင်မောင်က ပိတ်ထားတဲ့ခေါင်းတလားကို ကြည့်တယ်။",
         "“တစ်ယောက်က ရောက်ပြီးပြီ။”"] },
 
-  { t: "He Did Not Laugh", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
-    g: "ကျွန်တော် ရယ်လိုက်တယ်။ “သူက အထဲမှာ စောင့်နေတာလား။” ဦးတင်မောင် မရယ်ဘူး။",
-    p: "Close on Ne Lin under the bulb caught mid-laugh, the grin already faltering at one corner "
-      + "as he realises nobody is laughing with him.",
-    u: ["ကျွန်တော် ရယ်လိုက်တယ်။ “သူက အထဲမှာ စောင့်နေတာလား။”",
-        "ဦးတင်မောင် မရယ်ဘူး။"] },
+  { t: "A Knuckle on Wood", c: [[3, "stinger"]], l: "နောက်ခန်း", k: "insert",
+    g: "⚠️ အဲဒီအချိန် ပိတ်ထားတဲ့ခေါင်းတလားထဲက — တောက်။ သစ်သားကို လက်သည်းနဲ့ တစ်ချက်တို့လိုက်သလို အသံကြားရတယ်။",
+    p: "⚠️ NOTHING MOVES IN THIS FRAME. Tight insert on the flat closed lid of the far coffin, the "
+      + "plain wood grain filling the image, one bulb-lit edge. The lid is completely still and "
+      + "completely seated. Fine dust on the surface.",
+    u: ["ကျွန်တော် ရယ်မိတယ်။ “အထဲမှာ ဝင်လှဲနေပြီးသားလား။” သူက ခေါင်းညိတ်တယ်။",
+        "အဲဒီအချိန် ပိတ်ထားတဲ့ခေါင်းတလားထဲက—",
+        "သစ်သားကို လက်သည်းနဲ့ တစ်ချက်တို့လိုက်သလို အသံကြားရတယ်။"] },
 
-  { t: "Half the Money First", l: "နောက်ခန်း", k: "insert",
-    g: "ကျွန်တော့်လက်ထဲ ငွေတစ်ဝက် အရင်ထည့်ပေးတယ်။ “ပြီးရင် ကျန်တာပေးမယ်။”",
-    p: "Insert on an older man's hands laying a folded bundle of Myanmar banknotes into a younger "
-      + "man's open palm under the bulb. ⚠️ NO NUMERALS OR WRITING ARE LEGIBLE on the notes. "
-      + "Ordinary, careful, businesslike.",
-    u: ["ကျွန်တော့်လက်ထဲ ငွေတစ်ဝက် အရင်ထည့်ပေးတယ်။",
-        "“ပြီးရင် ကျန်တာပေးမယ်။”",
-        "ကျွန်တော်က ငွေကို အိတ်ထဲထည့်ပြီး အခန်းထဲ ထပ်ကြည့်တယ်။"] },
+  { t: "He Spoke to It Differently", l: "နောက်ခန်း", k: "tin",
+    w: ["ဦးတင်မောင်"],
+    g: "⚠️ ဦးတင်မောင်က အဲဒီခေါင်းတလားပေါ် လက်တင်တယ် — “ရောက်လာပြီ။ ခဏစောင့်။” သူပြောတဲ့အသံက အရမ်းနူးညံ့နေတယ်။",
+    p: "U Tin Maung standing at the closed coffin with one flat palm laid gently on its lid, "
+      + "leaning slightly towards it and speaking down at the wood. ⚠️ HIS FACE HAS COMPLETELY "
+      + "CHANGED FROM THE ONE HE USES ON NE LIN — soft, warm and privately tender, the way a "
+      + "parent speaks to a child who is ill.",
+    u: ["ကျွန်တော်ကတော့ သရုပ်ဆောင်တစ်ယောက် အတွင်းကနေ ပြန်အချက်ပြတာလို့ပဲ ထင်လိုက်တယ်။",
+        "ဦးတင်မောင်က အဲဒီခေါင်းတလားပေါ် လက်တင်တယ်။ “ရောက်လာပြီ။ ခဏစောင့်။”",
+        "သူပြောတဲ့အသံက ကျွန်တော့်ကို ပြောတဲ့အသံနဲ့ မတူဘူး။ အရမ်းနူးညံ့နေတယ်။"] },
 
-  { t: "The Room Was Cold", l: "နောက်ခန်း", k: "wide", w: ["နေလင်း"],
-    g: "ပြတင်းပေါက်တွေကို အဝတ်မည်းနဲ့ ကာထားတယ်။ လေမဝင်လို့ အိုက်သင့်ပေမယ့် အခန်းက အေးနေတယ်။ အရမ်းအေးတယ်။",
-    p: "Wide on the sealed back room with Ne Lin standing small in the middle of it, looking up at "
-      + "the black cloth nailed over the windows, his arms folded across himself. ⚠️ THE ROOM "
-      + "LOOKS AIRLESS AND SHUT UP but he is holding himself against cold. Bare bulb, bare walls.",
-    u: ["ပြတင်းပေါက်တွေကို အဝတ်မည်းနဲ့ ကာထားတယ်။",
-        "လေမဝင်လို့ အိုက်သင့်ပေမယ့် အခန်းက အေးနေတယ်။ အရမ်းအေးတယ်။"] },
+  // ── V · THE ENVELOPES ─────────────────────────────────────────────────────
+  { t: "Envelopes With Names on Them", c: [[2, "bigstinger"]], l: "နောက်ခန်း",
+    k: "table", rev: "envelopes 1 of 3",
+    g: "⚠️ စားပွဲပေါ်မှာ စာအိတ်တချို့ တန်းစီထားတယ်။ တစ်အိတ်ပေါ်မှာ ကျွန်တော့်နာမည်။ ကျန်တဲ့အိတ်တွေမှာလည်း ယောက်ျားနာမည်တွေ။",
+    p: "⚠️ TEXT PERMITTED, AND IT IS THE POINT. Looking down at the wooden table: four fat brown "
+      + "envelopes standing in a neat row, ⚠️ EACH WITH A DIFFERENT MAN'S NAME HANDWRITTEN ON IT "
+      + "IN BURMESE BALLPOINT in the same tidy older hand. The names are the only text in the "
+      + "image. Three are worn at the corners and one looks newer.",
+    u: ["စားပွဲပေါ်မှာ စာအိတ်တချို့ တန်းစီထားတယ်။",
+        "တစ်အိတ်ပေါ်မှာ ကျွန်တော့်နာမည် ရေးထားတယ်။",
+        "ကျန်တဲ့အိတ်တွေမှာလည်း ယောက်ျားနာမည်တွေ။"] },
 
-  { t: "Water Under the Closed One", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "floor",
-    g: "⚠️ ပိတ်ထားတဲ့ခေါင်းတလားအောက်မှာတော့ ရေစက်တွေ ကျနေတယ်။",
-    p: "⚠️ THE FIRST THING THAT IS ACTUALLY WRONG. Camera low on the concrete floor beneath the "
-      + "closed coffin: a spreading dark patch of water on the concrete, and a single drop caught "
-      + "falling from the seam of the coffin above. The trestle legs either side. Everything else "
-      + "in the room is dry.",
-    u: ["ပိတ်ထားတဲ့ခေါင်းတလားအောက်မှာတော့ ရေစက်တွေ ကျနေတယ်။",
-        "“အောက်မှာ ရေစိုနေတာနော် ဦး။” “သုတ်လိုက်မယ်။ မင်း အရင်ဝင်လှဲလိုက်။”"] },
+  { t: "Half Now, Half After", l: "နောက်ခန်း", k: "insert",
+    g: "ဦးတင်မောင်က ကျွန်တော့်နာမည်ပါတဲ့အိတ်ကို ဖွင့်ပြီး ငွေတစ်ဝက် ပေးတယ်။ “ကျန်တာက ပြီးမှနော်။”",
+    p: "Insert on an older man's hands drawing a folded bundle of Myanmar banknotes out of one of "
+      + "the brown envelopes and laying it in a younger man's open palm. ⚠️ NO NUMERALS OR "
+      + "WRITING ARE LEGIBLE on the notes. Bulb light, wooden table beneath.",
+    u: ["ဦးတင်မောင်က ကျွန်တော့်နာမည်ပါတဲ့အိတ်ကို ဖွင့်ပြီး ငွေတစ်ဝက် ပေးတယ်။",
+        "“ကျန်တာက ပြီးမှနော်။” “ဟုတ်ကဲ့။”"] },
 
-  // ── III · INTO THE COFFIN ─────────────────────────────────────────────────
-  { t: "It Fitted Me Exactly", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "inside",
+  { t: "The Graduation Photograph", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "insert",
+    rev: "the son alive",
+    g: "⚠️ စားပွဲပေါ်က ဓာတ်ပုံဘောင်တစ်ခု — လူငယ်တစ်ယောက်ရဲ့ ဘွဲ့ယူပုံ။ သူ့ဘေးမှာ ဦးတင်မောင်။ ဓာတ်ပုံထဲက ဦးတင်မောင်က အခုထက် အများကြီးပျော်နေတယ်။",
+    p: "⚠️ THE ONLY TIME WE SEE THE SON ALIVE. Insert on a framed graduation photograph standing "
+      + "on the table: a warm-skinned smiling young man in gown and cap holding a certificate, "
+      + "and beside him U Tin Maung with an arm round his shoulders, beaming — ⚠️ VISIBLY, "
+      + "ENORMOUSLY HAPPY, a completely different man from the one in this room. Dusty glass, "
+      + "bulb light.",
+    u: ["ကျွန်တော် ငွေကို ထည့်နေတုန်း စားပွဲပေါ်က ဓာတ်ပုံဘောင်တစ်ခုကို မြင်တယ်။",
+        "လူငယ်တစ်ယောက်ရဲ့ ဘွဲ့ယူပုံ။ သူ့ဘေးမှာ ဦးတင်မောင်။",
+        "ဓာတ်ပုံထဲက ဦးတင်မောင်က အခုထက် အများကြီးပျော်နေတယ်။"] },
+
+  { t: "He Turned It Face Down", l: "နောက်ခန်း", k: "insert",
+    g: "သူ ကျွန်တော်ကြည့်နေတာကို မြင်တော့ ဘောင်ကို အသာမှောက်ထားလိုက်တယ်။",
+    p: "Insert on the table: an older man's hand tipping the standing photo frame forward so it "
+      + "lies face down on the wood, the plain backing board and its little stand now uppermost. "
+      + "⚠️ THE GESTURE IS QUIET AND UNHURRIED, not a snatch. Bulb light.",
+    u: ["သူ ကျွန်တော်ကြည့်နေတာကို မြင်တော့ ဘောင်ကို အသာမှောက်ထားလိုက်တယ်။"] },
+
+  { t: "Leave Your Things Here", c: [[3, "stinger"]], l: "နောက်ခန်း", k: "table",
+    rev: "envelopes 2 of 3",
+    g: "⚠️ “မျက်မှန်၊ နာရီ၊ ဖုန်းတွေ ဒီမှာထားခဲ့။” သူက ဖုန်းကို ယူပြီး အသံပိတ်ပေးတယ်။ ပြီးတော့ ကျွန်တော့်နာမည်ပါတဲ့ စာအိတ်ထဲ ထည့်လိုက်တယ်။",
+    p: "Looking down at the table: an older man's hands sliding a phone, a wristwatch and a set "
+      + "of keys into the brown envelope with a name on it, and folding the flap down. ⚠️ THE "
+      + "OTHER THREE NAMED ENVELOPES SIT IN A ROW BESIDE IT, all equally full. ⚠️ The handwritten "
+      + "names are the only text in the image. Bulb light.",
+    u: ["“မျက်မှန်၊ နာရီ၊ ဖုန်းတွေ ဒီမှာထားခဲ့။ ရိုက်တဲ့အထဲ မပါစေချင်ဘူး။”",
+        "ကျွန်တော် ပစ္စည်းတွေ ချွတ်ချတယ်။ သူက ဖုန်းကို ယူပြီး အသံပိတ်ပေးတယ်။",
+        "ပြီးတော့ အားလုံးကို ကျွန်တော့်နာမည်ပါတဲ့ စာအိတ်ထဲ ထည့်လိုက်တယ်။"] },
+
+  { t: "Twice This Time", l: "နောက်ခန်း", k: "insert",
+    g: "နောက်က ခေါင်းတလားဆီက အသံထပ်ကြားရတယ်။ ဒီတစ်ခါ — တောက်။ တောက်။",
+    p: "The same tight insert on the flat closed lid of the far coffin as before, ⚠️ IDENTICAL "
+      + "AND IDENTICALLY STILL — the same wood grain, the same dust, nothing moved at all. Bulb "
+      + "light from above.",
+    u: ["နောက်က ခေါင်းတလားဆီက အသံထပ်ကြားရတယ်။",
+        "ဒီတစ်ခါ — တောက်။ တောက်။"] },
+
+  { t: "He Looked at the Clock", l: "နောက်ခန်း", k: "clock", rev: "clock 2 of 5",
+    g: "ဦးတင်မောင်က နာရီကို လှမ်းကြည့်တယ်။ “စရအောင်။”",
+    p: "OCCURRENCE 2 OF 5 OF THE CLOCK. The identical framing — the same plain round face filling "
+      + "the frame, no numerals, the red second hand mid-sweep. ⚠️ THE HANDS HAVE MOVED ON from "
+      + "the first occurrence. Nothing else in the image has changed.",
+    u: ["ဦးတင်မောင်က နာရီကို လှမ်းကြည့်တယ်။ ပြီးတော့ ပြောလိုက်တယ် — “စရအောင်။”"] },
+
+  // ── VI · START ────────────────────────────────────────────────────────────
+  { t: "It Fitted Me Exactly", l: "နောက်ခန်း", k: "inside",
     w: ["နေလင်း"],
-    g: "⚠️ ခေါင်းတလားထဲ ဝင်လှဲလိုက်တော့ ကျွန်တော့်ကိုယ်နဲ့ အံကိုက်ဖြစ်နေတယ်။",
-    p: "OCCURRENCE 1 OF 9 OF THE VIEW FROM INSIDE. Establish it precisely. From flat on the white "
+    g: "ခေါင်းတလားထဲ ဝင်လှဲလိုက်တော့ ကျွန်တော့်ကိုယ်နဲ့ အံကိုက်ပဲ။",
+    p: "OCCURRENCE 1 OF 8 OF THE VIEW FROM INSIDE. Establish it precisely. From flat on the "
       + "lining looking straight up: the ceiling, the bare bulb burning directly overhead, and "
       + "the wooden rim of the coffin closing the frame on all four sides. ⚠️ THE RIM IS CLOSE ON "
       + "BOTH SIDES — the box is only just wider than a man.",
-    u: ["ခေါင်းတလားထဲ ဝင်လှဲလိုက်တော့ ကျွန်တော့်ကိုယ်နဲ့ အံကိုက်ဖြစ်နေတယ်။",
-        "ပခုံးနှစ်ဖက်က သစ်သားနံရံနဲ့ ထိလုနီးပါး။",
-        "ခြေထောက်ဆန့်လိုက်ရင် အဆုံးကို နည်းနည်းပဲလိုတယ်။"] },
+    u: ["ခေါင်းတလားထဲ ဝင်လှဲလိုက်တော့ ကျွန်တော့်ကိုယ်နဲ့ အံကိုက်ပဲ။",
+        "ဦးတင်မောင်က ကျွန်တော့်လက်နှစ်ဖက်ကို ရင်ဘတ်ပေါ် တင်ပေးတယ်။"] },
 
-  { t: "He Crossed My Hands", l: "နောက်ခန်း", k: "insert", w: ["နေလင်း", "ဦးတင်မောင်"],
-    g: "ဦးတင်မောင်က ကျွန်တော့်လက်နှစ်ဖက်ကို ရင်ဘတ်ပေါ် တင်ပေးတယ်။",
-    p: "Insert from above on Ne Lin's chest in the white-lined coffin, U Tin Maung's hands "
-      + "carefully folding the younger man's two hands one over the other on his breastbone and "
-      + "settling them. ⚠️ THE GESTURE IS TENDER AND PRACTISED, the way a body is laid out.",
-    u: ["ဦးတင်မောင်က ကျွန်တော့်လက်နှစ်ဖက်ကို ရင်ဘတ်ပေါ် တင်ပေးတယ်။"] },
+  { t: "The Red Thread", c: [[1, "stinger"]], l: "နောက်ခန်း", k: "thread",
+    w: ["နေလင်း"], rev: "thread 1 of 10",
+    g: "⚠️ ချည်နီ ပထမအကြိမ် — လက်ကောက်ဝတ်တစ်ဖက်မှာ ချည်နီတစ်ချောင်း ချည်ပေးတယ်။",
+    p: "OCCURRENCE 1 OF 10 OF THE THREAD. Establish it precisely. Tight insert filling the frame "
+      + "with Ne Lin's wrist against the coffin lining and an older man's fingers pulling a knot "
+      + "of thin RED cotton thread closed around it. ⚠️ MATTE RED COTTON, ABOUT THE THICKNESS OF "
+      + "KITCHEN STRING — this exact colour and thickness returns nine more times.",
+    u: ["လက်ကောက်ဝတ်တစ်ဖက်မှာ ချည်နီတစ်ချောင်း ချည်ပေးတယ်။",
+        "ချည်ရဲ့နောက်တစ်ဖက်က ခေါင်းတလားဘေးကို ကျသွားတယ်။"] },
 
-  { t: "The Red Thread", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "thread",
-    w: ["နေလင်း"], rev: "thread 1 of 11",
-    g: "⚠️ ချည်နီ ပထမအကြိမ် — လက်ကောက်ဝတ်တစ်ဖက်မှာ ချည်နီတစ်ချောင်း ချည်တယ်။",
-    p: "OCCURRENCE 1 OF 11 OF THE THREAD. Establish it precisely. Tight insert filling the frame "
-      + "with Ne Lin's left wrist against the white lining and an older man's fingers pulling a "
-      + "knot of thin RED cotton thread closed around it. ⚠️ THE THREAD IS MATTE RED COTTON, "
-      + "ABOUT THE THICKNESS OF KITCHEN STRING — this exact colour and thickness returns ten more "
-      + "times.",
-    u: ["ပြီးတော့ လက်ကောက်ဝတ်တစ်ဖက်မှာ ချည်နီတစ်ချောင်း ချည်တယ်။",
-        "“ဒါက ဇာတ်ဝင်ခန်းထဲ ပါမှာလား။” “အေး။ မဖြုတ်နဲ့နော်။”"] },
+  { t: "What Is the Thread For", l: "နောက်ခန်း", k: "thread", rev: "thread 2 of 10",
+    g: "“ဒီချည်က ဘာအတွက်လဲ။” “ဇာတ်ဝင်ခန်းထဲမှာ ပါတယ်။”",
+    p: "OCCURRENCE 2 OF 10. The same tight framing, now on the outer edge of the coffin: the red "
+      + "thread running up over the wooden rim and dropping away down the far side, ⚠️ GOING OUT "
+      + "OF FRAME AND NOT ARRIVING ANYWHERE we can see. Slack and unremarkable.",
+    u: ["“ဒီချည်က ဘာအတွက်လဲ။” “ဇာတ်ဝင်ခန်းထဲမှာ ပါတယ်။”",
+        "“ကျွန်တော် ဘာလုပ်ပေးရမလဲ။” “မလှုပ်ဘဲ လှဲနေပေး။ ဦးက ပြီးပြီဆိုမှ ထ။”"] },
 
-  { t: "I Could Not See Where It Went", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "thread",
-    rev: "thread 2 of 11",
-    g: "⚠️ ချည်ရဲ့ နောက်တစ်ဖက်က ခေါင်းတလားဘေးကို ကျသွားတယ်။ ဘယ်အထိ ရောက်နေလဲ ကျွန်တော် မမြင်ရဘူး။",
-    p: "OCCURRENCE 2 OF 11. The same tight framing, now on the outer edge of the coffin: the red "
-      + "thread runs up over the wooden rim and drops away down the far side, ⚠️ GOING OUT OF "
-      + "FRAME TOWARDS THE OTHER COFFIN AND NOT ARRIVING ANYWHERE we can see. Slack, hanging, "
-      + "unremarkable.",
-    u: ["ချည်ရဲ့ နောက်တစ်ဖက်က ခေါင်းတလားဘေးကို ကျသွားတယ်။",
-        "ဘယ်အထိ ရောက်နေလဲ ကျွန်တော် မမြင်ရဘူး။"] },
+  { t: "He Straightened My Collar", l: "နောက်ခန်း", k: "inside", w: ["ဦးတင်မောင်"],
+    g: "သူ ပြောပြီး ကျွန်တော့်အင်္ကျီကော်လံကို အသာပြင်ပေးတယ်။ ကင်မရာနားက ခလုတ်နှိပ်သံ ကြားရတယ်။ “စပြီ။”",
+    p: "OCCURRENCE 2 OF 8 OF THE VIEW FROM INSIDE. The same framing, with U Tin Maung leaning in "
+      + "over the opening and filling the upper half of it, blocking part of the bulb, ⚠️ HIS TWO "
+      + "HANDS COMING DOWN INTO THE NEAR FOREGROUND to settle a shirt collar flat. His face is "
+      + "kind and absorbed in the small task.",
+    u: ["သူ ပြောပြီး ကျွန်တော့်အင်္ကျီကော်လံကို အသာပြင်ပေးတယ်။",
+        "ကျွန်တော် မျက်လုံးမှိတ်လိုက်တယ်။",
+        "ကင်မရာနားက ခလုတ်နှိပ်သံ ကြားရတယ်။ “စပြီ။”"] },
 
-  { t: "You Are the Dead One", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "inside",
-    w: ["ဦးတင်မောင်"],
-    g: "⚠️ “မင်းက လူသေ။ ဘာအသံကြားကြား မလှုပ်နဲ့။ ဟိုဘက်ကလူ ထလာလည်း မျက်လုံးမဖွင့်နဲ့။”",
-    p: "OCCURRENCE 2 OF 9 OF THE VIEW FROM INSIDE. The same framing, and now U Tin Maung's head "
-      + "and shoulders lean in over the opening and fill the upper half of it, blocking part of "
-      + "the bulb, looking straight down into the lens as he gives instructions. ⚠️ HIS FACE IS "
-      + "KIND AND PATIENT.",
-    u: ["ဦးတင်မောင်က ကျွန်တော့်မျက်နှာနား ငုံ့လာတယ်။",
-        "“မင်းက လူသေ။ ဘာအသံကြားကြား မလှုပ်နဲ့။”",
-        "“ဟိုဘက်ကလူ ထလာလည်း မျက်လုံးမဖွင့်နဲ့။ ဦးက ရပ်ဆိုမှ ရပ်။”"] },
-
-  { t: "Start", l: "နောက်ခန်း", k: "insert", w: ["ဦးတင်မောင်"],
-    g: "သူ ကင်မရာနား ပြန်သွားတယ်။ ခလုတ်နှိပ်သံတစ်ချက် ကြားရတယ်။ “စပြီ။”",
-    p: "Insert on U Tin Maung's hand at the back of the tripod camera, one finger pressing a "
-      + "button on the body. ⚠️ FRAMED FROM BEHIND THE CAMERA so the lens end is out of shot. "
-      + "Ordinary, unhurried.",
-    u: ["သူ ကင်မရာနား ပြန်သွားတယ်။",
-        "ခလုတ်နှိပ်သံတစ်ချက် ကြားရတယ်။ “စပြီ။”",
-        "ကျွန်တော် မျက်လုံးမှိတ်လိုက်တယ်။"] },
-
-  // ── IV · THE LID NEXT DOOR ────────────────────────────────────────────────
-  { t: "At First It Was Quiet", l: "နောက်ခန်း", k: "inside", w: ["နေလင်း"],
-    g: "ပထမတော့ ငြိမ်နေတယ်။ မီးလုံးအသံနဲ့ ဦးတင်မောင် လမ်းလျှောက်သံပဲ ကြားရတယ်။",
-    p: "OCCURRENCE 3 OF 9 OF THE VIEW FROM INSIDE. The same framing with nobody leaning in: just "
-      + "the ceiling, the burning bulb and the wooden rim. ⚠️ NE LIN'S CLOSED EYELIDS AND THE "
-      + "BRIDGE OF HIS NOSE are in the extreme near foreground at the bottom of frame, soft and "
-      + "out of focus. Completely still.",
-    u: ["ပထမတော့ ငြိမ်နေတယ်။",
-        "မီးလုံးက အသံတိုးတိုးထွက်နေတာနဲ့ ဦးတင်မောင် လမ်းလျှောက်သံပဲ ကြားရတယ်။"] },
-
-  { t: "The Other Lid Moved", c: [[1, "stinger"]], l: "နောက်ခန်း", k: "two",
-    g: "⚠️ ခဏကြာတော့ ဘေးကခေါင်းတလားအဖုံး ရွှေ့သံ။ ကျွီ… ပြီးတော့ အဖုံးကို ကြမ်းပြင်ပေါ် ချလိုက်သံ။",
+  { t: "The Other Lid Moved", l: "နောက်ခန်း", k: "two",
+    g: "ခဏကြာတော့ ဘေးက ခေါင်းတလားအဖုံး ရွှေ့သံ။ ကျွီ… ပြီးတော့ အနံ့တစ်မျိုး ရလာတယ်။",
     p: "The two coffins from the foot as established — ⚠️ AND THE LID OF THE FAR ONE HAS BEEN "
-      + "LIFTED CLEAR AND IS LEANING AGAINST THE TRESTLE ON THE FLOOR. The far coffin now stands "
-      + "open, its interior dark and not readable from this angle. U Tin Maung is not in shot. "
-      + "The near coffin is unchanged.",
-    u: ["ခဏကြာတော့ ဘေးကခေါင်းတလားအဖုံး ရွှေ့သံ ကြားရတယ်။",
-        "ပြီးတော့ သစ်သားအဖုံးကို ကြမ်းပြင်ပေါ် ချလိုက်သံ။"] },
+      + "SLID CLEAR AND IS PROPPED AGAINST THE TRESTLE ON THE FLOOR. The far coffin now stands "
+      + "open, its interior dark and not readable from this angle. Nobody is in shot.",
+    u: ["ခဏကြာတော့ ဘေးက ခေါင်းတလားအဖုံး ရွှေ့သံ ကြားရတယ်။",
+        "ပြီးတော့ အနံ့တစ်မျိုး ရလာတယ်။",
+        "ရေစိုအဝတ်တွေကို အလုံပိတ်ထားလို့ ထွက်လာတဲ့အနံ့လိုမျိုး။"] },
 
-  { t: "The Smell Changed", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
-    g: "အခန်းထဲက အနံ့ ပြောင်းသွားတယ်။ မသန့်တဲ့ရေနဲ့ စိုထိုင်းနေတဲ့အဝတ်ကို အလုံပိတ်ထားသလို အနံ့မျိုး။",
-    p: "Close on Ne Lin's face lying in the coffin with his eyes shut, ⚠️ HIS NOSE AND UPPER LIP "
-      + "WRINKLING involuntarily against a smell. Everything else about him is still. Bulb light "
-      + "from directly above.",
-    u: ["အခန်းထဲက အနံ့ ပြောင်းသွားတယ်။",
-        "မသန့်တဲ့ရေနဲ့ စိုထိုင်းနေတဲ့အဝတ်ကို အလုံပိတ်ထားသလို အနံ့မျိုး။",
-        "ကျွန်တော် နှာခေါင်းရှုံ့မိတယ်။ “မလှုပ်နဲ့ နေလင်း။”"] },
+  { t: "This One Is Quiet", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
+    g: "⚠️ ဦးတင်မောင်က တိုးတိုးပြောတယ် — “ဒီတစ်ယောက်က ငြိမ်တယ်။ အရင်ကလူတွေလို မဟုတ်ဘူး။”",
+    p: "Close on Ne Lin lying in the coffin with his eyes shut, his nose and upper lip wrinkling "
+      + "against a smell — ⚠️ AND HIS EYEBROWS HAVE JUST DRAWN TOGETHER at something he has "
+      + "heard. Everything else about him is still. Bulb light from above.",
+    u: ["ကျွန်တော် နှာခေါင်းရှုံ့မိတယ်။ ဦးတင်မောင်က တိုးတိုးပြောတယ်။",
+        "“ဒီတစ်ယောက်က ငြိမ်တယ်။ အရင်ကလူတွေလို မဟုတ်ဘူး။”",
+        "ကျွန်တော် မျက်လုံးဖွင့်မလို့လုပ်ပြီး ပြန်ထိန်းလိုက်တယ်။"] },
 
-  { t: "A Long Breath Beside Me", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "inside",
+  { t: "Do Your Job", l: "နောက်ခန်း", k: "inside", w: ["နေလင်း"],
+    g: "ရိုက်ကွင်းထဲမှာ စကားပြောနေကြတာပဲ။ ကိုယ့်အလုပ်ကိုယ် လုပ်ရမယ်။",
+    p: "OCCURRENCE 3 OF 8 OF THE VIEW FROM INSIDE. The same framing with nobody leaning in — "
+      + "ceiling, burning bulb, wooden rim. ⚠️ NE LIN'S CLOSED EYELIDS AND THE BRIDGE OF HIS NOSE "
+      + "are in the extreme near foreground at the bottom of frame, soft and out of focus. "
+      + "Completely still.",
+    u: ["ရိုက်ကွင်းထဲမှာ စကားပြောနေကြတာပဲ။",
+        "ကိုယ့်အလုပ်ကိုယ် လုပ်ရမယ်။"] },
+
+  { t: "A Long Breath Beside Me", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "inside",
     w: ["နေလင်း"],
-    g: "⚠️ ဘေးကနေ အသက်ရှူသံ ရှည်ရှည်တစ်ချက် ကြားလာတယ်။ ဟား…",
-    p: "OCCURRENCE 4 OF 9 OF THE VIEW FROM INSIDE. The same framing, unchanged and empty — "
-      + "ceiling, bulb, rim — ⚠️ AND NE LIN'S EYES HAVE SNAPPED OPEN in the near foreground at "
-      + "the bottom of frame, wide and fixed on the ceiling. Nothing else in the picture has "
-      + "moved.",
-    u: ["အဲဒီအချိန် ဘေးကနေ အသက်ရှူသံ ရှည်ရှည်တစ်ချက် ကြားလာတယ်။",
-        "ကျွန်တော့်ရင်ဘတ်ထဲက လေလည်း တစ်ပြိုင်နက် ထွက်သွားတယ်။"] },
+    g: "⚠️ ဘေးကလူက အသက်ရှူလိုက်တယ်။ ရှည်ရှည်ကြီး။ ကျွန်တော့်ရင်ထဲက လေလည်း တစ်ပြိုင်နက်တည်း ထွက်သွားတယ်။",
+    p: "OCCURRENCE 4 OF 8 OF THE VIEW FROM INSIDE. The same framing, unchanged and empty above — "
+      + "⚠️ AND NE LIN'S EYES HAVE SNAPPED OPEN in the near foreground at the bottom of frame, "
+      + "wide and fixed on the ceiling. Nothing else in the picture has moved.",
+    u: ["အဲဒီအချိန် ဘေးကလူက အသက်ရှူလိုက်တယ်။ ရှည်ရှည်ကြီး။",
+        "ကျွန်တော့်ရင်ထဲက လေလည်း တစ်ပြိုင်နက်တည်း ထွက်သွားတယ်။"] },
 
-  { t: "I Could Not Fill My Chest", l: "နောက်ခန်း", k: "insert",
-    w: ["နေလင်း"],
-    g: "အသက်ပြန်ရှူမလို့လုပ်တယ်။ အပြည့်ရှူလို့ မရဘူး။ ရင်ဘတ်ပေါ်မှာ လေးလံတဲ့အရာတစ်ခု တင်ထားသလိုပဲ။",
-    p: "Insert from above on Ne Lin's crossed hands on his chest in the white lining, ⚠️ THE "
-      + "TENDONS STANDING OUT ON THE BACKS OF BOTH HANDS as he strains, the fingers pressed hard "
-      + "against his shirt. His chest is barely lifted. Nothing is on top of him.",
+  { t: "I Could Not Fill My Chest", l: "နောက်ခန်း", k: "insert", w: ["နေလင်း"],
+    g: "အသက်ပြန်ရှူမလို့လုပ်တယ်။ အပြည့်ရှူလို့ မရဘူး။ ရင်ဘတ်ပေါ်မှာ ဖိထားသလို ဖြစ်နေတယ်။",
+    p: "Insert from above on Ne Lin's crossed hands on his chest, ⚠️ THE TENDONS STANDING OUT ON "
+      + "THE BACKS OF BOTH HANDS as he strains, the fingers pressed hard into his shirt. His "
+      + "chest is barely lifted. Nothing is on top of him.",
     u: ["အသက်ပြန်ရှူမလို့လုပ်တယ်။ အပြည့်ရှူလို့ မရဘူး။",
-        "ရင်ဘတ်ပေါ်မှာ လေးလံတဲ့အရာတစ်ခု တင်ထားသလိုပဲ။"] },
+        "ရင်ဘတ်ပေါ်မှာ ဖိထားသလို ဖြစ်နေတယ်။"] },
 
-  { t: "He Was Not Looking at Me", l: "နောက်ခန်း", k: "wide",
-    w: ["ဦးတင်မောင်", "နေလင်း"],
-    g: "ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။ “ဦး… ခဏရပ်ဦး။” ဦးတင်မောင်က ကျွန်တော့်ကို မကြည့်ဘူး။",
-    p: "Wide on the room: Ne Lin lying in the near coffin with his head turned and his eyes open, "
-      + "and ⚠️ U TIN MAUNG STANDING WITH HIS BACK TO HIM at the far coffin, head bowed over it. "
-      + "The gap between the two men is the whole point of the frame.",
-    u: ["ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။ “ဦး… ခဏရပ်ဦး။”",
-        "အသံက ထင်ထားတာထက် တိုးနေတယ်။",
-        "ဦးတင်မောင်က ကျွန်တော့်ကို မကြည့်ဘူး။ ဘေးကခေါင်းတလားနားမှာ ရပ်နေတယ်။"] },
+  // ── VII · MY VOICE ────────────────────────────────────────────────────────
+  { t: "My Own Voice, From the Next Box", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "two",
+    g: "⚠️ ပြီးတော့ ဘေးကနေ ကျွန်တော့်အသံ ကြားလာတယ် — “အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။”",
+    p: "The two coffins from the foot: the near one holding a man lying flat, ⚠️ AND IN THE FAR "
+      + "ONE NOTHING IS VISIBLE ABOVE THE RIM AT ALL — it is simply open and dark. U Tin Maung "
+      + "stands in the gap between them with both hands over his mouth. The bulb burns overhead.",
+    u: ["ပြီးတော့ ဘေးကနေ ကျွန်တော့်အသံ ကြားလာတယ်။",
+        "“အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။”",
+        "မနေ့က ကျွန်တော် ပို့ထားတဲ့အသံဖိုင်။ အသံဖွင့်ပြနေတာ ဖြစ်မှာပေါ့။"] },
 
-  { t: "Son, Can You Hear Your Father", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "tin",
+  { t: "Not From a Speaker", l: "နောက်ခန်း", k: "ne",
+    w: ["နေလင်း"],
+    g: "⚠️ ဒါပေမယ့် အသံက စပီကာတစ်လုံးက ထွက်လာသလို မဟုတ်ဘူး။ ကျွန်တော့်ဘေးမှာ လူတစ်ယောက် လဲလျောင်းပြီး ပြောနေသလို။",
+    p: "Close on Ne Lin's face in the coffin, eyes open, ⚠️ HIS HEAD TURNED AS FAR TO ONE SIDE AS "
+      + "IT WILL GO, straining towards the sound. Every muscle in his neck is engaged and he has "
+      + "moved almost nothing. Bulb light from above.",
+    u: ["ဒါပေမယ့် အသံက စပီကာတစ်လုံးက ထွက်လာသလို မဟုတ်ဘူး။",
+        "ကျွန်တော့်ဘေးမှာ လူတစ်ယောက် လဲလျောင်းပြီး ပြောနေသလို။",
+        "ဦးတင်မောင်ရဲ့ ငိုသံ ကြားလာတယ်။ “အေး… အဖေ ဒီမှာရှိတယ်။”"] },
+
+  { t: "There Was No Filming", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "wide",
     w: ["ဦးတင်မောင်"],
-    g: "⚠️ သူ့မျက်နှာမှာ မျက်ရည်တွေ။ “သား… အဖေ့ကို ကြားလား။”",
-    p: "Close on U Tin Maung looking down into the far coffin, ⚠️ HIS FACE WET WITH TEARS, his "
-      + "mouth shaping a word very quietly. Bulb light from above. He looks like a father at a "
-      + "bedside and nothing else.",
-    u: ["သူ့မျက်နှာမှာ မျက်ရည်တွေ။",
-        "“သား…” သူ တိုးတိုးခေါ်လိုက်တယ်။ “အဖေ့ကို ကြားလား။”"] },
+    g: "⚠️ ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။ အခန်းထဲမှာ သူတစ်ယောက်ပဲ ရပ်နေတယ်။ ရိုက်ကူးရေးလုပ်နေတဲ့ပုံ မရှိဘူး။",
+    p: "Wide on the whole back room. ⚠️ THERE IS NO CREW AND NO EQUIPMENT — no lights, no boom, "
+      + "no cables, no chairs, nobody behind the camera. One old man stands alone in the gap "
+      + "between two coffins with both hands over his mouth, crying. The tripod camera points at "
+      + "nothing. The bulb and the wall clock are the only other things in the room.",
+    u: ["ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။",
+        "အခန်းထဲမှာ သူတစ်ယောက်ပဲ ရပ်နေတယ်။ ရိုက်ကူးရေးလုပ်နေတဲ့ပုံ မရှိဘူး။",
+        "ကင်မရာနောက်မှာလည်း မရှိဘူး။"] },
 
-  { t: "I Could Not Sit Up", l: "နောက်ခန်း", k: "inside", w: ["နေလင်း"],
-    g: "ကျွန်တော် ထထိုင်ဖို့ ကြိုးစားတယ်။ မရဘူး။ လက်နှစ်ဖက်ကိုလည်း မြှောက်လို့မရတော့ဘူး။",
-    p: "OCCURRENCE 5 OF 9 OF THE VIEW FROM INSIDE. The same framing. ⚠️ NE LIN'S CHIN AND "
-      + "STRAINING JAW have entered the bottom of frame as he tries to lift his head off the "
-      + "lining, the cords standing out in his neck — and he has got barely an inch. Ceiling, "
-      + "bulb and rim unchanged above him.",
-    u: ["ကျွန်တော် ထထိုင်ဖို့ ကြိုးစားတယ်။ မရဘူး။",
-        "လက်နှစ်ဖက်ကိုလည်း မြှောက်လို့မရတော့ဘူး။"] },
+  { t: "Stop, I Cannot Breathe", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
+    g: "“ဦး… ခဏရပ်ဦး။ ကျွန်တော် အသက်ရှူမဝဘူး။” သူ ကျွန်တော့်ဘက် မလှည့်ဘူး။",
+    p: "Close on Ne Lin's face in the coffin speaking, his mouth open on a word and his eyes fixed "
+      + "off to one side, ⚠️ HIS EXPRESSION STILL MORE CONFUSED THAN TERRIFIED. Bulb light from "
+      + "above.",
+    u: ["“ဦး… ခဏရပ်ဦး။ ကျွန်တော် အသက်ရှူမဝဘူး။”",
+        "သူ ကျွန်တော့်ဘက် မလှည့်ဘူး။"] },
 
-  // ── V · THE HAND ──────────────────────────────────────────────────────────
-  { t: "A Hand Came Up", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "son", w: ["သား"],
-    g: "⚠️ ဘေးကခေါင်းတလားထဲမှာတော့ လက်တစ်ဖက် ဖြည်းဖြည်း မြှောက်လာတယ်။ ဖြူဖျော့နေတဲ့ လက်။ လက်သည်းတွေက မည်းနေတယ်။",
-    p: "⚠️ THE FIRST SIGHT OF HIM, AND IT IS ONLY A HAND. Framed on the rim of the far coffin: a "
-      + "single hand risen above it and closing on the wooden edge. ⚠️ THE SKIN IS FLAT DRAINED "
-      + "GREY-WHITE AND THE FINGERNAILS ARE DARKENED; the hand is wet and the sleeve at the wrist "
-      + "is soaked. ⚠️ The skin is whole, smooth and unbroken. Nothing else of him is in shot.",
-    u: ["ဒါပေမယ့် ဘေးကခေါင်းတလားထဲမှာတော့ လက်တစ်ဖက် ဖြည်းဖြည်း မြှောက်လာတယ်။",
-        "ဖြူဖျော့နေတဲ့ လက်။ လက်သည်းတွေက မည်းနေတယ်။",
-        "အဲဒီလက်က ခေါင်းတလားအနားကို ကိုင်လိုက်တယ်။"] },
+  { t: "I Never Recorded That Line", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "ne",
+    w: ["နေလင်း"],
+    g: "⚠️ အဲဒီစကားကို ဘေးကလူက ကျွန်တော့်အသံနဲ့ ပြန်ပြောတယ် — “ဦး… ခဏရပ်ဦး။” ဒီစကားကို အသံသွင်းမပို့ထားဘူး။ အခုမှ ပြောလိုက်တာ။",
+    p: "Close on Ne Lin, ⚠️ AND THIS IS THE FRAME WHERE HE UNDERSTANDS — the face going rigid, the "
+      + "eyes widening and locking, all the confusion resolving at once into pure fear. He has "
+      + "stopped straining and gone completely still. Bulb light from above.",
+    u: ["ကျွန်တော် တောင့်သွားတယ်။",
+        "ဒီစကားကို အသံသွင်းမပို့ထားဘူး။ အခုမှ ပြောလိုက်တာ။",
+        "ဘေးက အသံက ဆက်လာတယ်။ “ကျွန်တော် အသက်ရှူမဝဘူး။”"] },
 
-  { t: "My Fingers Locked", l: "နောက်ခန်း", k: "insert", w: ["နေလင်း"],
-    g: "ကျွန်တော့်လက်ချောင်းတွေကတော့ ရင်ဘတ်ပေါ်မှာ တစ်ချောင်းချင်း တောင့်တင်းသွားတယ်။",
-    p: "Insert from above on Ne Lin's crossed hands on his chest, ⚠️ THE FINGERS CURLING RIGID "
-      + "AND SEPARATE, each one drawn in tight and locked. His shirt is bunched under them. "
-      + "Bulb light.",
-    u: ["ကျွန်တော့်လက်ချောင်းတွေကတော့ ရင်ဘတ်ပေါ်မှာ တစ်ချောင်းချင်း တောင့်တင်းသွားတယ်။"] },
+  { t: "We Have the Voice", l: "နောက်ခန်း", k: "tin",
+    w: ["ဦးတင်မောင်"],
+    g: "⚠️ ဦးတင်မောင်က အဲဒီလူကို ပြုံးပြတယ် — “ရပြီ။ အသံရပြီ။”",
+    p: "Close on U Tin Maung looking down into the far coffin, ⚠️ HIS FACE BREAKING INTO AN OPEN "
+      + "DELIGHTED SMILE THROUGH THE TEARS — pure relief and joy, the happiest he has looked since "
+      + "the graduation photograph. Bulb light from above.",
+    u: ["ဦးတင်မောင်က အဲဒီလူကို ပြုံးပြတယ်။ “ရပြီ။ အသံရပြီ။”",
+        "ကျွန်တော် ထအော်ဖို့ ပါးစပ်ဖွင့်လိုက်တယ်။",
+        "အသံ မထွက်တော့ဘူး။"] },
 
-  { t: "I Shouted With Everything I Had", c: [[2, "stinger"]], l: "နောက်ခန်း",
-    k: "ne", w: ["နေလင်း"],
-    g: "⚠️ “ဦးတင်မောင်!” ကျွန်တော် အားကုန်အော်လိုက်တယ်။ အသံက လည်ချောင်းထဲမှာပဲ ကပ်နေတယ်။",
-    p: "Close on Ne Lin's face in the coffin, ⚠️ HIS MOUTH WIDE OPEN IN A FULL SHOUT and every "
-      + "muscle in his face and neck committed to it — and the shot is completely, obviously "
-      + "silent. Eyes screwed half shut, tendons out. Bulb light from above.",
-    u: ["“ဦးတင်မောင်!” ကျွန်တော် အားကုန်အော်လိုက်တယ်။",
-        "အသံက လည်ချောင်းထဲမှာပဲ ကပ်နေတယ်။"] },
+  // ── VIII · HIS FACE ───────────────────────────────────────────────────────
+  { t: "One Single Thread", c: [[3, "bigstinger"]], l: "နောက်ခန်း", k: "thread",
+    w: ["သား"], rev: "thread 3 of 10",
+    g: "⚠️ ချည်နီ တတိယအကြိမ် — အသားဖြူဖျော့နေတဲ့လက်။ လက်ကောက်ဝတ်မှာ ချည်နီတစ်ချောင်း။ ကျွန်တော့်လက်ကောက်ဝတ်ကနေ ထွက်သွားတဲ့ တစ်ချောင်းတည်းသောချည်။",
+    p: "OCCURRENCE 3 OF 10, AND THE ONE THAT EXPLAINS THE FILM. The same tight framing, pulled "
+      + "just wide enough to hold both ends at once: ⚠️ ONE CONTINUOUS RED THREAD running from a "
+      + "warm-skinned wrist at one edge of frame, across the gap, to a ⚠️ FLAT GREY-WHITE WRIST "
+      + "with darkened nails and a soaked cuff at the other edge. One thread, two wrists, nothing "
+      + "else in shot.",
+    u: ["ဘေးကခေါင်းတလားအနားကိုတော့ လက်တစ်ဖက်က လှမ်းကိုင်လိုက်တယ်။",
+        "အသားဖြူဖျော့နေတဲ့လက်။ လက်ကောက်ဝတ်မှာ ချည်နီတစ်ချောင်း။",
+        "ကျွန်တော့်လက်ကောက်ဝတ်ကနေ ထွက်သွားတဲ့ တစ်ချောင်းတည်းသောချည်။"] },
 
-  { t: "He Sat Up", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "wide", w: ["သား", "နေလင်း"],
-    g: "⚠️ ဘေးကခေါင်းတလားထဲကလူ ထထိုင်လာတယ်။ ကျွန်တော်နဲ့ အသက်မတိမ်းမယိမ်း။",
+  { t: "He Sat Up", l: "နောက်ခန်း", k: "wide", w: ["သား", "နေလင်း"],
+    g: "⚠️ ဘေးကလူ ဖြည်းဖြည်း ထထိုင်လာတယ်။ ကျွန်တော့်လည်ပင်းကတော့ ခေါင်းကို မထိန်းနိုင်သလို လေးလာတယ်။",
     p: "Wide on the room from the foot of both coffins. ⚠️ THE SON IS SITTING UPRIGHT IN THE FAR "
-      + "COFFIN, SEEN FROM BEHIND AND SLIGHTLY OFF TO ONE SIDE — the back of his head, his soaked "
-      + "flattened hair and his damp shoulders, his face away from camera. Ne Lin lies flat in "
-      + "the near coffin in the foreground. The bulb hangs between them.",
-    u: ["ဘေးကခေါင်းတလားထဲကလူ ထထိုင်လာတယ်။",
-        "ကျွန်တော်နဲ့ အသက်မတိမ်းမယိမ်း။"] },
+      + "COFFIN, SEEN FROM BEHIND — the back of his head, his soaked flattened hair, his damp "
+      + "shoulders, his face away from camera. Ne Lin lies flat in the near coffin in the "
+      + "foreground. The bulb hangs between them and the wall clock is on the wall beyond.",
+    u: ["ဘေးကလူ ဖြည်းဖြည်း ထထိုင်လာတယ်။",
+        "ကျွန်တော့်လည်ပင်းကတော့ ခေါင်းကို မထိန်းနိုင်သလို လေးလာတယ်။"] },
 
-  { t: "Wet Hair, Colourless Lips", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "son",
-    w: ["သား"],
-    g: "⚠️ ဆံပင်တွေ စိုကပ်နေတယ်။ နှုတ်ခမ်းက အရောင်မရှိဘူး။ ဝတ်ထားတဲ့အင်္ကျီပေါ်မှာ ရေစွန်းရာတွေ။",
-    p: "The son in profile only, from the shoulder up, sitting in the far coffin. ⚠️ HIS SKIN IS "
-      + "FLAT DRAINED GREY-WHITE, HIS BLACK HAIR IS SOAKED AND PLASTERED TO HIS SKULL AND "
-      + "FOREHEAD, AND HIS LIPS ARE THE SAME GREY AS THE REST OF HIM. His collar and shoulder are "
-      + "dark with water. ⚠️ HIS SKIN IS WHOLE AND SMOOTH — unmarked and undamaged everywhere. He "
-      + "faces away from camera.",
-    u: ["ဆံပင်တွေ စိုကပ်နေတယ်။ နှုတ်ခမ်းက အရောင်မရှိဘူး။",
-        "ဝတ်ထားတဲ့အင်္ကျီပေါ်မှာ ရေစွန်းရာတွေ။"] },
+  { t: "The Man From the Photograph", c: [[2, "bigstinger"]], l: "နောက်ခန်း",
+    k: "sonface", w: ["သား"], rev: "the son dead",
+    g: "⚠️ သူ့မျက်နှာကို ကျွန်တော် မြင်လိုက်ရတယ် — စားပွဲပေါ်က ဘွဲ့ယူပုံထဲက လူငယ်။ ဒါပေမယ့် ဓာတ်ပုံထဲကလို မဟုတ်တော့ဘူး။",
+    p: "⚠️ THE SAME FACE AS THE GRADUATION PHOTOGRAPH AND NOTHING LIKE IT. Head-and-shoulders on "
+      + "the son sitting in the coffin, facing camera: the same wide forehead, the same mole near "
+      + "one eyebrow, the same slightly prominent front teeth — but ⚠️ THE SKIN IS FLAT DRAINED "
+      + "GREY-WHITE, THE HAIR IS SOAKED AND PLASTERED DOWN, THE LIPS ARE THE SAME GREY AS THE "
+      + "FACE, AND THE SKIN UNDER BOTH EYES IS DARKENED TO A BRUISE-BLUE SHADOW. His eyes are open "
+      + "and dull. ⚠️ HIS SKIN IS WHOLE AND SMOOTH — unmarked, unbroken, nothing decayed.",
+    u: ["သူ့မျက်နှာကို ကျွန်တော် မြင်လိုက်ရတယ်။ စားပွဲပေါ်က ဘွဲ့ယူပုံထဲက လူငယ်။",
+        "ဒါပေမယ့် ဓာတ်ပုံထဲကလို မဟုတ်တော့ဘူး။",
+        "ဆံပင်တွေ စိုကပ်နေတယ်။ နှုတ်ခမ်းက အရောင်မရှိဘူး။ မျက်လုံးအောက်မှာ ညိုမည်းနေတယ်။"] },
 
-  { t: "His Father Straightened His Head", l: "နောက်ခန်း",
-    k: "son", w: ["သား", "ဦးတင်မောင်"],
-    g: "⚠️ သူ့ခေါင်းက လည်ပင်းပေါ်မှာ မတည်သလို ဘေးတစ်ဖက်ကို ယိုင်နေတယ်။ ဦးတင်မောင်က လက်နှစ်ဖက်နဲ့ အသာပြန်တည့်ပေးတယ်။",
+  { t: "His Father Straightened His Neck", l: "နောက်ခန်း", k: "son",
+    w: ["သား", "ဦးတင်မောင်"],
+    g: "သူ့လည်ပင်းက ဘေးတစ်ဖက်ကို ယိုင်နေတယ်။ ဦးတင်မောင်က အသာပြန်တည့်ပေးတယ်။ “သား… အဖေ့ကို ကြည့်ပါဦး။”",
     p: "From behind the son's shoulder: ⚠️ HIS HEAD HAS FALLEN FAR OVER TO ONE SIDE as though the "
       + "neck will not hold it, and U Tin Maung's two hands are cupping it and gently lifting it "
-      + "straight again. The father's face is visible past him, tender and unhurried. The son's "
-      + "face stays away from camera.",
-    u: ["သူ့ခေါင်းက လည်ပင်းပေါ်မှာ မတည်သလို ဘေးတစ်ဖက်ကို ယိုင်နေတယ်။",
-        "ဦးတင်မောင်က လက်နှစ်ဖက်နဲ့ အသာပြန်တည့်ပေးတယ်။",
-        "“အဖေ ဒီမှာ။ သား မကြောက်နဲ့။” ကျွန်တော်ကသာ ကြောက်နေတာ။"] },
+      + "straight. The father's face is visible past him, tender and pleading. The son's face "
+      + "stays away from camera.",
+    u: ["သူ့လည်ပင်းက ဘေးတစ်ဖက်ကို ယိုင်နေတယ်။ ဦးတင်မောင်က အသာပြန်တည့်ပေးတယ်။",
+        "“သား… အဖေ့ကို ကြည့်ပါဦး။”"] },
 
-  // ── VI · MY VOICE ─────────────────────────────────────────────────────────
-  { t: "He Spoke in My Voice", c: [[3, "bigstinger"]], l: "နောက်ခန်း", k: "son", w: ["သား"],
-    g: "⚠️ သူ့သားက ကျွန်တော် ခုနက ပြောခဲ့တဲ့အသံနဲ့ ပြန်ပြောတယ် — “ဦး… ခဏရပ်ဦး။” ကျွန်တော့်အသံ။",
-    p: "The son turned partly towards camera for the first time, ⚠️ FRAMED FROM THE MOUTH DOWN — "
-      + "his grey lips parted and mid-word, his chin and throat, the wet collar. ⚠️ HIS EYES AND "
-      + "THE UPPER HALF OF HIS FACE ARE ABOVE THE TOP EDGE OF FRAME. Bulb light across the damp "
-      + "skin.",
-    u: ["သူ့သားက ကျွန်တော့်ဘက် လှည့်ကြည့်လာတယ်။",
-        "ပြီးတော့ ကျွန်တော် ခုနက ပြောခဲ့တဲ့အသံနဲ့ ပြန်ပြောတယ်။",
-        "“ဦး… ခဏရပ်ဦး။” ကျွန်တော့်အသံ။"] },
-
-  { t: "This Time Nothing Came Out", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
-    g: "ကျွန်တော် နှုတ်ခမ်းလှုပ်ပြီး ထပ်အော်တယ်။ ဒီတစ်ခါ အသံလုံးဝ မထွက်တော့ဘူး။",
-    p: "Close on Ne Lin's face in the coffin, his mouth working hard on a shout that is plainly "
-      + "producing nothing at all — the effort total and the result none. His eyes are wet now.",
-    u: ["ကျွန်တော် နှုတ်ခမ်းလှုပ်ပြီး ထပ်အော်တယ်။",
-        "ဒီတစ်ခါ အသံလုံးဝ မထွက်တော့ဘူး။"] },
-
-  { t: "He Was Trying the New Sound", l: "နောက်ခန်း", k: "son", w: ["သား"],
-    g: "သူ့သားက ပါးစပ်ကို အနည်းငယ်ဖွင့်ပိတ်လုပ်တယ်။ အသံအသစ်ကို စမ်းနေသလို။",
-    p: "The same mouth-down framing on the son: ⚠️ HIS GREY LIPS OPENING AND CLOSING IN SMALL "
-      + "DELIBERATE SHAPES, the jaw working carefully, like a man testing an instrument he has "
-      + "just been handed. Above the top edge of frame, nothing.",
-    u: ["သူ့သားက ပါးစပ်ကို အနည်းငယ်ဖွင့်ပိတ်လုပ်တယ်။",
-        "အသံအသစ်ကို စမ်းနေသလို။"] },
-
-  { t: "This One Will Do, Father", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "wide",
-    w: ["သား", "ဦးတင်မောင်"],
-    g: "⚠️ ပြီးတော့ ဦးတင်မောင်ကို ကြည့်တယ် — “ဒီလူက ရတယ် အဖေ။” ကျွန်တော့်ဝမ်းဗိုက်ထဲ အေးခဲသွားတယ်။",
-    p: "Wide on the room: the son sitting upright in the far coffin with his head turned to his "
-      + "father, ⚠️ SEEN FROM BEHIND so his face is hidden, and U Tin Maung standing beside him "
-      + "nodding once. Ne Lin lies flat in the near coffin in the foreground, his open eyes "
-      + "turned towards them.",
-    u: ["ပြီးတော့ ဦးတင်မောင်ကို ကြည့်တယ်။ “ဒီလူက ရတယ် အဖေ။”",
-        "ကျွန်တော့်ဝမ်းဗိုက်ထဲ အေးခဲသွားတယ်။",
-        "ဒါ ရုပ်ရှင်ရိုက်နေတာ မဟုတ်ဘူး။"] },
-
-  { t: "Everything of Mine Was Going Across", l: "နောက်ခန်း", k: "two",
-    g: "ကျွန်တော့်အသက်ရှူသံ၊ ကျွန်တော့်အသံ၊ ကျွန်တော့်လှုပ်ရှားမှုတွေ — ဟိုဘက်ကလူဆီ တစ်ခုချင်း ရောက်နေတယ်။",
-    p: "The two coffins from the foot: the near one holding a man lying flat and still, the far "
-      + "one holding a man sitting upright with his back to camera. ⚠️ THE RED THREAD IS VISIBLE "
-      + "RUNNING BETWEEN THEM, over the rim of one and down into the other, slightly taut. The "
-      + "bulb burns between them.",
-    u: ["ကျွန်တော့်အသက်ရှူသံ၊ ကျွန်တော့်အသံ၊ ကျွန်တော့်လှုပ်ရှားမှုတွေ—",
-        "ဟိုဘက်ကလူဆီ တစ်ခုချင်း ရောက်နေတယ်။"] },
-
-  // ── VII · I AM SORRY, NE LIN ──────────────────────────────────────────────
-  { t: "I Am Sorry, Ne Lin", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "inside",
-    w: ["ဦးတင်မောင်"],
-    g: "⚠️ “တောင်းပန်ပါတယ် နေလင်း။” သူ့လက်ထဲမှာ ကျွန်တော့်ခေါင်းတလားအဖုံး။",
-    p: "OCCURRENCE 6 OF 9 OF THE VIEW FROM INSIDE. The same framing — ceiling, bulb, rim — with U "
-      + "Tin Maung leaning in over the opening again, ⚠️ AND A LONG WOODEN COFFIN LID HELD "
-      + "UPRIGHT IN BOTH HIS HANDS, its edge entering the top of frame above him. His face is "
-      + "apologetic and wet.",
-    u: ["ဦးတင်မောင် ကျွန်တော့်နား ပြန်လာတယ်။ “တောင်းပန်ပါတယ် နေလင်း။”",
-        "သူ့လက်ထဲမှာ ကျွန်တော့်ခေါင်းတလားအဖုံး။",
-        "“ဦးသားကို ပြန်ရဖို့ အချိန်အကြာကြီး စောင့်ခဲ့ရတာ။”"] },
-
-  { t: "He Only Needs a Body to Live In", c: [[3, "stinger"]], l: "နောက်ခန်း",
-    k: "tin", w: ["ဦးတင်မောင်"],
-    g: "⚠️ “သားက ရေထဲကျသွားတာ။ ပြန်တွေ့တော့ နောက်ကျသွားပြီ။ ဒါပေမယ့် သူ့ကို ပြန်ခေါ်လို့ရတယ်။ နေစရာ ကိုယ်ခန္ဓာပဲ လိုတာ။”",
-    p: "Close on U Tin Maung explaining, reasonable and gentle, his eyes wet and his voice "
-      + "evidently soft. ⚠️ HE IS EXPLAINING SOMETHING PRACTICAL, not gloating and not raving — "
-      + "the face of a man who worked out a solution a long time ago.",
-    u: ["ကျွန်တော် ခေါင်းခါဖို့ ကြိုးစားတယ်။ ခေါင်းက အနည်းငယ်ပဲ လှုပ်တယ်။",
-        "“သားက ရေထဲကျသွားတာ။ ပြန်တွေ့တော့ နောက်ကျသွားပြီ။”",
-        "“ဒါပေမယ့် သူ့ကို ပြန်ခေါ်လို့ရတယ်။ နေစရာ ကိုယ်ခန္ဓာပဲ လိုတာ။”"] },
-
-  { t: "It Will Not Hurt", l: "နောက်ခန်း", k: "insert", w: ["ဦးတင်မောင်", "နေလင်း"],
-    g: "ကျွန်တော့်မျက်နှာကို သူ လက်နဲ့ပွတ်ပေးတယ်။ “မင်း နာမှာမဟုတ်ပါဘူး။” ကျွန်တော် မျက်ရည်ကျလာတယ်။",
-    p: "Insert on an older man's hand stroking a younger man's forehead and hair back from it, "
-      + "the way you would comfort a child. ⚠️ A TEAR IS RUNNING SIDEWAYS FROM THE CORNER OF NE "
-      + "LIN'S EYE towards his ear. White lining beneath, bulb light above.",
-    u: ["ကျွန်တော့်မျက်နှာကို သူ လက်နဲ့ပွတ်ပေးတယ်။ “မင်း နာမှာမဟုတ်ပါဘူး။”",
-        "ကျွန်တော် မျက်ရည်ကျလာတယ်။"] },
-
-  { t: "My Legs Went Numb", l: "နောက်ခန်း", k: "son", w: ["သား"],
-    g: "သူ့သားက ခေါင်းတလားဘေးကနေ ခြေထောက်ချလိုက်တယ်။ ကျွန်တော့်ခြေထောက်နှစ်ဖက်လည်း ချက်ချင်းထုံလာတယ်။",
-    p: "Framed low on the side of the far coffin: ⚠️ TWO BARE GREY-WHITE FEET AND ANKLES SWUNG "
-      + "OVER THE EDGE and hanging down, wet, the trouser hems dark and clinging, water running "
-      + "off a heel onto the concrete. Nothing above the knee is in shot.",
-    u: ["သူ့သားက ခေါင်းတလားဘေးကနေ ခြေထောက်ချလိုက်တယ်။",
-        "ကျွန်တော့်ခြေထောက်နှစ်ဖက်လည်း ချက်ချင်းထုံလာတယ်။"] },
-
-  // ── VIII · THE THREAD ─────────────────────────────────────────────────────
-  { t: "The Thread Went Tight", c: [[1, "stinger"]], l: "နောက်ခန်း", k: "thread",
-    w: ["နေလင်း"], rev: "thread 3 of 11",
-    g: "⚠️ ချည်နီ တတိယအကြိမ် — အဲဒီအချိန်မှာ ကျွန်တော့်လက်ကောက်ဝတ်က ချည်နီ တင်းသွားတယ်။",
-    p: "OCCURRENCE 3 OF 11. The same tight framing on Ne Lin's wrist against the white lining — "
-      + "⚠️ AND THE RED THREAD IS NOW DRAWN DEAD STRAIGHT AND TAUT, pulling the skin of his wrist "
-      + "into a small pucker under the loop and lifting clear of the lining as it runs out of "
-      + "frame.",
-    u: ["အဲဒီအချိန်မှာ ကျွန်တော့်လက်ကောက်ဝတ်က ချည်နီ တင်းသွားတယ်။",
-        "ကျွန်တော် မျက်လုံးအောက်ကို အားစိုက်ကြည့်တယ်။"] },
-
-  { t: "The Other End Was on His Wrist", c: [[2, "bigstinger"]], l: "နောက်ခန်း",
-    k: "thread", w: ["သား"], rev: "thread 4 of 11",
-    g: "⚠️ ချည်နီ စတုတ္ထအကြိမ် — ချည်ရဲ့ နောက်တစ်ဖက်က သူ့သားရဲ့ လက်ကောက်ဝတ်မှာ။",
-    p: "OCCURRENCE 4 OF 11. The same tight framing, now at the other end: the red thread tied "
-      + "around a ⚠️ FLAT GREY-WHITE WRIST with darkened nails below it and a soaked cuff above. "
-      + "The thread runs taut out of frame. ⚠️ The skin is whole and smooth.",
-    u: ["ချည်ရဲ့ နောက်တစ်ဖက်က—",
-        "သူ့သားရဲ့ လက်ကောက်ဝတ်မှာ။"] },
-
-  { t: "One Turn", l: "နောက်ခန်း", k: "thread", w: ["သား"],
-    rev: "thread 5 of 11",
-    g: "⚠️ ချည်နီ ပဉ္စမအကြိမ် — သူ့သားက ချည်ကို လက်ချောင်းပေါ် ရစ်ယူနေတယ်။ တစ်ရစ်။ ကျွန်တော့်ရင်ဘတ် ပိုတင်းလာတယ်။",
-    p: "OCCURRENCE 5 OF 11. The same tight framing: a grey-white index finger with the red thread "
-      + "⚠️ WOUND ONCE AROUND IT, the coil sitting clearly against the pale skin and the rest of "
-      + "the thread running away taut out of frame. Darkened nail. Deliberate, unhurried.",
-    u: ["သူ့သားက ချည်ကို လက်ချောင်းပေါ် ရစ်ယူနေတယ်။ တစ်ရစ်။",
-        "ကျွန်တော့်ရင်ဘတ် ပိုတင်းလာတယ်။"] },
-
-  { t: "Another Turn", l: "နောက်ခန်း", k: "thread", w: ["သား"],
-    rev: "thread 6 of 11",
-    g: "⚠️ ချည်နီ ဆဋ္ဌမအကြိမ် — နောက်တစ်ရစ်။ သူ့မျက်နှာမှာ အရောင်နည်းနည်း ပြန်ဝင်လာတယ်။",
-    p: "OCCURRENCE 6 OF 11. The identical framing one beat later: ⚠️ THE THREAD IS NOW WOUND "
-      + "TWICE around the same finger, two coils side by side — and ⚠️ THE SKIN OF THAT FINGER "
-      + "HAS A FAINT WARM TINT COMING BACK INTO IT, no longer quite the flat grey of the shot "
-      + "before. The nail is still dark.",
-    u: ["နောက်တစ်ရစ်။",
-        "သူ့မျက်နှာမှာ အရောင်နည်းနည်း ပြန်ဝင်လာတယ်။",
-        "ကျွန်တော် နားလည်သွားတယ်။ သူ ကျွန်တော့်ကို ဆွဲယူနေတာ။"] },
-
-  { t: "The Lid Started at My Feet", c: [[1, "stinger"]], l: "နောက်ခန်း", k: "inside",
-    w: ["ဦးတင်မောင်"],
-    g: "⚠️ ဦးတင်မောင်က အဖုံးကို ကျွန်တော့်ခြေထောက်ဘက်က စဖုံးလာတယ်။ မီးလုံးမြင်ရတဲ့နေရာ တဖြည်းဖြည်း ကျဉ်းလာတယ်။",
-    p: "OCCURRENCE 7 OF 9 OF THE VIEW FROM INSIDE. The same framing — ⚠️ BUT A WOODEN LID HAS "
-      + "SLID IN ACROSS THE BOTTOM THIRD OF THE FRAME from the foot end, a hard straight edge of "
-      + "shadow cutting off part of the ceiling. The bulb is still visible above it. U Tin "
-      + "Maung's head and shoulders lean in at one side.",
-    u: ["ဦးတင်မောင်က ခေါင်းတလားအဖုံးကို ကျွန်တော့်ခြေထောက်ဘက်က စဖုံးလာတယ်။",
-        "အပေါ်က မီးလုံးကို မြင်ရတဲ့နေရာ တဖြည်းဖြည်း ကျဉ်းလာတယ်။",
-        "“မျက်လုံးမှိတ်လိုက်ပါ နေလင်း။” ကျွန်တော် မမှိတ်ဘူး။"] },
-
-  { t: "The Lens Cap Was Still On", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "insert",
-    rev: "the reveal",
-    g: "⚠️ အစကတည်းက သတိထားသင့်ခဲ့တာ — ကင်မရာမှန်ဘီလူးက အဖုံးတောင် မဖွင့်ထားဘူး။",
-    p: "⚠️ THE REVEAL, AND IT IS A SMALL OBJECT. Tight insert straight on to the front of the "
-      + "video camera on its tripod, the lens filling most of the frame. ⚠️ A ROUND BLACK LENS "
-      + "CAP IS SEATED FIRMLY OVER THE GLASS, its little cord hanging from the body. Nothing is "
-      + "recording and never was. The dim room falls away behind it.",
-    u: ["သူ့နောက်က ကင်မရာကိုပဲ စိုက်ကြည့်နေမိတယ်။",
-        "အစကတည်းက သတိထားသင့်ခဲ့တာ။",
-        "ကင်မရာမှန်ဘီလူးက အဖုံးတောင် မဖွင့်ထားဘူး။"] },
-
-  // ── IX · THE STRUGGLE ─────────────────────────────────────────────────────
-  { t: "I Could Still Tilt", l: "နောက်ခန်း", k: "inside", w: ["နေလင်း"],
-    g: "အဖုံးက ကျွန်တော့်ရင်ဘတ်အပေါ်ထိ ရောက်လာပြီ။ ဒါပေမယ့် ကိုယ်တစ်ဖက်ကိုတော့ အနည်းငယ်စောင်းလို့ ရသေးတယ်။",
-    p: "OCCURRENCE 8 OF 9 OF THE VIEW FROM INSIDE. ⚠️ THE LID NOW COVERS TWO THIRDS OF THE FRAME "
-      + "and only a narrow band of ceiling and the edge of the bulb remain above it. ⚠️ THE WHOLE "
-      + "FRAME IS TIPPED A FEW DEGREES OFF LEVEL as he rolls his weight. The wooden rim is hard "
-      + "against the edges.",
-    u: ["အဖုံးက ကျွန်တော့်ရင်ဘတ်အပေါ်ထိ ရောက်လာပြီ။",
-        "လက်တွေ မလှုပ်နိုင်ဘူး။ အသံမထွက်ဘူး။",
-        "ဒါပေမယ့် ကိုယ်တစ်ဖက်ကိုတော့ အနည်းငယ်စောင်းလို့ ရသေးတယ်။"] },
-
-  { t: "Keep Still", l: "နောက်ခန်း", k: "wide",
-    w: ["ဦးတင်မောင်", "နေလင်း"],
-    g: "ကျွန်တော် အားကုန်ပြီး ညာဘက်ကို လှိမ့်လိုက်တယ်။ ဦးတင်မောင် ချက်ချင်း ဖိထားတယ်။ “ငြိမ်ငြိမ်နေ!”",
-    p: "Wide on the room: the near coffin visibly rocked over on its trestles at an angle, U Tin "
-      + "Maung leaning his whole weight down on the half-fitted lid with both arms straight, his "
-      + "face changed for the first time — ⚠️ HE IS ALARMED RATHER THAN ANGRY. The far coffin sits "
-      + "beyond with the son upright in it, back to camera.",
-    u: ["ကျွန်တော် အားကုန်ပြီး ညာဘက်ကို လှိမ့်လိုက်တယ်။ ခေါင်းတလား နည်းနည်းလှုပ်သွားတယ်။",
-        "ဦးတင်မောင် ချက်ချင်း ဖိထားတယ်။ “ငြိမ်ငြိမ်နေ!”"] },
-
-  { t: "The Trestle Scraped", l: "နောက်ခန်း", k: "floor",
-    g: "ကျွန်တော် ထပ်လှိမ့်တယ်။ ခေါင်းတလားတင်ထားတဲ့ ခုံတစ်လုံးက ကြမ်းပြင်ပေါ် ခြစ်ရွေ့သွားတယ်။",
-    p: "Camera low on the concrete floor: the foot of a wooden trestle skidding sideways with a "
-      + "pale scrape mark dragged behind it across the concrete, dust lifting. The dark patch of "
-      + "water is visible further back.",
-    u: ["ကျွန်တော် ထပ်လှိမ့်တယ်။",
-        "ခေါင်းတလားတင်ထားတဲ့ ခုံတစ်လုံးက ကြမ်းပြင်ပေါ် ခြစ်ရွေ့သွားတယ်။",
-        "ဘေးကလူ ထလာဖို့ ကြိုးစားနေတယ်။"] },
-
-  { t: "He Pulled Again", l: "နောက်ခန်း", k: "thread",
-    w: ["နေလင်း"], rev: "thread 7 of 11",
-    g: "⚠️ ချည်နီ သတ္တမအကြိမ် — ဦးတင်မောင်ရဲ့သားက ချည်ကို ထပ်ဆွဲတယ်။ ကျွန်တော့်ဘယ်လက်က ခေါင်းတလားဘေးကို ဆွဲကပ်သွားတယ်။",
-    p: "OCCURRENCE 7 OF 11. The same tight framing: ⚠️ THE THREAD HAS DRAGGED NE LIN'S LEFT WRIST "
-      + "HARD UP AGAINST THE INSIDE WALL OF THE COFFIN, the back of his hand flat against the "
-      + "wood and the loop biting into the skin. His fingers are splayed and rigid.",
-    u: ["ဦးတင်မောင်ရဲ့သားက ချည်ကို ထပ်ဆွဲတယ်။",
-        "ကျွန်တော့်ဘယ်လက်က ခေါင်းတလားဘေးကို ဆွဲကပ်သွားတယ်။"] },
-
-  { t: "The Coffin Went Over", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "wide",
-    w: ["နေလင်း"],
-    g: "⚠️ ခုံလွတ်သွားတယ်။ ခေါင်းတလားက ဘေးစောင်းပြီး ကြမ်းပြင်ပေါ် ပြုတ်ကျတယ်။ ဒုန်း!",
-    p: "Wide on the room at the instant of the fall: ⚠️ THE NEAR COFFIN HAS COME OFF ITS TRESTLES "
-      + "AND IS ON THE CONCRETE FLOOR ON ITS SIDE, one trestle knocked over beside it, the lid "
-      + "skidding away separately. Ne Lin is half spilled out onto the floor. Dust in the bulb "
-      + "light. U Tin Maung is staggering back a step.",
-    u: ["အဲဒီအရှိန်နဲ့ ကျွန်တော် ကိုယ်ကို တစ်ဖက်ထပ်ပစ်လိုက်တယ်။ ခုံလွတ်သွားတယ်။",
-        "ခေါင်းတလားက ဘေးစောင်းပြီး ကြမ်းပြင်ပေါ် ပြုတ်ကျတယ်။",
-        "ကျွန်တော့်ပခုံးက သစ်သားနဲ့ ဆောင့်မိတယ်။ အဖုံးလည်း လျှောကျသွားတယ်။"] },
-
-  { t: "The Thread Was Pinned", l: "နောက်ခန်း", k: "thread",
-    rev: "thread 8 of 11",
-    g: "⚠️ ချည်နီ အဋ္ဌမအကြိမ် — ချည်နီက ခေါင်းတလားအောက်မှာ ညပ်သွားတယ်။ ဟိုဘက်ကလူက မလွှတ်ဘူး။ ပိုဆွဲတယ်။",
-    p: "OCCURRENCE 8 OF 11. The same tight framing, now at floor level: ⚠️ THE RED THREAD RUNS "
-      + "UNDER THE EDGE OF THE FALLEN COFFIN where it is trapped against the concrete, and the "
-      + "length of it beyond is stretched bar-straight and thrumming with tension. Dust on the "
-      + "floor either side.",
-    u: ["ချည်နီက ခေါင်းတလားအောက်မှာ ညပ်သွားတယ်။",
-        "ဟိုဘက်ကလူက မလွှတ်ဘူး။ ပိုဆွဲတယ်။",
-        "ကျွန်တော့်လက်ကောက်ဝတ်က နာလာတယ်။"] },
-
-  { t: "It Snapped", c: [[1, "bigstinger"]], l: "နောက်ခန်း", k: "thread", w: ["နေလင်း"],
-    rev: "thread 9 of 11",
-    g: "⚠️ ချည်နီ နဝမအကြိမ် — ဖျောက်။ ချည်ပြတ်သွားတယ်။",
-    p: "OCCURRENCE 9 OF 11. The same tight framing on Ne Lin's wrist: ⚠️ THE THREAD HAS PARTED. "
-      + "Two loose red ends fly apart in opposite directions, still curling from the tension, the "
-      + "cut ends frayed. The loop left on his wrist has gone slack. ⚠️ HIS SKIN IS UNBROKEN — "
-      + "only a shallow pale line where the thread sat.",
-    u: ["ပြီးတော့ ချည်ပြတ်သွားတယ်။",
-        "ကျွန်တော် လေကို တစ်ချက်တည်း အားကုန်ရှူမိတယ်။",
-        "လက်နှစ်ဖက် ပြန်လှုပ်လို့ရလာတယ်။"] },
-
-  { t: "He Fell Back", l: "နောက်ခန်း", k: "wide", w: ["သား", "ဦးတင်မောင်"],
-    g: "ဘေးကလူကတော့ နောက်ပြန်လဲကျသွားတယ်။ သူ့ခြေထောက်တွေက လှုပ်ချင်ပေမယ့် မလှုပ်နိုင်တော့ဘူး။",
-    p: "Wide on the room: the son collapsed backwards over the edge of the far coffin, ⚠️ SEEN "
-      + "FROM BEHIND AND BELOW so his face is not readable, one arm hanging, his legs slack. U "
-      + "Tin Maung is already running the two steps towards him with both arms out.",
-    u: ["ဘေးကလူကတော့ နောက်ပြန်လဲကျသွားတယ်။",
-        "သူ့ခြေထောက်တွေက လှုပ်ချင်ပေမယ့် မလှုပ်နိုင်တော့ဘူး။",
-        "ဦးတင်မောင် သူ့သားဆီ ပြေးသွားတယ်။ “သား! သား!”"] },
-
-  { t: "I Crawled Out", l: "နောက်ခန်း", k: "floor", w: ["နေလင်း"],
-    g: "ကျွန်တော် ခေါင်းတလားအပြင်ကို တွားထွက်တယ်။ ခြေထောက်တွေက ထုံနေတုန်းပဲ။",
-    p: "Camera low on the concrete: Ne Lin dragging himself out of the tipped coffin on his "
-      + "forearms, his legs trailing dead behind him, his face towards camera and slick with "
-      + "sweat. Dust, the fallen lid, a trestle leg.",
-    u: ["ကျွန်တော် ခေါင်းတလားအပြင်ကို တွားထွက်တယ်။",
-        "လက်တစ်ဖက်နဲ့ ကြမ်းပြင်ကို ထောက်ပြီး ထရပ်ဖို့ ကြိုးစားတယ်။",
-        "ခြေထောက်တွေက ထုံနေတုန်းပဲ။"] },
-
-  { t: "Father, Do Not Let Him Go", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "son",
+  { t: "He Was Looking at Me", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "sonface",
     w: ["သား"],
-    g: "⚠️ သူ့ပါးစပ် လှုပ်တယ်။ အသံကတော့ ပြန်တိုးသွားပြီ — “အဖေ… သူ့ကို မလွှတ်နဲ့။”",
-    p: "The son slumped back over the coffin edge, ⚠️ FRAMED FROM THE MOUTH DOWN ONLY — the grey "
-      + "lips moving on a word, the slack jaw, the wet collar, his head fallen far back. The "
-      + "upper half of his face is above the top edge of frame.",
-    u: ["ဦးတင်မောင်ရဲ့သားက ကျွန်တော့်ကို ကြည့်နေတယ်။ သူ့ပါးစပ် လှုပ်တယ်။",
-        "အသံကတော့ ပြန်တိုးသွားပြီ။",
-        "“အဖေ… သူ့ကို မလွှတ်နဲ့။”"] },
+    g: "⚠️ လူငယ်က သူ့ကို မကြည့်ဘူး။ ကျွန်တော့်ကို ကြည့်နေတယ်။ ပြီးတော့ ကျွန်တော့်အသံနဲ့ ပြောတယ် — “ဒီတစ်ယောက်က သိသွားပြီ။”",
+    p: "Head-and-shoulders on the son, ⚠️ LOOKING STRAIGHT INTO THE LENS with his dull open eyes "
+      + "while his head is still being held straight by hands at the edge of frame. His grey lips "
+      + "are parted mid-word. ⚠️ HIS EXPRESSION IS FLAT AND ATTENTIVE — not angry, not hungry, "
+      + "simply noting something. Bulb light.",
+    u: ["လူငယ်က သူ့ကို မကြည့်ဘူး။ ကျွန်တော့်ကို ကြည့်နေတယ်။",
+        "ပြီးတော့ ကျွန်တော့်အသံနဲ့ ပြောတယ်။",
+        "“ဒီတစ်ယောက်က သိသွားပြီ။”"] },
 
-  { t: "No Pity Left in His Face", l: "နောက်ခန်း", k: "tin",
+  { t: "Like Falling Asleep", l: "နောက်ခန်း", k: "tin",
     w: ["ဦးတင်မောင်"],
-    g: "⚠️ ဦးတင်မောင် လှည့်လာတယ်။ အခုတော့ သူ့မျက်နှာမှာ အားနာတာ မရှိတော့ဘူး။",
-    p: "Close on U Tin Maung turning back towards camera, ⚠️ AND THE GENTLENESS HAS GONE OUT OF "
-      + "HIS FACE — the courtesy simply absent, the expression flat and decided. Still tidy, "
-      + "still tearful, and entirely changed. Bulb light from above.",
-    u: ["ဦးတင်မောင် လှည့်လာတယ်။",
-        "အခုတော့ သူ့မျက်နှာမှာ အားနာတာ မရှိတော့ဘူး။"] },
+    g: "⚠️ သူက ကျွန်တော့်ကို အပြစ်တောင်းပန်သလို ကြည့်တယ် — “မင်း အိပ်ပျော်သွားသလိုပဲ ဖြစ်မှာပါ နေလင်း။”",
+    p: "Close on U Tin Maung turned to camera at last, tears still on his face, ⚠️ HIS EXPRESSION "
+      + "APOLOGETIC AND ALMOST EMBARRASSED — a courteous man saying something he knows is "
+      + "unforgivable, and saying it kindly. Bulb light from above.",
+    u: ["ဦးတင်မောင် ကျွန်တော့်ဘက် လှည့်လာတယ်။ မျက်ရည်တွေ ရှိနေသေးတယ်။",
+        "သူက ကျွန်တော့်ကို အပြစ်တောင်းပန်သလို ကြည့်တယ်။",
+        "“မင်း အိပ်ပျော်သွားသလိုပဲ ဖြစ်မှာပါ နေလင်း။”"] },
 
-  { t: "He Caught Me From Behind", l: "နောက်ခန်း", k: "wide",
-    w: ["ဦးတင်မောင်", "နေလင်း"],
-    g: "ကျွန်တော် တံခါးဆီ ပြေးတယ်။ သူ ကျွန်တော့်အင်္ကျီကို နောက်ကနေ ဆွဲဖမ်းလိုက်တယ်။ နှစ်ယောက်လုံး ကြမ်းပြင်ပေါ် လဲကျတယ်။",
-    p: "Wide on the room: both men down on the concrete near the doorway, U Tin Maung with a "
-      + "fistful of the back of Ne Lin's t-shirt and Ne Lin twisted round underneath him. Dust, "
-      + "the tipped coffin behind, the bulb swinging slightly. ⚠️ Neither man is injured.",
-    u: ["ကျွန်တော် တံခါးဆီ ပြေးတယ်။",
-        "သူ ကျွန်တော့်အင်္ကျီကို နောက်ကနေ ဆွဲဖမ်းလိုက်တယ်။",
-        "နှစ်ယောက်လုံး ကြမ်းပြင်ပေါ် လဲကျတယ်။"] },
+  { t: "Nothing Came Out", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
+    g: "ကျွန်တော် ပါးစပ်လှုပ်တယ်။ သူ့ကို ဆဲချင်တယ်။ အော်ချင်တယ်။ တောင်းပန်ချင်တယ်။ ဘာအသံမှ မထွက်ဘူး။",
+    p: "Close on Ne Lin's face in the coffin, his mouth working hard and producing plainly nothing "
+      + "at all, tears running sideways from the corners of both eyes towards his ears. Bulb light "
+      + "from above.",
+    u: ["ကျွန်တော် ပါးစပ်လှုပ်တယ်။",
+        "သူ့ကို ဆဲချင်တယ်။ အော်ချင်တယ်။ တောင်းပန်ချင်တယ်။",
+        "ဘာအသံမှ မထွက်ဘူး။"] },
 
-  { t: "He Was Trying to Tie It Back On", l: "နောက်ခန်း",
-    k: "thread", w: ["ဦးတင်မောင်", "နေလင်း"], rev: "thread 10 of 11",
-    g: "⚠️ ချည်နီ ဒသမအကြိမ် — သူ့လက်ထဲမှာ ပြတ်သွားတဲ့ ချည်နီ။ ကျွန်တော့်လက်ကောက်ဝတ်ကို ပြန်ချည်ဖို့ ကြိုးစားနေတာ။",
-    p: "OCCURRENCE 10 OF 11. The same tight framing: an older man's two hands trying to loop the "
-      + "broken red thread back around a younger man's wrist, ⚠️ AND THE WRIST IS TWISTING HARD "
-      + "AWAY OUT OF THE LOOP. The thread is frayed at the break. Concrete floor beneath.",
-    u: ["သူ့လက်ထဲမှာ ပြတ်သွားတဲ့ ချည်နီ။",
-        "ကျွန်တော့်လက်ကောက်ဝတ်ကို ပြန်ချည်ဖို့ ကြိုးစားနေတာ။",
-        "“တစ်ခဏပဲ! ငါ့သား ပြန်ထလာတော့မှာ!”"] },
+  { t: "He Sat Down Beside Me", l: "နောက်ခန်း", k: "inside", w: ["ဦးတင်မောင်"],
+    g: "ဦးတင်မောင်က ကျွန်တော့်နားမှာ ထိုင်ချလိုက်တယ်။ “ဦးသားက ရေထဲကျသွားတာ။ ပြန်တွေ့တော့ နောက်ကျနေပြီ။”",
+    p: "OCCURRENCE 5 OF 8 OF THE VIEW FROM INSIDE. The same framing, with U Tin Maung's head and "
+      + "shoulders leaning in over the opening — ⚠️ BUT LOWER AND CLOSER THAN BEFORE, as though he "
+      + "has sat down on the floor beside the box. He is talking rather than instructing and his "
+      + "face is exhausted.",
+    u: ["ဦးတင်မောင်က ကျွန်တော့်နားမှာ ထိုင်ချလိုက်တယ်။",
+        "“ဦးသားက ရေထဲကျသွားတာ။ ပြန်တွေ့တော့ နောက်ကျနေပြီ။”"] },
 
-  { t: "He Was Crying and He Did Not Loosen", l: "နောက်ခန်း", k: "tin", w: ["ဦးတင်မောင်"],
-    g: "ကျွန်တော် ရုန်းရင်း သူ့မျက်နှာကို ကြည့်မိတယ်။ သူက ငိုနေတယ်။ ဒါပေမယ့် ချုပ်ထားတဲ့လက်က လုံးဝမလျော့ဘူး။",
-    p: "Close on U Tin Maung from below, over the top of a struggling shoulder: ⚠️ HIS FACE IS "
-      + "STREAMING WITH TEARS and completely set at the same time. Grief and resolve in one "
-      + "expression. Bulb light behind his head.",
-    u: ["ကျွန်တော် ရုန်းရင်း သူ့မျက်နှာကို ကြည့်မိတယ်။ သူက ငိုနေတယ်။",
-        "ဒါပေမယ့် ကျွန်တော့်ကို ချုပ်ထားတဲ့လက်က လုံးဝမလျော့ဘူး။"] },
+  // ── IX · THE LENS CAP ─────────────────────────────────────────────────────
+  { t: "The Lens Cap Was Still On", c: [[3, "bigstinger"]], l: "နောက်ခန်း", k: "insert",
+    rev: "the reveal",
+    g: "⚠️ ကင်မရာမှန်ဘီလူးမှာ အဖုံးတပ်ထားတုန်းပဲ။ အစကတည်းက ဘာမှ မရိုက်ခဲ့ဘူး။",
+    p: "⚠️ THE REVEAL, AND IT IS A SMALL OBJECT. Tight insert straight on to the front of the video "
+      + "camera on its tripod, the lens filling most of the frame. ⚠️ A ROUND BLACK LENS CAP IS "
+      + "SEATED FIRMLY OVER THE GLASS, its little cord hanging from the body. The dim room falls "
+      + "away behind it.",
+    u: ["သူ စကားပြောနေတုန်း ကျွန်တော် ကင်မရာဘက်ကို ကြည့်မိတယ်။",
+        "အခန်းအလင်းရောင်နဲ့ မျက်စိကျင့်သားရလာတော့မှ ရှင်းရှင်းမြင်ရတယ်။",
+        "ကင်မရာမှန်ဘီလူးမှာ — အဖုံးတပ်ထားတုန်းပဲ။"] },
 
-  { t: "I Had My Voice Back", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "ne",
-    w: ["နေလင်း"],
-    g: "⚠️ ကျွန်တော် အသံပြန်ရပြီဆိုတာ အဲဒီအချိန်မှ သတိရတယ် — “ကယ်ကြပါဦး! လူသတ်နေတယ်!”",
-    p: "Close on Ne Lin's face turned towards the doorway on the concrete floor, ⚠️ MOUTH WIDE "
-      + "OPEN IN A FULL SHOUT — and this time everything about the picture says the sound is "
-      + "coming out: the neck cords, the wide eyes, the whole face committed. Dust in the air.",
-    u: ["ကျွန်တော် အသံပြန်ရပြီဆိုတာ အဲဒီအချိန်မှ သတိရတယ်။",
-        "တံခါးဘက်ကို မျက်နှာလှည့်ပြီး အားကုန်အော်လိုက်တယ်။",
-        "“ကယ်ကြပါဦး! လူသတ်နေတယ်!”"] },
+  { t: "I Was Not an Actor", l: "နောက်ခန်း", k: "ne", w: ["နေလင်း"],
+    g: "အစကတည်းက ဘာမှ မရိုက်ခဲ့ဘူး။ ရိုက်ကူးရေး မရှိဘူး။ ကျွန်တော်ကလည်း သရုပ်ဆောင်မဟုတ်ဘူး။ သူတို့လိုနေတဲ့ ပစ္စည်းတစ်ခု။",
+    p: "Close on Ne Lin's face in the coffin looking up at the ceiling, ⚠️ HIS EXPRESSION GONE "
+      + "COMPLETELY FLAT — past fear and into understanding. The tears have stopped. Bulb light "
+      + "from above.",
+    u: ["အစကတည်းက ဘာမှ မရိုက်ခဲ့ဘူး။ ရိုက်ကူးရေး မရှိဘူး။",
+        "ကျွန်တော်ကလည်း သရုပ်ဆောင်မဟုတ်ဘူး။",
+        "သူတို့လိုနေတဲ့ ပစ္စည်းတစ်ခု။"] },
 
-  { t: "Voices Outside", l: "နောက်ခန်း", k: "wide", w: ["ဦးတင်မောင်", "နေလင်း"],
-    g: "ဆိုင်ရှေ့ဘက်က လူသံကြားလာတယ်။ “ဘာဖြစ်တာလဲ!” တံခါးကို အပြင်က တွန်းသံ။",
-    p: "Wide on the room towards the closed door: ⚠️ A BAR OF DAYLIGHT HAS OPENED DOWN ONE EDGE "
-      + "OF IT and two shadows break that light from outside. U Tin Maung's head is turned "
-      + "sharply towards it; Ne Lin is already twisting out from under him. The bulb light and "
-      + "the daylight meet.",
-    u: ["ဦးတင်မောင် ကျွန်တော့်ပါးစပ်ကို ပိတ်ဖို့ လက်လှမ်းတယ်။ ကျွန်တော် သူ့လက်ကို ဖယ်ပြီး ထပ်အော်တယ်။",
-        "ဆိုင်ရှေ့ဘက်က လူသံကြားလာတယ်။ “ဘာဖြစ်တာလဲ!”",
-        "တံခါးကို အပြင်က တွန်းသံ။"] },
-
-  { t: "It Is Going Cold Again", l: "နောက်ခန်း", k: "floor",
-    w: ["နေလင်း"],
-    g: "⚠️ နောက်က သူ့သားအသံ — ဒီတစ်ခါ ကလေးတစ်ယောက်လို ငိုနေတယ် — “အဖေ… ပြန်အေးလာပြီ။ အဖေ…”",
-    p: "Camera low on the concrete behind Ne Lin as he crawls hard towards the widening bar of "
-      + "daylight at the door, seen from behind, his legs still dragging. ⚠️ THE FAR COFFIN AND "
-      + "THE TWO FIGURES ARE BEHIND HIM AND WELL OUT OF FOCUS — shapes only. He does not look "
-      + "back.",
-    u: ["ဦးတင်မောင် ခဏလှည့်ကြည့်တဲ့အချိန် ကျွန်တော် သူ့ကို တွန်းဖယ်လိုက်တယ်။",
-        "နောက်က သူ့သားအသံ ကြားလာတယ်။ ဒီတစ်ခါ ကလေးတစ်ယောက်လို ငိုနေတယ်။",
-        "“အဖေ… ပြန်အေးလာပြီ။ အဖေ…” ကျွန်တော် နောက်မလှည့်ဘူး။"] },
-
-  { t: "They Pulled Me Into the Light", l: "ဆိုင်ရှေ့", k: "front", w: ["နေလင်း"],
-    g: "အပြင်က လူနှစ်ယောက်က တံခါးကို တွန်းဖွင့်ပြီး ကျွန်တော့်ကို ဆွဲထုတ်လိုက်ကြတယ်။",
-    p: "In the dusty front room in daylight: two ordinary men in longyis hauling Ne Lin up out of "
-      + "the dark back-room doorway by his arms, his legs still not under him. ⚠️ THE FLAT "
-      + "DAYLIGHT AND THE DUSTY FAMILY PORTRAITS ARE THE WHOLE POINT — an entirely ordinary room "
-      + "one step from the other one.",
-    u: ["တံခါးလက်ကိုင်ကို လှမ်းဆွဲလိုက်တယ်။",
-        "အပြင်က လူနှစ်ယောက်က တံခါးကို တွန်းဖွင့်ပြီး ကျွန်တော့်ကို ဆွဲထုတ်လိုက်ကြတယ်။"] },
-
-  { t: "It Was Still in My Fist", l: "ဆိုင်ရှေ့", k: "thread",
-    w: ["နေလင်း"], rev: "thread 11 of 11",
-    g: "⚠️ ချည်နီ နောက်ဆုံးအကြိမ် — ကျွန်တော် လက်ထဲမှာ ချည်နီတစ်ပိုင်း ဆုပ်ထားမိနေတာကို သိလိုက်တယ်။",
-    p: "OCCURRENCE 11 OF 11, AND THE ONLY ONE IN DAYLIGHT. The same tight framing: a clenched "
-      + "fist opening in flat daylight to show ⚠️ A SHORT FRAYED LENGTH OF THE RED THREAD lying "
-      + "across the damp palm, pressed into the skin. ⚠️ The hand is unmarked. Dusty shopfront "
-      + "soft behind.",
-    u: ["ဆိုင်ရှေ့အလင်းရောင်ထဲ ရောက်မှ—",
-        "ကျွန်တော် လက်ထဲမှာ ချည်နီတစ်ပိုင်း ဆုပ်ထားမိနေတာကို သိလိုက်တယ်။",
-        "ကျွန်တော် ချက်ချင်း လွှတ်ချလိုက်တယ်။"] },
-
-  // ── X · AFTER ─────────────────────────────────────────────────────────────
-  { t: "They Took Him That Night", l: "ဆိုင်ရှေ့", k: "front",
-    w: ["ဦးတင်မောင်", "ရဲသား"],
-    g: "ဦးတင်မောင်ကို အဲဒီညမှာပဲ ရဲတွေ ခေါ်သွားတယ်။",
-    p: "Outside the photo studio at night: a police officer walking U Tin Maung out through the "
-      + "shopfront by one arm, the old man upright, tidy and entirely calm, looking back over his "
-      + "shoulder at the building. Ordinary street light and a torch beam.",
-    u: ["ဦးတင်မောင်ကို အဲဒီညမှာပဲ ရဲတွေ ခေါ်သွားတယ်။",
-        "ဆိုင်နောက်ခန်းက ခေါင်းတလားထဲမှာ သူ့သားရဲ့ရုပ်အလောင်းကို တွေ့ခဲ့ကြတယ်။"] },
-
-  { t: "Dead Over a Month", l: "နောက်ခန်း", k: "two",
-    g: "သူ့သားဆုံးတာ တစ်လကျော်ပြီ။ သင်္ဂြိုဟ်ပြီးပြီလို့ ဆွေမျိုးတွေကို ပြောထားပေမယ့် အလောင်းကို သူ မလွှတ်ပေးခဲ့ဘူး။",
-    p: "The back room afterwards with the lights on properly: the near coffin still lying tipped "
-      + "on the concrete, a trestle over, the lid on the floor, and the far coffin standing "
-      + "closed on its trestles. ⚠️ THE ROOM IS EMPTY OF PEOPLE. An ordinary untidy room where "
-      + "something happened.",
-    u: ["သူ့သားဆုံးတာ တစ်လကျော်ပြီ။",
-        "သင်္ဂြိုဟ်ပြီးပြီလို့ ဆွေမျိုးတွေကို ပြောထားပေမယ့် အလောင်းကို သူ မလွှတ်ပေးခဲ့ဘူး။"] },
-
-  { t: "This Time It Was Close", l: "ရဲစခန်း", k: "tin",
+  { t: "He Moved the Camera Aside", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "wide",
     w: ["ဦးတင်မောင်"],
-    g: "⚠️ ဘာလုပ်ခဲ့သလဲဆိုတာ မေးကြတဲ့အခါ ဦးတင်မောင်က စကားတစ်ခုပဲ ထပ်ခါထပ်ခါ ပြောနေတယ် — “ဒီတစ်ခါ နီးနေပြီ။ အသံတောင် ရလာပြီ။”",
-    p: "Close on U Tin Maung sitting at the police station counter in flat daylight, hands folded "
-      + "in front of him, ⚠️ SPEAKING CALMLY AND LOOKING SLIGHTLY PAST THE LENS. He is composed, "
-      + "tidy and entirely reasonable-looking — a polite old man answering a question.",
-    u: ["ဘာလုပ်ခဲ့သလဲဆိုတာ မေးကြတဲ့အခါ ဦးတင်မောင်က စကားတစ်ခုပဲ ထပ်ခါထပ်ခါ ပြောနေတယ်။",
-        "“ဒီတစ်ခါ နီးနေပြီ။ အသံတောင် ရလာပြီ။”"] },
+    g: "⚠️ ဦးတင်မောင်က ကင်မရာကို ဘေးဖယ်လိုက်တယ်။ ဖုံးကွယ်စရာ မလိုတော့သလိုပဲ။",
+    p: "Wide on the room: U Tin Maung carrying the whole tripod and camera off to one side and "
+      + "setting it down facing the wall, ⚠️ CASUALLY AND WITHOUT CEREMONY, the way you move a "
+      + "chair that is in the way. The two coffins stand behind him.",
+    u: ["ဦးတင်မောင်က ကျွန်တော်ကြည့်နေတဲ့နေရာကို လိုက်ကြည့်တယ်။",
+        "ပြီးတော့ ကင်မရာကို ဘေးဖယ်လိုက်တယ်။",
+        "ဖုံးကွယ်စရာ မလိုတော့သလိုပဲ။"] },
 
-  { t: "The Mark Lasted a Week", l: "ရဲစခန်း", k: "insert", w: ["နေလင်း"],
-    g: "ကျွန်တော့်လက်ကောက်ဝတ်မှာတော့ ချည်ရာက တစ်ပတ်လောက် ကျန်နေခဲ့တယ်။ အဲဒီငွေကို ကျွန်တော် မယူတော့ဘူး။",
-    p: "Tight insert on Ne Lin's own left wrist in flat daylight, ⚠️ A THIN PALE RING MARK "
-      + "CIRCLING IT WHERE THE THREAD SAT — a faint impression in the skin and nothing more. ⚠️ "
-      + "The skin is unbroken and healthy. His other hand rests beside it.",
-    u: ["သားဖြစ်သူရဲ့နာရေးကို နောက်ပိုင်း ဆွေမျိုးတွေက တာဝန်ယူပြီး ပြီးအောင်လုပ်ခဲ့ကြတယ်။",
-        "ကျွန်တော့်လက်ကောက်ဝတ်မှာတော့ ချည်ရာက တစ်ပတ်လောက် ကျန်နေခဲ့တယ်။",
-        "အဲဒီငွေကို ကျွန်တော် မယူတော့ဘူး။"] },
+  { t: "You People", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "tin", w: ["ဦးတင်မောင်"],
+    g: "⚠️ “မင်းတို့ကို ဒီလိုပြောမှ လာကြမှာမို့လို့ပါ။” သူ “မင်း” လို့ မပြောဘူး။",
+    p: "Close on U Tin Maung saying it, ⚠️ MILDLY AND WITHOUT ANY EMPHASIS AT ALL — explaining "
+      + "something practical and slightly apologetic. He does not realise he has said anything. "
+      + "Bulb light from above.",
+    u: ["“မင်းတို့ကို ဒီလိုပြောမှ လာကြမှာမို့လို့ပါ။”",
+        "မင်းတို့။ သူ “မင်း” လို့ မပြောဘူး။"] },
 
-  { t: "He Saw Me at the Station", l: "ရဲစခန်း", k: "station",
+  { t: "My Things Were in There Now", l: "နောက်ခန်း",
+    k: "table", rev: "envelopes 3 of 3",
+    g: "⚠️ နာမည်တွေ။ ဖုန်းတွေ။ အခုတော့ ကျွန်တော့်ပစ္စည်းတွေလည်း အဲဒီအထဲမှာ ရောက်နေပြီ။",
+    p: "⚠️ TEXT PERMITTED. The same downward framing on the table as before: the four named brown "
+      + "envelopes in their row, ⚠️ AND THE HANDWRITTEN NAMES ARE THE ONLY TEXT IN THE IMAGE. "
+      + "Three sit closed and settled; the fourth is newly filled and its flap freshly folded. "
+      + "Bulb light, dust on the table.",
+    u: ["ကျွန်တော် စားပွဲပေါ်က စာအိတ်တွေကို ပြန်ကြည့်မိတယ်။",
+        "နာမည်တွေ။ ဖုန်းတွေ။",
+        "အခုတော့ ကျွန်တော့်ပစ္စည်းတွေလည်း အဲဒီအထဲမှာ ရောက်နေပြီ။"] },
+
+  // ── X · THE SCRATCHES ─────────────────────────────────────────────────────
+  { t: "One Leg, Then the Other", l: "နောက်ခန်း", k: "son",
+    w: ["သား"],
+    g: "ဘေးကလူက ခြေထောက်တစ်ဖက်ကို ခေါင်းတလားအပြင် ချလိုက်တယ်။ ကျွန်တော့်ခြေထောက် ထုံသွားတယ်။",
+    p: "Framed low on the side of the far coffin: ⚠️ ONE BARE GREY-WHITE FOOT AND ANKLE SWUNG OVER "
+      + "THE EDGE AND HANGING, wet, the trouser hem dark and clinging, a bead of water running off "
+      + "the heel towards the concrete. The other leg is still inside. Nothing above the knee is in "
+      + "shot.",
+    u: ["ဘေးကလူက ခြေထောက်တစ်ဖက်ကို ခေါင်းတလားအပြင် ချလိုက်တယ်။ ကျွန်တော့်ခြေထောက် ထုံသွားတယ်။",
+        "နောက်တစ်ဖက် ချလိုက်တယ်။ ခြေချောင်းတွေတောင် မလှုပ်နိုင်တော့ဘူး။"] },
+
+  { t: "I Think He Can Stand This Time", c: [[1, "stinger"]], l: "နောက်ခန်း",
+    k: "tin", w: ["ဦးတင်မောင်", "သား"],
+    g: "⚠️ ဦးတင်မောင်က ဝမ်းသာပြီး သူ့သားပခုံးကို ကိုင်တယ် — “ဒီတစ်ခါ ထရပ်နိုင်မယ်ထင်တယ်။”",
+    p: "U Tin Maung with both hands on his son's shoulders from behind, ⚠️ HIS FACE LIT WITH HOPE "
+      + "AND EXCITEMENT, leaning round to look at him. The son is seen from behind only. ⚠️ THE "
+      + "FATHER LOOKS LIKE A MAN AT A HOSPITAL BEDSIDE WATCHING SOMEONE TAKE A FIRST STEP.",
+    u: ["ဦးတင်မောင်က ဝမ်းသာပြီး သူ့သားပခုံးကို ကိုင်တယ်။",
+        "“ဒီတစ်ခါ ထရပ်နိုင်မယ်ထင်တယ်။”",
+        "လူငယ်ကတော့ ကျွန်တော့်ကိုပဲ ကြည့်နေတယ်။ “အဖေ… အဖုံး။”"] },
+
+  { t: "His Chest Rose and Mine Fell", l: "နောက်ခန်း", k: "insert",
+    g: "⚠️ ဘေးကလူကတော့ အသက်ရှူမှန်လာပြီ။ သူ့ရင်ဘတ်တက်သွားတိုင်း ကျွန်တော့်ရင်ဘတ် ပိုကျလာတယ်။",
+    p: "⚠️ TWO CHESTS IN ONE FRAME. A tight horizontal insert across both open coffins at rim "
+      + "height, holding a sliver of each man's chest: ⚠️ THE GREY ONE IS CLEARLY LIFTED AND FULL; "
+      + "THE WARM ONE IS CLEARLY FLAT AND SUNKEN. Shirt fabric on both. The dark gap between the "
+      + "boxes runs down the middle of the image.",
+    u: ["ကျွန်တော် အသက်ရှူဖို့ အားထုတ်နေတယ်။",
+        "ဘေးကလူကတော့ အသက်ရှူမှန်လာပြီ။",
+        "သူ့ရင်ဘတ်တက်သွားတိုင်း ကျွန်တော့်ရင်ဘတ် ပိုကျလာတယ်။"] },
+
+  { t: "The Lid Started at My Feet", l: "နောက်ခန်း", k: "inside",
+    w: ["ဦးတင်မောင်"],
+    g: "ဦးတင်မောင်က အဖုံးကို ကျွန်တော့်ခြေထောက်ဘက်က စဖုံးတယ်။ အဖုံးအတွင်းဘက်ကို မြင်လိုက်ရတယ်။",
+    p: "OCCURRENCE 6 OF 8 OF THE VIEW FROM INSIDE. The same framing — ⚠️ BUT A WOODEN LID HAS SLID "
+      + "IN ACROSS THE BOTTOM THIRD OF THE FRAME from the foot end, a hard straight edge of shadow "
+      + "cutting off part of the ceiling. The bulb is still visible above it.",
+    u: ["ဦးတင်မောင်က အဖုံးကို ကျွန်တော့်ခြေထောက်ဘက်က စဖုံးတယ်။",
+        "အဖုံးအတွင်းဘက်ကို မြင်လိုက်ရတယ်။"] },
+
+  { t: "Scratches Inside the Lid", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "insert",
+    rev: "the others, proved",
+    g: "⚠️ သစ်သားပေါ်မှာ ခြစ်ရာတွေ။ အရှည်လိုက်။ အများကြီး။ တချို့နေရာမှာ လက်သည်းနဲ့ ခြစ်ထားသလို လိုင်းသေးသေးတွေ အထပ်ထပ်။",
+    p: "⚠️ THE PROOF, AND IT IS ONLY WOOD. Tight insert on the underside of the coffin lid, the raw "
+      + "timber filling the frame in raking bulb light: ⚠️ LONG DEEP GOUGES RUN THE LENGTH OF IT, "
+      + "and over and across them ⚠️ DENSE CLUSTERS OF FINE PARALLEL SCRATCHES, layered in several "
+      + "different directions as though made at different times by different hands. Pale splintered "
+      + "wood inside the marks. ⚠️ NOTHING ORGANIC IS IN THE FRAME — bare timber only.",
+    u: ["သစ်သားပေါ်မှာ ခြစ်ရာတွေ။ အရှည်လိုက်။ အများကြီး။",
+        "တချို့နေရာမှာ လက်သည်းနဲ့ ခြစ်ထားသလို လိုင်းသေးသေးတွေ အထပ်ထပ်။",
+        "ကျွန်တော် အသက်ကို မေ့ပြီး အဲဒီရာတွေကိုပဲ ကြည့်နေမိတယ်။"] },
+
+  { t: "This Coffin Was Not New", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "ne",
+    w: ["နေလင်း"],
+    g: "⚠️ ဒီခေါင်းတလားကို ကျွန်တော့်အတွက် အသစ်လုပ်ထားတာ မဟုတ်ဘူး။ အရင်က ဝင်လှဲဖူးတဲ့လူတွေ ရှိတယ်။",
+    p: "Close on Ne Lin's face lit from one side by the narrowing gap above him, ⚠️ HIS EYES MOVING "
+      + "ACROSS SOMETHING JUST ABOVE HIS FACE, reading it. The expression is not fear — it is the "
+      + "flat horror of arithmetic. A hard edge of shadow lies across his chin.",
+    u: ["ဒီခေါင်းတလားကို ကျွန်တော့်အတွက် အသစ်လုပ်ထားတာ မဟုတ်ဘူး။",
+        "အရင်က ဝင်လှဲဖူးတဲ့လူတွေ ရှိတယ်။",
+        "သူတို့လည်း ငွေငါးသိန်းရမယ်လို့ ထင်ခဲ့ကြမှာပဲ။"] },
+
+  // ── XI · WHAT THEY NEED ───────────────────────────────────────────────────
+  { t: "The Thread Caught Under the Lid", l: "နောက်ခန်း",
+    k: "thread", rev: "thread 4 of 10",
+    g: "⚠️ ချည်နီ စတုတ္ထအကြိမ် — အဖုံးနဲ့ ခေါင်းတလားအနားကြားမှာ ချည်နီ ညပ်သွားတယ်။",
+    p: "OCCURRENCE 4 OF 10. The same tight framing, now at the coffin's edge: ⚠️ THE RED THREAD IS "
+      + "TRAPPED BETWEEN THE CLOSING LID AND THE RIM, pinched flat and bent sharply over the wood, "
+      + "the length beyond it pulled bar-straight. Bulb light on the timber.",
+    u: ["ဦးတင်မောင်ရဲ့သားက ချည်နီကို လက်ချောင်းပေါ် ရစ်ယူနေတယ်။",
+        "ကျွန်တော့်လက်ကောက်ဝတ် အနားကို ဆွဲကပ်သွားတယ်။",
+        "အဖုံးနဲ့ ခေါင်းတလားအနားကြားမှာ ချည်နီ ညပ်သွားတယ်။"] },
+
+  { t: "He Lifted the Lid to Free It", c: [[1, "bigstinger"]], l: "နောက်ခန်း",
+    k: "thread", rev: "thread 5 of 10 — THE TELL",
+    g: "⚠️ ချည်နီ ပဉ္စမအကြိမ် — ဦးတင်မောင်က အဖုံးကို ခဏပြန်ကြွတယ်။ ချည်ကို သေချာလွတ်အောင် ဆွဲထုတ်ပေးတယ်။",
+    p: "OCCURRENCE 5 OF 10, AND THE MOST IMPORTANT SHOT IN THE FILM. The same tight framing: ⚠️ THE "
+      + "LID HAS BEEN LIFTED A FEW INCHES CLEAR OF THE RIM AGAIN and an older man's two hands are "
+      + "carefully easing the pinched red thread out from under it, ⚠️ HANDLING IT WITH OBVIOUS "
+      + "CARE, the way you free a fine chain from a zip. He is paying it far more attention than "
+      + "the man underneath.",
+    u: ["ဦးတင်မောင်က အဖုံးကို ခဏပြန်ကြွတယ်။",
+        "ချည်ကို သေချာလွတ်အောင် ဆွဲထုတ်ပေးတယ်။"] },
+
+  { t: "Now I Knew What to Do", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "ne",
+    w: ["နေလင်း"],
+    g: "⚠️ သူတို့အတွက် အရေးကြီးတာ ကျွန်တော် ငြိမ်နေတာတင် မဟုတ်ဘူး။ ဒီချည် မပြတ်ဖို့လည်း လိုတယ်။",
+    p: "Close on Ne Lin's face in the narrowing gap, ⚠️ AND SOMETHING HAS SWITCHED ON BEHIND HIS "
+      + "EYES — the panic replaced by a hard flat calculation. He is looking sideways at his own "
+      + "wrist. The straight edge of the lid's shadow lies across him.",
+    u: ["အဲဒီလုပ်ရပ်ကို မြင်တာနဲ့ ကျွန်တော် ဘာလုပ်ရမလဲ သိသွားတယ်။",
+        "သူတို့အတွက် အရေးကြီးတာ ကျွန်တော် ငြိမ်နေတာတင် မဟုတ်ဘူး။",
+        "ဒီချည် မပြတ်ဖို့လည်း လိုတယ်။"] },
+
+  { t: "I Stopped Struggling", l: "နောက်ခန်း", k: "inside", w: ["နေလင်း"],
+    g: "ကျွန်တော် ရုန်းနေတာ ရပ်လိုက်တယ်။ ပါးစပ်ကို နည်းနည်းဟပြီး မျက်လုံးမှိတ်ထားလိုက်တယ်။",
+    p: "OCCURRENCE 7 OF 8 OF THE VIEW FROM INSIDE. The lid still covers the bottom third. ⚠️ NE "
+      + "LIN'S FACE IN THE NEAR FOREGROUND HAS GONE COMPLETELY SLACK — eyes closed, mouth slightly "
+      + "open, jaw loose, every muscle released. ⚠️ HE LOOKS EXACTLY LIKE A DEAD MAN AND IT IS "
+      + "DELIBERATE.",
+    u: ["ကျွန်တော် ရုန်းနေတာ ရပ်လိုက်တယ်။ လက်ကို အသာချတယ်။",
+        "ပါးစပ်ကို နည်းနည်းဟပြီး မျက်လုံးမှိတ်ထားလိုက်တယ်။",
+        "ရင်ဘတ်ကတော့ အသက်ရှူချင်လွန်းလို့ နာနေပြီ။"] },
+
+  { t: "Now I Really Had to Act", l: "နောက်ခန်း", k: "inside",
+    w: ["ဦးတင်မောင်"],
+    g: "⚠️ “နေလင်း…” ကျွန်တော် မတုံ့ပြန်ဘူး။ သူ့လက်က ကျွန်တော့်ပါးကို ထိတယ်။ ကျွန်တော် မလှုပ်ဘူး။",
+    p: "OCCURRENCE 8 OF 8 OF THE VIEW FROM INSIDE. The same framing with the lid across the bottom, "
+      + "and U Tin Maung leaning in from above with ⚠️ ONE HAND COMING DOWN INTO THE NEAR "
+      + "FOREGROUND TO TOUCH A SLACK CHEEK. His face is searching and uncertain. ⚠️ THE FACE BELOW "
+      + "HIS HAND HAS NOT REACTED AT ALL.",
+    u: ["ဦးတင်မောင်က ကျွန်တော့်မျက်နှာနား ငုံ့လာတယ်။ “နေလင်း…”",
+        "ကျွန်တော် မတုံ့ပြန်ဘူး။ သူ့လက်က ကျွန်တော့်ပါးကို ထိတယ်။",
+        "ကျွန်တော် မလှုပ်ဘူး။ လူသေဟန်ဆောင်ဖို့ ငှားထားတာမဟုတ်လား။"] },
+
+  { t: "Son, Try to Stand", l: "နောက်ခန်း", k: "wide",
+    w: ["ဦးတင်မောင်", "သား"],
+    g: "“သား… ထရပ်ကြည့်။” နှစ်ယောက်လုံး ကျွန်တော့်ဘက်က မျက်လုံးလွှဲသွားတယ်။",
+    p: "Wide on the room: U Tin Maung has left the half-fitted lid resting on the near coffin and "
+      + "crossed to his son, lifting the young man's arm across his own shoulders to take his "
+      + "weight. ⚠️ BOTH OF THEM ARE FACING AWAY FROM THE NEAR COFFIN. The son is seen from behind. "
+      + "Ne Lin lies apparently dead in the foreground.",
+    u: ["“သား… ထရပ်ကြည့်။”",
+        "ဦးတင်မောင်က ကျွန်တော့်အဖုံးကို ခဏချပြီး သူ့သားဆီ သွားတယ်။",
+        "နှစ်ယောက်လုံး ကျွန်တော့်ဘက်က မျက်လုံးလွှဲသွားတယ်။"] },
+
+  { t: "An Inch Was Enough", l: "နောက်ခန်း", k: "thread",
+    w: ["နေလင်း"], rev: "thread 6 of 10",
+    g: "⚠️ ချည်နီ ဆဋ္ဌမအကြိမ် — လက်ကောက်ဝတ်ကို အားထည့်ပြီး ဘေးဘက်ရွှေ့တယ်။ တစ်လက်မလောက်ပဲ ရွှေ့နိုင်တယ်။ ချည်နီက အဖုံးအောက် ပြန်ဝင်သွားတယ်။",
+    p: "OCCURRENCE 6 OF 10. The same tight framing: a wrist dragging itself sideways across the "
+      + "lining by perhaps an inch, ⚠️ AND THE RED THREAD BEING PULLED BACK IN UNDER THE EDGE OF "
+      + "THE RESTING LID, pinched between lid and rim once more. The movement is tiny and "
+      + "deliberate.",
+    u: ["ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။",
+        "လက်ကောက်ဝတ်ကို အားထည့်ပြီး ဘေးဘက်ရွှေ့တယ်။ တစ်လက်မလောက်ပဲ ရွှေ့နိုင်တယ်။",
+        "ချည်နီက အဖုံးအောက် ပြန်ဝင်သွားတယ်။"] },
+
+  // ── XII · GETTING OUT ─────────────────────────────────────────────────────
+  { t: "The Coffin Rocked", l: "နောက်ခန်း", k: "wide",
     w: ["နေလင်း", "ဦးတင်မောင်"],
-    g: "ရဲစခန်းမှာ ကျွန်တော် ပစ္စည်းတွေ ပြန်ယူတဲ့နေ့ ဦးတင်မောင်က ကျွန်တော့်ကို မြင်သွားတယ်။ “နေလင်း။”",
-    p: "In the police station in flat daylight: Ne Lin stopped part way across the room with a "
-      + "plastic bag of belongings in one hand, and U Tin Maung seated on a chair against the "
-      + "wall behind him, ⚠️ HIS HEAD ALREADY TURNED AND HIS MOUTH OPEN ON A NAME. Ordinary "
-      + "bright office.",
-    u: ["ဒါပေမယ့် ရဲစခန်းမှာ ကျွန်တော် ပစ္စည်းတွေ ပြန်ယူတဲ့နေ့—",
-        "ဦးတင်မောင်က ကျွန်တော့်ကို မြင်သွားတယ်။",
-        "သူ တိုးတိုးလေး ခေါ်တယ်။ “နေလင်း။” ကျွန်တော် ရပ်လိုက်တယ်။"] },
+    g: "ကျွန်တော် ကိုယ်ကို တစ်ဖက်စောင်းလိုက်တယ်။ ခေါင်းတလား လှုပ်သွားတယ်။ ဦးတင်မောင် လှည့်ကြည့်တယ်။",
+    p: "Wide on the room: the near coffin tilted over at an angle on its trestles with the lid "
+      + "sliding, and ⚠️ U TIN MAUNG HALF TURNED BACK TOWARDS IT with his son's arm still over his "
+      + "shoulders, caught between the two. His face is alarmed rather than angry.",
+    u: ["ကျွန်တော် ကိုယ်ကို တစ်ဖက်စောင်းလိုက်တယ်။ ခေါင်းတလား လှုပ်သွားတယ်။",
+        "ဦးတင်မောင် လှည့်ကြည့်တယ်။",
+        "ကျွန်တော် နောက်တစ်ကြိမ် အားကုန်လှိမ့်တယ်။"] },
 
-  { t: "He Was Looking at My Chest", c: [[2, "bigstinger"]], l: "ရဲစခန်း", k: "tin",
-    w: ["ဦးတင်မောင်"],
-    g: "⚠️ သူ ကျွန်တော့်မျက်နှာကို မကြည့်ဘူး။ ရင်ဘတ်ကိုပဲ ကြည့်နေတယ်။ အသက်ရှူနေတာကို ကြည့်နေတာ။",
-    p: "Close on U Tin Maung seated against the wall, ⚠️ HIS EYES AIMED WELL BELOW THE LENS — "
-      + "level with a standing man's chest rather than his face — and tracking a small steady "
-      + "rise and fall there. His expression is calm, attentive and assessing. Flat daylight.",
-    u: ["သူ ကျွန်တော့်မျက်နှာကို မကြည့်ဘူး။",
-        "ရင်ဘတ်ကိုပဲ ကြည့်နေတယ်။",
-        "အသက်ရှူနေတာကို ကြည့်နေတာ။"] },
+  { t: "It Went Over", c: [[1, "stinger"]], l: "နောက်ခန်း", k: "wide", w: ["နေလင်း"],
+    g: "⚠️ ခုံပုတစ်လုံးက အောက်ကနေ လွတ်သွားတယ်။ ခေါင်းတလားက ဘေးစောင်းပြီး ကျသွားတယ်။ ဒုန်း!",
+    p: "Wide on the room at the instant of the fall: ⚠️ THE NEAR COFFIN IS ON THE CONCRETE ON ITS "
+      + "SIDE, one trestle kicked over beside it, the lid skidding away separately, Ne Lin half "
+      + "spilled onto the floor. Dust lifting through the bulb light. U Tin Maung and his son are "
+      + "still on their feet beyond.",
+    u: ["ခုံပုတစ်လုံးက အောက်ကနေ လွတ်သွားတယ်။",
+        "ခေါင်းတလားက ဘေးစောင်းပြီး ကျသွားတယ်။",
+        "ကျွန်တော့်ပခုံးက ကြမ်းပြင်နဲ့ ဆောင့်မိတယ်။ အဖုံးလည်း လျှောကျသွားတယ်။"] },
 
-  { t: "How Much Would Be Enough", c: [[2, "stinger"]], l: "ရဲစခန်း", k: "station",
+  { t: "Pinned Under the Lid", l: "နောက်ခန်း", k: "thread",
+    rev: "thread 7 of 10",
+    g: "⚠️ ချည်နီ သတ္တမအကြိမ် — ချည်နီက အဖုံးအောက်မှာ ဖိညပ်နေတယ်။ ဘေးကလူက လက်ကို ချက်ချင်း ဆွဲရုတ်တယ်။",
+    p: "OCCURRENCE 7 OF 10. The same tight framing at floor level: ⚠️ THE RED THREAD RUNS UNDER THE "
+      + "EDGE OF THE FALLEN LID where it is trapped hard against the concrete, and the length "
+      + "beyond is stretched bar-straight and visibly thrumming. Dust on the floor either side.",
+    u: ["ချည်နီက အဖုံးအောက်မှာ ဖိညပ်နေတယ်။",
+        "ဘေးကလူက လက်ကို ချက်ချင်း ဆွဲရုတ်တယ်။ ချည်တင်းသွားတယ်။"] },
+
+  { t: "It Snapped", c: [[2, "bigstinger"]], l: "နောက်ခန်း", k: "thread", w: ["နေလင်း"],
+    rev: "thread 8 of 10",
+    g: "⚠️ ချည်နီ အဋ္ဌမအကြိမ် — ဖျောက်။ ချည်ပြတ်သွားတယ်။",
+    p: "OCCURRENCE 8 OF 10. The same tight framing on Ne Lin's wrist: ⚠️ THE THREAD HAS PARTED. Two "
+      + "loose red ends fly apart in opposite directions, still curling from the tension, the "
+      + "broken ends frayed. The loop left on his wrist has gone slack. ⚠️ HIS SKIN IS UNBROKEN — "
+      + "only a shallow pale line where the thread sat.",
+    u: ["ကျွန်တော်လည်း လွတ်နေတဲ့လက်နဲ့ အဖုံးအစွန်းကို ဖိပြီး ကိုယ်ကို နောက်ထပ်လှိမ့်လိုက်တယ်။",
+        "ချည်ပြတ်သွားတယ်။",
+        "ကျွန်တော် လေကို အားကုန်ရှူမိတယ်။"] },
+
+  { t: "My Breathing Filled the Room", c: [[1, "stinger"]], l: "နောက်ခန်း", k: "ne",
+    w: ["နေလင်း"],
+    g: "⚠️ တစ်ခန်းလုံးမှာ ကျွန်တော့်အသက်ရှူသံ ကြီးကြီးပေါ်လာတယ်။ ဘေးကလူရဲ့ရင်ဘတ်ကတော့ ရပ်သွားတယ်။",
+    p: "Close on Ne Lin's face on the concrete floor, ⚠️ HIS MOUTH WIDE OPEN AND HIS WHOLE CHEST "
+      + "HEAVING, colour flooding back into his face, tears and sweat together. Dust in the air "
+      + "around him. ⚠️ HE LOOKS VIOLENTLY ALIVE.",
+    u: ["တစ်ခန်းလုံးမှာ ကျွန်တော့်အသက်ရှူသံ ကြီးကြီးပေါ်လာတယ်။",
+        "ဘေးကလူရဲ့ရင်ဘတ်ကတော့ ရပ်သွားတယ်။ သူ့ခြေထောက်တွေ ခွေကျလာတယ်။"] },
+
+  { t: "Both of Them Went Down", l: "နောက်ခန်း", k: "wide", w: ["ဦးတင်မောင်", "သား"],
+    g: "ဦးတင်မောင် မထိန်းနိုင်ဘူး။ နှစ်ယောက်လုံး ကြမ်းပြင်ပေါ် လဲကျသွားတယ်။",
+    p: "Wide on the room: U Tin Maung down on the concrete with his son collapsed across his lap, "
+      + "⚠️ THE SON SEEN FROM BEHIND AND BELOW so his face is not readable, one arm hanging. The "
+      + "father has both arms around him. Dust, the tipped coffin, the swinging bulb.",
+    u: ["ဦးတင်မောင် မထိန်းနိုင်ဘူး။",
+        "နှစ်ယောက်လုံး ကြမ်းပြင်ပေါ် လဲကျသွားတယ်။",
+        "ကျွန်တော် ခေါင်းတလားထဲကနေ တွားထွက်တယ်။"] },
+
+  { t: "There Is Still Some Left in Him", l: "နောက်ခန်း",
+    k: "son", w: ["သား"],
+    g: "⚠️ “အဖေ… မကုန်သေးဘူး…” သူ့လက်ချောင်းက ကျွန်တော့်ဘက်ကို ညွှန်တယ် — “သူ့မှာ… ကျန်သေးတယ်…”",
+    p: "⚠️ THE MOST FRIGHTENING GESTURE IN THE FILM AND IT IS ONE FINGER. Framed from the son's "
+      + "shoulder down: a limp grey arm lying across the concrete, ⚠️ AND ONE INDEX FINGER LIFTED "
+      + "AND POINTING STEADILY OUT OF FRAME while everything else about the arm is slack. His face "
+      + "is above the top edge of frame.",
+    u: ["သူ့သားရဲ့မျက်နှာက ခုနက ပြန်ရလာတဲ့အရောင်တွေ ပျောက်နေပြီ။ ဒါပေမယ့် မျက်လုံးက ကျွန်တော့်ဆီ ရွေ့လာတယ်။",
+        "“အဖေ… မကုန်သေးဘူး…”",
+        "သူ့လက်ချောင်းက ကျွန်တော့်ဘက်ကို ညွှန်တယ်။ “သူ့မှာ… ကျန်သေးတယ်…”"] },
+
+  { t: "He Caught My Leg", l: "နောက်ခန်း", k: "floor",
     w: ["ဦးတင်မောင်", "နေလင်း"],
-    g: "⚠️ ပြီးတော့ အစက အလုပ်အပ်ခဲ့တုန်းကလို အေးအေးဆေးဆေး မေးတယ် — “ငါးသိန်းနဲ့ မလောက်ရင်… ဘယ်လောက်လိုလဲ။”",
-    p: "The two of them in the bright police station, U Tin Maung seated and speaking pleasantly, "
-      + "Ne Lin standing very still a few paces off with the bag in his hand. ⚠️ THE OLD MAN'S "
-      + "MANNER IS EXACTLY AS IT WAS THE FIRST DAY — courteous, unhurried, businesslike. Nothing "
-      + "in the room looks wrong.",
-    u: ["ပြီးတော့ အစက အလုပ်အပ်ခဲ့တုန်းကလို အေးအေးဆေးဆေး မေးတယ်။",
-        "“ငါးသိန်းနဲ့ မလောက်ရင်… ဘယ်လောက်လိုလဲ။”"] },
+    g: "ဦးတင်မောင် ချက်ချင်း ထရပ်လာတယ်။ ကျွန်တော့်ခြေထောက်ကို ဖမ်းဆွဲလိုက်တယ်။",
+    p: "Camera low on the concrete: Ne Lin on his front mid-crawl towards the door with ⚠️ AN OLDER "
+      + "MAN'S TWO HANDS CLAMPED AROUND ONE OF HIS ANKLES, dragging him back, his fingers "
+      + "scrabbling at the floor. Dust, the fallen lid, a trestle leg.",
+    u: ["ဦးတင်မောင် ချက်ချင်း ထရပ်လာတယ်။",
+        "ကျွန်တော့်ခြေထောက်ကို ဖမ်းဆွဲလိုက်တယ်။",
+        "ကျွန်တော် နောက်ပြန်လဲကျသွားတယ်။"] },
 
-  { t: "Not a Person Yet", c: [[1, "finalstinger"]], l: "ရဲစခန်း", k: "ne", w: ["နေလင်း"],
-    g: "⚠️ သူ့သားကို သင်္ဂြိုဟ်ပြီးသွားပြီ။ ဒါပေမယ့် ကျွန်တော့်ကို မြင်တဲ့အချိန်မှာ — သူက လူတစ်ယောက်ကို မြင်နေတာ မဟုတ်သေးဘူး။",
-    p: "FINAL SHOT. Close on Ne Lin standing in the bright police station, holding completely "
-      + "still, looking back at the old man off frame. ⚠️ HIS FACE IS NOT SHOCKED AND NOT ANGRY — "
-      + "it has emptied, the way a face does when it understands what it is being looked at as. "
-      + "Ordinary flat daylight on an ordinary young man. Hold on him.",
-    u: ["အဲဒီအချိန်မှာ ကျွန်တော် ဘာကြောင့် ပြန်ကြောက်သွားလဲဆိုတာ သူ နားမလည်ဘူး။",
-        "သူ့သားကို သင်္ဂြိုဟ်ပြီးသွားပြီ။",
-        "ဒါပေမယ့် ကျွန်တော့်ကို မြင်တဲ့အချိန်မှာ သူက လူတစ်ယောက်ကို မြင်နေတာ မဟုတ်သေးဘူး။",
-        "သူ့သား နေလို့ရမယ့် ကိုယ်ခန္ဓာတစ်ခုကိုပဲ မြင်နေတုန်း။"] },
+  { t: "Just One Moment, Ne Lin", l: "နောက်ခန်း", k: "thread",
+    w: ["ဦးတင်မောင်"], rev: "thread 9 of 10",
+    g: "⚠️ ချည်နီ နဝမအကြိမ် — သူ့လက်ထဲမှာ ပြတ်သွားတဲ့ချည်။ ပြန်ဆက်ဖို့ ကြိုးစားနေတာ။ “တစ်ခဏပဲ နေလင်း!”",
+    p: "OCCURRENCE 9 OF 10. The same tight framing: an older man's two hands holding the two frayed "
+      + "broken ends of the red thread and ⚠️ TRYING TO PRESS THEM TOGETHER END TO END as though "
+      + "they will rejoin. His hands are shaking. Concrete floor beneath.",
+    u: ["သူ့လက်ထဲမှာ ပြတ်သွားတဲ့ချည်။ ပြန်ဆက်ဖို့ ကြိုးစားနေတာ။",
+        "“တစ်ခဏပဲ နေလင်း! တစ်ခဏပဲ!”",
+        "ကျွန်တော် သူ့ကို ခြေထောက်နဲ့ ကန်ဖယ်တယ်။ သူ မလွှတ်ဘူး။"] },
+
+  { t: "I Had My Voice Back", l: "နောက်ခန်း", k: "ne",
+    w: ["နေလင်း"],
+    g: "⚠️ ကျွန်တော် အခု အသံပြန်ထွက်လာပြီဆိုတာ သတိရတယ် — “ကယ်ကြပါဦး! လူသတ်နေတယ်!”",
+    p: "Close on Ne Lin's face turned towards the doorway on the concrete floor, ⚠️ MOUTH WIDE OPEN "
+      + "IN A FULL SHOUT — and this time everything about the picture says the sound is coming out: "
+      + "the neck cords, the wide eyes, the whole face committed. Dust in the air.",
+    u: ["ကျွန်တော် အခု အသံပြန်ထွက်လာပြီဆိုတာ သတိရတယ်။",
+        "ဆိုင်ရှေ့ဘက်ကို အားကုန်အော်လိုက်တယ်။ “ကယ်ကြပါဦး!”",
+        "ကျွန်တော် ရှောင်ပြီး ထပ်အော်တယ်။ “လူသတ်နေတယ်! ကယ်ကြပါဦး!”"] },
+
+  { t: "The Door Went In", l: "နောက်ခန်း", k: "wide", w: ["နေလင်း"],
+    g: "ဆိုင်အပြင်က လူသံ ကြားလာတယ်။ “ဘာဖြစ်တာလဲ!” တံခါးတွန်းသံ။",
+    p: "Wide on the room towards the door: ⚠️ A BAR OF DAYLIGHT HAS OPENED DOWN ONE EDGE OF IT and "
+      + "two shadows break that light from outside. Ne Lin is dragging himself towards it. U Tin "
+      + "Maung's head is turned sharply to the sound. Bulb light and daylight meet across the "
+      + "concrete.",
+    u: ["ဆိုင်အပြင်က လူသံ ကြားလာတယ်။ “ဘာဖြစ်တာလဲ!” တံခါးတွန်းသံ။",
+        "ဦးတင်မောင် ခဏလှည့်ကြည့်တဲ့အချိန် ကျွန်တော် ခြေထောက်ကို ဆွဲရုတ်ပြီး တံခါးဆီ ပြေးတယ်။"] },
+
+  { t: "The Last Thing I Saw", c: [[3, "stinger"]], l: "နောက်ခန်း", k: "thread",
+    w: ["ဦးတင်မောင်"], rev: "thread 10 of 10",
+    g: "⚠️ ချည်နီ နောက်ဆုံးအကြိမ် — ပြတ်နေတဲ့ချည်နှစ်ဖက်ကို လက်နဲ့ ဖိဆက်ထားတယ်။ ဖိလေလေ မဆက်လေလေ။ သူကတော့ မရပ်ဘူး။",
+    p: "OCCURRENCE 10 OF 10, SEEN FROM THE DOOR. The same tight framing pulled back a little: an "
+      + "older man kneeling on the concrete beside a slack grey hand, ⚠️ PRESSING THE TWO BROKEN "
+      + "THREAD ENDS TOGETHER BETWEEN HIS FINGERS AND THUMBS, harder and harder — and ⚠️ THEY "
+      + "SIMPLY WILL NOT JOIN. Daylight from the doorway falls across his hands.",
+    u: ["အပြင်က လူနှစ်ယောက်က တံခါးကို တွန်းဖွင့်ပြီး ကျွန်တော့်ကို ဆွဲထုတ်လိုက်ကြတယ်။",
+        "နောက်ဆုံး ကျွန်တော် ပြန်မြင်လိုက်ရတာက ဦးတင်မောင် သူ့သားနားမှာ ဒူးထောက်နေတယ်။",
+        "ပြတ်နေတဲ့ချည်နှစ်ဖက်ကို လက်နဲ့ ဖိဆက်ထားတယ်။ ဖိလေလေ မဆက်လေလေ။ သူကတော့ မရပ်ဘူး။"] },
+
+  // ── XIII · EXACTLY ONE HOUR ───────────────────────────────────────────────
+  { t: "They Arrested Him That Day", l: "ဆိုင်ရှေ့", k: "front",
+    w: ["ဦးတင်မောင်", "ရဲသား"],
+    g: "အဲဒီနေ့ ဦးတင်မောင် အဖမ်းခံရတယ်။ သူ့သားရဲ့ရုပ်အလောင်းကို ဆိုင်နောက်ခန်းမှာ တွေ့ခဲ့ကြတယ်။",
+    p: "Outside the photo studio in daylight: a police officer walking U Tin Maung out through the "
+      + "dusty front room by one arm, ⚠️ THE OLD MAN UPRIGHT, TIDY AND COMPLETELY CALM, looking "
+      + "back over his shoulder into the building. Neighbours at the edge of frame.",
+    u: ["အဲဒီနေ့ ဦးတင်မောင် အဖမ်းခံရတယ်။",
+        "သူ့သားရဲ့ရုပ်အလောင်းကို ဆိုင်နောက်ခန်းမှာ တွေ့ခဲ့ကြတယ်။",
+        "သားဆုံးတာ တစ်လကျော်ပြီ။"] },
+
+  { t: "One Night in Hospital", l: "ဆေးရုံ", k: "ward", w: ["နေလင်း"],
+    g: "ကျွန်တော်က ဆေးရုံမှာ တစ်ညနေရတယ်။ နောက်နေ့မှာ အသက်ရှူတာ ပုံမှန်ပြန်ဖြစ်လာတယ်။",
+    p: "Ne Lin sitting up in an ordinary hospital bed in flat daylight, ⚠️ PHYSICALLY FINE — no "
+      + "drip, no bandage, no injury, just a young man sitting on top of the covers looking at his "
+      + "own hands. Pale green walls, a window with a thin curtain.",
+    u: ["သင်္ဂြိုဟ်ပြီးပြီလို့ ဆွေမျိုးတွေကို ပြောထားပေမယ့် အလောင်းကို သူ သိမ်းထားခဲ့တာ။",
+        "ကျွန်တော်က ဆေးရုံမှာ တစ်ညနေရတယ်။",
+        "နောက်နေ့မှာ အသက်ရှူတာ ပုံမှန်ပြန်ဖြစ်လာတယ်။ လက်တွေ၊ ခြေထောက်တွေလည်း ပြန်လှုပ်နိုင်လာတယ်။"] },
+
+  { t: "Three Other Young Men", l: "ရဲစခန်း", k: "table",
+    g: "⚠️ အဲဒီနာမည်တွေက ရိုက်ကူးရေးအဖွဲ့သားနာမည်တွေ မဟုတ်ဘူး။ ကျွန်တော့်လိုပဲ အလုပ်လာလုပ်ခဲ့တဲ့ လူငယ်သုံးယောက်ရဲ့နာမည်တွေ။",
+    p: "⚠️ TEXT PERMITTED. Looking down at a police station table: the four named brown envelopes "
+      + "laid out in a row, ⚠️ NOW OPENED, each with its contents set out in front of it — a phone, "
+      + "a wristwatch or a set of keys, a folded bundle of banknotes. ⚠️ THE HANDWRITTEN NAMES ARE "
+      + "THE ONLY TEXT IN THE IMAGE. Flat daylight, a plain table.",
+    u: ["ကျွန်တော့်ဖုန်းနဲ့ ပစ္စည်းတွေ ပြန်ယူတဲ့နေ့မှ စားပွဲပေါ်က ကျန်တဲ့စာအိတ်တွေအကြောင်း သိရတယ်။",
+        "အဲဒီနာမည်တွေက ရိုက်ကူးရေးအဖွဲ့သားနာမည်တွေ မဟုတ်ဘူး။",
+        "ကျွန်တော့်လိုပဲ အလုပ်လာလုပ်ခဲ့တဲ့ လူငယ်သုံးယောက်ရဲ့နာမည်တွေ။"] },
+
+  { t: "Nobody Was Looking for Them", l: "ရဲစခန်း", k: "insert",
+    g: "⚠️ သုံးယောက်စလုံး မိသားစုနဲ့ အဆက်အသွယ်ပြတ်နေကြတာ။",
+    p: "Tight insert on three switched-off phones lying side by side on the table in flat daylight, "
+      + "⚠️ ALL THREE SCREENS BLACK AND DEAD, each with a folded bundle of banknotes beside it. ⚠️ "
+      + "NO TEXT OR NUMERALS ARE LEGIBLE ANYWHERE. Ordinary objects, laid out like evidence.",
+    u: ["သုံးယောက်စလုံး မိသားစုနဲ့ အဆက်အသွယ်ပြတ်နေကြတာ။",
+        "စာအိတ်တစ်အိတ်စီထဲမှာ ဖုန်းတစ်လုံး၊ ကိုယ်ရေးပစ္စည်းတချို့နဲ့ မပေးရသေးတဲ့ ငွေတစ်ဝက်စီ ရှိတယ်။",
+        "သူတို့လည်း အလုပ်ပြီးရင် ငွေလာယူမယ်လို့ ထင်ခဲ့ကြမှာပဲ။"] },
+
+  { t: "Two Times Beside Each Name", c: [[2, "bigstinger"]], l: "ရဲစခန်း", k: "insert",
+    rev: "the notebook",
+    g: "⚠️ မှတ်စုစာအုပ်ထဲမှာ နာမည်တစ်ခုစီဘေးမှာ အချိန်နှစ်ခု ရေးထားတယ် — ၂:၁၀ — ၃:၁၀ / ၆:၄၀ — ၇:၄၀ / ၉:၀၅ — ၁၀:၀၅",
+    p: "⚠️ TEXT PERMITTED AND IT IS THE WHOLE POINT. Insert square on from above to an open lined "
+      + "exercise book on a table in flat daylight, the page filling the frame, carrying a short "
+      + "handwritten list in Burmese ballpoint. Three lines of paired times read exactly "
+      + "\"၂:၁၀ — ၃:၁၀\", \"၆:၄၀ — ၇:၄၀\" and \"၉:၀၅ — ၁၀:၀၅\", each preceded by a man's name, "
+      + "and one final name sits below them with ⚠️ THE SPACE AFTER IT LEFT COMPLETELY BLANK. "
+      + "Nothing else is written on the page.",
+    u: ["ဦးတင်မောင်ရဲ့ မှတ်စုစာအုပ်ထဲမှာတော့ နာမည်တစ်ခုစီဘေးမှာ အချိန်နှစ်ခု ရေးထားတယ်။",
+        "နှစ်ချက်ဆယ် — သုံးချက်ဆယ်။ ခြောက်နာရီလေးဆယ် — ခုနစ်နာရီလေးဆယ်။",
+        "ကိုးနာရီငါးမိနစ် — ဆယ်နာရီငါးမိနစ်။"] },
+
+  { t: "Exactly One Hour", l: "ရဲစခန်း", k: "clock",
+    rev: "clock 3 of 5",
+    g: "⚠️ နာမည်သုံးခု။ နေ့ရက်မတူဘူး။ ဒါပေမယ့် ကြားကအချိန်က အတူတူပဲ — တစ်နာရီတိတိ။",
+    p: "OCCURRENCE 3 OF 5 OF THE CLOCK, and the first one outside the back room. The identical "
+      + "framing — the same kind of plain round white face with no numerals filling the frame — "
+      + "⚠️ BUT THIS IS A DIFFERENT CLOCK ON A DIFFERENT WALL, in flat daylight rather than bulb "
+      + "light. The red second hand is mid-sweep.",
+    u: ["နာမည်သုံးခု။ နေ့ရက်မတူဘူး။",
+        "ဒါပေမယ့် ကြားကအချိန်က အတူတူပဲ။",
+        "တစ်နာရီတိတိ။"] },
+
+  { t: "My Name, and No Time at All", l: "ရဲစခန်း", k: "ne",
+    w: ["နေလင်း"],
+    g: "⚠️ အောက်ဆုံးမှာ ကျွန်တော့်နာမည် ရှိတယ်။ အချိန်နေရာကတော့ ဗလာ။",
+    p: "Close on Ne Lin standing over the table in flat daylight looking down at the open notebook, "
+      + "⚠️ HIS FACE COMPLETELY STILL. Not shock — the particular blankness of a man reading his "
+      + "own name on a list. Ordinary bright office light.",
+    u: ["အောက်ဆုံးမှာ ကျွန်တော့်နာမည် ရှိတယ်။ အချိန်နေရာကတော့ ဗလာ။",
+        "ကျွန်တော်က အစမှာ အရင်လူတွေ ရိုက်ကူးခဲ့တဲ့အချိန်လို့ ထင်မိသေးတယ်။"] },
+
+  { t: "What Were They Measuring", l: "ရဲစခန်း", k: "station", w: ["နေလင်း", "ရဲသား"],
+    g: "ကင်မရာမှာ ဘာမှ မရိုက်ထားခဲ့ဘူးဆိုတာ သတိရတော့မှ — အဲဒီအချိန်တွေက ဘာကိုတိုင်းထားတာလဲဆိုတဲ့ မေးခွန်း ဝင်လာတယ်။",
+    p: "Ne Lin and the police officer either side of the station counter in flat daylight, the open "
+      + "notebook between them, ⚠️ THE OFFICER MID-SENTENCE AND NE LIN NOT LOOKING AT HIM — staring "
+      + "at the page instead. Ordinary bright office.",
+    u: ["ကင်မရာမှာ ဘာမှ မရိုက်ထားခဲ့ဘူးဆိုတာ သတိရတော့မှ—",
+        "အဲဒီအချိန်တွေက ဘာကိုတိုင်းထားတာလဲဆိုတဲ့ မေးခွန်း ဝင်လာတယ်။"] },
+
+  { t: "When He Woke and When He Went Quiet", l: "ရဲစခန်း",
+    k: "insert",
+    g: "⚠️ ရဲက ပြန်ပြောပြတယ် — “သား ပြန်နိုးတဲ့အချိန်နဲ့ ပြန်ငြိမ်သွားတဲ့အချိန်။”",
+    p: "Tight insert on the open notebook page in flat daylight with ⚠️ A POLICE OFFICER'S FINGER "
+      + "RESTING ON THE FIRST PAIR OF TIMES. The Burmese handwriting is legible and is the only "
+      + "text in the image. Nothing else in frame.",
+    u: ["ရဲက ဦးတင်မောင်ကို မေးတဲ့အခါ သူ ဖြေခဲ့တဲ့စကားကို ကျွန်တော့်ကို ပြန်ပြောပြတယ်။",
+        "“သား ပြန်နိုးတဲ့အချိန်နဲ့ ပြန်ငြိမ်သွားတဲ့အချိန်။”"] },
+
+  { t: "All Three of Them", c: [[2, "stinger"]], l: "ရဲစခန်း", k: "ne", w: ["နေလင်း"],
+    g: "⚠️ “တစ်နာရီပြီးရင် သူ့သား ပြန်သေသွားတာလား။” ခေါင်းညိတ်ပြတယ်။ “အရင်သုံးယောက်လုံးလည်း အဲဒီလိုပဲလား။” ထပ်ခေါင်းညိတ်ပြတယ်။",
+    p: "Close on Ne Lin in the police station, ⚠️ THE COLOUR DRAINING OUT OF HIS FACE AS HE ARRIVES "
+      + "AT IT — eyes moving fractionally, mouth slightly open, absolutely still. Flat ordinary "
+      + "daylight on an ordinary young man doing arithmetic.",
+    u: ["“တစ်နာရီပြီးရင် သူ့သား ပြန်သေသွားတာလား။” ခေါင်းညိတ်ပြတယ်။",
+        "“အရင်သုံးယောက်လုံးလည်း အဲဒီလိုပဲလား။” ထပ်ခေါင်းညိတ်ပြတယ်။",
+        "ကျွန်တော် အကြာကြီး တိတ်နေမိတယ်။"] },
+
+  { t: "He Knew All Along", c: [[2, "bigstinger"]], l: "ရဲစခန်း", k: "ne", w: ["နေလင်း"],
+    g: "⚠️ တစ်ယောက်သေရင် သူ့သား တစ်နာရီပဲ ရမယ်ဆိုတာ သူ သိထားပြီးသား။ အဲဒါနဲ့တောင် နောက်တစ်ယောက် ထပ်ခေါ်ခဲ့တယ်။",
+    p: "Close on Ne Lin, ⚠️ AND THIS IS THE FRAME WHERE HE UNDERSTANDS THE WHOLE THING — the face "
+      + "not horrified but hollowed, the way a person looks when a thing they assumed was madness "
+      + "turns out to have been a decision. Flat daylight.",
+    u: ["ဦးတင်မောင်က သူ့သားကို အပြီးတိုင် ပြန်ရှင်လာအောင် လုပ်နိုင်တယ်လို့ မှားယွင်းယုံနေတာလို့ ကျွန်တော် ထင်ခဲ့တာ။",
+        "မဟုတ်ဘူး။ တစ်ယောက်သေရင် သူ့သား တစ်နာရီပဲ ရမယ်ဆိုတာ သူ သိထားပြီးသား။",
+        "အဲဒါနဲ့တောင် နောက်တစ်ယောက် ထပ်ခေါ်ခဲ့တယ်။ ပြီးတော့ ကျွန်တော့်ကို ခေါ်ခဲ့တယ်။"] },
+
+  { t: "Other Voices, the Same Sentence", l: "ရဲစခန်း",
+    k: "insert",
+    g: "⚠️ သူ့ဖုန်းထဲမှာ နောက်ထပ် အသံဖိုင်တွေလည်း ရှိသေးတယ်။ မတူတဲ့အသံနဲ့ တူညီတဲ့စကားတစ်ကြောင်းစီ — “အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။”",
+    p: "⚠️ TEXT PERMITTED. Insert on a phone screen held flat on the station counter, showing a "
+      + "voice-memo list: ⚠️ SIX OR SEVEN SEPARATE RECORDINGS STACKED DOWN THE SCREEN, each row a "
+      + "small waveform with a different man's name beside it, ⚠️ AND EVERY ROW CARRYING THE SAME "
+      + "LINE OF BURMESE: \"အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။\". That repeated sentence and the names "
+      + "are the only text in the image.",
+    u: ["သူ့ဖုန်းထဲမှာ နောက်ထပ် သရုပ်ဆောင်လျှောက်ထားသူတွေရဲ့ အသံဖိုင်တွေလည်း ရှိသေးတယ်။",
+        "ယောက်ျားအသံတွေ။ မတူတဲ့အသံနဲ့ တူညီတဲ့စကားတစ်ကြောင်းစီ ပြောထားကြတာ။",
+        "“အဖေ၊ ကျွန်တော် ပြန်ရောက်ပြီ။”"] },
+
+  { t: "The Funeral Was Finished", l: "ဆိုင်ရှေ့", k: "front",
+    g: "သူ့သားရဲ့နာရေးကို ဆွေမျိုးတွေက နောက်ဆုံးမှာ ပြီးအောင်လုပ်ပေးခဲ့ကြတယ်။ ကျွန်တော်လည်း အဲဒီဆိုင်ကို ပြန်မသွားတော့ဘူး။",
+    p: "The front of the photo studio in daylight, shuttered and padlocked, ⚠️ THE DUSTY SIGN "
+      + "STILL BESIDE THE DOOR but the shop now plainly closed for good. ⚠️ NOBODY IN SHOT. "
+      + "Ordinary street, ordinary afternoon.",
+    u: ["သူ့သားရဲ့နာရေးကို ဆွေမျိုးတွေက နောက်ဆုံးမှာ ပြီးအောင်လုပ်ပေးခဲ့ကြတယ်။",
+        "ကျွန်တော်လည်း အဲဒီဆိုင်ကို ပြန်မသွားတော့ဘူး။"] },
+
+  { t: "One Hour, Is That Right", l: "ဆိုင်ရှေ့", k: "ne",
+    w: ["နေလင်း"],
+    g: "ဒါပေမယ့် တစ်ခါတလေ အလုပ်ခ ညှိနှိုင်းနေရင်း ပထမဆုံးဖုန်းပြောခဲ့တာကို ပြန်သတိရမိတယ် — “တစ်နာရီပဲ ဟုတ်တယ်နော် ဦး။”",
+    p: "Close on Ne Lin in daylight somewhere ordinary, phone in hand and held away from his ear, "
+      + "⚠️ STARING AT NOTHING MID-CONVERSATION, the everyday business of agreeing a fee having "
+      + "just stopped dead in his mouth.",
+    u: ["ဒါပေမယ့် တစ်ခါတလေ အလုပ်ခ ဘယ်လောက်ရမလဲဆိုပြီး ညှိနှိုင်းနေရင်း—",
+        "ဦးတင်မောင်နဲ့ ပထမဆုံးဖုန်းပြောခဲ့တာကို ပြန်သတိရမိတယ်။",
+        "ကျွန်တော်က မေးခဲ့တယ်။ “တစ်နာရီပဲ ဟုတ်တယ်နော် ဦး။”"] },
+
+  { t: "With You, He Gets One Hour", l: "ဆိုင်ရှေ့", k: "clock",
+    rev: "clock 4 of 5",
+    g: "⚠️ “အေး။ မင်းတစ်ယောက်နဲ့ဆို တစ်နာရီရတယ်။”",
+    p: "OCCURRENCE 4 OF 5 OF THE CLOCK. The identical framing on a plain round white clock face "
+      + "with no numerals, ⚠️ IN ORDINARY DAYLIGHT ON AN ORDINARY WALL — any wall, anywhere. The "
+      + "red second hand is mid-sweep. ⚠️ Nothing about this image is frightening.",
+    u: ["သူက ပြန်ဖြေခဲ့တယ်။",
+        "“အေး။ မင်းတစ်ယောက်နဲ့ဆို တစ်နာရီရတယ်။”"] },
+
+  { t: "He Was Not Talking About My Time", l: "ဆိုင်ရှေ့",
+    k: "ne", w: ["နေလင်း"],
+    g: "⚠️ အဲဒီတုန်းက ကျွန်တော်က အလုပ်လုပ်ရမယ့်အချိန်ကို ပြောနေတာလို့ ထင်ခဲ့တာ။ တကယ်တော့ သူ့သားအတွက် ဝယ်လို့ရမယ့်အချိန်ကို ပြောနေတာ။",
+    p: "Close on Ne Lin in flat daylight, ⚠️ HIS FACE EMPTYING COMPLETELY as the sentence re-reads "
+      + "itself in his head. He is looking slightly past the lens at nothing. Ordinary light, "
+      + "ordinary street behind him, no stylisation at all.",
+    u: ["အဲဒီတုန်းက ကျွန်တော်က အလုပ်လုပ်ရမယ့်အချိန်ကို ပြောနေတာလို့ ထင်ခဲ့တာ။",
+        "တကယ်တော့ သူက ကျွန်တော့်အချိန်ကို ပြောနေတာ မဟုတ်ဘူး။",
+        "သူ့သားအတွက် ဝယ်လို့ရမယ့်အချိန်ကို ပြောနေတာ။"] },
+
+  { t: "A Whole Life for One Hour", c: [[1, "finalstinger"]], l: "ဆိုင်ရှေ့", k: "clock",
+    rev: "clock 5 of 5",
+    g: "⚠️ ကျွန်တော် တစ်သက်လုံး ဆက်ရှင်နိုင်တဲ့အချိန်အားလုံးကို ယူပြီး — သူ့သားနဲ့ တစ်နာရီလောက် အတူနေရဖို့။",
+    p: "FINAL SHOT. OCCURRENCE 5 OF 5 OF THE CLOCK. The identical framing one last time, in flat "
+      + "ordinary daylight — the same plain white face, no numerals, the red second hand caught "
+      + "mid-sweep. ⚠️ IT IS SIMPLY A CLOCK ON A WALL, WORKING NORMALLY, AND THAT IS THE WHOLE "
+      + "POINT. Hold on it.",
+    u: ["ကျွန်တော် တစ်သက်လုံး ဆက်ရှင်နိုင်တဲ့အချိန်အားလုံးကို ယူပြီး—",
+        "သူ့သားနဲ့ တစ်နာရီလောက် အတူနေရဖို့။"] },
 ];
 
 /** Short, because the shot body is the part worth reading. */
 const CONT =
   "Continuity: Ne Lin is physically unharmed in every shot — ordinary warm colour, clear skin, "
-  + "both eyes bright. What is wrong with him is that he cannot move, and it shows only in his "
-  + "face and his tendons. U Tin Maung stays neat, gentle and courteous until the film says "
-  + "otherwise. The son is grey, wet and cold, and his skin is whole and smooth everywhere.";
+  + "both eyes bright. What is wrong with him is that he cannot move or breathe, and it shows only "
+  + "in his face and his tendons. U Tin Maung is neat, soft-spoken and courteous throughout, and "
+  + "his eyes are wet in most of the film. The son is grey, wet and cold, and his skin is whole "
+  + "and smooth everywhere.";
 
 const STYLE =
-  "Contemporary Myanmar, present day. Photorealism, 16:9, 35mm grain, level camera, natural "
-  + "depth of field. Clean neutral colour. Every place is an ordinary working room and the props "
-  + "are ordinary objects. One still instant. Surfaces are blank of writing except where a shot "
-  + "names it.";
+  "Contemporary Myanmar, present day. Photorealism, 16:9, 35mm grain, level camera, natural depth "
+  + "of field. Clean neutral colour. Every place is an ordinary working room and every prop is an "
+  + "ordinary object. One still instant. Surfaces are blank of writing except where a shot names "
+  + "it.";
 
 const TIME = {
-  bulb: "TIME: INSIDE THE SEALED BACK ROOM. The windows are boarded with black cloth and one bare "
-    + "hanging bulb is the whole of the light, so the walls fall away into shadow and the air is "
-    + "still. The room is cold.",
+  bulb: "TIME: INSIDE THE SEALED BACK ROOM. There are no windows and one bare hanging bulb is the "
+    + "whole of the light, so the walls fall away into shadow and the air is still. The room is "
+    + "cold.",
   day: "TIME: DAYTIME. Flat ordinary daylight, dry weather, bright outside.",
-  night: "TIME: NIGHT OUTDOORS. Ordinary street lighting and a torch beam.",
 };
-
-/** Everything in the back room is bulb-lit; the rest is stated here. */
-const AT_NIGHT = new Set(["They Took Him That Night"]);
 
 SCENES.forEach((s) => {
   s.cam = CAM[s.k];
   if (!s.cam) throw new Error(`shot "${s.t}" has no camera for k="${s.k}"`);
-  s.time = AT_NIGHT.has(s.t) ? TIME.night
-    : s.l === "နောက်ခန်း" ? TIME.bulb
-    : TIME.day;
+  s.time = s.l === "နောက်ခန်း" ? TIME.bulb : TIME.day;
   s.cont = CONT;
   s.style = STYLE;
 });
