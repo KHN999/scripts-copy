@@ -147,7 +147,6 @@ const CAM = {
   inside: 'FROM INSIDE THE COFFIN. Camera lying on its back on the lining where Ne Lin’s head is, looking straight up, so the frame holds the ceiling, the bare bulb, the rim of the coffin at the edges, and whatever leans in over the opening. ⚠️ Reproduce this framing identically every time it recurs.',
   thread: 'THE RED THREAD. Tight insert filling the frame with the thread and whatever it is tied to or running across. ⚠️ Reproduce this framing identically every time it recurs.',
   clock: 'THE WALL CLOCK. Insert square on to a plain round wall clock, the face filling the frame. ⚠️ Reproduce this framing identically every time it recurs.',
-  rim: 'OVER THE COFFIN RIM. Camera low at the head end of the near coffin, barely above the level of its wooden edge, so ⚠️ NE LIN’S FACE LIES FLAT IN THE NEAR FOREGROUND along the bottom of frame and the length of the room runs away beyond him, past the rim and out into the space between the two boxes. Roughly what he can see when he rolls his head.',
   two: 'THE TWO COFFINS. Camera at chest height at the foot of the two trestled coffins, both in frame side by side as in the master plate.',
   table: 'THE TABLE. Camera looking down at a table top, the surface filling the frame.',
   ne: 'CLOSE ON NE LIN, ON HIS FEET. Camera at his eye height, head-and-shoulders crop.',
@@ -477,15 +476,16 @@ export const SCENES = [
         "ကျွန်တော့်ဘေးမှာ လူတစ်ယောက် လဲလျောင်းပြီး ပြောနေသလို။",
         "ဦးတင်မောင်ရဲ့ ငိုသံ ကြားလာတယ်။ “အေး… အဖေ ဒီမှာရှိတယ်။”"] },
 
-  { t: "There Was No Filming", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "rim",
+  { t: "There Was No Filming", c: [[2, "stinger"]], l: "နောက်ခန်း", k: "wide",
     w: ["ဦးတင်မောင်", "နေလင်း"],
     g: "⚠️ ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။ အခန်းထဲမှာ သူတစ်ယောက်ပဲ ရပ်နေတယ်။ ရိုက်ကူးရေးလုပ်နေတဲ့ပုံ မရှိဘူး။",
-    p: "Ne Lin’s face lies flat along the bottom of frame with his eyes open, and past the rim "
-      + "the room opens out behind him. ⚠️ THE ROOM HOLDS EXACTLY WHAT THE MASTER PLATE HOLDS AND "
-      + "NOTHING ELSE: the two coffins on their trestles, the bare bulb, the wall clock, the "
-      + "table of envelopes, the tripod standing by itself facing nobody, bare plaster and bare "
-      + "concrete. ⚠️ ONE OLD MAN IS THE ONLY PERSON ON HIS FEET IN IT, standing in the gap "
-      + "between the two boxes with both hands over his mouth, crying. Every surface is empty.",
+    p: "Wide on the whole back room. ⚠️ NE LIN IS LYING FLAT ON HIS BACK IN THE NEAR COFFIN with "
+      + "his eyes open and his head rolled to one side, plainly visible in the box and plainly "
+      + "not getting up. ⚠️ THE ROOM HOLDS EXACTLY WHAT THE MASTER PLATE HOLDS AND NOTHING ELSE: "
+      + "the two coffins on their trestles, the bare bulb, the wall clock, the table of "
+      + "envelopes, the tripod standing by itself facing nobody, bare plaster and bare concrete. "
+      + "⚠️ ONE OLD MAN IS THE ONLY PERSON ON HIS FEET IN IT, standing in the gap between the two "
+      + "boxes with both hands over his mouth, crying. Every surface is empty.",
     u: ["ကျွန်တော် မျက်လုံးဖွင့်လိုက်တယ်။",
         "အခန်းထဲမှာ သူတစ်ယောက်ပဲ ရပ်နေတယ်။ ရိုက်ကူးရေးလုပ်နေတဲ့ပုံ မရှိဘူး။",
         "ကင်မရာနောက်မှာလည်း မရှိဘူး။"] },
