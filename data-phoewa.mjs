@@ -866,8 +866,11 @@ export const SCENES = [
 
   { t: "He Cried Without Sound", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "သူ ငိုနေတယ်။ ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။ အဲဒီအကျင့်ကို ဘယ်အချိန်က ရလာတာလဲ မသိဘူး။",
-    p: "A boy crying with his mouth clamped shut and his jaw rigid, tears running, making no sound "
-      + "at all.",
+    p: "⚠️ TIGHT ON NYI NYI'S FACE, AND HE IS LOOKING STRAIGHT INTO THE LENS. Tears run freely "
+      + "down both cheeks, but his lips are pressed into a hard flat line and his jaw is clenched "
+      + "so the muscle stands out at the hinge, his chin dimpled with the effort of keeping it "
+      + "shut. ⚠️ HIS EYES STAY ON HIS FATHER'S THROUGHOUT — he does not look away and he does "
+      + "not cover his face. A child who has been practising this.",
     u: ["သားက ကျွန်တော့်ကို ကြည့်နေတယ်။ သူ ငိုနေတယ်။",
         "ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။",
         "အဲဒီအကျင့်ကို သူ ဘယ်အချိန်ကတည်းက ရလာတာလဲ ကျွန်တော် မသိဘူး။"],
@@ -1019,9 +1022,14 @@ export const SCENES = [
         "ကျွန်တော် အသက်တစ်ချက် ရှူတယ်။ “သားအမေ သေပြီ”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "His Face Came Apart", l: "ဧည့်ခန်း", w: ["ညီညီ"],
+  { t: "He Looked Seven Years Old", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "ညီညီရဲ့မျက်နှာ ပြိုကျသွားတယ်။ သိနေခဲ့ပေမယ့် ကြားဖို့ အဆင်သင့်မဖြစ်သေးဘူး။",
-    p: "A boy's face breaking — the first time in the film he looks seven years old.",
+    p: "⚠️ TIGHT ON NYI NYI'S FACE AS THE CONTROL FINALLY GOES. The careful flat expression he has "
+    + "held all film collapses into ordinary child's crying: mouth open and square, eyes screwed "
+    + "shut, eyebrows pushed up in the middle, cheeks flushed and wet, shoulders drawn up around "
+    + "his neck. ⚠️ HIS FACE AND SKIN ARE COMPLETELY WHOLE, SMOOTH AND UNMARKED — this is a "
+    + "seven-year-old sobbing and nothing else is happening to him. He is turned towards his "
+    + "father.",
     u: ["ညီညီရဲ့မျက်နှာ ပြိုကျသွားတယ်။",
         "သူ သိနေခဲ့တယ်ဆိုပေမယ့် အဲဒီစကားကို ကြားဖို့ အဆင်သင့်မဖြစ်သေးဘူး။"],
     c: [[1, "bigstinger"]] },
@@ -1074,7 +1082,13 @@ export const SCENES = [
 
   { t: "He Pulled Free", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "သားက ကျွန်တော့်လက်ကို ဖြုတ်တယ်။ အရင်က သူ အဲဒီလို မလုပ်ဖူးဘူး။",
-    p: "A small hand prising a larger one off its own arm, deliberately, the boy's face set.",
+    p: "⚠️ ONE FRAME HOLDING BOTH HIS FACE AND THE HANDS — Nyi Nyi from his father's side, close "
+    + "enough that his face fills the upper half and the hands fill the lower. ⚠️ THE FATHER'S "
+    + "HAND IS CLOSED AROUND THE BOY'S LEFT FOREARM, and ⚠️ THE BOY'S FREE RIGHT HAND HAS COME "
+    + "ACROSS AND IS PRISING THE MAN'S FINGERS UP OFF IT one at a time, deliberately and without "
+    + "hurry. ⚠️ THE BOY IS LOOKING STEADILY UP AT HIS FATHER'S FACE, not down at his own hands "
+    + "— his expression set and calm rather than frightened. Only the two pairs of hands and the "
+    + "boy's face are in shot.",
     u: ["သားက ကျွန်တော့်လက်ကို ဖြုတ်တယ်။ အရင်က သူ အဲဒီလို မလုပ်ဖူးဘူး။",
         "ကျွန်တော် ပိုတင်းတင်း ဆုပ်မိတယ်။"],
     c: [[0, "bigstinger"]] },

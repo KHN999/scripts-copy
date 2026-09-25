@@ -148,7 +148,7 @@ Three-person geometry stays doll–father–boy. Boy speaks from bedside, father
 Quiet dry-eyed child close-up in the same night room. His account does not show the mother or reenact her death.
 Father braces one hand against table, pale with shock but naturally human. Avoid a flashback of the narrated death.
 Low insert with doll now beside father’s sandal, head up toward him. Preserve foot size and thirty-centimetre doll scale.
-Tearful boy, lips firmly closed, jaw held tight. No scream or threatening toy inserted into this intimate reaction crop.
+Held-in crying carried entirely by the mouth and jaw, with his eyes on his father the whole time. The frame holds one child’s face and nothing else.
 Doll sharp foreground, sweating father midground, crying boy behind father. Fixed painted smile contrasts with human expressions.
 Extreme close-up of closed painted red lips. Voice remains implied; no speaker grille, mouth opening or spectral overlay.
 Father freezes in recognition under the same light. No image of the earlier violent night and no additional person behind him.
@@ -167,14 +167,14 @@ Crown-crack macro with compressed paper layers fading into darkness; nothing liv
 Locked front door seen from indoors with ordinary neighbours’ shadows beyond. No police markings or readable signs needed.
 Wide table–father–boy composition. Father holds hammer down; cracked doll faces him, boy watches from corridor, entrance stays locked.
 Close father’s face admitting death, boy blurred behind. Focus on expression; never illustrate a body or the death itself.
-Child’s grief breaks through in an age-appropriate close-up. Keep LEFT wrist marks if hands enter; no graphic flashback.
+A seven-year-old crying openly at last, photographed as a plain tender close-up. His skin and features stay whole and ordinary throughout. If his hands enter frame the faint left-wrist marks stay as established.
 Father begins another explanation, one half-raised hand. Maintain his position relative to the table and entrance.
 Low tabletop close-up: cracked doll’s head lifted only a few degrees. Body remains still, smile unchanged, no levitation.
 Doll at table edge reaches father’s chest height; father bends his gaze down to meet it. Do not enlarge doll to adult size.
 Father weeps, hands lowered, facing the stationary doll. Truth stops approach but does not repair damage or produce glowing light.
 Match doll’s table-edge position from shot 121. Crown crack unchanged; no retreat, healed surface or altered smile.
 Father catches boy’s LEFT forearm near entrance. Frame enough bodies to show who holds whom, avoiding an isolated ambiguous hand.
-Child’s free hand tries to remove father’s grip. Keep four natural limbs and faint existing marks, no new graphic injury.
+The boy takes his father’s hand off himself, which he has never done before, so it reads decided rather than panicked. Each of them has two ordinary arms and two ordinary hands. The faint marks already on his left wrist stay exactly as they are, the skin over them smooth and closed.
 Restrained side view of father’s hand covering boy’s mouth after his call for help; no suffocation effects or exaggerated violence.
 Over father’s shoulder, child looks toward doll behind him. Do not put doll’s face onto father or enlarge its head.
 Shoulder-contact insert shows a tiny doll hand resting lightly. The source’s paper-like sensation must not transform it into a human hand.
