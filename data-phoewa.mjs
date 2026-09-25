@@ -1330,7 +1330,12 @@ export const SCENES = [
 
   { t: "He'll Watch Father For Me", l: "အန်တီအိမ်", w: ["ညီညီ"],
     g: "ကလေးက သူ့လက်ကို ငုံ့ကြည့်တယ်။ “အဖေ့ကို သူ ကြည့်ထားပေးမယ်တဲ့”",
-    p: "A boy looking down at the faint pink fingertip patches on his own inner wrist, speaking quietly.",
+    p: "⚠️ A CLOSE THREE-QUARTER SHOT OF NYI NYI ALONE, with his face and both his hands in the "
+    + "same frame. He sits in his aunt's front room in flat daylight with his head bent, turning "
+    + "his own left wrist slightly towards himself and looking down at it, and he is saying "
+    + "something quietly — his mouth moving, his eyes down. ⚠️ HIS FACE IS CALM AND MATTER-OF-"
+    + "FACT rather than distressed, the way a child reports something he has decided is settled. "
+    + "Nobody else is in shot.",
     u: ["ကလေးက သူ့လက်ကို ငုံ့ကြည့်တယ်။",
         "“အဖေ့ကို သူ ကြည့်ထားပေးမယ်တဲ့”"],
     c: [[1, "bigstinger"]] },

@@ -41,8 +41,8 @@ export function reviewPhoewa(SCENES, CAST, LOCS) {
   SCENES.forEach((s,i)=>{
     const n=i+1;
     const past=memories.has(n);
-    let state = (s.w||[]).includes('ဖိုးဝရုပ်') ? 'Keep the doll’s original painted smile, cheek thanaka discs, yellow-tied black yarn tufts and checked fabric longyi exactly as the reference. No living eyes or moving lips.' : 'Keep the shot focused on its stated subjects and objects; do not add the doll when it is outside this composition.';
-    if((s.w||[]).includes('ဖိုးဝရုပ်')) state += past || n<64 ? ' Doll has only old paint crazing; no opened base or hammer crack.' : n<104 ? ' A small paper layer at the head base has been peeled back; head remains attached, crown intact.' : n<111 ? ' One side paint chip from the wall impact; crown still unbroken.' : ' Preserve one unrepaired crown crack from the hammer, plus earlier paint chip; the smile remains intact. No face or figure inside the hollow paper head.';
+    let state = (s.w||[]).includes('ဖိုးဝရုပ်') ? 'Keep the doll’s original painted smile, cheek thanaka discs, yellow-tied black yarn tufts and checked fabric longyi exactly as the reference. Its eyes and mouth stay flat paint on papier-mâché throughout, fixed in the one expression.' : 'Keep the shot to the subjects and objects it names, and to those only.';
+    if((s.w||[]).includes('ဖိုးဝရုပ်')) state += past || n<64 ? ' Doll has only old paint crazing; its base is sealed and its crown is whole and smooth.' : n<104 ? ' A small paper layer at the head base has been peeled back; head remains attached, crown intact.' : n<111 ? ' One side paint chip from the wall impact; crown still unbroken.' : ' Preserve one unrepaired crown crack from the hammer, plus the earlier paint chip; the smile remains intact. Through the crack the interior shows layered paper only, receding into shadow.';
     /**
      * Only mention his wrist when his wrist can actually be in the picture.
      *
@@ -215,7 +215,7 @@ Earlier bedroom memory, intact doll on shelf facing doorway while boy rests. Its
 Wide memory locks geometry: doll, father, boy in that order. Doll looks directly at father and never through him toward child.
 Morning aunt-house two-shot. Boy carefully explains, aunt listens; no literal ghostly mouth or voice illustration.
 Earlier NIGHT memory: living mother crouches at child’s bed under warm doorway light, finger to lips. No daylight or smiling craft scene.
-Present boy looks at his marked LEFT wrist. Frame his ordinary face and hands, aunt-house daylight, no toy added automatically.
+Present-day boy at his aunt's house in flat daylight, turning his own LEFT wrist towards himself and speaking quietly to himself. Frame his face and both hands together. The room holds only the ordinary furniture already named.
 Guest-bed request, aunt hesitates in doorway. Doll still absent because retrieval has not happened yet.
 After retrieval, single cracked doll on aunt’s bedroom shelf. Same LEFT-ear marks and original smile, crown unrepaired.
 Aunt glances at stationary doll, unconcerned, before leaving. No movement, menace or alteration of its eyes.
