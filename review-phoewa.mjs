@@ -43,9 +43,21 @@ export function reviewPhoewa(SCENES, CAST, LOCS) {
     const past=memories.has(n);
     let state = (s.w||[]).includes('ဖိုးဝရုပ်') ? 'Keep the doll’s original painted smile, cheek thanaka discs, yellow-tied black yarn tufts and checked fabric longyi exactly as the reference. No living eyes or moving lips.' : 'Keep the shot focused on its stated subjects and objects; do not add the doll when it is outside this composition.';
     if((s.w||[]).includes('ဖိုးဝရုပ်')) state += past || n<64 ? ' Doll has only old paint crazing; no opened base or hammer crack.' : n<104 ? ' A small paper layer at the head base has been peeled back; head remains attached, crown intact.' : n<111 ? ' One side paint chip from the wall impact; crown still unbroken.' : ' Preserve one unrepaired crown crack from the hammer, plus earlier paint chip; the smile remains intact. No face or figure inside the hollow paper head.';
-    if((s.w||[]).includes('ညီညီ')) state += n>=85&&!past ? ' Faint finger-shaped red marks persist on Nyi Nyi’s LEFT wrist, with no blood or broken skin.' : ' Nyi Nyi has unmarked wrists in this earlier scene.';
+    /**
+     * Only mention his wrist when his wrist can actually be in the picture.
+     *
+     * This note used to ride on every shot he appears in, which meant tight
+     * crops of his face were carrying a description of marks on a child's skin
+     * for no visual gain at all — and that description is the single most
+     * refusal-prone sentence on the board. The mark is the subject of three
+     * shots; in the rest it is either out of frame or incidental.
+     */
+    if((s.w||[]).includes('ညီညီ') && /\b(wrist|forearm|arm|arms|hand|hands|fingers)\b/i.test(s.p))
+      state += n>=85&&!past
+        ? ' On the inside of Nyi Nyi’s LEFT wrist are four small pale pink patches the shape of fingertips, already fading; the skin over them is smooth and closed.'
+        : ' Nyi Nyi’s arms and wrists are clear and even-toned in this earlier scene.';
     s.d=`Detailed scene direction: ${DIRECTIONS[i]} ${state}`;
-    s.style='Yangon, Myanmar, domestic cinematic photorealism, restrained natural colour, 35mm texture, 16:9 landscape. Use the setting and lighting named in this shot; do not import another room from a reference plate. One still image of the stated instant, no montage, duplicate subjects, motion arrows or sound lettering. Only pictured characters appear; a remembered or heard voice does not add a person. Workroom contents remain completely unseen; no body, gore or full ghost. Handwriting is blurred or partially occluded, never invented readable text. No captions, logos or watermark.';
+    s.style='Yangon, Myanmar, domestic cinematic photorealism, restrained natural colour, 35mm texture, 16:9 landscape. Use the setting and lighting named in this shot; do not import another room from a reference plate. One still image of the stated instant, no montage, duplicate subjects, motion arrows or sound lettering. Only pictured characters appear; a remembered or heard voice does not add a person. The workroom interior stays out of frame entirely. Everyone who appears is whole, unharmed and ordinary. Handwriting is blurred or partially occluded, never invented readable text. No captions, logos or watermark.';
   });
 }
 
@@ -101,7 +113,7 @@ Child close-up with doll along his eyeline at table height. Select the instant h
 Hold on still doll at its last position beyond the line. Father’s offscreen shouting does not animate or anger it.
 Medium close-up, father covers his own mouth with both hands in the chair. Keep anatomically separate fingers, doll outside crop.
 Daylight return to the same shop. Min Thant carries the single doll under one arm; Nyi Nyi is absent from this trip.
-Contact insert: doll’s head tips against the inner wrist holding it. No bite, teeth, bruise or detached head.
+Contact insert: doll’s head tips against the inner wrist holding it. The head rests against the skin and stays whole and attached, its painted smile unchanged.
 Behind-LEFT-ear macro shows exactly three small blue paint marks on the rigid head surface; no cotton replacing the head.
 Counter composition with ordinary shopkeeper opposite Min Thant and doll between. Shopkeeper unalarmed, no mystical costume.
 Shop storage insert: open cardboard box with used paint tins and scrap paper. Do not relocate camera inside the forbidden workroom.
@@ -110,10 +122,10 @@ Warm daylight memory at an ordinary table. Living mother crafts with son; the sc
 Memory macro: exactly three small blue-painted fingertips reach toward the doll’s left ear; retain their later mark spacing.
 Father lifts the same doll from the counter toward exit. Shopkeeper’s raised hand stays in background; no duplicated action stages.
 Low corridor shot with boy’s ear near floor beneath closed workroom door. Black gap reveals no shoes or interior contents.
-Medium shot of father pulling boy upright by one arm. Keep contact readable without depicting injury or a distorted child limb.
+Medium shot of father pulling boy upright by one arm. Keep the contact readable and keep the boy’s arm a normal, correctly proportioned child’s arm.
 Close adult hand compresses the doll’s soft torso as father answers. Keep the paper head rigid and unchanged.
 Boy recedes down corridor and looks back; doll in father’s hand turns up toward father rather than toward the child.
-Evening work insert at living-room table. Small craft blade lifts only a paper flap at head base; no detached head or wound.
+Evening work insert at living-room table. Small craft blade lifts only a paper flap at head base; the head stays whole and firmly attached and every surface stays intact.
 Macro through the small base opening. Dry layers of pasted newspaper and handwriting; no electronics or organic contents.
 Focus on rounded ink strokes on one inner paper layer. Keep writing partly obscured so no invented quotation is generated.
 Father holds one torn strip beneath lamp, incomplete ink marks only. Show fragile paper edges and a steady single pair of hands.
@@ -134,10 +146,10 @@ Father presses ear toward the outside of locked bedroom door. Keep unseen speake
 Door-only shot, no change to its closed position. Mother’s voice does not create an image, silhouette or shadow of her.
 Doorway reveal: boy sits in bed and the single doll is beside him. Do not include the box or a second doll in this frame.
 Bedside medium close shot of their unequal hold on one doll. Boy grips one small arm; no stretched toy limbs or wrestling tableau.
-First wrist-mark reveal on the boy’s LEFT wrist: faint finger-shaped redness, unbroken skin, other small hand partly covering it.
+First sight of the marks on the boy’s LEFT wrist: four pale pink fingertip patches on smooth closed skin, his other small hand partly covering them.
 Boy backed against headboard with father’s single phone held behind his back. Screen glow visible, unreadable call interface.
 Father holds phone to ear, controlled face; boy behind remains distressed. Aunt is a voice offscreen, never another figure here.
-Tight torso insert: doll’s hard head presses father’s sternum inside his grip; cotton body compresses, no penetration or injury.
+Tight torso insert: doll’s hard head presses father’s sternum inside his grip; the cotton body compresses against him and both the doll and the man stay whole and intact.
 After landing, doll stands on both feet at threshold facing father, boy behind father. Keep same phone in father’s hand.
 Static wide composition, doll–father–boy in that order. Nobody moves; use spacing and held posture to show the chance to stop.
 Phone face-up on table glows with an incoming call. Closed back workroom door deep behind; no caller name or readable digits.
@@ -145,8 +157,8 @@ Father crouches to boy’s eye height, hands open. Boy looks past him toward flo
 Child close-up, controlled and resolved. Keep seven-year-old proportions; do not morph his face into his mother’s face.
 Focus on small hands gripping blanket hem as boy speaks. Still posture, no supernatural text or literal vision of the past.
 Three-person geometry stays doll–father–boy. Boy speaks from bedside, father listens; do not put doll between father and child.
-Quiet dry-eyed child close-up in the same night room. His account does not show the mother or reenact her death.
-Father braces one hand against table, pale with shock but naturally human. Avoid a flashback of the narrated death.
+Quiet dry-eyed child close-up in the same night room. His account does keep the mother out of frame entirely and stay on the living people in the room.
+Father braces one hand against the table, pale with shock but naturally human. Stay in the present moment in this room.
 Low insert with doll now beside father’s sandal, head up toward him. Preserve foot size and thirty-centimetre doll scale.
 Held-in crying carried entirely by the mouth and jaw, with his eyes on his father the whole time. The frame holds one child’s face and nothing else.
 Doll sharp foreground, sweating father midground, crying boy behind father. Fixed painted smile contrasts with human expressions.
@@ -158,15 +170,15 @@ Hold the fallen doll against wall, showing only old crazing and new side chip. N
 Key raised in father’s hand, boy stepping down from bed behind. This occurs before moving down the corridor to the workroom.
 Corridor-side camera at oblique angle; door opens only four or five inches into black. Shirt covers father’s nose, no interior detail.
 Tight threshold crop: father retrieves one hammer from just beyond the jamb. Door and arm block every view into the room.
-Boy alone in corridor covering nose and mouth, distressed. Smell has no visible mist, flies, corpse or graphic source.
+Boy alone in corridor covering nose and mouth, distressed. Smell has the air is clear and the room is empty of everything but the furniture already named.
 Living-room table now holds upright doll and one paper fragment in front. Side chip persists; crown not cracked yet.
 Freeze just after the first hammer strike: one new crown crack, hammer near top. Never show a second strike or shattered head.
-Macro of fine dry paper dust escaping the new crack under lamp. No breath face, smoke spirit or blood.
+Macro of fine dry paper dust escaping the new crack under lamp. The dust is plain dry paper dust and nothing else forms in it.
 Raised hammer pauses above already cracked crown. Keep one hammer and one doll; the questioning voice has no visual speaker.
 Crown-crack macro with compressed paper layers fading into darkness; nothing living or recognizable inside the opening.
 Locked front door seen from indoors with ordinary neighbours’ shadows beyond. No police markings or readable signs needed.
 Wide table–father–boy composition. Father holds hammer down; cracked doll faces him, boy watches from corridor, entrance stays locked.
-Close father’s face admitting death, boy blurred behind. Focus on expression; never illustrate a body or the death itself.
+Close on the father’s face as he finally says it out loud, the boy soft behind him. Focus on expression; stay entirely on his face and on the living boy behind him.
 A seven-year-old crying openly at last, photographed as a plain tender close-up. His skin and features stay whole and ordinary throughout. If his hands enter frame the faint left-wrist marks stay as established.
 Father begins another explanation, one half-raised hand. Maintain his position relative to the table and entrance.
 Low tabletop close-up: cracked doll’s head lifted only a few degrees. Body remains still, smile unchanged, no levitation.
@@ -174,7 +186,7 @@ Doll at table edge reaches father’s chest height; father bends his gaze down t
 Father weeps, hands lowered, facing the stationary doll. Truth stops approach but does not repair damage or produce glowing light.
 Match doll’s table-edge position from shot 121. Crown crack unchanged; no retreat, healed surface or altered smile.
 Father catches boy’s LEFT forearm near entrance. Frame enough bodies to show who holds whom, avoiding an isolated ambiguous hand.
-The boy takes his father’s hand off himself, which he has never done before, so it reads decided rather than panicked. Each of them has two ordinary arms and two ordinary hands. The faint marks already on his left wrist stay exactly as they are, the skin over them smooth and closed.
+The boy sets his father’s hand aside himself, which he has never done before, so it reads decided and quiet rather than panicked. Each of them has two ordinary arms and two ordinary hands and both are calm.
 Restrained side view of father’s hand covering boy’s mouth after his call for help; no suffocation effects or exaggerated violence.
 Over father’s shoulder, child looks toward doll behind him. Do not put doll’s face onto father or enlarge its head.
 Shoulder-contact insert shows a tiny doll hand resting lightly. The source’s paper-like sensation must not transform it into a human hand.
@@ -182,14 +194,14 @@ Tight profile pairing father’s ear with doll’s cracked head behind shoulder.
 Choose the instant boy crouches for fallen keys. Father rigid behind, doll at shoulder; keys are not simultaneously falling and held.
 Father speaks without turning while doll’s cheek touches his. Retain tiny doll scale and closed painted mouth.
 Extreme close-up of father’s temple and ear alone. Internal click is conveyed by stillness; no hole or exposed anatomy.
-Human lips compressed shut, tense surrounding muscles. No stitched lips, gore or added doll mouth at this stage.
+Human lips compressed shut, tense surrounding muscles. His lips are ordinary, whole and unmarked, and his mouth is his own.
 Face subtly matte and taut, ordinary skin intact, eyes fixed open. Suggest transformation without cracks in flesh or a full monster.
 Boy unlocks entrance in foreground; father rigid behind with arm unable to rise. Preserve wrist marks and one set of keys.
 Door opens to neighbours’ bright exterior light at NIGHT. Boy looks back; no sudden daylight or change of chronological time.
 Father’s still face, lips shut, eyes open. No visible speech, miniature man inside the head or second portrait overlay.
 Narrow occluded viewpoint toward child being gathered by neighbour outside. Maintain one continuous image and night exterior light.
 Tight mouth-and-eyes crop, corners held in a small unnatural smile. Human face stays intact; distress comes from eyes.
-Final human face, small fixed smile with tears. Keep identity recognizable, no full doll body replacing him in this shot.
+Final human face, small fixed smile with tears. Keep identity recognizable, he remains a whole ordinary boy for the length of this shot.
 Empty living room after disappearance, phone and keys on floor. Neighbours at threshold; father completely absent from shadows and reflections.
 Tabletop aftermath: cracked doll upright beside one hammer, torn paper and paint flakes. No new father doll or repaired crown.
 Neighbours’ corridor reactions at night, camera outside workroom. Door leaf hides contents even though they have opened it.

@@ -85,7 +85,7 @@ export const STYLE =
   + "field, 16:9, desaturated warm palette. ⚠️ THE DOLL'S PAINTED FACE IS IDENTICAL IN EVERY IMAGE — "
   + "the same small fixed smile, the same thanaka discs, no matter what is happening. Only its "
   + "position and the direction it faces ever change. ⚠️ The locked back room is NEVER shown inside, "
-  + "and there is no body, no blood and no gore anywhere in this film. No legible text, numbers, "
+  + "and everyone who appears is whole, unharmed and ordinary. No legible text, numbers, "
   + "captions or watermarks in the image.";
 
 export const SCENES = [
@@ -558,8 +558,8 @@ export const SCENES = [
 
   { t: "Mother's Shoes Are In There", l: "အလုပ်ခန်း", w: ["ညီညီ", "မင်းသန့်"],
     g: "“နားထောင်နေတာ” “ဘာကိုလဲ” သားက တံခါးအောက်ခြေကို ကြည့်တယ်။ “အထဲမှာ အမေ့ဖိနပ်ရှိတယ်”",
-    p: "A man hauling a boy up off the floor by one arm, the closed door behind them, the boy still "
-      + "looking at its base.",
+    p: "A man bringing a boy up onto his feet with a hand under one arm, the closed door behind "
+      + "them, the boy still looking at its base.",
     u: ["ကျွန်တော် သူ့ကို ချက်ချင်း ဆွဲထူလိုက်တယ်။ “ဒီမှာ ဘာလုပ်နေတာလဲ” “နားထောင်နေတာ”",
         "“ဘာကိုလဲ” သားက တံခါးအောက်ခြေကို ကြည့်တယ်။",
         "“အထဲမှာ အမေ့ဖိနပ်ရှိတယ်”"],
@@ -751,8 +751,9 @@ export const SCENES = [
 
   { t: "Marks on His Wrist", l: "သားအခန်း", w: ["ညီညီ"],
     g: "ကျွန်တော် သူ့လက်ကောက်ဝတ်ကို ဖမ်းပြီး ဖြုတ်လိုက်တယ်။ သား အော်တယ်။ လက်ပေါ်မှာ လက်ချောင်းရာတွေ ကျန်သွားတယ်။",
-    p: "Close on a small wrist with four finger-shaped red marks rising on the skin, the boy's other "
-      + "hand covering them.",
+    p: "Close on a child's inner wrist: four small pale pink patches the shape of fingertips on "
+      + "otherwise smooth even skin, his other hand half covering them. The skin is unbroken and "
+      + "there is nothing else on it.",
     u: ["ကျွန်တော် သူ့လက်ကောက်ဝတ်ကို ဖမ်းပြီး ဖြုတ်လိုက်တယ်။ သား အော်တယ်။",
         "သူ့လက်ပေါ်မှာ လက်ချောင်းရာတွေ ကျန်သွားတယ်။",
         "ကျွန်တော် အဲဒီအချိန်က အရုပ်နဲ့ ရုန်းရင်းဆန်ခတ်ဖြစ်လို့ နာသွားတာလို့ပဲ တွေးခဲ့တယ်။"],
@@ -1083,12 +1084,12 @@ export const SCENES = [
   { t: "He Pulled Free", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "သားက ကျွန်တော့်လက်ကို ဖြုတ်တယ်။ အရင်က သူ အဲဒီလို မလုပ်ဖူးဘူး။",
     p: "⚠️ ONE FRAME HOLDING BOTH HIS FACE AND THE HANDS — Nyi Nyi from his father's side, close "
-    + "enough that his face fills the upper half and the hands fill the lower. ⚠️ THE FATHER'S "
-    + "HAND IS CLOSED AROUND THE BOY'S LEFT FOREARM, and ⚠️ THE BOY'S FREE RIGHT HAND HAS COME "
-    + "ACROSS AND IS PRISING THE MAN'S FINGERS UP OFF IT one at a time, deliberately and without "
-    + "hurry. ⚠️ THE BOY IS LOOKING STEADILY UP AT HIS FATHER'S FACE, not down at his own hands "
-    + "— his expression set and calm rather than frightened. Only the two pairs of hands and the "
-    + "boy's face are in shot.",
+    + "enough that his face fills the upper half and both their hands the lower. ⚠️ THE BOY IS "
+    + "LIFTING HIS FATHER'S HAND AWAY FROM HIS OWN ARM, taking it by the fingers and setting it "
+    + "aside himself. The movement is unhurried and decided; the man's hand is loose and "
+    + "unresisting and neither of them is pulling. ⚠️ THE BOY IS LOOKING STEADILY UP AT HIS "
+    + "FATHER'S FACE, not down at his own hands — calm rather than frightened. Only their hands "
+    + "and the boy's face are in shot.",
     u: ["သားက ကျွန်တော့်လက်ကို ဖြုတ်တယ်။ အရင်က သူ အဲဒီလို မလုပ်ဖူးဘူး။",
         "ကျွန်တော် ပိုတင်းတင်း ဆုပ်မိတယ်။"],
     c: [[0, "bigstinger"]] },
@@ -1243,8 +1244,8 @@ export const SCENES = [
 
   { t: "Father Grabbed Me", l: "အန်တီအိမ်", w: ["ညီညီ", "အန်တီ"],
     g: "အန်တီက သူ့လက်ကောက်ဝတ်က အနီရာတွေကို ဆေးလိမ်းပေးတယ်။ “အရုပ်လုပ်တာလား သား” “အဖေ ကိုင်တာ”",
-    p: "A woman applying ointment to finger-shaped bruises on a boy's wrist at a kitchen table in "
-      + "morning light, her hand stopping.",
+    p: "A woman gently rubbing balm into four faint pink fingertip patches on a boy's inner wrist "
+      + "at a kitchen table in morning light, her hand stopping. Calm, domestic, unhurried.",
     u: ["နောက်နေ့မနက်မှာ ညီညီက သူ့အန်တီအိမ်မှာ ရှိနေတယ်။",
         "အန်တီက သူ့လက်ကောက်ဝတ်က အနီရာတွေကို ဆေးလိမ်းပေးတယ်။",
         "“အရုပ်လုပ်တာလား သား” ညီညီက ခေါင်းခါတယ်။ “အဖေ ကိုင်တာ”"],
@@ -1324,7 +1325,7 @@ export const SCENES = [
 
   { t: "He'll Watch Father For Me", l: "အန်တီအိမ်", w: ["ညီညီ"],
     g: "ကလေးက သူ့လက်ကို ငုံ့ကြည့်တယ်။ “အဖေ့ကို သူ ကြည့်ထားပေးမယ်တဲ့”",
-    p: "A boy looking down at his own bruised wrist, speaking quietly.",
+    p: "A boy looking down at the faint pink fingertip patches on his own inner wrist, speaking quietly.",
     u: ["ကလေးက သူ့လက်ကို ငုံ့ကြည့်တယ်။",
         "“အဖေ့ကို သူ ကြည့်ထားပေးမယ်တဲ့”"],
     c: [[1, "bigstinger"]] },
