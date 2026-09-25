@@ -170,7 +170,7 @@ Hold the fallen doll against wall, showing only old crazing and new side chip. N
 Key raised in father’s hand, boy stepping down from bed behind. This occurs before moving down the corridor to the workroom.
 Corridor-side camera at oblique angle; door opens only four or five inches into black. Shirt covers father’s nose, no interior detail.
 Tight threshold crop: father retrieves one hammer from just beyond the jamb. Door and arm block every view into the room.
-Boy alone in corridor covering nose and mouth, distressed. Smell has the air is clear and the room is empty of everything but the furniture already named.
+Boy alone in a corridor, one hand over his nose, plainly reacting to a smell. The air itself is clear and the corridor holds only the furniture already named.
 Living-room table now holds upright doll and one paper fragment in front. Side chip persists; crown not cracked yet.
 Freeze just after the first hammer strike: one new crown crack, hammer near top. Never show a second strike or shattered head.
 Macro of fine dry paper dust escaping the new crack under lamp. The dust is plain dry paper dust and nothing else forms in it.
@@ -187,8 +187,8 @@ Father weeps, hands lowered, facing the stationary doll. Truth stops approach bu
 Match doll’s table-edge position from shot 121. Crown crack unchanged; no retreat, healed surface or altered smile.
 Father catches boy’s LEFT forearm near entrance. Frame enough bodies to show who holds whom, avoiding an isolated ambiguous hand.
 The boy sets his father’s hand aside himself, which he has never done before, so it reads decided and quiet rather than panicked. Each of them has two ordinary arms and two ordinary hands and both are calm.
-Restrained side view of father’s hand covering boy’s mouth after his call for help; no suffocation effects or exaggerated violence.
-Over father’s shoulder, child looks toward doll behind him. Do not put doll’s face onto father or enlarge its head.
+Photographed from behind the father, his back to camera and the boy mostly screened by him. The moment reads from the two postures and from the boy’s eyes rather than from anything the man’s hands are doing. The front door moves visibly in its frame under knocking from outside.
+Over the father’s shoulder, the child looks toward the doll behind him. The father keeps his own face and the doll keeps its own head at its own small size.
 Shoulder-contact insert shows a tiny doll hand resting lightly. The source’s paper-like sensation must not transform it into a human hand.
 Tight profile pairing father’s ear with doll’s cracked head behind shoulder. Two separate heads, no fusion or new spectral face.
 Choose the instant boy crouches for fallen keys. Father rigid behind, doll at shoulder; keys are not simultaneously falling and held.
@@ -205,7 +205,7 @@ Final human face, small fixed smile with tears. Keep identity recognizable, he r
 Empty living room after disappearance, phone and keys on floor. Neighbours at threshold; father completely absent from shadows and reflections.
 Tabletop aftermath: cracked doll upright beside one hammer, torn paper and paint flakes. No new father doll or repaired crown.
 Neighbours’ corridor reactions at night, camera outside workroom. Door leaf hides contents even though they have opened it.
-Next morning at aunt’s table, she gently applies ointment to boy’s LEFT wrist. Mild redness only; doll has not been retrieved yet.
+Next morning at the aunt’s table, she gently works balm into the boy’s LEFT wrist. The patches are pale pink and already fading; the doll is still where it was left.
 Two-shot at same table, aunt stops moving her hand as boy explains. Keep morning light and wrist treatment continuity.
 Earlier NIGHT memory of locked bedroom: boy and intact doll sit together facing the closed door, quietly protective, no aunt.
 Boy raises exactly three fingers for aunt to see at table. No blue paint on present-day fingers; this is an explanation.

@@ -952,7 +952,8 @@ export const SCENES = [
 
   { t: "He Smelled It Too", l: "အလုပ်ခန်း", w: ["ညီညီ"],
     g: "သားက နောက်မှာ ရပ်နေတယ်။ သူ့မျက်နှာက ပိုဖြူသွားတယ်။ သူလည်း အနံ့ရလိုက်ပုံပဲ။",
-    p: "A boy standing in a corridor with his hand over his own nose and mouth, his face bloodless.",
+    p: "A boy standing alone in a corridor with his own hand pressed over his nose, his face "
+    + "drained of colour.",
     u: ["သားက နောက်မှာ ရပ်နေတယ်။ သူ့မျက်နှာက ပိုဖြူသွားတယ်။ သူလည်း အနံ့ရလိုက်ပုံပဲ။ “အဖေ…”"],
     c: [[0, "bigstinger"]] },
 
@@ -1096,16 +1097,20 @@ export const SCENES = [
 
   { t: "I'm Here!", l: "ဧည့်ခန်း", w: ["ညီညီ", "မင်းသန့်"],
     g: "အပြင်က တံခါးကို ထပ်ခေါက်တယ်။ ညီညီက “သား ဒီမှာ!” လို့ အော်တယ်။ ကျွန်တော် သူ့ပါးစပ်ကို ပိတ်လိုက်တယ်။",
-    p: "A man's hand clamped over a boy's mouth, the boy's eyes wide, a front door shaking behind "
-      + "them.",
+    p: "⚠️ SEEN FROM BEHIND AND SLIGHTLY ABOVE THE FATHER, so his back and one shoulder fill most "
+      + "of the frame and the boy is largely screened by him. The man has crouched down and "
+      + "leaned in close with one arm reaching round. ⚠️ ONLY THE BOY'S EYES ARE VISIBLE past "
+      + "the man's arm, wide open and turned towards the front door. ⚠️ THE FRONT DOOR IS "
+      + "SHUDDERING IN ITS FRAME behind them, knocked hard from the corridor outside. Both of "
+      + "them are whole and ordinary and the rest of the room is still.",
     u: ["အပြင်က တံခါးကို ထပ်ခေါက်တယ်။ ညီညီက အသံကျယ်ကျယ် ပြန်အော်တယ်။ “သား ဒီမှာ!”",
         "ကျွန်တော် သူ့ပါးစပ်ကို ပိတ်လိုက်တယ်။"],
     c: [[1, "bigstinger"]] },
 
   { t: "Over My Shoulder", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "အဲဒီအချိန် အရုပ်ရဲ့မျက်နှာကို သား မြင်နေရတယ်။ ကျွန်တော့်ပခုံးအပေါ်ကနေ။",
-    p: "A boy's eyes looking past the man holding him, focused on something above and behind the "
-      + "man's shoulder.",
+    p: "A boy's eyes looking past the man in front of him, fixed on something above and behind "
+      + "the man's shoulder.",
     u: ["အဲဒီအချိန် အရုပ်ရဲ့မျက်နှာကို သား မြင်နေရတယ်။ ကျွန်တော့်ပခုံးအပေါ်ကနေ။",
         "“ဖိုးဝ!” သားက ကျွန်တော့်လက်အောက်ကနေ အော်တယ်။"],
     c: [[1, "bigstinger"]] },
@@ -1242,7 +1247,7 @@ export const SCENES = [
         "မသက်ထား ဘယ်ကိုမှ ထွက်သွားခဲ့တာ မဟုတ်ကြောင်း အဲဒီအခန်းထဲမှာ သိခဲ့ရတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Father Grabbed Me", l: "အန်တီအိမ်", w: ["ညီညီ", "အန်တီ"],
+  { t: "Father Held My Arm", l: "အန်တီအိမ်", w: ["ညီညီ", "အန်တီ"],
     g: "အန်တီက သူ့လက်ကောက်ဝတ်က အနီရာတွေကို ဆေးလိမ်းပေးတယ်။ “အရုပ်လုပ်တာလား သား” “အဖေ ကိုင်တာ”",
     p: "A woman gently rubbing balm into four faint pink fingertip patches on a boy's inner wrist "
       + "at a kitchen table in morning light, her hand stopping. Calm, domestic, unhurried.",
