@@ -761,8 +761,9 @@ export const SCENES = [
 
   { t: "He Had My Phone", l: "သားအခန်း", w: ["ညီညီ"],
     g: "သားက အိပ်ရာခေါင်းရင်းကို နောက်ဆုတ်သွားတယ်။ သူ့လက်တစ်ဖက်မှာ ကျွန်တော့်ဖုန်း။ မျက်နှာပြင် လင်းနေတယ်။",
-    p: "A boy pressed against a bed head with a lit phone screen held behind his back, a call in "
-      + "progress.",
+    p: "Nyi Nyi sitting back against the headboard with a lit phone screen held down behind his "
+      + "back, out of sight of the room. ⚠️ THE SCREEN GLOW IS VISIBLE AT THE EDGE OF HIS BODY "
+      + "but nothing on it is legible. He is alone in the room. Night, one warm bulb.",
     u: ["သားက အိပ်ရာခေါင်းရင်းကို နောက်ဆုတ်သွားတယ်။",
         "သူ့လက်တစ်ဖက်မှာ ကျွန်တော့်ဖုန်း ရှိနေတယ်။ ဖုန်းမျက်နှာပြင် လင်းနေတယ်။",
         "ကျွန်တော် သူ့ဆီ လက်လှမ်းလိုက်တယ်။ “ဖုန်းပေး” သူ ခေါင်းခါတယ်။",
@@ -1453,7 +1454,11 @@ export const SCENES = [
 
   { t: "He Did Not Know What to Do", l: "အန်တီအိမ်", w: ["ညီညီ"],
     g: "အမေနဲ့ သူလုပ်ထားတဲ့အရုပ်။ အခု အထဲမှာ အဖေ့အသံလည်း ရှိနေတယ်။ သူ ဘာလုပ်ရမှန်း မသိဘူး။",
-    p: "Close on a boy's face caught between two impossible things, still holding the woman's wrist.",
+    p: "⚠️ CLOSE ON NYI NYI'S FACE, WITH HIS OWN HAND STILL IN THE BOTTOM OF FRAME closed around "
+    + "his aunt's wrist. ⚠️ HIS EYES ARE PULLED TOWARDS TWO DIFFERENT PLACES AT ONCE — down "
+    + "towards her hand and off towards the shelf — and his eyebrows are drawn hard together. "
+    + "⚠️ HIS MOUTH IS SLIGHTLY OPEN, as though a sentence started and stopped. A child who wants "
+    + "two things that cannot both happen.",
     u: ["အမေနဲ့ သူလုပ်ထားတဲ့အရုပ်။",
         "အခု အထဲမှာ အဖေ့အသံလည်း ရှိနေတယ်။",
         "သူ ဘာလုပ်ရမှန်း မသိဘူး။"],
@@ -1461,14 +1466,20 @@ export const SCENES = [
 
   { t: "Really Not Afraid", l: "အန်တီအိမ်", w: ["အန်တီ", "ညီညီ"],
     g: "အန်တီက ထပ်မေးတယ် — “တကယ် မကြောက်ဘူးလား သား” ညီညီရဲ့ လက်တွေ တုန်နေတယ်။",
-    p: "A boy's two hands trembling visibly in his lap while a woman waits for an answer.",
+    p: "⚠️ ONE FRAME HOLDING BOTH HIS HANDS AND HIS AUNT. Nyi Nyi's two hands lying in his lap in "
+    + "the near foreground, sharp and close, ⚠️ THE FINGERS SPREAD A LITTLE AND HELD RIGID, "
+    + "caught in one frozen instant. Behind him and softer, his aunt sits half turned towards "
+    + "him, leaning in slightly, her face patient and open. Warm daylight in her front room.",
     u: ["အန်တီက ထပ်မေးတယ်။ “တကယ် မကြောက်ဘူးလား သား”",
         "ညီညီရဲ့ လက်တွေ တုန်နေတယ်။"],
     c: [[1, "heartbeat"]] },
 
   { t: "No", l: "အန်တီအိမ်", w: ["ညီညီ"],
     g: "ဒါပေမယ့် သူ ခေါင်းခါလိုက်တယ်။ “မကြောက်ဘူး”",
-    p: "A boy shaking his head once, deliberately, his face set — telling a lie.",
+    p: "⚠️ CLOSE ON NYI NYI, HIS HEAD TURNED SLIGHTLY OFF CENTRE AND CAUGHT IN ONE STILL INSTANT "
+    + "at the end of a single small shake. His chin is level, his mouth closed in a flat line and "
+    + "his jaw set — ⚠️ BUT HIS EYES ARE STILL FRIGHTENED AND DO NOT MATCH THE REST OF HIS FACE. "
+    + "He is looking towards his aunt just off frame. Warm daylight, a plain wall behind him.",
     u: ["ဒါပေမယ့် သူ ခေါင်းခါလိုက်တယ်။",
         "“မကြောက်ဘူး”"],
     c: [[1, "bigstinger"]] },

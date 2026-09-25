@@ -17,7 +17,7 @@ export function reviewPhoewa(SCENES, CAST, LOCS) {
   set(9,null,['မင်းသန့်','ညီညီ']);
   set(10,null,['မင်းသန့်','ညီညီ'],null);
   set(31,'Min Thant turns the complete Pho Wa doll upside down and taps its sealed underside with one knuckle under a bedside lamp. Keep the stuffed body and papier-mâché head attached.',['မင်းသန့်','ဖိုးဝရုပ်']);
-  set(53,'Macro view behind the Pho Wa doll’s LEFT ear: exactly three blue fingertip marks on the painted papier-mâché surface, no lettering.',['ဖိုးဝရုပ်']);
+  set(53,'Macro view behind the Pho Wa doll’s LEFT ear: exactly three blue fingertip marks on the painted papier-mâché surface. The surface carries these three marks and nothing else.',['ဖိုးဝရုပ်']);
   set(84,'Min Thant takes the doll while Nyi Nyi holds just one of its small arms; a tense unequal grip at the bedside, with no stretched limbs or exaggerated struggle.',['မင်းသန့်','ညီညီ','ဖိုးဝရုပ်']);
   set(91,'A phone lies face-up on the living-room table, incoming-call glow without readable interface; the locked workroom door lies at the end of the corridor behind it.');
   set(95,'Nyi Nyi sits gripping the blanket. Min Thant is between him and the doll on the floor; the doll faces Min Thant, who hears the boy’s account.',['မင်းသန့်','ညီညီ','ဖိုးဝရုပ်']);
@@ -68,7 +68,7 @@ Waking eye-level view from Min Thant’s pillow. One upright doll faces the slee
 Frontal macro of the existing painted face. Keep both dotted thanaka discs symmetrical and the original mouth shape fixed.
 Night two-shot at the child’s bedside: father sits beside the pillow, son looks up; a small warm practical bulb lights both.
 Medium-wide night portrait in the cluttered living room. Father alone, tired shoulders, child’s abandoned shoe near table.
-Single framed family photograph, three recognizable family members within the glass only; no extra people standing in the room.
+Single framed family photograph, three recognizable family members within the glass only; the only people in the image are the three inside the photograph’s glass.
 Earlier warm daylight memory. Sleeping boy’s small hand holds his living mother’s hand; her other hand rests gently on his hair.
 Low view beside the front door. Nyi Nyi looks past his arriving father into empty space; mother never appears there.
 Daylight street outing, father and son side by side. Frame the stalls as background rather than the shop’s indoor shelving.
@@ -99,7 +99,7 @@ Morning pillow-height close-up, one handspan from the doll. Keep the same adult 
 Side-on intimate two-shot: father lies still, eyes open, doll beside his face; fear belongs to the man, not its expression.
 Choose the instant just after landing: doll lies on its side on father’s bedroom floor, undamaged, without a second airborne copy.
 Low floor shot with the unchanged face tipped upward. Nyi Nyi stands in the bedroom doorway behind, looking toward his father.
-Floor-level shot of doll’s head oriented toward father’s black sandals. Body remains where it landed; no spinning blur.
+Floor-level shot of doll’s head oriented toward father’s black sandals. Body remains where it landed; one frozen position with every edge sharp.
 Close on Nyi Nyi at the same doorway in morning light, composed and unsurprised; no smile of menace.
 Daylight living-room medium-wide. Father takes a phone call, doll initially well back from the table edge, both positions clear.
 Match table angle from shot 40. Doll now at the near edge facing father’s chair; no second doll marks its previous place.
@@ -109,18 +109,18 @@ Across-table two-shot. Father speaks calmly, doll’s feet remain behind the unb
 Father leans toward doll; boy stands behind him in the doorway. Keep the pencil line visible as the distance marker.
 Same low table angle, doll’s two feet now beyond the pencil line toward father. No lifted foot or walking mechanism.
 Father half-turns toward boy in the doorway. The child speaks softly with an ordinary serious face, no supernatural effect.
-Child close-up with doll along his eyeline at table height. Select the instant his gaze drops; no multiple eye positions.
+Child close-up with doll along his eyeline at table height. Select the instant his gaze drops; the painted eyes stay in the one position they are painted in.
 Hold on still doll at its last position beyond the line. Father’s offscreen shouting does not animate or anger it.
 Medium close-up, father covers his own mouth with both hands in the chair. Keep anatomically separate fingers, doll outside crop.
 Daylight return to the same shop. Min Thant carries the single doll under one arm; Nyi Nyi is absent from this trip.
 Contact insert: doll’s head tips against the inner wrist holding it. The head rests against the skin and stays whole and attached, its painted smile unchanged.
-Behind-LEFT-ear macro shows exactly three small blue paint marks on the rigid head surface; no cotton replacing the head.
+Behind-LEFT-ear macro shows exactly three small blue paint marks on the rigid head surface; the head stays rigid papier-mâché throughout.
 Counter composition with ordinary shopkeeper opposite Min Thant and doll between. Shopkeeper unalarmed, no mystical costume.
 Shop storage insert: open cardboard box with used paint tins and scrap paper. Do not relocate camera inside the forbidden workroom.
 Close reaction on father above counter, his eyes lowered toward the doll’s marked ear; shop daylight remains unchanged.
 Warm daylight memory at an ordinary table. Living mother crafts with son; the scene contains materials, not a ghostly apparition.
 Memory macro: exactly three small blue-painted fingertips reach toward the doll’s left ear; retain their later mark spacing.
-Father lifts the same doll from the counter toward exit. Shopkeeper’s raised hand stays in background; no duplicated action stages.
+Father lifts the same doll from the counter toward exit. Shopkeeper’s raised hand stays in background; a single moment of the action, once.
 Low corridor shot with boy’s ear near floor beneath closed workroom door. Black gap reveals no shoes or interior contents.
 Medium shot of father pulling boy upright by one arm. Keep the contact readable and keep the boy’s arm a normal, correctly proportioned child’s arm.
 Close adult hand compresses the doll’s soft torso as father answers. Keep the paper head rigid and unchanged.
@@ -140,14 +140,14 @@ Child stands on bedroom side, father on corridor side. Quiet disagreement at the
 Exterior view of bedroom lock as father secures it; boy’s hand is safely inside, no trapped fingers in the jamb.
 Father leans against the now-closed door with key in one fist. Night bulb isolates ordinary tension, no threatening shadow creature.
 Close interior front-door hardware, bolt and chain engaged. Distinguish this entrance from the child’s door and workroom padlock.
-Tabletop view of father collecting paper fragments in one hand. Marks stay unreadable; the doll is not automatically on the table.
+Tabletop view of father collecting paper fragments in one hand. Handwriting stays blurred and illegible; the table holds only the torn paper and his hands.
 Living-room box closed with the same plain heavy book on top. No transparent box, escaping doll or lifted lid.
 Father presses ear toward the outside of locked bedroom door. Keep unseen speakers offscreen; fear is in his expression.
 Door-only shot, no change to its closed position. Mother’s voice does not create an image, silhouette or shadow of her.
 Doorway reveal: boy sits in bed and the single doll is beside him. Do not include the box or a second doll in this frame.
 Bedside medium close shot of their unequal hold on one doll. Boy grips one small arm; no stretched toy limbs or wrestling tableau.
 First sight of the marks on the boy’s LEFT wrist: four pale pink fingertip patches on smooth closed skin, his other small hand partly covering them.
-Boy backed against headboard with father’s single phone held behind his back. Screen glow visible, unreadable call interface.
+Boy sitting back against the headboard with his father’s phone held down behind him. Screen glow visible, unreadable call interface.
 Father holds phone to ear, controlled face; boy behind remains distressed. Aunt is a voice offscreen, never another figure here.
 Tight torso insert: doll’s hard head presses father’s sternum inside his grip; the cotton body compresses against him and both the doll and the man stay whole and intact.
 After landing, doll stands on both feet at threshold facing father, boy behind father. Keep same phone in father’s hand.
@@ -155,7 +155,7 @@ Static wide composition, doll–father–boy in that order. Nobody moves; use sp
 Phone face-up on table glows with an incoming call. Closed back workroom door deep behind; no caller name or readable digits.
 Father crouches to boy’s eye height, hands open. Boy looks past him toward floor-level doll; father still separates them.
 Child close-up, controlled and resolved. Keep seven-year-old proportions; do not morph his face into his mother’s face.
-Focus on small hands gripping blanket hem as boy speaks. Still posture, no supernatural text or literal vision of the past.
+Focus on small hands gripping blanket hem as boy speaks. Still posture, stay in the present room with the two of them and what is actually on the table.
 Three-person geometry stays doll–father–boy. Boy speaks from bedside, father listens; do not put doll between father and child.
 Quiet dry-eyed child close-up in the same night room. His account does keep the mother out of frame entirely and stay on the living people in the room.
 Father braces one hand against the table, pale with shock but naturally human. Stay in the present moment in this room.
@@ -229,11 +229,11 @@ The aunt comes back in, sees at once that he is upset and goes straight to him t
 Aunt holds boy gently; his gaze goes past her to doll. Warm daylight and protection, no altered doll expression.
 Close on aunt’s open hand approaching doll without touching yet. Crown crack remains at its original position.
 Boy’s small hand stops aunt’s wrist before it reaches shelf. Distinct hands, no grip on the doll itself.
-Close child’s conflicted face with his hand still on aunt’s wrist. No montage of mother and father inside the head.
-Boy’s hands in lap visibly tense, aunt waiting nearby. Freeze one tremulous posture rather than duplicate fingers or blur trails.
-Child deliberately denies fear, eyes still anxious. No speech bubble or word on screen; doll outside this close-up.
-Aunt turns toward shelf while boy goes still beside her. The click is only their reaction, no printed sound effect.
-One doll head partway turned toward boy, body fixed on shelf. Preserve crown crack and fixed smile, no multiple heads.
+Close on the child’s face with his hand still on his aunt’s wrist at the bottom of frame. The conflict reads from the eyes being pulled two ways and from the drawn brows. The frame holds his face and that one hand and nothing else.
+One frozen instant of the boy’s hands held tense in his lap, with his aunt soft behind him in the same frame. Each hand shows four fingers and one thumb in a single clear position, sharply focused. Warm daylight in her front room.
+The child denies being afraid. His head is caught at the end of one small shake and held as a single still instant. The set mouth and the frightened eyes are doing different jobs, and that difference is the whole shot. Every surface in frame is blank and the doll sits outside this crop.
+Aunt turns toward shelf while boy goes still beside her. The click exists only in how the two of them react to it; every surface in frame is blank.
+One doll head partway turned toward boy, body fixed on shelf. Preserve crown crack and fixed smile, one head, in one position.
 Wide final geometry: doll’s direct eyeline reaches boy, empty space behind him; aunt sits beside, never blocking that line.
 Extreme crown-crack insert, dark dry paper interior only. Father’s frightened voice does not appear as a face or silhouette.
 Final still: doll faces boy, aunt beside him follows his gaze. Original painted smile and unrepaired crack; no new creature revealed.
