@@ -1380,9 +1380,14 @@ export const SCENES = [
         "ကလေးက အရုပ်ကို စိုက်ကြည့်နေတယ်။ မျက်နှာပေါ်က အပြုံးက မပြောင်းဘူး။"],
     c: [[1, "bigstinger"]] },
 
-  { t: "Let Me Out of Here", l: "အန်တီအိမ်", w: ["ညီညီ"],
+  { t: "He Knew That Voice", l: "အန်တီအိမ်", w: ["ညီညီ"],
     g: "“သား၊ အဖေ့ကို ဒီထဲက ထုတ်ပေးပါ…” အဲဒီအသံကို ညီညီ သိတယ်။",
-    p: "Close on a boy's face listening to a voice he recognises, his expression unreadable.",
+    p: "⚠️ TIGHT ON NYI NYI'S FACE, HIS EYES FIXED STEADILY OFF TO ONE SIDE on something outside "
+    + "the frame. ⚠️ HE HAS GONE COMPLETELY STILL — his eyes do not move, his mouth stays closed, "
+    + "nothing widens and nothing flinches. ⚠️ THIS IS A CHILD HOLDING AN EXPRESSION IN PLACE, "
+    + "not an empty face: the jaw is set and the stillness is deliberate and costing him "
+    + "something. His hands are gripping the edge of a blanket at the bottom of frame. Flat "
+    + "daylight from a window.",
     u: ["“သား၊ အဖေ့ကို ဒီထဲက ထုတ်ပေးပါ…”",
         "အဲဒီအသံကို ညီညီ သိတယ်။"],
     c: [[1, "bigstinger"]] },

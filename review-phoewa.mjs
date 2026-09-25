@@ -136,7 +136,7 @@ Night bedside view: boy’s eyes closed under blanket, father’s hand stops abo
 Match shot 71. Boy has opened his eyes toward father; the suspended hand remains above, not touching or multiplying.
 Low doorway view: doll at the threshold directs its face up at father. Boy remains farther inside, out of its direct eyeline.
 Choose the packed instant: cloth-wrapped doll inside an open box as flaps are lowered; one heavy plain book waits beside it.
-Child stands on bedroom side, father on corridor side. Quiet disagreement at the threshold, no doll rushing toward the boy.
+Child stands on bedroom side, father on corridor side. Quiet disagreement at the threshold, the doll stays exactly where it was set down.
 Exterior view of bedroom lock as father secures it; boy’s hand is safely inside, no trapped fingers in the jamb.
 Father leans against the now-closed door with key in one fist. Night bulb isolates ordinary tension, no threatening shadow creature.
 Close interior front-door hardware, bolt and chain engaged. Distinguish this entrance from the child’s door and workroom padlock.
@@ -219,10 +219,10 @@ Present-day boy at his aunt's house in flat daylight, turning his own LEFT wrist
 Guest-bed request, aunt hesitates in doorway. Doll still absent because retrieval has not happened yet.
 After retrieval, single cracked doll on aunt’s bedroom shelf. Same LEFT-ear marks and original smile, crown unrepaired.
 Aunt glances at stationary doll, unconcerned, before leaving. No movement, menace or alteration of its eyes.
-Boy alone on guest bed looking up at doll. Aunt has left; ordinary daylight remains, no figure for father’s voice.
+Boy alone on guest bed looking up at doll. Aunt has left; ordinary daylight remains, the room holds only the boy and the objects already named, and the voice has no source in frame.
 Cracked doll face close-up in daylight, fixed painted mouth. No miniature father or mouth motion despite the voice.
-Boy’s recognition close-up, eyes fixed offscreen toward shelf. Hands tense on blanket if visible; no father in room.
-Earlier daylight cycling memory with living father supporting saddle behind child. No doll, wrist marks or transformation texture.
+Boy’s recognition close-up. He knows the voice and keeps it off his face; read it from how still he has gone. His eyes stay on the shelf, which sits outside the frame, and his hands are tense on the blanket. He is alone in his aunt’s daylit room.
+Earlier daylight cycling memory with living father supporting saddle behind child. A clean warm memory: the two of them, the bicycle and the light, and nothing else in the picture.
 Earlier memory of ordinary father speaking a lie in warm light. No present-day father appearing in aunt’s home.
 Boy retreats toward headboard with eyes on shelf. Doll stays there, not chasing him; aunt still outside room.
 Aunt returns and approaches tearful boy at headboard. Keep their relative height and the shelf position established earlier.
