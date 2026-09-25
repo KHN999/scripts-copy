@@ -201,7 +201,7 @@ Door opens to neighbours’ bright exterior light at NIGHT. Boy looks back; no s
 Father’s still face, lips shut, eyes open. No visible speech, miniature man inside the head or second portrait overlay.
 Narrow occluded viewpoint toward child being gathered by neighbour outside. Maintain one continuous image and night exterior light.
 Tight mouth-and-eyes crop, corners held in a small unnatural smile. Human face stays intact; distress comes from eyes.
-Final human face, small fixed smile with tears. Keep identity recognizable, he remains a whole ordinary boy for the length of this shot.
+Final human face, small fixed smile with tears. Keep identity recognizable, he remains a whole ordinary man for the length of this shot.
 Empty living room after disappearance, phone and keys on floor. Neighbours at threshold; father completely absent from shadows and reflections.
 Tabletop aftermath: cracked doll upright beside one hammer, torn paper and paint flakes. No new father doll or repaired crown.
 Neighbours’ corridor reactions at night, camera outside workroom. Door leaf hides contents even though they have opened it.
@@ -224,8 +224,8 @@ Cracked doll face close-up in daylight, fixed painted mouth. No miniature father
 Boy’s recognition close-up. He knows the voice and keeps it off his face; read it from how still he has gone. His eyes stay on the shelf, which sits outside the frame, and his hands are tense on the blanket. He is alone in his aunt’s daylit room.
 Earlier daylight cycling memory with living father supporting saddle behind child. A clean warm memory: the two of them, the bicycle and the light, and nothing else in the picture.
 Earlier memory of ordinary father speaking a lie in warm light. No present-day father appearing in aunt’s home.
-Boy retreats toward headboard with eyes on shelf. Doll stays there, not chasing him; aunt still outside room.
-Aunt returns and approaches tearful boy at headboard. Keep their relative height and the shelf position established earlier.
+Boy moves back towards the headboard under his own steam, eyes on the shelf throughout. The doll sits exactly where it was placed and stays there. He is the only person in the room.
+The aunt comes back in, sees at once that he is upset and goes straight to him to comfort him. Keep their relative heights and the shelf position established earlier. Warm daylight, her own spare room, the door standing open.
 Aunt holds boy gently; his gaze goes past her to doll. Warm daylight and protection, no altered doll expression.
 Close on aunt’s open hand approaching doll without touching yet. Crown crack remains at its original position.
 Boy’s small hand stops aunt’s wrist before it reaches shelf. Distinct hands, no grip on the doll itself.

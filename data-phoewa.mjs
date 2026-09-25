@@ -879,8 +879,11 @@ export const SCENES = [
 
   { t: "Where Did You Put Her", l: "ဧည့်ခန်း", w: ["ညီညီ", "ဖိုးဝရုပ်"],
     g: "“အဖေ အမေ့ကို ဘယ်မှာထားတာလဲ” ကျွန်တော် အရုပ်ကို ကြည့်တယ်။ မျက်နှာက အရင်အတိုင်း ပြုံးနေတယ်။",
-    p: "The doll's face in the foreground with exactly its usual smile, and behind it a sweating man "
-      + "and a silently crying boy.",
+    p: "⚠️ THE DOLL'S FACE FILLS THE NEAR FOREGROUND IN SHARP FOCUS, wearing exactly its usual "
+      + "small painted smile. ⚠️ WELL BEHIND IT AND SOFT AND OUT OF FOCUS, two figures in the "
+      + "room: the father, his face shining with sweat, and Nyi Nyi beside him with his cheeks "
+      + "wet and his mouth held shut. ⚠️ THE TWO PEOPLE ARE BACKGROUND — the doll is the "
+      + "subject and the only thing sharp in the frame.",
     u: ["“အဖေ အမေ့ကို ဘယ်မှာထားတာလဲ”",
         "ကျွန်တော် အရုပ်ကို ကြည့်တယ်။ မျက်နှာက အရင်အတိုင်း။ ဘယ်လောက်ပဲ ဖြစ်နေပါစေ ပြုံးနေတယ်။",
         "သားငိုနေတယ်။ ကျွန်တော် ချွေးတွေ စီးနေတယ်။ သူကတော့ ပြုံးနေတုန်းပဲ။"],
@@ -1409,16 +1412,22 @@ export const SCENES = [
 
   { t: "He Is Really Speaking", l: "အန်တီအိမ်", w: ["ညီညီ"],
     g: "ညီညီက နောက်ကို ဖြည်းဖြည်း ဆုတ်သွားတယ်။ “အဖေ တကယ်ပြောနေတာ…”",
-    p: "A boy backing away from a shelf toward the head of a bed, eyes fixed on the doll, speaking "
-      + "to no one.",
+    p: "Nyi Nyi moving backwards across the bed towards the headboard on his own, his eyes fixed "
+      + "the whole time on the doll on the shelf across the room, ⚠️ HIS MOUTH MOVING ON A FEW "
+      + "QUIET WORDS. He is the only person in the room and nothing is moving except him. Warm "
+      + "daylight.",
     u: ["ညီညီက နောက်ကို ဖြည်းဖြည်း ဆုတ်သွားတယ်။",
         "“အဖေ တကယ်ပြောနေတာ…”"],
     c: [[1, "bigstinger"]] },
 
   { t: "The Aunt Came Back In", l: "အန်တီအိမ်", w: ["အန်တီ", "ညီညီ"],
     g: "အန်တီ ပြန်ဝင်လာတော့ ညီညီက အိပ်ရာခေါင်းရင်းမှာ ကပ်ထိုင်နေတယ်။ မျက်နှာမှာ မျက်ရည်တွေ။",
-    p: "A woman coming through a bedroom door and stopping — a boy pressed into the corner at the "
-      + "head of the bed with tears on his face.",
+    p: "⚠️ THE AUNT HAS COME BACK IN AND IS ALREADY CROSSING THE ROOM TOWARDS HIM, both hands "
+      + "open in front of her and her face full of concern — a woman going straight to a "
+      + "frightened child in her own home. ⚠️ NYI NYI IS SITTING UP AT THE FAR END OF THE BED "
+      + "with his back against the headboard and his knees drawn up, tears on his face, looking "
+      + "towards her. Warm ordinary daylight, an ordinary spare room, the door standing open "
+      + "behind her.",
     u: ["အန်တီ ပြန်ဝင်လာတော့ ညီညီက အိပ်ရာခေါင်းရင်းမှာ ကပ်ထိုင်နေတယ်။ မျက်နှာမှာ မျက်ရည်တွေ။",
         "သူမက ချက်ချင်း လာထိုင်ပြီး ကလေးကို ဖက်လိုက်တယ်။ “ဘာဖြစ်လို့လဲ သား”"] },
 
