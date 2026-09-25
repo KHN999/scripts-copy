@@ -250,7 +250,8 @@ export const SCENES = [
 
   { t: "One Click", l: "သားအခန်း",
     g: "အခန်းထဲကနေ တောက်ဆိုတဲ့ အသံတစ်ချက်။",
-    p: "A dark bedroom shelf with the doll on it, nothing moving, the frame held one beat too long.",
+    p: "A dark bedroom shelf with the doll standing on it exactly as it was left, the room around "
+    + "it completely still and every edge sharp. Nothing in the frame is moving.",
     u: ["အခန်းထဲကနေ တောက်။ အသံတစ်ချက် ထွက်လာတယ်။"],
     c: [[0, "bigstinger"]] },
 
@@ -729,7 +730,8 @@ export const SCENES = [
 
   { t: "Then It Was Her Voice", l: "သားအခန်း",
     g: "အတွင်းက အသံတစ်သံ ပြန်ဖြေတယ်။ ဘူးခွံတစ်ခုထဲကနေ ထွက်လာသလို။ ပြီးတော့ သက်ထားရဲ့အသံ ဖြစ်သွားတယ်။",
-    p: "The closed door filling frame, the light gap beneath it unbroken, the frame held.",
+    p: "The closed door filling the frame, the strip of light beneath it running unbroken from one "
+    + "side to the other. ⚠️ NOTHING CROSSES THAT STRIP AND NOTHING IN THE FRAME IS MOVING.",
     u: ["အတွင်းက အသံတစ်သံ ပြန်ဖြေတယ်။ ဘူးခွံတစ်ခုထဲကနေ ထွက်လာသလို။",
         "“သား အိပ်မပျော်သေးဘူးဆိုတာ…” အသံက ခဏပြတ်တယ်။",
         "ပြီးတော့ သက်ထားရဲ့အသံ ဖြစ်သွားတယ်။ “သူ သိသွားလို့ မဖြစ်ဘူး…”"],
@@ -892,8 +894,10 @@ export const SCENES = [
 
   { t: "My Own Voice, Exactly", l: "ဧည့်ခန်း",
     g: "အရုပ်ခေါင်းထဲကနေ ကျွန်တော့်အသံ — “သား အိပ်နေပြီ။ အသံမထွက်နဲ့”",
-    p: "The doll's painted mouth in extreme close-up, absolutely motionless, the frame held while a "
-      + "voice happens.",
+    p: "⚠️ EXTREME CLOSE-UP ON THE DOLL'S PAINTED MOUTH, filling the frame. ⚠️ IT IS FLAT PAINT "
+      + "ON PAPIER-MÂCHÉ AND ABSOLUTELY MOTIONLESS — the same small curve, the brush edge "
+      + "visible, not parted and not shaped into any word. Sharp macro focus, nothing in frame "
+      + "moving.",
     u: ["အရုပ်ခေါင်းထဲကနေ အသံတစ်ခု ထွက်လာတယ်။ ကျွန်တော့်အသံ။ အတိအကျ။",
         "“သား အိပ်နေပြီ။ အသံမထွက်နဲ့”"],
     c: [[1, "bigstinger"]] },
@@ -1405,8 +1409,9 @@ export const SCENES = [
 
   { t: "The Same Voice That Lied", l: null, w: ["မင်းသန့်"],
     g: "အမေ မန္တလေးမှာ အလုပ်လုပ်နေတယ်လို့ ပြောခဲ့တဲ့အသံ။",
-    p: "The same man in the same warm light, mid-sentence, saying something ordinary — and the frame "
-      + "held on it a beat too long.",
+    p: "The same man in the same warm light, caught mid-sentence saying something ordinary, ⚠️ HIS "
+      + "FACE COMPLETELY RELAXED AND PLEASANT. A single still instant of an easy, unremarkable "
+      + "expression. Warm daylight memory.",
     u: ["အမေ မန္တလေးမှာ အလုပ်လုပ်နေတယ်လို့ ပြောခဲ့တဲ့အသံ။",
         "“အဖေ မလုပ်တော့ပါဘူး…”"],
     c: [[1, "bigstinger"]] },
@@ -1507,7 +1512,12 @@ export const SCENES = [
 
   { t: "His Father's Voice Changed", l: "အန်တီအိမ်",
     g: "အရုပ်ခေါင်းအတွင်းက အဖေ့အသံက ချက်ချင်း ပြောင်းသွားတယ်။ တောင်းပန်သံ မဟုတ်တော့ဘူး။ ထိတ်လန့်နေတဲ့အသံ။",
-    p: "Extreme close-up of the crack in the doll's head, dark inside it, the frame held.",
+    p: "⚠️ TIGHT ON THE DOLL'S HEAD, FRAMED SO THE CROWN CRACK AND THE PAINTED SMILE ARE BOTH IN "
+    + "SHOT AT ONCE — the crack running across the top of frame with dry layered paper edges "
+    + "inside it going down into shadow, and the small fixed smile directly below it. ⚠️ THE "
+    + "SMILE IS THE SAME CURVE IT HAS BEEN IN EVERY FRAME OF THE FILM. ⚠️ NOTHING VISIBLE ABOUT "
+    + "THE DOLL HAS CHANGED — the voice inside it has, and the picture has not. Sharp macro "
+    + "focus, bright daylight on the shelf, nothing in frame moving.",
     u: ["အရုပ်ခေါင်းအတွင်းက အဖေ့အသံက ချက်ချင်း ပြောင်းသွားတယ်။",
         "တောင်းပန်သံ မဟုတ်တော့ဘူး။ ထိတ်လန့်နေတဲ့အသံ။ “သား…” ခဏနားတယ်။"],
     c: [[1, "bigstinger"]] },

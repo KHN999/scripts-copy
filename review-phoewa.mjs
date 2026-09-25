@@ -235,6 +235,6 @@ The child denies being afraid. His head is caught at the end of one small shake 
 Aunt turns toward shelf while boy goes still beside her. The click exists only in how the two of them react to it; every surface in frame is blank.
 One doll head partway turned toward boy, body fixed on shelf. Preserve crown crack and fixed smile, one head, in one position.
 Wide final geometry: doll’s direct eyeline reaches boy, empty space behind him; aunt sits beside, never blocking that line.
-Extreme crown-crack insert, dark dry paper interior only. Father’s frightened voice does not appear as a face or silhouette.
+Frame the crown crack and the painted smile together so both are legible in one image — this is the shot where the voice changes completely and the object does not. Dry layered paper edges inside the opening going down into shadow, and the same fixed smile below it.
 Final still: doll faces boy, aunt beside him follows his gaze. Original painted smile and unrepaired crack; no new creature revealed.
 `.trim().split('\n');
