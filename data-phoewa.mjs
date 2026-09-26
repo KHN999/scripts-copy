@@ -1029,7 +1029,11 @@ export const SCENES = [
 
   { t: "She's Dead", l: "ဧည့်ခန်း", w: ["မင်းသန့်", "ညီညီ"],
     g: "“သေပြီ” ကျွန်တော် ပြောလိုက်တယ်။ အသံက ကိုယ့်အသံနဲ့တောင် မတူဘူး။",
-    p: "Close on a man's face as he says a word, the sound of it visibly costing him everything.",
+    p: "⚠️ CLOSE ON MIN THANT MID-WORD — his mouth open just enough to be shaping a short "
+      + "syllable, his jaw loose rather than set, the skin around his eyes gone slack, his look "
+      + "fixed on nothing in particular a little to one side of the lens. ⚠️ NYI NYI IS BEHIND "
+      + "HIM AND SOFT — a small out-of-focus shape over his father's shoulder, turned towards "
+      + "him. Ordinary daylight in the living room.",
     u: ["“သေပြီ” ကျွန်တော် ပြောလိုက်တယ်။ အသံက ကိုယ့်အသံနဲ့တောင် မတူဘူး။",
         "အရုပ်က မရွေ့ဘူး။",
         "ကျွန်တော် အသက်တစ်ချက် ရှူတယ်။ “သားအမေ သေပြီ”"],
@@ -1201,8 +1205,10 @@ export const SCENES = [
 
   { t: "From Somewhere Deep Inside", l: "ဧည့်ခန်း", w: ["မင်းသန့်"],
     g: "“သား…” ကျွန်တော် ခေါ်တယ်။ အသံက ဝေးနေတယ်။ ကိုယ့်ခေါင်းအတွင်း အနက်ကြီးတစ်နေရာကနေ အော်နေရသလို။",
-    p: "Close on a man's motionless face, mouth shut, eyes open — the sound of a call happening "
-      + "somewhere it cannot escape from.",
+    p: "Close on Min Thant's face, ⚠️ COMPLETELY MOTIONLESS — lips shut in a flat line, eyes "
+      + "open and fixed, not one muscle engaged anywhere. ⚠️ HIS THROAT IS THE ONLY THING DOING "
+      + "ANYTHING: the cords standing out down one side of his neck as though something is being "
+      + "held down. Ordinary room light.",
     u: ["“သား…” ကျွန်တော် ခေါ်တယ်။",
         "အသံက ဝေးနေတယ်။ ကိုယ့်ခေါင်းအတွင်း အနက်ကြီးတစ်နေရာကနေ အော်နေရသလို။"],
     c: [[1, "bigstinger"]] },
@@ -1517,12 +1523,11 @@ export const SCENES = [
 
   { t: "His Father's Voice Changed", l: "အန်တီအိမ်",
     g: "အရုပ်ခေါင်းအတွင်းက အဖေ့အသံက ချက်ချင်း ပြောင်းသွားတယ်။ တောင်းပန်သံ မဟုတ်တော့ဘူး။ ထိတ်လန့်နေတဲ့အသံ။",
-    p: "⚠️ TIGHT ON THE DOLL'S HEAD, FRAMED SO THE CROWN CRACK AND THE PAINTED SMILE ARE BOTH IN "
-    + "SHOT AT ONCE — the crack running across the top of frame with dry layered paper edges "
-    + "inside it going down into shadow, and the small fixed smile directly below it. ⚠️ THE "
-    + "SMILE IS THE SAME CURVE IT HAS BEEN IN EVERY FRAME OF THE FILM. ⚠️ NOTHING VISIBLE ABOUT "
-    + "THE DOLL HAS CHANGED — the voice inside it has, and the picture has not. Sharp macro "
-    + "focus, bright daylight on the shelf, nothing in frame moving.",
+    p: "⚠️ THE DOLL'S HEAD FROM THE FRONT AND SLIGHTLY ABOVE, FRAMED SO THE CROWN CRACK AND THE "
+    + "PAINTED SMILE ARE BOTH IN SHOT AT ONCE — the crack a dark line across the top of the head "
+    + "with its torn paper edges catching the light along the near lip, and the small fixed "
+    + "smile directly below it. ⚠️ NOTHING ABOUT THE HEAD HAS CHANGED SINCE THE FIRST TIME WE "
+    + "SAW IT. Sharp focus, bright daylight on the shelf, nothing in frame moving.",
     u: ["အရုပ်ခေါင်းအတွင်းက အဖေ့အသံက ချက်ချင်း ပြောင်းသွားတယ်။",
         "တောင်းပန်သံ မဟုတ်တော့ဘူး။ ထိတ်လန့်နေတဲ့အသံ။ “သား…” ခဏနားတယ်။"],
     c: [[1, "bigstinger"]] },

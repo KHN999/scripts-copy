@@ -42,7 +42,7 @@ export function reviewPhoewa(SCENES, CAST, LOCS) {
     const n=i+1;
     const past=memories.has(n);
     let state = (s.w||[]).includes('ဖိုးဝရုပ်') ? 'Keep the doll’s original painted smile, cheek thanaka discs, yellow-tied black yarn tufts and checked fabric longyi exactly as the reference. Its eyes and mouth stay flat paint on papier-mâché throughout, fixed in the one expression.' : 'Keep the shot to the subjects and objects it names, and to those only.';
-    if((s.w||[]).includes('ဖိုးဝရုပ်')) state += past || n<64 ? ' Doll has only old paint crazing; its base is sealed and its crown is whole and smooth.' : n<104 ? ' A small paper layer at the head base has been peeled back; head remains attached, crown intact.' : n<111 ? ' One side paint chip from the wall impact; crown still unbroken.' : ' Preserve one unrepaired crown crack from the hammer, plus the earlier paint chip; the smile remains intact. Through the crack the interior shows layered paper only, receding into shadow.';
+    if((s.w||[]).includes('ဖိုးဝရုပ်')) state += past || n<64 ? ' Doll has only old paint crazing; its base is sealed and its crown is whole and smooth.' : n<104 ? ' A small paper layer at the head base has been peeled back; head remains attached, crown intact.' : n<111 ? ' One side paint chip from the wall impact; crown still unbroken.' : ' Preserve one unrepaired crown crack from the hammer, plus the earlier paint chip; the smile remains intact. Wherever the inside of the crack is visible at all it shows layered paper only.';
     /**
      * Only mention his wrist when his wrist can actually be in the picture.
      *
@@ -198,7 +198,7 @@ Human lips compressed shut, tense surrounding muscles. His lips are ordinary, wh
 Face subtly matte and taut, ordinary skin intact, eyes fixed open. Suggest transformation without cracks in flesh or a full monster.
 Boy unlocks entrance in foreground; father rigid behind with arm unable to rise. Preserve wrist marks and one set of keys.
 Door opens to neighbours’ bright exterior light at NIGHT. Boy looks back; no sudden daylight or change of chronological time.
-Father’s still face, lips shut, eyes open. No visible speech, miniature man inside the head or second portrait overlay.
+Father’s still face, lips shut, eyes open, the cords standing out in his neck. One ordinary man’s head in the frame, at its own size, and nothing else at all.
 Narrow occluded viewpoint toward child being gathered by neighbour outside. Maintain one continuous image and night exterior light.
 Tight mouth-and-eyes crop, corners held in a small unnatural smile. Human face stays intact; distress comes from eyes.
 Final human face, small fixed smile with tears. Keep identity recognizable, he remains a whole ordinary man for the length of this shot.
@@ -235,6 +235,6 @@ The child denies being afraid. His head is caught at the end of one small shake 
 Aunt turns toward shelf while boy goes still beside her. The click exists only in how the two of them react to it; every surface in frame is blank.
 One doll head partway turned toward boy, body fixed on shelf. Preserve crown crack and fixed smile, one head, in one position.
 Wide final geometry: doll’s direct eyeline reaches boy, empty space behind him; aunt sits beside, never blocking that line.
-Frame the crown crack and the painted smile together so both are legible in one image — this is the shot where the voice changes completely and the object does not. Dry layered paper edges inside the opening going down into shadow, and the same fixed smile below it.
+Front view from slightly above so both the crack and the smile are legible in one image. The crack reads as a dark line with its torn edges lit rather than as an opening to look down — that shot has already happened.
 Final still: doll faces boy, aunt beside him follows his gaze. Original painted smile and unrepaired crack; no new creature revealed.
 `.trim().split('\n');
