@@ -825,8 +825,7 @@ export const SCENES = [
     g: "သား မော့ကြည့်တယ်။ သူ့မျက်နှာမှာ သက်ထား နောက်ဆုံးကြည့်ခဲ့တဲ့အကြည့်နဲ့ တူတဲ့အကြည့်။",
     p: "Close on Nyi Nyi looking up at an adult, ⚠️ HIS FACE COMPLETELY STILL AND HIS EYES "
       + "STEADY — chin level, mouth closed, the gaze holding without any effort at all. ⚠️ IT IS "
-      + "AN ADULT'S EXPRESSION ON A CHILD'S FACE: settled, decided and finished with "
-      + "something. Ordinary daylight.",
+      + "AN ADULT'S EXPRESSION ON A CHILD'S FACE: settled, decided and finished with something. Night, one warm bulb in his bedroom.",
     u: ["သား မော့ကြည့်တယ်။",
         "သူ့မျက်နှာမှာ အဲဒီအချိန် ကျွန်တော် မမြင်ချင်တဲ့ အကြည့်တစ်ခု ရှိတယ်။",
         "သက်ထား ကျွန်တော့်ကို နောက်ဆုံးကြည့်ခဲ့တဲ့ အကြည့်နဲ့ တူတယ်။"],
@@ -869,9 +868,9 @@ export const SCENES = [
     u: ["ရှပ်။ ဖိုးဝရုပ်က ကျွန်တော့်ခြေဖျားနားကို ရောက်လာတယ်။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "He Was Looking at Me", l: "ဧည့်ခန်း", w: ["ညီညီ", "မင်းသန့်"],
+  { t: "He Was Looking at Me", l: "သားအခန်း", w: ["ညီညီ", "မင်းသန့်"],
     g: "သူ ငိုနေတယ်။ ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။ အဲဒီအကျင့်ကို ဘယ်အချိန်က ရလာတာလဲ မသိဘူး။",
-    p: "⚠️ A LEVEL TWO-SHOT IN THE LIVING ROOM: Min Thant sitting in his chair and Nyi Nyi standing beside it, so their faces are at the same height and they are turned to each other, both in profile to camera. ⚠️ THE BOY'S FACE IS STILL AND HIS CHEEKS ARE WET — his lips pressed into a flat line, the jaw muscle standing out at the hinge, his chin dimpled. ⚠️ HIS FATHER IS SIMPLY LOOKING BACK AT HIM, his own face open and attentive, his hands loose in his lap. Ordinary daylight through a curtain, the ordinary clutter of the room around them.",
+    p: "⚠️ CLOSE ON NYI NYI'S FACE IN HIS OWN BEDROOM AT NIGHT, FRAMED PAST HIS FATHER — of Min Thant the frame holds only a narrow strip of his back and one shoulder edge down the far left, dark and thrown out of focus, about a quarter of the width. ⚠️ THE BOY HAS THE WHOLE REST OF THE FRAME: sitting up on his bed against the headboard, the blanket still gathered in his hands, looking straight across at his father. ⚠️ HIS FACE IS STILL AND HIS CHEEKS ARE WET — his lips pressed into a flat line, the jaw muscle standing out at the hinge, his chin dimpled. One warm bulb, the dark doorway and his own things soft behind him.",
     u: ["သားက ကျွန်တော့်ကို ကြည့်နေတယ်။ သူ ငိုနေတယ်။",
         "ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။",
         "အဲဒီအကျင့်ကို သူ ဘယ်အချိန်ကတည်းက ရလာတာလဲ ကျွန်တော် မသိဘူး။"],
