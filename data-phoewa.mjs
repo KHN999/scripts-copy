@@ -869,9 +869,9 @@ export const SCENES = [
     u: ["ရှပ်။ ဖိုးဝရုပ်က ကျွန်တော့်ခြေဖျားနားကို ရောက်လာတယ်။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "He Cried Without Sound", l: "ဧည့်ခန်း", w: ["ညီညီ"],
+  { t: "He Was Looking at Me", l: "ဧည့်ခန်း", w: ["ညီညီ", "မင်းသန့်"],
     g: "သူ ငိုနေတယ်။ ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။ အဲဒီအကျင့်ကို ဘယ်အချိန်က ရလာတာလဲ မသိဘူး။",
-    p: "⚠️ NYI NYI HEAD AND SHOULDERS IN THE LIVING ROOM, SHOT PAST HIS FATHER — Min Thant's shoulder and the back of his head fill the near left of frame, big and soft and out of focus, and the boy is beyond him, looking up at him. ⚠️ THE BOY'S FACE IS QUIET AND HIS CHEEKS ARE WET: his lips pressed into a flat line, the jaw muscle standing out at the hinge, his chin dimpled with the effort. Ordinary daylight through a curtain, the ordinary clutter of the room soft behind them.",
+    p: "⚠️ A LEVEL TWO-SHOT IN THE LIVING ROOM: Min Thant sitting in his chair and Nyi Nyi standing beside it, so their faces are at the same height and they are turned to each other, both in profile to camera. ⚠️ THE BOY'S FACE IS STILL AND HIS CHEEKS ARE WET — his lips pressed into a flat line, the jaw muscle standing out at the hinge, his chin dimpled. ⚠️ HIS FATHER IS SIMPLY LOOKING BACK AT HIM, his own face open and attentive, his hands loose in his lap. Ordinary daylight through a curtain, the ordinary clutter of the room around them.",
     u: ["သားက ကျွန်တော့်ကို ကြည့်နေတယ်။ သူ ငိုနေတယ်။",
         "ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။",
         "အဲဒီအကျင့်ကို သူ ဘယ်အချိန်ကတည်းက ရလာတာလဲ ကျွန်တော် မသိဘူး။"],

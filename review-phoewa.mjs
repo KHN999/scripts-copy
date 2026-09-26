@@ -160,7 +160,7 @@ Three-person geometry stays doll–father–boy. Boy speaks from bedside, father
 Quiet dry-eyed child close-up in the same night room. His account does keep the mother out of frame entirely and stay on the living people in the room.
 Father braces one hand against the table, pale with shock but naturally human. Stay in the present moment in this room.
 Low insert with doll now beside father’s sandal, head up toward him. Preserve foot size and thirty-centimetre doll scale.
-Shoot the boy past his father's shoulder so both of them are in the frame, the father big and soft in the foreground and the boy sharp beyond him. Everything is in the set of the mouth and the jaw. The room around them is ordinary and warm.
+A calm level two-shot — the father seated, the boy standing beside the chair, their faces at one height and turned to each other. Everything is in the set of the boy's mouth and jaw and in his father's steady attention. The room around them is ordinary and warm.
 Doll sharp foreground, sweating father midground, crying boy behind father. Fixed painted smile contrasts with human expressions.
 Extreme close-up of closed painted red lips. Voice remains implied; the painted mouth stays the flat fixed curve it has always been.
 Father freezes in recognition under the same light. No image of the earlier violent night and no additional person behind him.
