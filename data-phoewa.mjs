@@ -824,8 +824,10 @@ export const SCENES = [
 
   { t: "The Look She Gave Me", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "သား မော့ကြည့်တယ်။ သူ့မျက်နှာမှာ သက်ထား နောက်ဆုံးကြည့်ခဲ့တဲ့အကြည့်နဲ့ တူတဲ့အကြည့်။",
-    p: "Close on a boy's face looking up — not frightened, not angry, something colder and more "
-      + "final than either.",
+    p: "Close on Nyi Nyi looking up at an adult, ⚠️ HIS FACE COMPLETELY STILL AND HIS EYES "
+      + "STEADY — chin level, mouth closed, the gaze holding without any effort at all. ⚠️ IT IS "
+      + "AN ADULT'S EXPRESSION ON A CHILD'S FACE: settled, decided and finished with "
+      + "something. Ordinary daylight.",
     u: ["သား မော့ကြည့်တယ်။",
         "သူ့မျက်နှာမှာ အဲဒီအချိန် ကျွန်တော် မမြင်ချင်တဲ့ အကြည့်တစ်ခု ရှိတယ်။",
         "သက်ထား ကျွန်တော့်ကို နောက်ဆုံးကြည့်ခဲ့တဲ့ အကြည့်နဲ့ တူတယ်။"],
@@ -870,11 +872,12 @@ export const SCENES = [
 
   { t: "He Cried Without Sound", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "သူ ငိုနေတယ်။ ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။ အဲဒီအကျင့်ကို ဘယ်အချိန်က ရလာတာလဲ မသိဘူး။",
-    p: "⚠️ TIGHT ON NYI NYI'S FACE, AND HE IS LOOKING STRAIGHT INTO THE LENS. Tears run freely "
-      + "down both cheeks, but his lips are pressed into a hard flat line and his jaw is clenched "
-      + "so the muscle stands out at the hinge, his chin dimpled with the effort of keeping it "
-      + "shut. ⚠️ HIS EYES STAY ON HIS FATHER'S THROUGHOUT — he does not look away and he does "
-      + "not cover his face. A child who has been practising this.",
+    p: "⚠️ HEAD AND SHOULDERS ON NYI NYI IN THE LIVING ROOM, LOOKING STRAIGHT INTO THE LENS. "
+      + "There are tears on both cheeks, but his lips are pressed into a hard flat line and his "
+      + "jaw is set so the muscle stands out at the hinge, his chin dimpled with effort. "
+      + "⚠️ HIS EYES STAY ON THE LENS AND HIS HANDS STAY DOWN — he does not look away and he does "
+      + "not raise them to his face. Ordinary daylight through a curtain, the ordinary clutter of "
+      + "the room soft behind him.",
     u: ["သားက ကျွန်တော့်ကို ကြည့်နေတယ်။ သူ ငိုနေတယ်။",
         "ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။",
         "အဲဒီအကျင့်ကို သူ ဘယ်အချိန်ကတည်းက ရလာတာလဲ ကျွန်တော် မသိဘူး။"],
@@ -1032,14 +1035,15 @@ export const SCENES = [
         "ကျွန်တော် အသက်တစ်ချက် ရှူတယ်။ “သားအမေ သေပြီ”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "He Looked Seven Years Old", l: "ဧည့်ခန်း", w: ["ညီညီ"],
+  { t: "He Finally Looked His Age", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "ညီညီရဲ့မျက်နှာ ပြိုကျသွားတယ်။ သိနေခဲ့ပေမယ့် ကြားဖို့ အဆင်သင့်မဖြစ်သေးဘူး။",
-    p: "⚠️ TIGHT ON NYI NYI'S FACE AS THE CONTROL FINALLY GOES. The careful flat expression he has "
-    + "held all film collapses into ordinary child's crying: mouth open and square, eyes screwed "
-    + "shut, eyebrows pushed up in the middle, cheeks flushed and wet, shoulders drawn up around "
-    + "his neck. ⚠️ HIS FACE AND SKIN ARE COMPLETELY WHOLE, SMOOTH AND UNMARKED — this is a "
-    + "seven-year-old sobbing and nothing else is happening to him. He is turned towards his "
-    + "father.",
+    p: "⚠️ PULLED BACK TO HOLD ALL OF HIM — Nyi Nyi from the waist up in the middle of the "
+    + "living room, small in the frame, and for the first time in the film he looks exactly as "
+    + "young as he is. The careful flat expression he has held all film has gone: mouth open and "
+    + "square, eyes screwed shut, eyebrows pushed up in the middle, cheeks flushed and wet, "
+    + "⚠️ HIS SHOULDERS DRAWN RIGHT UP AROUND HIS NECK AND HIS WHOLE SMALL BODY FOLDED IN ON "
+    + "ITSELF. ⚠️ HIS FACE AND SKIN ARE COMPLETELY WHOLE, SMOOTH AND UNMARKED. Ordinary daylight "
+    + "through a curtain, the ordinary room around him.",
     u: ["ညီညီရဲ့မျက်နှာ ပြိုကျသွားတယ်။",
         "သူ သိနေခဲ့တယ်ဆိုပေမယ့် အဲဒီစကားကို ကြားဖို့ အဆင်သင့်မဖြစ်သေးဘူး။"],
     c: [[1, "bigstinger"]] },

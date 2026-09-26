@@ -154,13 +154,13 @@ After landing, doll stands on both feet at threshold facing father, boy behind f
 Static wide composition, doll–father–boy in that order. Nobody moves; use spacing and held posture to show the chance to stop.
 Phone face-up on table glows with an incoming call. Closed back workroom door deep behind; no caller name or readable digits.
 Father crouches to boy’s eye height, hands open. Boy looks past him toward floor-level doll; father still separates them.
-Child close-up, controlled and resolved. Keep seven-year-old proportions; do not morph his face into his mother’s face.
+Child close-up, controlled and resolved. His face, his proportions and his features stay entirely his own throughout.
 Focus on small hands gripping blanket hem as boy speaks. Still posture, stay in the present room with the two of them and what is actually on the table.
 Three-person geometry stays doll–father–boy. Boy speaks from bedside, father listens; do not put doll between father and child.
 Quiet dry-eyed child close-up in the same night room. His account does keep the mother out of frame entirely and stay on the living people in the room.
 Father braces one hand against the table, pale with shock but naturally human. Stay in the present moment in this room.
 Low insert with doll now beside father’s sandal, head up toward him. Preserve foot size and thirty-centimetre doll scale.
-Held-in crying carried entirely by the mouth and jaw, with his eyes on his father the whole time. The frame holds one child’s face and nothing else.
+A held-in cry carried entirely by the set of the mouth and jaw. He stays steady on the lens throughout. Frame him head and shoulders with the ordinary room behind him.
 Doll sharp foreground, sweating father midground, crying boy behind father. Fixed painted smile contrasts with human expressions.
 Extreme close-up of closed painted red lips. Voice remains implied; no speaker grille, mouth opening or spectral overlay.
 Father freezes in recognition under the same light. No image of the earlier violent night and no additional person behind him.
@@ -179,7 +179,7 @@ Crown-crack macro with compressed paper layers fading into darkness; nothing liv
 Locked front door seen from indoors with ordinary neighbours’ shadows beyond. No police markings or readable signs needed.
 Wide table–father–boy composition. Father holds hammer down; cracked doll faces him, boy watches from corridor, entrance stays locked.
 Close on the father’s face as he finally says it out loud, the boy soft behind him. Focus on expression; stay entirely on his face and on the living boy behind him.
-A seven-year-old crying openly at last, photographed as a plain tender close-up. His skin and features stay whole and ordinary throughout. If his hands enter frame the faint left-wrist marks stay as established.
+The child cries openly at last, photographed plainly and tenderly from the waist up with the room around him. His skin and features stay whole and ordinary throughout. Nothing else in the room has changed.
 Father begins another explanation, one half-raised hand. Maintain his position relative to the table and entrance.
 Low tabletop close-up: cracked doll’s head lifted only a few degrees. Body remains still, smile unchanged, no levitation.
 Doll at table edge reaches father’s chest height; father bends his gaze down to meet it. Do not enlarge doll to adult size.
