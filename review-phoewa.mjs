@@ -52,7 +52,7 @@ export function reviewPhoewa(SCENES, CAST, LOCS) {
      * refusal-prone sentence on the board. The mark is the subject of three
      * shots; in the rest it is either out of frame or incidental.
      */
-    if((s.w||[]).includes('ညီညီ') && /\b(wrist|forearm|arm|arms|hand|hands|fingers)\b/i.test(s.p))
+    if((s.w||[]).includes('ညီညီ') && /\b(his|Nyi Nyi.s|own|child.s|boy.s)\s+(own\s+)?(inner\s+)?(LEFT\s+)?(wrist|forearm)\b/i.test(s.p))
       state += n>=85&&!past
         ? ' On the inside of Nyi Nyi’s LEFT wrist are four small pale pink patches the shape of fingertips, already fading; the skin over them is smooth and closed.'
         : ' Nyi Nyi’s arms and wrists are clear and even-toned in this earlier scene.';
@@ -229,7 +229,7 @@ The aunt comes back in, sees at once that he is upset and goes straight to him t
 Aunt holds boy gently; his gaze goes past her to doll. Warm daylight and protection, no altered doll expression.
 Close on aunt’s open hand approaching doll without touching yet. Crown crack remains at its original position.
 Boy’s small hand stops aunt’s wrist before it reaches shelf. Distinct hands, no grip on the doll itself.
-Close on the child’s face with his hand still on his aunt’s wrist at the bottom of frame. The conflict reads from the eyes being pulled two ways and from the drawn brows. The frame holds his face and that one hand and nothing else.
+Close on the child with his hand still on his aunt’s wrist at the bottom of frame. His head has begun to turn and his eyes have stayed behind on her hand — that lag is the whole shot. The frame holds his face and that one hand and nothing else.
 One frozen instant of the boy’s hands held tense in his lap, with his aunt soft behind him in the same frame. Each hand shows four fingers and one thumb in a single clear position, sharply focused. Warm daylight in her front room.
 The child denies being afraid. His head is caught at the end of one small shake and held as a single still instant. The set mouth and the frightened eyes are doing different jobs, and that difference is the whole shot. Every surface in frame is blank and the doll sits outside this crop.
 Aunt turns toward shelf while boy goes still beside her. The click exists only in how the two of them react to it; every surface in frame is blank.

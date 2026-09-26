@@ -1463,11 +1463,12 @@ export const SCENES = [
 
   { t: "He Did Not Know What to Do", l: "အန်တီအိမ်", w: ["ညီညီ"],
     g: "အမေနဲ့ သူလုပ်ထားတဲ့အရုပ်။ အခု အထဲမှာ အဖေ့အသံလည်း ရှိနေတယ်။ သူ ဘာလုပ်ရမှန်း မသိဘူး။",
-    p: "⚠️ CLOSE ON NYI NYI'S FACE, WITH HIS OWN HAND STILL IN THE BOTTOM OF FRAME closed around "
-    + "his aunt's wrist. ⚠️ HIS EYES ARE PULLED TOWARDS TWO DIFFERENT PLACES AT ONCE — down "
-    + "towards her hand and off towards the shelf — and his eyebrows are drawn hard together. "
-    + "⚠️ HIS MOUTH IS SLIGHTLY OPEN, as though a sentence started and stopped. A child who wants "
-    + "two things that cannot both happen.",
+    p: "⚠️ CLOSE ON NYI NYI, WITH HIS OWN HAND STILL IN THE BOTTOM OF FRAME closed around his "
+    + "aunt's wrist. ⚠️ HIS HEAD HAS STARTED TO TURN AWAY TOWARDS THE SHELF AND HIS EYES HAVE "
+    + "NOT FOLLOWED IT — they are still down on her hand, so his face is going one way and his "
+    + "look is staying the other. His eyebrows are drawn hard together and ⚠️ HIS MOUTH IS "
+    + "SLIGHTLY OPEN, as though a sentence started and stopped. Warm daylight in his aunt's "
+    + "front room.",
     u: ["အမေနဲ့ သူလုပ်ထားတဲ့အရုပ်။",
         "အခု အထဲမှာ အဖေ့အသံလည်း ရှိနေတယ်။",
         "သူ ဘာလုပ်ရမှန်း မသိဘူး။"],
