@@ -85,7 +85,7 @@ export const STYLE =
   + "field, 16:9, desaturated warm palette. ⚠️ THE DOLL'S PAINTED FACE IS IDENTICAL IN EVERY IMAGE — "
   + "the same small fixed smile, the same thanaka discs, no matter what is happening. Only its "
   + "position and the direction it faces ever change. ⚠️ The locked back room is NEVER shown inside, "
-  + "and everyone who appears is whole, unharmed and ordinary. No legible text, numbers, "
+  + "and everyone who appears is an ordinary healthy person. No legible text, numbers, "
   + "captions or watermarks in the image.";
 
 export const SCENES = [
@@ -753,8 +753,7 @@ export const SCENES = [
 
   { t: "Marks on His Wrist", l: "သားအခန်း", w: ["ညီညီ"],
     g: "ကျွန်တော် သူ့လက်ကောက်ဝတ်ကို ဖမ်းပြီး ဖြုတ်လိုက်တယ်။ သား အော်တယ်။ လက်ပေါ်မှာ လက်ချောင်းရာတွေ ကျန်သွားတယ်။",
-    p: "Close on a child's inner wrist: four small pale pink patches the shape of fingertips on "
-      + "otherwise smooth even skin, his other hand half covering them. The skin is unbroken and "
+    p: "Close on a child's inner wrist: four small pale pink ovals in a row on smooth even skin, his other hand half covering them. The skin is unbroken and "
       + "there is nothing else on it.",
     u: ["ကျွန်တော် သူ့လက်ကောက်ဝတ်ကို ဖမ်းပြီး ဖြုတ်လိုက်တယ်။ သား အော်တယ်။",
         "သူ့လက်ပေါ်မှာ လက်ချောင်းရာတွေ ကျန်သွားတယ်။",
@@ -872,12 +871,7 @@ export const SCENES = [
 
   { t: "He Cried Without Sound", l: "ဧည့်ခန်း", w: ["ညီညီ"],
     g: "သူ ငိုနေတယ်။ ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။ အဲဒီအကျင့်ကို ဘယ်အချိန်က ရလာတာလဲ မသိဘူး။",
-    p: "⚠️ HEAD AND SHOULDERS ON NYI NYI IN THE LIVING ROOM, LOOKING STRAIGHT INTO THE LENS. "
-      + "There are tears on both cheeks, but his lips are pressed into a hard flat line and his "
-      + "jaw is set so the muscle stands out at the hinge, his chin dimpled with effort. "
-      + "⚠️ HIS EYES STAY ON THE LENS AND HIS HANDS STAY DOWN — he does not look away and he does "
-      + "not raise them to his face. Ordinary daylight through a curtain, the ordinary clutter of "
-      + "the room soft behind him.",
+    p: "⚠️ NYI NYI HEAD AND SHOULDERS IN THE LIVING ROOM, SHOT PAST HIS FATHER — Min Thant's shoulder and the back of his head fill the near left of frame, big and soft and out of focus, and the boy is beyond him, looking up at him. ⚠️ THE BOY'S FACE IS QUIET AND HIS CHEEKS ARE WET: his lips pressed into a flat line, the jaw muscle standing out at the hinge, his chin dimpled with the effort. Ordinary daylight through a curtain, the ordinary clutter of the room soft behind them.",
     u: ["သားက ကျွန်တော့်ကို ကြည့်နေတယ်။ သူ ငိုနေတယ်။",
         "ဒါပေမယ့် အသံမထွက်အောင် ထိန်းထားတယ်။",
         "အဲဒီအကျင့်ကို သူ ဘယ်အချိန်ကတည်းက ရလာတာလဲ ကျွန်တော် မသိဘူး။"],
@@ -930,7 +924,7 @@ export const SCENES = [
 
   { t: "That Night Was Still Happening", l: "ဧည့်ခန်း",
     g: "အရုပ်ခေါင်းထဲမှာ အဲဒီညက ဆက်ဖြစ်နေတယ်။",
-    p: "The doll's head against the skirting board, the crack in its paint visible, the face turned "
+    p: "The doll's head against the skirting board, the old chip in its paint visible, the face turned "
       + "up and smiling.",
     u: ["အရုပ်ခေါင်းထဲမှာ အဲဒီညက ဆက်ဖြစ်နေတယ်။"],
     c: [[0, "bigstinger"]] },
@@ -980,22 +974,20 @@ export const SCENES = [
 
   { t: "The First Blow", l: "ဧည့်ခန်း", w: ["မင်းသန့်"],
     g: "သားက “မလုပ်နဲ့!” လို့ အော်တယ်။ ကျွန်တော် မရပ်ဘူး။ ပထမတစ်ချက် ရိုက်လိုက်တယ်။",
-    p: "A hammer coming down on the doll's head on a table, a crack opening across the papier-mâché "
-      + "crown, the face still smiling.",
+    p: "A hammer coming down on the doll's head on a table, a pale scratch scored across the papier-mâché crown where it lands, the face still smiling.",
     u: ["ကျွန်တော် သံတူကို မြှောက်လိုက်တယ်။ သားက “မလုပ်နဲ့!” လို့ အော်တယ်။ ကျွန်တော် မရပ်ဘူး။",
         "ပထမတစ်ချက် ရိုက်လိုက်တယ်။ ခေါင်းပေါ်မှာ အက်ကြောင်းတစ်ခု ပေါ်တယ်။"],
     c: [[1, "bigstinger"]] },
 
   { t: "A Breath Came Out", l: "ဧည့်ခန်း",
     g: "အတွင်းက လေတစ်ရှိုက် ထွက်လာတယ်။ လူတစ်ယောက် အသက်ရှူသလို။",
-    p: "Fine paper dust puffing out of a crack in the doll's head in a single exhale, caught in "
-      + "lamplight.",
+    p: "Fine dry paper dust lifting off the scored line on the doll's head in one soft puff, caught in lamplight.",
     u: ["အတွင်းက လေတစ်ရှိုက် ထွက်လာတယ်။ လူတစ်ယောက် အသက်ရှူသလို။"],
     c: [[0, "bigstinger"]] },
 
   { t: "Where Is Mother", l: "ဧည့်ခန်း",
     g: "ခေါင်းအတွင်းက အသံပြန်ထွက်လာတယ် — “အမေ ဘယ်မှာလဲ” သားအသံလည်း မဟုတ်၊ သက်ထားအသံလည်း မဟုတ်။",
-    p: "The cracked doll's head on the table, the hammer raised and stopped in mid-air above it.",
+    p: "The doll's head on the table with the pale scratch across its crown, the hammer raised and stopped in mid-air above it.",
     u: ["ကျွန်တော် နောက်တစ်ချက် ရိုက်မလို့လုပ်တော့ ခေါင်းအတွင်းက အသံပြန်ထွက်လာတယ်။",
         "“အမေ ဘယ်မှာလဲ”",
         "သားအသံ မဟုတ်ဘူး။ သက်ထားအသံလည်း မဟုတ်ဘူး။"],
@@ -1003,8 +995,7 @@ export const SCENES = [
 
   { t: "Behind Many Layers of Paper", l: "ဧည့်ခန်း",
     g: "အသံက နက်တယ်။ စက္ကူအလွှာတွေ အများကြီးရဲ့ အနောက်မှာ တစ်ယောက်ယောက် ရပ်နေသလို။",
-    p: "Extreme close-up into the crack in the doll's head: layer after layer of pasted paper "
-      + "receding into darkness.",
+    p: "Extreme macro along the scored line on the doll's head, where the scraped paint has exposed the dry pressed paper: layer edge after layer edge running the length of the line, greying and softening towards each end.",
     u: ["အသံက နက်တယ်။ စက္ကူအလွှာတွေ အများကြီးရဲ့ အနောက်မှာ တစ်ယောက်ယောက် ရပ်နေသလို။",
         "ကျွန်တော် လက်ရပ်သွားတယ်။"],
     c: [[0, "bigstinger"]] },
@@ -1019,7 +1010,7 @@ export const SCENES = [
 
   { t: "It Asked Again", l: "ဧည့်ခန်း", w: ["ဖိုးဝရုပ်", "ညီညီ"],
     g: "အရုပ်က ထပ်မေးတယ် — “အမေ ဘယ်မှာလဲ” ကျွန်တော် သားကို ကြည့်တယ်။ သားက ကျွန်တော့်ကို ကြည့်နေတယ်။",
-    p: "A three-way composition: the cracked doll on the table, the boy in the corridor, the father "
+    p: "A three-way composition: the doll on the table with the scratch across its crown, the boy in the corridor, the father "
       + "between them holding a hammer.",
     u: ["အရုပ်က ထပ်မေးတယ်။ “အမေ ဘယ်မှာလဲ”",
         "ကျွန်တော် သားကို ကြည့်တယ်။ သားက ကျွန်တော့်ကို ကြည့်နေတယ်။",
@@ -1039,15 +1030,9 @@ export const SCENES = [
         "ကျွန်တော် အသက်တစ်ချက် ရှူတယ်။ “သားအမေ သေပြီ”"],
     c: [[2, "bigstinger"]] },
 
-  { t: "He Finally Looked His Age", l: "ဧည့်ခန်း", w: ["ညီညီ"],
+  { t: "He Finally Looked His Age", l: "ဧည့်ခန်း", w: ["ညီညီ", "မင်းသန့်"],
     g: "ညီညီရဲ့မျက်နှာ ပြိုကျသွားတယ်။ သိနေခဲ့ပေမယ့် ကြားဖို့ အဆင်သင့်မဖြစ်သေးဘူး။",
-    p: "⚠️ PULLED BACK TO HOLD ALL OF HIM — Nyi Nyi from the waist up in the middle of the "
-    + "living room, small in the frame, and for the first time in the film he looks exactly as "
-    + "young as he is. The careful flat expression he has held all film has gone: mouth open and "
-    + "square, eyes screwed shut, eyebrows pushed up in the middle, cheeks flushed and wet, "
-    + "⚠️ HIS SHOULDERS DRAWN RIGHT UP AROUND HIS NECK AND HIS WHOLE SMALL BODY FOLDED IN ON "
-    + "ITSELF. ⚠️ HIS FACE AND SKIN ARE COMPLETELY WHOLE, SMOOTH AND UNMARKED. Ordinary daylight "
-    + "through a curtain, the ordinary room around him.",
+    p: "⚠️ NYI NYI AND HIS FATHER TOGETHER IN THE MIDDLE OF THE LIVING ROOM, both from the waist up, the boy turned towards Min Thant and Min Thant already turning down to him. The careful flat expression the boy has held all film has gone: his mouth has come open, his eyes have closed, his eyebrows are pushed up in the middle and his cheeks are wet. ⚠️ HIS FATHER'S HAND IS ON HIS SHOULDER. Ordinary daylight through a curtain, the ordinary room around them.",
     u: ["ညီညီရဲ့မျက်နှာ ပြိုကျသွားတယ်။",
         "သူ သိနေခဲ့တယ်ဆိုပေမယ့် အဲဒီစကားကို ကြားဖို့ အဆင်သင့်မဖြစ်သေးဘူး။"],
     c: [[1, "bigstinger"]] },
@@ -1060,7 +1045,7 @@ export const SCENES = [
 
   { t: "It Lifted Its Head", l: "ဧည့်ခန်း", w: ["ဖိုးဝရုပ်"],
     g: "တောက်။ အရုပ်ရဲ့ခေါင်းက နည်းနည်း မြောက်လာတယ်။",
-    p: "The doll's cracked head tilting up a few degrees on the table, the smile unchanged.",
+    p: "The doll's head, the pale scratch across its crown, tilting up a few degrees on the table, the smile unchanged.",
     u: ["တောက်။ အရုပ်ရဲ့ခေါင်းက နည်းနည်း မြောက်လာတယ်။",
         "ကျွန်တော် နောက်တစ်လှမ်း ဆုတ်လိုက်တယ်။ “အဖေ သတ်တာ မဟုတ်ဘူး”"],
     c: [[0, "bigstinger"]] },
@@ -1247,10 +1232,9 @@ export const SCENES = [
         "ဧည့်ခန်းကြမ်းပြင်မှာ သူ့ဖုန်း ရှိတယ်။ သော့တွေလည်း ရှိတယ်။"],
     c: [[0, "bigstinger"]] },
 
-  { t: "A Crack in Its Head", l: "ဧည့်ခန်း", w: ["ဖိုးဝရုပ်"],
+  { t: "A Line Across Its Head", l: "ဧည့်ခန်း", w: ["ဖိုးဝရုပ်"],
     g: "စားပွဲပေါ်မှာ စက္ကူအစတွေ၊ သံတူ၊ ကွဲနေတဲ့ဆေးစတွေ။ အဲဒီဘေးမှာ ဖိုးဝရုပ် ရပ်နေတယ်။",
-    p: "A table with torn paper, a hammer and flakes of paint on it — and standing among them the "
-      + "doll, upright, one crack across its crown, smiling.",
+    p: "A table with torn paper, a hammer and flakes of paint on it — and standing among them the doll, upright, one pale scratch scored across its crown, smiling.",
     u: ["စားပွဲပေါ်မှာ စက္ကူအစတွေ၊ သံတူနဲ့ ကွဲနေတဲ့ဆေးစတွေ ရှိတယ်။",
         "အဲဒီဘေးမှာ ဖိုးဝရုပ် ရပ်နေတယ်။",
         "ဦးခေါင်းပေါ်မှာ အက်ကြောင်းတစ်ခု။ မျက်နှာကတော့ ပြုံးနေတုန်းပဲ။"],
@@ -1265,9 +1249,9 @@ export const SCENES = [
         "မသက်ထား ဘယ်ကိုမှ ထွက်သွားခဲ့တာ မဟုတ်ကြောင်း အဲဒီအခန်းထဲမှာ သိခဲ့ရတယ်။"],
     c: [[2, "bigstinger"]] },
 
-  { t: "Father Held My Arm", l: "အန်တီအိမ်", w: ["ညီညီ", "အန်တီ"],
+  { t: "The Balm on His Wrist", l: "အန်တီအိမ်", w: ["ညီညီ", "အန်တီ"],
     g: "အန်တီက သူ့လက်ကောက်ဝတ်က အနီရာတွေကို ဆေးလိမ်းပေးတယ်။ “အရုပ်လုပ်တာလား သား” “အဖေ ကိုင်တာ”",
-    p: "A woman gently rubbing balm into four faint pink fingertip patches on a boy's inner wrist "
+    p: "A woman gently rubbing balm into four faint pink ovals in a row on a boy's inner wrist "
       + "at a kitchen table in morning light, her hand stopping. Calm, domestic, unhurried.",
     u: ["နောက်နေ့မနက်မှာ ညီညီက သူ့အန်တီအိမ်မှာ ရှိနေတယ်။",
         "အန်တီက သူ့လက်ကောက်ဝတ်က အနီရာတွေကို ဆေးလိမ်းပေးတယ်။",
@@ -1368,8 +1352,7 @@ export const SCENES = [
 
   { t: "On the Shelf Again", l: "အန်တီအိမ်", w: ["ဖိုးဝရုပ်"],
     g: "အရုပ်ကို ညီညီ့အိပ်ရာဘေးက စင်ပေါ် တင်ထားပေးတယ်။ အက်ကြောင်းကို ပြင်မပေးသေးဘူး။",
-    p: "The doll standing on a shelf in a bright clean bedroom, the crack across its head still "
-      + "unrepaired, the same smile.",
+    p: "The doll standing on a shelf in a bright clean bedroom, the pale scratch across its head still there, the same smile.",
     u: ["နောက်ဆုံးတော့ အိမ်ကလူတစ်ယောက် သွားယူလာပေးတယ်။",
         "အရုပ်ကို ညီညီ့အိပ်ရာဘေးက စင်ပေါ် တင်ထားပေးတယ်။ အက်ကြောင်းကို ပြင်မပေးသေးဘူး။"] },
 
@@ -1392,7 +1375,7 @@ export const SCENES = [
 
   { t: "Nyi Nyi, It's Father", l: "အန်တီအိမ်", w: ["ဖိုးဝရုပ်"],
     g: "“ညီညီ… အဖေပါ…” ကလေးက အရုပ်ကို စိုက်ကြည့်နေတယ်။ မျက်နှာပေါ်က အပြုံးက မပြောင်းဘူး။",
-    p: "The doll's painted face on the shelf in bright daylight, the crack across its head, the "
+    p: "The doll's painted face on the shelf in bright daylight, the pale scratch across its head, the "
       + "small fixed smile exactly as it has always been.",
     u: ["ညီညီရဲ့ လက်တွေ စောင်ကို ဆုပ်မိတယ်။ “ညီညီ… အဖေပါ…”",
         "ကလေးက အရုပ်ကို စိုက်ကြည့်နေတယ်။ မျက်နှာပေါ်က အပြုံးက မပြောင်းဘူး။"],
@@ -1469,9 +1452,8 @@ export const SCENES = [
 
   { t: "He Did Not Know What to Do", l: "အန်တီအိမ်", w: ["ညီညီ"],
     g: "အမေနဲ့ သူလုပ်ထားတဲ့အရုပ်။ အခု အထဲမှာ အဖေ့အသံလည်း ရှိနေတယ်။ သူ ဘာလုပ်ရမှန်း မသိဘူး။",
-    p: "⚠️ CLOSE ON NYI NYI, WITH HIS OWN HAND STILL IN THE BOTTOM OF FRAME closed around his "
-    + "aunt's wrist. ⚠️ HIS HEAD HAS STARTED TO TURN AWAY TOWARDS THE SHELF AND HIS EYES HAVE "
-    + "NOT FOLLOWED IT — they are still down on her hand, so his face is going one way and his "
+    p: "⚠️ CLOSE ON NYI NYI, WITH HIS OWN HAND STILL IN THE BOTTOM OF FRAME, laid flat across his aunt's forearm. ⚠️ HIS HEAD HAS STARTED TO TURN AWAY TOWARDS THE SHELF AND HIS EYES HAVE "
+    + "NOT FOLLOWED IT — they are still down on her arm, so his face is going one way and his "
     + "look is staying the other. His eyebrows are drawn hard together and ⚠️ HIS MOUTH IS "
     + "SLIGHTLY OPEN, as though a sentence started and stopped. Warm daylight in his aunt's "
     + "front room.",
@@ -1509,7 +1491,7 @@ export const SCENES = [
 
   { t: "Its Head Was Turning", l: "အန်တီအိမ်", w: ["ဖိုးဝရုပ်"],
     g: "ဖိုးဝရုပ်ရဲ့ခေါင်းက ဖြည်းဖြည်း ရွေ့နေတယ်။",
-    p: "The doll on the shelf with its head caught mid-rotation, the crack across its crown, the "
+    p: "The doll on the shelf with its head caught mid-rotation, the pale scratch across its crown, the "
       + "painted smile unchanged.",
     u: ["ဖိုးဝရုပ်ရဲ့ခေါင်းက ဖြည်းဖြည်း ရွေ့နေတယ်။"],
     c: [[0, "bigstinger"]] },
@@ -1523,11 +1505,7 @@ export const SCENES = [
 
   { t: "His Father's Voice Changed", l: "အန်တီအိမ်",
     g: "အရုပ်ခေါင်းအတွင်းက အဖေ့အသံက ချက်ချင်း ပြောင်းသွားတယ်။ တောင်းပန်သံ မဟုတ်တော့ဘူး။ ထိတ်လန့်နေတဲ့အသံ။",
-    p: "⚠️ THE DOLL'S HEAD FROM THE FRONT AND SLIGHTLY ABOVE, FRAMED SO THE CROWN CRACK AND THE "
-    + "PAINTED SMILE ARE BOTH IN SHOT AT ONCE — the crack a dark line across the top of the head "
-    + "with its torn paper edges catching the light along the near lip, and the small fixed "
-    + "smile directly below it. ⚠️ NOTHING ABOUT THE HEAD HAS CHANGED SINCE THE FIRST TIME WE "
-    + "SAW IT. Sharp focus, bright daylight on the shelf, nothing in frame moving.",
+    p: "⚠️ THE DOLL'S HEAD FROM THE FRONT AND SLIGHTLY ABOVE, FRAMED SO THE SCRATCH ON THE CROWN AND THE PAINTED SMILE ARE BOTH IN SHOT AT ONCE — one pale scored line across the top of the head where the paint has been scraped back to the bare paper, and the small fixed smile directly below it. ⚠️ IT IS A SURFACE MARK ONLY: the head keeps its smooth rounded shape all the way across, and the line sits on the paint like a scuff on a wall. ⚠️ NOTHING ABOUT THE HEAD HAS CHANGED SINCE THE FIRST TIME WE SAW IT. Sharp focus, bright daylight on the shelf, nothing in frame moving.",
     u: ["အရုပ်ခေါင်းအတွင်းက အဖေ့အသံက ချက်ချင်း ပြောင်းသွားတယ်။",
         "တောင်းပန်သံ မဟုတ်တော့ဘူး။ ထိတ်လန့်နေတဲ့အသံ။ “သား…” ခဏနားတယ်။"],
     c: [[1, "bigstinger"]] },
