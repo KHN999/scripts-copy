@@ -38,29 +38,16 @@ export const CAST = [
       + "SHOT of this film — clear skin, both eyes bright, ordinary warm colour." },
   { name: "ညီလင်း", en: "Nyi Lin — his friend, about twenty-eight",
     prompt: "A Burmese man of about twenty-eight, thinner and more worn than Saw Htet, a village "
-      + "paso and a plain shirt, rubber slippers, unkempt hair. ⚠️ HE HAS NOT SLEPT PROPERLY IN A "
-      + "LONG TIME and it shows — shadowed eyes, a drawn face, a man carrying something. "
-      + "⚠️ Ordinary and unharmed throughout." },
+      + "paso and a plain shirt, rubber slippers, unkempt hair. ⚠️ HE HAS BEEN AWAKE TOO LONG FOR TOO MANY DAYS and it shows — shadowed eyes, a drawn face, a man carrying something. ⚠️ An ordinary healthy villager throughout." },
   { name: "မခင်သီတာ", en: "Ma Khin Thida — the bride, twenty-four, seven years dead",
     prompt: "A Burmese woman of twenty-four in full Myanmar wedding dress: ⚠️ A DEEP RED SILK "
       + "LONGYI AND A WHITE FITTED BLOUSE, with ⚠️ SMALL WHITE FLOWERS PINNED THROUGH HER "
-      + "DARK HAIR, which is put up in a traditional knot. ⚠️ SHE IS DEAD AND IT SHOWS ONLY IN "
-      + "COLOUR: her face and hands are a flat chalk-white with no warmth in them and her lips "
-      + "are a dark plum-grey. ⚠️ HER SKIN IS WHOLE, SMOOTH AND UNBROKEN EVERYWHERE — nothing "
-      + "damaged, nothing decayed, nothing wet. ⚠️ SHE IS NOT FRIGHTENING TO LOOK AT: her "
-      + "expression is grief, deep and patient and enormous, and it never becomes a snarl or a "
-      + "glare. Her wedding clothes are clean and uncreased.",
+      + "DARK HAIR, which is put up in a traditional knot. ⚠️ BUILD THIS PLATE AS SHE WAS IN LIFE — warm ordinary skin, clear eyes, an even natural colour through her face and hands. The shots that need her pale grade her pale themselves. ⚠️ HER EXPRESSION IS GRIEF, DEEP AND PATIENT AND ENORMOUS: her brows up in the middle, her mouth soft and level, her eyes steady. Her wedding clothes are clean and uncreased.",
     pose: "The subject stands facing the camera square on, full figure in frame, hands folded in "
       + "front of her, a still and very sad expression" },
   { name: "ကိုထက်မင်း", en: "Ko Htet Min — the groom, twenty-eight, seven years in the well",
     prompt: "A Burmese man of twenty-eight, the same build as Nyi Lin and recognisably his "
-      + "brother — the same brow and jaw. ⚠️ HE IS NOT IN WEDDING CLOTHES: an ordinary working "
-      + "shirt and paso, ⚠️ SOAKED THROUGH AND DARK WITH WELL WATER AND STAINED WITH PALE CLAY, "
-      + "clinging to him. His black hair is wet and flattened to his skull. ⚠️ HIS SKIN IS FLAT "
-      + "GREY-WHITE and his lips are the same grey, and ⚠️ THERE IS A DARK DISCOLOURATION LIKE "
-      + "OLD SHADOW UNDER THE SKIN across one cheekbone and one brow. ⚠️ THE SKIN ITSELF IS "
-      + "WHOLE, SMOOTH AND COMPLETELY UNBROKEN — nothing is open, nothing is missing and nothing "
-      + "is decayed. ⚠️ HIS EXPRESSION IS GENTLE AND HE SMILES.",
+      + "brother — the same brow and jaw. ⚠️ HE IS IN EVERYDAY CLOTHES RATHER THAN WEDDING CLOTHES: an ordinary working shirt and paso, his black hair dry and ordinary. ⚠️ BUILD THIS PLATE AS HE WAS IN LIFE — warm ordinary skin, clear eyes. The seven shots at the well grade him grey and soak his clothes themselves. ⚠️ HIS EXPRESSION IS GENTLE AND HE SMILES, faintly apologetic.",
     pose: "The subject stands facing the camera square on, full figure in frame, arms at his "
       + "sides, a calm faintly apologetic expression" },
   { name: "ဦးမြင့်အောင်", en: "U Myint Aung — the old man by the road, about sixty",
@@ -68,29 +55,21 @@ export const CAST = [
       + "SHORT PALE SCAR ABOVE HIS LEFT EYEBROW. He wears a dark brown shirt and a worn old "
       + "checked paso, plastic slippers. ⚠️ HE MUST LOOK COMPLETELY ALIVE AND COMPLETELY "
       + "ORDINARY IN EVERY SHOT — normal warm skin, clear eyes, ordinary shadow, ordinary "
-      + "stance. ⚠️ THERE IS NO PALLOR, NOTHING STILL AND NOTHING WRONG WITH HIM AT ANY POINT. "
-      + "A village elder leaning on a fence." },
+      + "stance. ⚠️ HIS COLOUR, HIS MOVEMENT AND HIS BEARING ARE THOSE OF A LIVING MAN IN EVERY SHOT. A village elder leaning on a fence." },
   { name: "ဧည့်သည်တွေ", en: "The wedding guests — a group plate",
     prompt: "A GROUP REFERENCE. Eight or nine Burmese villagers of mixed ages seated on plain "
       + "wooden chairs, ⚠️ ALL OF THEM IN PLAIN WHITE SHIRTS OR WHITE BLOUSES AND DARK LONGYIS, "
-      + "and ⚠️ EVERY ONE OF THEM WITH THEIR HEAD BOWED SO THE FACE IS NOT VISIBLE — chins down "
-      + "on chests, hair falling forward. ⚠️ THEY SIT PERFECTLY STILL AND DO NOT TOUCH ANYTHING: "
-      + "no food in their hands, no drinks, nobody turned towards anybody else. Ordinary bodies, "
-      + "ordinary clothes, ordinary chairs. ⚠️ NOTHING ABOUT THEM IS DAMAGED OR DECAYED." },
+      + "and ⚠️ EVERY ONE OF THEM WITH THEIR HEAD BOWED SO THE HAIR FALLS FORWARD AND THE FACE IS TURNED DOWN TOWARDS THE KNEES — chins down on chests. ⚠️ THEY SIT PERFECTLY STILL AND SQUARE TO THEIR CHAIRS WITH THEIR HANDS FLAT ON THEIR KNEES, each of them facing straight ahead. Ordinary bodies, ordinary clothes, ordinary chairs, and ordinary healthy skin on every hand and forearm in frame." },
 ];
 
 export const PROPS = [
   { name: "ပန်းဖြူ", en: "The white flower",
     prompt: "A single fresh white jasmine-like flower with a short green stem, plain and "
-      + "unremarkable, photographed lying on bare earth and filling the frame. ⚠️ IT IS ALWAYS "
-      + "FRESH, CLEAN AND PERFECT no matter where it appears — never wilted, never browned, "
-      + "never crushed. The one thing in this film that stays exactly the same." },
+      + "unremarkable, photographed lying on bare earth and filling the frame. ⚠️ IT IS ALWAYS FRESH, CLEAN AND PERFECT wherever it appears — the petals open and white, the stem firm and green. The one thing in this film that stays exactly the same." },
   { name: "မင်္ဂလာစားပွဲ", en: "The wedding table and the empty chair",
     prompt: "A long plain wooden table set out in the open for a village wedding: a white cloth "
       + "over it, simple dishes of food laid along its length untouched, and ⚠️ TWO CHAIRS SIDE "
-      + "BY SIDE AT ITS HEAD FOR THE COUPLE. ⚠️ THE CHAIR ON THE LEFT IS EMPTY AND THE ONE ON "
-      + "THE RIGHT IS EMPTY — this plate has nobody in it. Ordinary, modest, slightly shabby "
-      + "village wedding furniture. No decoration beyond a little white cloth." },
+      + "BY SIDE AT ITS HEAD FOR THE COUPLE. ⚠️ BOTH CHAIRS STAND EMPTY AND SQUARE TO THE TABLE — this plate is furniture on its own. Ordinary, modest, slightly shabby village wedding furniture, dressed with a little white cloth only." },
 ];
 
 export const LOCS = [
@@ -764,7 +743,7 @@ export const SCENES = [
   { t: "I'm Sorry, Brother", l: "ရေတွင်းဟောင်း", k: "wide",
     w: ["ကိုထက်မင်း", "ညီလင်း"],
     g: "ကိုထက်မင်းက ညီလင်းဘက် လှည့်တယ်။ ညီလင်း ခေါင်းငုံ့သွားတယ်။ “တောင်းပန်ပါတယ် အစ်ကို” ကိုထက်မင်း ဘာမှမပြောဘူး။",
-    p: "Wide on the well at night: Ko Htet Min standing and turned towards Nyi Lin, who is still "
+    p: "Wide on the well at night: Ko Htet Min standing grey-white and soaked through, turned towards Nyi Lin, who is still "
       + "on his knees in the grass with his head right down. ⚠️ THE STANDING BROTHER'S FACE IS COMPLETELY LEVEL — mouth flat, brows level, eyes steady on him. The ring of white figures "
       + "beyond them.",
     u: ["ကိုထက်မင်းက ညီလင်းဘက် လှည့်တယ်။ ညီလင်း ခေါင်းငုံ့သွားတယ်။",
@@ -774,7 +753,7 @@ export const SCENES = [
   { t: "Her Face Went Cold", c: [[2, "bigstinger"]], l: "ရေတွင်းဟောင်း", k: "thida",
     w: ["မခင်သီတာ"],
     g: "⚠️ မခင်သီတာကတော့ ညီလင်းကို ကြည့်တယ်။ သူ့မျက်နှာပေါ်က ဝမ်းနည်းမှု ပြောင်းသွားတယ်။ အေးသွားတယ်။ “ဘာလို့ မပြောတာလဲ”",
-    p: "Close on Ma Khin Thida, ⚠️ AND THE GRIEF HAS GONE OUT OF HER FACE AND LEFT SOMETHING "
+    p: "Close on Ma Khin Thida, her face the same flat chalk-white and her lips the same plum-grey, ⚠️ AND THE GRIEF HAS GONE OUT OF IT AND LEFT SOMETHING "
       + "COLD AND STILL IN ITS PLACE — the tears still on her cheeks, the expression underneath "
       + "them completely flat. ⚠️ HER MOUTH IS FLAT AND LEVEL AND HER EYES ARE STEADY; the sadness has simply gone out of it. Faint starlight.",
     u: ["မခင်သီတာကတော့ ညီလင်းကို ကြည့်တယ်။",
@@ -802,7 +781,7 @@ export const SCENES = [
   { t: "I Won't Take You", l: "ရေတွင်းဟောင်း", k: "thida",
     w: ["မခင်သီတာ", "ကိုထက်မင်း"],
     g: "⚠️ ကျွန်တော် မခင်သီတာ ဒေါသထွက်ပြီး သူ့ကို သတ်မယ်လို့ ထင်မိတယ်။ ဒါပေမယ့် သူ ဘာမှမလုပ်ဘူး။ “မင်းကို ကျွန်မ မယူဘူး”",
-    p: "Close on Ma Khin Thida, ⚠️ HER HAND CLOSED AROUND A GREY ONE AT THE BOTTOM OF FRAME AND HELD IN AGAINST HER OWN BODY, her eyes level and her face calm. Faint "
+    p: "Close on Ma Khin Thida, chalk-white and calm, ⚠️ HER HAND CLOSED AROUND A GREY ONE AT THE BOTTOM OF FRAME AND HELD IN AGAINST HER OWN BODY, her eyes level and her face calm. Faint "
       + "starlight.",
     u: ["ကျွန်တော် မခင်သီတာ ဒေါသထွက်ပြီး သူ့ကို သတ်မယ်လို့ ထင်မိတယ်။",
         "ဒါပေမယ့် သူ ဘာမှမလုပ်ဘူး။ လက်ထဲက ကိုထက်မင်းရဲ့လက်ကို ပိုတင်းတင်းဖမ်းလိုက်တယ်။",
