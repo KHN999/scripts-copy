@@ -64,10 +64,15 @@ export const CAST = [
       + "checked paso, plastic slippers. ⚠️ HE MUST LOOK COMPLETELY ALIVE AND COMPLETELY "
       + "ORDINARY IN EVERY SHOT — normal warm skin, clear eyes, ordinary shadow, ordinary "
       + "stance. ⚠️ HIS COLOUR, HIS MOVEMENT AND HIS BEARING ARE THOSE OF A LIVING MAN IN EVERY SHOT. A village elder leaning on a fence." },
-  { name: "ဧည့်သည်တွေ", en: "The wedding guests — a group plate",
-    prompt: "A GROUP REFERENCE. Eight or nine Burmese villagers of mixed ages seated on plain "
-      + "wooden chairs, ⚠️ ALL OF THEM IN PLAIN WHITE SHIRTS OR WHITE BLOUSES AND DARK LONGYIS, "
-      + "and ⚠️ EVERY ONE OF THEM WITH THEIR HEAD BOWED SO THE HAIR FALLS FORWARD AND THE FACE IS TURNED DOWN TOWARDS THE KNEES — chins down on chests. ⚠️ THEY SIT PERFECTLY STILL AND SQUARE TO THEIR CHAIRS WITH THEIR HANDS FLAT ON THEIR KNEES, each of them facing straight ahead. Ordinary bodies, ordinary clothes, ordinary chairs, and ordinary healthy skin on every hand and forearm in frame." },
+    { name: "ဧည့်သည်တွေ", en: "The wedding guests — a group plate", group: true,
+    pose: "All of them stand together in one loose row facing the camera, full figures in frame, "
+      + "arms straight down at their sides, ⚠️ EVERY HEAD BOWED — chin on the chest, hair fallen "
+      + "forward, the face turned to the ground",
+    redo: "⚠️ ဒီ reference ကို အသစ် ပြန်ဆောက်ပါ။ အရင် plate က \"ကုလားထိုင်ပေါ် ထိုင်နေ\" လို့ "
+      + "ပါပြီး၊ နောက်က reference စည်းကမ်းက \"တစ်ယောက်တည်း၊ ပရိဘောဂ မပါ၊ ခေါင်းကို ကင်မရာဆီ "
+      + "တည့်တည့်\" လို့ ပြောထားတော့ ကိုယ်တိုင်ချင်း တိုက်နေတယ် — ဒါကြောင့် ခေါင်းငုံ့တာ "
+      + "မထွက်တာ။ အခု အုပ်စုလိုက် ရပ်နေတဲ့ပုံ၊ ခေါင်းငုံ့တာ အတည်ဖြစ်သွားပြီ။",
+    prompt: "A GROUP REFERENCE for the wedding guests — eight or nine Burmese villagers of mixed ages and builds, men and women, ⚠️ ALL OF THEM IN PLAIN WHITE SHIRTS OR WHITE BLOUSES AND DARK LONGYIS. ⚠️ EVERY ONE OF THEM HOLDS THEIR HEAD BOWED: the chin down on the chest, the hair fallen forward, the face turned towards the ground. ⚠️ EACH HEAD IS BOWED AT ITS OWN SLIGHT ANGLE so they read as nine separate people rather than one figure repeated nine times. ⚠️ THE SHOTS PLACE THEM SEATED, STANDING OR WALKING — this plate fixes who they are, what they wear and how they carry their heads. Ordinary bodies, ordinary clothes, and ordinary healthy skin on every hand and forearm in frame." },
 ];
 
 export const PROPS = [
@@ -1008,8 +1013,7 @@ const CONT_DEAD = {
     + "and even across her whole face and hands.",
   "ကိုထက်မင်း": " Ko Htet Min is a flat grey-white, his hair soaked and flattened and his working "
     + "shirt dark with water and streaked with pale clay; his skin is smooth and even.",
-  "ဧည့်သည်တွေ": " The wedding guests keep their heads bowed and their hair forward, their faces "
-    + "turned down towards their knees.",
+  "ဧည့်သည်တွေ": " The wedding guests keep their heads bowed whatever they are doing — chins down on their chests, hair fallen forward, each face turned to the ground.",
 };
 
 /**
@@ -1022,8 +1026,7 @@ const CONT_FAR = {
   "မခင်သီတာ": " At this distance Ma Khin Thida reads as an ordinary woman in a deep red longyi "
     + "and a white blouse, white flowers in her dark hair, sitting very straight and very still.",
   "ကိုထက်မင်း": " At this distance Ko Htet Min reads as a man in a dark working shirt.",
-  "ဧည့်သည်တွေ": " The wedding guests keep their heads bowed and their hair forward, their faces "
-    + "turned down towards their knees.",
+  "ဧည့်သည်တွေ": " The wedding guests keep their heads bowed whatever they are doing — chins down on their chests, hair fallen forward, each face turned to the ground.",
 };
 
 /** The same two in the warm memories, where they are alive. */

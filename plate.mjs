@@ -24,13 +24,27 @@ export const POSE_DEFAULT =
   "The subject stands facing the camera square on, head and body straight to the lens, full figure in "
   + "frame, neutral expression, arms relaxed at the sides";
 
-export const plate = (pose) =>
+/**
+ * `group` is for the handful of plates that are a crowd rather than a person —
+ * a row of wedding guests, a funeral party. Without it the clause below tells
+ * the generator to photograph the subject ALONE with no other people, which
+ * cancels the group it was just asked for.
+ */
+export const plate = (pose, group) =>
   "\n\n⚠️ THIS IS A REFERENCE PLATE, NOT A SCENE FROM THE FILM. Whatever the description above says "
   + "about where or how this subject appears in the story does not apply to this one image. Photograph "
-  + `the subject ALONE against a PLAIN PURE WHITE SEAMLESS BACKGROUND. ${pose || POSE_DEFAULT}, evenly `
-  + "and softly lit. No room, no scenery, no furniture, no props, no other people, no text, no shadow "
-  + "cast onto the background and no visible floor or horizon line. Nothing in the image but the "
-  + "subject on white.";
+  + `${group ? "THE WHOLE GROUP TOGETHER AND NOBODY ELSE" : "the subject ALONE"} against a PLAIN PURE `
+  + `WHITE SEAMLESS BACKGROUND. ${pose || POSE_DEFAULT}, evenly and softly lit. No room, no scenery, `
+  + `no furniture, no props, ${group ? "" : "no other people, "}no text, no shadow cast onto the `
+  + "background and no visible floor or horizon line. Nothing in the image but "
+  + `${group ? "these people" : "the subject"} on white.`;
+
+/** The same note for a group plate, which is emphatically not one person alone. */
+export const PLATE_MM_GROUP =
+  " ⚠️ <b>ဒါက ရုပ်ပုံ reference ပဲ၊ ဇာတ်လမ်းထဲက မြင်ကွင်း မဟုတ်ဘူး။</b> "
+  + "<b>ဒီ plate ကတော့ လူတစ်စုလုံးကို တစ်ပုံတည်းမှာ</b> — နောက်ခံ အဖြူရောင်သက်သက်ပေါ်မှာ ရိုက်ပါ။ "
+  + "အခန်း၊ ပရိဘောဂ၊ ကုလားထိုင်၊ ပစ္စည်း၊ စာသား၊ ကြမ်းပြင်မျဉ် — <b>ဘာမှ မပါရဘူး။</b> "
+  + "<b>ဘယ်လိုရပ်ရမလဲဆိုတာ prompt ထဲမှာ ရေးထားပါတယ်။</b>";
 
 /** Burmese gloss for the reference cards. Deliberately silent on the angle — that is in the prompt. */
 export const PLATE_MM =

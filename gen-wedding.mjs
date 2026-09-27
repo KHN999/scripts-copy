@@ -8,7 +8,7 @@ import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3
 import { SCENES, CAST, PROPS, LOCS } from "./data-wedding.mjs";
 import { MM_REF, NOTE_MM } from "./mm-wedding.mjs";
 import { buildPage } from "./page.mjs";
-import { plate, PLATE_MM } from "./plate.mjs";
+import { plate, PLATE_MM, PLATE_MM_GROUP } from "./plate.mjs";
 import { NAV } from "./nav.mjs";
 
 const PROJECT = "jzc55wd9zxp";
@@ -63,10 +63,10 @@ const NREF = sources.length;
 const refs = sources.map((c, i) => ({
   ...c,
   redo: c.redo || null,
-  mm: (MM_REF[c.name] || "") + (i < CAST.length ? PLATE_MM : ""),
+  mm: (MM_REF[c.name] || "") + (i < CAST.length ? (c.group ? PLATE_MM_GROUP : PLATE_MM) : ""),
   prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). A new and distinct subject; do not `
     + `repeat or vary any previous reference.\n\n${c.prompt}`
-    + (i < CAST.length ? plate(c.pose) : ""),
+    + (i < CAST.length ? plate(c.pose, c.group) : ""),
 }));
 
 const NOTE = NOTE_MM + `<br><br>ရုပ်ပုံ ${shots.length} ပုံ။ Reference ${NREF} ခုကို အရင်ဆောက်ပါ။`;
