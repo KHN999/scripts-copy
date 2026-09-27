@@ -62,6 +62,7 @@ const sources = [...CAST, ...PROPS, ...LOCS];
 const NREF = sources.length;
 const refs = sources.map((c, i) => ({
   ...c,
+  redo: c.redo || null,
   mm: (MM_REF[c.name] || "") + (i < CAST.length ? PLATE_MM : ""),
   prompt: `Reference ${i + 1} of ${NREF} — ${c.en} (${c.name}). A new and distinct subject; do not `
     + `repeat or vary any previous reference.\n\n${c.prompt}`

@@ -40,12 +40,20 @@ export const CAST = [
     prompt: "A Burmese man of about twenty-eight, thinner and more worn than Saw Htet, a village "
       + "paso and a plain shirt, rubber slippers, unkempt hair. ⚠️ HE HAS BEEN AWAKE TOO LONG FOR TOO MANY DAYS and it shows — shadowed eyes, a drawn face, a man carrying something. ⚠️ An ordinary healthy villager throughout." },
   { name: "မခင်သီတာ", en: "Ma Khin Thida — the bride, twenty-four, seven years dead",
+    redo: "⚠️ ဒီ reference ကို အသစ် ပြန်ဆောက်ပါ။ အရင် plate က \"သေနေပြီ၊ မျက်နှာ ထုံးဖြူရောင်\" လို့ "
+      + "ပါနေလို့ shot ၁ ကတည်းက သရဲမှန်း သိသွားတယ်။ အခု plate က အသက်ရှင်နေစဉ်ပုံ — "
+      + "အသားရောင်နွေးနွေး၊ မျက်လုံးကြည်။ ဖြူဖျော့ရမယ့် shot ၅၇၊ ၆၁၊ ၆၄၊ ၆၈၊ ၇၀၊ ၇၃ က "
+      + "သူတို့ဘာသာသူတို့ ဖြူအောင် ပြောထားပြီးသား။",
     prompt: "A Burmese woman of twenty-four in full Myanmar wedding dress: ⚠️ A DEEP RED SILK "
       + "LONGYI AND A WHITE FITTED BLOUSE, with ⚠️ SMALL WHITE FLOWERS PINNED THROUGH HER "
       + "DARK HAIR, which is put up in a traditional knot. ⚠️ BUILD THIS PLATE AS SHE WAS IN LIFE — warm ordinary skin, clear eyes, an even natural colour through her face and hands. The shots that need her pale grade her pale themselves. ⚠️ HER EXPRESSION IS GRIEF, DEEP AND PATIENT AND ENORMOUS: her brows up in the middle, her mouth soft and level, her eyes steady. Her wedding clothes are clean and uncreased.",
     pose: "The subject stands facing the camera square on, full figure in frame, hands folded in "
       + "front of her, a still and very sad expression" },
   { name: "ကိုထက်မင်း", en: "Ko Htet Min — the groom, twenty-eight, seven years in the well",
+    redo: "⚠️ ဒီ reference ကိုလည်း အသစ် ပြန်ဆောက်ပါ။ အရင် plate က ရေစိုပြီး မီးခိုးရောင်ဖြူ "
+      + "ဖြစ်နေလို့ အမှတ်တရ shot ၄၃၊ ၄၄၊ ၄၅ (အသက်ရှင်နေစဉ်) နဲ့ ကွဲလွဲတယ်။ အခု plate က "
+      + "အသက်ရှင်နေစဉ်ပုံ — ဆံပင်ခြောက်၊ အသားရောင်နွေးနွေး။ ရေတွင်းအခန်း ၆၅–၇၃ က "
+      + "သူတို့ဘာသာသူတို့ မီးခိုးရောင်ဖြူအောင် ပြောထားပြီးသား။",
     prompt: "A Burmese man of twenty-eight, the same build as Nyi Lin and recognisably his "
       + "brother — the same brow and jaw. ⚠️ HE IS IN EVERYDAY CLOTHES RATHER THAN WEDDING CLOTHES: an ordinary working shirt and paso, his black hair dry and ordinary. ⚠️ BUILD THIS PLATE AS HE WAS IN LIFE — warm ordinary skin, clear eyes. The seven shots at the well grade him grey and soak his clothes themselves. ⚠️ HIS EXPRESSION IS GENTLE AND HE SMILES, faintly apologetic.",
     pose: "The subject stands facing the camera square on, full figure in frame, arms at his "

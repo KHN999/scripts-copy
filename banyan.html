@@ -66,6 +66,12 @@ section>h2{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:va
    its own colour and a shot can carry several badges at a time. The left accent
    takes the colour of the most recent pass. */
 .card.rev{border-left:3px solid var(--revc,#7dd3fc)}
+/* A reference whose plate changed after it was first generated. Amber rather
+   than the rev blues, because this is work to redo rather than a note to read. */
+.card.redo{border-left:3px solid #fb923c;background:#2a2029}
+.redonote{background:#3a2a1a;border:1px solid #6b4a22;border-left:3px solid #fb923c;
+  border-radius:8px;padding:10px 12px;margin:9px 0;font-size:13px;color:#fbd9a8;
+  font-family:"Noto Sans Myanmar","Myanmar Text","Padauk",system-ui,sans-serif;line-height:1.9}
 .revtag{margin-left:6px;font-size:11px;letter-spacing:.02em;padding:2px 7px;border-radius:999px;
   color:#04141c;font-weight:600;white-space:nowrap;background:#7dd3fc}
 .revtag:first-of-type{margin-left:auto}
@@ -226,6 +232,13 @@ function card(o, isRef) {
     t.textContent = o.en ? o.name + " — " + o.en : o.name;
     const a = document.createElement("span"); a.className = "act"; a.textContent = "reference";
     head.append(t, a);
+    if (o.redo) {
+      el.classList.add("redo");
+      const r = document.createElement("span");
+      r.className = "revtag"; r.style.background = "#fb923c"; r.style.color = "#2a1a08";
+      r.textContent = "REBUILD THIS ONE";
+      head.appendChild(r);
+    }
   } else {
     const i = document.createElement("span"); i.className = "id"; i.textContent = o.id;
     const t = document.createElement("span"); t.className = "ttl"; t.textContent = o.title;
@@ -252,6 +265,10 @@ function card(o, isRef) {
     }
   }
   el.appendChild(head);
+  if (o.redo) {
+    const w = document.createElement("div"); w.className = "redonote"; w.textContent = o.redo;
+    el.appendChild(w);
+  }
   if (!isRef) {
     const tags = document.createElement("div"); tags.className = "tags";
     (o.who || []).forEach(w => { const s = document.createElement("span"); s.className = "tag"; s.textContent = w; tags.appendChild(s); });
