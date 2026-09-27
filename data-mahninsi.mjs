@@ -71,8 +71,7 @@ export const CAST = [
   { name: "ညီလေး", en: "The narrator — the bride's younger brother, about twenty",
     prompt:
       "A Burmese man of about twenty, slight, in a plain t-shirt and a checked paso, rubber "
-      + "slippers, short untidy hair. ⚠️ AN ORDINARY YOUNG VILLAGER WITH NOTHING REMARKABLE ABOUT "
-      + "HIM — this is the person the film is happening to, and he watches far more than he acts." },
+      + "slippers, short untidy hair. ⚠️ AN ORDINARY YOUNG VILLAGER, ENTIRELY UNREMARKABLE TO LOOK AT — this is the person the film is happening to, and he watches far more than he acts." },
 
   { name: "အစ်မ", en: "The sister — the bride, about twenty-five",
     prompt:
@@ -138,7 +137,7 @@ export const LOCS = [
     prompt:
       "An old village pond outside the houses — still dark water, reed and long grass all round "
       + "the edge, a few big trees leaning over it, a dirt track coming down to one side. ⚠️ THE "
-      + "FAR BANK IS ALWAYS TOO DARK OR TOO FAR TO READ. Nothing is maintained here." },
+      + "FAR BANK IS ALWAYS TOO DARK OR TOO FAR TO READ. Everything here has been left to itself." },
 
   { name: "တဲအဟောင်း", en: "The abandoned hut by the pond",
     prompt:
@@ -158,8 +157,7 @@ export const LOCS = [
 
 const CAM = {
   mirror: "THE MIRROR, SQUARE ON. Camera level and straight in front of the glass, close enough "
-    + "that the frame of the mirror runs outside the picture. ⚠️ WHAT IS PHOTOGRAPHED IS THE "
-    + "REFLECTION, not the room.",
+    + "that the frame of the mirror runs outside the picture. ⚠️ WHAT IS PHOTOGRAPHED IS THE REFLECTION ITSELF — the surface of the glass and what it returns.",
   photo: "A PHOTOGRAPH BEING LOOKED AT. The image fills the frame as a photograph — a phone "
     + "screen or a print held in a hand — ⚠️ SO THAT WE ARE LOOKING AT A PICTURE OF A ROOM RATHER "
     + "THAN AT THE ROOM.",
@@ -206,7 +204,7 @@ const ZAW_ALIVE =
   + "red lipstick inside the edges of his mouth.";
 
 const ZAW_VISITOR =
-  " Zaw Ye looks exactly like a living person here and nothing about him reads as wrong — warm "
+  " Zaw Ye looks exactly like a living person here and everything about him reads as ordinary — warm "
   + "skin, clear eyes, long loose black hair, a pale pink blouse, the deep red floral htamein, "
   + "and beautiful, skilled, freshly applied makeup. Whatever anybody learns later, this is an "
   + "ordinary composed man doing a job.";
@@ -279,7 +277,7 @@ export const SCENES = [
   { t: "She Looks Back Out of It", c: [[1, "bigstinger"]], l: "ကျွန်တော်တို့အိမ်", k: "mirror", w: [],
     g: "⚠️ ဒီအခန်းမှာ ဘာမှ မပေါ်သေးဘူး — မှန်ပဲ။",
     p: "⚠️ THE MIRROR SQUARE ON AND FILLING THE FRAME, the glass holding the reflection of an empty "
-      + "lit room. ⚠️ NOTHING STANDS IN IT AND NOTHING NEEDS TO — the shot is the surface itself, "
+      + "lit room. ⚠️ THE GLASS RETURNS THE ROOM AND THE ROOM ALONE — the shot is the surface itself, "
       + "the faint dust on it, the one long highlight, and the room going back behind it.",
     u: ["မှန်ထဲကနေ", "သူ ပြန်ကြည့်တတ်လို့ပဲ။"] },
 
@@ -325,7 +323,7 @@ export const SCENES = [
     g: "လှောင်တဲ့လူတွေ ရှိပေမယ့် သူ ပြန်မစိတ်ဆိုးဘူး။",
     p: "⚠️ WARM DAYLIT MEMORY. Close on Zaw Ye on the lane, ⚠️ HIS FACE COMPLETELY UNBOTHERED — "
       + "eyebrows level, a small dry smile, his eyes going past whoever is talking. ⚠️ TWO MEN SIT "
-      + "SOFT AND OUT OF FOCUS ON A BENCH BEHIND HIM, mid-laugh. He is not looking at them.",
+      + "SOFT AND OUT OF FOCUS ON A BENCH BEHIND HIM, mid-laugh. His eyes go straight past them down the lane.",
     u: ["တချို့က သူ့ကို လှောင်ကြတယ်။ တချို့က ရယ်ကြတယ်။",
       "ဇော်ရဲကတော့ ပြန်မစိတ်ဆိုးဘူး။"] },
 
@@ -357,7 +355,7 @@ export const SCENES = [
   { t: "Ko Thet Paing", l: "ရွာလမ်း", k: "paing", w: ["ကိုသက်ပိုင်"],
     g: "ရွာသူဌေးရဲ့ တစ်ဦးတည်းသောသား။",
     p: "⚠️ WARM DAYLIT MEMORY. Close on Ko Thet Paing outside in the sun, ⚠️ LOOKING SLIGHTLY OFF "
-      + "THE LENS with an easy expression that does not commit to anything. A pressed shirt, neat "
+      + "THE LENS with an easy, pleasant expression that is hard to read. A pressed shirt, neat "
       + "hair, green village behind him.",
     u: ["အဲဒီလူက—", "ကိုသက်ပိုင်။ ရွာသူဌေးရဲ့ တစ်ဦးတည်းသောသား။"] },
 
@@ -372,7 +370,7 @@ export const SCENES = [
     w: ["ဇော်ရဲ", "ကိုသက်ပိုင်"],
     g: "⚠️ လက်နှစ်ဖက်ပဲ ပြ — မျက်နှာ မပါ။",
     p: "⚠️ WARM DAYLIT MEMORY. Tight insert on two men's hands on the grass between them, ⚠️ THE "
-      + "LITTLE FINGER OF ONE LYING ACROSS THE BACK OF THE OTHER'S HAND and nothing more than that. "
+      + "LITTLE FINGER OF ONE LYING ACROSS THE BACK OF THE OTHER'S HAND and that is the whole of it. "
       + "⚠️ THE FRAME HOLDS THE TWO HANDS AND THE GRASS. Late afternoon light.",
     u: ["ဒါပေမယ့် အသက်နှစ်ဆယ်ကျော်လာတဲ့အချိန်မှာ—",
       "သူငယ်ချင်းထက် ပိုတဲ့ဆက်ဆံရေးတစ်ခု သူတို့နှစ်ယောက်ကြားမှာ ရှိနေခဲ့တယ်။",
@@ -380,8 +378,7 @@ export const SCENES = [
 
   { t: "By the Old Pond, Nearly Every Night", l: "ရေကန်ဟောင်း", k: "wide", w: [],
     g: "ညဘက် ရေကန် — လူနှစ်ယောက် အဝေးကလေး။",
-    p: "Wide on the old pond at night, ⚠️ TWO SMALL SEATED FIGURES ON THE FAR BANK, far enough off "
-      + "to read as shapes and nothing finer. The water lies flat and black between them and the "
+    p: "Wide on the old pond at night, ⚠️ TWO SMALL SEATED FIGURES ON THE FAR BANK, far enough off that they read only as shapes. The water lies flat and black between them and the "
       + "camera. Faint starlight on the reeds.",
     u: ["ညတိုင်းလိုလို ရွာအပြင်က ရေကန်ဟောင်းဘေးမှာ",
       "သူတို့နှစ်ယောက် တိတ်တိတ်လေးတွေ့ကြတယ်။"] },
@@ -389,15 +386,14 @@ export const SCENES = [
   { t: "I'll Take You With Me", l: "ရေကန်ဟောင်း", k: "paing", w: ["ကိုသက်ပိုင်"],
     g: "သက်ပိုင့်ကတိ — ရန်ကုန်သွားရင် ခေါ်သွားမယ်။",
     p: "⚠️ WARM DAYLIT MEMORY. Close on Ko Thet Paing at the pond, ⚠️ TALKING AND LOOKING STRAIGHT "
-      + "AT SOMEBODY JUST OFF THE LENS, his face open and certain in a way it is not anywhere else "
-      + "in the film. Low gold light off the water on one side of his face.",
+      + "AT SOMEBODY JUST OFF THE LENS, his face open and certain — the only shot in the film where it is. Low gold light off the water on one side of his face.",
     u: ["သက်ပိုင်က တစ်ခါပြောဖူးတယ်။",
       "“ငါ ရန်ကုန်သွားရင် မင်းကိုပါ ခေါ်သွားမယ်”",
       "ဇော်ရဲက မယုံရဲဘူး။ “တကယ်လား”"] },
 
   { t: "In Front of Me You Are You", c: [[1, "stinger"]], l: "ရေကန်ဟောင်း", k: "zaw", w: ["ဇော်ရဲ"],
     g: "⚠️ ဒီဇာတ်လမ်းတစ်ခုလုံးရဲ့ အနှစ်ချုပ် — သူ ယုံခဲ့တဲ့စကား။",
-    p: "⚠️ WARM DAYLIT MEMORY. Close on Zaw Ye at the pond hearing it, ⚠️ HIS FACE COMPLETELY OPEN "
+    p: "⚠️ WARM DAYLIT MEMORY. Close on Zaw Ye at the pond as it lands, ⚠️ HIS FACE COMPLETELY OPEN "
       + "— eyebrows lifted in the middle, mouth just parted, eyes wet and steady on the man off "
       + "frame. Gold light from the water underneath his jaw.",
     u: ["“အဲဒီရောက်ရင် ငါ ဒီလိုပဲ ဝတ်လို့ရမလား”",
@@ -422,15 +418,13 @@ export const SCENES = [
   { t: "He Went to Ask Him Himself", l: "ရွာလမ်း", k: "wide", w: ["ဇော်ရဲ", "ကိုသက်ပိုင်"],
     g: "⚠️ နှစ်ယောက် မျက်နှာချင်းဆိုင် — အကွာအဝေး ကျယ်ကျယ်။",
     p: "⚠️ WARM DAYLIT MEMORY. Wide on the two of them standing a good two metres apart on the bare "
-      + "earth in front of a large timber house, ⚠️ BOTH SQUARE ON TO EACH OTHER AND NEITHER OF "
-      + "THEM MOVING. Bright grey daylight, the distance between them the whole subject.",
+      + "earth in front of a large timber house, ⚠️ BOTH SQUARE ON TO EACH OTHER AND BOTH PERFECTLY STILL. Bright grey daylight, the distance between them the whole subject.",
     u: ["ဇော်ရဲက မယုံဘူး။", "သက်ပိုင်ဆီ သွားမေးတယ်။"] },
 
   { t: "My Father Arranged It", l: "ရွာလမ်း", k: "paing", w: ["ကိုသက်ပိုင်"],
     g: "သက်ပိုင် — မျက်လုံး မဆုံရဲဘူး။",
     p: "⚠️ WARM DAYLIT MEMORY. Close on Ko Thet Paing, ⚠️ HIS EYES DOWN AND OFF TO ONE SIDE, his "
-      + "jaw set, his mouth a flat line. ⚠️ HE IS NOT LIFTING HIS HEAD and the shot is entirely "
-      + "about that. Flat daylight.",
+      + "jaw set, his mouth a flat line. ⚠️ HIS HEAD STAYS DOWN THROUGHOUT and the shot is entirely about that. Flat daylight.",
     u: ["ဒါပေမယ့် သက်ပိုင်က—", "“အဖေစီစဉ်တာပါ။ ငါ ငြင်းလို့မရဘူး” လို့ပဲ ပြောတယ်။"] },
 
   { t: "He Did Not Cry", c: [[1, "stinger"]], l: "ရွာလမ်း", k: "zaw", w: ["ဇော်ရဲ"],
@@ -449,9 +443,7 @@ export const SCENES = [
 
   { t: "I Will", c: [[1, "bigstinger"]], l: "ရွာလမ်း", k: "zaw", w: ["ဇော်ရဲ"],
     g: "⚠️ ဒီပြုံးက ဇာတ်လမ်းရဲ့ အလှည့်အပြောင်း။",
-    p: "⚠️ WARM DAYLIT MEMORY. The same close framing, ⚠️ AND HE IS SMILING NOW — a small, even, "
-      + "completely composed smile that does not reach his eyes at all, the eyes still wide and "
-      + "still fixed. Flat daylight.",
+    p: "⚠️ WARM DAYLIT MEMORY. The same close framing, ⚠️ AND HE IS SMILING NOW — a small, even, completely composed smile that stops at his mouth, the eyes still wide and still fixed. Flat daylight.",
     u: ["သက်ပိုင်က ဘာမှမပြောဘူး။", "ဇော်ရဲ ပြုံးလိုက်တယ်။ “ငါ လိမ်းပေးမယ်လေ”"] },
 
   /* ── V · THE NIGHT HE VANISHED ────────────────────────────────────────── */
@@ -475,7 +467,7 @@ export const SCENES = [
     g: "နောက်နေ့မနက် — တံခါးပွင့်လျက်။",
     p: "Wide on a small village house in flat grey morning light with ⚠️ ITS FRONT DOOR STANDING "
       + "WIDE OPEN AND THE INSIDE OF IT COMPLETELY DARK. The short timber stair down to the earth "
-      + "is bare. Nothing else in frame has changed.",
+      + "is bare. Everything else in frame is as it was.",
     u: ["နောက်နေ့မနက်မှာ", "သူ့အိမ်တံခါး ဖွင့်ထားတယ်။"] },
 
   { t: "The Red Htamein Was Gone", c: [[1, "bigstinger"]], l: "ဇော်ရဲ့အခန်း", k: "room", w: [],
@@ -676,8 +668,7 @@ export const SCENES = [
   /* ── VIII · THE HUSBAND ───────────────────────────────────────────────── */
   { t: "Three Days After the Wedding", l: "ကျွန်တော်တို့အိမ်", k: "insert", w: [],
     g: "ဖုန်းပိတ်ထားတယ် — ခေါ်လို့မရဘူး။",
-    p: "Tight insert on a phone held in one hand, ⚠️ THE SCREEN SHOWING A CALL THAT HAS NOT "
-      + "CONNECTED — the lettering on it blurred soft and past reading, only the shape of the "
+    p: "Tight insert on a phone held in one hand, ⚠️ THE SCREEN SHOWING A CALL RINGING OUT UNANSWERED — the lettering on it blurred soft and past reading, only the shape of the "
       + "screen legible. The room behind the hand is dim.",
     u: ["ဒါပေမယ့် ဇာတ်လမ်းက အဲဒီမှာ မပြီးဘူး။",
       "အစ်မ မင်္ဂလာဆောင်ပြီး သုံးရက်အကြာမှာ— သူ့ယောကျ်ား ပျောက်သွားတယ်။",
@@ -693,7 +684,7 @@ export const SCENES = [
   { t: "A Lipstick on the Back Seat", c: [[1, "bigstinger"]], l: "ရေကန်ဟောင်း", k: "insert", w: [],
     g: "⚠️ နောက်ခုံပေါ်မှာ နှုတ်ခမ်းနီတစ်ချောင်း။",
     p: "Tight insert through an open car door onto the back seat: ⚠️ ONE OPENED RED LIPSTICK LYING "
-      + "ALONE IN THE MIDDLE OF THE GREY UPHOLSTERY, the bullet wound up and the cap off beside it. "
+      + "ALONE IN THE MIDDLE OF THE GREY UPHOLSTERY, the coloured stick twisted up out of the tube and the cap lying off beside it. "
       + "⚠️ THE SEAT AROUND IT IS CLEAN AND FLAT AND EMPTY. Grey daylight from the door.",
     u: ["ဒါပေမယ့် နောက်ခုံပေါ်မှာ—", "အနီရောင် နှုတ်ခမ်းနီတစ်ချောင်း ရှိနေတယ်။"] },
 
@@ -723,7 +714,7 @@ export const SCENES = [
   { t: "He Came to Warn Her", l: "ကျွန်တော်တို့အိမ်", k: "nar", w: ["ညီလေး"],
     g: "⚠️ ခြောက်ဖို့ လာတာ မဟုတ်ဘူး — သတိပေးဖို့။",
     p: "Close on the narrator, ⚠️ HIS FACE CHANGING AS HE ARRIVES AT IT — the eyebrows going up in "
-      + "the middle, the mouth opening slightly, the eyes fixed on nothing in particular. Warm "
+      + "the middle, the mouth opening slightly, the eyes unfocused. Warm "
       + "bulb light, the room soft and dark behind him.",
     u: ["အဲဒီအချိန်မှာ မနှင်းဆီပြောခဲ့တဲ့စကားကို ကျွန်တော် နားလည်သွားတယ်။",
       "“ငါ့လို မယုံနဲ့”",
@@ -741,7 +732,7 @@ export const SCENES = [
   { t: "The Abandoned Hut", l: "တဲအဟောင်း", k: "wide", w: [],
     g: "ရေကန်ဘေးက တဲအဟောင်း။",
     p: "Wide on a small abandoned bamboo-and-timber hut standing in waist-high grass at the edge "
-      + "of the pond, ⚠️ THE DOORWAY A BLACK RECTANGLE WITH NO DOOR IN IT and half the thatch "
+      + "of the pond, ⚠️ THE DOORWAY AN EMPTY BLACK RECTANGLE IN A BARE FRAME and half the thatch "
       + "fallen through. Flat grey daylight, the water just visible beyond one corner.",
     u: ["ရေကန်ဘေးမှာ စွန့်ပစ်ထားတဲ့ တဲအဟောင်းတစ်လုံးရှိတယ်။"] },
 
@@ -770,8 +761,7 @@ export const SCENES = [
   { t: "And a Length of Old Rope", c: [[1, "bigstinger"]], l: "တဲအဟောင်း", k: "insert", w: [],
     g: "⚠️ ကြိုးတစ်ချောင်း — အောက်ပိုင်းကို မှောင်ထဲမှာ ထားပါ။",
     p: "Tight insert deeper into the cavity, ⚠️ A LENGTH OF OLD GREY ROPE LYING COILED AND STILL "
-      + "ON THE EARTH at the near edge of the light, its fibres split and furred with age. ⚠️ "
-      + "BEYOND IT THE CAVITY GOES STRAIGHT INTO BLACK AND THE LIGHT REACHES NO FURTHER. The frame "
+      + "ON THE EARTH at the near edge of the light, its fibres split and furred with age. ⚠️ BEYOND IT THE CAVITY GOES STRAIGHT INTO BLACK AND THE LIGHT STOPS THERE. The frame "
       + "is board, earth and rope.",
     u: ["ပြီးတော့—", "အရိုးစုတစ်ခု။", "လည်ပင်းအရိုးမှာ ကြိုးတစ်ချောင်း ငြိနေတယ်။"] },
 
@@ -787,8 +777,7 @@ export const SCENES = [
   { t: "One Line in His Own Hand", c: [[1, "stinger"]], l: "တဲအဟောင်း", k: "insert", w: [],
     g: "⚠️ မိတ်ကပ်သေတ္တာထဲက စာရွက်အဟောင်း။",
     p: "Tight insert straight down on a small square of old folded paper opened out on the lid of "
-      + "the makeup case, ⚠️ ONE SHORT HANDWRITTEN LINE ACROSS THE MIDDLE OF IT IN BLUE INK. ⚠️ THE "
-      + "HANDWRITING IS SOFT AND PARTLY RUBBED AWAY AND DOES NOT RESOLVE INTO READABLE WORDS. Grey "
+      + "the makeup case, ⚠️ ONE SHORT HANDWRITTEN LINE ACROSS THE MIDDLE OF IT IN BLUE INK. ⚠️ THE HANDWRITING IS SOFT AND PARTLY RUBBED AWAY, READING AS MARKS RATHER THAN WORDS. Grey "
       + "daylight from above, the paper foxed brown at the folds.",
     u: ["ဒါပေမယ့်— ဘယ်သူသတ်ခဲ့တာလဲ။",
       "အဖြေကို အရိုးစုနားက မိတ်ကပ်သေတ္တာထဲမှာ တွေ့တယ်။",
@@ -851,8 +840,7 @@ export const SCENES = [
 
   { t: "Not the Son", l: "ရေကန်ဟောင်း", k: "insert", w: [],
     g: "⚠️ ရဲစာရင်းထဲက ပစ္စည်း — ကျောက်တစ်လုံး။",
-    p: "Tight insert straight down on a small clear evidence bag lying on a metal table, ⚠️ ONE "
-      + "FLAT OVAL BLACK STONE INSIDE IT AND NOTHING ELSE, the plastic creased around it. ⚠️ THE "
+    p: "Tight insert straight down on a small clear evidence bag lying on a metal table, ⚠️ ONE FLAT OVAL BLACK STONE INSIDE IT AND THE BAG OTHERWISE EMPTY, the plastic creased around it. ⚠️ THE "
       + "LABEL ON THE BAG IS SOFT AND PAST READING. Flat even light from above.",
     u: ["ကျွန်တော် ရေကန်ဘေးမှာ တွေ့ခဲ့တဲ့ ဇော်ရဲရဲ့အရိုးစုကို ပြန်သတိရတယ်။",
       "သူ့လက်ထဲမှာ တစ်ခုခု ဆုပ်ထားခဲ့တာ။",
@@ -872,8 +860,7 @@ export const SCENES = [
   { t: "Why Did He Come Back After Seven Years", l: "ကျွန်တော်တို့အိမ်", k: "mirror", w: [],
     g: "⚠️ မေးခွန်းတစ်ခု ကျန်နေသေးတယ်။",
     p: "⚠️ THE BIG MIRROR SQUARE ON AND FILLING THE FRAME at night, the glass holding the "
-      + "reflection of the empty lit main room behind the camera. ⚠️ THE SURFACE IS CLEAN AND WHOLE "
-      + "AND NOTHING STANDS IN IT. One warm bulb burning out of shot lays a single highlight down "
+      + "reflection of the empty lit main room behind the camera. ⚠️ THE SURFACE IS CLEAN AND WHOLE AND THE GLASS RETURNS THE EMPTY ROOM. One warm bulb burning out of shot lays a single highlight down "
       + "the glass.",
     u: ["အဲဒီနောက်— ဇော်ရဲ ပြန်မလာတော့ဘူး။",
       "ဒါပေမယ့် မေးစရာတစ်ခု ကျန်သေးတယ်။",
@@ -995,8 +982,7 @@ export const SCENES = [
   { t: "Count the People Behind You", l: "ကျွန်တော်တို့အိမ်", k: "mirror", w: [],
     g: "⚠️ မှန်ထဲက လူအရေအတွက်ကို ရေတွက်ပါ။",
     p: "⚠️ A MIRROR SQUARE ON AND FILLING THE FRAME at night. ⚠️ IN FRONT OF THE GLASS ONE PERSON "
-      + "STANDS, seen from behind, close to it. ⚠️ THE GLASS RETURNS THAT ONE PERSON AND THE EMPTY "
-      + "LIT ROOM BEHIND THEM AND NOBODY ELSE — the count matches. One warm bulb out of shot.",
+      + "STANDS, seen from behind, close to it. ⚠️ THE GLASS RETURNS THAT ONE PERSON AND THE EMPTY LIT ROOM BEHIND THEM — the count matches. One warm bulb out of shot.",
     u: ["ဘာလို့လဲဆိုတော့— လိမ်ပြောလိုက်တဲ့ညမှာ…",
       "မှန်ထဲမှာ ကိုယ့်နောက်က လူတွေကို ရေတွက်ကြည့်ပါ။"] },
 

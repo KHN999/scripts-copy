@@ -385,7 +385,7 @@ export const SCENES = [
     g: "⚠️ မနက်ရောက်တော့ မခင်သီတာက မင်္ဂလာစားပွဲဘေးမှာ လဲကျနေတယ်။ အသက်မရှိတော့ဘူး။",
     p: "⚠️ A MEMORY, GREY MORNING AFTER RAIN, AND SHOWN FROM A DISTANCE. Wide on the field: the "
       + "wedding table standing in wet green paddy and ⚠️ ONE SMALL RED SHAPE LYING STILL ON THE "
-      + "GROUND BESIDE IT, too far off to resolve into a person. Three villagers are hurrying out across the field towards it. ⚠️ AT THIS DISTANCE IT READS AS COLOUR AND SHAPE AND NOTHING FINER.",
+      + "GROUND BESIDE IT, too far off to resolve into a person. Three villagers are hurrying out across the field towards it. ⚠️ AT THIS DISTANCE IT READS ONLY AS COLOUR AND SHAPE.",
     u: ["မနက်ရောက်တော့ ရွာသားတွေ သူ့ကို ခေါ်ဖို့လာကြတယ်။",
         "မခင်သီတာက မင်္ဂလာစားပွဲဘေးမှာ လဲကျနေတယ်။",
         "အသက်မရှိတော့ဘူး။"] },
@@ -587,7 +587,7 @@ export const SCENES = [
   { t: "One Knock", c: [[2, "bigstinger"]], l: "ညီလင်းအိမ်", k: "insert",
     g: "⚠️ တံခါးကို — တောက်။ တစ်ချက်ခေါက်တယ်။ ညီလင်း တုန်သွားတယ်။",
     p: "Insert on the inside of the plank door in the black room, ⚠️ THE OLD TIMBER AND ITS "
-      + "IRON LATCH FILLING THE FRAME, completely still and completely closed. ⚠️ THE TIMBER IS STILL AND THE STRIP OF FLOOR BENEATH IT IS EVEN AND CLEAR. Almost no light.",
+      + "IRON LATCH FILLING THE FRAME, completely still and completely closed. ⚠️ THE TIMBER IS STILL AND THE STRIP OF FLOOR BENEATH IT IS EVEN AND CLEAR. Lit only by the thin line from the shutter.",
     u: ["အပြင်ကနေ တိန်… အိုးခွက်တီးသံတစ်ချက်။ မခင်သီတာအသံက “ညီလင်း…”",
         "ဒီတစ်ခါ တံခါးရှေ့တည့်တည့်မှာ။ “သူ ဘယ်မှာလဲ”",
         "ညီလင်းက မျက်ရည်ကျလာတယ်။ တံခါးကို တောက် — တစ်ချက်ခေါက်တယ်။"] },
@@ -612,8 +612,7 @@ export const SCENES = [
 
   { t: "Where Is He", c: [[3, "bigstinger"]], l: "ညီလင်းအိမ်", k: "insert",
     g: "⚠️ တံခါးတစ်ချက် ထပ်ခေါက်တယ်။ ဒီတစ်ခါ တင်းတယ်။ ဒုန်း။ “သူ ဘယ်မှာလဲ!”",
-    p: "The same insert on the inside of the plank door, ⚠️ AND NOW THERE IS FINE DUST IN THE AIR ALL ACROSS IT, the iron latch lifted clear of its keeper and hanging, the bar bowed hard against its brackets. ⚠️ THE DOOR IS SHUT AND SQUARE IN ITS FRAME. Almost no "
-      + "light.",
+    p: "The same insert on the inside of the plank door, ⚠️ AND NOW THERE IS FINE DUST IN THE AIR ALL ACROSS IT, the iron latch lifted clear of its keeper and hanging, the bar bowed hard against its brackets. ⚠️ THE DOOR IS SHUT AND SQUARE IN ITS FRAME. Lit only by the thin line from the shutter.",
     u: ["အဲဒီအချိန် တံခါးတစ်ချက် ထပ်ခေါက်တယ်။ ဒီတစ်ခါ တင်းတယ်။ ဒုန်း။",
         "အိမ်တစ်လုံးလုံး လှုပ်သွားတယ်။ “သူ ဘယ်မှာလဲ!”",
         "မိန်းမအသံက အခု မငိုတော့ဘူး။ ဒေါသထွက်နေပြီ။"] },
