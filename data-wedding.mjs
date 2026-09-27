@@ -1025,6 +1025,20 @@ const CONT_DEAD = {
     + "turned down towards their knees.",
 };
 
+/**
+ * Before her reveal, and in every shot taken from the road, she is too far off
+ * to read as anything but a woman in red. Saying she is chalk-white in the tail
+ * gives the whole film away in shot one and leaves shot 16 — the field is bare
+ * by daylight — with nothing to reveal.
+ */
+const CONT_FAR = {
+  "မခင်သီတာ": " At this distance Ma Khin Thida reads as an ordinary woman in a deep red longyi "
+    + "and a white blouse, white flowers in her dark hair, sitting very straight and very still.",
+  "ကိုထက်မင်း": " At this distance Ko Htet Min reads as a man in a dark working shirt.",
+  "ဧည့်သည်တွေ": " The wedding guests keep their heads bowed and their hair forward, their faces "
+    + "turned down towards their knees.",
+};
+
 /** The same two in the warm memories, where they are alive. */
 const CONT_ALIVE = {
   "မခင်သီတာ": " In this memory Ma Khin Thida is alive: warm skin, ordinary colour in her face, "
@@ -1035,6 +1049,20 @@ const CONT_ALIVE = {
 
 /** The one shot where the guests look up carries its own description instead. */
 const FACES_UP = "They All Raised Their Heads";
+
+/**
+ * Every shot in which either of them is still living. Wider than the warm-light
+ * memories: the three nights of waiting are rain and grey morning, and she is
+ * alive through all of them — shot 27 describes a living face flushed with
+ * fever, which the pale block flatly contradicted.
+ */
+const ALIVE = new Set(["They Were Going to Marry", "She Believed He Would Come",
+  "She Would Not Come Home", "The Second Night It Rained",
+  "By the Third Morning She Had a Fever", "She Watched the Road All Night",
+  "I Can't Do This Wedding", "It Was Not That He Stopped Loving Her", "I'll Hide Two Days"]);
+
+/** She is close enough to read as dead from here on. */
+const REVEAL = "Her Face Up Close";
 
 const STYLE =
   "Rural Myanmar, present day. Photorealism, 16:9, 35mm grain, level camera, natural depth of "
@@ -1077,7 +1105,7 @@ const AT = {
     "It Was Not That He Stopped Loving Her", "I'll Hide Two Days"]),
 };
 
-SCENES.forEach((s) => {
+SCENES.forEach((s, i) => {
   s.cam = CAM[s.k];
   if (!s.cam) throw new Error(`shot "${s.t}" has no camera for k="${s.k}"`);
   s.time = AT.rain.has(s.t) ? TIME.rain
@@ -1085,8 +1113,10 @@ SCENES.forEach((s) => {
     : AT.dark.has(s.t) ? TIME.dark
     : AT.night.has(s.t) ? TIME.night
     : TIME.day;
-  const alive = AT.warm.has(s.t);
-  const table = alive ? CONT_ALIVE : CONT_DEAD;
+  /* Pale only once she has been seen close, and never from the road — the
+     fixed field view is too far out for skin to read at all. */
+  const far = s.k === "field" || i < SCENES.findIndex((x) => x.t === REVEAL);
+  const table = ALIVE.has(s.t) ? CONT_ALIVE : far ? CONT_FAR : CONT_DEAD;
   s.cont = CONT + (s.w ?? [])
     .map((who) => (who === "ဧည့်သည်တွေ" && s.t === FACES_UP ? "" : table[who] ?? ""))
     .join("");
