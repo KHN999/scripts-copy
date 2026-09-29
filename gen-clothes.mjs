@@ -4,8 +4,8 @@
  *   node gen-clothes.mjs   (but prefer `node build.mjs` — nav is baked in)
  */
 import { writeFile } from "node:fs/promises";
-import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { SCENES, CAST, LOCS } from "./data-clothes.mjs";
+import { labRows } from "./units.mjs";
 import { MM_REF, NOTE_MM } from "./mm-clothes.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
@@ -35,10 +35,15 @@ const ACT = {
   84: "XIX · The last of it",
 };
 
-const db = new Database("/Users/puraidointern/video-lab/data/lab.db");
-const rows = db.prepare(
-  "SELECT idx, units FROM scenes WHERE project_id=? ORDER BY idx").all(PROJECT);
-db.close();
+/**
+ * Scenes come from the data file, which is the source of truth.
+ *
+ * This used to read the lab's SQLite file to cross-check that the board and
+ * the lab agreed. The lab is now built FROM this board through the import
+ * endpoint, so that check compared a thing against itself — and the database
+ * is no longer on this machine to read.
+ */
+const rows = labRows("clothes", SCENES);
 if (rows.length !== SCENES.length)
   throw new Error(`board has ${rows.length} shots, data file has ${SCENES.length}`);
 

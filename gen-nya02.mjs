@@ -1,7 +1,7 @@
 /**
  * Builds index.html for သုံးခါခေါ်သံ (Three Times, Your Name).
  *
- * Reads the scene rows straight out of video-lab's lab.db rather than an
+ * Reads the scene rows from lab-snapshot/nya02.json rather than an
  * intermediate JSON file. The Extra Bowl sheet was generated from a scenes2.json
  * that lived in a scratchpad and no longer exists, so that page can never be
  * regenerated — only hand-edited. Pointing at the database instead means this
@@ -10,8 +10,8 @@
  *   node gen-nya02.mjs
  */
 import { writeFile } from "node:fs/promises";
-import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { MM_SHOT, MM_REF } from "./mm-nya02.mjs";
+import { labRows } from "./units.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
 import { NAV } from "./nav.mjs";
@@ -118,10 +118,16 @@ const ACT = { 1: "The banyan", 4: "The death", 8: "The taking", 15: "The pyre",
   18: "The first call", 22: "The second call", 25: "The third night", 30: "What came back" };
 
 // ── pull the scenes ─────────────────────────────────────────────────────────
-const db = new Database("/Users/puraidointern/video-lab/data/lab.db", { readonly: true });
-const rows = db.prepare(
-  "SELECT idx, units, image_prompt FROM scenes WHERE project_id=? ORDER BY idx").all(PROJECT);
-db.close();
+/**
+ * Scenes come from a snapshot taken out of the lab, not from the lab.
+ *
+ * This board authored its prompts in the database rather than in a data file,
+ * so there is nothing here to rebuild them from. The film is finished and the
+ * prompts will not change again, so they were extracted once into
+ * lab-snapshot/ and committed. That removes the last reason this repository
+ * needs a database on this particular laptop.
+ */
+const rows = labRows("nya02");
 if (rows.length !== 30) throw new Error(`expected 30 scenes, got ${rows.length}`);
 
 let act = "";

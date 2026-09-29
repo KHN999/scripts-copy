@@ -6,8 +6,8 @@
  * Shot prompts are read from the board, so the sheet and the film cannot disagree.
  */
 import { writeFile } from "node:fs/promises";
-import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { SCENES, CAST, LOCS } from "./data-flower.mjs";
+import { labRows } from "./units.mjs";
 import { MM_REF } from "./mm-flower.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
@@ -27,10 +27,16 @@ const ACT = {
   120: "IX · Afterwards",
 };
 
-const db = new Database("/Users/puraidointern/video-lab/data/lab.db");
-const rows = db.prepare(
-  "SELECT idx, units, image_prompt FROM scenes WHERE project_id=? ORDER BY idx").all(PROJECT);
-db.close();
+/**
+ * Scenes come from a snapshot taken out of the lab, not from the lab.
+ *
+ * This board authored its prompts in the database rather than in a data file,
+ * so there is nothing here to rebuild them from. The film is finished and the
+ * prompts will not change again, so they were extracted once into
+ * lab-snapshot/ and committed. That removes the last reason this repository
+ * needs a database on this particular laptop.
+ */
+const rows = labRows("flower", SCENES);
 if (rows.length !== SCENES.length)
   throw new Error(`board has ${rows.length} shots, data file has ${SCENES.length}`);
 

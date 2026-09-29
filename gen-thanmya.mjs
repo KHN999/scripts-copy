@@ -4,8 +4,8 @@
  *   node gen-thanmya.mjs
  */
 import { writeFile } from "node:fs/promises";
-import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { MM_SHOT, MM_REF } from "./mm-thanmya.mjs";
+import { labRows } from "./units.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
 import { NAV } from "./nav.mjs";
@@ -135,10 +135,16 @@ const WHERE = {
   66: "အိမ်ကြီး", 67: "မီးဖိုခန်း", 68: "မီးဖိုခန်း", 69: "ရွာ",
 };
 
-const db = new Database("/Users/puraidointern/video-lab/data/lab.db", { readonly: true });
-const rows = db.prepare(
-  "SELECT idx, units, image_prompt FROM scenes WHERE project_id=? ORDER BY idx").all(PROJECT);
-db.close();
+/**
+ * Scenes come from a snapshot taken out of the lab, not from the lab.
+ *
+ * This board authored its prompts in the database rather than in a data file,
+ * so there is nothing here to rebuild them from. The film is finished and the
+ * prompts will not change again, so they were extracted once into
+ * lab-snapshot/ and committed. That removes the last reason this repository
+ * needs a database on this particular laptop.
+ */
+const rows = labRows("thanmya");
 if (rows.length !== TITLES.length) throw new Error(`${rows.length} scenes vs ${TITLES.length} titles`);
 
 let act = "";

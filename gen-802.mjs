@@ -1,14 +1,14 @@
 /**
  * Builds index.html for အခန်း ၈၀၂ (Room 802) — the active production.
  *
- * Reads scene rows straight from video-lab's lab.db, so the sheet and the film
+ * Reads scene rows from lab-snapshot/802.json, so the sheet and the film
  * cannot drift apart.
  *
  *   node gen-802.mjs
  */
 import { writeFile } from "node:fs/promises";
-import Database from "/Users/puraidointern/video-lab/node_modules/better-sqlite3/lib/index.js";
 import { MM_SHOT, MM_REF } from "./mm-802.mjs";
+import { labRows } from "./units.mjs";
 import { buildPage } from "./page.mjs";
 import { plate, PLATE_MM } from "./plate.mjs";
 import { NAV } from "./nav.mjs";
@@ -108,10 +108,16 @@ const TITLES = ["The order", "Last run of the night", "The pickup", "Downstairs"
 const ACT = { 1: "The order", 7: "Floor eight", 13: "The photographs", 24: "The wrong rider",
   33: "Morning", 37: "It starts again" };
 
-const db = new Database("/Users/puraidointern/video-lab/data/lab.db", { readonly: true });
-const rows = db.prepare(
-  "SELECT idx, units, image_prompt FROM scenes WHERE project_id=? ORDER BY idx").all(PROJECT);
-db.close();
+/**
+ * Scenes come from a snapshot taken out of the lab, not from the lab.
+ *
+ * This board authored its prompts in the database rather than in a data file,
+ * so there is nothing here to rebuild them from. The film is finished and the
+ * prompts will not change again, so they were extracted once into
+ * lab-snapshot/ and committed. That removes the last reason this repository
+ * needs a database on this particular laptop.
+ */
+const rows = labRows("802");
 if (rows.length !== 38) throw new Error(`expected 38 scenes, got ${rows.length}`);
 
 let act = "";
