@@ -815,7 +815,7 @@ export const SCENES = [
     u: ["ကျွန်တော် စားပွဲဘက် နောက်ဆုတ်တယ်။ ဖုန်းက အဲဒီမှာ ရှိတယ်။",
       "ကိုနေမင်းက ကျွန်တော် ဘာလုပ်တော့မလဲဆိုတာ ရိပ်မိသွားတယ်။"] },
 
-  { t: "Squeeze His Throat", c: [[1, "bigstinger"]], l: "ခန်းမ", k: "insert", w: ["ကိုနေမင်း", "စာအုပ်နက်"],
+  { t: "Don't Let Go Until I Say", c: [[1, "bigstinger"]], l: "ခန်းမ", k: "insert", w: ["ကိုနေမင်း", "စာအုပ်နက်"],
     g: "⚠️ “ငါ မလွှတ်ခိုင်းမချင်း မလွှတ်နဲ့။”",
     p: "⚠️ TIGHT INSERT ON THE OPEN PAGE WITH THE PINK RIBBON, a man's index finger and thumb "
       + "closing on the ribbon itself and beginning to draw it up off the paper, ⚠️ THE BLACK "
@@ -833,13 +833,10 @@ export const SCENES = [
       "ကိုနေမင်းက ဖဲကြိုးကို ဆွဲတင်းလိုက်တယ်။"] },
 
   /* ── XI · HER HANDS ───────────────────────────────────────────────────── */
-  { t: "Her Hands on My Throat", c: [[1, "bigstinger"]], l: "စာရင်းစားပွဲ", k: "wide",
+  { t: "She Was More Frightened Than I Was", c: [[1, "bigstinger"]], l: "စာရင်းစားပွဲ", k: "hnin",
     w: ["စောထက်", "နှင်းအိ"],
     g: "⚠️ အရမ်းအေးတယ် — ဒါပေမယ့် သူက ပိုကြောက်နေတယ်။",
-    p: "⚠️ TWO-SHOT AT THE DESK, BOTH IN PROFILE. Hnin Ei has both hands closed round Saw Htet's "
-      + "throat and he has both of his round her wrists, ⚠️ HIS HEAD TIPPED BACK AND HIS MOUTH "
-      + "OPEN. ⚠️ HER FACE IS THE MORE FRIGHTENED OF THE TWO — eyes wide, brows up in the middle, "
-      + "tears still running. Flat fluorescent light on both of them.",
+    p: "⚠️ HIS POINT OF VIEW, LOOKING UP AT HNIN EI FROM JUST BELOW HER. She fills the upper frame, leaning in over the lens with ⚠️ BOTH ARMS STRAIGHT DOWN TOWARDS THE CAMERA AND HER HANDS PASSING OUT OF FRAME AT THE VERY BOTTOM EDGE. ⚠️ HER FACE IS PURE DISTRESS — eyes wide, brows driven up in the middle, tears running freely, her mouth open on the same word over and over. Flat fluorescent light straight down on her, the ceiling tiles above.",
     u: ["သူမက ကျွန်တော့်ဆီ ရုတ်တရက် ရောက်လာတယ်။",
       "လက်နှစ်ဖက်က ကျွန်တော့်လည်ပင်းကို ဖမ်းလိုက်တယ်။ အရမ်းအေးတယ်။",
       "ကျွန်တော် အသက်ရှူမရတော့ဘူး။"] },
@@ -883,20 +880,16 @@ export const SCENES = [
     g: "⚠️ “ချုပ်ထားတဲ့ချည်ကို… ဖြတ်ပေး…”",
     p: "⚠️ EXTREME CLOSE ON TWO FACES ALMOST TOUCHING — a young woman's mouth at a young man's "
       + "ear, her lips barely parted, his eye at the edge of frame open and turned towards her. "
-      + "⚠️ HER HAND IS STILL AT HIS THROAT IN THE BOTTOM OF FRAME. Everything else is dark and "
-      + "soft. Flat fluorescent light from above.",
+      + "⚠️ THE FRAME HOLDS THE TWO FACES AND NOTHING ELSE, everything beyond them dark and soft. Flat fluorescent light from above.",
     u: ["နှင်းအိရဲ့လက်တွေကို ဆွဲဖယ်တယ်။ မရဘူး။ ကျွန်တော့်မျက်လုံးတွေ ဝါးလာတယ်။",
       "အဲဒီအချိန်မှာ နှင်းအိက ကျွန်တော့်နားကို မျက်နှာကပ်လာတယ်။ “ဖဲကြိုး…”",
       "သူ့နှုတ်ခမ်းက အသာလှုပ်တယ်။ “ချုပ်ထားတဲ့ချည်ကို… ဖြတ်ပေး…”"] },
 
   /* ── XII · THE THREAD ─────────────────────────────────────────────────── */
   { t: "I Let My Hands Go Slack", l: "စာရင်းစားပွဲ", k: "wide",
-    w: ["စောထက်", "ကိုနေမင်း"],
+    w: ["စောထက်", "ကိုနေမင်း", "နှင်းအိ"],
     g: "⚠️ သူ ဖုန်းကောက်ဖို့ ငုံ့တဲ့အချိန် — အားလျော့သလို လုပ်လိုက်တယ်။",
-    p: "Wide at the desk: Ko Nay Min bent right over at the waist reaching down for the phone on "
-      + "the concrete with the book still in his other hand, ⚠️ AND SAW HTET'S KNEES BUCKLING SO "
-      + "HIS WHOLE WEIGHT IS COMING FORWARD AND DOWN TOWARDS HIM. ⚠️ ONE OF SAW HTET'S HANDS HAS "
-      + "COME OFF THE DESK EDGE. Flat fluorescent light.",
+    p: "Wide at the desk. ⚠️ KO NAY MIN IS BENT RIGHT OVER AT THE WAIST ON THE LEFT, one arm reaching down to the concrete for the phone and the black book still in his other hand, ⚠️ HIS FACE TURNED DOWN AND AWAY FROM EVERYONE. ⚠️ SEVERAL FEET TO HIS RIGHT SAW HTET IS SAGGING AT THE KNEES AGAINST THE DESK, one hand come off its edge and hanging loose. ⚠️ HNIN EI STANDS CLOSE BESIDE HIM WITH HER FACE TURNED AWAY towards the dark doorway. Flat fluorescent light.",
     u: ["ကိုနေမင်းက ကျွန်တော်တို့နားကို လျှောက်လာတယ်။ စာအုပ်က လက်ထဲမှာပဲ။",
       "သူက ကြမ်းပြင်ပေါ်က ကျွန်တော့်ဖုန်းကို ကောက်မလို့ ငုံ့တယ်။",
       "ကျွန်တော် အသက်ရှူမရတော့လို့ လက်တွေ အားလျော့လာသလို လုပ်လိုက်တယ်။"] },
@@ -933,7 +926,7 @@ export const SCENES = [
       "ကိုနေမင်းက စာအုပ်ကို အားနဲ့ ဆောင့်ဆွဲတယ်။",
       "စာရွက်ပြဲသံနဲ့အတူ ချည်နက် ပြတ်ထွက်သွားတယ်။ ပန်းရောင်ဖဲကြိုးလေး ကျွန်တော့်လက်ထဲ ပါလာတယ်။"] },
 
-  { t: "The Hands Left My Throat", l: "စာရင်းစားပွဲ", k: "hnin", w: ["နှင်းအိ"],
+  { t: "She Looked at Her Own Hands", l: "စာရင်းစားပွဲ", k: "hnin", w: ["နှင်းအိ"],
     g: "⚠️ ကိုယ့်လက်နှစ်ဖက်ကိုယ် အံ့ဩသလို ကြည့်နေတယ်။",
     p: "Close on Hnin Ei with ⚠️ BOTH HER OWN HANDS HELD UP IN FRONT OF HER FACE AND HER EYES ON "
       + "THEM, the fingers half curled and part way open. ⚠️ HER MOUTH IS SLIGHTLY OPEN AND HER "
@@ -1051,9 +1044,7 @@ export const SCENES = [
   { t: "This Time the Hand Was Warm", l: "စာရင်းစားပွဲ", k: "insert",
     w: ["စောထက်", "ကိုနေမင်း"],
     g: "⚠️ အေးစက်တဲ့လက် မဟုတ်တော့ဘူး — သူ့လက်။",
-    p: "⚠️ TIGHT INSERT ON A MAN'S HAND CLOSED ROUND A YOUNGER MAN'S THROAT FROM THE SIDE, ⚠️ THE "
-      + "WHITE SHIRT CUFF BRIGHT AT THE WRIST AND THE KNUCKLES STANDING UP. ⚠️ THE YOUNGER MAN'S "
-      + "OWN HAND IS IN THE BOTTOM OF FRAME PRESSING LOOSE PAPER DOWN INTO A BIN and stays exactly where it is. Warm light from below, fluorescent from above.",
+    p: "⚠️ TIGHT INSERT, TWO HANDS AND A METAL BIN. Saw Htet's own hand fills the bottom of frame pressing loose burning paper down into it, ⚠️ AND IT STAYS EXACTLY WHERE IT IS. ⚠️ ACROSS THE TOP OF FRAME ANOTHER HAND HAS TAKEN A FISTFUL OF HIS SHIRT AT THE SHOULDER — the white cuff bright at the wrist, the knuckles standing up hard. Warm light from below, fluorescent from above.",
     u: ["ပြုတ်ထွက်လာတဲ့ စာမျက်နှာတွေကို အမှိုက်ပုံးထဲ ထိုးချလိုက်တယ်။",
       "ကိုနေမင်းက ကျွန်တော့်လည်ပင်းကို လက်တစ်ဖက်နဲ့ ဖမ်းဆွဲတယ်။ ဒီတစ်ခါ အေးစက်တဲ့လက် မဟုတ်ဘူး။",
       "ကျွန်တော် သူ့လက်ကို မဖယ်သေးဘဲ လက်ထဲမှာ ကျန်နေတဲ့ အဖုံးနဲ့ စာရွက်တွေကိုပါ မီးထဲ ဖိချလိုက်တယ်။"] },
