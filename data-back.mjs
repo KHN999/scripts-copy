@@ -938,18 +938,14 @@ export const SCENES = [
         "မသဲ — မသေခဲ့ဘူး။",
         "အဲဒီည သူ ထွက်ပြေးနိုင်ခဲ့တယ်။"] },
 
-  { t: "A Child on the Forest Road", l: "တောစပ်", k: "memory", w: ["မသဲ"],
+  { t: "The Footprints Came Out of the Trees", l: "တောစပ်", k: "memory", w: ["မသဲ"],
     g: "⚠️ မီးလောင်တဲ့ညနောက်တစ်နေ့ မနက်မှာ တောလမ်းဘေးမှာ ကလေးမလေးတစ်ယောက် တွေ့ခဲ့တယ်တဲ့။ တစ်ကိုယ်လုံး ရွှံ့တွေ။ ဘာမှ မပြောဘူး။",
-    p: "⚠️ A MEMORY, TWENTY YEARS EARLIER, IN GREY EARLY MORNING LIGHT. A ten-year-old girl "
-      + "standing alone at the side of a forest track, ⚠️ COVERED HEAD TO FOOT IN DRIED MUD, her "
-      + "dress stiff with it, her hair matted, ⚠️ HER FINGERTIPS DARK AND HER NAILS PACKED WITH "
-      + "EARTH. She is looking straight ahead at nothing and saying nothing. ⚠️ SHE IS ALIVE, "
-      + "WHOLE AND UNHURT — filthy and silent and completely unharmed.",
+    p: "⚠️ A MEMORY, TWENTY YEARS EARLIER, IN GREY EARLY MORNING LIGHT. ⚠️ A LONG LENS LOOKING STRAIGHT DOWN A NARROW FOREST TRACK, the trees standing close on both sides and mist still lying between them. ⚠️ FAR DOWN THE TRACK, SMALL IN THE FRAME AND WITH HER BACK TO THE CAMERA, A CHILD STANDS UPRIGHT AND PERFECTLY STILL, facing away into the trees — too distant to make out, a plain dark shape against the pale mist. ⚠️ IN THE FOREGROUND THE WET EARTH OF THE TRACK CARRIES ONE SET OF SMALL BARE FOOTPRINTS COMING OUT OF THE TREELINE, sharp at the edges and heading away up the road. Flat grey morning light, the sun not up.",
     u: ["ရွာသားတွေ စပြီး ရှာကြတယ်။ နောက်ဆုံး အဘွားကြီးတစ်ယောက်က ပြောတယ်။",
         "မီးလောင်တဲ့ညနောက်တစ်နေ့ မနက်မှာ တောလမ်းဘေးမှာ ကလေးမလေးတစ်ယောက် တွေ့ခဲ့တယ်တဲ့။",
         "တစ်ကိုယ်လုံး ရွှံ့တွေ။ လက်သည်းတွေ သွေးထွက်နေတယ်။ ဘာမှ မပြောဘူး။"] },
 
-  { t: "She Died of Fever Years Later", l: "တောစပ်", k: "htet", w: ["ထက်အောင်"],
+  { t: "The Last Piece Went In", l: "တောစပ်", k: "htet", w: ["ထက်အောင်"],
     g: "သူ့ကို အခြားရွာက မိသားစုတစ်စု ခေါ်သွားတယ်။ နှစ်အနည်းငယ်ကြာတော့ အဲဒီကလေးမလေးလည်း သေသွားတယ်။ အဖျားနဲ့။",
     p: "Close on Htet Aung in overcast daylight, ⚠️ HIS FACE HOLLOWING OUT as he puts the last "
       + "piece in — a girl who survived, was taken away, and did not get to grow up either. He is "
@@ -986,13 +982,9 @@ export const SCENES = [
     u: ["တစ်လလောက်ကြာတော့ ကျွန်တော် သင်္ချိုင်းနားကနေ ဖြတ်လာတယ်။",
         "မိုးအုံ့နေတယ်။ လမ်းမှာ လူမရှိဘူး။"] },
 
-  { t: "A Girl Came Out of the Graveyard", c: [[1, "stinger"]], l: "သင်္ချိုင်း", k: "the", w: ["မသဲ"],
+  { t: "Standing Among the Mounds", c: [[1, "stinger"]], l: "သင်္ချိုင်း", k: "the", w: ["မသဲ"],
     g: "⚠️ သင်္ချိုင်းထဲကနေ ကလေးမလေးတစ်ယောက် ထွက်လာတယ်။ ဒီတစ်ခါ သူ ဘယ်သူ့ကိုမှ ကိုယ်အဖြစ် မသုံးထားဘူး။ သူ့ပုံစံနဲ့သူ။",
-    p: "⚠️ SHE LOOKS LIKE A LIVING CHILD. Ma Thé standing among the grave mounds in flat grey "
-      + "daylight, ten years old, in a faded old-fashioned cotton dress, barefoot, her long hair "
-      + "loose and a little tangled. ⚠️ NORMAL WARM SKIN, CLEAR EYES, FEET FLAT ON THE GROUND, "
-      + "AN ORDINARY SHADOW — no pallor, nothing transparent, nothing glowing. ⚠️ THE ONLY THING "
-      + "WRONG IS HER HANDS: dark soil packed under every nail and ground into the fingertips.",
+    p: "⚠️ SHE LOOKS LIKE AN ORDINARY LIVING CHILD. Ma Thé standing among the grave mounds in flat grey daylight, ten years old, in a faded old-fashioned cotton dress, barefoot, her long hair loose and a little tangled. ⚠️ WARM SKIN WITH BLOOD IN IT, CLEAR BRIGHT EYES, HER BARE FEET FLAT ON THE GROUND WITH HER WEIGHT SETTLED ON THEM, AND AN ORDINARY SHADOW LYING BESIDE HER — she is solid and opaque and lit by exactly the same grey light as the ground she stands on. ⚠️ HER HANDS CARRY DARK SOIL, packed in under every nail and worked deep into the fingertips.",
     u: ["အဲဒီအချိန် သင်္ချိုင်းထဲကနေ ကလေးမလေးတစ်ယောက် ထွက်လာတယ်။ အသက်ဆယ်နှစ်လောက်။",
         "အဝတ်ဟောင်း။ ခြေဗလာ။ လက်သည်းတွေမှာ မြေမှုန့်တွေ။",
         "ဒီတစ်ခါ သူ ဘယ်သူ့ကိုမှ ကိုယ်အဖြစ် မသုံးထားဘူး။ သူ့ပုံစံနဲ့သူ။"] },
