@@ -566,8 +566,7 @@ export const SCENES = [
     p: "OCCURRENCE 5 OF 6 OF THE MOUTH. The identical framing, unchanged — an open slack mouth, "
       + "dropped jaw, grey unshaped lips, earth on the chin. ⚠️ EXACTLY THE SAME PICTURE AS EVERY "
       + "OTHER TIME. Lamplight leaking from a shutter onto one side of it.",
-    u: ["တစ်အိမ်ပြီးတစ်အိမ် — “ပြန်ပေး” လို့ ပြောတယ်။",
-        "မိန်းမအသံနဲ့။"] },
+    u: ["တစ်အိမ်ပြီးတစ်အိမ် — “ပြန်ပေး” လို့ ပြောတယ်။ မိန်းမအသံနဲ့။"] },
 
   { t: "Lying in the Bean Field", c: [[2, "stinger"]], l: "ပဲခင်း", k: "field",
     w: ["ကိုကျော်သိန်း", "ဒေါ်ရီရီ"],
