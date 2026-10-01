@@ -118,7 +118,7 @@ export const PROPS = [
 
   { name: "မိသားစုဓာတ်ပုံ", en: "The family photograph with the space in it",
     prompt:
-      "⚠️ A COLOUR SNAPSHOT FROM ABOUT TWENTY YEARS AGO, four by six inches with a thin white border, photographed square on and filling the frame. ⚠️ THE PRINT IS WHOLE, CLEAN AND UNDAMAGED — flat, in focus, faintly glossy, the colours warm and a little faded with age. ⚠️ IN IT A BURMESE MOTHER OF ABOUT THIRTY-FIVE AND A FATHER OF ABOUT FORTY STAND TOGETHER ON PACKED EARTH IN FRONT OF AN OLD WOODEN HOUSE, with ⚠️ ONE SMALL BOY OF ABOUT FIVE IN A WHITE SHIRT BESIDE THE FATHER. All three are looking at the camera, standing slightly stiffly the way people do for a photograph. ⚠️ THIS PLATE FIXES WHO THESE THREE PEOPLE ARE, WHAT THE HOUSE AND THE GROUND LOOK LIKE, AND HOW THE PRINT HAS AGED. How they are arranged changes from shot to shot and every shot says how." },
+      "⚠️ A COLOUR SNAPSHOT FROM ABOUT TWENTY YEARS AGO, four by six inches with a thin white border, photographed square on and filling the frame. ⚠️ THE PRINT IS WHOLE, CLEAN AND UNDAMAGED — flat, in focus, faintly glossy, the colours warm and a little faded with age. ⚠️ THE PICTURE INSIDE IT WAS TAKEN FROM LOW DOWN, AT ABOUT A CHILD'S EYE LEVEL, so the adults are seen slightly from below and their arms read clearly against the house. Four positions on packed earth in front of an old wooden house, left to right: ⚠️ (1) A SMALL BOY OF ABOUT FIVE IN A WHITE SHIRT; ⚠️ (2) THE FATHER, ABOUT FORTY, IN THE MIDDLE; ⚠️ (3) A CLEAR EMPTY SPACE THE WIDTH OF A CHILD; ⚠️ (4) THE MOTHER, ABOUT THIRTY-FIVE, AT THE RIGHT END. ⚠️ THE FATHER'S TWO ARMS GO DOWN AND OUTWARD IN A SHALLOW V, NOT HANGING AT HIS SIDES — his left hand settled flat on the small boy's back, and ⚠️ HIS RIGHT HAND RESTING IN THE EMPTY SPACE AT THE HEIGHT OF AN EIGHT-YEAR-OLD'S SHOULDER BLADES. ⚠️ THE MOTHER'S LEFT ARM COMES DOWN AND ACROSS LOW, HER HAND NOT RAISED, and settles into that same empty space at the height of a short child's shoulder. ⚠️ THE SMALL BOY IS LOOKING UP AND ACROSS INTO THE EMPTY SPACE, HIS HEAD TIPPED BACK, HIS MOUTH OPEN AND LAUGHING. Both adults are looking at the camera and smiling normally." },
 
   { name: "သံဘူး", en: "The small tin",
     prompt:
@@ -823,47 +823,31 @@ export const SCENES = [
   { t: "Father. Mother. Me as a Child.", tm: "night", l: "အမေ့အခန်း", k: "insert", photo: true,
     w: ["မိသားစုဓာတ်ပုံ"],
     g: "မိသားစုဓာတ်ပုံ — အဖေ၊ အမေ၊ ကလေးဘဝက ကျွန်တော်။",
-    p: "Tight insert on one colour snapshot held flat in two hands under a bulb, ⚠️ THE PRINT "
-      + "WHOLE AND CLEAN AND FILLING THE FRAME. In it a Burmese mother and father stand in front "
-      + "of a wooden house with a small boy of about five beside the father, all three looking at "
-      + "the camera. Ordinary, warm, twenty years old.",
+    p: "⚠️ THE MASTER SHOT OF THIS PHOTOGRAPH — every later insert is a crop of this one. Tight on a colour snapshot held flat in two hands under a bare bulb, ⚠️ THE PRINT WHOLE, CLEAN AND FILLING THE FRAME, four by six with a thin white border, the colours warm and a little faded. ⚠️ THE PICTURE INSIDE IT WAS TAKEN FROM LOW DOWN, AT ABOUT A CHILD'S EYE LEVEL, so the adults are seen slightly from below and their arms read clearly against the house. Four positions on packed earth in front of an old wooden house, left to right: ⚠️ (1) A SMALL BOY OF ABOUT FIVE IN A WHITE SHIRT; ⚠️ (2) THE FATHER, ABOUT FORTY, IN THE MIDDLE; ⚠️ (3) A CLEAR EMPTY SPACE THE WIDTH OF A CHILD; ⚠️ (4) THE MOTHER, ABOUT THIRTY-FIVE, AT THE RIGHT END. ⚠️ THE FATHER'S TWO ARMS GO DOWN AND OUTWARD IN A SHALLOW V, NOT HANGING AT HIS SIDES — his left hand settled flat on the small boy's back, and ⚠️ HIS RIGHT HAND RESTING IN THE EMPTY SPACE AT THE HEIGHT OF AN EIGHT-YEAR-OLD'S SHOULDER BLADES. ⚠️ THE MOTHER'S LEFT ARM COMES DOWN AND ACROSS LOW, HER HAND NOT RAISED, and settles into that same empty space at the height of a short child's shoulder. ⚠️ THE SMALL BOY IS LOOKING UP AND ACROSS INTO THE EMPTY SPACE, HIS HEAD TIPPED BACK, HIS MOUTH OPEN AND LAUGHING. Both adults are looking at the camera and smiling normally. Warm bulb light raking evenly across the paper.",
     u: ["မိသားစုဓာတ်ပုံ။", "အဖေ။", "အမေ။", "ကလေးဘဝက ကျွန်တော်။"] },
 
   { t: "In Some of Them There Is a Space", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း",
     k: "insert", photo: true, empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "⚠️ ဓာတ်ပုံတချို့မှာ နေရာလွတ်တစ်ခု ရှိနေတယ်။",
-    p: "Tight insert on a second snapshot held flat under the bulb, ⚠️ THE PRINT WHOLE, FLAT AND "
-      + "IN FOCUS. The same family stands in a line in front of the house — ⚠️ BUT THEY ARE SPACED "
-      + "APART WITH A CLEAR GAP OF AIR ABOUT THE WIDTH OF A CHILD LEFT IN THE MIDDLE OF THE ROW, "
-      + "everyone leaning very slightly towards it. Warm bulb light across the print.",
+    p: "⚠️ THE SAME PRINT AS SHOT 65, held flat under the bulb and framed on the whole row of figures. Boy, father, ⚠️ A CLEAR EMPTY SPACE THE WIDTH OF A CHILD, then the mother — the gap sitting plainly between the father and the mother with the ground and the wooden wall of the house showing right through it. The father's arms go down and out in a shallow V and the mother's near arm comes down low into the space. Warm bulb light across the print.",
     u: ["ဒါပေမယ့်—", "ဓာတ်ပုံတချို့မှာ နေရာလွတ်တစ်ခု ရှိနေတယ်။"] },
 
   { t: "Her Arm Was Resting on Air", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း",
     k: "insert", photo: true, empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "⚠️ အမေက တစ်ယောက်ယောက်ရဲ့ ပခုံးကို ဖက်ထားသလို — လက်က လေထဲမှာ ရပ်နေတယ်။",
-    p: "Tight insert on the same print, closer, holding the mother alone. ⚠️ HER RIGHT ARM IS "
-      + "RAISED AND CURVED OUTWARD FROM HER BODY AND HELD THERE, THE HAND SHAPED AS THOUGH CLOSED "
-      + "OVER A SHOULDER, and under it is the plain wooden wall of the house behind. ⚠️ SHE "
-      + "IS SMILING AT THE CAMERA QUITE NORMALLY. Warm bulb light, the print sharp.",
+    p: "⚠️ THE SAME PRINT AS SHOT 65, CROPPED CLOSE ON THE MOTHER AT THE RIGHT END OF THE ROW. ⚠️ HER LEFT ARM COMES DOWN AND ACROSS LOW AND STOPS — the hand open and slightly cupped at the height of a short child's shoulder, the fingers settled as though on something, ⚠️ AND BENEATH AND BEHIND THE HAND THERE IS ONLY PACKED EARTH AND THE WOODEN WALL OF THE HOUSE. ⚠️ SHE IS LOOKING AT THE CAMERA AND SMILING QUITE NORMALLY. Warm bulb light, the print sharp.",
     u: ["အမေက တစ်ယောက်ယောက်ရဲ့ပခုံးကို ဖက်ထားသလို—", "လက်က လေထဲမှာ ရပ်နေတယ်။"] },
 
   { t: "He Stood as if Between Two", tm: "night", l: "အမေ့အခန်း", k: "insert", photo: true,
     empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "အဖေက ကလေးနှစ်ယောက်ကြား ရပ်ထားသလို — နေရာခြားထားတယ်။",
-    p: "Tight insert on the same print, holding the father. ⚠️ HE STANDS WITH HIS TWO ARMS LOW AND "
-      + "SLIGHTLY OUT FROM HIS SIDES AS THOUGH A CHILD WERE UNDER EACH HAND — the small boy is "
-      + "under one of them and ⚠️ UNDER THE OTHER THERE IS ONLY PACKED EARTH AND THE WOODEN WALL. "
-      + "Warm bulb light. The print is flat, clean and undamaged.",
+    p: "⚠️ THE SAME PRINT AS SHOT 65, CROPPED CLOSE ON THE FATHER IN THE MIDDLE OF THE ROW. ⚠️ HIS TWO ARMS GO DOWN AND OUTWARD IN A SHALLOW V, A HAND AT THE END OF EACH, at the height of a short child's back. ⚠️ HIS LEFT HAND IS FLAT ON THE SMALL BOY'S BACK; ⚠️ HIS RIGHT HAND IS SETTLED AT THE SAME HEIGHT IN OPEN AIR, and beneath and behind it there is only packed earth and the wooden wall of the house. He is looking at the camera and smiling normally. Warm bulb light, the print flat and clean.",
     u: ["အဖေက ကလေးနှစ်ယောက်ကြား ရပ်ထားသလို—", "နေရာခြားထားတယ်။"] },
 
-  { t: "I Was Five and Looking Sideways", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း",
+  { t: "I Was Five and Looking Up", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း",
     k: "insert", photo: true, empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "⚠️ အထူးဆန်းဆုံး — ငါးနှစ်သားကျွန်တော်က ကင်မရာကို မကြည့်ဘဲ ဘေးက နေရာလွတ်ကို ကြည့်ပြီး အရမ်းပျော်နေတယ်။",
-    p: "Tight insert on a third print, holding the small boy of five alone. ⚠️ HE IS NOT LOOKING "
-      + "AT THE CAMERA AT ALL — his head is turned up and sideways towards the empty space beside "
-      + "him and ⚠️ HIS FACE IS SPLIT WIDE WITH A COMPLETELY DELIGHTED GRIN, both arms lifted a "
-      + "little. Beside him is the plain wooden wall of the house. Warm bulb light, the "
-      + "print flat and clean.",
+    p: "⚠️ THE SAME PRINT AS SHOT 65, CROPPED CLOSE ON THE SMALL BOY AT THE LEFT END OF THE ROW. ⚠️ HE IS NOT LOOKING AT THE CAMERA AT ALL — ⚠️ HIS HEAD IS TIPPED BACK AND TURNED UP AND ACROSS, his eyes raised to a point well above his own head, ⚠️ HIS MOUTH WIDE OPEN AND LAUGHING, his shoulders up with it. His father's hand is flat on his back at the edge of frame. Warm bulb light, the print flat and clean.",
     u: ["ထူးဆန်းဆုံးက—", "ကျွန်တော် ငါးနှစ်လောက်တုန်းက ဓာတ်ပုံ။", "ကျွန်တော်က ကင်မရာကို မကြည့်ဘူး။",
       "ဘေးက နေရာလွတ်တစ်ခုကို ကြည့်ပြီး—", "အရမ်းပျော်နေတယ်။"] },
 
