@@ -182,6 +182,23 @@ const CAM = {
   wide: 'WIDE. Camera at chest height far enough back to hold the whole place.',
 };
 
+/** Act headings, keyed by the shot number the act opens on. */
+export const ACT = {
+  1: "I · The first one back",
+  9: "II · Htet Aung",
+  14: "III · At his own house",
+  29: "IV · The grave",
+  32: "V · The second one",
+  38: "VI · House after house",
+  43: "VII · Twenty years ago",
+  53: "VIII · Whose voice",
+  57: "IX · The third night",
+  63: "X · The cellar",
+  72: "XI · The burial",
+  75: "XII · The bracelet",
+  82: "XIII · Ma Thé",
+};
+
 export const SCENES = [
   // ── I · THE FIRST ONE BACK ────────────────────────────────────────────────
   { t: "The First One Back", l: "ရွာအဝင်လမ်း", k: "road",

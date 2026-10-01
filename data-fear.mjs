@@ -199,6 +199,28 @@ const STYLE =
 
 /* ────────────────────────────────────────────────────────────────────────── */
 
+/** Act headings, keyed by the shot number the act opens on. */
+export const ACT = {
+  1: "I · Under my desk",
+  6: "II · What I do",
+  11: "III · The body arrives",
+  21: "IV · The doorway",
+  26: "V · Come and help",
+  34: "VI · Hnin Ei",
+  41: "VII · She is called",
+  49: "VIII · You can see",
+  56: "IX · The pages",
+  64: "X · The inheritance",
+  70: "XI · Her hands",
+  76: "XII · The thread",
+  83: "XIII · Burn it",
+  92: "XIV · They got their hands back",
+  101: "XV · Tell my mother",
+  104: "XVI · Afterwards",
+  107: "XVII · The plate of rice",
+  111: "XVIII · What I remember",
+};
+
 export const SCENES = [
   /* ── I · UNDER MY DESK ────────────────────────────────────────────────── */
   { t: "A Girl Under My Desk", c: [[1, "bigstinger"]], l: "စာရင်းစားပွဲ", k: "under", w: ["နှင်းအိ"],
@@ -836,7 +858,7 @@ export const SCENES = [
   { t: "She Was More Frightened Than I Was", c: [[1, "bigstinger"]], l: "စာရင်းစားပွဲ", k: "hnin",
     w: ["စောထက်", "နှင်းအိ"],
     g: "⚠️ အရမ်းအေးတယ် — ဒါပေမယ့် သူက ပိုကြောက်နေတယ်။",
-    p: "⚠️ HIS POINT OF VIEW, LOOKING UP AT HNIN EI FROM JUST BELOW HER. She fills the upper frame, leaning in over the lens with ⚠️ BOTH ARMS STRAIGHT DOWN TOWARDS THE CAMERA AND HER HANDS PASSING OUT OF FRAME AT THE VERY BOTTOM EDGE. ⚠️ HER FACE IS PURE DISTRESS — eyes wide, brows driven up in the middle, tears running freely, her mouth open on the same word over and over. Flat fluorescent light straight down on her, the ceiling tiles above.",
+    p: "⚠️ HER FACE AND NOTHING ELSE — a tight head-and-shoulders crop filling the frame. ⚠️ SHE IS LOOKING SLIGHTLY BELOW THE LENS AT SOMETHING VERY CLOSE IN FRONT OF HER, and her face is pure distress: eyes wide and brimming, brows driven up hard in the middle, tears running freely, her mouth open on the same word over and over. ⚠️ HER SHOULDERS ARE PULLED UP AND FORWARD AND HER WHOLE BODY IS RIGID. Flat fluorescent light straight down from above, the room behind her dark and out of focus.",
     u: ["သူမက ကျွန်တော့်ဆီ ရုတ်တရက် ရောက်လာတယ်။",
       "လက်နှစ်ဖက်က ကျွန်တော့်လည်ပင်းကို ဖမ်းလိုက်တယ်။ အရမ်းအေးတယ်။",
       "ကျွန်တော် အသက်ရှူမရတော့ဘူး။"] },
@@ -878,18 +900,16 @@ export const SCENES = [
   { t: "Cut the Thread That Binds It", c: [[1, "stinger"]], l: "စာရင်းစားပွဲ", k: "insert",
     w: ["စောထက်", "နှင်းအိ"],
     g: "⚠️ “ချုပ်ထားတဲ့ချည်ကို… ဖြတ်ပေး…”",
-    p: "⚠️ EXTREME CLOSE ON TWO FACES ALMOST TOUCHING — a young woman's mouth at a young man's "
-      + "ear, her lips barely parted, his eye at the edge of frame open and turned towards her. "
-      + "⚠️ THE FRAME HOLDS THE TWO FACES AND NOTHING ELSE, everything beyond them dark and soft. Flat fluorescent light from above.",
+    p: "⚠️ CLOSE ON SAW HTET'S FACE IN PROFILE, his eye open and unfocused and the lashes wet, his jaw set hard. ⚠️ THE NEAR THIRD OF THE FRAME IS FILLED BY THE BACK OF HNIN EI'S HEAD, COMPLETELY OUT OF FOCUS — dark hair tied back with ⚠️ THE SMALL PINK RIBBON IN IT CATCHING THE LIGHT — as she leans in to speak close to him. ⚠️ HER FACE IS NOT IN THE FRAME. Flat fluorescent light from above, everything beyond the two of them dark.",
     u: ["နှင်းအိရဲ့လက်တွေကို ဆွဲဖယ်တယ်။ မရဘူး။ ကျွန်တော့်မျက်လုံးတွေ ဝါးလာတယ်။",
       "အဲဒီအချိန်မှာ နှင်းအိက ကျွန်တော့်နားကို မျက်နှာကပ်လာတယ်။ “ဖဲကြိုး…”",
       "သူ့နှုတ်ခမ်းက အသာလှုပ်တယ်။ “ချုပ်ထားတဲ့ချည်ကို… ဖြတ်ပေး…”"] },
 
   /* ── XII · THE THREAD ─────────────────────────────────────────────────── */
-  { t: "I Let My Hands Go Slack", l: "စာရင်းစားပွဲ", k: "wide",
-    w: ["စောထက်", "ကိုနေမင်း", "နှင်းအိ"],
+  { t: "My Fingers Came Off the Desk Edge", l: "စာရင်းစားပွဲ", k: "insert",
+    w: ["စောထက်", "ကိုနေမင်း"],
     g: "⚠️ သူ ဖုန်းကောက်ဖို့ ငုံ့တဲ့အချိန် — အားလျော့သလို လုပ်လိုက်တယ်။",
-    p: "Wide at the desk. ⚠️ KO NAY MIN IS BENT RIGHT OVER AT THE WAIST ON THE LEFT, one arm reaching down to the concrete for the phone and the black book still in his other hand, ⚠️ HIS FACE TURNED DOWN AND AWAY FROM EVERYONE. ⚠️ SEVERAL FEET TO HIS RIGHT SAW HTET IS SAGGING AT THE KNEES AGAINST THE DESK, one hand come off its edge and hanging loose. ⚠️ HNIN EI STANDS CLOSE BESIDE HIM WITH HER FACE TURNED AWAY towards the dark doorway. Flat fluorescent light.",
+    p: "⚠️ LOW AND CLOSE ALONG THE EDGE OF THE WOODEN DESK. ⚠️ A YOUNG MAN'S HAND FILLS THE FOREGROUND WHERE IT RESTS ON THE DESK EDGE, THE FINGERS UNCURLING AND THE WRIST GOING LOOSE, the white going out of the knuckles. ⚠️ BEYOND IT AND WELL OUT OF FOCUS, KO NAY MIN IS BENT RIGHT DOWN AT THE WAIST CLOSE BY, one arm reaching to the concrete floor for a phone and the black book still in his other hand. Flat fluorescent light from directly above, the rest of the room dark.",
     u: ["ကိုနေမင်းက ကျွန်တော်တို့နားကို လျှောက်လာတယ်။ စာအုပ်က လက်ထဲမှာပဲ။",
       "သူက ကြမ်းပြင်ပေါ်က ကျွန်တော့်ဖုန်းကို ကောက်မလို့ ငုံ့တယ်။",
       "ကျွန်တော် အသက်ရှူမရတော့လို့ လက်တွေ အားလျော့လာသလို လုပ်လိုက်တယ်။"] },

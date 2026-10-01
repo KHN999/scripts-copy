@@ -4,7 +4,7 @@
  *   node gen-back.mjs   (but prefer `node build.mjs` — nav is baked in)
  */
 import { writeFile } from "node:fs/promises";
-import { SCENES, CAST, PROPS, LOCS } from "./data-back.mjs";
+import { SCENES, CAST, PROPS, LOCS , ACT } from "./data-back.mjs";
 import { labRows } from "./units.mjs";
 import { MM_REF, NOTE_MM } from "./mm-back.mjs";
 import { buildPage } from "./page.mjs";
@@ -13,21 +13,6 @@ import { NAV } from "./nav.mjs";
 
 const PROJECT = "styeg8uyrn0";
 
-const ACT = {
-  1: "I · The first one back",
-  9: "II · Htet Aung",
-  14: "III · At his own house",
-  29: "IV · The grave",
-  32: "V · The second one",
-  38: "VI · House after house",
-  43: "VII · Twenty years ago",
-  53: "VIII · Whose voice",
-  57: "IX · The third night",
-  63: "X · The cellar",
-  72: "XI · The burial",
-  75: "XII · The bracelet",
-  82: "XIII · Ma Thé",
-};
 
 /**
  * Scenes come from the data file, which is the source of truth.

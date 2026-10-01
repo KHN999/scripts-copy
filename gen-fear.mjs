@@ -4,7 +4,7 @@
  *   node gen-fear.mjs   (but prefer `node build.mjs` — nav is baked in)
  */
 import { writeFile } from "node:fs/promises";
-import { SCENES, CAST, PROPS, LOCS } from "./data-fear.mjs";
+import { SCENES, CAST, PROPS, LOCS , ACT } from "./data-fear.mjs";
 import { labRows } from "./units.mjs";
 import { MM_REF, NOTE_MM } from "./mm-fear.mjs";
 import { buildPage } from "./page.mjs";
@@ -13,26 +13,6 @@ import { NAV } from "./nav.mjs";
 
 const PROJECT = "fear";
 
-const ACT = {
-  1: "I · Under my desk",
-  6: "II · What I do",
-  11: "III · The body arrives",
-  21: "IV · The doorway",
-  26: "V · Come and help",
-  34: "VI · Hnin Ei",
-  41: "VII · She is called",
-  49: "VIII · You can see",
-  56: "IX · The pages",
-  64: "X · The inheritance",
-  70: "XI · Her hands",
-  76: "XII · The thread",
-  83: "XIII · Burn it",
-  92: "XIV · They got their hands back",
-  101: "XV · Tell my mother",
-  104: "XVI · Afterwards",
-  107: "XVII · The plate of rice",
-  111: "XVIII · What I remember",
-};
 
 /**
  * Scenes come from the data file, which is the source of truth.
