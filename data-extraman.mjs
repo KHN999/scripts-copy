@@ -118,15 +118,7 @@ export const PROPS = [
 
   { name: "မိသားစုဓာတ်ပုံ", en: "The family photograph with the space in it",
     prompt:
-      "⚠️ A COLOUR SNAPSHOT FROM ABOUT TWENTY YEARS AGO, four by six inches, photographed square "
-      + "on and filling the frame. ⚠️ THE PRINT IS WHOLE, CLEAN AND UNDAMAGED — flat, in focus, "
-      + "the colours slightly warm with age. In it a Burmese mother and father stand in front of a "
-      + "wooden house with ⚠️ ONE SMALL BOY OF ABOUT FIVE AT THE FATHER'S LEFT. ⚠️ THE GROUP IS "
-      + "ARRANGED AROUND AN EMPTY SPACE ABOUT THE WIDTH OF A CHILD: the mother's right arm is "
-      + "curved outward and slightly raised as though resting along a shoulder that the frame does "
-      + "not contain, and the father stands with a clear gap of air beside him. Everyone is "
-      + "smiling at the camera except the small boy, ⚠️ WHO IS BEAMING UP AND SIDEWAYS INTO THAT "
-      + "EMPTY SPACE." },
+      "⚠️ A COLOUR SNAPSHOT FROM ABOUT TWENTY YEARS AGO, four by six inches with a thin white border, photographed square on and filling the frame. ⚠️ THE PRINT IS WHOLE, CLEAN AND UNDAMAGED — flat, in focus, faintly glossy, the colours warm and a little faded with age. ⚠️ IN IT A BURMESE MOTHER OF ABOUT THIRTY-FIVE AND A FATHER OF ABOUT FORTY STAND TOGETHER ON PACKED EARTH IN FRONT OF AN OLD WOODEN HOUSE, with ⚠️ ONE SMALL BOY OF ABOUT FIVE IN A WHITE SHIRT BESIDE THE FATHER. All three are looking at the camera, standing slightly stiffly the way people do for a photograph. ⚠️ THIS PLATE FIXES WHO THESE THREE PEOPLE ARE, WHAT THE HOUSE AND THE GROUND LOOK LIKE, AND HOW THE PRINT HAS AGED. How they are arranged changes from shot to shot and every shot says how." },
 
   { name: "သံဘူး", en: "The small tin",
     prompt:
@@ -829,7 +821,7 @@ export const SCENES = [
     u: ["သေတ္တာဟောင်းတစ်လုံးထဲမှာ—", "ဓာတ်ပုံစာအုပ်တွေ တွေ့တယ်။"] },
 
   { t: "Father. Mother. Me as a Child.", tm: "night", l: "အမေ့အခန်း", k: "insert", photo: true,
-    w: [],
+    w: ["မိသားစုဓာတ်ပုံ"],
     g: "မိသားစုဓာတ်ပုံ — အဖေ၊ အမေ၊ ကလေးဘဝက ကျွန်တော်။",
     p: "Tight insert on one colour snapshot held flat in two hands under a bulb, ⚠️ THE PRINT "
       + "WHOLE AND CLEAN AND FILLING THE FRAME. In it a Burmese mother and father stand in front "
@@ -838,7 +830,7 @@ export const SCENES = [
     u: ["မိသားစုဓာတ်ပုံ။", "အဖေ။", "အမေ။", "ကလေးဘဝက ကျွန်တော်။"] },
 
   { t: "In Some of Them There Is a Space", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း",
-    k: "insert", photo: true, empty: true, w: [],
+    k: "insert", photo: true, empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "⚠️ ဓာတ်ပုံတချို့မှာ နေရာလွတ်တစ်ခု ရှိနေတယ်။",
     p: "Tight insert on a second snapshot held flat under the bulb, ⚠️ THE PRINT WHOLE, FLAT AND "
       + "IN FOCUS. The same family stands in a line in front of the house — ⚠️ BUT THEY ARE SPACED "
@@ -847,7 +839,7 @@ export const SCENES = [
     u: ["ဒါပေမယ့်—", "ဓာတ်ပုံတချို့မှာ နေရာလွတ်တစ်ခု ရှိနေတယ်။"] },
 
   { t: "Her Arm Was Resting on Air", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း",
-    k: "insert", photo: true, empty: true, w: [],
+    k: "insert", photo: true, empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "⚠️ အမေက တစ်ယောက်ယောက်ရဲ့ ပခုံးကို ဖက်ထားသလို — လက်က လေထဲမှာ ရပ်နေတယ်။",
     p: "Tight insert on the same print, closer, holding the mother alone. ⚠️ HER RIGHT ARM IS "
       + "RAISED AND CURVED OUTWARD FROM HER BODY AND HELD THERE, THE HAND SHAPED AS THOUGH CLOSED "
@@ -856,7 +848,7 @@ export const SCENES = [
     u: ["အမေက တစ်ယောက်ယောက်ရဲ့ပခုံးကို ဖက်ထားသလို—", "လက်က လေထဲမှာ ရပ်နေတယ်။"] },
 
   { t: "He Stood as if Between Two", tm: "night", l: "အမေ့အခန်း", k: "insert", photo: true,
-    empty: true, w: [],
+    empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "အဖေက ကလေးနှစ်ယောက်ကြား ရပ်ထားသလို — နေရာခြားထားတယ်။",
     p: "Tight insert on the same print, holding the father. ⚠️ HE STANDS WITH HIS TWO ARMS LOW AND "
       + "SLIGHTLY OUT FROM HIS SIDES AS THOUGH A CHILD WERE UNDER EACH HAND — the small boy is "
@@ -865,7 +857,7 @@ export const SCENES = [
     u: ["အဖေက ကလေးနှစ်ယောက်ကြား ရပ်ထားသလို—", "နေရာခြားထားတယ်။"] },
 
   { t: "I Was Five and Looking Sideways", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း",
-    k: "insert", photo: true, empty: true, w: [],
+    k: "insert", photo: true, empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "⚠️ အထူးဆန်းဆုံး — ငါးနှစ်သားကျွန်တော်က ကင်မရာကို မကြည့်ဘဲ ဘေးက နေရာလွတ်ကို ကြည့်ပြီး အရမ်းပျော်နေတယ်။",
     p: "Tight insert on a third print, holding the small boy of five alone. ⚠️ HE IS NOT LOOKING "
       + "AT THE CAMERA AT ALL — his head is turned up and sideways towards the empty space beside "
@@ -876,7 +868,7 @@ export const SCENES = [
       "ဘေးက နေရာလွတ်တစ်ခုကို ကြည့်ပြီး—", "အရမ်းပျော်နေတယ်။"] },
 
   { t: "On the Back, My Mother's Hand", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း",
-    k: "insert", w: [],
+    k: "insert", w: ["မိသားစုဓာတ်ပုံ"],
     g: "⚠️ ဓာတ်ပုံနောက်ကျောမှာ အမေ့လက်ရေး — “မင်းခန့် ၈ နှစ်။ ထက်ဝေ ၅ နှစ်။”",
     p: "Tight insert on the back of a photographic print turned over in two hands. ⚠️ THE PAPER IS "
       + "PLAIN WHITE AND SLIGHTLY YELLOWED AND CARRIES TWO SHORT LINES OF HANDWRITING IN SOFT "
