@@ -307,7 +307,7 @@ export const SCENES = [
     u: ["အမေသေပြီး သုံးရက်မြောက်နေ့မှာ—", "ကျွန်တော်တို့အိမ်မှာ လူတစ်ယောက် ပိုလာတယ်။",
       "ကျွန်တော် သူ့ကို မမြင်ရဘူး။"] },
 
-  { t: "One Plate Too Many", tm: "morning", l: "ထမင်းစားခန်း", k: "down", w: [],
+  { t: "One Plate Too Many", tm: "morning", l: "ထမင်းစားခန်း", k: "down", w: ["ပန်းကန်အပို"],
     g: "မနက်စာမှာ ပန်းကန် တစ်ချပ် ပိုရှိတယ်။",
     p: "Straight down onto the bare table top. ⚠️ FOUR PLAIN ENAMEL PLATES ARE SET OUT IN A "
       + "SQUARE, each with a spoon beside it, all four the same and all four holding rice. Flat "
@@ -419,7 +419,7 @@ export const SCENES = [
     u: ["ထူးဆန်းတာတစ်ခုတော့ ရှိတယ်။", "အမေ့ညာလက်က—", "တစ်ခုခုကို တင်းတင်းဆုပ်ထားတယ်။"] },
 
   { t: "A Short Length of Red Thread", c: [[1, "bigstinger"]], tm: "day", l: "ထမင်းစားခန်း", k: "insert",
-    w: ["အမေ"],
+    w: ["အမေ", "အနီရောင်ချည်"],
     g: "⚠️ လက်ချောင်းတွေ ဖြည်ကြည့်တော့ — အနီရောင်ချည်လေးတစ်ချောင်း။",
     p: "Tight insert on the same fist, now with a young man's fingers easing two of the curled "
       + "fingers back. ⚠️ IN THE HOLLOW OF THE PALM LIES ONE SHORT LENGTH OF FINE RED THREAD, "
@@ -443,7 +443,7 @@ export const SCENES = [
       + "question without appearing to. Flat daylight, deep lines from nose to mouth.",
     u: ["ကျွန်တော် မေးတယ်။", "“ဘာချည်လဲ”", "“ဘာမှမဟုတ်ဘူး”"] },
 
-  { t: "He Put It in the Fire", tm: "day", l: "ထမင်းစားခန်း", k: "insert", w: [],
+  { t: "He Put It in the Fire", tm: "day", l: "ထမင်းစားခန်း", k: "insert", w: ["အနီရောင်ချည်"],
     g: "အဖေ အဲဒါကို မီးထဲ ပစ်လိုက်တယ်။ အဲဒီတုန်းက သိပ်မစဉ်းစားခဲ့ဘူး။",
     p: "Tight insert into the open mouth of a small clay cooking stove with a low fire in it. ⚠️ A "
       + "MAN'S HAND IS DRAWING BACK FROM THE OPENING, EMPTY, and on the embers a fine red thread "
@@ -563,7 +563,7 @@ export const SCENES = [
 
   /* ── VI · FOUR PLATES ─────────────────────────────────────────────────── */
   { t: "Four Plates the Next Morning", tm: "morning", l: "ထမင်းစားခန်း",
-    k: "down", w: [],
+    k: "down", w: ["ပန်းကန်အပို"],
     g: "နောက်နေ့မနက် — ထမင်းစားပွဲမှာ ပန်းကန် လေးချပ်။",
     p: "Straight down onto the table top in morning light. ⚠️ FOUR ENAMEL PLATES SET OUT IN A "
       + "SQUARE, evenly spaced, each with rice on it and a spoon laid across the rim, ⚠️ AND FOUR "
@@ -581,7 +581,7 @@ export const SCENES = [
     u: ["အဖေ။", "ကျွန်တော်။", "သဲစု။", "ဒါဆို—", "နောက်တစ်ချပ်က?"] },
 
   { t: "I Carried It Back to the Kitchen", tm: "morning", l: "ထမင်းစားခန်း", k: "wide",
-    w: ["ထက်ဝေ"],
+    w: ["ထက်ဝေ", "ပန်းကန်အပို"],
     g: "ပိုနေတဲ့ပန်းကန်ကို ယူပြီး မီးဖိုချောင်ထဲ ပြန်ထားလိုက်တယ်။",
     p: "Wide on the room. Htet Wai has stood up and is walking away from the table towards the "
       + "back doorway with ⚠️ ONE ENAMEL PLATE HELD FLAT IN BOTH HANDS, his back three-quarters to "
@@ -621,7 +621,7 @@ export const SCENES = [
     u: ["အဖေက—", "“အလေ့အကျင့်ဖြစ်နေလို့”", "လို့ပဲ ပြောတယ်။"] },
 
   { t: "Half the Rice Was Gone", c: [[1, "bigstinger"]], tm: "morning", l: "ထမင်းစားခန်း",
-    k: "down", empty: true, w: [],
+    k: "down", empty: true, w: ["ပန်းကန်အပို"],
     g: "⚠️ ထမင်းစားပြီးတော့ — ပိုနေတဲ့ပန်းကန်ထဲက ထမင်းတွေ တစ်ဝက်လောက် လျော့နေတယ်။",
     p: "Straight down onto the fourth plate alone, filling the frame. ⚠️ THE MOUND OF RICE HAS "
       + "BEEN REDUCED TO ABOUT HALF, ITS REMAINING EDGE SCOOPED AND UNEVEN, a few loose grains on "
@@ -877,7 +877,7 @@ export const SCENES = [
     u: ["ဓာတ်ပုံနောက်ကျောမှာ—", "အမေ့လက်ရေး။", "“မင်းခန့် ၈ နှစ်။ ထက်ဝေ ၅ နှစ်။”"] },
 
   { t: "Min Khant. My Brother.", c: [[1, "bigstinger"]], tm: "night", l: "အမေ့အခန်း", k: "htet",
-    w: ["ထက်ဝေ"],
+    w: ["ထက်ဝေ", "မိသားစုဓာတ်ပုံ"],
     g: "ကျွန်တော့်လက်တွေ အေးသွားတယ်။ မင်းခန့် — ကျွန်တော့်အစ်ကို။",
     p: "Close on Htet Wai kneeling on the floor, ⚠️ THE PHOTOGRAPH HELD UP AT CHEST HEIGHT AND HIS "
       + "EYES ON IT, his mouth open and his whole face slack. ⚠️ BOTH HANDS ARE VISIBLY UNSTEADY "
@@ -896,7 +896,7 @@ export const SCENES = [
       + "floorboards between him and camera.",
     u: ["“ရှာတွေ့သွားပြီလား”", "အဖေ့အသံ။", "ကျွန်တော် လှည့်ကြည့်တယ်။", "အဖေ တံခါးမှာ ရပ်နေတယ်။"] },
 
-  { t: "Who Is Min Khant", tm: "night", l: "အမေ့အခန်း", k: "father", w: ["အဖေ"],
+  { t: "Who Is Min Khant", tm: "night", l: "အမေ့အခန်း", k: "father", w: ["အဖေ", "မိသားစုဓာတ်ပုံ"],
     g: "“မင်းခန့် ဘယ်သူလဲ” — “မင်းအစ်ကို”",
     p: "Close on the father having stepped into the lit room, ⚠️ HIS FACE NOW FULLY VISIBLE AND "
       + "COMPLETELY TIRED, his eyes on the photograph in his son's hands out of frame. The fight "
@@ -912,7 +912,7 @@ export const SCENES = [
       + "room dark.",
     u: ["“သူ ဘယ်မှာလဲ”", "အဖေက—", "“သေပြီ”", "လို့ ပြောတယ်။", "“ဘယ်တုန်းက?”", "“မင်း ငါးနှစ်သားတုန်းက”"] },
 
-  { t: "Why Do I Not Remember Him", tm: "night", l: "အမေ့အခန်း", k: "htet", w: ["ထက်ဝေ"],
+  { t: "Why Do I Not Remember Him", tm: "night", l: "အမေ့အခန်း", k: "htet", w: ["ထက်ဝေ", "မိသားစုဓာတ်ပုံ"],
     g: "“ဘာဖြစ်လို့ ကျွန်တော် မမှတ်မိတာလဲ” — “ဘာဖြစ်လို့ ဓာတ်ပုံထဲမှာ သူမရှိတာလဲ”",
     p: "Close on Htet Wai looking up from the floor, ⚠️ HIS FACE TILTED UP AND HIS MOUTH OPEN, the "
       + "photograph held out towards the edge of frame in one hand. ⚠️ HIS EYES ARE WIDE AND "
@@ -981,7 +981,7 @@ export const SCENES = [
     u: ["“ဒါပေမယ့်…”", "“မိသားစုထဲမှာ သူ့အတွက် နေရာတစ်နေရာ ချန်ထားလို့ရတယ်”", "အမေ သဘောတူခဲ့တယ်။"] },
 
   { t: "She Tied His Name With Red Thread", c: [[1, "bigstinger"]], l: "အိမ်တိုင်", k: "mem",
-    w: ["အမေငယ်"],
+    w: ["အမေငယ်", "အနီရောင်ချည်", "သံဘူး"],
     g: "⚠️ အဲဒီည — မင်းခန့်နာမည်ရေးထားတဲ့ စာရွက်ကို အနီရောင်ချည်နဲ့ချည်ပြီး အိမ်တိုင်အောက်မှာ မြှုပ်ခဲ့တယ်။",
     p: "A warm memory under the house. ⚠️ THE YOUNG MOTHER KNEELS ON THE PACKED EARTH BESIDE ONE "
       + "THICK TIMBER POST WITH BOTH HANDS IN A SHALLOW HOLE SHE HAS DUG, setting a small tin down "
@@ -1027,7 +1027,7 @@ export const SCENES = [
 
   /* ── XV · THE EXCHANGE ────────────────────────────────────────────────── */
   { t: "A Place Kept Is a Place Erased", tm: "night", l: "အမေ့အခန်း", k: "wide",
-    w: ["ထက်ဝေ", "အဖေ"],
+    w: ["ထက်ဝေ", "အဖေ", "မိသားစုဓာတ်ပုံ"],
     g: "သေသူတစ်ယောက်အတွက် နေရာချန်ချင်ရင် — အသက်ရှင်သူတစ်ယောက်ရဲ့ မှတ်ဉာဏ်ထဲက သူ့နေရာကို ဖျက်ရတယ်။",
     p: "Wide on the bedroom, both men still where they were, ⚠️ THE FATHER TALKING WITH HIS HANDS "
       + "LOOSE AND OPEN IN FRONT OF HIM AND HTET WAI MOTIONLESS ON THE FLOOR LOOKING UP AT HIM. "
@@ -1054,7 +1054,7 @@ export const SCENES = [
       "မင်းခန့်နဲ့ပတ်သက်သမျှ အကုန်ဖျက်လိုက်တယ်။"] },
 
   { t: "Even in the Photographs", tm: "night", l: "အမေ့အခန်း", k: "insert",
-    photo: true, empty: true, w: [],
+    photo: true, empty: true, w: ["မိသားစုဓာတ်ပုံ"],
     g: "⚠️ ဓာတ်ပုံထဲမှာတောင် — ကျွန်တော်မြင်ရင် သူ ပျောက်နေတယ်။",
     p: "Tight insert on the family snapshot lying face up on the floorboards under the bulb, ⚠️ "
       + "THE PRINT WHOLE AND CLEAN AND THE FAMILY ARRANGED AROUND THE SAME CLEAR GAP OF AIR. A "
@@ -1081,7 +1081,7 @@ export const SCENES = [
       "အဖေ ခေါင်းညိတ်တယ်။", "“ရှိတယ်”"] },
 
   { t: "The Extra Plate. The Extra Shoes.", tm: "night", l: "ထမင်းစားခန်း", k: "insert",
-    empty: true, w: [],
+    empty: true, w: ["ပန်းကန်အပို"],
     g: "ပန်းကန်အပို။ ဖိနပ်အပို။ ခေါင်းအုံးအပို။ အခုမှ နားလည်တယ်။",
     p: "Tight insert straight down on the fourth enamel plate alone on the bare table at night, "
       + "⚠️ CLEAN, EMPTY AND SET SQUARE WITH ITS SPOON ACROSS THE RIM. One bare bulb above throws "
@@ -1360,7 +1360,7 @@ export const SCENES = [
       "သူ အိမ်တိုင်တစ်တိုင်ကို လက်ညှိုးထိုးတယ်။", "အဖေပြောခဲ့တဲ့—", "အနီရောင်ချည် မြှုပ်ထားတဲ့နေရာ။"] },
 
   { t: "A Small Tin Under the Earth", tm: "dark", l: "အိမ်တိုင်", k: "post",
-    w: ["ထက်ဝေ"],
+    w: ["ထက်ဝေ", "သံဘူး"],
     g: "ကျွန်တော် မြေကိုတူးတယ်။ အောက်မှာ — သံဘူးလေးတစ်ဘူး။",
     p: "Low under the house beside one timber post. Htet Wai kneels on the packed earth with ⚠️ "
       + "BOTH HANDS IN A SHALLOW HOLE HE HAS SCRAPED OUT, lifting a small dark tin clear of the "
@@ -1369,7 +1369,7 @@ export const SCENES = [
     u: ["ကျွန်တော် မြေကိုတူးတယ်။", "အောက်မှာ—", "သံဘူးလေးတစ်ဘူး။"] },
 
   { t: "The Thread, a Photograph, a Paper", tm: "dark", l: "အိမ်တိုင်",
-    k: "insert", w: [],
+    k: "insert", w: ["အနီရောင်ချည်", "သံဘူး"],
     g: "⚠️ ဖွင့်လိုက်တော့ — အနီရောင်ချည်၊ ကလေးတစ်ယောက်ရဲ့ ဓာတ်ပုံ၊ ပြီးတော့ စာရွက်ဟောင်းလေး။",
     p: "Tight insert straight down into the open tin on the packed earth. ⚠️ INSIDE ARE THREE "
       + "THINGS: A COIL OF FINE RED THREAD KNOTTED ONCE, a small square photograph of a boy lying "
@@ -1388,7 +1388,7 @@ export const SCENES = [
 
   /* ── XXVI · DO NOT DO IT ──────────────────────────────────────────────── */
   { t: "Htet Wai, Don't", tm: "dark", l: "အိမ်တိုင်", k: "post",
-    w: ["ထက်ဝေ", "အဖေ"],
+    w: ["ထက်ဝေ", "အဖေ", "အနီရောင်ချည်"],
     g: "ကျွန်တော် ချည်ကို ကိုင်လိုက်တယ်။ အဖေ ပြေးဝင်လာတယ် — “ထက်ဝေ မလုပ်နဲ့!”",
     p: "Low under the house. ⚠️ HTET WAI KNEELS WITH THE RED THREAD PULLED TAUT BETWEEN HIS TWO "
       + "HANDS, and the father has come in under the joists behind him ⚠️ BENT RIGHT OVER WITH ONE "
@@ -1417,7 +1417,7 @@ export const SCENES = [
       "“ချုပ်ထားခဲ့တာလား”", "အဖေ စကားမထွက်တော့ဘူး။"] },
 
   { t: "I Broke the Thread", c: [[1, "bigstinger"]], tm: "dark", l: "အိမ်တိုင်", k: "insert",
-    w: [],
+    w: ["အနီရောင်ချည်"],
     g: "⚠️ ကျွန်တော် ချည်ကို ဆွဲဖြတ်လိုက်တယ်။",
     p: "Tight insert on two hands pulling a fine red thread apart. ⚠️ THE THREAD HAS PARTED AT THE "
       + "KNOT AND THE TWO ENDS ARE SPRINGING BACK AND UNWINDING, the fibres splayed and loose. "
@@ -1502,7 +1502,7 @@ export const SCENES = [
     u: ["မင်းခန့် ပြုံးတယ်။", "မျက်လုံးတွေ မှိတ်လိုက်တယ်။", "ပြီးတော့—", "ပျောက်သွားတယ်။"] },
 
   { t: "The Earth Beside the Post", tm: "dark", l: "အိမ်တိုင်", k: "post",
-    empty: true, w: [],
+    empty: true, w: ["အနီရောင်ချည်", "သံဘူး"],
     g: "သူ ရပ်နေခဲ့တဲ့နေရာမှာ — ဘာမှ မကျန်တော့ဘူး။",
     p: "Low under the house at the spot where the boy stood. ⚠️ THERE IS ONLY SWEPT PACKED EARTH, "
       + "THE TIMBER POST, THE OPEN TIN ON ITS SIDE AND THE TWO ENDS OF BROKEN RED THREAD LYING ON "
@@ -1519,7 +1519,7 @@ export const SCENES = [
       + "stool stands back against the wall. Flat white light through the open shutter.",
     u: ["နောက်နေ့မနက်—", "ကျွန်တော်တို့ သုံးယောက် ထမင်းစားတယ်။", "အဖေ။", "ကျွန်တော်။", "သဲစု။"] },
 
-  { t: "Three Plates", c: [[1, "bigstinger"]], tm: "morning", l: "ထမင်းစားခန်း", k: "down", w: [],
+  { t: "Three Plates", c: [[1, "bigstinger"]], tm: "morning", l: "ထမင်းစားခန်း", k: "down", w: ["ပန်းကန်အပို"],
     g: "⚠️ စားပွဲပေါ်မှာ ပန်းကန် သုံးချပ်ပဲ ရှိတယ်။",
     p: "Straight down onto the table top in morning light. ⚠️ THREE ENAMEL PLATES SET OUT IN A "
       + "TRIANGLE, each with rice and a spoon, ⚠️ AND ONE CLEAR EMPTY STRETCH OF BARE WOOD WHERE "
@@ -1570,7 +1570,7 @@ export const SCENES = [
       "ကျွန်တော်တို့ ကိုယ်တိုင် လွှတ်ပေးခဲ့တာ။"] },
 
   { t: "I Put the Extra Plate Away", tm: "morning", l: "ထမင်းစားခန်း",
-    k: "insert", w: [],
+    k: "insert", w: ["ပန်းကန်အပို"],
     g: "အမေထားခဲ့တဲ့ အပိုပန်းကန်ကို အဲဒီနေ့မှာပဲ သိမ်းလိုက်တယ်။ မေ့ပစ်ဖို့ မဟုတ်ဘူး။",
     p: "Tight insert on a man's two hands setting one plain enamel plate down onto a stack of "
       + "identical plates on a wooden kitchen shelf. ⚠️ THE PLATE IS CLEAN AND DRY AND THE STACK "
