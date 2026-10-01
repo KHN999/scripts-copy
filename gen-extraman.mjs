@@ -4,7 +4,7 @@
  *   node gen-extraman.mjs   (but prefer `node build.mjs` — nav is baked in)
  */
 import { writeFile } from "node:fs/promises";
-import { SCENES, CAST, PROPS, LOCS } from "./data-extraman.mjs";
+import { SCENES, CAST, PROPS, LOCS, ACT } from "./data-extraman.mjs";
 import { labRows } from "./units.mjs";
 import { MM_REF, NOTE_MM } from "./mm-extraman.mjs";
 import { buildPage } from "./page.mjs";
@@ -13,37 +13,6 @@ import { NAV } from "./nav.mjs";
 
 const PROJECT = "extraman";
 
-const ACT = {
-  1: "I · One more person",
-  10: "II · My name is Htet Wai",
-  13: "III · My mother's right hand",
-  20: "IV · The first night",
-  28: "V · Who put this pillow here",
-  34: "VI · Four plates",
-  42: "VII · Four of everything",
-  50: "VIII · Who are you talking to",
-  57: "IX · My father in the doorway",
-  63: "X · The old box",
-  72: "XI · Have you found it",
-  77: "XII · He was eight",
-  81: "XIII · The old woman at the village edge",
-  86: "XIV · Because we had to give you",
-  88: "XV · The exchange",
-  93: "XVI · It was always there",
-  96: "XVII · The boundary",
-  101: "XVIII · The night he arrived",
-  107: "XIX · Everything came back",
-  112: "XX · The first time I heard his voice",
-  115: "XXI · Where will you go",
-  117: "XXII · We thought it was love",
-  119: "XXIII · I got tired",
-  122: "XXIV · The word she never said",
-  124: "XXV · Under the house",
-  128: "XXVI · Do not do it",
-  132: "XXVII · The house went quiet",
-  139: "XXVIII · You can go now",
-  142: "XXIX · The next morning",
-};
 
 /**
  * This board is authored HERE, so the data file is the source and the lab is

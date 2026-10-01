@@ -1,4 +1,24 @@
 /**
+ * ⚠️ RETIRED — THE SHEETS ARE NO LONGER PUBLISHED.
+ *
+ * The lab absorbed everything this site did: the reference plates, the Burmese
+ * gloss on each shot, which references to attach, the act headings, and a copy
+ * button on every prompt. It lives at videolab-production.up.railway.app and it
+ * is the only place to work now.
+ *
+ * This repository stays as the place boards are AUTHORED — data-<slug>.mjs is
+ * still the source of every board and still the file to edit when a prompt
+ * refuses. What changed is where it goes afterwards:
+ *
+ *   node ~/video-lab/bin/push-board.mjs <slug>
+ *
+ * Running build.mjs still works and still writes HTML, but nothing deploys it
+ * and nobody reads it. Keeping two copies of a prompt in sync is exactly the
+ * overhead this move was meant to end — so push the board, do not rebuild the
+ * sheet.
+ *
+ * ────────────────────────────────────────────────────────────────────────────
+ *
  * Rebuild every sheet.
  *
  *   node build.mjs
