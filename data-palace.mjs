@@ -192,8 +192,9 @@ const CAM = {
   corr: "ALONG THE CORRIDOR. Camera at chest height in the middle of the floor, looking down the "
     + "length of it towards the far door.",
   door: "AT THE SEALED DOOR. Camera at chest height a few feet back from the doors, square on.",
-  foot: "AT THE FOOT OF THE DOOR. Camera on the floorboards, very low, level with the covered "
-    + "hatch at the bottom of the right-hand leaf.",
+  foot: "AT THE FOOT OF THE DOOR. Camera flat on the floorboards, very low, level with the small "
+    + "hatch at the bottom of the right-hand leaf. Whether that hatch is boarded or open is said "
+    + "by the shot.",
   hatch: "TIGHT ON THE HATCH. The square opening at the foot of the door filling the frame.",
   insert: "TIGHT INSERT. One subject filling the frame, shallow focus.",
   boy: "CLOSE ON THE YOUNG GUARD. Camera at his eye height, head-and-shoulders crop.",
@@ -690,7 +691,7 @@ export const SCENES = [
   { t: "It Did Not Take the Cup", l: "တံခါးကြီး", k: "foot", tm: "night",
     w: ["မိဖုရား", "ရေခွက်", "ရွှေလက်ကောက်"],
     g: "⚠️ အဲဒီလက်က ရေခွက်ကို မယူဘူး။",
-    p: "⚠️ THE SAME ARM AS SHOT 42, low on the teak floorboards and seen along them. ⚠️ THE THIN HAND HAS REACHED OUT PAST THE SMALL RED CLAY CUP WITHOUT TOUCHING IT — the cup stands untouched and perfectly still with one flame reflected in its water, and ⚠️ THE FINGERS ARE EXTENDED BEYOND IT TOWARDS A YOUNG MAN'S HAND AT THE EDGE OF FRAME. ⚠️ THE GOLD BANGLE WITH ITS FIVE RED STONES CATCHES THE LIGHT ON THE FOREARM. Lamplight low and raking along the boards; the open square hole black behind the arm.",
+    p: "⚠️ THE SAME ARM AS SHOT 42, lying out of the OPEN square hole and seen low along the teak floorboards. ⚠️ THE SMALL RED CLAY CUP STANDS IN THE NEAR FOREGROUND, FULL, UNTOUCHED AND PERFECTLY STILL, one flame reflected in its water as a single bright point. ⚠️ THE THIN HAND HAS GONE STRAIGHT PAST IT — the arm passing within an inch of the cup and reaching on along the bare boards beyond, ⚠️ THE FINGERS OPEN AND SPREAD AND SEARCHING, WITH NOTHING IN THEM AND NOTHING NEAR THEM. ⚠️ THE GOLD BANGLE WITH ITS FIVE RED STONES CATCHES THE LIGHT ON THE FOREARM. Hard low raking lamplight along the dust; the open square hole black behind the arm.",
     u: ["အဲဒီလက်က ရေခွက်ကို မယူဘူး။"] },
 
   /* ── VIII · IT TOOK MY WRIST ──────────────────────────────────────────── */
