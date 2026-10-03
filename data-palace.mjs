@@ -1180,21 +1180,13 @@ export const SCENES = [
   { t: "We Found Him Inside the Door", c: [[1, "bigstinger"]], tm: "dawn", l: "အဆောင်ထဲ",
     k: "room", w: ["ကင်းမှူးကြီး", "အဆောင်ထဲ"],
     g: "⚠️ ကင်းမှူးကြီးကို တံခါးအတွင်းဘက်မှာ တွေ့ရတယ်။ သေနေပြီ။",
-    p: "Just inside the doorway of the sealed wing in grey morning light. ⚠️ THE CAPTAIN LIES ON "
-      + "HIS FRONT ON THE DUSTY FLOORBOARDS WITH HIS HEAD TURNED TO ONE SIDE AND BOTH ARMS "
-      + "STRETCHED OUT ABOVE HIM TOWARDS THE DOOR, his face slack and his eyes closed, completely "
-      + "still. His dark indigo jacket is dragged up his back. ⚠️ THE DUST BEHIND HIM IS SWEPT "
-      + "INTO TWO LONG CLEAN TRACKS the length of the room.",
+    p: "Just inside the doorway of the sealed wing in grey morning light. ⚠️ THE CAPTAIN LIES FACE DOWN ON THE DUSTY FLOORBOARDS WITH BOTH ARMS STRETCHED OUT ABOVE HIM TOWARDS THE DOOR AND BOTH HANDS FLAT AGAINST ITS INSIDE FACE, completely still. ⚠️ HIS FACE IS TURNED DOWN INTO THE BOARDS AND AWAY FROM THE LENS AND CANNOT BE READ AT ALL. His dark indigo jacket is dragged up his back and his paso has pulled loose. ⚠️ THE DUST BEHIND HIM IS SWEPT INTO TWO LONG CLEAN TRACKS the whole length of the room, running from the gilded bed to where he lies.",
     u: ["ကင်းမှူးကြီးကို တံခါးအတွင်းဘက်မှာ တွေ့ရတယ်။", "သေနေပြီ။"] },
 
   { t: "His Hands Were Still on the Wood", tm: "dawn", l: "အဆောင်ထဲ",
     k: "insert", w: ["ကင်းမှူးကြီး"],
     g: "⚠️ ပါးစပ်ကြီးဟပြီး လက်သည်းတွေက တံခါးသားထဲ စိုက်ဝင်နေတယ်။",
-    p: "Tight insert on the inside face of the door at floor level in grey daylight. ⚠️ AN OLDER "
-      + "MAN'S TWO HANDS ARE PRESSED FLAT AGAINST THE TEAK WITH THE FINGERS SPREAD AND CURLED "
-      + "HARD INTO IT, ⚠️ AND THE WOOD BENEATH THEM IS SCORED WITH DEEP PARALLEL GROOVES running "
-      + "down from under each fingertip. Pale wood dust has gathered at the bottom of the grooves "
-      + "and on the boards below. The hands are whole and unmarked.",
+    p: "Tight and low at the inside face of the door in grey daylight, holding ⚠️ HIS FACE AND ONE OF HIS HANDS IN THE SAME FRAME — he lies with his arms above his head, so his hand is on the wood and his face is on the boards just below it. ⚠️ THE HAND IS PRESSED FLAT TO THE TEAK WITH THE FINGERS SPREAD AND DRAGGED DOWNWARD, AND THE FINGERNAILS HAVE GONE INTO THE WOOD — each nail sunk below the surface, the grain split in short pale lines around them and fine wood dust caught under the fingertips. ⚠️ HIS HAND ITSELF IS WHOLE AND UNMARKED. ⚠️ BELOW IT HIS HEAD IS TURNED UP AND SIDEWAYS TOWARDS THE DOOR AND HIS MOUTH IS WIDE OPEN — stretched open and square, the jaw right down, his eyes half shut — ⚠️ AND HE IS COMPLETELY STILL. Flat grey daylight from the corridor side; the teak and the dust in sharp focus.",
     u: ["ပါးစပ်ကြီးဟပြီး လက်သည်းတွေက တံခါးသားထဲ စိုက်ဝင်နေတယ်။"] },
 
   { t: "The Bed Was Empty", c: [[1, "stinger"]], tm: "dawn", l: "အဆောင်ထဲ", k: "bed",
