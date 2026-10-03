@@ -287,7 +287,7 @@ export const SCENES = [
     u: ["နန်းတော်မှာ ကျွန်တော် ပထမဆုံးညကင်းကျတဲ့ညက—"] },
 
   { t: "A Woman Asked for Water", c: [[1, "bigstinger"]], l: "တံခါးကြီး", k: "door", tm: "night",
-    sealed: true, w: ["တံခါးကြီး"],
+    sealed: true, w: ["တံခါးကြီး", "သော့ခလောက်", "ဆီမီးခွက်"],
     g: "⚠️ ပိတ်ထားတဲ့ အဆောင်ထဲက မိန်းမတစ်ယောက် ရေတောင်းတယ်။",
     p: "Square on to the pair of very tall teak doors at the end of the corridor, nearly twice "
       + "the height of a man, the wood almost black with age and the carving worn smooth. ⚠️ A "
@@ -318,7 +318,7 @@ export const SCENES = [
     u: ["“ရေနည်းနည်းလောက် ပေးပါ…”"] },
 
   { t: "He Caught My Hand", l: "လျှောက်လမ်း", k: "wide", tm: "night",
-    w: ["အစောင့်ငယ်", "ကင်းမှူးကြီး", "ရေအိုး"],
+    w: ["အစောင့်ငယ်", "ကင်းမှူးကြီး", "ရေအိုး", "ဆီမီးခွက်"],
     g: "⚠️ ရေအိုးဆီ လှည့်လိုက်ချိန်မှာ ကင်းမှူးကြီးက လက်ကို ဆွဲထားလိုက်တယ်။",
     p: "Wide in the corridor beside a large brown earthenware water pot standing on a low wooden "
       + "stand. ⚠️ THE YOUNG GUARD HAS HALF TURNED TOWARDS THE POT WITH ONE ARM REACHING OUT, AND "
@@ -563,7 +563,7 @@ export const SCENES = [
     u: ["နန်းတော်ထဲမှာ အပြစ်ပေးခံရတဲ့လူတွေ ရှိတတ်တယ်လို့ ကြားဖူးတယ်။"] },
 
   { t: "Perhaps He Only Wanted Me Afraid", l: "လျှောက်လမ်း", k: "boy",
-    tm: "night", w: ["အစောင့်ငယ်"],
+    tm: "night", w: ["အစောင့်ငယ်", "ရေအိုး"],
     g: "ကင်းမှူးကြီးက မကူညီရဲအောင် သရဲဆိုပြီး ခြောက်ထားတာလည်း ဖြစ်နိုင်တယ်။",
     p: "Close on the young guard, ⚠️ HIS CHIN COMING UP AND HIS MOUTH SETTING IN A HARD LINE, the "
       + "fear being deliberately pushed down. His eyes have moved to the water pot off frame. One "
@@ -615,7 +615,7 @@ export const SCENES = [
     u: ["ကျွန်တော် ပြောပြီးမှ—", "ပြန်မထူးနဲ့ဆိုတဲ့ စကားကို သတိရတယ်။"] },
 
   { t: "Nothing Came From Inside", l: "တံခါးကြီး", k: "door", tm: "night",
-    sealed: true, w: ["တံခါးကြီး"],
+    sealed: true, w: ["တံခါးကြီး", "သော့ခလောက်"],
     g: "အထဲက ဘာသံမှ မကြားရတော့ဘူး။",
     p: "Square on to the full height of the sealed doors from a few feet back. ⚠️ THE TIMBER BAR, "
       + "THE IRON BRACKETS, THE PADLOCK AND THE NAILED PLANK AT THE FOOT, ALL PERFECTLY STILL. "
@@ -665,7 +665,7 @@ export const SCENES = [
     u: ["ကျွန်တော် ရေခွက်ကို အပေါက်နား ချပေးလိုက်တယ်။"] },
 
   { t: "A Hand Came Out of the Dark", c: [[1, "bigstinger"]], l: "တံခါးကြီး", k: "foot",
-    tm: "night", w: ["မိဖုရား", "တံခါးကြီး"],
+    tm: "night", w: ["မိဖုရား", "တံခါးကြီး", "ရေခွက်"],
     g: "⚠️ အမှောင်ထဲက လက်တစ်ဖက် ထွက်လာတယ်။ မိန်းမလက်။",
     p: "Low on the floorboards, level with the opening. ⚠️ A WOMAN'S HAND AND FOREARM HAVE COME "
       + "OUT THROUGH THE SQUARE HOLE AND LIE ON THE BOARDS, palm down, fingers extended towards "
@@ -678,31 +678,19 @@ export const SCENES = [
   { t: "Gold and Red Stones at the Wrist", c: [[1, "stinger"]], l: "တံခါးကြီး", k: "insert",
     tm: "night", w: ["ရွှေလက်ကောက်", "မိဖုရား"],
     g: "⚠️ လက်ကောက်ဝတ်မှာ ကျောက်နီစီထားတဲ့ ရွှေလက်ကောက်တစ်ရံ။",
-    p: "Tight insert on the wrist alone, filling the frame. ⚠️ A HEAVY BURMESE GOLD BANGLE SITS "
-      + "ON IT, the outer face worked in raised lotus-petal scrolls and ⚠️ FIVE DOMED CABOCHON "
-      + "RUBIES SET IN CLAWED COLLETS ALONG THE TOP, deep red and catching the lamp flame. ⚠️ THE "
-      + "GOLD IS BRIGHT AND PERFECT. The wrist inside it is narrow enough that the bangle has "
-      + "slipped down, and the skin is drawn tight and dull over the bone beneath.",
+    p: "⚠️ THE SAME ARM AS SHOT 42 — a thin forearm lying palm down on worn teak floorboards, out of the square hole in the foot of the door — cropped tight on the WRIST so the hole is just outside the frame. ⚠️ A HEAVY BURMESE GOLD BANGLE SITS ON IT, the outer face worked in raised lotus-petal scrolls and ⚠️ FIVE DOMED CABOCHON RUBIES SET IN CLAWED COLLETS ALONG THE TOP, deep red and catching the lamp flame. ⚠️ THE GOLD IS BRIGHT AND PERFECT AND SITS LOOSE, having slid along the forearm because the wrist is too narrow to hold it. The skin beneath is drawn tight and dull over the bone. ⚠️ THE TEAK BOARDS AND THEIR GREY DUST SHOW UNDER AND BESIDE THE ARM. Hard low raking lamplight from one side; everything past the arm black.",
     u: ["လက်ကောက်ဝတ်မှာ ကျောက်နီစီထားတဲ့ ရွှေလက်ကောက်တစ်ရံ။"] },
 
   { t: "But the Skin", c: [[1, "bigstinger"]], l: "တံခါးကြီး", k: "insert", tm: "night",
-    w: ["မိဖုရား"],
+    w: ["မိဖုရား", "ရွှေလက်ကောက်"],
     g: "⚠️ ဒါပေမယ့် အသားက — အရိုးပေါ်မှာ အရေပြားခြောက် ကပ်ထားသလိုပဲ။",
-    p: "Tight insert on the back of the hand, very close. ⚠️ THE SKIN IS DRAWN TIGHT AND DRY "
-      + "OVER EVERY BONE BENEATH IT — the long bones of the back of the hand standing in ridges, "
-      + "the tendons raised in cords, the knuckles large and the fingers narrow between them. "
-      + "⚠️ THE SURFACE IS DULL, PAPERY AND COMPLETELY UNBROKEN, with fine lines across it like "
-      + "very old leather. Hard raking lamplight from one side. The gold at the wrist is bright "
-      + "at the edge of frame.",
+    p: "⚠️ THE SAME HAND AS SHOT 42, STILL PALM DOWN ON THE TEAK FLOORBOARDS, cropped very close on the back of it. ⚠️ THE SKIN IS DRAWN TIGHT AND DRY OVER EVERY BONE BENEATH IT — the long bones of the back of the hand standing in ridges, the tendons raised in cords, the knuckles large and the fingers narrow between them. ⚠️ THE SURFACE IS DULL, PAPERY AND COMPLETELY UNBROKEN, with fine lines across it like very old leather. ⚠️ THE WORN TEAK BOARDS AND THEIR DUST ARE VISIBLE UNDER AND BESIDE THE HAND, in focus enough to place it. The gold bangle is bright at the edge of frame. Hard low raking lamplight from one side.",
     u: ["ဒါပေမယ့် အသားက—", "အရိုးပေါ်မှာ အရေပြားခြောက် ကပ်ထားသလိုပဲ။"] },
 
   { t: "It Did Not Take the Cup", l: "တံခါးကြီး", k: "foot", tm: "night",
-    w: ["မိဖုရား", "ရေခွက်"],
+    w: ["မိဖုရား", "ရေခွက်", "ရွှေလက်ကောက်"],
     g: "⚠️ အဲဒီလက်က ရေခွက်ကို မယူဘူး။",
-    p: "Low on the boards. ⚠️ THE THIN HAND HAS PASSED OVER AND BEYOND THE CLAY CUP WITHOUT "
-      + "TOUCHING IT — the cup sits untouched and perfectly still with the flame reflected in it, "
-      + "and the fingers are reaching past it towards the edge of frame. ⚠️ THE GOLD BANGLE "
-      + "CATCHES THE LIGHT. Lamplight low and raking; the open hole black behind the arm.",
+    p: "⚠️ THE SAME ARM AS SHOT 42, low on the teak floorboards and seen along them. ⚠️ THE THIN HAND HAS REACHED OUT PAST THE SMALL RED CLAY CUP WITHOUT TOUCHING IT — the cup stands untouched and perfectly still with one flame reflected in its water, and ⚠️ THE FINGERS ARE EXTENDED BEYOND IT TOWARDS A YOUNG MAN'S HAND AT THE EDGE OF FRAME. ⚠️ THE GOLD BANGLE WITH ITS FIVE RED STONES CATCHES THE LIGHT ON THE FOREARM. Lamplight low and raking along the boards; the open square hole black behind the arm.",
     u: ["အဲဒီလက်က ရေခွက်ကို မယူဘူး။"] },
 
   /* ── VIII · IT TOOK MY WRIST ──────────────────────────────────────────── */
@@ -808,7 +796,7 @@ export const SCENES = [
     u: ["သူက ကျွန်တော့်ကို ကြည့်နေတာ မဟုတ်ဘူး။", "တံခါးအောက်က အပေါက်ကို ကြည့်နေတယ်။"] },
 
   { t: "The Hand Was Still Outside", c: [[1, "stinger"]], l: "တံခါးကြီး", k: "foot",
-    tm: "night", w: ["မိဖုရား", "ရွှေလက်ကောက်"],
+    tm: "night", w: ["မိဖုရား", "ရွှေလက်ကောက်", "ရေခွက်"],
     g: "⚠️ ရွှေလက်ကောက်ဝတ်ထားတဲ့ လက်က အပြင်မှာ ရှိနေတုန်းပဲ။",
     p: "Low on the floorboards, the thin hand and forearm lying out of the opening across the "
       + "boards, ⚠️ PALM DOWN, FINGERS SPREAD, COMPLETELY STILL. The gold bangle with its five "
@@ -867,7 +855,7 @@ export const SCENES = [
 
   /* ── XII · FOOTSTEPS INSIDE ───────────────────────────────────────────── */
   { t: "Footsteps on the Other Side", l: "တံခါးကြီး", k: "door",
-    tm: "night", sealed: true, w: ["တံခါးကြီး"],
+    tm: "night", sealed: true, w: ["တံခါးကြီး", "သော့ခလောက်"],
     g: "⚠️ တံခါးအတွင်းဘက်က ခြေသံ ကြားရတယ် — တစ်လှမ်း။ နောက်တစ်လှမ်း။",
     p: "Square on to the full height of the sealed doors. ⚠️ A FINE GREY DUST HAS LIFTED OFF THE "
       + "TOP EDGE OF THE TIMBER BAR AND HANGS IN THE LAMPLIGHT IN A THIN DRIFT, the only thing "
@@ -991,7 +979,7 @@ export const SCENES = [
     u: ["ကန့်လန့်ကြီးက တဖြည်းဖြည်း ကွေးလာတယ်။"] },
 
   { t: "The Doors Came Open", c: [[1, "bigstinger"]], l: "တံခါးကြီး", k: "door", tm: "night",
-    w: ["တံခါးကြီး"],
+    w: ["တံခါးကြီး", "သော့ခလောက်"],
     g: "⚠️ သစ်သားကျိုးသံ အကျယ်ကြီးနဲ့အတူ တံခါးနှစ်ချပ် ပွင့်သွားတယ်။",
     p: "Square on to the doors, now standing open inward. ⚠️ THE TIMBER BAR HAS SNAPPED THROUGH "
       + "AT THE CENTRE AND THE TWO HALVES HANG DOWN FROM THEIR BRACKETS, the broken ends a mass "
@@ -1136,7 +1124,7 @@ export const SCENES = [
     u: ["အထဲကို ပါသွားတဲ့အချိန်—", "ကုတင်ပေါ်က မိဖုရားဟာ ထထိုင်နေပြီ။"] },
 
   { t: "The Doors Slammed", l: "တံခါးကြီး", k: "door", tm: "night",
-    sealed: true, w: ["တံခါးကြီး"],
+    sealed: true, w: ["တံခါးကြီး", "သော့ခလောက်"],
     g: "⚠️ တံခါးနှစ်ချပ် ဝုန်းခနဲ ပိတ်သွားတယ်။",
     p: "Square on to the doors, shut again. ⚠️ THE TWO LEAVES ARE CLOSED FLUSH AND THE BLACK "
       + "JOINT RUNS THE WHOLE HEIGHT OF THEM. The broken timber bar hangs in two pieces from its "
@@ -1175,7 +1163,7 @@ export const SCENES = [
     u: ["မနက်လင်းတော့ အစောင့်တွေ အများကြီးနဲ့ အဲဒီအဆောင်ကို ပြန်သွားကြတယ်။"] },
 
   { t: "It Was Not Locked", tm: "dawn", l: "တံခါးကြီး", k: "door",
-    w: ["တံခါးကြီး"],
+    w: ["တံခါးကြီး", "သော့ခလောက်"],
     g: "တံခါးက သော့မခတ်ထားဘူး — တွန်းလိုက်တာနဲ့ ပွင့်တယ်။",
     p: "Square on to the doors in flat grey morning light. ⚠️ THE BROKEN TIMBER BAR HAS BEEN "
       + "LIFTED AWAY AND LEANS AGAINST THE WALL IN TWO SPLINTERED PIECES, and one leaf stands "
