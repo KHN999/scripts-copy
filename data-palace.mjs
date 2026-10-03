@@ -768,9 +768,24 @@ export const SCENES = [
     u: ["အဲဒီမိန်းမက ပါးစပ်ဟလိုက်တယ်။", "အထဲမှာ လျှာမရှိဘူး။", "မည်းနက်နေတဲ့ အပေါက်ကြီးပဲ ရှိတယ်။"] },
 
   { t: "I Do Not Take the One Who Brings Water", c: [[1, "bigstinger"]], l: "တံခါးကြီး",
-    k: "insert", tm: "night", w: ["မိဖုရား", "ရွှေလက်ကောက်", "အစောင့်ငယ်"],
+    k: "foot", tm: "night", w: ["မိဖုရား", "ရွှေလက်ကောက်", "အစောင့်ငယ်"],
     g: "⚠️ “ရေယူလာတဲ့လူကို… မဖမ်းပါဘူး။” — ကျွန်တော့်လက်ကို လွှတ်လိုက်တယ်။",
-    p: "⚠️ THE SAME FRAMING AS SHOT 46 — two wrists together on the floorboards, tight — but the grip has opened. ⚠️ THE THIN FINGERS HAVE STRAIGHTENED AND LIFTED CLEAR AND TO ONE SIDE so that the boy's wrist is fully visible beneath them, the thin hand still in frame and no longer touching him. ⚠️ ON HIS WRIST, FIVE NARROW BANDS WHERE THE FINGERS WERE: the skin along each band blanched pale, the skin at their edges darkened and slightly risen. ⚠️ THEY WERE MADE ONE SECOND AGO AND THEY LOOK IT — fresh, sharp-edged, and the skin completely unbroken. The gold bangle catches the flame on her forearm. The open square hole is black behind them.",
+    p: "⚠️ THE ONLY FRAME IN THIS FILM THAT HOLDS HER FACE AND HER HAND AT THE SAME TIME. Camera "
+      + "flat on the floorboards looking along them at the foot of the door, so that everything "
+      + "sits in one line from the back of the frame to the front. "
+      + "⚠️ AT THE BACK: THE OPEN SQUARE HOLE, AND HER FACE PRESSED TO IT FROM THE INSIDE, turned "
+      + "sideways so that one eye, one fallen cheek and the corner of her dry split mouth fill "
+      + "the opening beside her own arm. ⚠️ HER MOUTH IS OPEN AND THE INSIDE OF IT IS FLAT UNLIT "
+      + "BLACK, and she is looking straight down the boards into the lens. "
+      + "⚠️ IN THE MIDDLE: HER THIN FOREARM RUNNING OUT OF THAT SAME HOLE TOWARDS THE CAMERA, the "
+      + "gold bangle with its five red stones bright on it. "
+      + "⚠️ IN THE NEAR FOREGROUND: HER FINGERS HAVE STRAIGHTENED, LIFTED CLEAR OF A YOUNG MAN'S "
+      + "WRIST AND MOVED ASIDE so they are no longer touching him, and his wrist lies open on the "
+      + "boards with ⚠️ FIVE NARROW BANDS ACROSS IT WHERE THE FINGERS WERE — blanched pale along "
+      + "each band, darkened and slightly risen at the edges, sharp and made one second ago. His "
+      + "skin is completely unbroken. "
+      + "Hard low raking lamplight along the dust from one side; the small red clay cup standing "
+      + "untouched at the edge of frame.",
     u: ["ဒါပေမယ့် အသံကတော့ ထွက်လာတယ်။", "“ရေယူလာတဲ့လူကို… မဖမ်းပါဘူး။”",
       "ကျွန်တော့်လက်ကို လွှတ်လိုက်တယ်။"] },
 
