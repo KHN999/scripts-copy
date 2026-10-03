@@ -955,21 +955,13 @@ export const SCENES = [
   { t: "Fingers Came Through the Joint", c: [[1, "bigstinger"]], l: "တံခါးကြီး", k: "door",
     tm: "night", w: ["တံခါးကြီး"],
     g: "⚠️ တံခါးနှစ်ချပ်ကြားကနေ လက်ချောင်းတွေ ထိုးထွက်လာတယ် — အပေါ်ဆုံးကနေ အောက်ဆုံးအထိ။",
-    p: "Square on to the full height of the doors. ⚠️ OUT OF THE SINGLE BLACK JOINT BETWEEN THE "
-      + "TWO LEAVES, VERY LONG THIN FINGERS HAVE COME THROUGH AND CURLED ROUND ONTO THE OUTSIDE "
-      + "FACE OF THE WOOD — ⚠️ AND THEY RUN THE ENTIRE HEIGHT OF THE DOOR, from above head height "
-      + "down to the floorboards, evenly spaced along the whole line. The skin on them is drawn "
-      + "tight and dull over the bones. One lamp from the left rakes across them.",
+    p: "Square on to the full height of the pair of teak doors. ⚠️ THIN FINGERS HAVE PUSHED OUT THROUGH THE SINGLE BLACK JOINT BETWEEN THE TWO LEAVES AND CURLED ROUND ONTO THE OUTSIDE FACE OF THE WOOD, ⚠️ EMERGING AT POINTS ALL THE WAY UP THE JOINT — from above head height right down to the floorboards. ⚠️ EACH ONE IS ENORMOUSLY LONG: a single finger leaves the joint and lies along the door for most of its height before the tip curls in, so the fingers overlap and cross one another down the whole face of the wood. ⚠️ THERE SEEM TO BE FAR TOO MANY OF THEM. The skin on them is drawn tight and dull over the bones and completely unbroken. One lamp from the left rakes across them and throws every finger its own long shadow.",
     u: ["တံခါးနှစ်ချပ်ကြားကနေ လက်ချောင်းတွေ ထိုးထွက်လာတယ်။", "အပေါ်ဆုံးကနေ အောက်ဆုံးအထိ။"] },
 
   { t: "Not Many Hands", l: "တံခါးကြီး", k: "insert", tm: "night",
     w: ["တံခါးကြီး"],
     g: "⚠️ လက်တွေ အများကြီး မဟုတ်ဘူး — လက်နှစ်ဖက်တည်းရဲ့ လက်ချောင်းတွေက တံခါးတစ်ချပ်အမြင့်လောက် ရှည်နေတာ။",
-    p: "Tight insert on the joint of the door at about chest height, following one finger. ⚠️ IT "
-      + "IS A SINGLE CONTINUOUS FINGER, NORMAL IN THICKNESS AND JOINTED LIKE A FINGER, BUT IT "
-      + "RUNS UP OUT OF THE TOP OF THE FRAME AND DOWN OUT OF THE BOTTOM — far longer than any "
-      + "hand should allow, the knuckles spaced far apart along its length. ⚠️ THE SKIN IS DRY "
-      + "AND UNBROKEN. The dark teak behind it; hard raking lamplight.",
+    p: "Closer on the joint at about chest height, framed on ⚠️ THE ONE PLACE WHERE THE FINGERS COME OUT OF THE WOOD. ⚠️ FIVE OF THEM EMERGE FROM A SINGLE POINT IN THE JOINT, SPLAYED APART FROM ONE COMMON KNUCKLE LINE EXACTLY AS FIVE FINGERS LEAVE ONE HAND — and then ⚠️ EVERY ONE OF THEM RUNS OUT OF THE FRAME, two upward and three downward, far longer than any finger should be, the joints spaced wide apart along their length. ⚠️ FIVE FROM ONE PLACE: IT IS A HAND, AND THE LENGTH IS THE ONLY THING WRONG WITH IT. The skin is dry, dull and unbroken. Dark teak behind; hard raking lamplight from one side.",
     u: ["လက်တွေ အများကြီး မဟုတ်ဘူး။",
       "လက်နှစ်ဖက်တည်းရဲ့ လက်ချောင်းတွေက တံခါးတစ်ချပ်အမြင့်လောက် ရှည်နေတာ။"] },
 
