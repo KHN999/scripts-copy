@@ -768,12 +768,9 @@ export const SCENES = [
     u: ["အဲဒီမိန်းမက ပါးစပ်ဟလိုက်တယ်။", "အထဲမှာ လျှာမရှိဘူး။", "မည်းနက်နေတဲ့ အပေါက်ကြီးပဲ ရှိတယ်။"] },
 
   { t: "I Do Not Take the One Who Brings Water", c: [[1, "bigstinger"]], l: "တံခါးကြီး",
-    k: "foot", tm: "night", w: ["မိဖုရား", "ရွှေလက်ကောက်", "အစောင့်ငယ်"],
+    k: "insert", tm: "night", w: ["မိဖုရား", "ရွှေလက်ကောက်", "အစောင့်ငယ်"],
     g: "⚠️ “ရေယူလာတဲ့လူကို… မဖမ်းပါဘူး။” — ကျွန်တော့်လက်ကို လွှတ်လိုက်တယ်။",
-    p: "Low on the floorboards. ⚠️ THE THIN FINGERS HAVE OPENED AND LIFTED CLEAR OF THE BOY'S "
-      + "WRIST and are held just above it, still spread, not yet withdrawn. His wrist lies on the "
-      + "boards beneath, ⚠️ AND FIVE NARROW MARKS ARE ALREADY VISIBLE ACROSS IT, darker than the "
-      + "skin around them. The gold bangle catches the flame. The open hole is black behind.",
+    p: "⚠️ THE SAME FRAMING AS SHOT 46 — two wrists together on the floorboards, tight — but the grip has opened. ⚠️ THE THIN FINGERS HAVE STRAIGHTENED AND LIFTED CLEAR AND TO ONE SIDE so that the boy's wrist is fully visible beneath them, the thin hand still in frame and no longer touching him. ⚠️ ON HIS WRIST, FIVE NARROW BANDS WHERE THE FINGERS WERE: the skin along each band blanched pale, the skin at their edges darkened and slightly risen. ⚠️ THEY WERE MADE ONE SECOND AGO AND THEY LOOK IT — fresh, sharp-edged, and the skin completely unbroken. The gold bangle catches the flame on her forearm. The open square hole is black behind them.",
     u: ["ဒါပေမယ့် အသံကတော့ ထွက်လာတယ်။", "“ရေယူလာတဲ့လူကို… မဖမ်းပါဘူး။”",
       "ကျွန်တော့်လက်ကို လွှတ်လိုက်တယ်။"] },
 
