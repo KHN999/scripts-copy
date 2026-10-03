@@ -1203,10 +1203,7 @@ export const SCENES = [
   { t: "That Day I Learned the Truth", tm: "day", l: "လျှောက်လမ်း", k: "boy",
     w: ["အစောင့်ငယ်"],
     g: "အဲဒီနေ့မှ ကျွန်တော် အဖြစ်မှန်ကို သိရတယ်။",
-    p: "Close on the young guard in flat grey daylight, ⚠️ HIS FACE PLAIN AND TIRED AND "
-      + "COMPLETELY WITHOUT DRAMA, his eyes down and slightly off to one side, listening to "
-      + "somebody out of frame. The gaung baung is gone and his hair is flattened where it sat. "
-      + "Daylight is unkind to him; he looks very young.",
+    p: "Close on the young guard standing in the corridor in flat grey daylight, a few paces from the open doors of the wing. ⚠️ BEHIND HIM AND WELL OUT OF FOCUS, THREE OR FOUR OTHER PALACE GUARDS AND AN OLDER OFFICIAL STAND TOGETHER IN THE DOORWAY TALKING, one of them gesturing back into the room. ⚠️ HE IS TURNED AWAY FROM THEM AND NOT WATCHING THEM AT ALL — his face square to the camera and his eyes down and slightly to one side, fixed on nothing. ⚠️ HIS FACE IS PLAIN, TIRED AND COMPLETELY WITHOUT DRAMA; he is not frightened any more and he is not surprised, he is simply putting something together. His gaung baung is gone and his hair is flattened in a band where it sat. ⚠️ BEYOND THEM THE RED LACQUERED PILLARS AND THEIR FLAKING GOLD RUN AWAY DOWN THE CORRIDOR, soft and plain in the daylight. The light is even and shadowless and unkind to him; he looks very young.",
     u: ["အဲဒီနေ့မှ ကျွန်တော် အဖြစ်မှန်ကို သိရတယ်။"] },
 
   { t: "The King's Anger", tm: "day", l: "အဆောင်ထဲ", k: "room",
