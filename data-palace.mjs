@@ -239,6 +239,14 @@ const CONT_SEALED =
   + "opening and everything past that is flat unresolved black — no shape, no figure, no glint, "
   + "nothing legible. The frame holds the wood, the iron and the dark.";
 
+const CONT_BOY =
+  " ⚠️ THE YOUNG GUARD IS THE SAME PERSON IN EVERY SHOT HE APPEARS IN: about eighteen, slight and "
+  + "narrow-shouldered, a smooth beardless boy's face with large dark eyes, in a plain collarless "
+  + "white cotton jacket and a dark red-and-black checked paso, barefoot. ⚠️ HIS FACE, AGE AND "
+  + "BUILD DO NOT CHANGE — he is never older, heavier or differently dressed. The only thing that "
+  + "changes across the film is his white gaung baung, which he wears until he runs and is "
+  + "without afterwards.";
+
 const CONT_CAPT =
   " The captain is in a dark indigo jacket and a dull red-and-green checked silk paso throughout, "
   + "with the iron keys at his waist.";
@@ -955,7 +963,7 @@ export const SCENES = [
   { t: "Fingers Came Through the Joint", c: [[1, "bigstinger"]], l: "တံခါးကြီး", k: "door",
     tm: "night", w: ["တံခါးကြီး"],
     g: "⚠️ တံခါးနှစ်ချပ်ကြားကနေ လက်ချောင်းတွေ ထိုးထွက်လာတယ် — အပေါ်ဆုံးကနေ အောက်ဆုံးအထိ။",
-    p: "Square on to the full height of the pair of teak doors. ⚠️ THERE ARE EXACTLY TWO HANDS IN THIS PICTURE AND TEN FINGERS IN TOTAL. NOTHING ELSE. ⚠️ FIVE FINGERS COME OUT THROUGH THE VERTICAL JOINT BETWEEN THE TWO LEAVES AT ONE POINT HIGH UP, ABOVE HEAD HEIGHT, and ⚠️ FIVE MORE COME OUT AT ONE POINT LOW DOWN, NEAR THE FLOORBOARDS — two separate clusters of five, each cluster splaying from a single common knuckle line exactly as five fingers leave one palm. ⚠️ THE UPPER FIVE REACH DOWNWARD ALONG THE FACE OF THE DOOR AND THE LOWER FIVE REACH UPWARD, so that between them they run from the very top of the door to the very bottom. ⚠️ THEY ARE ORDINARY HUMAN FINGERS IN EVERY OTHER RESPECT — ordinary thickness, ordinary fingernails, ordinary knuckles, dry dull unbroken skin. ⚠️ THE LENGTH IS THE ONLY THING WRONG WITH THEM: each single finger is about as long as the door is tall. One lamp from the left rakes across them.",
+    p: "Square on to the full height of the pair of teak doors. ⚠️ THERE ARE EXACTLY TWO HANDS IN THIS PICTURE AND TEN FINGERS IN TOTAL. NOTHING ELSE. ⚠️ FIVE FINGERS COME OUT THROUGH THE VERTICAL JOINT BETWEEN THE TWO LEAVES AT ONE POINT HIGH UP, ABOVE HEAD HEIGHT, and ⚠️ FIVE MORE COME OUT AT ONE POINT LOW DOWN, NEAR THE FLOORBOARDS — two separate clusters of five, each cluster splaying from a single common knuckle line exactly as five fingers leave one palm. ⚠️ EVERY SINGLE FINGER IS AS LONG AS THE WHOLE DOOR IS TALL — not half of it, not most of it. ⚠️ THE FIVE THAT COME OUT AT THE TOP REACH ALL THE WAY DOWN TO THE FLOORBOARDS, AND THE FIVE THAT COME OUT AT THE BOTTOM REACH ALL THE WAY UP TO THE LINTEL, so that each set spans the entire height on its own and the two sets lie over one another down the full face of the wood. ⚠️ THEY ARE ORDINARY HUMAN FINGERS IN EVERY OTHER RESPECT — ordinary thickness, ordinary fingernails, ordinary knuckles, dry dull unbroken skin, the joints simply spaced very far apart along their length. ⚠️ THE LENGTH IS THE ONLY THING WRONG WITH THEM. One lamp from the left rakes across them.",
     u: ["တံခါးနှစ်ချပ်ကြားကနေ လက်ချောင်းတွေ ထိုးထွက်လာတယ်။", "အပေါ်ဆုံးကနေ အောက်ဆုံးအထိ။"] },
 
   { t: "Not Many Hands", l: "တံခါးကြီး", k: "insert", tm: "night",
@@ -1203,7 +1211,7 @@ export const SCENES = [
   { t: "That Day I Learned the Truth", tm: "day", l: "လျှောက်လမ်း", k: "boy",
     w: ["အစောင့်ငယ်"],
     g: "အဲဒီနေ့မှ ကျွန်တော် အဖြစ်မှန်ကို သိရတယ်။",
-    p: "Close on the young guard standing in the corridor in flat grey daylight, a few paces from the open doors of the wing. ⚠️ BEHIND HIM AND WELL OUT OF FOCUS, THREE OR FOUR OTHER PALACE GUARDS AND AN OLDER OFFICIAL STAND TOGETHER IN THE DOORWAY TALKING, one of them gesturing back into the room. ⚠️ HE IS TURNED AWAY FROM THEM AND NOT WATCHING THEM AT ALL — his face square to the camera and his eyes down and slightly to one side, fixed on nothing. ⚠️ HIS FACE IS PLAIN, TIRED AND COMPLETELY WITHOUT DRAMA; he is not frightened any more and he is not surprised, he is simply putting something together. His gaung baung is gone and his hair is flattened in a band where it sat. ⚠️ BEYOND THEM THE RED LACQUERED PILLARS AND THEIR FLAKING GOLD RUN AWAY DOWN THE CORRIDOR, soft and plain in the daylight. The light is even and shadowless and unkind to him; he looks very young.",
+    p: "Close on the young guard standing in the corridor in flat grey daylight, a few paces from the open doors of the wing. ⚠️ BEHIND HIM AND WELL OUT OF FOCUS, THREE OR FOUR OTHER PALACE GUARDS AND AN OLDER OFFICIAL STAND TOGETHER IN THE DOORWAY TALKING, one of them gesturing back into the room. ⚠️ THOSE OTHERS ARE ALL VISIBLY OLDER AND HEAVIER THAN HIM AND THEY ARE SOFT AND INDISTINCT; the only sharp face in the picture is his. ⚠️ HE IS TURNED AWAY FROM THEM AND NOT WATCHING THEM AT ALL — his face square to the camera and his eyes down and slightly to one side, fixed on nothing. ⚠️ HIS FACE IS PLAIN, TIRED AND COMPLETELY WITHOUT DRAMA; he is not frightened any more and he is not surprised, he is simply putting something together. His gaung baung is gone and his hair is flattened in a band where it sat. ⚠️ BEYOND THEM THE RED LACQUERED PILLARS AND THEIR FLAKING GOLD RUN AWAY DOWN THE CORRIDOR, soft and plain in the daylight. The light is even and shadowless and unkind to him; he looks very young.",
     u: ["အဲဒီနေ့မှ ကျွန်တော် အဖြစ်မှန်ကို သိရတယ်။"] },
 
   { t: "The King's Anger", tm: "day", l: "အဆောင်ထဲ", k: "room",
@@ -1329,6 +1337,7 @@ SCENES.forEach((s) => {
 
   let cont = CONT;
   if ((s.w ?? []).includes("မိဖုရား")) cont += CONT_QUEEN;
+  if ((s.w ?? []).includes("အစောင့်ငယ်")) cont += CONT_BOY;
   if ((s.w ?? []).includes("ကင်းမှူးကြီး")) cont += CONT_CAPT;
   if (s.sealed) cont += CONT_SEALED;
   s.cont = cont;
