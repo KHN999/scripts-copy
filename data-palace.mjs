@@ -242,10 +242,7 @@ const CONT_SEALED =
 const CONT_BOY =
   " ⚠️ THE YOUNG GUARD IS THE SAME PERSON IN EVERY SHOT HE APPEARS IN: about eighteen, slight and "
   + "narrow-shouldered, a smooth beardless boy's face with large dark eyes, in a plain collarless "
-  + "white cotton jacket and a dark red-and-black checked paso, barefoot. ⚠️ HIS FACE, AGE AND "
-  + "BUILD DO NOT CHANGE — he is never older, heavier or differently dressed. The only thing that "
-  + "changes across the film is his white gaung baung, which he wears until he runs and is "
-  + "without afterwards.";
+  + "white cotton jacket and a dark red-and-black checked paso, barefoot. ⚠️ HIS FACE, AGE, BUILD AND CLOTHES DO NOT CHANGE AT ANY POINT IN THIS FILM. He is never older, never heavier, never differently dressed. ⚠️ THE WHITE COTTON GAUNG BAUNG IS WOUND ROUND HIS HEAD IN EVERY SINGLE SHOT, from the first to the last, with the same short fan of cloth standing at one side.";
 
 const CONT_CAPT =
   " The captain is in a dark indigo jacket and a dull red-and-green checked silk paso throughout, "
@@ -1149,9 +1146,7 @@ export const SCENES = [
   { t: "I Shouted and Ran", l: "လျှောက်လမ်း", k: "corr", tm: "lamps",
     w: ["အစောင့်ငယ်"],
     g: "ကျွန်တော် အော်ဟစ်ပြီး ပြေးခဲ့တယ်။",
-    p: "Down the corridor from in front, the young guard running straight at the camera. ⚠️ HIS "
-      + "MOUTH IS WIDE OPEN AND HIS ARMS ARE PUMPING, the gaung baung coming loose and a length "
-      + "of white cloth trailing from it. ⚠️ HE IS PASSING THE SECOND LAMP AND ITS FLAME IS BENT "
+    p: "Down the corridor from in front, the young guard running straight at the camera. ⚠️ HIS MOUTH IS WIDE OPEN AND HIS ARMS ARE PUMPING, the white gaung baung still wound tight on his head and his jacket pulled sideways with the movement. ⚠️ HE IS PASSING THE SECOND LAMP AND ITS FLAME IS BENT "
       + "FLAT BY HIM GOING BY. Behind him the corridor runs away into black and the doors cannot "
       + "be seen.",
     u: ["ကျွန်တော် အော်ဟစ်ပြီး ပြေးခဲ့တယ်။", "နောက်ကနေ ကင်းမှူးကြီးရဲ့အသံ လိုက်လာတယ်။"] },
@@ -1211,7 +1206,7 @@ export const SCENES = [
   { t: "That Day I Learned the Truth", tm: "day", l: "လျှောက်လမ်း", k: "boy",
     w: ["အစောင့်ငယ်"],
     g: "အဲဒီနေ့မှ ကျွန်တော် အဖြစ်မှန်ကို သိရတယ်။",
-    p: "Close on the young guard standing in the corridor in flat grey daylight, a few paces from the open doors of the wing. ⚠️ BEHIND HIM AND WELL OUT OF FOCUS, THREE OR FOUR OTHER PALACE GUARDS AND AN OLDER OFFICIAL STAND TOGETHER IN THE DOORWAY TALKING, one of them gesturing back into the room. ⚠️ THOSE OTHERS ARE ALL VISIBLY OLDER AND HEAVIER THAN HIM AND THEY ARE SOFT AND INDISTINCT; the only sharp face in the picture is his. ⚠️ HE IS TURNED AWAY FROM THEM AND NOT WATCHING THEM AT ALL — his face square to the camera and his eyes down and slightly to one side, fixed on nothing. ⚠️ HIS FACE IS PLAIN, TIRED AND COMPLETELY WITHOUT DRAMA; he is not frightened any more and he is not surprised, he is simply putting something together. His gaung baung is gone and his hair is flattened in a band where it sat. ⚠️ BEYOND THEM THE RED LACQUERED PILLARS AND THEIR FLAKING GOLD RUN AWAY DOWN THE CORRIDOR, soft and plain in the daylight. The light is even and shadowless and unkind to him; he looks very young.",
+    p: "Close on the young guard standing in the corridor in flat grey daylight, a few paces from the open doors of the wing. ⚠️ BEHIND HIM AND WELL OUT OF FOCUS, THREE OR FOUR OTHER PALACE GUARDS AND AN OLDER OFFICIAL STAND TOGETHER IN THE DOORWAY TALKING, one of them gesturing back into the room. ⚠️ THOSE OTHERS ARE ALL VISIBLY OLDER AND HEAVIER THAN HIM AND THEY ARE SOFT AND INDISTINCT; the only sharp face in the picture is his. ⚠️ HE IS TURNED AWAY FROM THEM AND NOT WATCHING THEM AT ALL — his face square to the camera and his eyes down and slightly to one side, fixed on nothing. ⚠️ HIS FACE IS PLAIN, TIRED AND COMPLETELY WITHOUT DRAMA; he is not frightened any more and he is not surprised, he is simply putting something together. The white gaung baung is still wound round his head, grey with dust now. ⚠️ BEYOND THEM THE RED LACQUERED PILLARS AND THEIR FLAKING GOLD RUN AWAY DOWN THE CORRIDOR, soft and plain in the daylight. The light is even and shadowless and unkind to him; he looks very young.",
     u: ["အဲဒီနေ့မှ ကျွန်တော် အဖြစ်မှန်ကို သိရတယ်။"] },
 
   { t: "The King's Anger", tm: "day", l: "အဆောင်ထဲ", k: "room",
