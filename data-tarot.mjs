@@ -109,10 +109,7 @@ export const PROPS = [
       "⚠️ ONE TAROT CARD, THE SAME SIZE, STOCK AND DRAWING STYLE AS THE DECK — heavy black "
       + "outlines, flat colour, white border, title banner at the foot — ⚠️ BUT ITS BACKGROUND IS "
       + "DEAD BLACK WHERE EVERY OTHER CARD IS CREAM. Photographed square on, filling the frame. "
-      + "⚠️ IN THE MIDDLE OF IT, DRAWN FLAT AND SIMPLY, A TALL CLOSED DOOR SEEN FACE ON. ⚠️ TWO "
-      + "SMALL CHILDREN STAND AT IT: ONE OUTSIDE THE DOOR AND ONE BEHIND IT, the one behind drawn "
-      + "as if seen through the doorway. Both are plain flat figures in white shirts with no "
-      + "faces drawn in beyond two dots and a line. ⚠️ THE TITLE BANNER READS THE OTHER. The card "
+      + "⚠️ IN THE MIDDLE OF IT, DRAWN FLAT AND SIMPLY, A TALL CLOSED DOOR SEEN FACE ON, and small flat child figures standing at it with no faces drawn in beyond two dots and a line. ⚠️ THE TITLE BANNER READS THE OTHER. ⚠️ THIS PLATE FIXES THE BLACK GROUND, THE DOOR, THE DRAWING STYLE AND THE BANNER. How many children are on the card and what they are wearing CHANGES during the film and is stated by each shot — this is the only card in the deck whose picture does not stay the same. The card "
       + "is crisp and new-looking in a way the rest of the deck is not." },
 
   { name: "မွေးစာရင်း", en: "The two birth certificates",
@@ -847,14 +844,10 @@ export const SCENES = [
     u: ["တံခါးပိတ်ထားတယ်။", "ပြတင်းပေါက်ပိတ်ထားတယ်။", "ဘယ်သူဝင်ထားတဲ့အရိပ်အယောင်မှ မရှိဘူး။",
       "ရဲခေါ်တယ်။ ရှာတယ်။", "မတွေ့ဘူး။"] },
 
-  { t: "He Did Not Know His Own Name", c: [[1, "stinger"]], l: "အိမ်ဟောင်း", k: "insert",
-    tm: "day", w: ["အိမ်ဟောင်း"],
+  { t: "He Did Not Know His Own Name", c: [[1, "stinger"]], l: "အိမ်ဟောင်း",
+    k: "mother", tm: "day", w: ["အိမ်ဟောင်း", "အမေ"],
     g: "⚠️ ပိုထူးဆန်းတာက — ကျန်ခဲ့တဲ့ကလေး နိုးလာတော့ သူ့နာမည်ကို မမှတ်မိဘူး။ “မသိဘူး”",
-    p: "Tight insert low on the edge of the small bed in flat morning light. ⚠️ A CHILD'S TWO "
-      + "BARE FEET HANG DOWN OVER THE SIDE OF IT, NOT QUITE REACHING THE FLOORBOARDS, perfectly "
-      + "still and side by side. ⚠️ NOTHING ABOVE THE KNEES IS IN THE FRAME. A woman's hand and "
-      + "forearm come in from the edge of shot and have stopped short of touching him. Dust and "
-      + "grey light on the boards beneath.",
+    p: "In the old house room in flat grey morning light, low and close. ⚠️ A SMALL BOY IS SITTING UP ON THE EDGE OF THE BED, AWAKE, SEEN FROM BEHIND — the back of his head and his two shoulders fill the near foreground, soft and out of focus, and ⚠️ HIS FACE IS NOT IN THE FRAME. ⚠️ BEYOND HIM AND SHARP, HIS MOTHER IS CROUCHED DOWN IN FRONT OF HIM WITH HER FACE LEVEL WITH HIS, and she has just been answered: her eyes are wide and fixed, her mouth is open and nothing is coming out of it, and one hand has stopped halfway to his shoulder. ⚠️ THE SHOT BELONGS TO HER FACE. Even grey window light, shadowless; the bare plank wall behind.",
     u: ["ဒါပေမယ့်—", "ပိုထူးဆန်းတာက…", "ကုတင်ပေါ်ကျန်ခဲ့တဲ့ကလေးက နိုးလာတော့—",
       "သူ့နာမည်ကို မမှတ်မိဘူး။", "“သားနာမည် ဘာလဲ” လို့ အမေမေးတော့—", "ကလေးက—", "“မသိဘူး”",
       "လို့ ဖြေတယ်။"] },
@@ -941,10 +934,7 @@ export const SCENES = [
     w: ["ကတ်ထုပ်"],
     g: "⚠️ တတိယကတ် — ကျွန်တော့်လက်တွေ တုန်နေတယ်။ လှန်လိုက်တယ်။ **The Fool။**",
     p: "Straight down, one tarot card filling most of the frame, a man's hand still at its edge. "
-      + "⚠️ FLAT MEDIEVAL-STYLE ILLUSTRATION IN HEAVY BLACK OUTLINE ON CREAM: a young figure in "
-      + "bright patched clothes walking forward with his face turned up and away from the ground, "
-      + "⚠️ A SMALL BUNDLE ON A STICK OVER ONE SHOULDER AND A WHITE FLOWER IN THE OTHER HAND, "
-      + "⚠️ AND HIS LEADING FOOT ALREADY OVER THE EDGE OF A CLIFF. A small white dog at his heel. "
+      + "⚠️ FLAT MEDIEVAL-STYLE ILLUSTRATION IN HEAVY BLACK OUTLINE ON CREAM: a young figure walking forward with his face turned up and away from the ground. ⚠️ THE FOOL'S COSTUME, EXACTLY: a short belted tunic in mustard yellow with three or four dull blue patches sewn onto it at the hem and one shoulder, a narrow red belt at the waist, bare legs and bare feet, and a small soft cap in the same mustard yellow. ⚠️ A SMALL BUNDLE ON A STICK OVER ONE SHOULDER AND A WHITE FLOWER IN THE OTHER HAND, ⚠️ AND HIS LEADING FOOT ALREADY OVER THE EDGE OF A CLIFF. A small white dog at his heel. "
       + "Mustard yellow, dull blue and cream. Title banner at the foot.",
     u: ["တတိယကတ်—", "ကျွန်တော့်လက်တွေ တုန်နေတယ်။", "လှန်လိုက်တယ်။", "The Fool။"] },
 
@@ -1149,10 +1139,7 @@ export const SCENES = [
     g: "⚠️ ကတ်ပုံ ပြောင်းနေပြီ — မနေ့က ကလေးနှစ်ယောက်။ အခု ကလေးသုံးယောက်။ နှစ်ယောက်က အတွင်းမှာ၊ တစ်ယောက်က အပြင်မှာ။",
     p: "Straight down, the black-ground card filling most of the frame in flat daylight. ⚠️ SAME "
       + "FLAT HEAVY-OUTLINED DRAWING, SAME DEAD BLACK GROUND, SAME TALL CLOSED DOOR IN THE "
-      + "MIDDLE, SAME TITLE BANNER READING THE OTHER — ⚠️ BUT THERE ARE NOW THREE SMALL FLAT "
-      + "FIGURES OF CHILDREN INSTEAD OF TWO: ⚠️ TWO OF THEM BEHIND THE DOOR, drawn as if seen "
-      + "through the doorway, ⚠️ AND ONE STANDING OUTSIDE IT IN FRONT. All three in white shirts, "
-      + "faces two dots and a line.",
+      + "MIDDLE, SAME TITLE BANNER READING THE OTHER — ⚠️ BUT THERE ARE NOW THREE SMALL FLAT FIGURES OF CHILDREN INSTEAD OF TWO: ⚠️ TWO OF THEM BEHIND THE DOOR, drawn as if seen through the doorway AND BOTH IN PLAIN WHITE SHIRTS, ⚠️ AND ONE STANDING OUTSIDE IT IN FRONT, CENTRED ON THE CARD. ⚠️ THE ONE IN FRONT IS NOT DRESSED LIKE THE OTHER TWO. ⚠️ THE FOOL'S COSTUME, EXACTLY: a short belted tunic in mustard yellow with three or four dull blue patches sewn onto it at the hem and one shoulder, a narrow red belt at the waist, bare legs and bare feet, and a small soft cap in the same mustard yellow. All three have faces of two dots and a line.",
     u: ["မသန္တာ ဖြည်းဖြည်းကောက်လိုက်တယ်။", "THE OTHER။", "ဒါပေမယ့်—", "ကတ်ပုံ ပြောင်းနေပြီ။",
       "မနေ့က—", "တံခါးရှေ့မှာ ကလေးနှစ်ယောက် ရှိတယ်။", "အခု—", "ကလေးသုံးယောက်။",
       "နှစ်ယောက်က တံခါးအတွင်းဘက်မှာ။", "တစ်ယောက်က တံခါးအပြင်မှာ ရပ်နေတယ်။"] },
@@ -1208,9 +1195,7 @@ export const SCENES = [
     tm: "day", cards: true, w: ["ကတ်ထုပ်", "ကတ်မည်း"],
     g: "⚠️ The Sun၊ The Moon၊ The Fool — ကတ်သုံးချပ်လုံး စားပွဲပေါ်မှာ ရှိနေသေးတယ်။",
     p: "Straight down on the table in flat daylight. ⚠️ THREE CREAM CARDS LIE FACE UP TOGETHER — "
-      + "THE SUN, THE MOON AND THE FOOL — among the scattered rest of the deck, ⚠️ AND THE BLACK "
-      + "CARD LIES FACE UP BESIDE THEM, obviously a different colour from everything else on the "
-      + "cloth. ⚠️ ALL FOUR ARE IN THE SAME FLAT HEAVY-OUTLINED STYLE. Even grey light; the "
+      + "THE SUN, THE MOON AND THE FOOL — among the scattered rest of the deck, ⚠️ AND THE BLACK CARD LIES FACE UP BESIDE THEM, obviously a different colour from everything else on the cloth. ⚠️ ON THE BLACK CARD, THREE SMALL FLAT CHILD FIGURES AT THE DRAWN DOOR: TWO BEHIND IT IN PLAIN WHITE SHIRTS AND ONE OUT IN FRONT, ⚠️ AND THE ONE IN FRONT IS DRESSED DIFFERENTLY FROM THE OTHER TWO. ⚠️ THE FOOL'S COSTUME, EXACTLY: a short belted tunic in mustard yellow with three or four dull blue patches sewn onto it at the hem and one shoulder, a narrow red belt at the waist, bare legs and bare feet, and a small soft cap in the same mustard yellow. ⚠️ ALL FOUR CARDS ARE IN THE SAME FLAT HEAVY-OUTLINED STYLE. Even grey light; the "
       + "cold candle stub at the edge of frame.",
     u: ["မသန္တာ စားပွဲပေါ်က ကတ်ကို ပြန်ကြည့်တယ်။", "ကလေးသုံးယောက်။", "ပြီးတော့—",
       "အခုမှ သူ သတိထားမိတယ်။", "The Sun။ The Moon။ The Fool။", "အဲဒီကတ်သုံးချပ်လုံး—",
@@ -1220,10 +1205,7 @@ export const SCENES = [
     w: ["ကတ်မည်း"],
     g: "⚠️ ကလေးသုံးယောက်ထဲမှာ The Sun ရဲ့ကလေးလည်း မရှိဘူး။ The Moon ရဲ့ကလေးလည်း မရှိဘူး။ အလယ်က တတိယကလေးကသာ The Fool ကတ်ထဲက အဝတ်အစားနဲ့ တစ်ပုံစံတည်း။",
     p: "Tight insert on the lower half of the black card in flat daylight, holding ⚠️ THE SMALL "
-      + "FLAT FIGURE STANDING OUTSIDE THE DRAWN DOOR. ⚠️ HE IS DRAWN IN BRIGHT PATCHED CLOTHES — "
-      + "the same mustard and blue patches, the same shape of tunic, ⚠️ EXACTLY THE CLOTHES THE "
-      + "YOUNG FIGURE WEARS ON THE FOOL CARD — while the two figures behind the door are in plain "
-      + "white shirts. Black ground, heavy black outline, flat colour. Even grey light.",
+      + "FLAT FIGURE STANDING OUTSIDE THE DRAWN DOOR. ⚠️ THE FOOL'S COSTUME, EXACTLY: a short belted tunic in mustard yellow with three or four dull blue patches sewn onto it at the hem and one shoulder, a narrow red belt at the waist, bare legs and bare feet, and a small soft cap in the same mustard yellow. ⚠️ THESE ARE EXACTLY THE CLOTHES THE YOUNG FIGURE WEARS ON THE FOOL CARD, down to the patches and the cap — while ⚠️ THE TWO FIGURES BEHIND THE DOOR, SOFT AT THE EDGE OF FRAME, ARE IN PLAIN WHITE SHIRTS. Black ground, heavy black outline, flat colour. Even grey light.",
     u: ["ဒါပေမယ့်—", "THE OTHER ကတ်ထဲက ကလေးသုံးယောက်ထဲမှာ—", "The Sun ရဲ့ကလေးလည်း မရှိဘူး။",
       "The Moon ရဲ့ကလေးလည်း မရှိဘူး။", "အလယ်မှာ ရပ်နေတဲ့ တတိယကလေးကသာ—",
       "The Fool ကတ်ထဲက ကလေးဝတ်ထားတဲ့ အဝတ်အစားနဲ့ တစ်ပုံစံတည်း။"] },
