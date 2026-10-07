@@ -31,6 +31,25 @@ const L = SCENES.map((s, i) => `Shot ${i + 1} of ${N} — "${s.t}".\n\n${s.cam}\
 const units = SCENES.flatMap((s) => s.u);
 console.log(`\nassembled avg ${Math.round(L.reduce((a, b) => a + b) / N)}  max ${Math.max(...L)}`);
 console.log(`units ${units.length}  shortest ${Math.min(...units.map((u) => u.length))}  runtime ~${Math.round(units.length * 3.4 / 60)} min`);
+
+/**
+ * ⚠️ HOW LONG A PICTURE HOLDS — the check that would have caught village.
+ *
+ * It was authored at one picture per narration line: 124 shots for 161 lines,
+ * 1.30 units/shot, 72% of them single-line, where about 65 shots were right.
+ * Nothing flagged it, because every other number was healthy — the prompts were
+ * fine, the cue budget passed, the narration was correct. It only shows up when
+ * you watch a film that cuts every three seconds for nine minutes.
+ *
+ * Measured over the finished boards: tarot 3.49, fear 2.85, amya 2.69, hour
+ * 2.63, back 2.61, look 2.54, extraman 2.49, mahninsi 2.15 — and palace alone
+ * at 1.50 with 56% single-line, which is the outlier and NOT the model.
+ */
+const perShot = units.length / N;
+const solo = SCENES.filter((s) => s.u.length === 1).length;
+const soloPct = 100 * solo / N;
+console.log(`units/shot ${perShot.toFixed(2)} ${perShot >= 2 ? "ok" : "TOO FRAGMENTED — aim ~3"}`
+  + ` | one-line shots ${soloPct.toFixed(0)}% ${soloPct <= 20 ? "ok" : "TOO MANY — keep under ~10%"}`);
 const cued = SCENES.filter((s) => s.c).length;
 const big = SCENES.filter((s) => s.c && s.c[0][1] === "bigstinger").length;
 let run = 0, max = 0;
