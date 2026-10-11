@@ -89,6 +89,31 @@ export const CAST = [
       + "SAD FACE — he is not frightening and must never be built as frightening. ⚠️ HE IS "
       + "CLEARLY ONE PERSON AND ALWAYS THE SAME PERSON." },
 
+  /**
+   * ⚠️ THE SAME MAN TEN YEARS EARLIER, ON THE NIGHT IT HAPPENED.
+   *
+   * A second plate, not a second character: he must read as the forty-four-
+   * year-old version of the face in the other one. ⚠️ EVEN HERE THE BURN IS
+   * CLOSED AND DRESSED. A fresh burn written as a fresh burn is refused, and
+   * when it is not refused the model opens a hole in the head — so what is
+   * drawn is the hospital dressing over it, hours afterwards, with the damage
+   * underneath and out of sight. Rationed to one shot in the film.
+   */
+  { name: "ဦးဘသိန်း မီးလောင်ည", en: "U Ba Thein on the night of the fire — forty-four",
+    prompt:
+      "⚠️ THE SAME MAN AS U BA THEIN BUT TEN YEARS YOUNGER — forty-four, the same long face, the "
+      + "same build, the hair still fully dark and not yet grey at the temples. ⚠️ HE MUST READ "
+      + "AS THE SAME PERSON AT A YOUNGER AGE. ⚠️ IN A PLAIN WORK SHIRT AND A DARK LONGYI, both "
+      + "filthy — ⚠️ BLACK SOOT IS SMEARED ACROSS HIS CHEST, HIS FOREARMS AND INTO HIS HAIR, and "
+      + "the shirt is scorched brown along one sleeve. ⚠️ A SQUARE WHITE GAUZE DRESSING IS TAPED "
+      + "FLAT OVER THE RIGHT SIDE OF HIS FACE, covering the cheek and the temple from the "
+      + "jawline to the hairline. ⚠️ THE DRESSING IS CLEAN AND DRY AND NOTHING SHOWS THROUGH IT. "
+      + "⚠️ THE SKIN AT THE EDGES OF THE TAPE IS REDDENED BUT COMPLETELY UNBROKEN. ⚠️ NOTHING ON "
+      + "HIM IS OPEN, WET, RAW OR BLEEDING ANYWHERE, AND NO BONE AND NO TOOTH IS EXPOSED. ⚠️ THE "
+      + "LEFT SIDE OF HIS FACE IS ENTIRELY ORDINARY AND UNDAMAGED. ⚠️ HIS EYES ARE RED-RIMMED "
+      + "AND EMPTY. ⚠️ HE IS NOT FRIGHTENING AND MUST NEVER BE BUILT AS FRIGHTENING — this is a "
+      + "man who has just failed to save somebody." },
+
   { name: "မခင်လေး", en: "Ma Khin Lay — his wife, forty",
     prompt:
       "A Burmese woman of about forty and strikingly beautiful, slim and carefully kept, ⚠️ IN A "
@@ -484,7 +509,7 @@ export const SCENES = [
     u: ["အိမ်ကြီးက နှစ်ထပ်ပျဉ်ထောင်အိမ်။", "ခြံထဲမှာ သရက်ပင်ကြီးတွေ ရှိတယ်။",
       "အိမ်နောက်ဘက်မှာတော့ အုတ်နဲ့ဆောက်ထားတဲ့ အခန်းသေးသေးတစ်ခန်း ရှိတယ်။"] },
 
-  { t: "A Padlock on the Back Room", c: [[1, "stinger"]], l: "နောက်ဖေးအခန်း", k: "insert",
+  { t: "A Padlock on the Back Room", l: "နောက်ဖေးအခန်း", k: "insert",
     tm: "day", w: ["သော့"],
     g: "⚠️ အခန်းတံခါးမှာ သော့ကြီးတစ်လုံး ခတ်ထားတယ်။",
     p: "Tight on the heavy iron padlock hanging through the hasp of the flat iron bolt on the "
@@ -1181,7 +1206,20 @@ export const SCENES = [
       + "COMPLETELY EMPTY AND THERE IS NOBODY IN THE PICTURE. ⚠️ ONE SMALL STACK OF SCHOOL "
       + "EXERCISE BOOKS SITS ON THE STOOL IN THE CORNER, SCORCHED BROWN AT THE EDGES BUT STILL "
       + "TIED.",
-    u: ["ဒါပေမယ့်—", "စန္ဒာ အသက်မရှင်ခဲ့ဘူး။", "ဦးဘသိန်းရဲ့ မျက်နှာတစ်ခြမ်းလည်း မီးလောင်သွားတယ်။"] },
+    u: ["ဒါပေမယ့်—", "စန္ဒာ အသက်မရှင်ခဲ့ဘူး။"] },
+
+  { t: "His Face Was Burned Too", c: [[1, "stinger"]], l: "မီးဖိုချောင်", k: "thein", tm: "grey",
+    w: ["ဦးဘသိန်း မီးလောင်ည"],
+    g: "⚠️ **ဦးဘသိန်းရဲ့ မျက်နှာတစ်ခြမ်းလည်း မီးလောင်သွားတယ်။**",
+    p: "Close on U Ba Thein the morning after the fire, ten years ago, in flat grey overcast "
+      + "daylight, camera level with his eyes. ⚠️ A SQUARE WHITE GAUZE DRESSING IS TAPED FLAT "
+      + "OVER THE RIGHT SIDE OF HIS FACE FROM THE JAWLINE TO THE HAIRLINE. ⚠️ THE DRESSING IS "
+      + "CLEAN AND DRY AND NOTHING SHOWS THROUGH IT, and the skin at the edges of the tape is "
+      + "reddened but unbroken. ⚠️ THE LEFT SIDE OF HIS FACE IS ORDINARY AND UNDAMAGED. ⚠️ HIS "
+      + "HAIR IS STILL FULLY DARK AND THERE IS SOOT IN IT AND ACROSS HIS FOREARMS. ⚠️ HE IS "
+      + "LOOKING AT NOTHING AND HIS EYES ARE RED-RIMMED AND DRY. ⚠️ NOTHING ON HIM IS OPEN, WET "
+      + "OR RAW. The blackened kitchen doorway soft and out of focus behind him.",
+    u: ["ဦးဘသိန်းရဲ့ မျက်နှာတစ်ခြမ်းလည်း မီးလောင်သွားတယ်။"] },
 
   { t: "And Then She Died Too", l: "ဧည့်ခန်း", k: "thein", tm: "bulb", burn: true,
     w: ["ဦးဘသိန်း"],
