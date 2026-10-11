@@ -178,6 +178,17 @@ export const CAST = [
 /* ── PROPS — one per game, plus the thing that started it ───────────────── */
 
 export const PROPS = [
+  { name: "ဖုန်း", en: "The phone at 11:59",
+    prompt:
+      "⚠️ ONE ORDINARY MODERN ANDROID PHONE LYING FACE UP ON A RUMPLED BEDSHEET, photographed "
+      + "straight down and filling the frame, a charging cable still plugged into the bottom of "
+      + "it. ⚠️ A BLACK SILICONE CASE GONE GREY AT THE CORNERS, the glass smeared with "
+      + "fingerprints. ⚠️ THE SCREEN IS A FLAT PURE WHITE FIELD EDGE TO EDGE WITH ONE SHORT LINE "
+      + "OF SMALL DARK BURMESE TEXT ACROSS THE MIDDLE OF IT — ⚠️ THE TEXT STAYS SOFT AND SLIGHTLY "
+      + "OUT OF FOCUS, READING AS MARKS RATHER THAN AS LEGIBLE WORDS. ⚠️ THERE IS NO STATUS BAR, "
+      + "NO CLOCK, NO APP FRAME, NO SENDER AND NO BUTTONS — nothing on the screen but white and "
+      + "that one line. The screen is the only light in the picture." },
+
   { name: "မြေအိုး", en: "The clay pot — Game 1",
     prompt:
       "⚠️ ONE UNGLAZED RED-BROWN EARTHENWARE WATER POT ABOUT FIFTY CENTIMETRES HIGH, round-bellied "
@@ -234,6 +245,16 @@ export const PROPS = [
 /* ── LOCATIONS — fixed architecture for all six episodes ────────────────── */
 
 export const LOCS = [
+  { name: "ရန်ကုန်အခန်း", en: "Thiha's room in Yangon",
+    prompt:
+      "⚠️ A SMALL RENTED ROOM IN A YANGON APARTMENT BLOCK, PRESENT DAY, seen from one corner: "
+      + "painted concrete walls gone grubby, a tiled floor, a single bed against the wall with a "
+      + "rumpled sheet, a standing fan, a plastic chair with clothes over the back of it. ⚠️ ONE "
+      + "WINDOW WITH A SECURITY GRILLE AND A THIN CURTAIN, A CEILING FAN, A SOCKET WITH A CHARGER "
+      + "HANGING FROM IT BESIDE THE BED. ⚠️ A LAPTOP BAG ON THE FLOOR, A MUG ON THE SILL. ⚠️ "
+      + "ORDINARY, MODERN, ELECTRIC AND LIVED IN BY ONE PERSON — this is the world the twelve are "
+      + "taken OUT of and it must look nothing like the village. ⚠️ NOBODY IS IN THE PICTURE." },
+
   { name: "ရွာအဝင်လမ်း", en: "The village entrance road",
     prompt:
       "⚠️ THE DIRT ROAD INTO AN OLD MYANMAR VILLAGE AT NIGHT, seen along it towards the village. "
